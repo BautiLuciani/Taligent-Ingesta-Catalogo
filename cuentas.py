@@ -1,11 +1,11 @@
+"""Funciones de "cuentas": reglas fijas del estándar, en Python puro (sin IA)."""
+
 import re
 from pathlib import Path
 
 import yaml
 
 RUTA_VOCABULARIO = Path(__file__).parent / "Data" / "estandar" / "vocabulario.yaml"
-
-"""Funciones de "cuentas": reglas fijas del estándar, en Python puro (sin IA)."""
 
 
 def calcular_digito_verificador(primeros_12: str) -> int:
@@ -22,7 +22,6 @@ def calcular_digito_verificador(primeros_12: str) -> int:
         suma += int(caracter) * peso
 
     return (10 - suma % 10) % 10  # lo que falta para la próxima decena (si la suma ya es decena, 0)
-
 
 
 def normalizar_gtin(texto) -> tuple[str | None, str | None]:
@@ -79,7 +78,6 @@ def convertir_numero(texto, separador_decimal: str = ",") -> float | None:
         return None
 
 
-
 # Cada unidad que puede mandar un proveedor -> (unidad del estándar, factor para multiplicar)
 UNIDADES = {
     "ML": ("ML", 1),
@@ -115,7 +113,6 @@ def convertir_contenido(cantidad: float | None, unidad) -> tuple[int | None, str
     unidad_estandar, factor = UNIDADES[clave]
     valor = cantidad * factor
     return int(valor + 0.5), unidad_estandar  # redondeo "de la escuela": .5 sube
-
 
 
 def cargar_abreviaturas(ruta: Path = RUTA_VOCABULARIO) -> dict[str, str]:
