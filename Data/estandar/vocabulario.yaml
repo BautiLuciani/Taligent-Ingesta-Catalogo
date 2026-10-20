@@ -1,0 +1,35 @@
+tipos:
+  medicamentos_y_suplementos: [COMPRIMIDOS, COMPRIMIDOS EFERVESCENTES, CAPSULAS, JARABE, SUSPENSION, SOBRES, CREMA, GEL, POLVO]
+  cuidado_personal: [SHAMPOO, SHAMPOO EN SECO, ACONDICIONADOR, TRATAMIENTO CAPILAR, LACA, DESODORANTE AEROSOL,
+                     DESODORANTE BARRA, DESODORANTE ROLL ON, PASTA DENTAL, CEPILLO DENTAL, ENJUAGUE BUCAL, ALGODON,
+                     HISOPOS, JABON, JABON LIQUIDO, JABON INTIMO, GEL DE DUCHA, ESPUMA DE AFEITAR, GEL DE AFEITAR]
+  dermocosmetica: [CREMA, LOCION, GEL, SERUM, GEL LIMPIADOR, AGUA MICELAR, PROTECTOR SOLAR]
+  bebes: [PAÑALES, TOALLITAS HUMEDAS, LECHE INFANTIL]
+  hogar: [LAVANDINA, LIMPIADOR, ALCOHOL, ALCOHOL EN GEL, INSECTICIDA, REPELENTE]
+
+unidades: [ML, G, UN]
+monedas: [UYU, USD]
+condicion_venta: [VENTA_LIBRE, BAJO_RECETA]
+estados: [lista_para_alta, duplicado, a_revision]
+motivos_revision: [gtin_faltante, gtin_invalido, dato_obligatorio_faltante, conflicto_entre_fuentes, posible_duplicado]
+peligro_deposito: [aerosol_inflamable, liquido_inflamable, corrosivo, no_peligroso, pendiente_fds]
+
+abreviaturas:
+  "SH.": SHAMPOO
+  "ACOND.": ACONDICIONADOR
+  "TRAT. CAP.": TRATAMIENTO CAPILAR
+  "DESOD.": DESODORANTE
+  "AER.": AEROSOL
+  "FIJ.": FIJACION
+  "CAB.": CABELLO
+  "S/": SIN
+  "PERF.": PERFUME
+  "P/": PARA
+  "COMP.": COMPRIMIDOS
+  "CAPS.": CAPSULAS
+  "JBE.": JARABE
+  "SUSP.": SUSPENSION
+  "REC.": RECUBIERTOS
+  "BLANQ.": BLANQUEADORA
+  "ANTIBAC.": ANTIBACTERIAL
+  "HIDRAT.": HIDRATANTE

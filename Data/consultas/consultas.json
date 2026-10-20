@@ -1,0 +1,114 @@
+{
+ "consultas": [
+  {
+   "id": "Q01",
+   "texto": "¿Cuál es el precio de costo de AN-1124 de Laboratorio Andes y de dónde sale?"
+  },
+  {
+   "id": "Q02",
+   "texto": "¿Cuál es el EAN de DL-109 y de qué archivo sale?"
+  },
+  {
+   "id": "Q03",
+   "texto": "¿Cuántos ml tiene IN7003 de Importadora Norte y qué decía el archivo?"
+  },
+  {
+   "id": "Q04",
+   "texto": "¿Cuál es el contenido de LT-3345 de Litoral y de dónde sale?"
+  },
+  {
+   "id": "Q05",
+   "texto": "¿Cómo se clasifica LHS-206 para el depósito y de dónde sale?"
+  },
+  {
+   "id": "Q06",
+   "texto": "¿Cuál es el precio de NV-212 y de dónde sale?"
+  },
+  {
+   "id": "Q07",
+   "texto": "¿Por qué LT-3447 quedó a revisión? ¿Con qué producto del catálogo podría ser el mismo?"
+  },
+  {
+   "id": "Q08",
+   "texto": "¿Por qué AN-1133 no tiene contenido en la ficha?"
+  },
+  {
+   "id": "Q09",
+   "texto": "¿Por qué RIV-1203 está sin EAN si Cosmética Rivera lo mandó?"
+  },
+  {
+   "id": "Q10",
+   "texto": "¿Por qué no se da de alta RIV-1206? ¿Con qué SKU coincide?"
+  },
+  {
+   "id": "Q11",
+   "texto": "¿Por qué no aparece HT32855 de Higiene Total entre los productos nuevos?"
+  },
+  {
+   "id": "Q12",
+   "texto": "Natural Vida pidió dar todo de alta sin revisión. ¿Por qué NV-203 quedó a revisión igual?"
+  },
+  {
+   "id": "Q13",
+   "texto": "¿Por qué AN-1103 va a revisión?"
+  },
+  {
+   "id": "Q14",
+   "texto": "¿Qué productos de Limpieza Hogar Sur van como corrosivos al depósito?"
+  },
+  {
+   "id": "Q15",
+   "texto": "¿Qué productos quedaron pendientes de ficha de datos de seguridad?"
+  },
+  {
+   "id": "Q16",
+   "texto": "¿Qué le tengo que pedir a Dermalab para cerrar sus revisiones?"
+  },
+  {
+   "id": "Q17",
+   "texto": "¿Qué productos de Bebé Feliz vienen en pack?"
+  },
+  {
+   "id": "Q18",
+   "texto": "¿Cuántos productos quedaron listos para alta?"
+  },
+  {
+   "id": "Q19",
+   "texto": "Si Dermalab manda el EAN de DL-103, ¿en qué estado queda?"
+  },
+  {
+   "id": "Q20",
+   "texto": "Si Natural Vida manda para NV-203 un EAN válido que no está en el catálogo, ¿en qué estado queda?"
+  },
+  {
+   "id": "Q21",
+   "texto": "Si Litoral manda el EAN de LT-3450 y resulta ser el de SKU102632, ¿en qué estado queda?"
+  },
+  {
+   "id": "Q22",
+   "texto": "¿Cuánto se vendió el mes pasado del jabón Pureza?"
+  },
+  {
+   "id": "Q23",
+   "texto": "¿Cuál es el precio de venta al público de DL-109?"
+  }
+ ],
+ "conversaciones": [
+  {
+   "id": "V01",
+   "turnos": [
+    "¿Qué productos de Importadora Norte vienen con precio en dólares?",
+    "¿Y cuál es el más caro?",
+    "¿De dónde sale ese precio?"
+   ]
+  },
+  {
+   "id": "V02",
+   "turnos": [
+    "¿Qué quedó a revisión de Laboratorio Andes?",
+    "¿Cuáles de esos por diferencias entre los dos archivos?",
+    "¿Dónde está cada versión?"
+   ]
+  }
+ ]
+}

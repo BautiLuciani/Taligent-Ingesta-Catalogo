@@ -1,0 +1,51 @@
+﻿codigo,nivel_1,nivel_2,nivel_3,nota
+MED-DOL-ANA,Medicamentos,Dolor y fiebre,Analgésicos y antifebriles orales,"Comprimidos, cápsulas y jarabes para dolor y fiebre."
+MED-DOL-TOP,Medicamentos,Dolor y fiebre,Antiinflamatorios tópicos,"Geles y cremas con antiinflamatorio (diclofenac, ibuprofeno tópico)."
+MED-RES-GRI,Medicamentos,Respiratorio,Antigripales,Combinaciones para síntomas de gripe y resfrío.
+MED-RES-TOS,Medicamentos,Respiratorio,Tos,Jarabes y pastillas para la tos.
+MED-RES-ALE,Medicamentos,Respiratorio,Antialérgicos,Antihistamínicos orales.
+MED-DIG-ACI,Medicamentos,Digestivo,Antiácidos y protectores gástricos,Incluye omeprazol y suspensiones antiácidas.
+MED-DIG-LAX,Medicamentos,Digestivo,Laxantes,
+MED-DIG-ANT,Medicamentos,Digestivo,Antidiarreicos,
+MED-DER-COR,Medicamentos,Dermatológicos,Corticoides tópicos,Cremas con hidrocortisona u otro corticoide. No es dermocosmética.
+MED-DER-ANF,Medicamentos,Dermatológicos,Antimicóticos tópicos,
+MED-CRO-CAR,Medicamentos,Uso crónico,Cardiovascular,Antihipertensivos. Venta bajo receta.
+MED-CRO-MET,Medicamentos,Uso crónico,Metabolismo,Diabetes y tiroides. Venta bajo receta.
+NUT-VIT-MUL,Nutrición y suplementos,Vitaminas y minerales,Multivitamínicos,
+NUT-VIT-MIN,Nutrición y suplementos,Vitaminas y minerales,Minerales,"Magnesio, hierro, zinc, calcio."
+NUT-VIT-VIT,Nutrición y suplementos,Vitaminas y minerales,Vitaminas individuales,"Vitamina C, vitamina D y otras de un solo componente."
+NUT-SUP-NAT,Nutrición y suplementos,Suplementos,Naturales y herbales,Extractos vegetales que no son para el sueño.
+NUT-SUP-SUE,Nutrición y suplementos,Suplementos,Sueño y relajación,"Melatonina, valeriana y combinaciones para dormir."
+NUT-SUP-COL,Nutrición y suplementos,Suplementos,Colágeno y articulaciones,
+DER-FAC-LIM,Dermocosmética,Facial,Limpieza facial,"Geles limpiadores, aguas micelares y desmaquillantes."
+DER-FAC-HID,Dermocosmética,Facial,Hidratación facial,
+DER-FAC-ANT,Dermocosmética,Facial,Antiedad,Sérums y cremas cuyo beneficio principal es antiarrugas o firmeza.
+DER-FAC-ACN,Dermocosmética,Facial,Piel acneica,
+DER-COR-HID,Dermocosmética,Corporal,Hidratación corporal,"Cremas y lociones de cuerpo, incluidas las de urea."
+DER-COR-MAN,Dermocosmética,Corporal,Manos y pies,
+DER-SOL-ADU,Dermocosmética,Protección solar,Protectores para adultos,
+DER-SOL-INF,Dermocosmética,Protección solar,Protectores infantiles,Protectores formulados para niños o bebés.
+DER-SOL-POS,Dermocosmética,Protección solar,Post solar,After sun y geles calmantes para después del sol.
+CUI-CAP-SHA,Cuidado personal,Cabello,Shampoo,Incluye shampoo en seco. No incluye shampoo para bebés.
+CUI-CAP-ACO,Cuidado personal,Cabello,Acondicionadores y tratamientos,
+CUI-CAP-FIJ,Cuidado personal,Cabello,Fijación,"Geles, lacas y espumas para peinar."
+CUI-BUC-PAS,Cuidado personal,Higiene bucal,Pastas dentales,
+CUI-BUC-CEP,Cuidado personal,Higiene bucal,Cepillos,
+CUI-BUC-ENJ,Cuidado personal,Higiene bucal,Enjuagues,
+CUI-DES-AER,Cuidado personal,Desodorantes,Aerosol,
+CUI-DES-BAR,Cuidado personal,Desodorantes,Barra y roll on,
+CUI-HIG-JAB,Cuidado personal,Higiene corporal,Jabones,Jabón en barra y jabón líquido de manos.
+CUI-HIG-DUC,Cuidado personal,Higiene corporal,Gel de ducha,
+CUI-HIG-INT,Cuidado personal,Higiene corporal,Higiene íntima,
+CUI-HIG-ALG,Cuidado personal,Higiene corporal,Algodones e hisopos,
+CUI-AFE-ESP,Cuidado personal,Afeitado,Espumas y geles de afeitar,
+BEB-PAN-INF,Bebés,Pañales,Pañales infantiles,
+BEB-PAN-TOA,Bebés,Pañales,Toallitas húmedas,"Todas las toallitas húmedas, aunque no digan «bebé»."
+BEB-ALI-LEC,Bebés,Alimentación,Leches infantiles,
+BEB-HIG-BAN,Bebés,Higiene del bebé,Shampoo y baño,"Shampoo, jabón y baño formulados para bebés."
+BEB-HIG-CRE,Bebés,Higiene del bebé,Cremas de cambio,Cremas para la zona del pañal.
+HOG-LIM-DES,Hogar y limpieza,Limpieza,Desinfectantes y lavandinas,
+HOG-LIM-BAN,Hogar y limpieza,Limpieza,Limpiadores de baño y cocina,
+HOG-LIM-ALC,Hogar y limpieza,Limpieza,Alcohol y alcohol en gel,Incluye el alcohol en gel para manos.
+HOG-INS-AMB,Hogar y limpieza,Insecticidas y repelentes,Insecticidas de ambiente,
+HOG-INS-REP,Hogar y limpieza,Insecticidas y repelentes,Repelentes corporales,

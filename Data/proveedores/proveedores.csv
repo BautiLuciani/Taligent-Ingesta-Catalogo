@@ -1,0 +1,10 @@
+﻿proveedor_id,nombre,carpeta,archivos
+P01,Laboratorio Andes S.A.,P01_Laboratorio_Andes,Lista_de_precios_octubre_2026.pdf | Actualizacion_precios_Andes.xlsx
+P02,Cosmética Rivera S.A.,P02_Cosmetica_Rivera,ALTAS RIVERA OCT.xlsx | fichas_de_seguridad/FDS_Brisa_Frescor_desaer.pdf | fichas_de_seguridad/FDS_Brisa_laca.pdf
+P03,Distribuidora Litoral S.R.L.,P03_Distribuidora_Litoral,litoral_altas_102026.csv
+P04,Higiene Total S.A.,P04_Higiene_Total,HigieneTotal_novedades.xlsx
+P05,Dermalab S.A.,P05_Dermalab,Dermalab_lanzamientos_2026.pdf | Dermalab_lista_precios.xlsx
+P06,Bebé Feliz S.A.,P06_Bebe_Feliz,BebeFeliz_altas.xlsx
+P07,Limpieza Hogar Sur S.A.,P07_Limpieza_Hogar_Sur,LHS_catalogo_nuevos_productos.pdf | fichas_de_seguridad/FDS_Clarita_multiuso.pdf | fichas_de_seguridad/FDS_Clarita_lavandina.pdf | fichas_de_seguridad/FDS_Clarita_alcohol.pdf | fichas_de_seguridad/FDS_Clarita_alcgel.pdf | fichas_de_seguridad/FDS_Fulmin_repcre.pdf | fichas_de_seguridad/FDS_Fulmin_repaer.pdf | fichas_de_seguridad/FDS_Fulmin_insect.pdf
+P08,Importadora Norte S.A.,P08_Importadora_Norte,NorteImports_new_items_Q4.xlsx | fichas_de_seguridad/FDS_PureCare_in_sec.pdf | fichas_de_seguridad/FDS_PureCare_in_afe.pdf
+P09,Natural Vida S.R.L.,P09_Natural_Vida,Mail_NaturalVida_altas.txt
