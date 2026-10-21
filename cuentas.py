@@ -115,11 +115,15 @@ def convertir_contenido(cantidad: float | None, unidad) -> tuple[int | None, str
     return int(valor + 0.5), unidad_estandar  # redondeo "de la escuela": .5 sube
 
 
+def cargar_vocabulario(ruta: Path = RUTA_VOCABULARIO) -> dict:
+    """Lee el vocabulario oficial completo (tipos, unidades, estados, motivos, abreviaturas...)."""
+    with open(ruta, encoding="utf-8-sig") as archivo:
+        return yaml.safe_load(archivo)
+
+
 def cargar_abreviaturas(ruta: Path = RUTA_VOCABULARIO) -> dict[str, str]:
     """Lee las abreviaturas del vocabulario oficial. Ej: {"SH.": "SHAMPOO", "S/": "SIN", ...}"""
-    with open(ruta, encoding="utf-8-sig") as archivo:
-        vocabulario = yaml.safe_load(archivo)
-    return vocabulario["abreviaturas"]
+    return cargar_vocabulario(ruta)["abreviaturas"]
 
 
 def expandir_abreviaturas(texto, abreviaturas: dict[str, str]) -> str | None:
