@@ -1,3 +1,5 @@
 .venv/
 .env
 __pycache__/
+salida/trazas/
+salida/resultados_anterior.json
