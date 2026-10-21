@@ -42,18 +42,16 @@ El agente procesa los 50 productos de **Distribuidora Litoral** (CSV) con tools 
 ## 🏗️ Cómo funciona
 
 ```
-                 system prompt = prompt_sistema.md + estándar + vocabulario + taxonomía
-                                          │
-┌──────────────┐   tool_use    ┌──────────┴───────┐   lee / escribe   ┌──────────────────┐
-│  Claude      │ ────────────▶ │  agente.py       │ ────────────────▶ │  servidor_mcp.py │
-│  Haiku 5.5   │ ◀──────────── │  (el loop)       │ ◀──────────────── │  (4 tools +      │
-└──────────────┘  tool_result  └──────────────────┘     stdio (MCP)   │   3 resources)   │
-                                                                     └────────┬─────────┘
-                                                                              │ usa
-                                                       ┌──────────────────────┴───────┐
-                                                       │ cuentas.py  →  Data/  →  salida/ │
-                                                       └──────────────────────────────┘
+Claude Haiku 5.5  ◀── API ──▶  agente.py  ◀── MCP (stdio) ──▶  servidor_mcp.py  ──▶  Data/ (lee)
+   decide qué pedir             el loop                         4 tools              salida/ (escribe)
+                                                                3 resources
+                                                                usa cuentas.py
 ```
+
+1. `agente.py` arma el *system prompt* con `prompt_sistema.md` y los 3 resources del servidor.
+2. Le pide a Haiku que procese una tanda de productos.
+3. Haiku pide tools (`tool_use`), el agente las ejecuta en el servidor y le devuelve los resultados (`tool_result`).
+4. Se repite hasta que Haiku registra todos los productos de la tanda.
 
 Una forma simple de pensarlo es un restaurante:
 
