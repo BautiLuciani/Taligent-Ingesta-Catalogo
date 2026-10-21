@@ -10,6 +10,8 @@ from fastmcp.client.transports import PythonStdioTransport
 
 RUTA_SERVIDOR = Path(__file__).parent / "servidor_mcp.py"
 
+CARPETA_ESTANDAR = Path(__file__).parent / "Data" / "estandar"
+
 # Respuestas verificadas a mano (Bitácora, semana 1)
 DUPLICADOS_ESPERADOS = {
     "P03:LT-3306": "SKU102786",
@@ -155,6 +157,18 @@ async def main():
 
         guardado = json.loads((Path(carpeta_temporal) / "resultados.json").read_text(encoding="utf-8"))
         chequear("En el archivo están solo los 3 coherentes", sorted(guardado), ["P03:LT-3303", "P03:LT-3333", "P03:LT-3447"])
+
+        
+        print("\n--- resources: el estándar ---")
+        recursos = {str(r.uri) for r in await cliente.list_resources()}
+        chequear("Hay 3 resources", sorted(recursos),
+                ["estandar://ficha_de_producto", "estandar://taxonomia", "estandar://vocabulario"])
+        for uri, archivo in [("estandar://ficha_de_producto", "ficha_de_producto.md"),
+                            ("estandar://vocabulario", "vocabulario.yaml"),
+                            ("estandar://taxonomia", "taxonomia.csv")]:
+            texto = (await cliente.read_resource(uri))[0].text
+            original = (CARPETA_ESTANDAR / archivo).read_text(encoding="utf-8-sig")
+            chequear(f"{uri} es idéntico a {archivo} ({len(texto)} caracteres)", texto, original)
 
     shutil.rmtree(carpeta_temporal, ignore_errors=True)  # borramos la carpeta temporal de las pruebas
     print(f"\nResultado: {'todo OK' if errores == 0 else f'{errores} con error'}")
