@@ -1,0 +1,1048 @@
+[
+  {
+    "item_id": "P03:LT-3303",
+    "por_que": "Abreviatura BLANQ. y marca en columna aparte",
+    "esperado": {
+      "estado": "lista_para_alta",
+      "duplicado_de": null,
+      "motivos_revision": [],
+      "ficha": {
+        "gtin": "7793469616846",
+        "descripcion": "PASTA DENTAL SONRISA BLANQUEADORA X 90 G",
+        "marca": "SONRISA",
+        "tipo": "PASTA DENTAL",
+        "variante": "BLANQUEADORA",
+        "contenido": 90,
+        "unidad": "G",
+        "unidades_por_envase": 1,
+        "principio_activo": null,
+        "concentracion": null,
+        "condicion_venta": null,
+        "categoria": "CUI-BUC-PAS",
+        "precio_costo": 68.91,
+        "moneda": "UYU",
+        "proveedor_id": "P03",
+        "codigo_proveedor": "LT-3303"
+      },
+      "fuentes": {
+        "gtin": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 2
+        },
+        "descripcion": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 2
+        },
+        "marca": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 2
+        },
+        "tipo": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 2
+        },
+        "variante": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 2
+        },
+        "contenido": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 2
+        },
+        "unidad": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 2
+        },
+        "unidades_por_envase": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 2
+        },
+        "categoria": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 2
+        },
+        "precio_costo": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 2
+        },
+        "moneda": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 2
+        },
+        "proveedor_id": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 2
+        },
+        "codigo_proveedor": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 2
+        }
+      }
+    }
+  },
+  {
+    "item_id": "P03:LT-3333",
+    "por_que": "Duplicado por GTIN, descripción en Title Case con abreviatura",
+    "esperado": {
+      "estado": "duplicado",
+      "duplicado_de": "SKU100301",
+      "motivos_revision": [],
+      "ficha": {
+        "gtin": "7798096023746",
+        "descripcion": "PASTA DENTAL DENTIBLANC BLANQUEADORA X 90 G",
+        "marca": "DENTIBLANC",
+        "tipo": "PASTA DENTAL",
+        "variante": "BLANQUEADORA",
+        "contenido": 90,
+        "unidad": "G",
+        "unidades_por_envase": 1,
+        "principio_activo": null,
+        "concentracion": null,
+        "condicion_venta": null,
+        "categoria": "CUI-BUC-PAS",
+        "precio_costo": 67.82,
+        "moneda": "UYU",
+        "proveedor_id": "P03",
+        "codigo_proveedor": "LT-3333"
+      },
+      "fuentes": {
+        "gtin": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 12
+        },
+        "descripcion": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 12
+        },
+        "marca": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 12
+        },
+        "tipo": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 12
+        },
+        "variante": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 12
+        },
+        "contenido": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 12
+        },
+        "unidad": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 12
+        },
+        "unidades_por_envase": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 12
+        },
+        "categoria": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 12
+        },
+        "precio_costo": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 12
+        },
+        "moneda": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 12
+        },
+        "proveedor_id": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 12
+        },
+        "codigo_proveedor": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 12
+        }
+      }
+    }
+  },
+  {
+    "item_id": "P03:LT-3306",
+    "por_que": "Duplicado por GTIN, catálogo viejo abreviado",
+    "esperado": {
+      "estado": "duplicado",
+      "duplicado_de": "SKU102786",
+      "motivos_revision": [],
+      "ficha": {
+        "gtin": "7790863076870",
+        "descripcion": "JABON LAVANDA REAL ANTIBACTERIAL X 125 G",
+        "marca": "LAVANDA REAL",
+        "tipo": "JABON",
+        "variante": "ANTIBACTERIAL",
+        "contenido": 125,
+        "unidad": "G",
+        "unidades_por_envase": 1,
+        "principio_activo": null,
+        "concentracion": null,
+        "condicion_venta": null,
+        "categoria": "CUI-HIG-JAB",
+        "precio_costo": 45.37,
+        "moneda": "UYU",
+        "proveedor_id": "P03",
+        "codigo_proveedor": "LT-3306"
+      },
+      "fuentes": {
+        "gtin": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 3
+        },
+        "descripcion": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 3
+        },
+        "marca": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 3
+        },
+        "tipo": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 3
+        },
+        "variante": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 3
+        },
+        "contenido": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 3
+        },
+        "unidad": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 3
+        },
+        "unidades_por_envase": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 3
+        },
+        "categoria": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 3
+        },
+        "precio_costo": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 3
+        },
+        "moneda": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 3
+        },
+        "proveedor_id": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 3
+        },
+        "codigo_proveedor": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 3
+        }
+      }
+    }
+  },
+  {
+    "item_id": "P03:LT-3312",
+    "por_que": "Duplicado por GTIN y 0,5 LT -> 500 ML",
+    "esperado": {
+      "estado": "duplicado",
+      "duplicado_de": "SKU104011",
+      "motivos_revision": [],
+      "ficha": {
+        "gtin": "7799626810102",
+        "descripcion": "JABON LIQUIDO PUREZA NEUTRO X 500 ML",
+        "marca": "PUREZA",
+        "tipo": "JABON LIQUIDO",
+        "variante": "NEUTRO",
+        "contenido": 500,
+        "unidad": "ML",
+        "unidades_por_envase": 1,
+        "principio_activo": null,
+        "concentracion": null,
+        "condicion_venta": null,
+        "categoria": "CUI-HIG-JAB",
+        "precio_costo": 115.87,
+        "moneda": "UYU",
+        "proveedor_id": "P03",
+        "codigo_proveedor": "LT-3312"
+      },
+      "fuentes": {
+        "gtin": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 5
+        },
+        "descripcion": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 5
+        },
+        "marca": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 5
+        },
+        "tipo": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 5
+        },
+        "variante": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 5
+        },
+        "contenido": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 5
+        },
+        "unidad": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 5
+        },
+        "unidades_por_envase": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 5
+        },
+        "categoria": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 5
+        },
+        "precio_costo": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 5
+        },
+        "moneda": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 5
+        },
+        "proveedor_id": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 5
+        },
+        "codigo_proveedor": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 5
+        }
+      }
+    }
+  },
+  {
+    "item_id": "P03:LT-3345",
+    "por_que": "0,25 LT -> 250 ML (Q04)",
+    "esperado": {
+      "estado": "lista_para_alta",
+      "duplicado_de": null,
+      "motivos_revision": [],
+      "ficha": {
+        "gtin": "7793358846682",
+        "descripcion": "JABON LIQUIDO PUREZA ANTIBACTERIAL X 250 ML",
+        "marca": "PUREZA",
+        "tipo": "JABON LIQUIDO",
+        "variante": "ANTIBACTERIAL",
+        "contenido": 250,
+        "unidad": "ML",
+        "unidades_por_envase": 1,
+        "principio_activo": null,
+        "concentracion": null,
+        "condicion_venta": null,
+        "categoria": "CUI-HIG-JAB",
+        "precio_costo": 76.17,
+        "moneda": "UYU",
+        "proveedor_id": "P03",
+        "codigo_proveedor": "LT-3345"
+      },
+      "fuentes": {
+        "gtin": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 16
+        },
+        "descripcion": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 16
+        },
+        "marca": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 16
+        },
+        "tipo": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 16
+        },
+        "variante": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 16
+        },
+        "contenido": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 16
+        },
+        "unidad": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 16
+        },
+        "unidades_por_envase": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 16
+        },
+        "categoria": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 16
+        },
+        "precio_costo": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 16
+        },
+        "moneda": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 16
+        },
+        "proveedor_id": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 16
+        },
+        "codigo_proveedor": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 16
+        }
+      }
+    }
+  },
+  {
+    "item_id": "P03:LT-3417",
+    "por_que": "Abreviatura S/ y 0,5 LT -> 500 ML",
+    "esperado": {
+      "estado": "lista_para_alta",
+      "duplicado_de": null,
+      "motivos_revision": [],
+      "ficha": {
+        "gtin": "7795205443723",
+        "descripcion": "ENJUAGUE BUCAL DENTIBLANC SIN ALCOHOL X 500 ML",
+        "marca": "DENTIBLANC",
+        "tipo": "ENJUAGUE BUCAL",
+        "variante": "SIN ALCOHOL",
+        "contenido": 500,
+        "unidad": "ML",
+        "unidades_por_envase": 1,
+        "principio_activo": null,
+        "concentracion": null,
+        "condicion_venta": null,
+        "categoria": "CUI-BUC-ENJ",
+        "precio_costo": 161.71,
+        "moneda": "UYU",
+        "proveedor_id": "P03",
+        "codigo_proveedor": "LT-3417"
+      },
+      "fuentes": {
+        "gtin": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 40
+        },
+        "descripcion": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 40
+        },
+        "marca": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 40
+        },
+        "tipo": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 40
+        },
+        "variante": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 40
+        },
+        "contenido": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 40
+        },
+        "unidad": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 40
+        },
+        "unidades_por_envase": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 40
+        },
+        "categoria": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 40
+        },
+        "precio_costo": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 40
+        },
+        "moneda": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 40
+        },
+        "proveedor_id": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 40
+        },
+        "codigo_proveedor": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 40
+        }
+      }
+    }
+  },
+  {
+    "item_id": "P03:LT-3357",
+    "por_que": "Sin EAN, mismo producto que el catálogo escrito distinto",
+    "esperado": {
+      "estado": "a_revision",
+      "duplicado_de": "SKU102275",
+      "motivos_revision": [
+        "gtin_faltante",
+        "posible_duplicado"
+      ],
+      "ficha": {
+        "gtin": null,
+        "descripcion": "JABON PUREZA ANTIBACTERIAL X 125 G",
+        "marca": "PUREZA",
+        "tipo": "JABON",
+        "variante": "ANTIBACTERIAL",
+        "contenido": 125,
+        "unidad": "G",
+        "unidades_por_envase": 1,
+        "principio_activo": null,
+        "concentracion": null,
+        "condicion_venta": null,
+        "categoria": "CUI-HIG-JAB",
+        "precio_costo": 48.42,
+        "moneda": "UYU",
+        "proveedor_id": "P03",
+        "codigo_proveedor": "LT-3357"
+      },
+      "fuentes": {
+        "descripcion": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 20
+        },
+        "marca": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 20
+        },
+        "tipo": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 20
+        },
+        "variante": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 20
+        },
+        "contenido": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 20
+        },
+        "unidad": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 20
+        },
+        "unidades_por_envase": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 20
+        },
+        "categoria": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 20
+        },
+        "precio_costo": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 20
+        },
+        "moneda": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 20
+        },
+        "proveedor_id": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 20
+        },
+        "codigo_proveedor": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 20
+        }
+      }
+    }
+  },
+  {
+    "item_id": "P03:LT-3447",
+    "por_que": "Sin EAN, abreviatura y unidad GRS en el catálogo (Q07)",
+    "esperado": {
+      "estado": "a_revision",
+      "duplicado_de": "SKU100889",
+      "motivos_revision": [
+        "gtin_faltante",
+        "posible_duplicado"
+      ],
+      "ficha": {
+        "gtin": null,
+        "descripcion": "JABON PUREZA ANTIBACTERIAL X 90 G",
+        "marca": "PUREZA",
+        "tipo": "JABON",
+        "variante": "ANTIBACTERIAL",
+        "contenido": 90,
+        "unidad": "G",
+        "unidades_por_envase": 1,
+        "principio_activo": null,
+        "concentracion": null,
+        "condicion_venta": null,
+        "categoria": "CUI-HIG-JAB",
+        "precio_costo": 34.2,
+        "moneda": "UYU",
+        "proveedor_id": "P03",
+        "codigo_proveedor": "LT-3447"
+      },
+      "fuentes": {
+        "descripcion": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 46
+        },
+        "marca": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 46
+        },
+        "tipo": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 46
+        },
+        "variante": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 46
+        },
+        "contenido": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 46
+        },
+        "unidad": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 46
+        },
+        "unidades_por_envase": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 46
+        },
+        "categoria": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 46
+        },
+        "precio_costo": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 46
+        },
+        "moneda": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 46
+        },
+        "proveedor_id": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 46
+        },
+        "codigo_proveedor": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 46
+        }
+      }
+    }
+  },
+  {
+    "item_id": "P03:LT-3450",
+    "por_que": "Sin EAN, UNID -> UN (Q21)",
+    "esperado": {
+      "estado": "a_revision",
+      "duplicado_de": "SKU102632",
+      "motivos_revision": [
+        "gtin_faltante",
+        "posible_duplicado"
+      ],
+      "ficha": {
+        "gtin": null,
+        "descripcion": "HISOPOS NUBE X 100 UN",
+        "marca": "NUBE",
+        "tipo": "HISOPOS",
+        "variante": null,
+        "contenido": 100,
+        "unidad": "UN",
+        "unidades_por_envase": 1,
+        "principio_activo": null,
+        "concentracion": null,
+        "condicion_venta": null,
+        "categoria": "CUI-HIG-ALG",
+        "precio_costo": 41.84,
+        "moneda": "UYU",
+        "proveedor_id": "P03",
+        "codigo_proveedor": "LT-3450"
+      },
+      "fuentes": {
+        "descripcion": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 41
+        },
+        "marca": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 41
+        },
+        "tipo": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 41
+        },
+        "contenido": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 41
+        },
+        "unidad": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 41
+        },
+        "unidades_por_envase": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 41
+        },
+        "categoria": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 41
+        },
+        "precio_costo": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 41
+        },
+        "moneda": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 41
+        },
+        "proveedor_id": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 41
+        },
+        "codigo_proveedor": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 41
+        }
+      }
+    }
+  },
+  {
+    "item_id": "P03:LT-3360",
+    "por_que": "Trampa: se parece a SKU100889 pero trae GTIN nuevo",
+    "esperado": {
+      "estado": "lista_para_alta",
+      "duplicado_de": null,
+      "motivos_revision": [],
+      "ficha": {
+        "gtin": "7794413279544",
+        "descripcion": "JABON PUREZA AVENA X 90 G",
+        "marca": "PUREZA",
+        "tipo": "JABON",
+        "variante": "AVENA",
+        "contenido": 90,
+        "unidad": "G",
+        "unidades_por_envase": 1,
+        "principio_activo": null,
+        "concentracion": null,
+        "condicion_venta": null,
+        "categoria": "CUI-HIG-JAB",
+        "precio_costo": 37.82,
+        "moneda": "UYU",
+        "proveedor_id": "P03",
+        "codigo_proveedor": "LT-3360"
+      },
+      "fuentes": {
+        "gtin": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 21
+        },
+        "descripcion": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 21
+        },
+        "marca": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 21
+        },
+        "tipo": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 21
+        },
+        "variante": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 21
+        },
+        "contenido": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 21
+        },
+        "unidad": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 21
+        },
+        "unidades_por_envase": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 21
+        },
+        "categoria": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 21
+        },
+        "precio_costo": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 21
+        },
+        "moneda": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 21
+        },
+        "proveedor_id": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 21
+        },
+        "codigo_proveedor": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 21
+        }
+      }
+    }
+  },
+  {
+    "item_id": "P03:LT-3327",
+    "por_que": "Cepillo de 2 UN: no es pack (como en el catálogo)",
+    "esperado": {
+      "estado": "duplicado",
+      "duplicado_de": "SKU102387",
+      "motivos_revision": [],
+      "ficha": {
+        "gtin": "7798971881317",
+        "descripcion": "CEPILLO DENTAL SONRISA MEDIO X 2 UN",
+        "marca": "SONRISA",
+        "tipo": "CEPILLO DENTAL",
+        "variante": "MEDIO",
+        "contenido": 2,
+        "unidad": "UN",
+        "unidades_por_envase": 1,
+        "principio_activo": null,
+        "concentracion": null,
+        "condicion_venta": null,
+        "categoria": "CUI-BUC-CEP",
+        "precio_costo": 96.95,
+        "moneda": "UYU",
+        "proveedor_id": "P03",
+        "codigo_proveedor": "LT-3327"
+      },
+      "fuentes": {
+        "gtin": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 10
+        },
+        "descripcion": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 10
+        },
+        "marca": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 10
+        },
+        "tipo": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 10
+        },
+        "variante": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 10
+        },
+        "contenido": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 10
+        },
+        "unidad": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 10
+        },
+        "unidades_por_envase": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 10
+        },
+        "categoria": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 10
+        },
+        "precio_costo": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 10
+        },
+        "moneda": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 10
+        },
+        "proveedor_id": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 10
+        },
+        "codigo_proveedor": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 10
+        }
+      }
+    }
+  },
+  {
+    "item_id": "P03:LT-3369",
+    "por_que": "Cepillo de 2 UN: no es pack (falló en la corrida 1)",
+    "esperado": {
+      "estado": "lista_para_alta",
+      "duplicado_de": null,
+      "motivos_revision": [],
+      "ficha": {
+        "gtin": "7790743922976",
+        "descripcion": "CEPILLO DENTAL SONRISA SUAVE X 2 UN",
+        "marca": "SONRISA",
+        "tipo": "CEPILLO DENTAL",
+        "variante": "SUAVE",
+        "contenido": 2,
+        "unidad": "UN",
+        "unidades_por_envase": 1,
+        "principio_activo": null,
+        "concentracion": null,
+        "condicion_venta": null,
+        "categoria": "CUI-BUC-CEP",
+        "precio_costo": 89.57,
+        "moneda": "UYU",
+        "proveedor_id": "P03",
+        "codigo_proveedor": "LT-3369"
+      },
+      "fuentes": {
+        "gtin": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 24
+        },
+        "descripcion": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 24
+        },
+        "marca": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 24
+        },
+        "tipo": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 24
+        },
+        "variante": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 24
+        },
+        "contenido": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 24
+        },
+        "unidad": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 24
+        },
+        "unidades_por_envase": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 24
+        },
+        "categoria": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 24
+        },
+        "precio_costo": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 24
+        },
+        "moneda": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 24
+        },
+        "proveedor_id": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 24
+        },
+        "codigo_proveedor": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 24
+        }
+      }
+    }
+  },
+  {
+    "item_id": "P03:LT-3435",
+    "por_que": "Cepillo de 2 UN: no es pack (falló en la corrida 1)",
+    "esperado": {
+      "estado": "lista_para_alta",
+      "duplicado_de": null,
+      "motivos_revision": [],
+      "ficha": {
+        "gtin": "7790145357833",
+        "descripcion": "CEPILLO DENTAL DENTIBLANC MEDIO X 2 UN",
+        "marca": "DENTIBLANC",
+        "tipo": "CEPILLO DENTAL",
+        "variante": "MEDIO",
+        "contenido": 2,
+        "unidad": "UN",
+        "unidades_por_envase": 1,
+        "principio_activo": null,
+        "concentracion": null,
+        "condicion_venta": null,
+        "categoria": "CUI-BUC-CEP",
+        "precio_costo": 94.33,
+        "moneda": "UYU",
+        "proveedor_id": "P03",
+        "codigo_proveedor": "LT-3435"
+      },
+      "fuentes": {
+        "gtin": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 48
+        },
+        "descripcion": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 48
+        },
+        "marca": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 48
+        },
+        "tipo": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 48
+        },
+        "variante": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 48
+        },
+        "contenido": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 48
+        },
+        "unidad": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 48
+        },
+        "unidades_por_envase": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 48
+        },
+        "categoria": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 48
+        },
+        "precio_costo": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 48
+        },
+        "moneda": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 48
+        },
+        "proveedor_id": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 48
+        },
+        "codigo_proveedor": {
+          "archivo": "litoral_altas_102026.csv",
+          "linea": 48
+        }
+      }
+    }
+  }
+]

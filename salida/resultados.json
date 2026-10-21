@@ -1717,13 +1717,13 @@
     "motivos_revision": [],
     "ficha": {
       "gtin": "7790743922976",
-      "descripcion": "CEPILLO DENTAL SONRISA SUAVE X 1 UN PACK 2",
+      "descripcion": "CEPILLO DENTAL SONRISA SUAVE X 2 UN",
       "marca": "SONRISA",
       "tipo": "CEPILLO DENTAL",
       "variante": "SUAVE",
-      "contenido": 1,
+      "contenido": 2,
       "unidad": "UN",
-      "unidades_por_envase": 2,
+      "unidades_por_envase": 1,
       "principio_activo": null,
       "concentracion": null,
       "condicion_venta": null,
@@ -3063,11 +3063,11 @@
       "codigo_proveedor": "LT-3450"
     },
     "fuentes": {
-      "descripcion": {
+      "marca": {
         "archivo": "litoral_altas_102026.csv",
         "linea": 41
       },
-      "marca": {
+      "descripcion": {
         "archivo": "litoral_altas_102026.csv",
         "linea": 41
       },
@@ -3583,13 +3583,13 @@
     "motivos_revision": [],
     "ficha": {
       "gtin": "7790145357833",
-      "descripcion": "CEPILLO DENTAL DENTIBLANC MEDIO X 1 UN PACK 2",
+      "descripcion": "CEPILLO DENTAL DENTIBLANC MEDIO X 2 UN",
       "marca": "DENTIBLANC",
       "tipo": "CEPILLO DENTAL",
       "variante": "MEDIO",
-      "contenido": 1,
+      "contenido": 2,
       "unidad": "UN",
-      "unidades_por_envase": 2,
+      "unidades_por_envase": 1,
       "principio_activo": null,
       "concentracion": null,
       "condicion_venta": null,
