@@ -10,7 +10,7 @@ from typing import Annotated, Any, Literal
 
 from fastmcp import FastMCP
 from fastmcp.exceptions import ToolError
-from pydantic import Field
+from pydantic import BaseModel, Field
 
 from cuentas import cargar_abreviaturas, cargar_vocabulario, convertir_contenido, convertir_numero, expandir_abreviaturas, normalizar_gtin
 
@@ -203,6 +203,13 @@ Estado = Literal[tuple(VOCABULARIO["estados"])]            # lista_para_alta | d
 Motivo = Literal[tuple(VOCABULARIO["motivos_revision"])]   # gtin_faltante | gtin_invalido | ...
 
 
+class CategoriaDecididaPor(BaseModel):
+    """El extra de la semana 1: qué dato de la ficha decidió la categoría (le ahorra a Compras revisar a ciegas)."""
+    campo: Literal["tipo", "variante", "marca"] = Field(description="El campo de la ficha que decidió la categoría.")
+    valor: str = Field(description="El valor de ese campo, tal como quedó en la ficha.")
+    explicacion: str = Field(max_length=200, description="Una frase corta: por qué ese dato lleva a esa categoría.")
+
+
 def validar_coherencia(item_id: str, estado: str, motivos: list[str], duplicado_de: str | None) -> list[str]:
     """Revisa que el resultado tenga sentido según el estándar. Devuelve la lista de problemas (vacía = OK)."""
     problemas = []
@@ -258,6 +265,7 @@ def registrar_ficha(
     estado: Annotated[Estado, Field(description="Estado del ítem según el estándar.")],
     ficha: Annotated[dict[str, Any], Field(description="Los campos de la ficha (estándar, sección 1). Un campo que no se pudo determinar va en null.")],
     fuentes: Annotated[dict[str, dict], Field(description="Para cada campo completado de la ficha, de dónde salió: {archivo, linea}.")],
+    categoria_decidida_por: Annotated[CategoriaDecididaPor, Field(description="Qué dato de la ficha decidió la categoría elegida.")],
     motivos_revision: Annotated[list[Motivo], Field(default_factory=list, description="Motivos de revisión. Vacío si no va a revisión.")],
     duplicado_de: Annotated[str | None, Field(description="SKU del catálogo: si es duplicado, o el candidato si es posible_duplicado.")] = None,
 ) -> dict:
@@ -268,8 +276,14 @@ def registrar_ficha(
     (por ejemplo, que un duplicado traiga su SKU). Si no lo es, NO se guarda y vuelve un error
     que explica qué corregir: corregilo y volvé a llamarla. Si registrás el mismo ítem dos veces,
     el último reemplaza al anterior.
+    En categoria_decidida_por indicá qué campo de la ficha (tipo, variante o marca) decidió la
+    categoría, con su valor exacto y una frase corta de por qué.
     """
     problemas = validar_coherencia(item_id, estado, motivos_revision, duplicado_de)
+    if ficha.get(categoria_decidida_por.campo) != categoria_decidida_por.valor:
+        problemas.append(f"categoria_decidida_por cita {categoria_decidida_por.campo}={categoria_decidida_por.valor!r}, "
+                        f"pero en la ficha ese campo vale {ficha.get(categoria_decidida_por.campo)!r}. "
+                        "Tiene que citar un dato real de la ficha.")
     if problemas:
         raise ToolError("No se guardó. Corregí esto y volvé a registrar: " + " | ".join(problemas))
 
@@ -280,6 +294,7 @@ def registrar_ficha(
         "motivos_revision": motivos_revision,
         "ficha": ficha,
         "fuentes": fuentes,
+        "categoria_decidida_por": categoria_decidida_por.model_dump(),
     })
     return {"registrado": item_id, "estado": estado, "total_registrados": total}
 

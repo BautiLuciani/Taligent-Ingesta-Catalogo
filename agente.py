@@ -6,6 +6,7 @@ import asyncio
 import json
 import os
 import sys
+import time
 from datetime import datetime
 from pathlib import Path
 
@@ -236,6 +237,7 @@ async def main():
     ruta_traza = CARPETA_TRAZAS / f"traza_{datetime.now():%Y%m%d_%H%M%S}.jsonl"
     print(f"Proveedor {proveedor_id} · tandas de {TANDA} · effort {EFFORT} · traza: {ruta_traza.name}")
 
+    inicio = time.perf_counter()  # reloj para medir cuánto tarda la corrida
     tandas = []
     async with Client(RUTA_SERVIDOR) as cliente_mcp:
         system = await armar_system_prompt(cliente_mcp)
@@ -251,20 +253,41 @@ async def main():
             tandas.append(resultado)
             print(f"   → {resultado['como_termino']} · {resultado['registrados']}/{resultado['esperados']} registrados"
                   f" · US$ {resultado['costo_usd']:.4f}")
+    segundos = time.perf_counter() - inicio
 
     registrados = sum(t["registrados"] for t in tandas)
     costo_total = sum(t["costo_usd"] for t in tandas)
-    faltan = [item for t in tandas for item in t["faltan"]]
-    print(f"\n=== Resumen: {registrados}/{total} productos registrados · costo total US$ {costo_total:.4f}"
-          f" · US$ {costo_total / max(registrados, 1):.5f} por ficha")
-    print(f"Tokens: {sum(t['input_tokens'] for t in tandas)} in / {sum(t['output_tokens'] for t in tandas)} out"
-          f" · vueltas: {sum(t['vueltas'] for t in tandas)}")
-    if faltan:
-        print(f"⚠ Quedaron sin registrar: {faltan}")
-    problemas = [t for t in tandas if t["como_termino"] != "end_turn"]
-    if problemas:
-        print(f"⚠ Tandas que no terminaron bien: {[t['como_termino'] for t in problemas]}")
 
+    # El reporte de la corrida queda guardado (y se sube a Git): costo por ficha y tiempo, para comparar corridas
+    reporte = {
+        "fecha": f"{datetime.now():%Y-%m-%d %H:%M}",
+        "proveedor_id": proveedor_id,
+        "modelo": modelo,
+        "effort": EFFORT,
+        "tanda": TANDA,
+        "productos": total,
+        "registrados": registrados,
+        "faltan": [item for t in tandas for item in t["faltan"]],
+        "tandas_con_problemas": [t["como_termino"] for t in tandas if t["como_termino"] != "end_turn"],
+        "segundos": round(segundos, 1),
+        "vueltas": sum(t["vueltas"] for t in tandas),
+        "input_tokens": sum(t["input_tokens"] for t in tandas),
+        "output_tokens": sum(t["output_tokens"] for t in tandas),
+        "costo_total_usd": round(costo_total, 4),
+        "costo_por_ficha_usd": round(costo_total / max(registrados, 1), 5),
+        "traza": ruta_traza.name,
+        "por_tanda": [{k: v for k, v in t.items() if k != "texto_final"} for t in tandas],
+    }
+    (CARPETA_SALIDA / "corrida.json").write_text(json.dumps(reporte, ensure_ascii=False, indent=2), encoding="utf-8")
+
+    print(f"\n=== Resumen: {registrados}/{total} productos registrados en {segundos:.0f} s"
+          f" · costo total US$ {costo_total:.4f} · US$ {reporte['costo_por_ficha_usd']:.5f} por ficha")
+    print(f"Tokens: {reporte['input_tokens']} in / {reporte['output_tokens']} out · vueltas: {reporte['vueltas']}"
+          f" · reporte: salida/corrida.json")
+    if reporte["faltan"]:
+        print(f"⚠ Quedaron sin registrar: {reporte['faltan']}")
+    if reporte["tandas_con_problemas"]:
+        print(f"⚠ Tandas que no terminaron bien: {reporte['tandas_con_problemas']}")
 
 if __name__ == "__main__":
     asyncio.run(main())

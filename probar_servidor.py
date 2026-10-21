@@ -9,7 +9,6 @@ from fastmcp import Client
 from fastmcp.client.transports import PythonStdioTransport
 
 RUTA_SERVIDOR = Path(__file__).parent / "servidor_mcp.py"
-
 CARPETA_ESTANDAR = Path(__file__).parent / "Data" / "estandar"
 
 # Respuestas verificadas a mano (Bitácora, semana 1)
@@ -118,8 +117,10 @@ async def main():
 
         print("\n--- registrar_ficha: resultados coherentes (se guardan) ---")
         fuente_3303 = por_id["P03:LT-3303"]["fuente"]
-        ficha_ejemplo = {"gtin": "7793469616846", "marca": "SONRISA", "contenido": 90, "unidad": "G"}
+        ficha_ejemplo = {"gtin": "7793469616846", "marca": "SONRISA", "tipo": "PASTA DENTAL", "contenido": 90, "unidad": "G"}
         fuentes_ejemplo = {campo: fuente_3303 for campo in ficha_ejemplo}
+        categoria_ejemplo = {"campo": "tipo", "valor": "PASTA DENTAL", "explicacion": "Pasta dental va en cuidado bucal."}
+        base = {"ficha": ficha_ejemplo, "fuentes": fuentes_ejemplo, "categoria_decidida_por": categoria_ejemplo}
         casos_ok = [
             ("lista_para_alta", {"item_id": "P03:LT-3303", "estado": "lista_para_alta"}),
             ("duplicado con su SKU", {"item_id": "P03:LT-3333", "estado": "duplicado", "duplicado_de": "SKU100301"}),
@@ -130,7 +131,7 @@ async def main():
         ]
         for nombre, argumentos in casos_ok:
             resultado = await cliente.call_tool(
-                "registrar_ficha", {"ficha": ficha_ejemplo, "fuentes": fuentes_ejemplo, **argumentos}, raise_on_error=False)
+                "registrar_ficha", {**base, **argumentos}, raise_on_error=False)
             chequear(nombre, resultado.is_error, False)
         chequear("Quedaron 3 ítems guardados (no 4)", resultado.data["total_registrados"], 3)
 
@@ -147,25 +148,29 @@ async def main():
             ("estado fuera del vocabulario", {"item_id": "P03:LT-3315", "estado": "aprobado"}),
             ("motivo fuera del vocabulario", {"item_id": "P03:LT-3318", "estado": "a_revision",
                                               "motivos_revision": ["sin_precio"]}),
+            ("categoría sin explicar", {"item_id": "P03:LT-3321", "estado": "lista_para_alta",
+                                        "categoria_decidida_por": None}),
+            ("categoría explicada con un dato inventado", {"item_id": "P03:LT-3324", "estado": "lista_para_alta",
+                                                           "categoria_decidida_por": {"campo": "tipo", "valor": "JABON",
+                                                                                      "explicacion": "Es un jabón."}}),
         ]
         for nombre, argumentos in casos_error:
             resultado = await cliente.call_tool(
-                "registrar_ficha", {"ficha": ficha_ejemplo, "fuentes": fuentes_ejemplo, **argumentos}, raise_on_error=False)
+                "registrar_ficha", {**base, **argumentos}, raise_on_error=False)
             chequear(nombre, resultado.is_error, True)
-            if nombre == "duplicado sin SKU":
+            if nombre in ("duplicado sin SKU", "categoría explicada con un dato inventado"):
                 print(f"      lo que recibe el modelo: {resultado.content[0].text}")
 
         guardado = json.loads((Path(carpeta_temporal) / "resultados.json").read_text(encoding="utf-8"))
         chequear("En el archivo están solo los 3 coherentes", sorted(guardado), ["P03:LT-3303", "P03:LT-3333", "P03:LT-3447"])
 
-        
         print("\n--- resources: el estándar ---")
         recursos = {str(r.uri) for r in await cliente.list_resources()}
         chequear("Hay 3 resources", sorted(recursos),
-                ["estandar://ficha_de_producto", "estandar://taxonomia", "estandar://vocabulario"])
+                 ["estandar://ficha_de_producto", "estandar://taxonomia", "estandar://vocabulario"])
         for uri, archivo in [("estandar://ficha_de_producto", "ficha_de_producto.md"),
-                            ("estandar://vocabulario", "vocabulario.yaml"),
-                            ("estandar://taxonomia", "taxonomia.csv")]:
+                             ("estandar://vocabulario", "vocabulario.yaml"),
+                             ("estandar://taxonomia", "taxonomia.csv")]:
             texto = (await cliente.read_resource(uri))[0].text
             original = (CARPETA_ESTANDAR / archivo).read_text(encoding="utf-8-sig")
             chequear(f"{uri} es idéntico a {archivo} ({len(texto)} caracteres)", texto, original)

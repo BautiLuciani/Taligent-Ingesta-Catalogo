@@ -75,6 +75,11 @@
         "archivo": "litoral_altas_102026.csv",
         "linea": 2
       }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "PASTA DENTAL",
+      "explicacion": "La pasta dental va en Higiene bucal > Pastas dentales (CUI-BUC-PAS)."
     }
   },
   "P03:LT-3306": {
@@ -153,6 +158,11 @@
         "archivo": "litoral_altas_102026.csv",
         "linea": 3
       }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "JABON",
+      "explicacion": "El jabón antibacterial va en Higiene corporal > Jabones (CUI-HIG-JAB)."
     }
   },
   "P03:LT-3309": {
@@ -231,6 +241,11 @@
         "archivo": "litoral_altas_102026.csv",
         "linea": 4
       }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "PASTA DENTAL",
+      "explicacion": "La pasta dental va en Higiene bucal > Pastas dentales (CUI-BUC-PAS)."
     }
   },
   "P03:LT-3312": {
@@ -309,6 +324,11 @@
         "archivo": "litoral_altas_102026.csv",
         "linea": 5
       }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "JABON LIQUIDO",
+      "explicacion": "El jabón líquido de manos va en Higiene corporal > Jabones (CUI-HIG-JAB)."
     }
   },
   "P03:LT-3315": {
@@ -387,6 +407,11 @@
         "archivo": "litoral_altas_102026.csv",
         "linea": 6
       }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "PASTA DENTAL",
+      "explicacion": "La pasta dental va en Higiene bucal > Pastas dentales (CUI-BUC-PAS)."
     }
   },
   "P03:LT-3318": {
@@ -465,6 +490,11 @@
         "archivo": "litoral_altas_102026.csv",
         "linea": 7
       }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "ALGODON",
+      "explicacion": "El algodón va en Higiene corporal > Algodones e hisopos (CUI-HIG-ALG)."
     }
   },
   "P03:LT-3321": {
@@ -543,6 +573,11 @@
         "archivo": "litoral_altas_102026.csv",
         "linea": 8
       }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "PASTA DENTAL",
+      "explicacion": "La pasta dental va en Higiene bucal > Pastas dentales (CUI-BUC-PAS)."
     }
   },
   "P03:LT-3324": {
@@ -621,6 +656,11 @@
         "archivo": "litoral_altas_102026.csv",
         "linea": 9
       }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "JABON LIQUIDO",
+      "explicacion": "El jabón líquido de manos va en Higiene corporal > Jabones (CUI-HIG-JAB)."
     }
   },
   "P03:LT-3327": {
@@ -699,6 +739,11 @@
         "archivo": "litoral_altas_102026.csv",
         "linea": 10
       }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "CEPILLO DENTAL",
+      "explicacion": "El cepillo dental va en Higiene bucal > Cepillos (CUI-BUC-CEP)."
     }
   },
   "P03:LT-3330": {
@@ -777,6 +822,11 @@
         "archivo": "litoral_altas_102026.csv",
         "linea": 11
       }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "PASTA DENTAL",
+      "explicacion": "La pasta dental va en Higiene bucal > Pastas dentales (CUI-BUC-PAS)."
     }
   },
   "P03:LT-3333": {
@@ -855,6 +905,11 @@
         "archivo": "litoral_altas_102026.csv",
         "linea": 12
       }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "PASTA DENTAL",
+      "explicacion": "La pasta dental va en Higiene bucal > Pastas dentales (CUI-BUC-PAS)."
     }
   },
   "P03:LT-3336": {
@@ -933,6 +988,11 @@
         "archivo": "litoral_altas_102026.csv",
         "linea": 13
       }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "ENJUAGUE BUCAL",
+      "explicacion": "El enjuague bucal va en Higiene bucal > Enjuagues (CUI-BUC-ENJ)."
     }
   },
   "P03:LT-3339": {
@@ -1011,6 +1071,11 @@
         "archivo": "litoral_altas_102026.csv",
         "linea": 14
       }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "PASTA DENTAL",
+      "explicacion": "La pasta dental va en Higiene bucal > Pastas dentales (CUI-BUC-PAS)."
     }
   },
   "P03:LT-3342": {
@@ -1089,6 +1154,11 @@
         "archivo": "litoral_altas_102026.csv",
         "linea": 15
       }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "ALGODON",
+      "explicacion": "El algodón va en Cuidado personal > Higiene corporal > Algodones e hisopos (CUI-HIG-ALG)."
     }
   },
   "P03:LT-3345": {
@@ -1167,6 +1237,11 @@
         "archivo": "litoral_altas_102026.csv",
         "linea": 16
       }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "JABON LIQUIDO",
+      "explicacion": "El jabón líquido de manos va en Higiene corporal > Jabones (CUI-HIG-JAB)."
     }
   },
   "P03:LT-3348": {
@@ -1245,6 +1320,11 @@
         "archivo": "litoral_altas_102026.csv",
         "linea": 17
       }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "PASTA DENTAL",
+      "explicacion": "La pasta dental va en Higiene bucal > Pastas dentales (CUI-BUC-PAS)."
     }
   },
   "P03:LT-3351": {
@@ -1323,6 +1403,11 @@
         "archivo": "litoral_altas_102026.csv",
         "linea": 18
       }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "JABON LIQUIDO",
+      "explicacion": "El jabón líquido de manos va en Higiene corporal > Jabones (CUI-HIG-JAB)."
     }
   },
   "P03:LT-3354": {
@@ -1401,6 +1486,11 @@
         "archivo": "litoral_altas_102026.csv",
         "linea": 19
       }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "PASTA DENTAL",
+      "explicacion": "La pasta dental va en Higiene bucal > Pastas dentales (CUI-BUC-PAS)."
     }
   },
   "P03:LT-3357": {
@@ -1478,6 +1568,11 @@
         "archivo": "litoral_altas_102026.csv",
         "linea": 20
       }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "JABON",
+      "explicacion": "El jabón en barra va en Higiene corporal > Jabones (CUI-HIG-JAB)."
     }
   },
   "P03:LT-3360": {
@@ -1556,6 +1651,11 @@
         "archivo": "litoral_altas_102026.csv",
         "linea": 21
       }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "JABON",
+      "explicacion": "El jabón en barra va en Higiene corporal > Jabones (CUI-HIG-JAB)."
     }
   },
   "P03:LT-3363": {
@@ -1634,6 +1734,11 @@
         "archivo": "litoral_altas_102026.csv",
         "linea": 22
       }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "CEPILLO DENTAL",
+      "explicacion": "El tipo cepillo dental va en Higiene bucal > Cepillos."
     }
   },
   "P03:LT-3366": {
@@ -1708,6 +1813,11 @@
         "archivo": "litoral_altas_102026.csv",
         "linea": 23
       }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "HISOPOS",
+      "explicacion": "Los hisopos van en Higiene corporal > Algodones e hisopos."
     }
   },
   "P03:LT-3369": {
@@ -1786,6 +1896,11 @@
         "archivo": "litoral_altas_102026.csv",
         "linea": 24
       }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "CEPILLO DENTAL",
+      "explicacion": "El tipo cepillo dental va en Higiene bucal > Cepillos."
     }
   },
   "P03:LT-3372": {
@@ -1864,6 +1979,11 @@
         "archivo": "litoral_altas_102026.csv",
         "linea": 25
       }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "CEPILLO DENTAL",
+      "explicacion": "El tipo cepillo dental va en Higiene bucal > Cepillos."
     }
   },
   "P03:LT-3375": {
@@ -1942,6 +2062,11 @@
         "archivo": "litoral_altas_102026.csv",
         "linea": 26
       }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "JABON",
+      "explicacion": "El jabón en barra va en Higiene corporal > Jabones."
     }
   },
   "P03:LT-3378": {
@@ -2020,6 +2145,11 @@
         "archivo": "litoral_altas_102026.csv",
         "linea": 27
       }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "PASTA DENTAL",
+      "explicacion": "La pasta dental va en Higiene bucal > Pastas dentales."
     }
   },
   "P03:LT-3381": {
@@ -2098,6 +2228,11 @@
         "archivo": "litoral_altas_102026.csv",
         "linea": 28
       }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "JABON LIQUIDO",
+      "explicacion": "El jabón líquido va en Higiene corporal > Jabones (jabón líquido de manos)."
     }
   },
   "P03:LT-3384": {
@@ -2176,6 +2311,11 @@
         "archivo": "litoral_altas_102026.csv",
         "linea": 29
       }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "JABON",
+      "explicacion": "El jabón en barra va en Higiene corporal > Jabones."
     }
   },
   "P03:LT-3387": {
@@ -2254,6 +2394,11 @@
         "archivo": "litoral_altas_102026.csv",
         "linea": 30
       }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "PASTA DENTAL",
+      "explicacion": "La pasta dental va en Higiene bucal > Pastas dentales."
     }
   },
   "P03:LT-3390": {
@@ -2332,6 +2477,11 @@
         "archivo": "litoral_altas_102026.csv",
         "linea": 31
       }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "JABON",
+      "explicacion": "El jabón en barra va en Higiene corporal > Jabones."
     }
   },
   "P03:LT-3393": {
@@ -2410,6 +2560,11 @@
         "archivo": "litoral_altas_102026.csv",
         "linea": 32
       }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "PASTA DENTAL",
+      "explicacion": "La pasta dental va en Higiene bucal > Pastas dentales (CUI-BUC-PAS)."
     }
   },
   "P03:LT-3396": {
@@ -2488,6 +2643,11 @@
         "archivo": "litoral_altas_102026.csv",
         "linea": 33
       }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "JABON",
+      "explicacion": "Jabón de glicerina en barra va en Higiene corporal > Jabones (CUI-HIG-JAB)."
     }
   },
   "P03:LT-3399": {
@@ -2566,6 +2726,11 @@
         "archivo": "litoral_altas_102026.csv",
         "linea": 34
       }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "JABON",
+      "explicacion": "Jabón de glicerina en barra va en Higiene corporal > Jabones (CUI-HIG-JAB)."
     }
   },
   "P03:LT-3402": {
@@ -2644,6 +2809,11 @@
         "archivo": "litoral_altas_102026.csv",
         "linea": 35
       }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "JABON",
+      "explicacion": "Jabón de glicerina en barra va en Higiene corporal > Jabones (CUI-HIG-JAB)."
     }
   },
   "P03:LT-3405": {
@@ -2722,6 +2892,11 @@
         "archivo": "litoral_altas_102026.csv",
         "linea": 36
       }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "JABON",
+      "explicacion": "Jabón en barra va en Higiene corporal > Jabones (CUI-HIG-JAB)."
     }
   },
   "P03:LT-3408": {
@@ -2800,6 +2975,11 @@
         "archivo": "litoral_altas_102026.csv",
         "linea": 37
       }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "PASTA DENTAL",
+      "explicacion": "La pasta dental va en Higiene bucal > Pastas dentales (CUI-BUC-PAS)."
     }
   },
   "P03:LT-3411": {
@@ -2878,6 +3058,11 @@
         "archivo": "litoral_altas_102026.csv",
         "linea": 38
       }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "PASTA DENTAL",
+      "explicacion": "La pasta dental va en Higiene bucal > Pastas dentales (CUI-BUC-PAS)."
     }
   },
   "P03:LT-3414": {
@@ -2956,6 +3141,11 @@
         "archivo": "litoral_altas_102026.csv",
         "linea": 39
       }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "PASTA DENTAL",
+      "explicacion": "La pasta dental va en Higiene bucal > Pastas dentales (CUI-BUC-PAS)."
     }
   },
   "P03:LT-3417": {
@@ -3034,6 +3224,11 @@
         "archivo": "litoral_altas_102026.csv",
         "linea": 40
       }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "ENJUAGUE BUCAL",
+      "explicacion": "El enjuague bucal va en Higiene bucal > Enjuagues (CUI-BUC-ENJ)."
     }
   },
   "P03:LT-3450": {
@@ -3063,11 +3258,11 @@
       "codigo_proveedor": "LT-3450"
     },
     "fuentes": {
-      "marca": {
+      "descripcion": {
         "archivo": "litoral_altas_102026.csv",
         "linea": 41
       },
-      "descripcion": {
+      "marca": {
         "archivo": "litoral_altas_102026.csv",
         "linea": 41
       },
@@ -3107,6 +3302,11 @@
         "archivo": "litoral_altas_102026.csv",
         "linea": 41
       }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "HISOPOS",
+      "explicacion": "Los hisopos van en Cuidado personal > Higiene corporal > Algodones e hisopos (CUI-HIG-ALG)."
     }
   },
   "P03:LT-3420": {
@@ -3185,6 +3385,11 @@
         "archivo": "litoral_altas_102026.csv",
         "linea": 42
       }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "ALGODON",
+      "explicacion": "El tipo ALGODON va en Cuidado personal > Algodones e hisopos (CUI-HIG-ALG)."
     }
   },
   "P03:LT-3423": {
@@ -3263,6 +3468,11 @@
         "archivo": "litoral_altas_102026.csv",
         "linea": 43
       }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "ALGODON",
+      "explicacion": "El tipo ALGODON va en Cuidado personal > Algodones e hisopos (CUI-HIG-ALG)."
     }
   },
   "P03:LT-3426": {
@@ -3341,6 +3551,11 @@
         "archivo": "litoral_altas_102026.csv",
         "linea": 44
       }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "CEPILLO DENTAL",
+      "explicacion": "El cepillo dental va en Higiene bucal > Cepillos (CUI-BUC-CEP)."
     }
   },
   "P03:LT-3429": {
@@ -3419,6 +3634,11 @@
         "archivo": "litoral_altas_102026.csv",
         "linea": 45
       }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "CEPILLO DENTAL",
+      "explicacion": "El cepillo dental va en Higiene bucal > Cepillos (CUI-BUC-CEP)."
     }
   },
   "P03:LT-3447": {
@@ -3496,6 +3716,11 @@
         "archivo": "litoral_altas_102026.csv",
         "linea": 46
       }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "JABON",
+      "explicacion": "El jabón antibacterial va en Higiene corporal > Jabones (CUI-HIG-JAB)."
     }
   },
   "P03:LT-3432": {
@@ -3574,6 +3799,11 @@
         "archivo": "litoral_altas_102026.csv",
         "linea": 47
       }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "PASTA DENTAL",
+      "explicacion": "La pasta dental va en Higiene bucal > Pastas dentales (CUI-BUC-PAS)."
     }
   },
   "P03:LT-3435": {
@@ -3652,6 +3882,11 @@
         "archivo": "litoral_altas_102026.csv",
         "linea": 48
       }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "CEPILLO DENTAL",
+      "explicacion": "El cepillo dental va en Higiene bucal > Cepillos (CUI-BUC-CEP)."
     }
   },
   "P03:LT-3438": {
@@ -3730,6 +3965,11 @@
         "archivo": "litoral_altas_102026.csv",
         "linea": 49
       }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "PASTA DENTAL",
+      "explicacion": "La pasta dental va en Higiene bucal > Pastas dentales (CUI-BUC-PAS)."
     }
   },
   "P03:LT-3441": {
@@ -3808,6 +4048,11 @@
         "archivo": "litoral_altas_102026.csv",
         "linea": 50
       }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "PASTA DENTAL",
+      "explicacion": "La pasta dental va en Higiene bucal > Pastas dentales (CUI-BUC-PAS)."
     }
   },
   "P03:LT-3444": {
@@ -3886,6 +4131,11 @@
         "archivo": "litoral_altas_102026.csv",
         "linea": 51
       }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "PASTA DENTAL",
+      "explicacion": "La pasta dental va en Higiene bucal > Pastas dentales (CUI-BUC-PAS)."
     }
   }
 }

@@ -24,6 +24,7 @@ Cuando las operaciones son independientes entre sí, pedí varias tools juntas e
 8. En `fuentes` va, para cada campo completado de la ficha, de dónde salió: la `fuente` de su fila (archivo y línea). Los campos en null no llevan fuente.
 9. Si `registrar_ficha` devuelve un error, leé qué dice, corregí y volvé a registrar ese producto.
 10. Un producto es un pack solo si el archivo lo dice de forma explícita, como en el ejemplo del estándar «Pack ahorro 2 x 36». Si no lo dice, `unidades_por_envase` es 1 y el contenido es el de `calculado`, aunque la unidad sea UN: por ejemplo, «2 UN» sin ninguna mención a un pack es contenido 2 UN, no un pack de 2.
+11. En `categoria_decidida_por` indicá qué dato de la ficha decidió la categoría: el campo (`tipo`, `variante` o `marca`), su valor tal como quedó en la ficha y una frase corta con la evidencia (por ejemplo, «La pasta dental va en Higiene bucal > Pastas dentales»).
 
 # Cuándo terminaste
 
