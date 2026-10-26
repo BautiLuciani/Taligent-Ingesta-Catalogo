@@ -3,7 +3,7 @@ import copy
 import json
 from pathlib import Path
 
-from extractor_pdf import buscar_fila, filas_verificadas, normalizar_espacios, valor_en_fila
+from extractor_pdf import buscar_fila, codigos_en_citas, filas_verificadas, normalizar_espacios, valor_en_fila
 
 RUTA_EXPERIMENTO = Path(__file__).parent / "salida" / "experimentos" / "citas_lhs.json"
 
@@ -86,5 +86,14 @@ chequear("Mismo código en dos páginas: ambiguo, no entra", filas, {})
 chequear("...un solo problema, aunque aparezca 3 veces", len(problemas), 1)
 filas, problemas = filas_verificadas([{"type": "text", "text": "**LHS-206**", "citations": None}])
 chequear("Bloque sin cita: se ignora", (filas, problemas), ({}, []))
+
+print("--- codigos_en_citas (cobertura) ---")
+codigos = codigos_en_citas(respuesta["content"])
+chequear("La cita real trae los 25 productos de la tabla", len(codigos), 25)
+chequear("Incluye la primera y la última fila", {"LHS-203", "LHS-269"} <= codigos, True)
+chequear("No toma el encabezado ni el pie", {"Descripción", "Las"} & codigos, set())
+filas, _ = filas_verificadas(copy.deepcopy(respuesta["content"]))
+chequear("Con el paso 1 (3 pedidos) faltarían 22", len(codigos - set(filas)), 22)
+chequear("Bloque sin cita: no aporta códigos", codigos_en_citas([{"type": "text", "text": "LHS-206", "citations": None}]), set())
 
 print(f"\nResultado: {'todo OK' if errores == 0 else f'{errores} con error'}")

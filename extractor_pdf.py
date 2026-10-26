@@ -97,3 +97,27 @@ def filas_verificadas(contenido: list[dict]) -> tuple[dict[str, dict], list[str]
         filas[codigo] = nueva  # nueva, o repetida idéntica (no cambia nada)
 
     return filas, problemas
+
+
+# Forma de los códigos de producto de TODOS los proveedores: 2-3 letras, guion opcional, 3 a 5 números
+# (LHS-203, AN-1103, DL-151, HT40003, IN7003). No coincide con encabezados ni pies ("Descripción", "Las").
+PATRON_CODIGO = re.compile(r"^[A-Z]{2,3}-?\d{3,5}$")
+
+
+def codigos_en_citas(contenido: list[dict]) -> set[str]:
+    """Todos los códigos de producto que aparecen al principio de una línea en los textos citados.
+
+    Sirve para chequear COBERTURA: si un código está en el PDF citado y no quedó entre las filas
+    verificadas, se ve (no desaparece en silencio). Solo ve lo que la API citó: en una tabla
+    alcanza, porque la cita trae la tabla entera (paso 1).
+    """
+    codigos = set()
+    for bloque in contenido:
+        if bloque.get("type") != "text" or not bloque.get("citations"):
+            continue
+        for cita in bloque["citations"]:
+            for linea in cita["cited_text"].splitlines():
+                primera_palabra = normalizar_espacios(linea).split(" ", 1)[0]
+                if PATRON_CODIGO.match(primera_palabra):
+                    codigos.add(primera_palabra)
+    return codigos
