@@ -4,6 +4,10 @@ No toca el sistema. Prueba la llamada 1 REAL del extractor (pedir_filas_citadas)
 celdas de 2 renglones, para ver qué cita la API y qué pasa con buscar_fila. Además pregunta por la
 línea de vigencia (desde cuándo rige la lista), para ver si se puede leer con su cita.
 
+Nota (paso 6B3): la llamada 1 del extractor ahora pregunta por cada producto y las filas las arma el código
+(filas_desde_citas). Lo que devolvía la llamada 1 VIEJA (copiar la fila: 0 citas) quedó guardado en
+salida/experimentos/citas_andes_filas.json.
+
 Correr: python probar_citas_andes.py              (1 y 2: la llamada 1 del extractor y la vigencia)
         python probar_citas_andes.py --renglones  (3: copiar renglón por renglón, sin unir nada)
         python probar_citas_andes.py --preguntar  (4: preguntar por cada producto, como en el paso 1)
@@ -17,7 +21,7 @@ from pathlib import Path
 import anthropic
 from dotenv import load_dotenv
 
-from extractor_pdf import EFFORT, MAX_TOKENS, codigos_en_citas, costo_usd, filas_verificadas, pedir_filas_citadas
+from extractor_pdf import EFFORT, MAX_TOKENS, costo_usd, filas_desde_citas, pedir_filas_citadas
 
 CARPETA_PROYECTO = Path(__file__).parent
 RUTA_ANDES = CARPETA_PROYECTO / "Data" / "proveedores" / "P01_Laboratorio_Andes" / "Lista_de_precios_octubre_2026.pdf"
@@ -112,9 +116,8 @@ def main():
         print(f"   {copia!r}")
     mostrar_citas(filas_resp["content"])
 
-    filas, problemas = filas_verificadas(filas_resp["content"])
-    faltan = sorted(codigos_en_citas(filas_resp["content"]) - set(filas))
-    print(f"\nfilas_verificadas: {len(filas)} · problemas: {len(problemas)} · códigos sin verificar: {len(faltan)}")
+    filas, problemas = filas_desde_citas(filas_resp["content"])
+    print(f"\nfilas_desde_citas: {len(filas)} · problemas: {len(problemas)}")
     for problema in problemas:
         print(f"   ⚠ {problema}")
 

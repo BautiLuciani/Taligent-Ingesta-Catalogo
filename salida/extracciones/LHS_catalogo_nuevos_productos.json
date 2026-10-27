@@ -15,6 +15,7 @@
         "ean": "7798367700178",
         "costo": "$ 143,33"
       },
+      "texto_ajeno": null,
       "problemas": []
     },
     {
@@ -30,6 +31,7 @@
         "ean": "7790840033469",
         "costo": "$ 88,04"
       },
+      "texto_ajeno": null,
       "problemas": []
     },
     {
@@ -45,6 +47,7 @@
         "ean": "7794288526675",
         "costo": "$ 64,64"
       },
+      "texto_ajeno": null,
       "problemas": []
     },
     {
@@ -60,6 +63,7 @@
         "ean": "7790046159017",
         "costo": "$ 188,15"
       },
+      "texto_ajeno": null,
       "problemas": []
     },
     {
@@ -75,6 +79,7 @@
         "ean": "7792189253836",
         "costo": "$ 83,84"
       },
+      "texto_ajeno": null,
       "problemas": []
     },
     {
@@ -90,6 +95,7 @@
         "ean": "7799677765789",
         "costo": "$ 82,46"
       },
+      "texto_ajeno": null,
       "problemas": []
     },
     {
@@ -105,6 +111,7 @@
         "ean": "7792315884774",
         "costo": "$ 185,79"
       },
+      "texto_ajeno": null,
       "problemas": []
     },
     {
@@ -120,6 +127,7 @@
         "ean": "7796862563595",
         "costo": "$ 159,50"
       },
+      "texto_ajeno": null,
       "problemas": []
     },
     {
@@ -135,6 +143,7 @@
         "ean": "7795270976522",
         "costo": "$ 64,97"
       },
+      "texto_ajeno": null,
       "problemas": []
     },
     {
@@ -150,6 +159,7 @@
         "ean": "7792715614612",
         "costo": "$ 195,08"
       },
+      "texto_ajeno": null,
       "problemas": []
     },
     {
@@ -165,6 +175,7 @@
         "ean": "7791592718338",
         "costo": "$ 156,76"
       },
+      "texto_ajeno": null,
       "problemas": []
     },
     {
@@ -180,6 +191,7 @@
         "ean": null,
         "costo": "$ 117,34"
       },
+      "texto_ajeno": null,
       "problemas": []
     },
     {
@@ -195,6 +207,7 @@
         "ean": "7793326504736",
         "costo": "$ 146,13"
       },
+      "texto_ajeno": null,
       "problemas": []
     },
     {
@@ -210,6 +223,7 @@
         "ean": "7791723703325",
         "costo": "$ 282,93"
       },
+      "texto_ajeno": null,
       "problemas": []
     },
     {
@@ -225,6 +239,7 @@
         "ean": "7798133076711",
         "costo": "$ 168,14"
       },
+      "texto_ajeno": null,
       "problemas": []
     },
     {
@@ -240,6 +255,7 @@
         "ean": "7793568706615",
         "costo": "$ 83,63"
       },
+      "texto_ajeno": null,
       "problemas": []
     },
     {
@@ -255,6 +271,7 @@
         "ean": "7797159155318",
         "costo": "$ 124,16"
       },
+      "texto_ajeno": null,
       "problemas": []
     },
     {
@@ -270,6 +287,7 @@
         "ean": "7792138038309",
         "costo": "$ 76,06"
       },
+      "texto_ajeno": null,
       "problemas": []
     },
     {
@@ -285,6 +303,7 @@
         "ean": "7792476159797",
         "costo": "$ 194,70"
       },
+      "texto_ajeno": null,
       "problemas": []
     },
     {
@@ -300,6 +319,7 @@
         "ean": "7797772062109",
         "costo": "$ 64,35"
       },
+      "texto_ajeno": null,
       "problemas": []
     },
     {
@@ -315,6 +335,7 @@
         "ean": null,
         "costo": "$ 194,54"
       },
+      "texto_ajeno": null,
       "problemas": []
     },
     {
@@ -330,6 +351,7 @@
         "ean": "7798382040495",
         "costo": "$ 158,17"
       },
+      "texto_ajeno": null,
       "problemas": []
     },
     {
@@ -345,6 +367,7 @@
         "ean": "7794419396986",
         "costo": "$ 59,59"
       },
+      "texto_ajeno": null,
       "problemas": []
     },
     {
@@ -360,6 +383,7 @@
         "ean": "7797934045896",
         "costo": "$ 145,19"
       },
+      "texto_ajeno": null,
       "problemas": []
     },
     {
@@ -375,13 +399,14 @@
         "ean": "7793634603527",
         "costo": "$ 54,71"
       },
+      "texto_ajeno": "Las fichas de datos de seguridad se envían por separado.",
       "problemas": []
     }
   ],
   "problemas": [],
   "costo_usd": {
-    "llamada_1": 0.00197,
-    "llamada_2": 0.001087,
-    "total": 0.003057
+    "llamada_1": 0.002595,
+    "llamada_2": 0.001226,
+    "total": 0.003822
   }
 }
