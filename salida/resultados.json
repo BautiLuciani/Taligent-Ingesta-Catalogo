@@ -1738,7 +1738,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "CEPILLO DENTAL",
-      "explicacion": "El tipo cepillo dental va en Higiene bucal > Cepillos."
+      "explicacion": "El tipo CEPILLO DENTAL va en Higiene bucal > Cepillos."
     }
   },
   "P03:LT-3366": {
@@ -1900,7 +1900,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "CEPILLO DENTAL",
-      "explicacion": "El tipo cepillo dental va en Higiene bucal > Cepillos."
+      "explicacion": "El tipo CEPILLO DENTAL va en Higiene bucal > Cepillos."
     }
   },
   "P03:LT-3372": {
@@ -1983,7 +1983,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "CEPILLO DENTAL",
-      "explicacion": "El tipo cepillo dental va en Higiene bucal > Cepillos."
+      "explicacion": "El tipo CEPILLO DENTAL va en Higiene bucal > Cepillos."
     }
   },
   "P03:LT-3375": {
@@ -2066,7 +2066,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "JABON",
-      "explicacion": "El jabón en barra va en Higiene corporal > Jabones."
+      "explicacion": "El tipo JABON (en barra) va en Higiene corporal > Jabones."
     }
   },
   "P03:LT-3378": {
@@ -2232,7 +2232,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "JABON LIQUIDO",
-      "explicacion": "El jabón líquido va en Higiene corporal > Jabones (jabón líquido de manos)."
+      "explicacion": "El jabón líquido de manos va en Higiene corporal > Jabones."
     }
   },
   "P03:LT-3384": {
@@ -2315,7 +2315,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "JABON",
-      "explicacion": "El jabón en barra va en Higiene corporal > Jabones."
+      "explicacion": "El tipo JABON (en barra) va en Higiene corporal > Jabones."
     }
   },
   "P03:LT-3387": {
@@ -2481,7 +2481,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "JABON",
-      "explicacion": "El jabón en barra va en Higiene corporal > Jabones."
+      "explicacion": "El tipo JABON (en barra) va en Higiene corporal > Jabones."
     }
   },
   "P03:LT-3393": {
@@ -2564,7 +2564,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "PASTA DENTAL",
-      "explicacion": "La pasta dental va en Higiene bucal > Pastas dentales (CUI-BUC-PAS)."
+      "explicacion": "El tipo PASTA DENTAL va en Higiene bucal > Pastas dentales (CUI-BUC-PAS)."
     }
   },
   "P03:LT-3396": {
@@ -2647,7 +2647,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "JABON",
-      "explicacion": "Jabón de glicerina en barra va en Higiene corporal > Jabones (CUI-HIG-JAB)."
+      "explicacion": "El tipo JABON va en Higiene corporal > Jabones (CUI-HIG-JAB)."
     }
   },
   "P03:LT-3399": {
@@ -2730,7 +2730,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "JABON",
-      "explicacion": "Jabón de glicerina en barra va en Higiene corporal > Jabones (CUI-HIG-JAB)."
+      "explicacion": "El tipo JABON va en Higiene corporal > Jabones (CUI-HIG-JAB)."
     }
   },
   "P03:LT-3402": {
@@ -2813,7 +2813,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "JABON",
-      "explicacion": "Jabón de glicerina en barra va en Higiene corporal > Jabones (CUI-HIG-JAB)."
+      "explicacion": "El tipo JABON va en Higiene corporal > Jabones (CUI-HIG-JAB)."
     }
   },
   "P03:LT-3405": {
@@ -2896,7 +2896,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "JABON",
-      "explicacion": "Jabón en barra va en Higiene corporal > Jabones (CUI-HIG-JAB)."
+      "explicacion": "El tipo JABON va en Higiene corporal > Jabones (CUI-HIG-JAB)."
     }
   },
   "P03:LT-3408": {
@@ -2979,7 +2979,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "PASTA DENTAL",
-      "explicacion": "La pasta dental va en Higiene bucal > Pastas dentales (CUI-BUC-PAS)."
+      "explicacion": "El tipo PASTA DENTAL va en Higiene bucal > Pastas dentales (CUI-BUC-PAS)."
     }
   },
   "P03:LT-3411": {
@@ -3062,7 +3062,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "PASTA DENTAL",
-      "explicacion": "La pasta dental va en Higiene bucal > Pastas dentales (CUI-BUC-PAS)."
+      "explicacion": "El tipo PASTA DENTAL va en Higiene bucal > Pastas dentales (CUI-BUC-PAS)."
     }
   },
   "P03:LT-3414": {
@@ -3145,7 +3145,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "PASTA DENTAL",
-      "explicacion": "La pasta dental va en Higiene bucal > Pastas dentales (CUI-BUC-PAS)."
+      "explicacion": "El tipo PASTA DENTAL va en Higiene bucal > Pastas dentales (CUI-BUC-PAS)."
     }
   },
   "P03:LT-3417": {
@@ -3228,7 +3228,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "ENJUAGUE BUCAL",
-      "explicacion": "El enjuague bucal va en Higiene bucal > Enjuagues (CUI-BUC-ENJ)."
+      "explicacion": "El tipo ENJUAGUE BUCAL va en Higiene bucal > Enjuagues (CUI-BUC-ENJ)."
     }
   },
   "P03:LT-3450": {
@@ -3306,7 +3306,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "HISOPOS",
-      "explicacion": "Los hisopos van en Cuidado personal > Higiene corporal > Algodones e hisopos (CUI-HIG-ALG)."
+      "explicacion": "El tipo HISOPOS va en Higiene corporal > Algodones e hisopos (CUI-HIG-ALG)."
     }
   },
   "P03:LT-3420": {
@@ -3389,7 +3389,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "ALGODON",
-      "explicacion": "El tipo ALGODON va en Cuidado personal > Algodones e hisopos (CUI-HIG-ALG)."
+      "explicacion": "El tipo ALGODON va en Cuidado personal > Algodones e hisopos."
     }
   },
   "P03:LT-3423": {
@@ -3472,7 +3472,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "ALGODON",
-      "explicacion": "El tipo ALGODON va en Cuidado personal > Algodones e hisopos (CUI-HIG-ALG)."
+      "explicacion": "El tipo ALGODON va en Cuidado personal > Algodones e hisopos."
     }
   },
   "P03:LT-3426": {
@@ -3555,7 +3555,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "CEPILLO DENTAL",
-      "explicacion": "El cepillo dental va en Higiene bucal > Cepillos (CUI-BUC-CEP)."
+      "explicacion": "El tipo CEPILLO DENTAL va en Higiene bucal > Cepillos."
     }
   },
   "P03:LT-3429": {
@@ -3638,7 +3638,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "CEPILLO DENTAL",
-      "explicacion": "El cepillo dental va en Higiene bucal > Cepillos (CUI-BUC-CEP)."
+      "explicacion": "El tipo CEPILLO DENTAL va en Higiene bucal > Cepillos."
     }
   },
   "P03:LT-3447": {
@@ -3720,7 +3720,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "JABON",
-      "explicacion": "El jabón antibacterial va en Higiene corporal > Jabones (CUI-HIG-JAB)."
+      "explicacion": "El tipo JABON va en Higiene corporal > Jabones."
     }
   },
   "P03:LT-3432": {
@@ -3803,7 +3803,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "PASTA DENTAL",
-      "explicacion": "La pasta dental va en Higiene bucal > Pastas dentales (CUI-BUC-PAS)."
+      "explicacion": "La pasta dental va en Higiene bucal > Pastas dentales."
     }
   },
   "P03:LT-3435": {
@@ -3886,7 +3886,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "CEPILLO DENTAL",
-      "explicacion": "El cepillo dental va en Higiene bucal > Cepillos (CUI-BUC-CEP)."
+      "explicacion": "El tipo CEPILLO DENTAL va en Higiene bucal > Cepillos."
     }
   },
   "P03:LT-3438": {
@@ -3969,7 +3969,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "PASTA DENTAL",
-      "explicacion": "La pasta dental va en Higiene bucal > Pastas dentales (CUI-BUC-PAS)."
+      "explicacion": "La pasta dental va en Higiene bucal > Pastas dentales."
     }
   },
   "P03:LT-3441": {
@@ -4052,7 +4052,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "PASTA DENTAL",
-      "explicacion": "La pasta dental va en Higiene bucal > Pastas dentales (CUI-BUC-PAS)."
+      "explicacion": "La pasta dental va en Higiene bucal > Pastas dentales."
     }
   },
   "P03:LT-3444": {
@@ -4135,7 +4135,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "PASTA DENTAL",
-      "explicacion": "La pasta dental va en Higiene bucal > Pastas dentales (CUI-BUC-PAS)."
+      "explicacion": "La pasta dental va en Higiene bucal > Pastas dentales."
     }
   }
 }
