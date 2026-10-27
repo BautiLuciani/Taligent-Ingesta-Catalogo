@@ -144,3 +144,44 @@ def expandir_abreviaturas(texto, abreviaturas: dict[str, str]) -> str | None:
         resultado = re.sub(patron, abreviaturas[abreviatura] + " ", resultado)
 
     return " ".join(resultado.split())  # deja un solo espacio entre palabras
+
+
+
+def separar_contenido(texto, separador_decimal: str = ",") -> tuple[float | None, str | None]:
+    """Separa un contenido escrito todo junto en (cantidad, unidad), como vienen en los PDF.
+
+    Ejemplos: "X 500 ML" -> (500.0, "ML") · "250ML" -> (250.0, "ML") · "60g" -> (60.0, "g")
+              "0,5 KG" -> (0.5, "KG") · "4.8 fl oz" (inglés) -> (4.8, "fl oz")
+    La unidad sale tal cual: la normaliza después convertir_contenido.
+    Si no tiene la forma "número + unidad", devuelve (None, None): no inventamos.
+    """
+    texto = "" if texto is None else " ".join(str(texto).split())
+    # Una "X" opcional adelante, el número (con coma o punto) y la unidad (letras, puede tener espacio: "fl oz")
+    coincidencia = re.fullmatch(r"(?:[Xx]\s*)?(\d[\d.,]*)\s*([A-Za-z][A-Za-z. ]*)", texto)
+    if coincidencia is None:
+        return None, None
+    cantidad = convertir_numero(coincidencia.group(1), separador_decimal)
+    if cantidad is None:
+        return None, None
+    return cantidad, coincidencia.group(2).strip()
+
+
+def convertir_precio(texto, separador_decimal: str = ",") -> tuple[float | None, str | None]:
+    """Separa un precio escrito con su moneda en (monto, moneda), según el estándar (sección 6).
+
+    Ejemplos: "$ 88,04" -> (88.04, "UYU") · "USD 12.50" (inglés) -> (12.5, "USD") · "117,34" -> (117.34, None)
+    - "USD", "US$" o "U$S" -> USD (se mira primero: "US$" también tiene un "$").  "$" solo -> UYU.
+    - Sin símbolo -> moneda None: la decide quien llama, con la moneda de la lista (no la adivinamos acá).
+    """
+    texto = "" if texto is None else str(texto).strip()
+    numero = re.search(r"\d[\d.,]*", texto)
+    monto = convertir_numero(numero.group(0), separador_decimal) if numero else None
+    if monto is None:
+        return None, None
+
+    mayusculas = texto.upper()
+    if "USD" in mayusculas or "US$" in mayusculas or "U$S" in mayusculas:
+        return monto, "USD"
+    if "$" in texto:
+        return monto, "UYU"
+    return monto, None

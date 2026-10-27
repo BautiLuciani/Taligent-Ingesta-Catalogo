@@ -4,8 +4,10 @@ from cuentas import (
     cargar_abreviaturas,
     convertir_contenido,
     convertir_numero,
+    convertir_precio,
     expandir_abreviaturas,
     normalizar_gtin,
+    separar_contenido,
 )
 
 errores = 0
@@ -75,5 +77,32 @@ chequear("SKU100679 REP/CION no se toca", expandir_abreviaturas("TRAT. CAP. NATI
         "TRATAMIENTO CAPILAR NATIVA REP/CION 500GR")
 chequear("Todo junto S/ALCOHOL", expandir_abreviaturas("S/ALCOHOL", ABREV), "SIN ALCOHOL")
 chequear("Sin abreviaturas", expandir_abreviaturas("Hisopos", ABREV), "HISOPOS")
+
+print("--- separar_contenido (PDF de LHS) ---")
+chequear("LHS-203 normal", separar_contenido("900 ML"), (900.0, "ML"))
+chequear("LHS-212 pegado", separar_contenido("250ML"), (250.0, "ML"))
+chequear("LHS-215 con X", separar_contenido("X 500 ML"), (500.0, "ML"))
+chequear("LHS-224 minúscula pegada", separar_contenido("60g"), (60.0, "g"))
+chequear("LHS-230 litro", separar_contenido("1 L"), (1.0, "L"))
+chequear("LHS-257 cc pegado", separar_contenido("60cc"), (60.0, "cc"))
+chequear("LHS-266 GR pegado", separar_contenido("60GR"), (60.0, "GR"))
+chequear("Rivera coma decimal", separar_contenido("0,5 KG"), (0.5, "KG"))
+chequear("Norte en inglés", separar_contenido("4.8 fl oz", separador_decimal="."), (4.8, "fl oz"))
+chequear("Sin unidad: no se inventa", separar_contenido("500"), (None, None))
+chequear("No es un contenido", separar_contenido("Sobres x 6"), (None, None))
+chequear("Vacío", separar_contenido(None), (None, None))
+chequear("Junto con convertir_contenido: 2 LT", convertir_contenido(*separar_contenido("2 LT")), (2000, "ML"))
+chequear("Junto con convertir_contenido: 60g", convertir_contenido(*separar_contenido("60g")), (60, "G"))
+
+print("--- convertir_precio ---")
+chequear("LHS-206 con $", convertir_precio("$ 88,04"), (88.04, "UYU"))
+chequear("Espacio raro del PDF", convertir_precio("$\xa0143,33"), (143.33, "UYU"))
+chequear("Miles y decimales", convertir_precio("$ 1.234,56"), (1234.56, "UYU"))
+chequear("US$ es dólar, no peso", convertir_precio("US$ 3,10"), (3.1, "USD"))
+chequear("USD en inglés", convertir_precio("USD 12.50", separador_decimal="."), (12.5, "USD"))
+chequear("USD en inglés SIN avisar: 1250 (cuidado)", convertir_precio("USD 12.50"), (1250.0, "USD"))
+chequear("Sin símbolo: moneda la decide quien llama", convertir_precio("117,34"), (117.34, None))
+chequear("Solo el símbolo", convertir_precio("$"), (None, None))
+chequear("Vacío", convertir_precio(None), (None, None))
 
 print(f"\nResultado: {'todo OK' if errores == 0 else f'{errores} con error'}")

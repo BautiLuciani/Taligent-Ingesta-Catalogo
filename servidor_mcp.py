@@ -12,7 +12,8 @@ from fastmcp import FastMCP
 from fastmcp.exceptions import ToolError
 from pydantic import BaseModel, Field
 
-from cuentas import cargar_abreviaturas, cargar_vocabulario, convertir_contenido, convertir_numero, expandir_abreviaturas, normalizar_gtin
+from cuentas import (cargar_abreviaturas, cargar_vocabulario, convertir_contenido, convertir_numero, convertir_precio,
+                     expandir_abreviaturas, normalizar_gtin, separar_contenido)
 
 CARPETA_DATA = Path(__file__).parent / "Data"
 ABREVIATURAS = cargar_abreviaturas()
@@ -23,14 +24,24 @@ VOCABULARIO = cargar_vocabulario()
 CARPETA_SALIDA = Path(os.getenv("INGESTA_CARPETA_SALIDA", Path(__file__).parent / "salida"))
 RUTA_RESULTADOS = CARPETA_SALIDA / "resultados.json"
 
+# Lo que sacó extractor_pdf.py de cada PDF (semana 2). Es una ENTRADA, no una salida de las pruebas:
+# por eso no depende de INGESTA_CARPETA_SALIDA.
+CARPETA_EXTRACCIONES = Path(__file__).parent / "salida" / "extracciones"
+
 # Cómo leer el archivo de cada proveedor habilitado.
 # P06 (Bebé Feliz) NO está: es el proveedor apartado hasta la semana 5.
 PROVEEDORES = {
     "P03": {
+        "formato": "csv",
         "archivo": CARPETA_DATA / "proveedores" / "P03_Distribuidora_Litoral" / "litoral_altas_102026.csv",
         "separador": ";",
         "decimal": ",",
         "moneda": "UYU",  # el CSV no indica moneda -> pesos uruguayos (estándar, sección 6)
+    },
+    "P07": {
+        "formato": "pdf",
+        "extraccion": CARPETA_EXTRACCIONES / "LHS_catalogo_nuevos_productos.json",  # lo armó extractor_pdf.py
+        "moneda": "UYU",  # solo si un precio viniera sin símbolo; los de LHS traen "$" -> UYU (estándar, sección 6)
     },
 }
 
@@ -106,23 +117,70 @@ def leer_filas_csv(proveedor_id: str, config: dict) -> list[dict]:
     return filas
 
 
+def leer_filas_pdf(proveedor_id: str, config: dict) -> list[dict]:
+    """Lee lo que sacó extractor_pdf.py de un PDF y arma cada fila con la MISMA forma que leer_filas_csv.
+
+    La fuente es {archivo, pagina} (la página la dio la API con citations, no el modelo).
+    En original va la fila verificada del PDF, sus campos tal cual y los problemas de la extracción.
+    El PDF no trae la marca en una columna aparte: no va en calculado, la decide el agente desde la descripción.
+    """
+    ruta = config["extraccion"]
+    if not ruta.exists():
+        raise FileNotFoundError(f"Falta {ruta.name}: primero hay que correr extractor_pdf.py sobre ese PDF.")
+    extraccion = json.loads(ruta.read_text(encoding="utf-8"))
+
+    filas = []
+    for producto in extraccion["productos"]:
+        campos = producto["campos"]
+        gtin, motivo_gtin = normalizar_gtin(campos["ean"])
+        contenido, unidad = convertir_contenido(*separar_contenido(campos["contenido"]))
+        precio, moneda = convertir_precio(campos["costo"])
+        if precio is not None and moneda is None:
+            moneda = config["moneda"]  # precio sin símbolo: rige la moneda de la lista
+        filas.append({
+            "item_id": f"{proveedor_id}:{producto['codigo']}",
+            "fuente": producto["fuente"],
+            "original": {"fila": producto["fila"], **campos, "problemas_extraccion": producto["problemas"]},
+            "calculado": {
+                "gtin": gtin,
+                "motivo_gtin": motivo_gtin,
+                "descripcion_expandida": expandir_abreviaturas(campos["descripcion"], ABREVIATURAS),
+                "contenido": contenido,
+                "unidad": unidad,
+                "precio_costo": precio,
+                "moneda": moneda,
+            },
+        })
+    return filas
+
+
+# Cada formato de archivo, con la función que lo lee. Todas devuelven filas con la misma forma.
+LECTORES = {"csv": leer_filas_csv, "pdf": leer_filas_pdf}
+
+
+def leer_filas(proveedor_id: str, config: dict) -> list[dict]:
+    """Lee las filas de un proveedor con el lector de su formato (CSV, PDF...)."""
+    return LECTORES[config["formato"]](proveedor_id, config)
+
+
 @mcp.tool(annotations={"readOnlyHint": True})
 def leer_archivo_proveedor(
-    proveedor_id: Annotated[Literal["P03"], Field(description="Código del proveedor a leer.")],
+    proveedor_id: Annotated[Literal["P03", "P07"], Field(description="Código del proveedor a leer.")],
     desde: Annotated[int, Field(ge=0, description="Posición de la primera fila (empieza en 0).")] = 0,
     cantidad: Annotated[int, Field(ge=1, le=25, description="Cuántas filas devolver (máximo 25).")] = 10,
 ) -> dict:
     """Lee los productos nuevos que mandó un proveedor, de a tandas.
 
     Usala para obtener los productos a procesar. Cada fila trae:
-    - item_id y fuente (archivo y línea) para citar de dónde sale cada dato;
-    - original: los valores tal como vinieron en el archivo;
+    - item_id y fuente (archivo y línea en un CSV; archivo y página en un PDF) para citar de dónde sale cada dato;
+    - original: los valores tal como vinieron en el archivo (en un PDF, la fila verificada y sus campos);
     - calculado: lo que ya resolvió el código (GTIN validado y su motivo si hay problema,
-      descripción sin abreviaturas, contenido en ML/G/UN, precio como número y moneda).
-      Usá estos valores: no rehagas las cuentas.
+      descripción sin abreviaturas, contenido en ML/G/UN, precio como número y moneda, y la marca
+      cuando el archivo la trae en su propia columna). Usá estos valores: no rehagas las cuentas.
+      Lo que calculado no trae (por ejemplo, la marca en un PDF) lo decidís desde original.
     Si 'siguiente' no es null, hay más filas: volvé a llamarla con desde=siguiente.
     """
-    filas = leer_filas_csv(proveedor_id, PROVEEDORES[proveedor_id])
+    filas = leer_filas(proveedor_id, PROVEEDORES[proveedor_id])
     total = len(filas)
     if desde >= total:
         raise ToolError(f"'desde'={desde} está fuera de rango: el archivo tiene {total} filas (0 a {total - 1}).")
@@ -156,7 +214,7 @@ def buscar_por_gtin(
 
 @mcp.tool(annotations={"readOnlyHint": True})
 def buscar_parecidos(
-    marca: Annotated[str, Field(min_length=1, description="Marca del producto (calculado.marca).")],
+    marca: Annotated[str, Field(min_length=1, description="Marca del producto: calculado.marca, o la que decidiste desde original si calculado no la trae.")],
     contenido: Annotated[int, Field(ge=1, description="Contenido ya convertido (calculado.contenido).")],
     unidad: Annotated[Literal["ML", "G", "UN"], Field(description="Unidad ya convertida (calculado.unidad).")],
 ) -> dict:
@@ -195,7 +253,7 @@ def buscar_parecidos(
 ITEMS_VALIDOS = {
     fila["item_id"]
     for proveedor_id, config in PROVEEDORES.items()
-    for fila in leer_filas_csv(proveedor_id, config)
+    for fila in leer_filas(proveedor_id, config)
 }
 SKUS_CATALOGO = {producto["sku"] for producto in CATALOGO}
 
@@ -264,7 +322,7 @@ def registrar_ficha(
     item_id: Annotated[str, Field(description="Identificador del ítem, tal como vino en la fila (ej. P03:LT-3303).")],
     estado: Annotated[Estado, Field(description="Estado del ítem según el estándar.")],
     ficha: Annotated[dict[str, Any], Field(description="Los campos de la ficha (estándar, sección 1). Un campo que no se pudo determinar va en null.")],
-    fuentes: Annotated[dict[str, dict], Field(description="Para cada campo completado de la ficha, de dónde salió: {archivo, linea}.")],
+    fuentes: Annotated[dict[str, dict], Field(description="Para cada campo completado de la ficha, de dónde salió: la fuente de su fila ({archivo, linea} o {archivo, pagina}).")],
     categoria_decidida_por: Annotated[CategoriaDecididaPor, Field(description="Qué dato de la ficha decidió la categoría elegida.")],
     motivos_revision: Annotated[list[Motivo], Field(default_factory=list, description="Motivos de revisión. Vacío si no va a revisión.")],
     duplicado_de: Annotated[str | None, Field(description="SKU del catálogo: si es duplicado, o el candidato si es posible_duplicado.")] = None,

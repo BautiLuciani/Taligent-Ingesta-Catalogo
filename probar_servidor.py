@@ -72,6 +72,46 @@ async def main():
         resultado = await cliente.call_tool("leer_archivo_proveedor", {"proveedor_id": "P06"}, raise_on_error=False)
         chequear("P06 (apartado) bloqueado", resultado.is_error, True)
 
+        print("\n--- leer_archivo_proveedor: el PDF de Limpieza Hogar Sur (semana 2) ---")
+        filas_lhs = await leer_todas(cliente, "P07")
+        chequear("LHS tiene 25 filas", len(filas_lhs), 25)
+        lhs = {fila["item_id"]: fila for fila in filas_lhs}
+        chequear("LHS-206: fuente con página (no línea)", lhs["P07:LHS-206"]["fuente"],
+                 {"archivo": "LHS_catalogo_nuevos_productos.pdf", "pagina": 1})
+        chequear("LHS-206: en original va la fila verificada del PDF", lhs["P07:LHS-206"]["original"]["fila"],
+                 "LHS-206 Lavandina Clarita Concentrada 2000 ML 7790840033469 $ 88,04")
+        calculado_206 = lhs["P07:LHS-206"]["calculado"]
+        chequear("LHS-206: GTIN válido", (calculado_206["gtin"], calculado_206["motivo_gtin"]), ("7790840033469", None))
+        chequear("LHS-206: $ 88,04 -> 88.04 UYU", (calculado_206["precio_costo"], calculado_206["moneda"]), (88.04, "UYU"))
+        chequear("LHS-206: el PDF no trae marca en columna (la decide el agente)", "marca" in calculado_206, False)
+        contenidos = {item: (lhs[item]["calculado"]["contenido"], lhs[item]["calculado"]["unidad"])
+                      for item in ["P07:LHS-215", "P07:LHS-212", "P07:LHS-224", "P07:LHS-230", "P07:LHS-218", "P07:LHS-257"]}
+        chequear("Contenidos del PDF: X 500 ML, 250ML, 60g, 1 L, 2 LT, 60cc", contenidos,
+                 {"P07:LHS-215": (500, "ML"), "P07:LHS-212": (250, "ML"), "P07:LHS-224": (60, "G"),
+                  "P07:LHS-230": (1000, "ML"), "P07:LHS-218": (2000, "ML"), "P07:LHS-257": (60, "ML")})
+        sin_ean = sorted(item for item, fila in lhs.items() if fila["calculado"]["motivo_gtin"] == "gtin_faltante")
+        chequear("LHS: los 2 sin EAN", sin_ean, ["P07:LHS-272", "P07:LHS-275"])
+        chequear("LHS: ningún GTIN inválido", [i for i, f in lhs.items() if f["calculado"]["motivo_gtin"] == "gtin_invalido"], [])
+
+        print("\n--- buscar_por_gtin / buscar_parecidos: LHS contra el catálogo ---")
+        encontrados_lhs = {}
+        for fila in filas_lhs:
+            if fila["calculado"]["gtin"] is not None:
+                respuesta = (await cliente.call_tool("buscar_por_gtin", {"gtin": fila["calculado"]["gtin"]})).data
+                if respuesta["encontrado"]:
+                    encontrados_lhs[fila["item_id"]] = respuesta["sku"]
+        chequear("LHS: los 3 duplicados por GTIN", encontrados_lhs,
+                 {"P07:LHS-221": "SKU102464", "P07:LHS-248": "SKU101505", "P07:LHS-266": "SKU101834"})
+        candidatos_lhs = {}
+        for item, marca in [("P07:LHS-275", "CLARITA"), ("P07:LHS-272", "FULMIN")]:  # la marca la pondría el agente
+            calculado = lhs[item]["calculado"]
+            respuesta = (await cliente.call_tool("buscar_parecidos", {
+                "marca": marca, "contenido": calculado["contenido"], "unidad": calculado["unidad"]})).data
+            candidatos_lhs[item] = [c["sku"] for c in respuesta["candidatos"]]
+        chequear("LHS-272 (Fulmin crema 100 G) trae solo su candidato", candidatos_lhs["P07:LHS-272"], ["SKU102282"])
+        chequear("LHS-275 (Clarita 96 % 500 CC) trae los 4 Clarita de 500 ML, con el correcto entre ellos",
+                 (len(candidatos_lhs["P07:LHS-275"]), "SKU101386" in candidatos_lhs["P07:LHS-275"]), (4, True))
+
         print("\n--- buscar_por_gtin: los 50 de Litoral ---")
         encontrados = {}
         for fila in filas:
@@ -163,6 +203,13 @@ async def main():
 
         guardado = json.loads((Path(carpeta_temporal) / "resultados.json").read_text(encoding="utf-8"))
         chequear("En el archivo están solo los 3 coherentes", sorted(guardado), ["P03:LT-3303", "P03:LT-3333", "P03:LT-3447"])
+
+        print("\n--- registrar_ficha: un ítem del PDF ---")
+        fuente_206 = lhs["P07:LHS-206"]["fuente"]
+        resultado = await cliente.call_tool("registrar_ficha", {
+            **base, "item_id": "P07:LHS-206", "estado": "lista_para_alta",
+            "fuentes": {campo: fuente_206 for campo in ficha_ejemplo}}, raise_on_error=False)
+        chequear("Se registra un ítem de P07 con fuente {archivo, pagina}", resultado.is_error, False)
 
         print("\n--- resources: el estándar ---")
         recursos = {str(r.uri) for r in await cliente.list_resources()}
