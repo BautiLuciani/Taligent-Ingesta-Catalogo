@@ -1,5 +1,5 @@
 {
-  "fecha": "2026-10-27 19:29",
+  "fecha": "2026-10-27 19:33",
   "proveedor_id": "P07",
   "modelo": "claude-haiku-5-5",
   "effort": "high",
@@ -8,20 +8,20 @@
   "registrados": 25,
   "faltan": [],
   "tandas_con_problemas": [],
-  "segundos": 142.7,
+  "segundos": 142.3,
   "vueltas": 12,
-  "input_tokens": 215555,
-  "output_tokens": 42089,
-  "costo_total_usd": 0.0426,
-  "costo_por_ficha_usd": 0.0017,
-  "traza": "traza_20261027_192643.jsonl",
+  "input_tokens": 215915,
+  "output_tokens": 41366,
+  "costo_total_usd": 0.0423,
+  "costo_por_ficha_usd": 0.00169,
+  "traza": "traza_20261027_193045.jsonl",
   "por_tanda": [
     {
       "como_termino": "end_turn",
       "vueltas": 4,
-      "input_tokens": 74619,
-      "output_tokens": 14356,
-      "costo_usd": 0.01464,
+      "input_tokens": 75764,
+      "output_tokens": 16002,
+      "costo_usd": 0.015577,
       "esperados": 10,
       "registrados": 10,
       "faltan": []
@@ -29,9 +29,9 @@
     {
       "como_termino": "end_turn",
       "vueltas": 4,
-      "input_tokens": 77140,
-      "output_tokens": 17359,
-      "costo_usd": 0.016393,
+      "input_tokens": 77417,
+      "output_tokens": 15810,
+      "costo_usd": 0.015647,
       "esperados": 10,
       "registrados": 10,
       "faltan": []
@@ -39,9 +39,9 @@
     {
       "como_termino": "end_turn",
       "vueltas": 4,
-      "input_tokens": 63796,
-      "output_tokens": 10374,
-      "costo_usd": 0.011567,
+      "input_tokens": 62734,
+      "output_tokens": 9554,
+      "costo_usd": 0.01105,
       "esperados": 5,
       "registrados": 5,
       "faltan": []

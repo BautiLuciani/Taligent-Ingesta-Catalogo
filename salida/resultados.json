@@ -4224,7 +4224,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "LIMPIADOR",
-      "explicacion": "Limpiador multiuso de superficies: va en Limpieza, único limpiador de la taxonomía (baño y cocina)."
+      "explicacion": "El tipo LIMPIADOR ubica el producto en Limpieza, la única categoría de limpiadores de la taxonomía (HOG-LIM-BAN)."
     }
   },
   "P07:LHS-206": {
@@ -4317,7 +4317,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "LAVANDINA",
-      "explicacion": "La lavandina va en Hogar y limpieza > Desinfectantes y lavandinas."
+      "explicacion": "La lavandina va en Limpieza > Desinfectantes y lavandinas (HOG-LIM-DES)."
     }
   },
   "P07:LHS-209": {
@@ -4410,7 +4410,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "ALCOHOL",
-      "explicacion": "El alcohol va en Limpieza > Alcohol y alcohol en gel."
+      "explicacion": "El tipo ALCOHOL va en Limpieza > Alcohol y alcohol en gel (HOG-LIM-ALC)."
     }
   },
   "P07:LHS-212": {
@@ -4499,7 +4499,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "ALCOHOL EN GEL",
-      "explicacion": "El alcohol en gel va en Limpieza > Alcohol y alcohol en gel."
+      "explicacion": "El tipo ALCOHOL EN GEL va en Limpieza > Alcohol y alcohol en gel (HOG-LIM-ALC)."
     }
   },
   "P07:LHS-215": {
@@ -4588,7 +4588,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "LIMPIADOR",
-      "explicacion": "Limpiador multiuso de superficies: va en Limpieza, único limpiador de la taxonomía (baño y cocina)."
+      "explicacion": "El tipo LIMPIADOR ubica el producto en Limpieza, la única categoría de limpiadores de la taxonomía (HOG-LIM-BAN)."
     }
   },
   "P07:LHS-218": {
@@ -4681,7 +4681,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "LAVANDINA",
-      "explicacion": "La lavandina va en Hogar y limpieza > Desinfectantes y lavandinas."
+      "explicacion": "La lavandina va en Limpieza > Desinfectantes y lavandinas (HOG-LIM-DES)."
     }
   },
   "P07:LHS-221": {
@@ -4706,7 +4706,8 @@
       "moneda": "UYU",
       "proveedor_id": "P07",
       "codigo_proveedor": "LHS-221",
-      "peligro_deposito": "pendiente_fds"
+      "peligro_deposito": "pendiente_fds",
+      "numero_onu": null
     },
     "fuentes": {
       "gtin": {
@@ -4769,7 +4770,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "ALCOHOL EN GEL",
-      "explicacion": "El alcohol en gel va en Limpieza > Alcohol y alcohol en gel."
+      "explicacion": "El tipo ALCOHOL EN GEL va en Limpieza > Alcohol y alcohol en gel (HOG-LIM-ALC)."
     }
   },
   "P07:LHS-224": {
@@ -4858,7 +4859,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "REPELENTE",
-      "explicacion": "Repelente en crema de uso corporal: va en Insecticidas y repelentes > Repelentes corporales."
+      "explicacion": "El tipo REPELENTE va en Hogar > Insecticidas y repelentes > Repelentes corporales (HOG-INS-REP)."
     }
   },
   "P07:LHS-227": {
@@ -4951,7 +4952,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "ALCOHOL EN GEL",
-      "explicacion": "El alcohol en gel va en Limpieza > Alcohol y alcohol en gel."
+      "explicacion": "El tipo ALCOHOL EN GEL va en Limpieza > Alcohol y alcohol en gel (HOG-LIM-ALC)."
     }
   },
   "P07:LHS-230": {
@@ -5044,7 +5045,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "ALCOHOL",
-      "explicacion": "El alcohol va en Limpieza > Alcohol y alcohol en gel."
+      "explicacion": "El tipo ALCOHOL va en Limpieza > Alcohol y alcohol en gel (HOG-LIM-ALC)."
     }
   },
   "P07:LHS-233": {
@@ -5137,7 +5138,99 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "REPELENTE",
-      "explicacion": "Tipo REPELENTE va en Insecticidas y repelentes > Repelentes corporales (HOG-INS-REP)."
+      "explicacion": "El tipo REPELENTE de la categoría Insecticidas y repelentes lleva a Repelentes corporales (HOG-INS-REP)."
+    }
+  },
+  "P07:LHS-275": {
+    "item_id": "P07:LHS-275",
+    "estado": "a_revision",
+    "duplicado_de": "SKU101386",
+    "motivos_revision": [
+      "gtin_faltante",
+      "posible_duplicado"
+    ],
+    "ficha": {
+      "gtin": null,
+      "descripcion": "ALCOHOL CLARITA 96 % X 500 ML",
+      "marca": "CLARITA",
+      "tipo": "ALCOHOL",
+      "variante": "96 %",
+      "contenido": 500,
+      "unidad": "ML",
+      "unidades_por_envase": 1,
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "HOG-LIM-ALC",
+      "precio_costo": 117.34,
+      "moneda": "UYU",
+      "proveedor_id": "P07",
+      "codigo_proveedor": "LHS-275",
+      "peligro_deposito": "liquido_inflamable",
+      "numero_onu": "1170"
+    },
+    "fuentes": {
+      "descripcion": {
+        "archivo": "LHS_catalogo_nuevos_productos.pdf",
+        "pagina": 1
+      },
+      "marca": {
+        "archivo": "LHS_catalogo_nuevos_productos.pdf",
+        "pagina": 1
+      },
+      "tipo": {
+        "archivo": "LHS_catalogo_nuevos_productos.pdf",
+        "pagina": 1
+      },
+      "variante": {
+        "archivo": "LHS_catalogo_nuevos_productos.pdf",
+        "pagina": 1
+      },
+      "contenido": {
+        "archivo": "LHS_catalogo_nuevos_productos.pdf",
+        "pagina": 1
+      },
+      "unidad": {
+        "archivo": "LHS_catalogo_nuevos_productos.pdf",
+        "pagina": 1
+      },
+      "unidades_por_envase": {
+        "archivo": "LHS_catalogo_nuevos_productos.pdf",
+        "pagina": 1
+      },
+      "categoria": {
+        "archivo": "LHS_catalogo_nuevos_productos.pdf",
+        "pagina": 1
+      },
+      "precio_costo": {
+        "archivo": "LHS_catalogo_nuevos_productos.pdf",
+        "pagina": 1
+      },
+      "moneda": {
+        "archivo": "LHS_catalogo_nuevos_productos.pdf",
+        "pagina": 1
+      },
+      "proveedor_id": {
+        "archivo": "LHS_catalogo_nuevos_productos.pdf",
+        "pagina": 1
+      },
+      "codigo_proveedor": {
+        "archivo": "LHS_catalogo_nuevos_productos.pdf",
+        "pagina": 1
+      },
+      "peligro_deposito": {
+        "archivo": "FDS_Clarita_alcohol.pdf",
+        "pagina": 1
+      },
+      "numero_onu": {
+        "archivo": "FDS_Clarita_alcohol.pdf",
+        "pagina": 1
+      }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "ALCOHOL",
+      "explicacion": "El tipo ALCOHOL de la categoría Alcohol y alcohol en gel (HOG-LIM-ALC)."
     }
   },
   "P07:LHS-236": {
@@ -5226,7 +5319,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "LIMPIADOR",
-      "explicacion": "Tipo LIMPIADOR va en Limpieza > Limpiadores de baño y cocina (HOG-LIM-BAN)."
+      "explicacion": "El tipo LIMPIADOR, con variante multiuso de cocina, va a Limpiadores de baño y cocina (HOG-LIM-BAN)."
     }
   },
   "P07:LHS-239": {
@@ -5315,7 +5408,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "ALCOHOL EN GEL",
-      "explicacion": "Tipo ALCOHOL EN GEL va en Limpieza > Alcohol y alcohol en gel (HOG-LIM-ALC)."
+      "explicacion": "El tipo ALCOHOL EN GEL va a Alcohol y alcohol en gel (HOG-LIM-ALC)."
     }
   },
   "P07:LHS-242": {
@@ -5408,7 +5501,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "ALCOHOL",
-      "explicacion": "Tipo ALCOHOL va en Limpieza > Alcohol y alcohol en gel (HOG-LIM-ALC)."
+      "explicacion": "El tipo ALCOHOL va a Alcohol y alcohol en gel (HOG-LIM-ALC)."
     }
   },
   "P07:LHS-245": {
@@ -5497,7 +5590,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "LIMPIADOR",
-      "explicacion": "Tipo LIMPIADOR va en Limpieza > Limpiadores de baño y cocina (HOG-LIM-BAN)."
+      "explicacion": "El tipo LIMPIADOR, con variante multiuso de cocina, va a Limpiadores de baño y cocina (HOG-LIM-BAN)."
     }
   },
   "P07:LHS-248": {
@@ -5586,7 +5679,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "ALCOHOL",
-      "explicacion": "Tipo ALCOHOL va en Limpieza > Alcohol y alcohol en gel (HOG-LIM-ALC)."
+      "explicacion": "El tipo ALCOHOL va a Alcohol y alcohol en gel (HOG-LIM-ALC)."
     }
   },
   "P07:LHS-251": {
@@ -5679,7 +5772,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "ALCOHOL",
-      "explicacion": "Tipo ALCOHOL va en Limpieza > Alcohol y alcohol en gel (HOG-LIM-ALC)."
+      "explicacion": "El tipo ALCOHOL va a Alcohol y alcohol en gel (HOG-LIM-ALC)."
     }
   },
   "P07:LHS-254": {
@@ -5768,7 +5861,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "REPELENTE",
-      "explicacion": "Tipo REPELENTE va en Insecticidas y repelentes > Repelentes corporales (HOG-INS-REP)."
+      "explicacion": "El tipo REPELENTE va a Repelentes corporales (HOG-INS-REP)."
     }
   },
   "P07:LHS-257": {
@@ -5857,187 +5950,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "ALCOHOL EN GEL",
-      "explicacion": "Tipo ALCOHOL EN GEL va en Limpieza > Alcohol y alcohol en gel (HOG-LIM-ALC)."
-    }
-  },
-  "P07:LHS-275": {
-    "item_id": "P07:LHS-275",
-    "estado": "a_revision",
-    "duplicado_de": "SKU101386",
-    "motivos_revision": [
-      "gtin_faltante",
-      "posible_duplicado"
-    ],
-    "ficha": {
-      "gtin": null,
-      "descripcion": "ALCOHOL CLARITA 96 % X 500 ML",
-      "marca": "CLARITA",
-      "tipo": "ALCOHOL",
-      "variante": "96 %",
-      "contenido": 500,
-      "unidad": "ML",
-      "unidades_por_envase": 1,
-      "principio_activo": null,
-      "concentracion": null,
-      "condicion_venta": null,
-      "categoria": "HOG-LIM-ALC",
-      "precio_costo": 117.34,
-      "moneda": "UYU",
-      "proveedor_id": "P07",
-      "codigo_proveedor": "LHS-275",
-      "peligro_deposito": "liquido_inflamable",
-      "numero_onu": "1170"
-    },
-    "fuentes": {
-      "descripcion": {
-        "archivo": "LHS_catalogo_nuevos_productos.pdf",
-        "pagina": 1
-      },
-      "marca": {
-        "archivo": "LHS_catalogo_nuevos_productos.pdf",
-        "pagina": 1
-      },
-      "tipo": {
-        "archivo": "LHS_catalogo_nuevos_productos.pdf",
-        "pagina": 1
-      },
-      "variante": {
-        "archivo": "LHS_catalogo_nuevos_productos.pdf",
-        "pagina": 1
-      },
-      "contenido": {
-        "archivo": "LHS_catalogo_nuevos_productos.pdf",
-        "pagina": 1
-      },
-      "unidad": {
-        "archivo": "LHS_catalogo_nuevos_productos.pdf",
-        "pagina": 1
-      },
-      "unidades_por_envase": {
-        "archivo": "LHS_catalogo_nuevos_productos.pdf",
-        "pagina": 1
-      },
-      "categoria": {
-        "archivo": "LHS_catalogo_nuevos_productos.pdf",
-        "pagina": 1
-      },
-      "precio_costo": {
-        "archivo": "LHS_catalogo_nuevos_productos.pdf",
-        "pagina": 1
-      },
-      "moneda": {
-        "archivo": "LHS_catalogo_nuevos_productos.pdf",
-        "pagina": 1
-      },
-      "proveedor_id": {
-        "archivo": "LHS_catalogo_nuevos_productos.pdf",
-        "pagina": 1
-      },
-      "codigo_proveedor": {
-        "archivo": "LHS_catalogo_nuevos_productos.pdf",
-        "pagina": 1
-      },
-      "peligro_deposito": {
-        "archivo": "FDS_Clarita_alcohol.pdf",
-        "pagina": 1
-      },
-      "numero_onu": {
-        "archivo": "FDS_Clarita_alcohol.pdf",
-        "pagina": 1
-      }
-    },
-    "categoria_decidida_por": {
-      "campo": "tipo",
-      "valor": "ALCOHOL",
-      "explicacion": "Tipo ALCOHOL va en Limpieza > Alcohol y alcohol en gel (HOG-LIM-ALC)."
-    }
-  },
-  "P07:LHS-272": {
-    "item_id": "P07:LHS-272",
-    "estado": "a_revision",
-    "duplicado_de": "SKU102282",
-    "motivos_revision": [
-      "gtin_faltante",
-      "posible_duplicado"
-    ],
-    "ficha": {
-      "gtin": null,
-      "descripcion": "REPELENTE FULMIN CREMA X 100 G",
-      "marca": "FULMIN",
-      "tipo": "REPELENTE",
-      "variante": "CREMA",
-      "contenido": 100,
-      "unidad": "G",
-      "unidades_por_envase": 1,
-      "principio_activo": null,
-      "concentracion": null,
-      "condicion_venta": null,
-      "categoria": "HOG-INS-REP",
-      "precio_costo": 194.54,
-      "moneda": "UYU",
-      "proveedor_id": "P07",
-      "codigo_proveedor": "LHS-272",
-      "peligro_deposito": "no_peligroso",
-      "numero_onu": null
-    },
-    "fuentes": {
-      "descripcion": {
-        "archivo": "LHS_catalogo_nuevos_productos.pdf",
-        "pagina": 1
-      },
-      "marca": {
-        "archivo": "LHS_catalogo_nuevos_productos.pdf",
-        "pagina": 1
-      },
-      "tipo": {
-        "archivo": "LHS_catalogo_nuevos_productos.pdf",
-        "pagina": 1
-      },
-      "variante": {
-        "archivo": "LHS_catalogo_nuevos_productos.pdf",
-        "pagina": 1
-      },
-      "contenido": {
-        "archivo": "LHS_catalogo_nuevos_productos.pdf",
-        "pagina": 1
-      },
-      "unidad": {
-        "archivo": "LHS_catalogo_nuevos_productos.pdf",
-        "pagina": 1
-      },
-      "unidades_por_envase": {
-        "archivo": "LHS_catalogo_nuevos_productos.pdf",
-        "pagina": 1
-      },
-      "categoria": {
-        "archivo": "LHS_catalogo_nuevos_productos.pdf",
-        "pagina": 1
-      },
-      "precio_costo": {
-        "archivo": "LHS_catalogo_nuevos_productos.pdf",
-        "pagina": 1
-      },
-      "moneda": {
-        "archivo": "LHS_catalogo_nuevos_productos.pdf",
-        "pagina": 1
-      },
-      "proveedor_id": {
-        "archivo": "LHS_catalogo_nuevos_productos.pdf",
-        "pagina": 1
-      },
-      "codigo_proveedor": {
-        "archivo": "LHS_catalogo_nuevos_productos.pdf",
-        "pagina": 1
-      },
-      "peligro_deposito": {
-        "archivo": "FDS_Fulmin_repcre.pdf",
-        "pagina": 1
-      }
-    },
-    "categoria_decidida_por": {
-      "campo": "tipo",
-      "valor": "REPELENTE",
-      "explicacion": "El repelente va en Repelentes corporales (HOG-INS-REP)."
+      "explicacion": "El tipo ALCOHOL EN GEL va a Alcohol y alcohol en gel (HOG-LIM-ALC)."
     }
   },
   "P07:LHS-260": {
@@ -6130,7 +6043,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "INSECTICIDA",
-      "explicacion": "El insecticida de ambiente va en HOG-INS-AMB."
+      "explicacion": "Insecticida de ambiente en aerosol para cucarachas: va en Insecticidas de ambiente."
     }
   },
   "P07:LHS-263": {
@@ -6223,7 +6136,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "LAVANDINA",
-      "explicacion": "La lavandina va en Desinfectantes y lavandinas (HOG-LIM-DES)."
+      "explicacion": "La lavandina va en Desinfectantes y lavandinas."
     }
   },
   "P07:LHS-266": {
@@ -6312,7 +6225,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "REPELENTE",
-      "explicacion": "El repelente va en Repelentes corporales (HOG-INS-REP)."
+      "explicacion": "Repelente en crema va en Repelentes corporales; el GTIN ya existe en el catálogo (SKU101834)."
     }
   },
   "P07:LHS-269": {
@@ -6405,7 +6318,95 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "LAVANDINA",
-      "explicacion": "La lavandina va en Desinfectantes y lavandinas (HOG-LIM-DES)."
+      "explicacion": "La lavandina va en Desinfectantes y lavandinas."
+    }
+  },
+  "P07:LHS-272": {
+    "item_id": "P07:LHS-272",
+    "estado": "a_revision",
+    "duplicado_de": "SKU102282",
+    "motivos_revision": [
+      "gtin_faltante",
+      "posible_duplicado"
+    ],
+    "ficha": {
+      "gtin": null,
+      "descripcion": "REPELENTE FULMIN CREMA X 100 G",
+      "marca": "FULMIN",
+      "tipo": "REPELENTE",
+      "variante": "CREMA",
+      "contenido": 100,
+      "unidad": "G",
+      "unidades_por_envase": 1,
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "HOG-INS-REP",
+      "precio_costo": 194.54,
+      "moneda": "UYU",
+      "proveedor_id": "P07",
+      "codigo_proveedor": "LHS-272",
+      "peligro_deposito": "no_peligroso",
+      "numero_onu": null
+    },
+    "fuentes": {
+      "descripcion": {
+        "archivo": "LHS_catalogo_nuevos_productos.pdf",
+        "pagina": 1
+      },
+      "marca": {
+        "archivo": "LHS_catalogo_nuevos_productos.pdf",
+        "pagina": 1
+      },
+      "tipo": {
+        "archivo": "LHS_catalogo_nuevos_productos.pdf",
+        "pagina": 1
+      },
+      "variante": {
+        "archivo": "LHS_catalogo_nuevos_productos.pdf",
+        "pagina": 1
+      },
+      "contenido": {
+        "archivo": "LHS_catalogo_nuevos_productos.pdf",
+        "pagina": 1
+      },
+      "unidad": {
+        "archivo": "LHS_catalogo_nuevos_productos.pdf",
+        "pagina": 1
+      },
+      "unidades_por_envase": {
+        "archivo": "LHS_catalogo_nuevos_productos.pdf",
+        "pagina": 1
+      },
+      "categoria": {
+        "archivo": "LHS_catalogo_nuevos_productos.pdf",
+        "pagina": 1
+      },
+      "precio_costo": {
+        "archivo": "LHS_catalogo_nuevos_productos.pdf",
+        "pagina": 1
+      },
+      "moneda": {
+        "archivo": "LHS_catalogo_nuevos_productos.pdf",
+        "pagina": 1
+      },
+      "proveedor_id": {
+        "archivo": "LHS_catalogo_nuevos_productos.pdf",
+        "pagina": 1
+      },
+      "codigo_proveedor": {
+        "archivo": "LHS_catalogo_nuevos_productos.pdf",
+        "pagina": 1
+      },
+      "peligro_deposito": {
+        "archivo": "FDS_Fulmin_repcre.pdf",
+        "pagina": 1
+      }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "REPELENTE",
+      "explicacion": "Repelente en crema va en Repelentes corporales; coincide con SKU102282 (REPELENTE FULMIN CREMA 100GRS) en marca, tipo, variante, contenido."
     }
   }
 }
