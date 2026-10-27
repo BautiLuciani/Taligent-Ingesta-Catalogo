@@ -93,6 +93,21 @@ async def main():
         chequear("LHS: los 2 sin EAN", sin_ean, ["P07:LHS-272", "P07:LHS-275"])
         chequear("LHS: ningún GTIN inválido", [i for i, f in lhs.items() if f["calculado"]["motivo_gtin"] == "gtin_invalido"], [])
 
+        print("\n--- calculado.fds: el cruce producto <-> FDS (paso 4C) ---")
+        chequear("LHS-206: la lavandina, corrosivo + ONU 1791 con la fuente de SU FDS", lhs["P07:LHS-206"]["calculado"]["fds"],
+                 {"peligro_deposito": "corrosivo", "numero_onu": "1791",
+                  "fuente": {"archivo": "FDS_Clarita_lavandina.pdf", "pagina": 1}, "problemas": []})
+        chequear("LHS-203: multiuso no regulado, sin ONU",
+                 (lhs["P07:LHS-203"]["calculado"]["fds"]["peligro_deposito"], lhs["P07:LHS-203"]["calculado"]["fds"]["numero_onu"]),
+                 ("no_peligroso", None))
+        chequear("LHS-275 (sin EAN) igual tiene su FDS: alcohol, líquido inflamable",
+                 lhs["P07:LHS-275"]["calculado"]["fds"]["peligro_deposito"], "liquido_inflamable")
+        chequear("LHS-260 y LHS-233: aerosoles inflamables",
+                 {lhs[i]["calculado"]["fds"]["peligro_deposito"] for i in ["P07:LHS-260", "P07:LHS-233"]}, {"aerosol_inflamable"})
+        sin_fds = sorted(item for item, fila in lhs.items() if fila["calculado"]["fds"] is None)
+        chequear("Sin FDS: justo los 3 que no nombra ninguna", sin_fds, ["P07:LHS-221", "P07:LHS-248", "P07:LHS-266"])
+        chequear("Litoral: no mandó FDS, fds es null", por_id["P03:LT-3303"]["calculado"]["fds"], None)
+
         print("\n--- buscar_por_gtin / buscar_parecidos: LHS contra el catálogo ---")
         encontrados_lhs = {}
         for fila in filas_lhs:
@@ -221,6 +236,16 @@ async def main():
             texto = (await cliente.read_resource(uri))[0].text
             original = (CARPETA_ESTANDAR / archivo).read_text(encoding="utf-8-sig")
             chequear(f"{uri} es idéntico a {archivo} ({len(texto)} caracteres)", texto, original)
+
+    print("\n--- fds_del_producto (casos armados, sin el servidor) ---")
+    from servidor_mcp import fds_del_producto  # la función sola: no levanta el servidor
+    lavandina = {"archivo": "FDS_a.pdf", "codigos": ["X-100"], "peligro_deposito": "corrosivo", "numero_onu": "1791",
+                 "fuente": {"archivo": "FDS_a.pdf", "pagina": 1}, "problemas": []}
+    otra = {**lavandina, "archivo": "FDS_b.pdf", "fuente": {"archivo": "FDS_b.pdf", "pagina": 1}}
+    resultado = fds_del_producto("X-100", {"X-100": [lavandina, otra]})
+    chequear("Código en 2 FDS: sin peligro (no se elige una)", (resultado["peligro_deposito"], resultado["fuente"]), (None, None))
+    chequear("...y queda el problema con los dos archivos", "FDS_a.pdf, FDS_b.pdf" in resultado["problemas"][0], True)
+    chequear("Código que ninguna FDS nombra: None", fds_del_producto("X-999", {"X-100": [lavandina]}), None)
 
     shutil.rmtree(carpeta_temporal, ignore_errors=True)  # borramos la carpeta temporal de las pruebas
     print(f"\nResultado: {'todo OK' if errores == 0 else f'{errores} con error'}")

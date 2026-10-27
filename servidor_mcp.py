@@ -41,6 +41,7 @@ PROVEEDORES = {
     "P07": {
         "formato": "pdf",
         "extraccion": CARPETA_EXTRACCIONES / "LHS_catalogo_nuevos_productos.json",  # lo armó extractor_pdf.py
+        "fds": CARPETA_EXTRACCIONES / "fds_P07_Limpieza_Hogar_Sur.json",  # lo armó extractor_fds.py
         "moneda": "UYU",  # solo si un precio viniera sin símbolo; los de LHS traen "$" -> UYU (estándar, sección 6)
     },
 }
@@ -158,9 +159,49 @@ def leer_filas_pdf(proveedor_id: str, config: dict) -> list[dict]:
 LECTORES = {"csv": leer_filas_csv, "pdf": leer_filas_pdf}
 
 
+def indexar_fds(ruta: Path | None) -> dict[str, list[dict]]:
+    """código -> las FDS que lo nombran en su sección 1 (lo que armó extractor_fds.py).
+
+    Un proveedor sin FDS (ruta None) da un índice vacío: ninguno de sus productos tiene ficha de seguridad.
+    """
+    if ruta is None:
+        return {}
+    if not ruta.exists():
+        raise FileNotFoundError(f"Falta {ruta.name}: primero hay que correr extractor_fds.py sobre esas FDS.")
+    indice = {}
+    for ficha in json.loads(ruta.read_text(encoding="utf-8"))["fichas"]:
+        for codigo in ficha["codigos"]:
+            indice.setdefault(codigo, []).append(ficha)
+    return indice
+
+
+def fds_del_producto(codigo: str, indice_fds: dict[str, list[dict]]) -> dict | None:
+    """Cruza un producto con su FDS por código (el dato que cruza archivos se consolida en código).
+
+    - Ninguna FDS lo nombra -> None (si es de las familias que llevan FDS, el agente pone pendiente_fds).
+    - Una FDS -> su peligro_deposito, numero_onu y fuente (la página de la sección 14 de ESA FDS).
+    - Más de una -> sin peligro y con el problema: no se elige una (lo mismo que con las filas del PDF).
+    """
+    fichas = indice_fds.get(codigo, [])
+    if not fichas:
+        return None
+    if len(fichas) > 1:
+        archivos = ", ".join(ficha["archivo"] for ficha in fichas)
+        return {"peligro_deposito": None, "numero_onu": None, "fuente": None,
+                "problemas": [f"{codigo} aparece en {len(fichas)} FDS ({archivos}): no se elige una."]}
+    ficha = fichas[0]
+    return {"peligro_deposito": ficha["peligro_deposito"], "numero_onu": ficha["numero_onu"],
+            "fuente": ficha["fuente"], "problemas": ficha["problemas"]}
+
+
 def leer_filas(proveedor_id: str, config: dict) -> list[dict]:
-    """Lee las filas de un proveedor con el lector de su formato (CSV, PDF...)."""
-    return LECTORES[config["formato"]](proveedor_id, config)
+    """Lee las filas de un proveedor con el lector de su formato (CSV, PDF...) y le suma a cada una su FDS."""
+    filas = LECTORES[config["formato"]](proveedor_id, config)
+    indice_fds = indexar_fds(config.get("fds"))
+    for fila in filas:
+        codigo = fila["item_id"].split(":", 1)[1]  # "P07:LHS-206" -> "LHS-206"
+        fila["calculado"]["fds"] = fds_del_producto(codigo, indice_fds)
+    return filas
 
 
 @mcp.tool(annotations={"readOnlyHint": True})
@@ -176,7 +217,9 @@ def leer_archivo_proveedor(
     - original: los valores tal como vinieron en el archivo (en un PDF, la fila verificada y sus campos);
     - calculado: lo que ya resolvió el código (GTIN validado y su motivo si hay problema,
       descripción sin abreviaturas, contenido en ML/G/UN, precio como número y moneda, y la marca
-      cuando el archivo la trae en su propia columna). Usá estos valores: no rehagas las cuentas.
+      cuando el archivo la trae en su propia columna) y fds: la ficha de datos de seguridad que lo nombra
+      (peligro_deposito, numero_onu y su fuente), o null si ninguna FDS del proveedor lo nombra.
+      Usá estos valores: no rehagas las cuentas.
       Lo que calculado no trae (por ejemplo, la marca en un PDF) lo decidís desde original.
     Si 'siguiente' no es null, hay más filas: volvé a llamarla con desde=siguiente.
     """
