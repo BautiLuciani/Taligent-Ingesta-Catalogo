@@ -1,0 +1,1068 @@
+[
+  {
+    "item_id": "P07:LHS-206",
+    "por_que": "La lavandina de la demo: corrosivo + ONU 1791 desde su FDS",
+    "esperado": {
+      "estado": "lista_para_alta",
+      "duplicado_de": null,
+      "motivos_revision": [],
+      "ficha": {
+        "gtin": "7790840033469",
+        "descripcion": "LAVANDINA CLARITA CONCENTRADA X 2000 ML",
+        "marca": "CLARITA",
+        "tipo": "LAVANDINA",
+        "variante": "CONCENTRADA",
+        "contenido": 2000,
+        "unidad": "ML",
+        "unidades_por_envase": 1,
+        "principio_activo": null,
+        "concentracion": null,
+        "condicion_venta": null,
+        "categoria": "HOG-LIM-DES",
+        "precio_costo": 88.04,
+        "moneda": "UYU",
+        "proveedor_id": "P07",
+        "codigo_proveedor": "LHS-206",
+        "peligro_deposito": "corrosivo",
+        "numero_onu": "1791"
+      },
+      "fuentes": {
+        "gtin": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "descripcion": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "marca": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "tipo": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "variante": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "contenido": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "unidad": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "unidades_por_envase": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "categoria": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "precio_costo": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "moneda": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "proveedor_id": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "codigo_proveedor": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "peligro_deposito": {
+          "archivo": "FDS_Clarita_lavandina.pdf",
+          "pagina": 1
+        },
+        "numero_onu": {
+          "archivo": "FDS_Clarita_lavandina.pdf",
+          "pagina": 1
+        }
+      }
+    }
+  },
+  {
+    "item_id": "P07:LHS-203",
+    "por_que": "Limpiador «No regulado»: no_peligroso y sin número ONU",
+    "esperado": {
+      "estado": "lista_para_alta",
+      "duplicado_de": null,
+      "motivos_revision": [],
+      "ficha": {
+        "gtin": "7798367700178",
+        "descripcion": "LIMPIADOR CLARITA MULTIUSO LAVANDA X 900 ML",
+        "marca": "CLARITA",
+        "tipo": "LIMPIADOR",
+        "variante": "MULTIUSO LAVANDA",
+        "contenido": 900,
+        "unidad": "ML",
+        "unidades_por_envase": 1,
+        "principio_activo": null,
+        "concentracion": null,
+        "condicion_venta": null,
+        "categoria": "HOG-LIM-BAN",
+        "precio_costo": 143.33,
+        "moneda": "UYU",
+        "proveedor_id": "P07",
+        "codigo_proveedor": "LHS-203",
+        "peligro_deposito": "no_peligroso",
+        "numero_onu": null
+      },
+      "fuentes": {
+        "gtin": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "descripcion": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "marca": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "tipo": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "variante": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "contenido": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "unidad": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "unidades_por_envase": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "categoria": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "precio_costo": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "moneda": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "proveedor_id": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "codigo_proveedor": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "peligro_deposito": {
+          "archivo": "FDS_Clarita_multiuso.pdf",
+          "pagina": 1
+        }
+      }
+    }
+  },
+  {
+    "item_id": "P07:LHS-215",
+    "por_que": "Contenido «X 500 ML» con la X",
+    "esperado": {
+      "estado": "lista_para_alta",
+      "duplicado_de": null,
+      "motivos_revision": [],
+      "ficha": {
+        "gtin": "7792189253836",
+        "descripcion": "LIMPIADOR CLARITA MULTIUSO LAVANDA X 500 ML",
+        "marca": "CLARITA",
+        "tipo": "LIMPIADOR",
+        "variante": "MULTIUSO LAVANDA",
+        "contenido": 500,
+        "unidad": "ML",
+        "unidades_por_envase": 1,
+        "principio_activo": null,
+        "concentracion": null,
+        "condicion_venta": null,
+        "categoria": "HOG-LIM-BAN",
+        "precio_costo": 83.84,
+        "moneda": "UYU",
+        "proveedor_id": "P07",
+        "codigo_proveedor": "LHS-215",
+        "peligro_deposito": "no_peligroso",
+        "numero_onu": null
+      },
+      "fuentes": {
+        "gtin": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "descripcion": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "marca": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "tipo": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "variante": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "contenido": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "unidad": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "unidades_por_envase": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "categoria": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "precio_costo": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "moneda": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "proveedor_id": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "codigo_proveedor": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "peligro_deposito": {
+          "archivo": "FDS_Clarita_multiuso.pdf",
+          "pagina": 1
+        }
+      }
+    }
+  },
+  {
+    "item_id": "P07:LHS-209",
+    "por_que": "Alcohol 70 %: el % va en variante (no es medicamento) y 250 CC -> 250 ML",
+    "esperado": {
+      "estado": "lista_para_alta",
+      "duplicado_de": null,
+      "motivos_revision": [],
+      "ficha": {
+        "gtin": "7794288526675",
+        "descripcion": "ALCOHOL CLARITA 70 % X 250 ML",
+        "marca": "CLARITA",
+        "tipo": "ALCOHOL",
+        "variante": "70 %",
+        "contenido": 250,
+        "unidad": "ML",
+        "unidades_por_envase": 1,
+        "principio_activo": null,
+        "concentracion": null,
+        "condicion_venta": null,
+        "categoria": "HOG-LIM-ALC",
+        "precio_costo": 64.64,
+        "moneda": "UYU",
+        "proveedor_id": "P07",
+        "codigo_proveedor": "LHS-209",
+        "peligro_deposito": "liquido_inflamable",
+        "numero_onu": "1170"
+      },
+      "fuentes": {
+        "gtin": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "descripcion": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "marca": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "tipo": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "variante": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "contenido": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "unidad": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "unidades_por_envase": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "categoria": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "precio_costo": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "moneda": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "proveedor_id": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "codigo_proveedor": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "peligro_deposito": {
+          "archivo": "FDS_Clarita_alcohol.pdf",
+          "pagina": 1
+        },
+        "numero_onu": {
+          "archivo": "FDS_Clarita_alcohol.pdf",
+          "pagina": 1
+        }
+      }
+    }
+  },
+  {
+    "item_id": "P07:LHS-242",
+    "por_que": "Alcohol 96 % y 1 LT -> 1000 ML (falló en la corrida 1: el % se fue a concentracion)",
+    "esperado": {
+      "estado": "lista_para_alta",
+      "duplicado_de": null,
+      "motivos_revision": [],
+      "ficha": {
+        "gtin": "7798133076711",
+        "descripcion": "ALCOHOL CLARITA 96 % X 1000 ML",
+        "marca": "CLARITA",
+        "tipo": "ALCOHOL",
+        "variante": "96 %",
+        "contenido": 1000,
+        "unidad": "ML",
+        "unidades_por_envase": 1,
+        "principio_activo": null,
+        "concentracion": null,
+        "condicion_venta": null,
+        "categoria": "HOG-LIM-ALC",
+        "precio_costo": 168.14,
+        "moneda": "UYU",
+        "proveedor_id": "P07",
+        "codigo_proveedor": "LHS-242",
+        "peligro_deposito": "liquido_inflamable",
+        "numero_onu": "1170"
+      },
+      "fuentes": {
+        "gtin": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "descripcion": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "marca": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "tipo": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "variante": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "contenido": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "unidad": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "unidades_por_envase": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "categoria": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "precio_costo": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "moneda": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "proveedor_id": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "codigo_proveedor": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "peligro_deposito": {
+          "archivo": "FDS_Clarita_alcohol.pdf",
+          "pagina": 1
+        },
+        "numero_onu": {
+          "archivo": "FDS_Clarita_alcohol.pdf",
+          "pagina": 1
+        }
+      }
+    }
+  },
+  {
+    "item_id": "P07:LHS-233",
+    "por_que": "Repelente en aerosol: aerosol_inflamable desde su FDS y 170 CC -> 170 ML",
+    "esperado": {
+      "estado": "lista_para_alta",
+      "duplicado_de": null,
+      "motivos_revision": [],
+      "ficha": {
+        "gtin": "7791592718338",
+        "descripcion": "REPELENTE FULMIN AEROSOL X 170 ML",
+        "marca": "FULMIN",
+        "tipo": "REPELENTE",
+        "variante": "AEROSOL",
+        "contenido": 170,
+        "unidad": "ML",
+        "unidades_por_envase": 1,
+        "principio_activo": null,
+        "concentracion": null,
+        "condicion_venta": null,
+        "categoria": "HOG-INS-REP",
+        "precio_costo": 156.76,
+        "moneda": "UYU",
+        "proveedor_id": "P07",
+        "codigo_proveedor": "LHS-233",
+        "peligro_deposito": "aerosol_inflamable",
+        "numero_onu": "1950"
+      },
+      "fuentes": {
+        "gtin": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "descripcion": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "marca": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "tipo": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "variante": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "contenido": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "unidad": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "unidades_por_envase": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "categoria": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "precio_costo": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "moneda": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "proveedor_id": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "codigo_proveedor": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "peligro_deposito": {
+          "archivo": "FDS_Fulmin_repaer.pdf",
+          "pagina": 1
+        },
+        "numero_onu": {
+          "archivo": "FDS_Fulmin_repaer.pdf",
+          "pagina": 1
+        }
+      }
+    }
+  },
+  {
+    "item_id": "P07:LHS-260",
+    "por_que": "Insecticida de ambiente (otra categoría) en aerosol",
+    "esperado": {
+      "estado": "lista_para_alta",
+      "duplicado_de": null,
+      "motivos_revision": [],
+      "ficha": {
+        "gtin": "7798382040495",
+        "descripcion": "INSECTICIDA FULMIN CUCARACHAS X 360 ML",
+        "marca": "FULMIN",
+        "tipo": "INSECTICIDA",
+        "variante": "CUCARACHAS",
+        "contenido": 360,
+        "unidad": "ML",
+        "unidades_por_envase": 1,
+        "principio_activo": null,
+        "concentracion": null,
+        "condicion_venta": null,
+        "categoria": "HOG-INS-AMB",
+        "precio_costo": 158.17,
+        "moneda": "UYU",
+        "proveedor_id": "P07",
+        "codigo_proveedor": "LHS-260",
+        "peligro_deposito": "aerosol_inflamable",
+        "numero_onu": "1950"
+      },
+      "fuentes": {
+        "gtin": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "descripcion": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "marca": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "tipo": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "variante": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "contenido": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "unidad": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "unidades_por_envase": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "categoria": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "precio_costo": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "moneda": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "proveedor_id": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "codigo_proveedor": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "peligro_deposito": {
+          "archivo": "FDS_Fulmin_insect.pdf",
+          "pagina": 1
+        },
+        "numero_onu": {
+          "archivo": "FDS_Fulmin_insect.pdf",
+          "pagina": 1
+        }
+      }
+    }
+  },
+  {
+    "item_id": "P07:LHS-221",
+    "por_que": "Duplicado por GTIN SIN FDS: pendiente_fds igual (decisión 1)",
+    "esperado": {
+      "estado": "duplicado",
+      "duplicado_de": "SKU102464",
+      "motivos_revision": [],
+      "ficha": {
+        "gtin": "7792315884774",
+        "descripcion": "ALCOHOL EN GEL CLARITA ALOE X 250 ML",
+        "marca": "CLARITA",
+        "tipo": "ALCOHOL EN GEL",
+        "variante": "ALOE",
+        "contenido": 250,
+        "unidad": "ML",
+        "unidades_por_envase": 1,
+        "principio_activo": null,
+        "concentracion": null,
+        "condicion_venta": null,
+        "categoria": "HOG-LIM-ALC",
+        "precio_costo": 185.79,
+        "moneda": "UYU",
+        "proveedor_id": "P07",
+        "codigo_proveedor": "LHS-221",
+        "peligro_deposito": "pendiente_fds",
+        "numero_onu": null
+      },
+      "fuentes": {
+        "gtin": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "descripcion": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "marca": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "tipo": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "variante": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "contenido": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "unidad": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "unidades_por_envase": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "categoria": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "precio_costo": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "moneda": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "proveedor_id": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "codigo_proveedor": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "peligro_deposito": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        }
+      }
+    }
+  },
+  {
+    "item_id": "P07:LHS-248",
+    "por_que": "Duplicado por GTIN sin FDS + alcohol 70 % (falló en la corrida 1)",
+    "esperado": {
+      "estado": "duplicado",
+      "duplicado_de": "SKU101505",
+      "motivos_revision": [],
+      "ficha": {
+        "gtin": "7797159155318",
+        "descripcion": "ALCOHOL CLARITA 70 % X 500 ML",
+        "marca": "CLARITA",
+        "tipo": "ALCOHOL",
+        "variante": "70 %",
+        "contenido": 500,
+        "unidad": "ML",
+        "unidades_por_envase": 1,
+        "principio_activo": null,
+        "concentracion": null,
+        "condicion_venta": null,
+        "categoria": "HOG-LIM-ALC",
+        "precio_costo": 124.16,
+        "moneda": "UYU",
+        "proveedor_id": "P07",
+        "codigo_proveedor": "LHS-248",
+        "peligro_deposito": "pendiente_fds",
+        "numero_onu": null
+      },
+      "fuentes": {
+        "gtin": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "descripcion": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "marca": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "tipo": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "variante": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "contenido": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "unidad": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "unidades_por_envase": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "categoria": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "precio_costo": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "moneda": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "proveedor_id": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "codigo_proveedor": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "peligro_deposito": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        }
+      }
+    }
+  },
+  {
+    "item_id": "P07:LHS-266",
+    "por_que": "Duplicado sin FDS de otra marca (Fulmin) y 60GR -> 60 G",
+    "esperado": {
+      "estado": "duplicado",
+      "duplicado_de": "SKU101834",
+      "motivos_revision": [],
+      "ficha": {
+        "gtin": "7797934045896",
+        "descripcion": "REPELENTE FULMIN CREMA NIÑOS X 60 G",
+        "marca": "FULMIN",
+        "tipo": "REPELENTE",
+        "variante": "CREMA NIÑOS",
+        "contenido": 60,
+        "unidad": "G",
+        "unidades_por_envase": 1,
+        "principio_activo": null,
+        "concentracion": null,
+        "condicion_venta": null,
+        "categoria": "HOG-INS-REP",
+        "precio_costo": 145.19,
+        "moneda": "UYU",
+        "proveedor_id": "P07",
+        "codigo_proveedor": "LHS-266",
+        "peligro_deposito": "pendiente_fds",
+        "numero_onu": null
+      },
+      "fuentes": {
+        "gtin": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "descripcion": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "marca": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "tipo": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "variante": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "contenido": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "unidad": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "unidades_por_envase": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "categoria": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "precio_costo": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "moneda": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "proveedor_id": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "codigo_proveedor": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "peligro_deposito": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        }
+      }
+    }
+  },
+  {
+    "item_id": "P07:LHS-275",
+    "por_que": "Sin EAN: entre los 4 Clarita de 500 ML el candidato es el 96 % (falló el %)",
+    "esperado": {
+      "estado": "a_revision",
+      "duplicado_de": "SKU101386",
+      "motivos_revision": [
+        "gtin_faltante",
+        "posible_duplicado"
+      ],
+      "ficha": {
+        "gtin": null,
+        "descripcion": "ALCOHOL CLARITA 96 % X 500 ML",
+        "marca": "CLARITA",
+        "tipo": "ALCOHOL",
+        "variante": "96 %",
+        "contenido": 500,
+        "unidad": "ML",
+        "unidades_por_envase": 1,
+        "principio_activo": null,
+        "concentracion": null,
+        "condicion_venta": null,
+        "categoria": "HOG-LIM-ALC",
+        "precio_costo": 117.34,
+        "moneda": "UYU",
+        "proveedor_id": "P07",
+        "codigo_proveedor": "LHS-275",
+        "peligro_deposito": "liquido_inflamable",
+        "numero_onu": "1170"
+      },
+      "fuentes": {
+        "descripcion": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "marca": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "tipo": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "variante": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "contenido": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "unidad": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "unidades_por_envase": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "categoria": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "precio_costo": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "moneda": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "proveedor_id": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "codigo_proveedor": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "peligro_deposito": {
+          "archivo": "FDS_Clarita_alcohol.pdf",
+          "pagina": 1
+        },
+        "numero_onu": {
+          "archivo": "FDS_Clarita_alcohol.pdf",
+          "pagina": 1
+        }
+      }
+    }
+  },
+  {
+    "item_id": "P07:LHS-272",
+    "por_que": "Sin EAN: posible duplicado del repelente crema 100 GRS del catálogo",
+    "esperado": {
+      "estado": "a_revision",
+      "duplicado_de": "SKU102282",
+      "motivos_revision": [
+        "gtin_faltante",
+        "posible_duplicado"
+      ],
+      "ficha": {
+        "gtin": null,
+        "descripcion": "REPELENTE FULMIN CREMA X 100 G",
+        "marca": "FULMIN",
+        "tipo": "REPELENTE",
+        "variante": "CREMA",
+        "contenido": 100,
+        "unidad": "G",
+        "unidades_por_envase": 1,
+        "principio_activo": null,
+        "concentracion": null,
+        "condicion_venta": null,
+        "categoria": "HOG-INS-REP",
+        "precio_costo": 194.54,
+        "moneda": "UYU",
+        "proveedor_id": "P07",
+        "codigo_proveedor": "LHS-272",
+        "peligro_deposito": "no_peligroso",
+        "numero_onu": null
+      },
+      "fuentes": {
+        "descripcion": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "marca": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "tipo": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "variante": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "contenido": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "unidad": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "unidades_por_envase": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "categoria": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "precio_costo": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "moneda": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "proveedor_id": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "codigo_proveedor": {
+          "archivo": "LHS_catalogo_nuevos_productos.pdf",
+          "pagina": 1
+        },
+        "peligro_deposito": {
+          "archivo": "FDS_Fulmin_repcre.pdf",
+          "pagina": 1
+        }
+      }
+    }
+  }
+]

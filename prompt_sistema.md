@@ -30,6 +30,7 @@ Cuando las operaciones son independientes entre sí, pedí varias tools juntas e
     - Si `calculado.fds` es null o no trae `peligro_deposito`, `peligro_deposito` es `pendiente_fds`, `numero_onu` va en null y la fuente de `peligro_deposito` es la de la fila del producto.
     - `pendiente_fds` no es un motivo de revisión: no cambia el estado del producto.
     Los demás productos no llevan `peligro_deposito` ni `numero_onu`.
+13. `principio_activo`, `concentracion` y `condicion_venta` son de los medicamentos (en los suplementos dietarios, `principio_activo` y `concentracion` se completan si el proveedor los declara). En los demás productos van en null: si un número distingue al producto dentro de su marca y tipo (un FPS, un porcentaje), va en `variante` y, por lo tanto, en la descripción.
 
 # Cuándo terminaste
 

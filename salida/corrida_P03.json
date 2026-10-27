@@ -1,5 +1,5 @@
 {
-  "fecha": "2026-10-27 15:59",
+  "fecha": "2026-10-27 16:25",
   "proveedor_id": "P03",
   "modelo": "claude-haiku-5-5",
   "effort": "high",
@@ -8,20 +8,20 @@
   "registrados": 50,
   "faltan": [],
   "tandas_con_problemas": [],
-  "segundos": 207.0,
+  "segundos": 221.1,
   "vueltas": 20,
-  "input_tokens": 334777,
-  "output_tokens": 59754,
-  "costo_total_usd": 0.0634,
-  "costo_por_ficha_usd": 0.00127,
-  "traza": "traza_20261027_155535.jsonl",
+  "input_tokens": 340877,
+  "output_tokens": 61875,
+  "costo_total_usd": 0.065,
+  "costo_por_ficha_usd": 0.0013,
+  "traza": "traza_20261027_162157.jsonl",
   "por_tanda": [
     {
       "como_termino": "end_turn",
       "vueltas": 4,
-      "input_tokens": 66762,
-      "output_tokens": 11878,
-      "costo_usd": 0.012615,
+      "input_tokens": 70003,
+      "output_tokens": 12929,
+      "costo_usd": 0.013465,
       "esperados": 10,
       "registrados": 10,
       "faltan": []
@@ -29,9 +29,9 @@
     {
       "como_termino": "end_turn",
       "vueltas": 4,
-      "input_tokens": 67532,
-      "output_tokens": 12564,
-      "costo_usd": 0.013035,
+      "input_tokens": 69318,
+      "output_tokens": 13559,
+      "costo_usd": 0.013711,
       "esperados": 10,
       "registrados": 10,
       "faltan": []
@@ -39,9 +39,9 @@
     {
       "como_termino": "end_turn",
       "vueltas": 4,
-      "input_tokens": 66733,
-      "output_tokens": 11456,
-      "costo_usd": 0.012401,
+      "input_tokens": 66460,
+      "output_tokens": 11703,
+      "costo_usd": 0.012497,
       "esperados": 10,
       "registrados": 10,
       "faltan": []
@@ -49,9 +49,9 @@
     {
       "como_termino": "end_turn",
       "vueltas": 4,
-      "input_tokens": 65965,
-      "output_tokens": 10886,
-      "costo_usd": 0.012039,
+      "input_tokens": 67342,
+      "output_tokens": 11376,
+      "costo_usd": 0.012422,
       "esperados": 10,
       "registrados": 10,
       "faltan": []
@@ -59,9 +59,9 @@
     {
       "como_termino": "end_turn",
       "vueltas": 4,
-      "input_tokens": 67785,
-      "output_tokens": 12970,
-      "costo_usd": 0.013263,
+      "input_tokens": 67754,
+      "output_tokens": 12308,
+      "costo_usd": 0.012929,
       "esperados": 10,
       "registrados": 10,
       "faltan": []

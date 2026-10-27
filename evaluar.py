@@ -1,13 +1,15 @@
 """Evaluador: compara las fichas que generó el agente contra los casos verificados a mano.
 
-Correr: python evaluar.py
+Correr: python evaluar.py                          (los casos de Litoral)
+        python evaluar.py evaluacion/casos_lhs.json  (los de Limpieza Hogar Sur, o cualquier otro archivo de casos)
 """
+import argparse
 import json
 from collections import Counter
 from pathlib import Path
 
 CARPETA_PROYECTO = Path(__file__).parent
-RUTA_CASOS = CARPETA_PROYECTO / "evaluacion" / "casos_litoral.json"
+RUTA_CASOS = CARPETA_PROYECTO / "evaluacion" / "casos_litoral.json"  # los de la semana 1, por defecto
 RUTA_RESULTADOS = CARPETA_PROYECTO / "salida" / "resultados.json"
 
 
@@ -56,7 +58,11 @@ def comparar_caso(esperado: dict, obtenido: dict | None) -> tuple[list[str], lis
 
 
 def main():
-    casos = json.loads(RUTA_CASOS.read_text(encoding="utf-8"))
+    argumentos = argparse.ArgumentParser(description="Compara las fichas generadas contra casos verificados a mano.")
+    argumentos.add_argument("casos", nargs="?", type=Path, default=RUTA_CASOS, help="Archivo de casos (por defecto, Litoral).")
+    ruta_casos = argumentos.parse_args().casos
+    print(f"Casos: {ruta_casos.name}\n")
+    casos = json.loads(ruta_casos.read_text(encoding="utf-8"))
     resultados = json.loads(RUTA_RESULTADOS.read_text(encoding="utf-8"))
 
     fichas_ok = fuentes_ok = 0
