@@ -1,6 +1,14 @@
 {
   "archivo": "Lista_de_precios_octubre_2026.pdf",
   "modelo": "claude-haiku-5-5",
+  "vigencia": {
+    "fecha": "2026-10-01",
+    "texto": "Lista de precios a farmacias · Vigencia desde el 1 de octubre de 2026",
+    "fuente": {
+      "archivo": "Lista_de_precios_octubre_2026.pdf",
+      "pagina": 1
+    }
+  },
   "productos": [
     {
       "codigo": "AN-1103",
@@ -475,6 +483,7 @@
   "costo_usd": {
     "llamada_1": 0.006249,
     "llamada_2": 0.001626,
-    "total": 0.007876
+    "vigencia": 0.000653,
+    "total": 0.008529
   }
 }

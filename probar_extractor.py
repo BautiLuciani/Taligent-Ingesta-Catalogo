@@ -4,7 +4,8 @@ import json
 from pathlib import Path
 
 from extractor_pdf import (COLUMNAS_POR_PDF, campos_desde_respuesta, codigo_al_inicio, filas_de_un_texto,
-                           filas_desde_citas, normalizar_espacios, tool_campos, valor_en_fila, verificar_campos)
+                           filas_desde_citas, normalizar_espacios, tool_campos, valor_en_fila, verificar_campos,
+                           vigencia_desde_citas)
 
 RUTA_EXPERIMENTO = Path(__file__).parent / "salida" / "experimentos" / "citas_lhs.json"
 
@@ -222,5 +223,25 @@ productos, _ = campos_desde_respuesta(entrega([P269]), FILAS_LHS, COLUMNAS_LHS)
 chequear("LHS-269: sin problemas y el pie queda aparte", (productos[0]["problemas"], productos[0]["texto_ajeno"]),
          ([], PIE_LHS))
 chequear("...y su 'fila' queda igual que antes (sin el pie)", productos[0]["fila"], FILA_269)
+
+print("--- vigencia_desde_citas (paso 6C2) ---")
+VIGENCIA = json.loads((RUTA_EXPERIMENTO.parent / "citas_andes_vigencia.json").read_text(encoding="utf-8"))["content"]
+vigencia, problemas = vigencia_desde_citas(VIGENCIA, "Lista_de_precios_octubre_2026.pdf")
+chequear("Andes real: la fecha la lee el código del texto citado", vigencia, {
+    "fecha": "2026-10-01", "texto": "Lista de precios a farmacias · Vigencia desde el 1 de octubre de 2026",
+    "fuente": {"archivo": "Lista_de_precios_octubre_2026.pdf", "pagina": 1}})
+chequear("...sin problemas", problemas, [])
+TITULO = "Laboratorio Andes S.A.\r\nLista de precios a farmacias · Vigencia desde el 1 de octubre de 2026\r\nPrecios sin IVA. "
+vigencia, problemas = vigencia_desde_citas([bloque_citado(TITULO, TITULO)], "x.pdf")
+chequear("La misma vigencia citada dos veces: una sola", (vigencia["fecha"], problemas), ("2026-10-01", []))
+vigencia, problemas = vigencia_desde_citas([bloque_citado(TITULO, "Vigencia desde: 15/10/2026")], "x.pdf")
+chequear("Dos vigencias distintas: no se elige", (vigencia, len(problemas)), (None, 1))
+vigencia, problemas = vigencia_desde_citas([bloque_citado("Precios sin IVA. VL: venta libre. ")], "x.pdf")
+chequear("Sin renglón de vigencia: None + problema", (vigencia, len(problemas)), (None, 1))
+vigencia, _ = vigencia_desde_citas([bloque_citado("Válido hasta el 31 de diciembre de 2026")], "x.pdf")
+chequear("Una fecha que no es de vigencia no cuenta", vigencia, None)
+vigencia, _ = vigencia_desde_citas([{"type": "text", "text": "Vigencia desde el 1 de octubre de 2026", "citations": None}],
+                                   "x.pdf")
+chequear("Lo que escribió Haiku sin cita no cuenta", vigencia, None)
 
 print(f"\nResultado: {'todo OK' if errores == 0 else f'{errores} con error'}")
