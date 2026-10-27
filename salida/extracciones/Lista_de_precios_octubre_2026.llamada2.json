@@ -1,0 +1,303 @@
+{
+  "id": "msg_011CgTcA1z3pXp72Rcx2Zpjc",
+  "container": null,
+  "content": [
+    {
+      "id": "toolu_01NUPyhuqfYq3KojvjUJr6a8",
+      "caller": {
+        "type": "direct"
+      },
+      "input": {
+        "productos": [
+          {
+            "codigo": "AN-1103",
+            "producto": "Dolorex 400mg",
+            "monodroga": null,
+            "presentacion": "Comp. rec. x 20",
+            "condicion": "VL",
+            "ean": "7794394922729",
+            "precio": "$ 265,29",
+            "texto_ajeno": null
+          },
+          {
+            "codigo": "AN-1106",
+            "producto": "Antiacid 400 mg + 400 mg/5 ml",
+            "monodroga": null,
+            "presentacion": "Susp. x 200 ml",
+            "condicion": "VL",
+            "ean": "7799252522035",
+            "precio": "$ 156,16",
+            "texto_ajeno": null
+          },
+          {
+            "codigo": "AN-1109",
+            "producto": "Febril 1g",
+            "monodroga": "Paracetamol",
+            "presentacion": "Comp. rec. x 20",
+            "condicion": "VL",
+            "ean": "7797385091657",
+            "precio": "$ 225,13",
+            "texto_ajeno": null
+          },
+          {
+            "codigo": "AN-1112",
+            "producto": "Glucomet 850mg",
+            "monodroga": "Metformina",
+            "presentacion": "Comp. x 60",
+            "condicion": "VBR",
+            "ean": "7797092743948",
+            "precio": "$ 175,49",
+            "texto_ajeno": null
+          },
+          {
+            "codigo": "AN-1115",
+            "producto": "Gastrex 20 mg",
+            "monodroga": "Omeprazol",
+            "presentacion": "Caps. x 28",
+            "condicion": "VL",
+            "ean": "7790106983514",
+            "precio": "$ 246,07",
+            "texto_ajeno": null
+          },
+          {
+            "codigo": "AN-1118",
+            "producto": "Gastrex 20mg",
+            "monodroga": "Omeprazol",
+            "presentacion": "Caps. x 14",
+            "condicion": "VL",
+            "ean": "7793160165476",
+            "precio": "$ 142,93",
+            "texto_ajeno": null
+          },
+          {
+            "codigo": "AN-1121",
+            "producto": "Diacort 2mg",
+            "monodroga": "Loperamida",
+            "presentacion": "Comp. rec. x 12",
+            "condicion": "VL",
+            "ean": "7799550016915",
+            "precio": "$ 171,02",
+            "texto_ajeno": null
+          },
+          {
+            "codigo": "AN-1124",
+            "producto": "Dermacort 1%",
+            "monodroga": "Hidrocortisona",
+            "presentacion": "Crema x 30 g",
+            "condicion": "VL",
+            "ean": "7796462699472",
+            "precio": "$ 306,73",
+            "texto_ajeno": null
+          },
+          {
+            "codigo": "AN-1127",
+            "producto": "Alergix 10 mg",
+            "monodroga": "Loratadina",
+            "presentacion": "Comp. rec. x 10",
+            "condicion": "VL",
+            "ean": "7790688122189",
+            "precio": "$ 148,56",
+            "texto_ajeno": null
+          },
+          {
+            "codigo": "AN-1130",
+            "producto": "Dermacort 1%",
+            "monodroga": "Hidrocortisona",
+            "presentacion": "Crema x 15 gr",
+            "condicion": "VL",
+            "ean": "7795431246051",
+            "precio": "$ 201,55",
+            "texto_ajeno": null
+          },
+          {
+            "codigo": "AN-1133",
+            "producto": "Micostop 1%",
+            "monodroga": "Clotrimazol",
+            "presentacion": "Crema x 20 gr",
+            "condicion": "VL",
+            "ean": "7798467198943",
+            "precio": "$ 193,76",
+            "texto_ajeno": null
+          },
+          {
+            "codigo": "AN-1136",
+            "producto": "Febril 500mg",
+            "monodroga": "Paracetamol",
+            "presentacion": "Comp. rec. x 20",
+            "condicion": "VL",
+            "ean": "7790950373011",
+            "precio": "$ 185,50",
+            "texto_ajeno": null
+          },
+          {
+            "codigo": "AN-1139",
+            "producto": "Cardiopres 20mg",
+            "monodroga": "Enalapril",
+            "presentacion": "Comprimidos x 30",
+            "condicion": "VBR",
+            "ean": "7797752654089",
+            "precio": "$ 159,80",
+            "texto_ajeno": null
+          },
+          {
+            "codigo": "AN-1142",
+            "producto": "Gripanil 500 mg + 4 mg + 10 mg",
+            "monodroga": "Paracetamol + Clorfeniramina + Fenilefrina",
+            "presentacion": "Comp. x 10",
+            "condicion": "VL",
+            "ean": "7795761445278",
+            "precio": "$ 183,45",
+            "texto_ajeno": null
+          },
+          {
+            "codigo": "AN-1145",
+            "producto": "Gripanil 500mg+4mg+10mg",
+            "monodroga": "Paracetamol + Clorfeniramina + Fenilefrina",
+            "presentacion": "Sobres x 12",
+            "condicion": "VL",
+            "ean": "7791495114022",
+            "precio": "$ 268,81",
+            "texto_ajeno": null
+          },
+          {
+            "codigo": "AN-1148",
+            "producto": "Gripanil 500 mg + 4 mg + 10 mg",
+            "monodroga": "Paracetamol + Clorfeniramina + Fenilefrina",
+            "presentacion": "Sobres x 6",
+            "condicion": "VL",
+            "ean": "7796730355338",
+            "precio": "$ 168,80",
+            "texto_ajeno": null
+          },
+          {
+            "codigo": "AN-1151",
+            "producto": "Flexigel 1%",
+            "monodroga": "Diclofenac",
+            "presentacion": "Gel tópico x 60 gr",
+            "condicion": "VL",
+            "ean": "7797593529355",
+            "precio": "$ 236,45",
+            "texto_ajeno": null
+          },
+          {
+            "codigo": "AN-1154",
+            "producto": "Dolorex 600mg",
+            "monodroga": "Ibuprofeno",
+            "presentacion": "Comprimidos x 20",
+            "condicion": "VBR",
+            "ean": "7795669252633",
+            "precio": "$ 337,17",
+            "texto_ajeno": null
+          },
+          {
+            "codigo": "AN-1157",
+            "producto": "Tiroxan 50mcg",
+            "monodroga": "Levotiroxina",
+            "presentacion": "Comprimidos x 30",
+            "condicion": "VBR",
+            "ean": "7790003122382",
+            "precio": "$ 136,62",
+            "texto_ajeno": null
+          },
+          {
+            "codigo": "AN-1160",
+            "producto": "Tiroxan 100 mcg",
+            "monodroga": "Levotiroxina",
+            "presentacion": "Comprimidos x 30",
+            "condicion": "VBR",
+            "ean": "7798193783772",
+            "precio": "$ 153,10",
+            "texto_ajeno": null
+          },
+          {
+            "codigo": "AN-1163",
+            "producto": "Diacort 2mg",
+            "monodroga": "Loperamida",
+            "presentacion": "Comprimidos x 6",
+            "condicion": "VL",
+            "ean": "7790559445416",
+            "precio": "$ 109,38",
+            "texto_ajeno": null
+          },
+          {
+            "codigo": "AN-1166",
+            "producto": "Laxofib 5mg",
+            "monodroga": "Bisacodilo",
+            "presentacion": "Comp. x 20",
+            "condicion": "VL",
+            "ean": "7790468655227",
+            "precio": "$ 104,41",
+            "texto_ajeno": null
+          },
+          {
+            "codigo": "AN-1169",
+            "producto": "Cardiopres 10 mg",
+            "monodroga": "Enalapril",
+            "presentacion": "Comp. rec. x 30",
+            "condicion": "VBR",
+            "ean": "7799738361219",
+            "precio": "$ 144,73",
+            "texto_ajeno": null
+          },
+          {
+            "codigo": "AN-1172",
+            "producto": "Tosil 15mg/5ml",
+            "monodroga": "Dextrometorfano",
+            "presentacion": "Jbe. x 120 ml",
+            "condicion": "VL",
+            "ean": "7793821086737",
+            "precio": "$ 213,12",
+            "texto_ajeno": null
+          },
+          {
+            "codigo": "AN-1175",
+            "producto": "Febril 120mg/5ml",
+            "monodroga": "Paracetamol",
+            "presentacion": "Jbe. x 100 ml",
+            "condicion": "VL",
+            "ean": "7793831128717",
+            "precio": "$ 194,57",
+            "texto_ajeno": null
+          },
+          {
+            "codigo": "AN-1178",
+            "producto": "Febril 1g",
+            "monodroga": "Paracetamol",
+            "presentacion": "Comp. x 10",
+            "condicion": "VL",
+            "ean": "7792542521701",
+            "precio": "$ 120,52",
+            "texto_ajeno": "Laboratorio Andes S.A. · Lista de precios octubre 2026 Página 1 de 1"
+          }
+        ]
+      },
+      "name": "entregar_campos",
+      "type": "tool_use",
+      "toolset_name": null
+    }
+  ],
+  "diagnostics": null,
+  "model": "claude-haiku-5-5",
+  "role": "assistant",
+  "stop_details": null,
+  "stop_reason": "tool_use",
+  "stop_sequence": null,
+  "type": "message",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 3093,
+    "output_tokens": 2634,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": null,
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

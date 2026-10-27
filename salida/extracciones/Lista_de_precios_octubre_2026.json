@@ -1,0 +1,480 @@
+{
+  "archivo": "Lista_de_precios_octubre_2026.pdf",
+  "modelo": "claude-haiku-5-5",
+  "productos": [
+    {
+      "codigo": "AN-1103",
+      "fuente": {
+        "archivo": "Lista_de_precios_octubre_2026.pdf",
+        "pagina": 1
+      },
+      "fila": "AN-1103 Dolorex 400mg Comp. rec. x 20 VL 7794394922729 $ 265,29",
+      "campos": {
+        "producto": "Dolorex 400mg",
+        "monodroga": null,
+        "presentacion": "Comp. rec. x 20",
+        "condicion": "VL",
+        "ean": "7794394922729",
+        "precio": "$ 265,29"
+      },
+      "texto_ajeno": null,
+      "problemas": []
+    },
+    {
+      "codigo": "AN-1106",
+      "fuente": {
+        "archivo": "Lista_de_precios_octubre_2026.pdf",
+        "pagina": 1
+      },
+      "fila": "AN-1106 Antiacid 400 mg + 400 mg/5 ml Susp. x 200 ml VL 7799252522035 $ 156,16",
+      "campos": {
+        "producto": "Antiacid 400 mg + 400 mg/5 ml",
+        "monodroga": null,
+        "presentacion": "Susp. x 200 ml",
+        "condicion": "VL",
+        "ean": "7799252522035",
+        "precio": "$ 156,16"
+      },
+      "texto_ajeno": null,
+      "problemas": []
+    },
+    {
+      "codigo": "AN-1109",
+      "fuente": {
+        "archivo": "Lista_de_precios_octubre_2026.pdf",
+        "pagina": 1
+      },
+      "fila": "AN-1109 Febril 1g Paracetamol Comp. rec. x 20 VL 7797385091657 $ 225,13",
+      "campos": {
+        "producto": "Febril 1g",
+        "monodroga": "Paracetamol",
+        "presentacion": "Comp. rec. x 20",
+        "condicion": "VL",
+        "ean": "7797385091657",
+        "precio": "$ 225,13"
+      },
+      "texto_ajeno": null,
+      "problemas": []
+    },
+    {
+      "codigo": "AN-1112",
+      "fuente": {
+        "archivo": "Lista_de_precios_octubre_2026.pdf",
+        "pagina": 1
+      },
+      "fila": "AN-1112 Glucomet 850mg Metformina Comp. x 60 VBR 7797092743948 $ 175,49",
+      "campos": {
+        "producto": "Glucomet 850mg",
+        "monodroga": "Metformina",
+        "presentacion": "Comp. x 60",
+        "condicion": "VBR",
+        "ean": "7797092743948",
+        "precio": "$ 175,49"
+      },
+      "texto_ajeno": null,
+      "problemas": []
+    },
+    {
+      "codigo": "AN-1115",
+      "fuente": {
+        "archivo": "Lista_de_precios_octubre_2026.pdf",
+        "pagina": 1
+      },
+      "fila": "AN-1115 Gastrex 20 mg Omeprazol Caps. x 28 VL 7790106983514 $ 246,07",
+      "campos": {
+        "producto": "Gastrex 20 mg",
+        "monodroga": "Omeprazol",
+        "presentacion": "Caps. x 28",
+        "condicion": "VL",
+        "ean": "7790106983514",
+        "precio": "$ 246,07"
+      },
+      "texto_ajeno": null,
+      "problemas": []
+    },
+    {
+      "codigo": "AN-1118",
+      "fuente": {
+        "archivo": "Lista_de_precios_octubre_2026.pdf",
+        "pagina": 1
+      },
+      "fila": "AN-1118 Gastrex 20mg Omeprazol Caps. x 14 VL 7793160165476 $ 142,93",
+      "campos": {
+        "producto": "Gastrex 20mg",
+        "monodroga": "Omeprazol",
+        "presentacion": "Caps. x 14",
+        "condicion": "VL",
+        "ean": "7793160165476",
+        "precio": "$ 142,93"
+      },
+      "texto_ajeno": null,
+      "problemas": []
+    },
+    {
+      "codigo": "AN-1121",
+      "fuente": {
+        "archivo": "Lista_de_precios_octubre_2026.pdf",
+        "pagina": 1
+      },
+      "fila": "AN-1121 Diacort 2mg Loperamida Comp. rec. x 12 VL 7799550016915 $ 171,02",
+      "campos": {
+        "producto": "Diacort 2mg",
+        "monodroga": "Loperamida",
+        "presentacion": "Comp. rec. x 12",
+        "condicion": "VL",
+        "ean": "7799550016915",
+        "precio": "$ 171,02"
+      },
+      "texto_ajeno": null,
+      "problemas": []
+    },
+    {
+      "codigo": "AN-1124",
+      "fuente": {
+        "archivo": "Lista_de_precios_octubre_2026.pdf",
+        "pagina": 1
+      },
+      "fila": "AN-1124 Dermacort 1% Hidrocortisona Crema x 30 g VL 7796462699472 $ 306,73",
+      "campos": {
+        "producto": "Dermacort 1%",
+        "monodroga": "Hidrocortisona",
+        "presentacion": "Crema x 30 g",
+        "condicion": "VL",
+        "ean": "7796462699472",
+        "precio": "$ 306,73"
+      },
+      "texto_ajeno": null,
+      "problemas": []
+    },
+    {
+      "codigo": "AN-1127",
+      "fuente": {
+        "archivo": "Lista_de_precios_octubre_2026.pdf",
+        "pagina": 1
+      },
+      "fila": "AN-1127 Alergix 10 mg Loratadina Comp. rec. x 10 VL 7790688122189 $ 148,56",
+      "campos": {
+        "producto": "Alergix 10 mg",
+        "monodroga": "Loratadina",
+        "presentacion": "Comp. rec. x 10",
+        "condicion": "VL",
+        "ean": "7790688122189",
+        "precio": "$ 148,56"
+      },
+      "texto_ajeno": null,
+      "problemas": []
+    },
+    {
+      "codigo": "AN-1130",
+      "fuente": {
+        "archivo": "Lista_de_precios_octubre_2026.pdf",
+        "pagina": 1
+      },
+      "fila": "AN-1130 Dermacort 1% Hidrocortisona Crema x 15 gr VL 7795431246051 $ 201,55",
+      "campos": {
+        "producto": "Dermacort 1%",
+        "monodroga": "Hidrocortisona",
+        "presentacion": "Crema x 15 gr",
+        "condicion": "VL",
+        "ean": "7795431246051",
+        "precio": "$ 201,55"
+      },
+      "texto_ajeno": null,
+      "problemas": []
+    },
+    {
+      "codigo": "AN-1133",
+      "fuente": {
+        "archivo": "Lista_de_precios_octubre_2026.pdf",
+        "pagina": 1
+      },
+      "fila": "AN-1133 Micostop 1% Clotrimazol Crema x 20 gr VL 7798467198943 $ 193,76",
+      "campos": {
+        "producto": "Micostop 1%",
+        "monodroga": "Clotrimazol",
+        "presentacion": "Crema x 20 gr",
+        "condicion": "VL",
+        "ean": "7798467198943",
+        "precio": "$ 193,76"
+      },
+      "texto_ajeno": null,
+      "problemas": []
+    },
+    {
+      "codigo": "AN-1136",
+      "fuente": {
+        "archivo": "Lista_de_precios_octubre_2026.pdf",
+        "pagina": 1
+      },
+      "fila": "AN-1136 Febril 500mg Paracetamol Comp. rec. x 20 VL 7790950373011 $ 185,50",
+      "campos": {
+        "producto": "Febril 500mg",
+        "monodroga": "Paracetamol",
+        "presentacion": "Comp. rec. x 20",
+        "condicion": "VL",
+        "ean": "7790950373011",
+        "precio": "$ 185,50"
+      },
+      "texto_ajeno": null,
+      "problemas": []
+    },
+    {
+      "codigo": "AN-1139",
+      "fuente": {
+        "archivo": "Lista_de_precios_octubre_2026.pdf",
+        "pagina": 1
+      },
+      "fila": "AN-1139 Cardiopres 20mg Enalapril Comprimidos x 30 VBR 7797752654089 $ 159,80",
+      "campos": {
+        "producto": "Cardiopres 20mg",
+        "monodroga": "Enalapril",
+        "presentacion": "Comprimidos x 30",
+        "condicion": "VBR",
+        "ean": "7797752654089",
+        "precio": "$ 159,80"
+      },
+      "texto_ajeno": null,
+      "problemas": []
+    },
+    {
+      "codigo": "AN-1142",
+      "fuente": {
+        "archivo": "Lista_de_precios_octubre_2026.pdf",
+        "pagina": 1
+      },
+      "fila": "AN-1142 Gripanil 500 mg + 4 mg + 10 mg Paracetamol + Clorfeniramina + Fenilefrina Comp. x 10 VL 7795761445278 $ 183,45",
+      "campos": {
+        "producto": "Gripanil 500 mg + 4 mg + 10 mg",
+        "monodroga": "Paracetamol + Clorfeniramina + Fenilefrina",
+        "presentacion": "Comp. x 10",
+        "condicion": "VL",
+        "ean": "7795761445278",
+        "precio": "$ 183,45"
+      },
+      "texto_ajeno": null,
+      "problemas": []
+    },
+    {
+      "codigo": "AN-1145",
+      "fuente": {
+        "archivo": "Lista_de_precios_octubre_2026.pdf",
+        "pagina": 1
+      },
+      "fila": "AN-1145 Gripanil 500mg+4mg+10mg Paracetamol + Clorfeniramina + Fenilefrina Sobres x 12 VL 7791495114022 $ 268,81",
+      "campos": {
+        "producto": "Gripanil 500mg+4mg+10mg",
+        "monodroga": "Paracetamol + Clorfeniramina + Fenilefrina",
+        "presentacion": "Sobres x 12",
+        "condicion": "VL",
+        "ean": "7791495114022",
+        "precio": "$ 268,81"
+      },
+      "texto_ajeno": null,
+      "problemas": []
+    },
+    {
+      "codigo": "AN-1148",
+      "fuente": {
+        "archivo": "Lista_de_precios_octubre_2026.pdf",
+        "pagina": 1
+      },
+      "fila": "AN-1148 Gripanil 500 mg + 4 mg + 10 mg Paracetamol + Clorfeniramina + Fenilefrina Sobres x 6 VL 7796730355338 $ 168,80",
+      "campos": {
+        "producto": "Gripanil 500 mg + 4 mg + 10 mg",
+        "monodroga": "Paracetamol + Clorfeniramina + Fenilefrina",
+        "presentacion": "Sobres x 6",
+        "condicion": "VL",
+        "ean": "7796730355338",
+        "precio": "$ 168,80"
+      },
+      "texto_ajeno": null,
+      "problemas": []
+    },
+    {
+      "codigo": "AN-1151",
+      "fuente": {
+        "archivo": "Lista_de_precios_octubre_2026.pdf",
+        "pagina": 1
+      },
+      "fila": "AN-1151 Flexigel 1% Diclofenac Gel tópico x 60 gr VL 7797593529355 $ 236,45",
+      "campos": {
+        "producto": "Flexigel 1%",
+        "monodroga": "Diclofenac",
+        "presentacion": "Gel tópico x 60 gr",
+        "condicion": "VL",
+        "ean": "7797593529355",
+        "precio": "$ 236,45"
+      },
+      "texto_ajeno": null,
+      "problemas": []
+    },
+    {
+      "codigo": "AN-1154",
+      "fuente": {
+        "archivo": "Lista_de_precios_octubre_2026.pdf",
+        "pagina": 1
+      },
+      "fila": "AN-1154 Dolorex 600mg Ibuprofeno Comprimidos x 20 VBR 7795669252633 $ 337,17",
+      "campos": {
+        "producto": "Dolorex 600mg",
+        "monodroga": "Ibuprofeno",
+        "presentacion": "Comprimidos x 20",
+        "condicion": "VBR",
+        "ean": "7795669252633",
+        "precio": "$ 337,17"
+      },
+      "texto_ajeno": null,
+      "problemas": []
+    },
+    {
+      "codigo": "AN-1157",
+      "fuente": {
+        "archivo": "Lista_de_precios_octubre_2026.pdf",
+        "pagina": 1
+      },
+      "fila": "AN-1157 Tiroxan 50mcg Levotiroxina Comprimidos x 30 VBR 7790003122382 $ 136,62",
+      "campos": {
+        "producto": "Tiroxan 50mcg",
+        "monodroga": "Levotiroxina",
+        "presentacion": "Comprimidos x 30",
+        "condicion": "VBR",
+        "ean": "7790003122382",
+        "precio": "$ 136,62"
+      },
+      "texto_ajeno": null,
+      "problemas": []
+    },
+    {
+      "codigo": "AN-1160",
+      "fuente": {
+        "archivo": "Lista_de_precios_octubre_2026.pdf",
+        "pagina": 1
+      },
+      "fila": "AN-1160 Tiroxan 100 mcg Levotiroxina Comprimidos x 30 VBR 7798193783772 $ 153,10",
+      "campos": {
+        "producto": "Tiroxan 100 mcg",
+        "monodroga": "Levotiroxina",
+        "presentacion": "Comprimidos x 30",
+        "condicion": "VBR",
+        "ean": "7798193783772",
+        "precio": "$ 153,10"
+      },
+      "texto_ajeno": null,
+      "problemas": []
+    },
+    {
+      "codigo": "AN-1163",
+      "fuente": {
+        "archivo": "Lista_de_precios_octubre_2026.pdf",
+        "pagina": 1
+      },
+      "fila": "AN-1163 Diacort 2mg Loperamida Comprimidos x 6 VL 7790559445416 $ 109,38",
+      "campos": {
+        "producto": "Diacort 2mg",
+        "monodroga": "Loperamida",
+        "presentacion": "Comprimidos x 6",
+        "condicion": "VL",
+        "ean": "7790559445416",
+        "precio": "$ 109,38"
+      },
+      "texto_ajeno": null,
+      "problemas": []
+    },
+    {
+      "codigo": "AN-1166",
+      "fuente": {
+        "archivo": "Lista_de_precios_octubre_2026.pdf",
+        "pagina": 1
+      },
+      "fila": "AN-1166 Laxofib 5mg Bisacodilo Comp. x 20 VL 7790468655227 $ 104,41",
+      "campos": {
+        "producto": "Laxofib 5mg",
+        "monodroga": "Bisacodilo",
+        "presentacion": "Comp. x 20",
+        "condicion": "VL",
+        "ean": "7790468655227",
+        "precio": "$ 104,41"
+      },
+      "texto_ajeno": null,
+      "problemas": []
+    },
+    {
+      "codigo": "AN-1169",
+      "fuente": {
+        "archivo": "Lista_de_precios_octubre_2026.pdf",
+        "pagina": 1
+      },
+      "fila": "AN-1169 Cardiopres 10 mg Enalapril Comp. rec. x 30 VBR 7799738361219 $ 144,73",
+      "campos": {
+        "producto": "Cardiopres 10 mg",
+        "monodroga": "Enalapril",
+        "presentacion": "Comp. rec. x 30",
+        "condicion": "VBR",
+        "ean": "7799738361219",
+        "precio": "$ 144,73"
+      },
+      "texto_ajeno": null,
+      "problemas": []
+    },
+    {
+      "codigo": "AN-1172",
+      "fuente": {
+        "archivo": "Lista_de_precios_octubre_2026.pdf",
+        "pagina": 1
+      },
+      "fila": "AN-1172 Tosil 15mg/5ml Dextrometorfano Jbe. x 120 ml VL 7793821086737 $ 213,12",
+      "campos": {
+        "producto": "Tosil 15mg/5ml",
+        "monodroga": "Dextrometorfano",
+        "presentacion": "Jbe. x 120 ml",
+        "condicion": "VL",
+        "ean": "7793821086737",
+        "precio": "$ 213,12"
+      },
+      "texto_ajeno": null,
+      "problemas": []
+    },
+    {
+      "codigo": "AN-1175",
+      "fuente": {
+        "archivo": "Lista_de_precios_octubre_2026.pdf",
+        "pagina": 1
+      },
+      "fila": "AN-1175 Febril 120mg/5ml Paracetamol Jbe. x 100 ml VL 7793831128717 $ 194,57",
+      "campos": {
+        "producto": "Febril 120mg/5ml",
+        "monodroga": "Paracetamol",
+        "presentacion": "Jbe. x 100 ml",
+        "condicion": "VL",
+        "ean": "7793831128717",
+        "precio": "$ 194,57"
+      },
+      "texto_ajeno": null,
+      "problemas": []
+    },
+    {
+      "codigo": "AN-1178",
+      "fuente": {
+        "archivo": "Lista_de_precios_octubre_2026.pdf",
+        "pagina": 1
+      },
+      "fila": "AN-1178 Febril 1g Paracetamol Comp. x 10 VL 7792542521701 $ 120,52",
+      "campos": {
+        "producto": "Febril 1g",
+        "monodroga": "Paracetamol",
+        "presentacion": "Comp. x 10",
+        "condicion": "VL",
+        "ean": "7792542521701",
+        "precio": "$ 120,52"
+      },
+      "texto_ajeno": "Laboratorio Andes S.A. · Lista de precios octubre 2026 Página 1 de 1",
+      "problemas": []
+    }
+  ],
+  "problemas": [],
+  "costo_usd": {
+    "llamada_1": 0.006249,
+    "llamada_2": 0.001626,
+    "total": 0.007876
+  }
+}
