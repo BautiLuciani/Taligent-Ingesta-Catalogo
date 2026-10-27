@@ -131,6 +131,40 @@ def codigos_en_citas(contenido: list[dict]) -> set[str]:
     return codigos
 
 
+# Las columnas de una tabla de productos, en el orden en que aparecen en la fila (después del código)
+CAMPOS_TABLA = ["descripcion", "contenido", "ean", "costo"]
+
+
+def verificar_campos(codigo: str, fila: str, campos: dict) -> tuple[dict, list[str]]:
+    """Verifica los campos que separó Haiku contra la fila verificada del PDF. Dos controles:
+
+    1. Cada campo, por separado (anti-invento): tiene que estar en SU fila. Si no, queda vacío.
+    2. Las partes, juntas y en orden, tienen que formar la fila entera: nada sobra, nada falta.
+       Atrapa lo que el control 1 no ve: una descripción que se "comió" el contenido, o una "X" perdida.
+       Si falla, no se sabe qué campo es el culpable: los campos quedan y el problema se informa.
+    Devuelve (campos_verificados, problemas). Un campo vacío o ausente queda en None.
+    """
+    verificados = {}
+    problemas = []
+    for nombre in CAMPOS_TABLA:
+        valor = campos.get(nombre)
+        valor = normalizar_espacios(valor) if isinstance(valor, str) else None
+        if not valor:
+            verificados[nombre] = None  # el PDF no lo trae (por ejemplo, LHS-275 sin EAN)
+            continue
+        if valor_en_fila(valor, fila):
+            verificados[nombre] = valor
+        else:
+            verificados[nombre] = None
+            problemas.append(f"{codigo}: {nombre}={valor!r} no está en su fila del PDF; queda vacío.")
+
+    # El control 2 solo tiene sentido si el 1 pasó (con un campo vaciado, la fila armada ya no coincide)
+    if not problemas:
+        armada = " ".join([codigo] + [valor for valor in verificados.values() if valor])
+        if armada != fila:
+            problemas.append(f"{codigo}: los campos juntos no forman la fila (sobra o falta algo). "
+                             f"Armada: {armada!r} · fila: {fila!r}.")
+    return verificados, problemas
 
 # --- Llamada 1: Haiku copia la fila de cada producto, con citations prendido ---
 CARPETA_PROYECTO = Path(__file__).parent

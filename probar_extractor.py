@@ -3,7 +3,7 @@ import copy
 import json
 from pathlib import Path
 
-from extractor_pdf import buscar_fila, codigos_en_citas, filas_verificadas, normalizar_espacios, valor_en_fila
+from extractor_pdf import (buscar_fila, codigos_en_citas, filas_verificadas, normalizar_espacios, valor_en_fila, verificar_campos)
 
 RUTA_EXPERIMENTO = Path(__file__).parent / "salida" / "experimentos" / "citas_lhs.json"
 
@@ -95,5 +95,37 @@ chequear("No toma el encabezado ni el pie", {"Descripción", "Las"} & codigos, s
 filas, _ = filas_verificadas(copy.deepcopy(respuesta["content"]))
 chequear("Con el paso 1 (3 pedidos) faltarían 22", len(codigos - set(filas)), 22)
 chequear("Bloque sin cita: no aporta códigos", codigos_en_citas([{"type": "text", "text": "LHS-206", "citations": None}]), set())
+
+print("--- verificar_campos ---")
+FILA_215 = "LHS-215 Limpiador Clarita Multiuso Lavanda X 500 ML 7792189253836 $ 83,84"
+BIEN_206 = {"descripcion": "Lavandina Clarita Concentrada", "contenido": "2000 ML",
+            "ean": "7790840033469", "costo": "$ 88,04"}
+campos, problemas = verificar_campos("LHS-206", FILA_206, BIEN_206)
+chequear("LHS-206 bien separado: quedan los 4", campos, BIEN_206)
+chequear("...sin problemas", problemas, [])
+campos, problemas = verificar_campos("LHS-275", FILA_275, {"descripcion": "Alcohol Clarita 96 %", "contenido": "500 CC",
+                                                           "ean": None, "costo": "$ 117,34"})
+chequear("LHS-275 sin EAN: queda None y la fila cierra igual", (campos["ean"], problemas), (None, []))
+campos, _ = verificar_campos("LHS-275", FILA_275, {"descripcion": "Alcohol Clarita 96 %", "contenido": "500 CC",
+                                                   "ean": "", "costo": "$ 117,34"})
+chequear("EAN vacío \"\" se toma como None", campos["ean"], None)
+campos, problemas = verificar_campos("LHS-215", FILA_215, {"descripcion": "Limpiador Clarita Multiuso Lavanda",
+                                                           "contenido": "X 500 ML", "ean": "7792189253836",
+                                                           "costo": "$ 83,84"})
+chequear("LHS-215 con la X en el contenido: cierra", problemas, [])
+campos, problemas = verificar_campos("LHS-215", FILA_215, {"descripcion": "Limpiador Clarita Multiuso Lavanda",
+                                                           "contenido": "500 ML", "ean": "7792189253836",
+                                                           "costo": "$ 83,84"})
+chequear("LHS-215 con la X perdida: problema (falta algo)", len(problemas), 1)
+campos, problemas = verificar_campos("LHS-206", FILA_206, {**BIEN_206, "descripcion": "Lavandina Clarita Concentrada 2000 ML"})
+chequear("Descripción que se comió el contenido: problema (sobra algo)", len(problemas), 1)
+chequear("...pero los campos no se tiran", campos["descripcion"], "Lavandina Clarita Concentrada 2000 ML")
+campos, problemas = verificar_campos("LHS-206", FILA_206, {**BIEN_206, "costo": "$ 88,40"})
+chequear("Costo inventado: queda vacío", campos["costo"], None)
+chequear("...y es el único problema (el control 2 no se suma)", len(problemas), 1)
+campos, problemas = verificar_campos("LHS-206", FILA_206, {**BIEN_206, "ean": "7794288526675"})
+chequear("EAN de otra fila: queda vacío", (campos["ean"], len(problemas)), (None, 1))
+campos, problemas = verificar_campos("LHS-206", FILA_206, {**BIEN_206, "costo": "$\xa088,04"})
+chequear("Espacio raro en el valor: se normaliza y pasa", (campos["costo"], problemas), ("$ 88,04", []))
 
 print(f"\nResultado: {'todo OK' if errores == 0 else f'{errores} con error'}")
