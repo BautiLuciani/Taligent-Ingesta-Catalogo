@@ -17,6 +17,7 @@ import json
 import os
 import re
 import sys
+import unicodedata
 from pathlib import Path
 
 import anthropic
@@ -138,6 +139,90 @@ def codigos_en_citas(contenido: list[dict]) -> set[str]:
                     codigos.add(primera_palabra)
     return codigos
 
+
+# --- Paso 6B: las filas las arma el CÓDIGO desde el texto citado (sirve para tablas con celdas partidas) ---
+# Paso 6A: en Andes la API corta la tabla en cada punto ("Comp. ", "Caps. ") y ninguna fila entra entera en un
+# pedazo; preguntando por cada producto, Haiku cita varios pedazos seguidos que juntos traen la fila completa.
+
+# Un código de producto al principio de un renglón, aunque venga pegado a la palabra siguiente ("AN-1148Gripanil")
+PATRON_CODIGO_AL_INICIO = re.compile(r"^([A-Z]{2,3}-?\d{3,5})(?!\d)")
+# Un código nombrado en cualquier parte de un texto (para el control de cobertura)
+PATRON_CODIGO_EN_TEXTO = re.compile(r"(?<![A-Za-z0-9])([A-Z]{2,3}-?\d{3,5})(?!\d)")
+
+
+def codigo_al_inicio(renglon: str) -> str | None:
+    """El código con el que empieza un renglón, o None. "AN-1148Gripanil 500 mg" -> "AN-1148" · "VBR 77977..." -> None"""
+    coincidencia = PATRON_CODIGO_AL_INICIO.match(renglon)
+    return coincidencia.group(1) if coincidencia else None
+
+
+def filas_de_un_texto(cited_text: str) -> list[tuple[str, str, bool]]:
+    """Arma las filas que hay en UN texto citado: el renglón del código + los renglones que siguen, hasta el próximo código.
+
+    Devuelve [(codigo, fila, cerrada)]. "cerrada" = la sigue otro código en el mismo texto, así que está completa.
+    La última fila de un texto queda "abierta": puede estar cortada por la cita, o traer pegado un pie de página.
+    Lo que está antes del primer código (el final de la fila anterior, un encabezado) se ignora.
+    Ej.: "AN-1106 Antiacid 400 mg + 400 mg/5\r\nml\r\nSusp. x 200 ml ..." -> "AN-1106 Antiacid 400 mg + 400 mg/5 ml Susp. x 200 ml ..."
+    """
+    renglones = [normalizar_espacios(unicodedata.normalize("NFKC", r)) for r in cited_text.splitlines()]
+    renglones = [r for r in renglones if r]
+    inicios = [i for i, renglon in enumerate(renglones) if codigo_al_inicio(renglon)]
+
+    filas = []
+    for n, inicio in enumerate(inicios):
+        fin = inicios[n + 1] if n + 1 < len(inicios) else len(renglones)
+        codigo = codigo_al_inicio(renglones[inicio])
+        resto = renglones[inicio][len(codigo):].strip()  # sin el código: así "AN-1148Gripanil" queda "AN-1148 Gripanil"
+        fila = normalizar_espacios(" ".join([codigo, resto] + renglones[inicio + 1:fin]))
+        filas.append((codigo, fila, n + 1 < len(inicios)))
+    return filas
+
+
+def sin_espacios(texto: str) -> str:
+    """El texto sin espacios: la API a veces cita el mismo pedazo con espacios distintos ("100mcg" / "100 mcg")."""
+    return texto.replace(" ", "")
+
+
+def filas_desde_citas(contenido: list[dict]) -> tuple[dict[str, dict], list[str]]:
+    """Arma una fila por código con TODOS los textos citados de la respuesta, y controla la cobertura.
+
+    Un código puede aparecer en varias citas (los pedazos se pisan). Se elige así:
+    - Si hay versiones cerradas (completas), se usa una; si dicen cosas distintas (más allá de espacios), no se elige.
+    - Si solo hay abiertas (la última fila de la tabla), se usa la más larga.
+    - Toda versión cortada tiene que ser el principio de la elegida; y todas, de la misma página. Si no, no se elige.
+    Cobertura: un código que Haiku nombró en su respuesta y que no quedó con fila es un problema (no desaparece).
+    Devuelve (filas, problemas): filas = {codigo: {"codigo", "pagina", "fila", "cerrada"}}. La página la da la API.
+    """
+    versiones = {}  # codigo -> todas las versiones de su fila, de todas las citas, en el orden en que aparecen
+    for bloque in contenido:
+        if bloque.get("type") != "text" or not bloque.get("citations"):
+            continue
+        for cita in bloque["citations"]:
+            for codigo, fila, cerrada in filas_de_un_texto(cita["cited_text"]):
+                versiones.setdefault(codigo, []).append(
+                    {"fila": fila, "cerrada": cerrada, "pagina": cita["start_page_number"]})
+
+    filas, problemas = {}, []
+    for codigo, opciones in versiones.items():
+        cerradas = [v for v in opciones if v["cerrada"]]
+        if cerradas and len({sin_espacios(v["fila"]) for v in cerradas}) > 1:
+            problemas.append(f"{codigo}: el texto citado trae dos versiones distintas de su fila: no se elige una.")
+            continue
+        elegida = cerradas[0] if cerradas else max(opciones, key=lambda v: len(sin_espacios(v["fila"])))
+        if any(not sin_espacios(elegida["fila"]).startswith(sin_espacios(v["fila"])) for v in opciones):
+            problemas.append(f"{codigo}: una versión cortada de su fila no coincide con la completa: no se elige.")
+            continue
+        if len({v["pagina"] for v in opciones}) > 1:
+            problemas.append(f"{codigo}: aparece citado en páginas distintas: no se elige una.")
+            continue
+        filas[codigo] = {"codigo": codigo, "pagina": elegida["pagina"], "fila": elegida["fila"],
+                         "cerrada": elegida["cerrada"]}
+
+    # Cobertura: lo que Haiku nombró (en cualquier bloque de texto) tiene que haber quedado con fila o con problema
+    nombrados = {c for b in contenido if b.get("type") == "text" for c in PATRON_CODIGO_EN_TEXTO.findall(b["text"])}
+    for codigo in sorted(nombrados - set(filas) - set(versiones)):
+        problemas.append(f"{codigo}: Haiku lo nombró pero no aparece en ningún texto citado.")
+    return filas, problemas
 
 # Las columnas de una tabla de productos, en el orden en que aparecen en la fila (después del código)
 CAMPOS_TABLA = ["descripcion", "contenido", "ean", "costo"]

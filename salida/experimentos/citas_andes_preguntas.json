@@ -1,0 +1,575 @@
+{
+  "id": "msg_011CgTaGdVRLgKroZSk5yX9T",
+  "container": null,
+  "content": [
+    {
+      "signature": "CAQS24oBChAIExgCOAFCCHRoaW5raW5nEgzpbLKYDWRBGMm7bf8aDPGoEwV/6zsgFGsQiyIw6133C2aC6110Z5kxTwZqOAp2Gra6vl1eAb1uyNohgB50+spJYTDGqet8zvxwjUfaKveJAald8XrO4wFth6qbbYmWCD1WoE3WgRqnr3wWBtPESj+zLxAibbjja7NF8Cy7OIjBFCDDJAtaR7zk3bVJPww/DaAJiyG8Xi7g5sccXsQgjP23rUIck/OJZuICKpx0pglIMqt0NEO8ew70S06snGc22BjKAntiht7hu33xZs3gZQFu3sVX/i54HieJ2y5/xA6sgyActoQLeD9qlckusoLHJ0IOBUDw3KfZqsknDKUxe9Gc9+qpVj8Ew3amxnq3Mc8u5o+O14qXpL/MbCzln0+8+gbebbXiwYMO+C18P8Y1ru7s/LeVvgZ1XLWCgrhvG+0ElKaP5Tfbd9jgiaKMUfhe1fVX98BQk2AHfrzmtkd3yHpkAim7Bpo4U0ICRSCZC4GD5+B4aIPtsR1rVwRirxgjwVfGeiVFLc1iSzgaZks22i/dlRVqDmzOGmDASRhdB4b+VrjY7lU46t7Uq5/n5ghXzQ9MRhkjN+iqf01XVzU8bZSfgVXMxMxcrlYKU5lt+vaMSZj+tKrPy4agQ34XQWPCRyqqqnsQHM4QD63gYlR5n9Rpbjs4Ry4JjMzO52/6M4JG7RsMjV0R/uPO5oHO0+pDJMPvvuM9nNAGpZgw8V4fYKUbAVdedB6Rlg4haenEVKKV2/4aCDWbelPmPbVIPHcPscBIGbU7tveDVHOl9mGcUL5JF4z8jUnN9az6VVj5inmHL/l/Nxtv6jlVvVZamuXZ+8qw3S3QYawbP52V12D98khIJiPdkzaSYgRHWzgXaT4k6mTvSyB5aSdf4XZda0hqo6fI1nR+AFwOiRVz/Gnb/xzWoKUWT1f5+SPRhCALM+eHEKAKRkDg9RltSI84frNefjMeQTNW61W+m0LY9DXf7enZld77LsM2IaE9aWpolonCELjCWY7hozz6IGixiUaAdWTvmxufi34rQMBdDREHudukgm3HfDKuB9AmKoAHe2dw9hmkpPnTQgoVr0DksBa8aMpCWg7w4MezvYOehdodfcCrKM+J+sQqTF/Gk20aUgnuy42dnfWRJFcklo7Az/ZC3Mh+hSC0/9WwRmBmzvbJH6m0qAdTtJ52OYNaVACR7O5wfkagY+/K2WmrdZUeNvbbocAJHJY+EQI6OrY+6C9v924vrOCf3+VZdk76pAIu+BI8lwSD09H/t57DeyR7mxmjQMNe2krZ8v2jYauBmMWC/ujCBVBquuK4tGtsdB2a1VEME/HWiersuNiIUoEKHpu0zBdore03jiL0WS+MNjZcdKtQoE+A1TZCgAmP02szFPq80SuB30x7663BEn9rMQQl8Z5oghdbKh3rR/mz56xFJN4eQ6ExWWKsG3dE3EuFj6lGGuwZ8HoNZrDAHq8oWIA9+N8rTJ2DluGAYJTiMBT2y9GR/Jb2f2WzpWD9BjgupyzmZTv1udwTSjgY0MZ2xoPYbB1YneERT2aD3O89N0yOXAPN5D8guRbExnzqoQRhrvIOd58C0s3LE18GxP86yufF7B0A08DiGv8OYvyw+7dXxO6JLnhHQHlrb0WKpW18BPStvyORIxIgXGOEyPUjsIASr0GyP/lEsb8qOJanyRixqRQ8K+j3JaelWPqX1OCYm6gjXFMPGiIJoSZ5M4D/leYgPFhCwWbkAgnEAYYTmRBnZBi1tjgLYo/QnNhgY9zbxZv4Hrb+0iouFTMKwhYJczaPoSWfuaiMLBgiwXXxL1zzguXjE6qR2qANaP6K8INMQ5UCi48BzFB04HmHTlR4nYY+qGHYyz7I0SKerPnBsKkC77kLTDrc61ZGdxjoASBYFMBaXqYDAmxFggdS8QQ5P6lMoSbyRBITpUaawzEcWt+bYRw7GhCHcwykcx/ks/cwo77EkuVzB6MD6gCGIA2JBHA4lF1AVaMXryG/JHlDKC3YTVkh97eAzMfAHTVFX/v0mYmewFWtz6pc9MywnFAM+qmZndefRXFVMM8EqAFQA+bPzDt95jc/+frAaEfPigp7a0NlnB4fIbEFhBD2E8eRk08sQrmfz2SHHiZPGi6cWt8gbdo6exYgpBK4jrAge1YVUzQXSPVIFJh65iFZyV/YrVDcHcFewHSKXnqxXI18FP36tp5TYkqdPTtZuCDUJPMJBz6y9pebIzTxrJbhdEA4dlsnuVbRMGpSLKK1QK/RG44T4E7c6v4E8Z9Q5CgubO7E/gn7UldvX2nERhJ2zkJGrR5bsrzW2YqjWlwewvfwEYaYjsTOqcnNTicASzgAkijxfXeejeC8PcALERQXib8nSvwbfQZkoWjI5OrUzF6jEnTtK05C2Ys8kMK9+zvZH7MrEZL3/Ru0XozMINlcTARWKbuZ+XtDaOWzeToGYhTZhAiazqmiTj2p+OFyTo8UzzW5j2T/0Kjdmyh/mk91fGiPG0ZSfjiofEOZbYxskX3LVSx+bI6sKZYQb5Xmbe9IVx+6E35p09e4xuYbgmUOIUmGzUY88EC+F2X0ryhOBOk06kXM3s6iWhK4/N1xlM5IkvAiWAMxi2L2x8esxHDN33w7LZkuo37uAVd7dKS9Wv0bJnwNJR7VIwzx8OKu8DAX4rFOC8NAvyxUBcv3Q9hV6SxvFdDO1Kspev/RLU95X8haC71xLqOd5TWg4eeDYXs3ROaUox94J9UrtqRLzfrs0NN9aVQatmLhFuYAQb1W+b4vqq52EGsYyeHkZFoL5S/7P2adaDt/3kLeg+c3LgPw1gbfnom7sa5kPcmyRSKQtYjaN3NtCuViYtpVoDlsmmGpxghOD/8DrcGqMQKayuTIuPvdfTNRHEqF77PrH2Z4YEtoO4pMvwss2UGfEXIRzMW36qlB+QX8TcXXAL6WBjwli0xGCkYli7CqhVC3UT/JzoNUDSDEiFfJSum1Va6yAJUoA04sd6yYyI7D5j3tUxHRvR5+VgSaqDzxof1a/38l8mkcwkMq5dZ95XhaocHSjjBZVXpGFOPySKH235ksHJlm0NO/HpYmeiT48i7iEcgzFm8ZQ2NWfK1Smggyomi5Ns8DSkSo61ymyciaM0O6SOFrdyYFfG4F9K7rti9OgB8o+nAotQi6oV+JUy7DvXMA2G79kNSnxltrWHC9cMD6u/E64cBDQBUQc0yfeeB3P/g4QQgWlM3JkXMeloiskPIVQWBgMpzGxvwtGpM6b6xQ95Zk/HjoWgTHnaAPSnWdMEHG1ZcHembTrFFcdwkzMKUkPig9K6sIMhp9pkcdWuBeZzgsnsOpT+kxKEv3N6r342zynYmsMX1+LkMIewy55xAjor3b8D/01Z/8mbfreOzd5H1eu9/JILqa2P4KyU8NfQofPJV0GdEoL5rRPLMqvKSEs+0pizCRefTHhlqDPs3GAPKbjUom9O2Ii//c8v59U3gTlbYz9MlRfSQSFydtpmvq6NBm0z5rUTHEZkxrmh00D8S13TqCOnQ6K4L8rZ/IdFAlE3XG2OYC8J8sNS+mZvq/olZa6Yv5ZaUtVugt2JmGk6GLVlO40VelQcWwVsbbcMBn2aKzDUOmoHJO/sEocHDzZ21it+W7/101F/79DVrrCVzFjdl1hryNY/RmziYNHs8Hm9sqEE6H43cmhj/z8QffUj+Dq9CM8DYAwS1yp6w3ZPAcEQsvLcZcr6FkothUuTLwyLQga81SN/r7pmcYdV1t2ZKTVeEcnqfMHhKpHSiN1Sw1IMH4K0FkiHRRmLTSn9o7QZD7dj26onfaVDeJ3faeU8rbpqdDBEi6P7v1WibTTmN8raHV9L5pBbynCEEevTRyRpH8ZWo4DNjJJlunzlmnpYaYOcEuE4ABlkNGghJHxb07PUBsqFco5MPKGHDMjo7w9PO3seb9obS6TFy1CoPRXbgBHQ5R6rY+pI2ksgZcbe1xr3oz6xfXOupir6/1cFCvhO1O9E/bwLVzTNCTJn9nw46c1PhlPRbyxIc5gIepIhrE/L+w2yl4e5lvfRNQt5R14bLBWu+t6VfQGUeOjC6844S2zNvrcLvAmv+z/NO/e6rY7/6Qtt+RqGC3U7H0JhjSWcO03c0Y9rW85QikpUX0llxOXEvePY5/OZU8sfy0A8pumkYNOZEY7yAYZra+cNyUkc/gK7EJwDeNkiIWYPvvsLOcIXOVgpctjCuww49CI0uLxCCy+3stwMiQbnH7BL+1gjj+Ucqd6kDnZDFMlwFp12Luh6KUWEeo66C8OJmlZ1S5usqZcgIGg82peFwgpbNQMa/GV3EiL/eizfTzX9qf+Mef4688WSoWbnKxgkJcRuJzyPvIWE9TBm/CcKrYiucNPSHk/6g8Vt51Lx5tSFf1tqkpanj/1BmbXhWoh/hyj5NgtBdvDEnYnmE6oMMzvUSsAVj4aGhiCy2PBMDpQs3wplakujMYiWeVj9XgUrCL2Xpv7Hlmk8w189Xmc7+kq2GlLMxr9nWPPYSvnwoCQYq/F82L5W5SEfcmwb+790oVM83DiFzecwK9LDXp3G3FfdvmYsrlS9z2nOegdZXvPSy4LWmLSgVe9yZdpBCa9nfI7hGFAChV0wmqh5pIYg0Bs7ydCXSwpP6VI8X8HwhEBt/diFX54z6W3ooYH+8O/kmnH+RrCaq242zXLlueT9c1DKDWQ8mIBsPDcLumiRT9Q6OMUfDcyPtIrrz58c/CQ1T2oT8EkAI6N+mfDrfQxXVV9khnxcIbcqwHhhIXSmfiDn1oM8U4ie1i1HiTXKU9NKCvhnHZKCW/kg0/FPzQPVlwfKTPvXFqlyh1oFF8WB8sjf8jnuhTwjOAqfHFGxQpfNXvrHjrFHUlifKyTYIW21Xwxo53KGflAWhzXJVn3mKMEmLY+FvqXJz6KlyfF8sNlLKQ+D6AgB4srnTi5dvYbdGxjEyRjHk0+7lLNjgE+2S2taiWf6dX6WIq5smWuiaPeJkCpp74rGUaHRojLJkAusCe6Tj0cDVQbVAkvkuAcToCCzFj33XPkWzA47VgkKEaIxhq2zhClb2Iw96Vlq21CnGFv6tPLa5sD/ykFmpQyW+KctBRi7ikIVWjesSp9wOWZu6aHoQEmCSEgtueDyl7HMjZu4G8S/qpJjPkzv56S7U7MHi4Zf136Z0dacQPCkJAuhq/VKiHrCCTrrr3IImR20S5ZBtsLKDoQDLCO3g6k5ixd8XReJnHlufmSMXisYnvxCHFjUk3fW9j38A7pG0sUgn8L2UMQ/1qUng/z8YG8GltIXxm8qSsDnGj/Jg1aEAl4VQNMZ/D9nbiLuuy7ZqfaTiSd7jACt+b88XWLB3yrK21z6xNs2V7YNf1fGWG6xI0Z7l6Oy1FO+lm2HQAgLvxZ5fWHymYkx1IhzYfyPQXsgECOMyCzOWjrZnm7tAb4PhhbsC2SaXUehFJwB001u4c4L5f7Q/RjLdkJ5pM2qYHkhB6zR3sQxEKCGPXA5pErja9abm545CMWAzySj1TDvqz6lKGpbY/uNOK1YR3rh99H3LXCED3f5Vv4MHCK+ZFWAnyLTuHSw6Oad08YFLF11ngs0WVgA4TwDAlTSBNOC0jdwesFwrSgfpSkSPLLfJ4d06Mm69ZYV4dU6ciY72UgIkiOwmkO61tEwznutZma/kB2eAJn5oD4YvM3V6leE27S5/wh8qYjFUEpxz8bhIdvl/SZV3OhGMmoqPWuNIvv4+dtE55Ha/jO0YSBPqhlk9RbvalIcctfYxQcWpsrsxXG/KAN1WDGKwPYa2lu4H9l610xXeYTk2R1ndddYXPQwUYcC9PAmlPbA6qVZn8Y6GsNbrs7ZPvY/4OA4IcIqVF/q12W4L/+U53WYa2kgL1N5yCnvh6vaKA+4HXIMp3AmEQ0X/alNWHK5wv6SulRYGekDCvpCpcDfNTp8gXu/se2ol/9NtLlo1OH60c9NY3FhloIEz7wVMrEUY4L3fBcBbayOGDseyRZHPchkb3vCGoaDj14rpxKOqzl0Ox5U1UXxoxr5tlNho8rTgjI2E91+OUIb7LL2ezI3ZJ9PHQHg5HGkKC0inlM1WI3Fn+njggyzctkYPus6O9GRThSRYrIR4vBMM1DuMz5v+/nLXSqIJVre8fG/uvgN6gc2aYH3/RAg7auRGBFlJHjGXg+IWS0hIpRgB8q8xK/Guil3FPp34oTk949isvUMW9i0YgJmsFs8BaMtD5TRdcOFynSdtF5kDNVoP38Y10n47xkj3FU+wwzrHU7/JyAcgKoW7O/L29aP8eYe/bftLUoczIHJSPqZiht2lHp8ut7D14XFvswk03ZUx0GGhgi9nAffFeljg0mGnG6NI3Nv9XrFJejVhonUUxlLXCjwWkV1DYHsZxx+feyZ1XSlYiCBQ/YrXSEMdFNmnlGy0jBw6YKFhW3QFVnbTyPLaVypkobnW7SuoPtoDlCU9rCb6L3nHiFblSd4GsFUyqYaxNgKXY6d/mUNke85M8bZ6lIKUG+gyKMKC5po+lm8G4YUlV+GUdNBaiW+X/sIPgPdUs1L+L9SZZBd3DEMdUpclPmTGAKclD3WfDgsgq99GomYr9KPt8gFTZX08XWdnpUw0gATp3KKjGeHFv19GoXslOv20aX9+aiR8oydvs/Nt6dcfAF1R9e2as4IQyNE1MdQ25vCaEQQOEVhtXglHbwnel0zO7rJ4dFSbFQBehV8ghg4sTq5HCAnaCuTJhVZBczLhUC+n5hSvR8JOBRMKGOuBRZQjI2iAv5qE3M8g6mJ18iSvq4T8UsLAf5OFaSdP0/v+9HSx9cSF6rruxGnFyM0iHjahR6/DX9BniqmZvALFf0H8DUf9JLLsHx0Cqd2tcnMbqWKn4p/tIK3rD8tyg2wpDdJGLWp3NY2wUxYo+/JTGoKM0jmuhxp+kgf9lLfYWHAdRznwkTAHMQksGLRGkF3tCkGK9a3wDF9xtd9zDmxEZl/VBElXR02roG1Pl+BGCI47XZ3f0G7gOABT4chx0R/pMtJsHbQfgUXBzH3gH7TVCBISXx0u6qHpT35UiCXdsiu4eTIgbm+YL+kRNL4BVDM+BP/Yzoc3/xCZ8Ox/NagFOcsTwqDMBOIfy/fAYARf9xYe8Lxgn3QxSfThqPbLPMr5XKDYktnKVMr6URBDY9si1vSrbOsMYictgGgBrizZyuGkB+O1m2m02p6PAuysf+zf2+q2bjLPpOFY3qlP06hDHBXEeF9VUkZqYpArSfNJ1mlpDgjhXMpHeTYtN6RrQMRRxA3M0pPo+dF7RHqd69cwiN45G0esihEZVjpJAyY4RFfa2NIah4LUXnIWJYhNd3ohfBiBCuqstLawnYxg6c2ngALX7NnfQogtqlfiuL9OjjUlBUIyWNcrdLmP0jvhwTw4e1hK6VNnC8QDS5f4tx9mTVKvGi5caGrElObHgEzF9LNZtoekZvHyUVfnUv5QtwrxPopnB3ESng4HSBR+UNXLAEHS+3C7MQ3s3aFiQ2HoGlQBrMrBZmIkhQyQOljpPMtnaT7XscwAbNQYhbrEux/DeYoQgSNpRIrVS2B7YgQfmJyHhW2k+d4lCCbitHgnB4FLLBlsS3giy/RofaQMJ9ZPkBnR48m2ENiYZ4OCIE712Nr/so/V81uEztg8g+kMV1dT3+8T+ZXlFwz4qSHQvz8M36qZO1m3Gs5Sn3ixMeJgsedsWmp2lEenAm6N7I41zktYxrg7zQTR5cfepBhCliaFYOVbiRj6EYO6+fYIbrxkibQpzxSKzucXkNF798OVc9wHK2td5GDDxfD8pnNbx/xGihv/jJlqeKDBddADJBZCURCzXseqTQcsqStu2FmnGDjOgHS0GKsOjIk9WUR4/W2zlVOGk6Dku9n0wlMuLZW1mFMSeyUr5Bn6x0f9Nnhq2KeZ4uENHe8TYfNXDSE4lyItwtHe2aZS5FNesMtMtjN+6INEMA5DH/Ww6uoVS6Rt6C3okPH2XgTLvBzw8xxoxlzX60StlW9YDxdTheq9tTpVe4cKIqUidXk18Z31fjTv6V6XneKGDEd27Dp9L12vysT2Ieo5czaMjxuWICeOZbD69Wy9J/xmMAOcSfZbUtCiKKqXUiDnNyf9pMVn9b7IgeYzGjNUm9uyJRNRiG+F8X+eu8sWFMc8uXPZGHFCCMx8a6MxQsNloEq7Jnan+7l2ZnXYQB+zEHYqRV5jO+tZvCHSsmzVtu56CKGPZtFUEpb+5XbA/oZNvPzIJQQvn51Y39XTPKGi88pyN3Dxrd05luMUaMJihEr/wSUtnHlvZ6p0SFrc/vFjQdS3RsRtJR4YKJrlis3eLVkn+E1+f3nF6rl3bXNwj0zuiqnx4D2Hg0KpC/04uv+IKcgSBzQ1iBXfNL/NF+vYuZxPKR6q0BCzoPgQfEvo/3LB8jmdiugNfeqJZ5zSVjy1ctQu5m9AEoL0ZBP3WIQaltOr69iCcCr3ym4BnQMXIu9zKJefzH8iwDdMSfeb4VUyzLeQXg8nDHWtVZn+oqYFSoRaQGZyeMWmzKLnd23m+u81XN8Q2ccTl7KVPG5UZ6IsJyLwSX5m2DFU11cLjZon24Tpi4pMvZp8Oa1EfDY4ihTb0aO2ycGUY7kxsiK1Y3v7+RsEK+WaFkaMj2S+CuQVkK0FOY4HDXxOp0xdGz0t58uy51ymCQYBhB5d7kgCrTuIqBYRRyh7r5TVmJOKaoVNfijB2M8OwvJL64vxF+nQqceleOQaE28ac1HQqQv39wMVBk7MwfAYbZgLcZCXVPNOMeCWw/WDhMtDtU5Kbh9s0z5WdsGOD3vK7btOO5Y8PEp1dUw+lsaWjbwZGM3a00CpqhwEIsE0JmDllp7vzGxAGeA+HwdZHeOWrYnoYJcV3iNlFGxGFkZbWTLIGTMpYkkAEQwGPFVScR7KDC24zVJxJ5hwFw77hYeujnJnAfFsUx4Lx3skBCihDcNs9nt5V4YEmfmqinvqBqiU/jakXJbF1j2qBblT4kC6vkYdXUi9c1MVMKeKcQBrwrJY1NztDFL4SPX5dIBl4kyQ2McfWgOKlYDlswXd1iZNrzarsDLuOMgjNxj3Z3SVdrcrRqwcU7x8+uMiLdD+CKahpNeDAy+B0H6KltgMhKX2B0JhUxAk8r1AaFBsWEBiR2AzPshgqOkOFGsbmSMcHd38FHrMozy/AF5IsRojCsFzZkyv+iMxb7/MjkdP+JxJOWnCcVIA2n9ZfR9VFckHIyphVmvyJl0KMsRXxMGqHiRLN/iylVO4d5EzAGBtf763MT4uw8XXG81QHQxVM9Fo8JAAOoQ2n+kzGcX66CygwEjZ3DuqzKF5qq/oKr34ikfHwfTFU67k1IeJcC8nu7w0IHPjXAaC6tl4srgTxMuETPXpl6SiXvN2vhxg6dVUXmfijESm58HzeluNiq+suaEHJRCyX2dngx9y3pumw+5nx1oofMpxLjg9nKM7k47hejJtInjspbFDo/HTEtHtgteoYVFLaW3jE/848RLKXMjS01cUeaTpXX3jjnh2OPldDqR+tF672qtW0k61omXtOEgNZ9kJ6JsFtsBBResCbSgUGMt8nbMKY0kj73CLQ9sUW+SgbtzvpYt7eT7UcF/q/D8DLoED748BvhVbI8AciINxHh7OKf4SNyCrRNfDOBRYdiZ7SbQGAeWFCMWs4uwr1zaiJ2OA4zvShzE1Fju7PobHJJK6y/TLhrYdKlEY4QlUieyHSyRPkryRz/BwXVnrn3R0tmM52HpIsQA2CpQ0oiTkm08g1BH5gVpDFWH8i2NqiywijSgcFw8DHJ6yFL6IIy26bEKcZBnIB/3qKjfS4kiSisbWFVMzdbEbmrVOlEx1joLbavz49/1LbVL3U7o1wJ8iI0lABCyPFrrYU3TzKzy0eECPnrBCqE0IlZzdPWVhaL2sIy7PejFNqomI0Q5YG9qhGgH2tJCCz1bL3+tGWcJ/Ds1B4/D3bQzvskfJO+/qeeq/VgXgCsxQcWS54ME1SRAr9BoychM398kJnxu80exFmpcjCr1a1KN+sSRg5LmYn+QX2RL+Ca68rM8tfA/yi7Mivbx9o/jYIpUbX8ESL2rPzVVMZCCap5paQsBbuVJY7pVO0pmJsiAC/vguvH3hhwmUpZ2zWPW4QCTQyAVDl3UrXgY5thR8wfHVJYJF6ch5GzLbQT9bX2jYKkWI/CrZH+R2sVi4aMALgp51vkb0L/KSbMVuU99/El0wyb0aq9nQhXMtpGFYM6/JVKBAu4rZmQ486EzopcmWL70cEvMRtYzDvMhzzwN7ObskXZlMxZtOwMDLhkW+N+zhb/u+roLoxBs7EmV9UixtfVs1v/COKf5XIn6xgZMN3cALHYVRz/97TCrL/o/NeJ9iukzw3IELeo/kHrqSQZ4i6cgqPDKdebmqC/cD/5am2jcJVHAJJ2Y1KAw2LjuY7wRsyrEee2rQL0BXAIUxhn5nspWy0Z6yVyAAYFPR2xiyL+ol6ggo5GHgDclXgMZec76r2I6zMz9g08F7+eUaU/85D5S2wX40e5skr6XCCHXsiellrFFNPIxwem2PZooH1x8MsZh31iKYWso2teSDldagC/CS6ilu+iwuAppAORLc4Z3FeUIRwHaZFCCsO5I7BuQ42IrY16Xu9p1EA2xL++lBbTMZ0Vr3XK/ewgU0TJa0ARlUnI7b/jLKXM5MPquThDKM5IvFFEu1x1qgmT7Jn4T5yK4jwmcWQrEiq2kOwsA+shS887LIg+0XChu0LPqG95g15xk1mdpydajf0sKigpmzAV33O/jY7SBdpa4+NsX7PmZMo9jILQ5CEczVy5laCYrumhIRufj5XpDfTxEcW/QTwb5ltKqwVjbyMY31N+qbmMryoib5vER/nV3YrZOggGrn8NCuzshbgR6e9SoEi9n2zw7+ylCYNY2ZiuNXkrGVc/Fx/rLPw3tDa/UNwyc9nqaA0oMhQ7mDUI5Hv2fzlVzFMx803mcjohDPJK1vQB6dQ1SEjLLf5jPNYDk/mUe0vvbOgJprydWr789ZD1G7ynyrCP1Zz4nGJcExxwkZXmV1hSsbvjmGqnfkJN7rW3PFnLy44yUtBxBWrfGDTXnAEQMA+CuUr85Cwtc5TKrimJmSkISVILGQhqyPhpqfJk7dIGxFZhXHHX/Y7bysPeSHQuuNDh3/aqM9s+33HkJvEyycLsJHSAyB4sZQCX4K9BXudiaQgF0btih2u7rUrpLAQTnNL+hKrAMfJyxtAQJ9Dsh2bDLR76JElze8rQ77d5WwcMAuL4GD5ErW9H4/5/I+6UwWjtUK1GPbyrDONgFyIPLFkTy4VyKAlkVmTqUwI0+mQvXDOq3mAlZ5Ycb5v5d1noRHIkkCMshoAJdVfrl+BCF6dX0jZRbuh+j+bGn9/0GLdYsxY64CHJfO7z/Uc3Xw/aiTedUB5+mBfA7tEYrz2kMP80nWp0AQAfYqb+IQAP05YbCLBriSiT4BxBVHO3STRMYqJpquGC0GQiKhnWzeUOV4abze6ocJBp78pz+JY4dvrhg2T6N5CtVaRBynyFhdo4qh/VMefkd0E6zAl8o2kBV6GbkybYk+Ohwrnx8uxcOJZxk3D6cyPBcowePVkth7noZVV2oDvwEjmJG8p0NoDYLlvdnWw1JcUIlyPq5FIt9m20PqIJCdwlAhh7B8/P21PIzOzgGyWUccmgi8mzk/KUT97YyH1q849hthPBcI9Rq3hrFtXR9yw7nLuf43LqsFSbLShaQRkvxl1ZDQy/vJ4wP9SrxLJVcVUZWrLap2B0OHE7pwKsiJj0OpYYNNb9Hp+m+tJHl0eNZYsrBeGwwU5RSht5B0/qSgVZmTlI77IA8GxYdKT1G4E0kSOxQYP3pQcg0zcD7fcDKm+3MIOFPoTdgiDIgFQ4TQOImtgEMJDRW9q1t8gbPueLnvKYKJgMZvcJFoGrxS1jEfAOFvQsMW+7W6NDQR/O/ZBQICfUJUjF1DpVwVu7czVPSdYD96/B090yDlQnmNhazGaTK+AV/oCjjzx79ofCZwCIKejKj8DRfe8YpU2CFJxErvxDEepdx3OhABI4lVhCOA+pMyZVQw+h/X9pRWeRHeuYv8E6ePVva7Ezdm0QS9s1gu2cWMle79gUFphdob8ceCO5Rh9ANsXrFykmNgwwBYH4a4dj4TFGK7Uk1yYVu13b86MxzlSCiik0U/q2Uxw2r7/RWC8u2CdILcEdmYMuHXs8Eiw/VdvfB6LWEB3wnSWj86mPl3+A8vTd5G/hj+PJeQnO2NQqcE64lut+w01kqFILjvQe3EMVLYZ6C1N0og2kyjXNjcxQ6oo8TkD2JJaaiaGqP43KBrTUzfXCmadX90rICJUCT6UVMYxruBJmSIdBK5s596XfPm+tn7hGCoXiDpIyAfEMHfNzizEVCYE7bjXuqH7iRBw7y4jA/koVRyHQp8LhKlItmZ+JiKPNYfYZKkAYc8d+Z3Mm8cdUoEbGBreGDzGz0bAmND3hmUW36ma65H6K2YHGS1kYU3/c6OQidcx5gVKnHlWXp/9/9KcHX//WzzmivKQeW6BGCQcYYfWww/vd81/sc0JGaVSyktIxB1E7s2uUJ6UoHLGJtG9nBWiNQj2uDZPPZAduRgO75uNHpcovCb/WI9hWx5ZyNe5iJYqhnJN6FECfF3YCeZrx0atzz9AF7X7W1Xa/6iZq64MbraEyr4qoqr5RzmNvAOrbpZC0b/XznRexQr8NKdNicJomwkfctTz45R9T9F1DBl/1YI/puPwYXHsZP+DmYQsso1vPGb+rcdKJ225k887vJSWXmCDFhqGOpcf5aQTj1Q2Q+KnsEEly+sy16UZJ17fUK5om43boJ/R0JE8zr4xqPTI6JxQbMlWZfXxvvEEn6ip2XFX6jQ25g2JIHPhTD6HsOn6ydQNwQIpf3+FLMOip9Nu0ou8cXBARCp23HYMF6fznhLMZJ2cW10NIILhHSYS121zFjWSyP6kM9ycyLA6VVelG3LIARtpX9HuusSgFmb23QAWaAct+h2ddggrUKFApxTG6DJfciXKPR2PRp5T+odi+dqlES01uYoeeMYMC3+RTdA7sqxhZ9QQn4oCHXyfYrfY5QcZ9HMRESTOHznQIzAR4/atGcYbw3nCAvZh+v9LxPCPsT7hXDSpM9WDpd/5yBZ1xsP0oLKqDIBw7x3qCqV6F/5Y6VKUj/5O8HTXYAQ8iSrRNY6EDykIEgYpkqgiBEWz6Ijv4ddUxjTFdG8+MU1hIuLAPOzekXWHM2gwYaKyFTs0rBOzcoT7uKWaKn9UFv7wd+W3TcxDum0601oNjm3Hq1LuckuUZqGegxdtbUveaTp/aIXysiPyjkM1V8ctrAHDPVnQTDd1muGfSSMRU49voTkoE6F/Zqqmwz7FvN0WI7xdUhNzZc07d0C22iaw1qH1+YJzMdlUqsFGzLKrzx5pyiyozgZGd2BTtf17/KZAgoNEKIbeNgkyTmF/+Ui+/eoTiyIRC8sKN4klQos3s7fZ5KS2qQmX96oaaQwnGLmyUpCOyk8NE47D8eMB7NjwNiV7aLxycf74KzzNCDer7GEFY7dWwJEaXxvOuXWWwnvX4Kvv6ID7gr4fbJ1gRIfKJiGQL7cb30uCGoY90d1TFrJe6/Oj/5bgFQFSM1GyahkDHM6ami1MC3UYuoYbGdmylTfyXup4x3sTrT09BaeBd41TrK7XwqT5Iu5nGafdNkfaK/8tF7MuRNYrJ6n7MCK+TRwtroSSHDBVuK7ZTmlRKC2du1mrOFTAWN3qagEHGaDXlPKkerG97ms+JqBdD+QCZbXQgvQlEsrVwHbK1HZNQjwwvdpOV1Z2kJAjyAqYDyIQvT16LVbtIQrq4IByO1KTod9TcpI4ZnPoW5H0CvqsOcOTR9hITM6E+gmyc+fPkSQJki7oCkmoOOXQQGSV0hjya+m7lBexMqoWUqggJCLO0mydRXJPreef8hAsy4MDsB0EZYK4uzMiib1JLgRtM/RrSN0SowgqAA+IZLYn/xUSN2emC9QFFIFWLrlPNubWAsLenaaUk53BJ2J/AJqRihr9cJQL/wi43YIWK3irm95pje4WI8hS9hB24NJ8KTX5OvLk/Ofdpe9LvTB70vNxSw4/vZaBjXI/bEiLv00z9VGKxDIf7Kg/8WUygbBBfBaVqcM0dd9qvHIv4MOBuHPQGdAJjNu6vNKaTbRbETn+fz0/IwNXOxQ0U7J+bx9D/PjCB2xa5wru4xMOO6t6+ay34JtHxsYsXNbNEMI1F/H+09/ACiU/DTPStBlUq4Xy2QJflZHf403FdzJep8yZ/TBSqw7F7YSumN3dAVleisWGxXXZqHtPR6sx/sOJP+/fUjYjuELVqgbekkIyDlCdzICStMkjBWxJZy1XcVByiNaXy8TQwwqJgcQDM9quDMRVyr5+SVXaiejVo2ryjShCpZtDPBntp3tiBMlXC1w9UxpRdMUqK+Djp1kH47Xxb0GXe1NLC7UzZUtag/HoJs266QNGG4FRlnRx4Fo2lw7NgOjZIKFGitUH6nivnHYOfXs36DNMXm3MFNMhMtjRotepF44ovH5muWAfCpwdtiH3Zj/1J8roFlYj2siDrofg39vHCV24awO4zNk/tgeaQb0kccURGQURX6KTWGd8+DQpe79IZ11A2wOhaGi4TiaBzHVg3L0srALIaL5YOHakHH3HbaCIpdaLfQv3FlcMMq7iGPQSkjymegZAR66lVX2nYXEtqOF2iOCdKvMxTfFhCkfAtaAoxzLNY4yOUWJT27LqBCJrVThbiVhytEJC3W7zIUeuTyeN3zZgXt2TRKSjgmRH88luDod5ty8wTAflprJOUXjbbcLY3/KUjdDV3Tes7ONdllNFxmMXz+krNUYvjpg/VuvGpKdX2fh8Mo3v2wAlUhATaaDfHvm3URYiLSwN9aTnniwO5jB2jsXaMO+eppzd+SQj4w5m0rpTKeXvyswaA7oyT/eIfftJZPcjBvdnKxnVpnuCk2NqyPBlyZZQylgAUQ2U/OT5+nvCPfJWLKWZ+hIF4mM9tQwqy6PQug6j231svyKdGY375DrhX9vGTxtC6kfDIRDc6LJF/K67NUJ2iVDGHQjuZUdgMWOKAwe9EzT0jjiX4eT7dUaqC7twFljRo3NhY4083km54AWmfw3lwIPBXwoAc1v+u8VgpzPPTIMFK3HjDrmifjaEg8mHp5DabpcRlrpojyuHSi9DBPL94NvyXI4137D3/NPhBpNgxVpyyjAbLtId1XuGUSDs6Ja9S2mogm4BIVKMaUrNgigIY5sHGuGvI+hRttCyPEc4sdBDNCy/wy4LLA4vHaVbwne4/pJHHasvUR1LAIF1VZ/+wJNiE71FMIYiQBP4/rWGyml/uwlkkBuXRC4KrxnNwK8QLXyoQu+Qgt+08u19XtAkqoGpVOYovK6+uXsxrz94FInNr0sC0mhruj612chNeYciph79r4zapQoPLemMC2i8ZqRzAqSTUsMRd+iNYCrjQFnOXHDgEiWdhfOOOcpVCcgf4H/r/IuZSMrOanDS2Z05H7ydiXHrLl+6yIPvMBP4RJNsW5rvyrZd/AoT6Oyif3GW6u+I8boeSAR20ZmlQ37LszE5x6nSMxnYsd4AhnvQ4TkYmkEDmAU/zqPQoJ/Ty7Ju12plpIL7axnqEqQkJkYfB81LZ1E+5PlCECywCex3NYRMDlxSZos3i55Knwcslmamir1yaGvaAV9bvzy8MY5cwzz/ACYyqELyTsiUEL4QZyMGs2Ff8Zx91dVcVMc4rtkEArwIIJlmKwmAcNJt2K/03h2EjHhJglX7lDvHqiYtRD82Wb8nUuxoUk6J8v4IWFTeNq64BSbXWw1b5FwCw1Il3V6iMcZHfEnqwfe3z2+CrNb+33tFMaRV5B6l8SRHw6LzLBHeJyTQqx6/bry2KOqDxSNuY4HAMdgXSf6+Qs+/zE4C0meykvSphuyy7PqmdE73iIX6HYf19Pocen3/q5UWuCLUPBvZp1AFpsZKx9XlQAua61UBPkZIHGxVdNL9NBI3gdIkHf1ED4ilYOIPrmVwfezNrgT8eE9LJcQSogJA6ikoYffRT1KhnTr4YGYS5kJiOaeejJcwi2b5pDfQqcTYSi/Rk1e7attXO3KUyYHfL7lGD7uuLG89oyw/qDFKPL4XbtcxtAPO++HYiNITgVudgPheL9LnVTJhfVHq5JuZgxYENGGKPa0jdhsRCOoFfWjnwIeGOwYUY3gOCHJ0deVAaofSklrYAFs4PLjySWeDubciZZVqcJVLOKrZpl7WJqFADHhDZ/wKOConoKS4SkkZvWY1epl2kLl0Tnvj8748KnqTFvW6P1o4MH6ANj/xC3ihpH92/cklo7lMPHNqyNDpOFW500Dm2ysR1vf6PTIYqOLUXcN17wxjFJvbqfdjCoxUH5oR5jLzSp+Ju63LWdv3RAjKCZzhT4ps4z5k+D78NUI4+ntwkTj/EMWsZTNn9vrQe6gzHDLRx9qyCj5mzDRz1EsaDZsDnNPkYb/E6OnrKb4YU0NxJe7oN3iseuOPkDSHkAVEcDFz8Z9vsx6RcovMcgSgufMc77/caytk+q9TJMLIJ19LLI9/aBwOZADiUSnZjQwjRXpkl/aDnuMNDxZx7FbssY+/BEclpR2hy2lGD8eb4Lk79ea97VCWB6jl6kmFs9ZNQyekRPD6kR1JrgG3yxG1e1NFtxUI5idIjl4JnFPzcBAu8rABTjXsd6911i8PoiGkm5p7qOfvCuBMjMNsV+kZpjK6GGml7okfgopflSf2dLdD0fCD0XpqhsfcEFJR/iRsS+MC23RG4oBUDlL43JPVnIJC8zVnB78DxhpoU06ZdAmJB46R9l3ujFEEzqfntAZmCTje2Mi1HFu4yGXyYMplh/tdTQIpKvqGHrKHWP+/CcnpYNueJBKa+YRr2V4A1TPP8Pc13cbusZZm60GeMLjpd6ENo8dk3zC/7cy+JxSWX1N+m0kPonzMOZ2aA4zF7++gDBQkfvQJgMcBqlz+qHTPB3R1WIuIUWkXlza0N1dt84PwKYHGeqIkrdGfmVXIhyZneEnaIlRkZf6nc6KJq7vF4CCtt9yuHkw6IZoPhzJuvPCy8tuWQX81z1Tp2qXChqU+2yG30bxTDt9SggFta+C8B0Q6mMMmVUIDwtVSN9HVw0OLu4ayzW9jrkZFOd4oRHc8cy4/ip31xO8cvcZWLNa0gd/8jCK25ilKhxlSf3T/DEk3r3WuRF/GS6FjfRwNDwlbi+Hvd9P91xMawdMn/4MdqDBdjoB3cIsJLWOq6SYMLbnOapKSfBCEToVVMOOSglm9/1TqN7pDrjcU13CGPGQgHgxhwPFfPd24iF+oAo02nd6m2tUWgHXuTKg8WRfv8zoDhOiLSMn3GdX4WW62Yvdjiaa/ht6LvEPoTOggCDEq9WzbTnu0fU8l3SfQQrGW+iWEuyi397sm+Lz6hdQbW2ERkbIqaOj3xEdy1K/RgDgpUnFBgfFyT7HtUyC1q7IueegmnnPLce+NAe5g7h1XeEYAeP76Gdp67/1GDGTocxGfowAgDepf4Sw7/JGXEJf0NIAqhgsOHvDqnm03OvJUjeGNqTxfbEnj2Hvlqq72QlR24it4mpyDqNjfvFvyPedYDkIADL7j5szBHDkFAqVi4vnaQI69iXH/5IwnD8jRi9xBEbn+ZARtncpJ/CyKeNtgSDJ1TlmeYD/k4mVEJd8EGuXsG9jXA8zdKxClup48sILtWRNu2bcIFBnbs0ck1EMBf7kgdKhXoglGz3Xlky66hFvQLbsSZJMHKA/5Us9Je09NrM0iWRjtKsRuaoQWupSf0oO0gpngcIBdY2BsBosGj2cAWX/vwLi/fflWXPj71Vw2GSzUTTSGECaWJiWCG5bM+vbk86gLVYn8S9/6dD5JKsRDxI7q5ZJBAiXpKf89HNclA0Ow9XX0rhBr3tSQhpXuaIZbmONc8puhqM5EFV98bWu4hEBUUwl/MvoH+jOwbBUnV7zmshKhjK1w7/7xXyePC5U3Wm9/WoLKFsk5hZp/Htjw+EhkbV2WfiFrt9hqE5ubfm5NcNpGHI08Y28wlz63tHeQy18tww8CEYCiMStrhxb9bKDvsjRxh7Iu1+Gs2TGQlC/Wcc7tVEnFwyH4tHvdDc7bZQXms+TK3CsZK64oTyl8KZll7U5Q27HS/IxUbcVdCzd8+e4ilBhCC+Mni60NqOXonARGAEkBLyaS4gEcDyke73KdXgDR0PwKynN+Yo8cSVLLRRgZlpZcPHh3QvthUxqjDznHvgnUvuGWdC7I6VEfYeIYuTYDbA4d3oVn517Vfx6SXzBJxvlvH/REWo4cLZe/x+8DcuKfgwJZX3ttP1nL3UvtJHxHNSONeh6x/KYEXWhWPn3qqr71ivvJqsAUBYcMGOKlC37hbQ+RV7ty2I/UqBCfuwbA5e9fMVRg2EXBa3CijvpQOW5UEsPOizbKl6FyQXpwoGkd4+BlZJH/txkPj8xSud1m/MLMVVZa9du5Sj9QOLAfOZcwXGFfoWHMS6DmIJzMN/8LqDKV+bNzHSEjBd9g/TxSanpQvMFdKCPnd0Psuk4oypSReq4AcmVvhYFjQxVcOfUxmshxqxkVJBrfrLOX1nJN8fQcrhFxNWU1E/va7giSUOxlr3TbQnjDSCxa89NW5QjOgD/oI9Gvntf/o7IHNoCs4+XmKafeGApANI5M+XyXqSWRhNPCoO8G/fBdOH3A9CIF8KMtVDvzlw5uJ4Pa2IKBUrOn+yWhIcsQjC/MI48Qn7TuYt5qI1Y5EW6p+OsOtR/HXf3tQLuOb37slU87gOicdP5y49ss5x2ND3v7otWUaavtfXOOGyFPhcZtgPEGukNVHc6YKLrbDR6s9oLGsjtBoo9fayp0+AqnmXUJhyaoqYTXab1ihW9MKTImGshkFYSxTxBTWrZngMbDvZWRtZ9KBaoN+I4nonIozuAdE/dFTAuVycLfzclqrRbN7M9yECEiOctqE4eGYGvFxLVuQqjImmV4OtAVaGMDtqwQ8CdiE6q8kD/gWtHlIFm1cs2A7U/a1YrfjlrcFOBZcbc7NMn6YujHCJxq0JSQ3BUYBfOpSGHhYu5sXR8m5eKFjRM6Xph3qfhbq0Gtdw0WnP8HDlushuMnIYdxrMhasPdQncrvtUAhtf3CvpYCjC8cUBduCEWFMUeX1M+9SEJ+p315aEhvPCg2Xnp5SD+LPyonGAQ3eig+9vRDgTDXdhFmydgIX2aTFy8/AT3Sb1/bNJW435unaHEUeVQ0iOSbjLiRXYbVu7nSTq9tsOsxt1vhxh9TLFtf7c1rakaYBAvbyVWquq2pXHjB2Tu0L9IcYnlgNqmAj/OiSMfBqx5qOQjLf341fdNsORFZZND7AmYaKdr3+/FdXwP24D27IZwB3iw54ebahoe8dJWtS1GarJxhdWvbTLezo3+ECmjm5P4PVIOEEzZC2RqglIYxh4tdlkRjpeiCBY2cLBJc/ovBQ5x/OlNwQmfFe+e4vCad4i4c7tPHVtdyOm5nvwKBh0J0CvWAR3xV3mzL3NAOIeTxu4OExha3POa0p3brR+M6a2unk0Dnq3d6f7eG/lsVCsirV0r5yQc/aJcSKQNvOiOGa4OkSZg7iCqwZnYPEnp27E5mlJrTSWk7Fe4tERoCjcghCZnqTiUri/OVFn/MCi7fgrVf7l5j8iHzmXptCTY8X+GrRJX+tiFq2UU755pA2uVnmxneTleSf5QXOYb5+b2WPZO82FejR9ATj3A/PPhBrOtKXvpOnQt5gzpYL6xFwhvle2c+ZIR6bAXyIgDQuwZONc7PwNaqkKqNrOrPFZWR+nzjp/o+jkHIB6EZwWJ1gW3t9gvJlg0HvHO7uLKEpoL8B2S5Eb8MUizAilL8AjvXOk5PcmciwZH/Mhw9i3PfqxP0A0qiWYbcRgXx1nHuoMsaESWgZY7v6sNXLpncSHx0ZLYygjkqSeBa4G8bAQMLVkoVM7RWD2HUddwiPVHRPpVHd6D2AETSOLfKU67+3G4GDgAWmT06nIVXBGYBBlNTaK/lSPVEEJP8baq97lGjEEvQCFUHq7/ZW2nN2/oOoKUw9DitGLKqxYQeX2fWuqz7PfpnsMwr172rblGsJ8SeL74hJwrtYyWcO6ykCsj0fgMDiTn6+Xqm7WFoGxz3F8dZt9HWVwD/uQrwePVKq9aaGK+FX0UShpvHqhDIeWU0B94bTDiyT/hOW5kIAbCYbHB/+zStTfDfGhSM1cv1+fHrVC2BRkCED9Gy89Td/f61BaAt39YogCj83WS7OG6EfyBl0lRyLtBlJpDtheuKSV3j6OZWlpetChVmfyPxKg8UpeWLIhMH2sZtYC18n2XEZ78rYYx7D9GXljkN3iiTWbamN8O5gapeEqePURzy1CruTRZrsJrjd7oVDpURvh/fOPPeXVSN68fLpmWVnAT6AhpezoPzuYe7DJBTlYqiHnB0Jv4apvYnC2d7bwJWLKIFfvWo9aEeaczktCqjwwx9fk+ZS0uIQGWHP0F2R6mDR1nUSQLRanDo89a8d3m0KER6UwX7HGMJTcMF2lJZjw+uZTsx4kBkInNVUI3oc4N4fR8S1bGcXsZ4vgDCuU91GpwC2LgpCC7RGURVLs9f7SjX0OybBzRz0ZwdRUOTTZG5p+a1JOXLpqCXsr9gBjXOo1vpi8ZgwnhNcsaS2Qpyy29xeN7WAELixaPv6A/TWd2ULd84UaRyDxJiwys91MXdwNe+lCzAZUzmmh99cUYd+DtzGScplJHGFnNk+rvRF7z6SXF7i/lfnE5Hlj0UXEoO5oU0UEkWJdgzQ5XYtmpcxRhsP4WSk+X11DU/SRkmfveWUuUx5x43kRfPsXCYeVdtUajUnTBTdVaaXojKeDzOVOBuTTINd/a0eEe7ZMqaXh50ouCmwdc2FEA6qPFCpiIqFvkzWZ+jFBehJ7Qneg8/9YkmbFk71NEAhoDqDzAtOOPBbC+j37PMZMEbRvmd0HORXEYJMbpq9oO9fGXc+wrwVPKILDhUDWu0/XkDaL6xWF/5n6LXkyUO0nfeVP5a2L6ciWDJMAvUvonsFJLViK5PCpkhK0Rryw6zAyVwNCOeS8jdnjM+W+KGI2rJxgf0lhYBNApEgLcqS+IkjIvihI8DcM/8xa4vBF15vXEdt6YRGnlEJb+Tqd+yeizGdNk7H0ZjRTTGrS3p0tHxVVqhfAW7uDJOTPK5pbHuceWKU2jE6517heyGMOOVT7YF8WsLT2CO1PtNWee7RgUU3um7gV1HLlTAIl3z6pASpXyWEN3nZblwhuUoYrL4nWO/GhmLBjOof5ebldhPVf6DHbgD57jSt/PA+ZIghCOEp3/Ht1CIlbtNIm47PP2i5Z47OS7NPiJIJcAyBTX/m4aPsGvwVaWCd3ZhFqFc7CIA7dLoKpJnXwASIPFVkfj74KuuE5XQV8v7DuK17VBlKN9CPnuU2UnOg7nHvYqmhfyIfRp/6iksh2uZ3YL5B4wHA0QWnn0QnfPqOBzPKtOnFk1dd5N9xNQqgw192YInV+SrTshiyTUcvmZ9H2jyU65w+Q3Y1F3wRmOWagJMi9DQ2uL+OOj2YQkCDtlIes3YelDUWEjYWxPTN65uibtvoJH7i0WuFBBTBco4thiOfiYea7AqC2p6mtOAgSpa6y5LsTp7yrWs3v0HK740nAHuT6IkgzRMgoQWFZz9oV3Dd0TJ9htar8ainEkMAbonhH0oQUEq6B9QH6nEns+Wy0MbUzcJ6HwZ/w5le+mXs/3GGIVM6EKM44qXWJwxQTevbLTt3SjpIt2rOBKBs6EhcZEaAKy88k76bvRtyIeJheZeR3fTAa/SL1mgvKaTayFgEU8qwJyXtTSibtENatMLPSyshgd8SEXqgV9azuwCWrP9lx1zX6iOgoFZpqIR48QuhicpuxA0hz3Wf52gMhFu5ckgFboIkZpdT8hXCFPiFl591gUyTwLDtyDOu+IfCRr1H6fKQ9E5WV0Q7A8U8FLvGo+W0dtsx6aINhjm33AKSjYBoKCGjqx7+mv4x0hT9rIlITio8Z+hZM0LjzSZbeyeN9LHqo8iEZXGdME2EmO9rm5Fkl6/vCP5RUsubl5O6YIFnBqfX6cpzUxAoU39ZymA83r5Baoix6m12kWTrQKCBSU5MZILBXeCRdC7FGutMwYuF/NbkYSFSAlBaIjflwxqy9ni18JXvkGrC7KNqwC0iNFevgvKw9DDInn/IugGtTaLUBtOkCLADAjVUA40CQ3dRlLt+p8BJDJcR7tCMdRfPRjaBNXk8/xy/uYJjk0Jh+eVrNn6xqelBDq+EkLG0xbIBuYzWbWFwtdikpKXq1vThcLMk0NVpnEbQXXMkgjYpq0zJmNIEUyav9moK04r55gvsFnuB1t+ixqOQatA1G7NsJ+f+ZZGhMvqk7yD/o8RbnL5qiq1kEh1Gq216AGcVZKfeiuWF2jCaqyHYUMvp9bV1j2O/hlrg3/HrH7aI32evQwh//H4D9e+AhHN2+Owqtq/+CJME8jQjDFAoQ3/FS4EkHWJhfh5LAf1Wd/+mpVHgJJItAwBusKUM9bTQg34YvnhjGb0WvN2jfjhrtlR1Wa94fpIiUz/1vrtHesxy+s7XEeU5mhb+9H7T+ZOdYG9XkXEVyoudgRCH1cyU8B+6dKhzA/9CrCAWCXJdsfoZTmOxcOVDPCRyk/1nJeXCsKa6GzeM1TlwgoRykCbFpzp2kW5Wgns9q90XBIPlm7xrxVKHhlJXNzSuhl9x5LX9NUFoRV1E20LLI724wnRuvx9E4fUOSAKc6m4kXd5vNioG0Zy+Se5lnH7hHp20esoULotlJq5PJaeixZEbAMpfEmUqofoqPJUbvBq+Vy4ykKGgCZzg8A1x82aaihOOzHFW9qw1areEUiSj+qs8yxK+RcfKfDkRXarLFyOZwI0Sm2mkSO6pkr0M4AOtOIDtdvTqr0aQmDJXaaOF1pesnrvCZgf5VwFbp8c8qc+nlInwvPBD9802Z0+HEo+yVDOfNO/V7Z5GZW/QjrRU64D0OPPDaJVTKYdZdfNG6g4gJ+vRl0vQrufQv6fgCx/WQIbRSkCw/8bWZkqzK6u8Fv8S8KmmMWx9783z5ZN6XQmwK954dQKplbEhYC8ynV+8vdloUAq8R6MAXDcgRUDQiidHNulRVwTmHlRSidwMoZQiRbyvUT2VXh9AKAX6bNlQp8/9Sipi+3ZA4mHypj1R+HK44AVVxDgTXTyFQNYPoMQJ93ZkZdTP/uxRxOSqTVgHz5L/FZb8KeOnAV0iSJyuWBwNsDH1F20roGcvXnMuwuCagWRGHL1yoaSRjbsPgDXlAP6PwSfaZrXYh4VkGU9XAk+TMYfDiyI0JsBHmr1ggerbrg++GUa4NIPIu5sXfEi+oqwbFK45vSYQJQvrIy3b5GiOvRGUQqETeTUemVHqZbOlnjAfMOLZtAfkCpHOGPfain6VSIPDYbc0KURZ/20KoI1lKxRBkAqQ3la6+r2PfFDa/G1tEGL4JjV75Fj3Xy3xNXMBm3t2OgxPq3Ol9UYw6bndxQ3nEXJ5t4t93uiEbBvFy7oQ/GdFlSud/zZNugN/STLnGy6snZxvr6+/dM6uV1UGxn8oNwTjoogqP7j2xx3H74oyDE+pKlKcqSxAJjl9YAzvNIC+1kbcV1H7s26CdO+10ATiWuypgn57A9dYRgB",
+      "thinking": "",
+      "type": "thinking"
+    },
+    {
+      "citations": null,
+      "text": "El documento es una lista de precios de Laboratorio Andes S.A. con ",
+      "type": "text"
+    },
+    {
+      "citations": [
+        {
+          "cited_text": "Laboratorio Andes S.A.\r\nLista de precios a farmacias · Vigencia desde el 1 de octubre de 2026\r\nPrecios sin IVA. VL: venta libre. VBR: venta bajo receta.\r\n",
+          "document_index": 0,
+          "document_title": "Lista_de_precios_octubre_2026.pdf",
+          "end_page_number": 2,
+          "file_id": null,
+          "start_page_number": 1,
+          "type": "page_location"
+        }
+      ],
+      "text": "vigencia desde el 1 de octubre de 2026, precios sin IVA, VL = venta libre y VBR = venta bajo receta",
+      "type": "text"
+    },
+    {
+      "citations": null,
+      "text": ".\n\n**AN-1103:** ",
+      "type": "text"
+    },
+    {
+      "citations": [
+        {
+          "cited_text": "EAN Precio\r\nAN-1103 Dolorex 400mg Comp. rec. x 20 VL 7794394922729 $ 265,29\r\nAN-1106 Antiacid 400 mg + 400 mg/5\r\nml\r\nSusp. ",
+          "document_index": 0,
+          "document_title": "Lista_de_precios_octubre_2026.pdf",
+          "end_page_number": 2,
+          "file_id": null,
+          "start_page_number": 1,
+          "type": "page_location"
+        }
+      ],
+      "text": "Producto Dolorex 400mg, presentación Comp. rec. x 20, condición VL, EAN 7794394922729 y precio $ 265,29.",
+      "type": "text"
+    },
+    {
+      "citations": null,
+      "text": " La monodroga no figura en el documento.\n\n**AN-1106:** ",
+      "type": "text"
+    },
+    {
+      "citations": [
+        {
+          "cited_text": "x 20 VL 7794394922729 $ 265,29\r\nAN-1106 Antiacid 400 mg + 400 mg/5\r\nml\r\nSusp. x 200 ml VL 7799252522035 $ 156,16\r\nAN-1109 Febril 1g Paracetamol Comp. ",
+          "document_index": 0,
+          "document_title": "Lista_de_precios_octubre_2026.pdf",
+          "end_page_number": 2,
+          "file_id": null,
+          "start_page_number": 1,
+          "type": "page_location"
+        }
+      ],
+      "text": "Producto Antiacid 400 mg + 400 mg/5 ml, presentación Susp. x 200 ml, condición VL, EAN 7799252522035 y precio $ 156,16.",
+      "type": "text"
+    },
+    {
+      "citations": null,
+      "text": " La monodroga no figura en el documento.\n\n**AN-1109:** ",
+      "type": "text"
+    },
+    {
+      "citations": [
+        {
+          "cited_text": "x 200 ml VL 7799252522035 $ 156,16\r\nAN-1109 Febril 1g Paracetamol Comp. rec. x 20 VL 7797385091657 $ 225,13\r\nAN-1112 Glucomet 850mg Metformina Comp. ",
+          "document_index": 0,
+          "document_title": "Lista_de_precios_octubre_2026.pdf",
+          "end_page_number": 2,
+          "file_id": null,
+          "start_page_number": 1,
+          "type": "page_location"
+        }
+      ],
+      "text": "Producto Febril 1g, monodroga Paracetamol, presentación Comp. rec. x 20, condición VL, EAN 7797385091657 y precio $ 225,13.",
+      "type": "text"
+    },
+    {
+      "citations": null,
+      "text": "\n\n**AN-1112:** ",
+      "type": "text"
+    },
+    {
+      "citations": [
+        {
+          "cited_text": "x 20 VL 7797385091657 $ 225,13\r\nAN-1112 Glucomet 850mg Metformina Comp. x 60 VBR 7797092743948 $ 175,49\r\nAN-1115 Gastrex 20 mg Omeprazol Caps. ",
+          "document_index": 0,
+          "document_title": "Lista_de_precios_octubre_2026.pdf",
+          "end_page_number": 2,
+          "file_id": null,
+          "start_page_number": 1,
+          "type": "page_location"
+        }
+      ],
+      "text": "Producto Glucomet 850mg, monodroga Metformina, presentación Comp. x 60, condición VBR, EAN 7797092743948 y precio $ 175,49.",
+      "type": "text"
+    },
+    {
+      "citations": null,
+      "text": "\n\n**AN-1115:** ",
+      "type": "text"
+    },
+    {
+      "citations": [
+        {
+          "cited_text": "x 60 VBR 7797092743948 $ 175,49\r\nAN-1115 Gastrex 20 mg Omeprazol Caps. x 28 VL 7790106983514 $ 246,07\r\nAN-1118 Gastrex 20mg Omeprazol Caps. ",
+          "document_index": 0,
+          "document_title": "Lista_de_precios_octubre_2026.pdf",
+          "end_page_number": 2,
+          "file_id": null,
+          "start_page_number": 1,
+          "type": "page_location"
+        }
+      ],
+      "text": "Producto Gastrex 20 mg, monodroga Omeprazol, presentación Caps. x 28, condición VL, EAN 7790106983514 y precio $ 246,07.",
+      "type": "text"
+    },
+    {
+      "citations": null,
+      "text": "\n\n**AN-1118:** ",
+      "type": "text"
+    },
+    {
+      "citations": [
+        {
+          "cited_text": "x 28 VL 7790106983514 $ 246,07\r\nAN-1118 Gastrex 20mg Omeprazol Caps. x 14 VL 7793160165476 $ 142,93\r\nAN-1121 Diacort 2mg Loperamida Comp. ",
+          "document_index": 0,
+          "document_title": "Lista_de_precios_octubre_2026.pdf",
+          "end_page_number": 2,
+          "file_id": null,
+          "start_page_number": 1,
+          "type": "page_location"
+        }
+      ],
+      "text": "Producto Gastrex 20mg, monodroga Omeprazol, presentación Caps. x 14, condición VL, EAN 7793160165476 y precio $ 142,93.",
+      "type": "text"
+    },
+    {
+      "citations": null,
+      "text": "\n\n**AN-1121:** ",
+      "type": "text"
+    },
+    {
+      "citations": [
+        {
+          "cited_text": "x 14 VL 7793160165476 $ 142,93\r\nAN-1121 Diacort 2mg Loperamida Comp. rec. x 12 VL 7799550016915 $ 171,02\r\nAN-1124 Dermacort 1% Hidrocortisona Crema x 30 g VL 7796462699472 $ 306,73\r\nAN-1127 Alergix 10 mg Loratadina Comp. ",
+          "document_index": 0,
+          "document_title": "Lista_de_precios_octubre_2026.pdf",
+          "end_page_number": 2,
+          "file_id": null,
+          "start_page_number": 1,
+          "type": "page_location"
+        }
+      ],
+      "text": "Producto Diacort 2mg, monodroga Loperamida, presentación Comp. rec. x 12, condición VL, EAN 7799550016915 y precio $ 171,02.",
+      "type": "text"
+    },
+    {
+      "citations": null,
+      "text": "\n\n**AN-1124:** ",
+      "type": "text"
+    },
+    {
+      "citations": [
+        {
+          "cited_text": "x 12 VL 7799550016915 $ 171,02\r\nAN-1124 Dermacort 1% Hidrocortisona Crema x 30 g VL 7796462699472 $ 306,73\r\nAN-1127 Alergix 10 mg Loratadina Comp. ",
+          "document_index": 0,
+          "document_title": "Lista_de_precios_octubre_2026.pdf",
+          "end_page_number": 2,
+          "file_id": null,
+          "start_page_number": 1,
+          "type": "page_location"
+        }
+      ],
+      "text": "Producto Dermacort 1%, monodroga Hidrocortisona, presentación Crema x 30 g, condición VL, EAN 7796462699472 y precio $ 306,73.",
+      "type": "text"
+    },
+    {
+      "citations": null,
+      "text": "\n\n**AN-1127:** ",
+      "type": "text"
+    },
+    {
+      "citations": [
+        {
+          "cited_text": "x 12 VL 7799550016915 $ 171,02\r\nAN-1124 Dermacort 1% Hidrocortisona Crema x 30 g VL 7796462699472 $ 306,73\r\nAN-1127 Alergix 10 mg Loratadina Comp. rec. x 10 VL 7790688122189 $ 148,56\r\nAN-1130 Dermacort 1% Hidrocortisona Crema x 15 gr VL 7795431246051 $ 201,55\r\nAN-1133 Micostop 1% Clotrimazol Crema x 20 gr VL 7798467198943 $ 193,76\r\nAN-1136 Febril 500mg Paracetamol Comp. ",
+          "document_index": 0,
+          "document_title": "Lista_de_precios_octubre_2026.pdf",
+          "end_page_number": 2,
+          "file_id": null,
+          "start_page_number": 1,
+          "type": "page_location"
+        }
+      ],
+      "text": "Producto Alergix 10 mg, monodroga Loratadina, presentación Comp. rec. x 10, condición VL, EAN 7790688122189 y precio $ 148,56.",
+      "type": "text"
+    },
+    {
+      "citations": null,
+      "text": "\n\n**AN-1130:** ",
+      "type": "text"
+    },
+    {
+      "citations": [
+        {
+          "cited_text": "x 10 VL 7790688122189 $ 148,56\r\nAN-1130 Dermacort 1% Hidrocortisona Crema x 15 gr VL 7795431246051 $ 201,55\r\nAN-1133 Micostop 1% Clotrimazol Crema x 20 gr VL 7798467198943 $ 193,76\r\nAN-1136 Febril 500mg Paracetamol Comp. ",
+          "document_index": 0,
+          "document_title": "Lista_de_precios_octubre_2026.pdf",
+          "end_page_number": 2,
+          "file_id": null,
+          "start_page_number": 1,
+          "type": "page_location"
+        }
+      ],
+      "text": "Producto Dermacort 1%, monodroga Hidrocortisona, presentación Crema x 15 gr, condición VL, EAN 7795431246051 y precio $ 201,55.",
+      "type": "text"
+    },
+    {
+      "citations": null,
+      "text": "\n\n**AN-1133:** ",
+      "type": "text"
+    },
+    {
+      "citations": [
+        {
+          "cited_text": "x 10 VL 7790688122189 $ 148,56\r\nAN-1130 Dermacort 1% Hidrocortisona Crema x 15 gr VL 7795431246051 $ 201,55\r\nAN-1133 Micostop 1% Clotrimazol Crema x 20 gr VL 7798467198943 $ 193,76\r\nAN-1136 Febril 500mg Paracetamol Comp. ",
+          "document_index": 0,
+          "document_title": "Lista_de_precios_octubre_2026.pdf",
+          "end_page_number": 2,
+          "file_id": null,
+          "start_page_number": 1,
+          "type": "page_location"
+        }
+      ],
+      "text": "Producto Micostop 1%, monodroga Clotrimazol, presentación Crema x 20 gr, condición VL, EAN 7798467198943 y precio $ 193,76.",
+      "type": "text"
+    },
+    {
+      "citations": null,
+      "text": "\n\n**AN-1136:** ",
+      "type": "text"
+    },
+    {
+      "citations": [
+        {
+          "cited_text": "x 10 VL 7790688122189 $ 148,56\r\nAN-1130 Dermacort 1% Hidrocortisona Crema x 15 gr VL 7795431246051 $ 201,55\r\nAN-1133 Micostop 1% Clotrimazol Crema x 20 gr VL 7798467198943 $ 193,76\r\nAN-1136 Febril 500mg Paracetamol Comp. rec. x 20 VL 7790950373011 $ 185,50\r\nAN-1139 Cardiopres 20mg Enalapril Comprimidos x\r\n30\r\nVBR 7797752654089 $ 159,80\r\nAN-1142 Gripanil 500 mg + 4 mg + 10\r\nmg\r\nParacetamol + Clorfeniramina +\r\nFenilefrina\r\nComp. ",
+          "document_index": 0,
+          "document_title": "Lista_de_precios_octubre_2026.pdf",
+          "end_page_number": 2,
+          "file_id": null,
+          "start_page_number": 1,
+          "type": "page_location"
+        }
+      ],
+      "text": "Producto Febril 500mg, monodroga Paracetamol, presentación Comp. rec. x 20, condición VL, EAN 7790950373011 y precio $ 185,50.",
+      "type": "text"
+    },
+    {
+      "citations": null,
+      "text": "\n\n**AN-1139:** ",
+      "type": "text"
+    },
+    {
+      "citations": [
+        {
+          "cited_text": "x 20 VL 7790950373011 $ 185,50\r\nAN-1139 Cardiopres 20mg Enalapril Comprimidos x\r\n30\r\nVBR 7797752654089 $ 159,80\r\nAN-1142 Gripanil 500 mg + 4 mg + 10\r\nmg\r\nParacetamol + Clorfeniramina +\r\nFenilefrina\r\nComp. ",
+          "document_index": 0,
+          "document_title": "Lista_de_precios_octubre_2026.pdf",
+          "end_page_number": 2,
+          "file_id": null,
+          "start_page_number": 1,
+          "type": "page_location"
+        }
+      ],
+      "text": "Producto Cardiopres 20mg, monodroga Enalapril, presentación Comprimidos x 30, condición VBR, EAN 7797752654089 y precio $ 159,80.",
+      "type": "text"
+    },
+    {
+      "citations": null,
+      "text": "\n\n**AN-1142:** ",
+      "type": "text"
+    },
+    {
+      "citations": [
+        {
+          "cited_text": "x 20 VL 7790950373011 $ 185,50\r\nAN-1139 Cardiopres 20mg Enalapril Comprimidos x\r\n30\r\nVBR 7797752654089 $ 159,80\r\nAN-1142 Gripanil 500 mg + 4 mg + 10\r\nmg\r\nParacetamol + Clorfeniramina +\r\nFenilefrina\r\nComp. x 10 VL 7795761445278 $ 183,45\r\nAN-1145 Gripanil 500mg+4mg+10mg Paracetamol + Clorfeniramina +\r\nFenilefrina\r\nSobres x 12 VL 7791495114022 $ 268,81\r\nAN-1148 Gripanil 500 mg + 4 mg + 10\r\nmg\r\nParacetamol + Clorfeniramina +\r\nFenilefrina\r\nSobres x 6 VL 7796730355338 $ 168,80\r\nAN-1151 Flexigel 1% Diclofenac Gel tópico x 60\r\ngr\r\nVL 7797593529355 $ 236,45\r\nAN-1154 Dolorex 600mg Ibuprofeno Comprimidos x\r\n20\r\nVBR 7795669252633 $ 337,17\r\nAN-1157 Tiroxan 50mcg Levotiroxina Comprimidos x\r\n30\r\nVBR 7790003122382 $ 136,62\r\nAN-1160 Tiroxan 100 mcg Levotiroxina Comprimidos x\r\n30\r\nVBR 7798193783772 $ 153,10\r\nAN-1163 Diacort 2mg Loperamida Comprimidos x 6 VL 7790559445416 $ 109,38\r\nAN-1166 Laxofib 5mg Bisacodilo Comp. ",
+          "document_index": 0,
+          "document_title": "Lista_de_precios_octubre_2026.pdf",
+          "end_page_number": 2,
+          "file_id": null,
+          "start_page_number": 1,
+          "type": "page_location"
+        }
+      ],
+      "text": "Producto Gripanil 500 mg + 4 mg + 10 mg, monodroga Paracetamol + Clorfeniramina + Fenilefrina, presentación Comp. x 10, condición VL, EAN 7795761445278 y precio $ 183,45.",
+      "type": "text"
+    },
+    {
+      "citations": null,
+      "text": "\n\n**AN-1145:** ",
+      "type": "text"
+    },
+    {
+      "citations": [
+        {
+          "cited_text": "x 10 VL 7795761445278 $ 183,45\r\nAN-1145 Gripanil 500mg+4mg+10mg Paracetamol + Clorfeniramina +\r\nFenilefrina\r\nSobres x 12 VL 7791495114022 $ 268,81\r\nAN-1148 Gripanil 500 mg + 4 mg + 10\r\nmg\r\nParacetamol + Clorfeniramina +\r\nFenilefrina\r\nSobres x 6 VL 7796730355338 $ 168,80\r\nAN-1151 Flexigel 1% Diclofenac Gel tópico x 60\r\ngr\r\nVL 7797593529355 $ 236,45\r\nAN-1154 Dolorex 600mg Ibuprofeno Comprimidos x\r\n20\r\nVBR 7795669252633 $ 337,17\r\nAN-1157 Tiroxan 50mcg Levotiroxina Comprimidos x\r\n30\r\nVBR 7790003122382 $ 136,62\r\nAN-1160 Tiroxan 100 mcg Levotiroxina Comprimidos x\r\n30\r\nVBR 7798193783772 $ 153,10\r\nAN-1163 Diacort 2mg Loperamida Comprimidos x 6 VL 7790559445416 $ 109,38\r\nAN-1166 Laxofib 5mg Bisacodilo Comp. ",
+          "document_index": 0,
+          "document_title": "Lista_de_precios_octubre_2026.pdf",
+          "end_page_number": 2,
+          "file_id": null,
+          "start_page_number": 1,
+          "type": "page_location"
+        }
+      ],
+      "text": "Producto Gripanil 500mg+4mg+10mg, monodroga Paracetamol + Clorfeniramina + Fenilefrina, presentación Sobres x 12, condición VL, EAN 7791495114022 y precio $ 268,81.",
+      "type": "text"
+    },
+    {
+      "citations": null,
+      "text": "\n\n**AN-1148:** ",
+      "type": "text"
+    },
+    {
+      "citations": [
+        {
+          "cited_text": "x 10 VL 7795761445278 $ 183,45\r\nAN-1145 Gripanil 500mg+4mg+10mg Paracetamol + Clorfeniramina +\r\nFenilefrina\r\nSobres x 12 VL 7791495114022 $ 268,81\r\nAN-1148 Gripanil 500 mg + 4 mg + 10\r\nmg\r\nParacetamol + Clorfeniramina +\r\nFenilefrina\r\nSobres x 6 VL 7796730355338 $ 168,80\r\nAN-1151 Flexigel 1% Diclofenac Gel tópico x 60\r\ngr\r\nVL 7797593529355 $ 236,45\r\nAN-1154 Dolorex 600mg Ibuprofeno Comprimidos x\r\n20\r\nVBR 7795669252633 $ 337,17\r\nAN-1157 Tiroxan 50mcg Levotiroxina Comprimidos x\r\n30\r\nVBR 7790003122382 $ 136,62\r\nAN-1160 Tiroxan 100 mcg Levotiroxina Comprimidos x\r\n30\r\nVBR 7798193783772 $ 153,10\r\nAN-1163 Diacort 2mg Loperamida Comprimidos x 6 VL 7790559445416 $ 109,38\r\nAN-1166 Laxofib 5mg Bisacodilo Comp. ",
+          "document_index": 0,
+          "document_title": "Lista_de_precios_octubre_2026.pdf",
+          "end_page_number": 2,
+          "file_id": null,
+          "start_page_number": 1,
+          "type": "page_location"
+        }
+      ],
+      "text": "Producto Gripanil 500 mg + 4 mg + 10 mg, monodroga Paracetamol + Clorfeniramina + Fenilefrina, presentación Sobres x 6, condición VL, EAN 7796730355338 y precio $ 168,80.",
+      "type": "text"
+    },
+    {
+      "citations": null,
+      "text": "\n\n**AN-1151:** ",
+      "type": "text"
+    },
+    {
+      "citations": [
+        {
+          "cited_text": "x 10 VL 7795761445278 $ 183,45\r\nAN-1145 Gripanil 500mg+4mg+10mg Paracetamol + Clorfeniramina +\r\nFenilefrina\r\nSobres x 12 VL 7791495114022 $ 268,81\r\nAN-1148 Gripanil 500 mg + 4 mg + 10\r\nmg\r\nParacetamol + Clorfeniramina +\r\nFenilefrina\r\nSobres x 6 VL 7796730355338 $ 168,80\r\nAN-1151 Flexigel 1% Diclofenac Gel tópico x 60\r\ngr\r\nVL 7797593529355 $ 236,45\r\nAN-1154 Dolorex 600mg Ibuprofeno Comprimidos x\r\n20\r\nVBR 7795669252633 $ 337,17\r\nAN-1157 Tiroxan 50mcg Levotiroxina Comprimidos x\r\n30\r\nVBR 7790003122382 $ 136,62\r\nAN-1160 Tiroxan 100 mcg Levotiroxina Comprimidos x\r\n30\r\nVBR 7798193783772 $ 153,10\r\nAN-1163 Diacort 2mg Loperamida Comprimidos x 6 VL 7790559445416 $ 109,38\r\nAN-1166 Laxofib 5mg Bisacodilo Comp. ",
+          "document_index": 0,
+          "document_title": "Lista_de_precios_octubre_2026.pdf",
+          "end_page_number": 2,
+          "file_id": null,
+          "start_page_number": 1,
+          "type": "page_location"
+        }
+      ],
+      "text": "Producto Flexigel 1%, monodroga Diclofenac, presentación Gel tópico x 60 gr, condición VL, EAN 7797593529355 y precio $ 236,45.",
+      "type": "text"
+    },
+    {
+      "citations": null,
+      "text": "\n\n**AN-1154:** ",
+      "type": "text"
+    },
+    {
+      "citations": [
+        {
+          "cited_text": "x 10 VL 7795761445278 $ 183,45\r\nAN-1145 Gripanil 500mg+4mg+10mg Paracetamol + Clorfeniramina +\r\nFenilefrina\r\nSobres x 12 VL 7791495114022 $ 268,81\r\nAN-1148 Gripanil 500 mg + 4 mg + 10\r\nmg\r\nParacetamol + Clorfeniramina +\r\nFenilefrina\r\nSobres x 6 VL 7796730355338 $ 168,80\r\nAN-1151 Flexigel 1% Diclofenac Gel tópico x 60\r\ngr\r\nVL 7797593529355 $ 236,45\r\nAN-1154 Dolorex 600mg Ibuprofeno Comprimidos x\r\n20\r\nVBR 7795669252633 $ 337,17\r\nAN-1157 Tiroxan 50mcg Levotiroxina Comprimidos x\r\n30\r\nVBR 7790003122382 $ 136,62\r\nAN-1160 Tiroxan 100 mcg Levotiroxina Comprimidos x\r\n30\r\nVBR 7798193783772 $ 153,10\r\nAN-1163 Diacort 2mg Loperamida Comprimidos x 6 VL 7790559445416 $ 109,38\r\nAN-1166 Laxofib 5mg Bisacodilo Comp. ",
+          "document_index": 0,
+          "document_title": "Lista_de_precios_octubre_2026.pdf",
+          "end_page_number": 2,
+          "file_id": null,
+          "start_page_number": 1,
+          "type": "page_location"
+        }
+      ],
+      "text": "Producto Dolorex 600mg, monodroga Ibuprofeno, presentación Comprimidos x 20, condición VBR, EAN 7795669252633 y precio $ 337,17.",
+      "type": "text"
+    },
+    {
+      "citations": null,
+      "text": "\n\n**AN-1157:** ",
+      "type": "text"
+    },
+    {
+      "citations": [
+        {
+          "cited_text": "x 10 VL 7795761445278 $ 183,45\r\nAN-1145 Gripanil 500mg+4mg+10mg Paracetamol + Clorfeniramina +\r\nFenilefrina\r\nSobres x 12 VL 7791495114022 $ 268,81\r\nAN-1148 Gripanil 500 mg + 4 mg + 10\r\nmg\r\nParacetamol + Clorfeniramina +\r\nFenilefrina\r\nSobres x 6 VL 7796730355338 $ 168,80\r\nAN-1151 Flexigel 1% Diclofenac Gel tópico x 60\r\ngr\r\nVL 7797593529355 $ 236,45\r\nAN-1154 Dolorex 600mg Ibuprofeno Comprimidos x\r\n20\r\nVBR 7795669252633 $ 337,17\r\nAN-1157 Tiroxan 50mcg Levotiroxina Comprimidos x\r\n30\r\nVBR 7790003122382 $ 136,62\r\nAN-1160 Tiroxan 100 mcg Levotiroxina Comprimidos x\r\n30\r\nVBR 7798193783772 $ 153,10\r\nAN-1163 Diacort 2mg Loperamida Comprimidos x 6 VL 7790559445416 $ 109,38\r\nAN-1166 Laxofib 5mg Bisacodilo Comp. ",
+          "document_index": 0,
+          "document_title": "Lista_de_precios_octubre_2026.pdf",
+          "end_page_number": 2,
+          "file_id": null,
+          "start_page_number": 1,
+          "type": "page_location"
+        }
+      ],
+      "text": "Producto Tiroxan 50mcg, monodroga Levotiroxina, presentación Comprimidos x 30, condición VBR, EAN 7790003122382 y precio $ 136,62.",
+      "type": "text"
+    },
+    {
+      "citations": null,
+      "text": "\n\n**AN-1160:** ",
+      "type": "text"
+    },
+    {
+      "citations": [
+        {
+          "cited_text": "x 10 VL 7795761445278 $ 183,45\r\nAN-1145 Gripanil 500mg+4mg+10mg Paracetamol + Clorfeniramina +\r\nFenilefrina\r\nSobres x 12 VL 7791495114022 $ 268,81\r\nAN-1148 Gripanil 500 mg + 4 mg + 10\r\nmg\r\nParacetamol + Clorfeniramina +\r\nFenilefrina\r\nSobres x 6 VL 7796730355338 $ 168,80\r\nAN-1151 Flexigel 1% Diclofenac Gel tópico x 60\r\ngr\r\nVL 7797593529355 $ 236,45\r\nAN-1154 Dolorex 600mg Ibuprofeno Comprimidos x\r\n20\r\nVBR 7795669252633 $ 337,17\r\nAN-1157 Tiroxan 50mcg Levotiroxina Comprimidos x\r\n30\r\nVBR 7790003122382 $ 136,62\r\nAN-1160 Tiroxan 100 mcg Levotiroxina Comprimidos x\r\n30\r\nVBR 7798193783772 $ 153,10\r\nAN-1163 Diacort 2mg Loperamida Comprimidos x 6 VL 7790559445416 $ 109,38\r\nAN-1166 Laxofib 5mg Bisacodilo Comp. ",
+          "document_index": 0,
+          "document_title": "Lista_de_precios_octubre_2026.pdf",
+          "end_page_number": 2,
+          "file_id": null,
+          "start_page_number": 1,
+          "type": "page_location"
+        }
+      ],
+      "text": "Producto Tiroxan 100 mcg, monodroga Levotiroxina, presentación Comprimidos x 30, condición VBR, EAN 7798193783772 y precio $ 153,10.",
+      "type": "text"
+    },
+    {
+      "citations": null,
+      "text": "\n\n**AN-1163:** ",
+      "type": "text"
+    },
+    {
+      "citations": [
+        {
+          "cited_text": "x 10 VL 7795761445278 $ 183,45\r\nAN-1145 Gripanil 500mg+4mg+10mg Paracetamol + Clorfeniramina +\r\nFenilefrina\r\nSobres x 12 VL 7791495114022 $ 268,81\r\nAN-1148 Gripanil 500 mg + 4 mg + 10\r\nmg\r\nParacetamol + Clorfeniramina +\r\nFenilefrina\r\nSobres x 6 VL 7796730355338 $ 168,80\r\nAN-1151 Flexigel 1% Diclofenac Gel tópico x 60\r\ngr\r\nVL 7797593529355 $ 236,45\r\nAN-1154 Dolorex 600mg Ibuprofeno Comprimidos x\r\n20\r\nVBR 7795669252633 $ 337,17\r\nAN-1157 Tiroxan 50mcg Levotiroxina Comprimidos x\r\n30\r\nVBR 7790003122382 $ 136,62\r\nAN-1160 Tiroxan 100 mcg Levotiroxina Comprimidos x\r\n30\r\nVBR 7798193783772 $ 153,10\r\nAN-1163 Diacort 2mg Loperamida Comprimidos x 6 VL 7790559445416 $ 109,38\r\nAN-1166 Laxofib 5mg Bisacodilo Comp. ",
+          "document_index": 0,
+          "document_title": "Lista_de_precios_octubre_2026.pdf",
+          "end_page_number": 2,
+          "file_id": null,
+          "start_page_number": 1,
+          "type": "page_location"
+        }
+      ],
+      "text": "Producto Diacort 2mg, monodroga Loperamida, presentación Comprimidos x 6, condición VL, EAN 7790559445416 y precio $ 109,38.",
+      "type": "text"
+    },
+    {
+      "citations": null,
+      "text": "\n\n**AN-1166:** ",
+      "type": "text"
+    },
+    {
+      "citations": [
+        {
+          "cited_text": "x 10 VL 7795761445278 $ 183,45\r\nAN-1145 Gripanil 500mg+4mg+10mg Paracetamol + Clorfeniramina +\r\nFenilefrina\r\nSobres x 12 VL 7791495114022 $ 268,81\r\nAN-1148 Gripanil 500 mg + 4 mg + 10\r\nmg\r\nParacetamol + Clorfeniramina +\r\nFenilefrina\r\nSobres x 6 VL 7796730355338 $ 168,80\r\nAN-1151 Flexigel 1% Diclofenac Gel tópico x 60\r\ngr\r\nVL 7797593529355 $ 236,45\r\nAN-1154 Dolorex 600mg Ibuprofeno Comprimidos x\r\n20\r\nVBR 7795669252633 $ 337,17\r\nAN-1157 Tiroxan 50mcg Levotiroxina Comprimidos x\r\n30\r\nVBR 7790003122382 $ 136,62\r\nAN-1160 Tiroxan 100 mcg Levotiroxina Comprimidos x\r\n30\r\nVBR 7798193783772 $ 153,10\r\nAN-1163 Diacort 2mg Loperamida Comprimidos x 6 VL 7790559445416 $ 109,38\r\nAN-1166 Laxofib 5mg Bisacodilo Comp. x 20 VL 7790468655227 $ 104,41\r\nAN-1169 Cardiopres 10 mg Enalapril Comp. ",
+          "document_index": 0,
+          "document_title": "Lista_de_precios_octubre_2026.pdf",
+          "end_page_number": 2,
+          "file_id": null,
+          "start_page_number": 1,
+          "type": "page_location"
+        }
+      ],
+      "text": "Producto Laxofib 5mg, monodroga Bisacodilo, presentación Comp. x 20, condición VL, EAN 7790468655227 y precio $ 104,41.",
+      "type": "text"
+    },
+    {
+      "citations": null,
+      "text": "\n\n**AN-1169:** ",
+      "type": "text"
+    },
+    {
+      "citations": [
+        {
+          "cited_text": "x 20 VL 7790468655227 $ 104,41\r\nAN-1169 Cardiopres 10 mg Enalapril Comp. rec. x 30 VBR 7799738361219 $ 144,73\r\nAN-1172 Tosil 15mg/5ml Dextrometorfano Jbe. ",
+          "document_index": 0,
+          "document_title": "Lista_de_precios_octubre_2026.pdf",
+          "end_page_number": 2,
+          "file_id": null,
+          "start_page_number": 1,
+          "type": "page_location"
+        }
+      ],
+      "text": "Producto Cardiopres 10 mg, monodroga Enalapril, presentación Comp. rec. x 30, condición VBR, EAN 7799738361219 y precio $ 144,73.",
+      "type": "text"
+    },
+    {
+      "citations": null,
+      "text": "\n\n**AN-1172:** ",
+      "type": "text"
+    },
+    {
+      "citations": [
+        {
+          "cited_text": "x 30 VBR 7799738361219 $ 144,73\r\nAN-1172 Tosil 15mg/5ml Dextrometorfano Jbe. x 120 ml VL 7793821086737 $ 213,12\r\nAN-1175 Febril 120mg/5ml Paracetamol Jbe. ",
+          "document_index": 0,
+          "document_title": "Lista_de_precios_octubre_2026.pdf",
+          "end_page_number": 2,
+          "file_id": null,
+          "start_page_number": 1,
+          "type": "page_location"
+        }
+      ],
+      "text": "Producto Tosil 15mg/5ml, monodroga Dextrometorfano, presentación Jbe. x 120 ml, condición VL, EAN 7793821086737 y precio $ 213,12.",
+      "type": "text"
+    },
+    {
+      "citations": null,
+      "text": "\n\n**AN-1175:** ",
+      "type": "text"
+    },
+    {
+      "citations": [
+        {
+          "cited_text": "x 120 ml VL 7793821086737 $ 213,12\r\nAN-1175 Febril 120mg/5ml Paracetamol Jbe. x 100 ml VL 7793831128717 $ 194,57\r\nAN-1178 Febril 1g Paracetamol Comp. ",
+          "document_index": 0,
+          "document_title": "Lista_de_precios_octubre_2026.pdf",
+          "end_page_number": 2,
+          "file_id": null,
+          "start_page_number": 1,
+          "type": "page_location"
+        }
+      ],
+      "text": "Producto Febril 120mg/5ml, monodroga Paracetamol, presentación Jbe. x 100 ml, condición VL, EAN 7793831128717 y precio $ 194,57.",
+      "type": "text"
+    },
+    {
+      "citations": null,
+      "text": "\n\n**AN-1178:** ",
+      "type": "text"
+    },
+    {
+      "citations": [
+        {
+          "cited_text": "x 100 ml VL 7793831128717 $ 194,57\r\nAN-1178 Febril 1g Paracetamol Comp. x 10 VL 7792542521701 $ 120,52\r\nLaboratorio Andes S.A. · Lista de precios octubre 2026 Página 1 de 1",
+          "document_index": 0,
+          "document_title": "Lista_de_precios_octubre_2026.pdf",
+          "end_page_number": 2,
+          "file_id": null,
+          "start_page_number": 1,
+          "type": "page_location"
+        }
+      ],
+      "text": "Producto Febril 1g, monodroga Paracetamol, presentación Comp. x 10, condición VL, EAN 7792542521701 y precio $ 120,52.",
+      "type": "text"
+    }
+  ],
+  "diagnostics": null,
+  "model": "claude-haiku-5-5",
+  "role": "assistant",
+  "stop_details": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "type": "message",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4320,
+    "output_tokens": 12120,
+    "output_tokens_details": {
+      "thinking_tokens": 9484
+    },
+    "server_tool_use": null,
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

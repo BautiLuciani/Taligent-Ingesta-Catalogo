@@ -3,8 +3,8 @@ import copy
 import json
 from pathlib import Path
 
-from extractor_pdf import (buscar_fila, campos_desde_respuesta, codigos_en_citas, filas_verificadas,
-                           normalizar_espacios, valor_en_fila, verificar_campos)
+from extractor_pdf import (buscar_fila, campos_desde_respuesta, codigo_al_inicio, codigos_en_citas, filas_de_un_texto,
+                           filas_desde_citas, filas_verificadas, normalizar_espacios, valor_en_fila, verificar_campos)
 
 RUTA_EXPERIMENTO = Path(__file__).parent / "salida" / "experimentos" / "citas_lhs.json"
 
@@ -160,5 +160,75 @@ chequear("No llamó a la tool: problema general", len(problemas), 1)
 chequear("...y las 2 filas quedan marcadas, no desaparecen", [len(p["problemas"]) for p in productos], [1, 1])
 productos, _ = campos_desde_respuesta(entrega([{**P206, "costo": "$ 88,40"}, P275]), FILAS_2)
 chequear("Costo inventado: pasa por verificar_campos y queda vacío", productos[0]["campos"]["costo"], None)
+
+print("--- codigo_al_inicio (paso 6B) ---")
+chequear("Código normal", codigo_al_inicio("AN-1103 Dolorex 400mg Comp."), "AN-1103")
+chequear("Código pegado a la palabra (cita de Andes)", codigo_al_inicio("AN-1148Gripanil 500 mg + 4 mg + 10"), "AN-1148")
+chequear("Código sin guion (Norte)", codigo_al_inicio("IN7003 Dry Shampoo"), "IN7003")
+chequear("Renglón de continuación: no es código", codigo_al_inicio("VBR 7797752654089 $ 159,80"), None)
+chequear("Renglón suelto 'ml': no es código", codigo_al_inicio("ml"), None)
+chequear("Un SKU no es un código de proveedor", codigo_al_inicio("SKU100301 PASTA DENTAL"), None)
+chequear("Encabezado: no es código", codigo_al_inicio("Código Producto Monodroga"), None)
+
+print("--- filas_de_un_texto (paso 6B) ---")
+PEDAZO = ("x 20 VL 7794394922729 $\xa0265,29\r\nAN-1106 Antiacid 400 mg + 400 mg/5\r\nml\r\n"
+          "Susp. x 200 ml VL 7799252522035 $\xa0156,16\r\nAN-1109 Febril 1g Paracetamol Comp. ")
+chequear("Une los renglones partidos y lo de antes del primer código se ignora", filas_de_un_texto(PEDAZO), [
+    ("AN-1106", "AN-1106 Antiacid 400 mg + 400 mg/5 ml Susp. x 200 ml VL 7799252522035 $ 156,16", True),
+    ("AN-1109", "AN-1109 Febril 1g Paracetamol Comp.", False)])
+chequear("Código pegado: se separa", filas_de_un_texto("AN-1148Gripanil 500 mg\r\nAN-1151 Flexigel")[0][1],
+         "AN-1148 Gripanil 500 mg")
+chequear("Ligadura del PDF (ﬁ -> fi)", filas_de_un_texto("AN-1166 Laxo\ufb01b 5mg")[0][1], "AN-1166 Laxofib 5mg")
+chequear("Sin códigos: ninguna fila", filas_de_un_texto("Laboratorio Andes S.A.\r\nPrecios sin IVA. "), [])
+
+print("--- filas_desde_citas (citas REALES de Andes, paso 6A) ---")
+ANDES = json.loads((RUTA_EXPERIMENTO.parent / "citas_andes_preguntas.json").read_text(encoding="utf-8"))["content"]
+filas_a, problemas_a = filas_desde_citas(ANDES)
+chequear("Las 26 filas de Andes, sin problemas", (len(filas_a), problemas_a), (26, []))
+chequear("AN-1106: 'ml' unido a su celda",
+         filas_a["AN-1106"]["fila"], "AN-1106 Antiacid 400 mg + 400 mg/5 ml Susp. x 200 ml VL 7799252522035 $ 156,16")
+chequear("AN-1139: 'Comprimidos x' + '30'",
+         filas_a["AN-1139"]["fila"], "AN-1139 Cardiopres 20mg Enalapril Comprimidos x 30 VBR 7797752654089 $ 159,80")
+chequear("AN-1142: 4 renglones en orden",
+         filas_a["AN-1142"]["fila"], "AN-1142 Gripanil 500 mg + 4 mg + 10 mg Paracetamol + Clorfeniramina + "
+                                     "Fenilefrina Comp. x 10 VL 7795761445278 $ 183,45")
+chequear("AN-1151: 'x 60' + 'gr'", "Gel tópico x 60 gr VL" in filas_a["AN-1151"]["fila"], True)
+chequear("AN-1148: pegado en una cita y separado en otra -> la misma fila",
+         filas_a["AN-1148"]["fila"].startswith("AN-1148 Gripanil 500 mg + 4 mg + 10 mg"), True)
+chequear("Todas de la página 1 (la da la API)", {f["pagina"] for f in filas_a.values()}, {1})
+chequear("Solo la última (AN-1178) queda abierta, con el pie pegado",
+         [c for c, f in filas_a.items() if not f["cerrada"]], ["AN-1178"])
+
+print("--- filas_desde_citas (citas REALES de LHS, paso 1) ---")
+filas_l, problemas_l = filas_desde_citas(copy.deepcopy(respuesta["content"]))
+chequear("Las 25 filas de LHS (la cita traía la tabla entera), sin problemas", (len(filas_l), problemas_l), (25, []))
+chequear("Las mismas filas que buscar_fila", {c: f["fila"] for c, f in filas_l.items() if f["cerrada"]},
+         {c: buscar_fila(CITA, c) for c, f in filas_l.items() if f["cerrada"]})
+chequear("LHS-269 (la última) abierta: su fila + el pie",
+         filas_l["LHS-269"]["fila"], FILA_269 + " Las fichas de datos de seguridad se envían por separado.")
+
+print("--- filas_desde_citas (casos armados) ---")
+
+
+def bloque_citado(*textos, pagina=1, texto="x"):
+    """Un bloque de mentira con una cita por cada texto."""
+    return {"type": "text", "text": texto,
+            "citations": [{"cited_text": t, "start_page_number": pagina, "end_page_number": pagina + 1} for t in textos]}
+
+
+DOS = "AN-1160 Tiroxan 100 mcg Comprimidos x 30\r\nAN-1163 Diacort"
+filas_c, problemas_c = filas_desde_citas([bloque_citado(DOS, DOS.replace("100 mcg", "100mcg"))])
+chequear("Versiones que solo difieren en espacios: se elige, sin problema", ("AN-1160" in filas_c, problemas_c), (True, []))
+filas_c, problemas_c = filas_desde_citas([bloque_citado(DOS, DOS.replace("x 30", "x 60"))])
+chequear("Dos versiones completas distintas: no se elige", ("AN-1160" in filas_c, len(problemas_c)), (False, 1))
+filas_c, problemas_c = filas_desde_citas([bloque_citado("AN-1160 Tiroxan 50 mcg", DOS)])
+chequear("Versión cortada que no es el principio de la completa: no se elige", ("AN-1160" in filas_c, len(problemas_c)),
+         (False, 1))
+filas_c, problemas_c = filas_desde_citas([bloque_citado(DOS, pagina=1), bloque_citado(DOS, pagina=2)])
+chequear("Mismos códigos en dos páginas: no se elige ninguno (son 2: AN-1160 y AN-1163)", (filas_c, len(problemas_c)),
+         ({}, 2))
+filas_c, problemas_c = filas_desde_citas([bloque_citado(DOS), {"type": "text", "text": "AN-1199: no figura", "citations": None}])
+chequear("Haiku nombró un código que no está citado: problema de cobertura",
+         problemas_c, ["AN-1199: Haiku lo nombró pero no aparece en ningún texto citado."])
 
 print(f"\nResultado: {'todo OK' if errores == 0 else f'{errores} con error'}")

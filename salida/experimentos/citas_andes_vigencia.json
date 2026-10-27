@@ -1,0 +1,50 @@
+{
+  "id": "msg_011CgTZbSY2WTpr31QPxt6d4",
+  "container": null,
+  "content": [
+    {
+      "signature": "CAQSywoKEAgTGAI4AUIIdGhpbmtpbmcSDOgcEa/s/z/mMOLwNBoMqMN44WpioXq8PPd3IjD7ffDoR0JzM/JsFqll6ZB8CFKMli1LcHNl+VRWl745j/W/E4MOsMccGeegjl5hCysq6AnOHxKDU9k5+CvSl1EOyh14hvGcB0eOH8tH+uTdUTIrCcgkbQsKxo+S/x7JnFCjYFMZE6bPsy5zHbh8YmeKO9KoBJAGNf/K3XhXfac4ZokKOZskM55q9vxwb0IHuXiqyP225uGQ195ee1iL6xUqA0zIia5/xcCLpFSmiR5dQlxoxLu3mRhiwH5LQ2j69JjMVPp42zmxdT4LCQhI2lj/1j/wK82TLBSsynFFy0FHVUp8GlVUdwQ+T9JOEE/OLg8ZyylHqkY6X74mYGrpLrQzR4sff9J7Laen5/EMmisLaOm2/PJAwMQHLTef9v7AfMyoRgU7+Mt/UBG6tMjUD4wnTWNxIyiVq8pEuZhfBCp19EKwXar5mdRyY63nOB6O0WclEaUuv/UFBewCyOUKQBYvLC/jOsZJgz76zkquYp6l7pZpnRjD2N5+7BKMcPhNhKFSK1COxhda0vL1Gs85sjBWQAc58QKjiDLqNzEHDt9QWaQBccFIx4idwUXXQazG9NKx3gjj9Dfaw4cM2rCRkeGcie7RFinE9NhFa7jp0yrkJPTZ0F69x+zg0reZBt+jSWZZNq6jnpriIfR2EvcLMQd299NUu9HmAJOgtwJZ2enkbrNNYDMnfGgBPoVzT8537aFwXjf2yCc9JQ6yrFRg1/DwRhvnVG6Ka/cfZA8D/F9jI3EFgdW+YxEs3My/+KRZX6l5H5FZy11IjrCk6pNatww7yyb8plyQ2CSwWS16Msr1vDJeOWQneoRt54aR2RSABRITgHcsXc5KE4rvSSdnOcBwWJSVqBOGFLvkPOnf2RPIdT5goCHf4aalDzd6GtT9zLCZJHgCdgVY3sxaTleKQDQJAq8xvrp9PR0BlZ+v2MK3yUyK2KuJ1ieNI9BKq8UOkXPH5vUajj3RPGTkWGJk4+hlI4o3oBAEEJdKhZmCUtMNgGjo3f8b+oSUTx3xRBjGvABGIYEkQQDXtQjT3eZ9iEZjkktumS4CQF1eSoAfWj9hH9HHNU+1VnL7p2YZaOI7khgzhU/hCsCbajiioktyfur8MT+bD8u4KYwj7RuK4kGIwTO73PVc7MyC5V58Jn0p8lL9fdEfd4xkdGPr5itiahdGxynCcE5048mYFdmMp4hfmN5jegVGtyXAVA8G/uwKrmUb2O0a5V5IBbWP0f0ppYqowFDw7s8jSurDD/TyLQY+oJH/HHnEMoSHiFPXVSPUi1yo49f5xflYWSzSC/z8d1BcrQKBBJAHWGchy7Kx1v6vTUVXaYZDaMyhN1nPIFJUmbAjruzJH0QTcnDPAwMz6QgD+npoUWWvrlqL7U1sP+H02aLxyi8holsbwFU4dv2i+AiLdp8s/j5eLI5a0Q0wIo6nQRCcmRTZFc1i49/txur7hkDybdZXlg6rK0mFOUyzIBsIe+hQeKqdM37Ev0I9k5t2RHB9oIV9LF45zG4h3t66BxEqk2JmxkKSfYYpN26QveEFNH/xK13WtyWqd8kaGhMFQpi6p4TRMfCY4sV3DI+BuyhE/11QMh3itQ0Fmxwi9J57xMaUFOAzr7rTiDr9rA4B0h7/hMSpMOlW9mnhFYoMDyMLm70cq3mbDsEcrGdzIRZC5WJoL0KaVGrA8SkTaF4m6nR91/mr//SU6XcMqt7Y2QywTMdD8NY1f/0UBbaEnY1JNtvfM+fmGDZJjhgB",
+      "thinking": "",
+      "type": "thinking"
+    },
+    {
+      "citations": [
+        {
+          "cited_text": "Laboratorio Andes S.A.\r\nLista de precios a farmacias · Vigencia desde el 1 de octubre de 2026\r\nPrecios sin IVA. ",
+          "document_index": 0,
+          "document_title": "Lista_de_precios_octubre_2026.pdf",
+          "end_page_number": 2,
+          "file_id": null,
+          "start_page_number": 1,
+          "type": "page_location"
+        }
+      ],
+      "text": "Lista de precios a farmacias · Vigencia desde el 1 de octubre de 2026",
+      "type": "text"
+    }
+  ],
+  "diagnostics": null,
+  "model": "claude-haiku-5-5",
+  "role": "assistant",
+  "stop_details": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "type": "message",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4274,
+    "output_tokens": 304,
+    "output_tokens_details": {
+      "thinking_tokens": 252
+    },
+    "server_tool_use": null,
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}
