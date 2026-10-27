@@ -166,6 +166,51 @@ def verificar_campos(codigo: str, fila: str, campos: dict) -> tuple[dict, list[s
                              f"Armada: {armada!r} · fila: {fila!r}.")
     return verificados, problemas
 
+
+
+
+def campos_desde_respuesta(contenido: list[dict], filas: dict[str, dict]) -> tuple[list[dict], list[str]]:
+    """Lee los campos que entregó Haiku con la tool entregar_campos y los verifica contra cada fila.
+
+    contenido: los bloques de la respuesta de la llamada 2 (model_dump()["content"]).
+    filas: las filas verificadas de la llamada 1 ({codigo: {codigo, pagina, fila}}).
+    Lo que llega en la tool es input NO confiable (M2): el código valida todo antes de usarlo.
+    Devuelve (productos, problemas):
+      - productos: UNO por cada fila verificada, en el orden del PDF (ninguno desaparece), con
+        sus campos verificados y sus propios problemas.
+      - problemas: los que no son de ningún producto (no llamó a la tool, códigos que no existen).
+    """
+    problemas = []
+    pedidos = [b for b in contenido if b.get("type") == "tool_use" and b.get("name") == "entregar_campos"]
+    llegados = pedidos[0]["input"].get("productos") if pedidos else None
+    if not isinstance(llegados, list):
+        problemas.append("Haiku no entregó los campos con entregar_campos (o no vino una lista de productos).")
+        llegados = []
+
+    entregados = {}   # codigo -> lo que mandó Haiku para ese código
+    ambiguos = set()  # códigos que llegaron dos veces con campos distintos
+    for producto in llegados:
+        codigo = producto.get("codigo") if isinstance(producto, dict) else None
+        if not isinstance(codigo, str) or codigo not in filas:
+            problemas.append(f"{codigo!r}: no es una de las filas verificadas; se ignora.")
+            continue
+        if codigo in entregados and producto != entregados[codigo]:
+            ambiguos.add(codigo)
+        entregados.setdefault(codigo, producto)  # guarda la primera vez; si se repite idéntico, no cambia nada
+
+    vacios = {nombre: None for nombre in CAMPOS_TABLA}
+    productos = []
+    for codigo, fila in filas.items():  # TODAS las filas verificadas, en el orden del PDF
+        if codigo in ambiguos:
+            campos, problemas_fila = dict(vacios), [f"{codigo}: llegó dos veces con campos distintos; "
+                                                    "no se elige una versión."]
+        elif codigo not in entregados:
+            campos, problemas_fila = dict(vacios), [f"{codigo}: Haiku no entregó sus campos."]
+        else:
+            campos, problemas_fila = verificar_campos(codigo, fila["fila"], entregados[codigo])
+        productos.append({**fila, "campos": campos, "problemas": problemas_fila})
+    return productos, problemas
+
 # --- Llamada 1: Haiku copia la fila de cada producto, con citations prendido ---
 CARPETA_PROYECTO = Path(__file__).parent
 CARPETA_EXTRACCIONES = CARPETA_PROYECTO / "salida" / "extracciones"

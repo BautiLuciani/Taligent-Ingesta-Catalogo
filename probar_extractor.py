@@ -3,7 +3,8 @@ import copy
 import json
 from pathlib import Path
 
-from extractor_pdf import (buscar_fila, codigos_en_citas, filas_verificadas, normalizar_espacios, valor_en_fila, verificar_campos)
+from extractor_pdf import (buscar_fila, campos_desde_respuesta, codigos_en_citas, filas_verificadas,
+                           normalizar_espacios, valor_en_fila, verificar_campos)
 
 RUTA_EXPERIMENTO = Path(__file__).parent / "salida" / "experimentos" / "citas_lhs.json"
 
@@ -127,5 +128,37 @@ campos, problemas = verificar_campos("LHS-206", FILA_206, {**BIEN_206, "ean": "7
 chequear("EAN de otra fila: queda vacío", (campos["ean"], len(problemas)), (None, 1))
 campos, problemas = verificar_campos("LHS-206", FILA_206, {**BIEN_206, "costo": "$\xa088,04"})
 chequear("Espacio raro en el valor: se normaliza y pasa", (campos["costo"], problemas), ("$ 88,04", []))
+
+print("--- campos_desde_respuesta ---")
+FILAS_2 = {"LHS-206": {"codigo": "LHS-206", "pagina": 1, "fila": FILA_206},
+           "LHS-275": {"codigo": "LHS-275", "pagina": 1, "fila": FILA_275}}
+P206 = {"codigo": "LHS-206", **BIEN_206}
+P275 = {"codigo": "LHS-275", "descripcion": "Alcohol Clarita 96 %", "contenido": "500 CC", "ean": None, "costo": "$ 117,34"}
+
+
+def entrega(productos):
+    """Una respuesta de mentira de la llamada 2: Haiku llamando a entregar_campos."""
+    return [{"type": "tool_use", "id": "x", "name": "entregar_campos", "input": {"productos": productos}}]
+
+
+productos, problemas = campos_desde_respuesta(entrega([P275, P206]), FILAS_2)
+chequear("Llegan desordenados: salen en el orden del PDF", [p["codigo"] for p in productos], ["LHS-206", "LHS-275"])
+chequear("...sin problemas en ningún lado", ([p["problemas"] for p in productos], problemas), ([[], []], []))
+chequear("...y cada producto conserva su página y su fila", (productos[0]["pagina"], productos[0]["fila"]), (1, FILA_206))
+productos, problemas = campos_desde_respuesta(entrega([P206]), FILAS_2)
+chequear("Falta LHS-275: no desaparece", len(productos), 2)
+chequear("...queda con campos vacíos y su marca", (productos[1]["campos"]["costo"], len(productos[1]["problemas"])), (None, 1))
+productos, problemas = campos_desde_respuesta(entrega([P206, P275, {**P206, "codigo": "LHS-999"}, "basura"]), FILAS_2)
+chequear("Código inventado y basura: 2 problemas generales", len(problemas), 2)
+chequear("...y los productos buenos no se tocan", [p["problemas"] for p in productos], [[], []])
+productos, _ = campos_desde_respuesta(entrega([P206, P206, P275]), FILAS_2)
+chequear("Repetido idéntico: sin problemas", productos[0]["problemas"], [])
+productos, _ = campos_desde_respuesta(entrega([P206, {**P206, "contenido": "2000"}, P275]), FILAS_2)
+chequear("Repetido distinto: marcado y sin campos", (len(productos[0]["problemas"]), productos[0]["campos"]["descripcion"]), (1, None))
+productos, problemas = campos_desde_respuesta([{"type": "text", "text": "Listo"}], FILAS_2)
+chequear("No llamó a la tool: problema general", len(problemas), 1)
+chequear("...y las 2 filas quedan marcadas, no desaparecen", [len(p["problemas"]) for p in productos], [1, 1])
+productos, _ = campos_desde_respuesta(entrega([{**P206, "costo": "$ 88,40"}, P275]), FILAS_2)
+chequear("Costo inventado: pasa por verificar_campos y queda vacío", productos[0]["campos"]["costo"], None)
 
 print(f"\nResultado: {'todo OK' if errores == 0 else f'{errores} con error'}")
