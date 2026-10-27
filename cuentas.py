@@ -211,3 +211,29 @@ def leer_fecha(texto) -> date | None:
     except ValueError:  # 31/02/2026 o 15/13/2026: la fecha no existe
         return None
     return None
+
+
+def contenido_de_presentacion(texto, separador_decimal: str = ",") -> tuple[float | None, str | None]:
+    """El contenido de una presentación de medicamento: el número después de la "x", con su unidad.
+
+    Ejemplos: "Comp. rec. x 20" -> (20.0, "UN") · "Susp. x 200 ml" -> (200.0, "ml") · "Gel tópico x 60 gr" -> (60.0, "gr")
+    Sin unidad se cuentan unidades: "comprimidos, cápsulas, sobres [...] se cuentan en UN" (estándar, sección 4).
+    La unidad sale tal cual: la normaliza después convertir_contenido. Sin "x número" -> (None, None).
+    """
+    texto = "" if texto is None else " ".join(str(texto).split())
+    coincidencia = re.search(r"\bx\s*(\d[\d.,]*)\s*([A-Za-z]*)\s*$", texto, re.IGNORECASE)
+    if coincidencia is None:
+        return None, None
+    cantidad = convertir_numero(coincidencia.group(1), separador_decimal)
+    if cantidad is None:
+        return None, None
+    return cantidad, coincidencia.group(2) or "UN"
+
+
+# Condición de venta como la escriben los proveedores -> como la pide el estándar (vocabulario)
+CONDICIONES = {"VL": "VENTA_LIBRE", "VBR": "BAJO_RECETA"}
+
+
+def convertir_condicion(texto) -> str | None:
+    """"VL" -> "VENTA_LIBRE" · "VBR" -> "BAJO_RECETA". Otra cosa -> None (no se adivina)."""
+    return CONDICIONES.get("" if texto is None else str(texto).strip().upper())

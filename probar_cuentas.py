@@ -3,7 +3,9 @@ from datetime import date
 
 from cuentas import (
     calcular_digito_verificador,
+    contenido_de_presentacion,
     cargar_abreviaturas,
+    convertir_condicion,
     convertir_contenido,
     convertir_numero,
     convertir_precio,
@@ -120,5 +122,28 @@ chequear("Mes que no existe (15/13): None", leer_fecha("15/13/2026"), None)
 chequear("Palabra que no es un mes: None", leer_fecha("1 de octubrex de 2026"), None)
 chequear("Sin fecha: None", leer_fecha("Precios sin IVA."), None)
 chequear("Vacío: None", leer_fecha(None), None)
+
+print("--- contenido_de_presentacion (Andes, paso 6D) ---")
+chequear("AN-1103 'Comp. rec. x 20': sin unidad = UN", contenido_de_presentacion("Comp. rec. x 20"), (20.0, "UN"))
+chequear("AN-1106 'Susp. x 200 ml'", contenido_de_presentacion("Susp. x 200 ml"), (200.0, "ml"))
+chequear("AN-1151 'Gel tópico x 60 gr'", contenido_de_presentacion("Gel tópico x 60 gr"), (60.0, "gr"))
+chequear("AN-1124 'Crema x 30 g'", contenido_de_presentacion("Crema x 30 g"), (30.0, "g"))
+chequear("AN-1148 Excel 'Polvo p/ sol. oral, sobres x 6'", contenido_de_presentacion("Polvo p/ sol. oral, sobres x 6"),
+         (6.0, "UN"))
+chequear("AN-1136 PDF y Excel: 20 vs 30 (el conflicto)",
+         (contenido_de_presentacion("Comp. rec. x 20"), contenido_de_presentacion("Comprimidos x 30")),
+         ((20.0, "UN"), (30.0, "UN")))
+chequear("AN-1166: 'Comp. x 20' y 'Comp. rec. x 20' dan lo mismo (no es conflicto)",
+         contenido_de_presentacion("Comp. x 20") == contenido_de_presentacion("Comp. rec. x 20"), True)
+chequear("Junto con convertir_contenido: 'Crema x 15 gr' -> 15 G",
+         convertir_contenido(*contenido_de_presentacion("Crema x 15 gr")), (15, "G"))
+chequear("Sin número después de la x: no se inventa", contenido_de_presentacion("Comprimidos x"), (None, None))
+chequear("Vacío", contenido_de_presentacion(None), (None, None))
+
+print("--- convertir_condicion ---")
+chequear("VL -> VENTA_LIBRE", convertir_condicion("VL"), "VENTA_LIBRE")
+chequear("VBR -> BAJO_RECETA", convertir_condicion(" vbr "), "BAJO_RECETA")
+chequear("Otra cosa: None (no se adivina)", convertir_condicion("Libre"), None)
+chequear("Vacío: None", convertir_condicion(None), None)
 
 print(f"\nResultado: {'todo OK' if errores == 0 else f'{errores} con error'}")
