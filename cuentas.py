@@ -1,6 +1,7 @@
 """Funciones de "cuentas": reglas fijas del estándar, en Python puro (sin IA)."""
 
 import re
+from datetime import date
 from pathlib import Path
 
 import yaml
@@ -185,3 +186,28 @@ def convertir_precio(texto, separador_decimal: str = ",") -> tuple[float | None,
     if "$" in texto:
         return monto, "UYU"
     return monto, None
+
+
+# Los meses en español, para las fechas escritas con palabras ("1 de octubre de 2026")
+MESES = {"enero": 1, "febrero": 2, "marzo": 3, "abril": 4, "mayo": 5, "junio": 6, "julio": 7, "agosto": 8,
+         "septiembre": 9, "setiembre": 9, "octubre": 10, "noviembre": 11, "diciembre": 12}
+
+
+def leer_fecha(texto) -> date | None:
+    """La primera fecha que aparece en un texto, como fecha de Python (para poder compararlas).
+
+    Ejemplos: "Vigencia desde: 15/10/2026" -> date(2026, 10, 15)
+              "Vigencia desde el 1 de octubre de 2026" -> date(2026, 10, 1)
+    Si no hay fecha, o la fecha no existe (31/02/2026), devuelve None: no se inventa.
+    """
+    texto = "" if texto is None else str(texto)
+    numerica = re.search(r"(\d{1,2})/(\d{1,2})/(\d{4})", texto)
+    con_palabras = re.search(r"(\d{1,2}) de ([a-záéíóú]+) de (\d{4})", texto.lower())
+    try:
+        if numerica:
+            return date(int(numerica.group(3)), int(numerica.group(2)), int(numerica.group(1)))
+        if con_palabras and con_palabras.group(2) in MESES:
+            return date(int(con_palabras.group(3)), MESES[con_palabras.group(2)], int(con_palabras.group(1)))
+    except ValueError:  # 31/02/2026 o 15/13/2026: la fecha no existe
+        return None
+    return None

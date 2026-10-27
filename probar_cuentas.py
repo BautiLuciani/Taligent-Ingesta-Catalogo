@@ -1,4 +1,6 @@
 """Pruebas de cuentas.py con casos reales de los proveedores. Correr: python probar_cuentas.py"""
+from datetime import date
+
 from cuentas import (
     calcular_digito_verificador,
     cargar_abreviaturas,
@@ -6,6 +8,7 @@ from cuentas import (
     convertir_numero,
     convertir_precio,
     expandir_abreviaturas,
+    leer_fecha,
     normalizar_gtin,
     separar_contenido,
 )
@@ -104,5 +107,18 @@ chequear("USD en inglés SIN avisar: 1250 (cuidado)", convertir_precio("USD 12.5
 chequear("Sin símbolo: moneda la decide quien llama", convertir_precio("117,34"), (117.34, None))
 chequear("Solo el símbolo", convertir_precio("$"), (None, None))
 chequear("Vacío", convertir_precio(None), (None, None))
+
+print("--- leer_fecha (vigencias, paso 6C) ---")
+chequear("Excel de Andes: 15/10/2026", leer_fecha("Vigencia desde: 15/10/2026"), date(2026, 10, 15))
+chequear("PDF de Andes: con palabras", leer_fecha("Lista de precios a farmacias · Vigencia desde el 1 de octubre de 2026"),
+         date(2026, 10, 1))
+chequear("Mes con mayúscula", leer_fecha("Vigencia desde el 1 de Octubre de 2026"), date(2026, 10, 1))
+chequear("Se pueden comparar: la del Excel es más reciente",
+         leer_fecha("Vigencia desde: 15/10/2026") > leer_fecha("Vigencia desde el 1 de octubre de 2026"), True)
+chequear("Fecha que no existe (31/02): None", leer_fecha("Vigencia desde: 31/02/2026"), None)
+chequear("Mes que no existe (15/13): None", leer_fecha("15/13/2026"), None)
+chequear("Palabra que no es un mes: None", leer_fecha("1 de octubrex de 2026"), None)
+chequear("Sin fecha: None", leer_fecha("Precios sin IVA."), None)
+chequear("Vacío: None", leer_fecha(None), None)
 
 print(f"\nResultado: {'todo OK' if errores == 0 else f'{errores} con error'}")
