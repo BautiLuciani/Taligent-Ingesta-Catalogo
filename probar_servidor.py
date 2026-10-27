@@ -93,6 +93,27 @@ async def main():
         chequear("LHS: los 2 sin EAN", sin_ean, ["P07:LHS-272", "P07:LHS-275"])
         chequear("LHS: ningún GTIN inválido", [i for i, f in lhs.items() if f["calculado"]["motivo_gtin"] == "gtin_invalido"], [])
 
+        print("\n--- leer_archivo_proveedor: el PDF de Laboratorio Andes (paso 6D2) ---")
+        filas_andes = await leer_todas(cliente, "P01")
+        chequear("Andes tiene 26 filas", len(filas_andes), 26)
+        andes = {fila["item_id"]: fila for fila in filas_andes}
+        c_1124 = andes["P01:AN-1124"]["calculado"]
+        chequear("AN-1124: 'Crema x 30 g' -> 30 G", (c_1124["contenido"], c_1124["unidad"]), (30, "G"))
+        chequear("AN-1124: VL -> VENTA_LIBRE y GTIN válido", (c_1124["condicion_venta"], c_1124["motivo_gtin"]),
+                 ("VENTA_LIBRE", None))
+        chequear("AN-1112: VBR -> BAJO_RECETA", andes["P01:AN-1112"]["calculado"]["condicion_venta"], "BAJO_RECETA")
+        chequear("AN-1103: 'Comp. rec. x 20' -> 20 UN", (andes["P01:AN-1103"]["calculado"]["contenido"],
+                 andes["P01:AN-1103"]["calculado"]["unidad"]), (20, "UN"))
+        chequear("AN-1106: 'Susp. x 200 ml' -> 200 ML", andes["P01:AN-1106"]["calculado"]["contenido"], 200)
+        chequear("AN-1103: sin monodroga en el PDF (queda null en original)", andes["P01:AN-1103"]["original"]["monodroga"],
+                 None)
+        chequear("AN-1178: el pie no ensucia la fila", andes["P01:AN-1178"]["original"]["fila"],
+                 "AN-1178 Febril 1g Paracetamol Comp. x 10 VL 7792542521701 $ 120,52")
+        chequear("Las 26 con contenido, unidad, precio y condición",
+                 all(f["calculado"][k] is not None for f in filas_andes
+                     for k in ("contenido", "unidad", "precio_costo", "condicion_venta")), True)
+        chequear("LHS no trae condición de venta (no es lista de medicamentos)", "condicion_venta" in calculado_206, False)
+
         print("\n--- calculado.fds: el cruce producto <-> FDS (paso 4C) ---")
         chequear("LHS-206: la lavandina, corrosivo + ONU 1791 con la fuente de SU FDS", lhs["P07:LHS-206"]["calculado"]["fds"],
                  {"peligro_deposito": "corrosivo", "numero_onu": "1791",

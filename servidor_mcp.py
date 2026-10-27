@@ -12,8 +12,9 @@ from fastmcp import FastMCP
 from fastmcp.exceptions import ToolError
 from pydantic import BaseModel, Field
 
-from cuentas import (cargar_abreviaturas, cargar_vocabulario, convertir_contenido, convertir_numero, convertir_precio,
-                     expandir_abreviaturas, normalizar_gtin, separar_contenido)
+from cuentas import (cargar_abreviaturas, cargar_vocabulario, contenido_de_presentacion, convertir_condicion,
+                     convertir_contenido, convertir_numero, convertir_precio, expandir_abreviaturas, normalizar_gtin,
+                     separar_contenido)
 
 CARPETA_DATA = Path(__file__).parent / "Data"
 ABREVIATURAS = cargar_abreviaturas()
@@ -41,8 +42,18 @@ PROVEEDORES = {
     "P07": {
         "formato": "pdf",
         "extraccion": CARPETA_EXTRACCIONES / "LHS_catalogo_nuevos_productos.json",  # lo armó extractor_pdf.py
+        # Qué columna del PDF es cada cosa (las columnas las fija COLUMNAS_POR_PDF del extractor)
+        "campos": {"descripcion": "descripcion", "contenido": "contenido", "ean": "ean", "precio": "costo"},
         "fds": CARPETA_EXTRACCIONES / "fds_P07_Limpieza_Hogar_Sur.json",  # lo armó extractor_fds.py
         "moneda": "UYU",  # solo si un precio viniera sin símbolo; los de LHS traen "$" -> UYU (estándar, sección 6)
+    },
+    "P01": {
+        "formato": "pdf",
+        "extraccion": CARPETA_EXTRACCIONES / "Lista_de_precios_octubre_2026.json",  # lo armó extractor_pdf.py
+        # Andes no trae "contenido" sino "presentacion" ("Comp. rec. x 20"), y trae la condición de venta (VL/VBR)
+        "campos": {"descripcion": "producto", "presentacion": "presentacion", "ean": "ean", "precio": "precio",
+                   "condicion": "condicion"},
+        "moneda": "UYU",  # la lista está en "$" -> pesos uruguayos (estándar, sección 6)
     },
 }
 
@@ -123,6 +134,8 @@ def leer_filas_pdf(proveedor_id: str, config: dict) -> list[dict]:
 
     La fuente es {archivo, pagina} (la página la dio la API con citations, no el modelo).
     En original va la fila verificada del PDF, sus campos tal cual y los problemas de la extracción.
+    config["campos"] dice qué columna es cada cosa (cada PDF tiene las suyas): el contenido sale de "contenido"
+    ("X 500 ML") o de "presentacion" ("Comp. rec. x 20"), y la condición de venta, solo si la lista la trae.
     El PDF no trae la marca en una columna aparte: no va en calculado, la decide el agente desde la descripción.
     """
     ruta = config["extraccion"]
@@ -130,27 +143,39 @@ def leer_filas_pdf(proveedor_id: str, config: dict) -> list[dict]:
         raise FileNotFoundError(f"Falta {ruta.name}: primero hay que correr extractor_pdf.py sobre ese PDF.")
     extraccion = json.loads(ruta.read_text(encoding="utf-8"))
 
+    mapa = config["campos"]
     filas = []
     for producto in extraccion["productos"]:
         campos = producto["campos"]
-        gtin, motivo_gtin = normalizar_gtin(campos["ean"])
-        contenido, unidad = convertir_contenido(*separar_contenido(campos["contenido"]))
-        precio, moneda = convertir_precio(campos["costo"])
+
+        def columna(cosa):
+            """El valor tal cual de la columna que en este PDF es esa cosa (None si el PDF no la tiene)."""
+            return campos.get(mapa[cosa]) if cosa in mapa else None
+
+        gtin, motivo_gtin = normalizar_gtin(columna("ean"))
+        if "contenido" in mapa:
+            contenido, unidad = convertir_contenido(*separar_contenido(columna("contenido")))
+        else:
+            contenido, unidad = convertir_contenido(*contenido_de_presentacion(columna("presentacion")))
+        precio, moneda = convertir_precio(columna("precio"))
         if precio is not None and moneda is None:
             moneda = config["moneda"]  # precio sin símbolo: rige la moneda de la lista
+        calculado = {
+            "gtin": gtin,
+            "motivo_gtin": motivo_gtin,
+            "descripcion_expandida": expandir_abreviaturas(columna("descripcion"), ABREVIATURAS),
+            "contenido": contenido,
+            "unidad": unidad,
+            "precio_costo": precio,
+            "moneda": moneda,
+        }
+        if "condicion" in mapa:  # solo las listas de medicamentos la traen
+            calculado["condicion_venta"] = convertir_condicion(columna("condicion"))
         filas.append({
             "item_id": f"{proveedor_id}:{producto['codigo']}",
             "fuente": producto["fuente"],
             "original": {"fila": producto["fila"], **campos, "problemas_extraccion": producto["problemas"]},
-            "calculado": {
-                "gtin": gtin,
-                "motivo_gtin": motivo_gtin,
-                "descripcion_expandida": expandir_abreviaturas(campos["descripcion"], ABREVIATURAS),
-                "contenido": contenido,
-                "unidad": unidad,
-                "precio_costo": precio,
-                "moneda": moneda,
-            },
+            "calculado": calculado,
         })
     return filas
 
@@ -206,7 +231,7 @@ def leer_filas(proveedor_id: str, config: dict) -> list[dict]:
 
 @mcp.tool(annotations={"readOnlyHint": True})
 def leer_archivo_proveedor(
-    proveedor_id: Annotated[Literal["P03", "P07"], Field(description="Código del proveedor a leer.")],
+    proveedor_id: Annotated[Literal["P01", "P03", "P07"], Field(description="Código del proveedor a leer.")],
     desde: Annotated[int, Field(ge=0, description="Posición de la primera fila (empieza en 0).")] = 0,
     cantidad: Annotated[int, Field(ge=1, le=25, description="Cuántas filas devolver (máximo 25).")] = 10,
 ) -> dict:
@@ -216,7 +241,8 @@ def leer_archivo_proveedor(
     - item_id y fuente (archivo y línea en un CSV; archivo y página en un PDF) para citar de dónde sale cada dato;
     - original: los valores tal como vinieron en el archivo (en un PDF, la fila verificada y sus campos);
     - calculado: lo que ya resolvió el código (GTIN validado y su motivo si hay problema,
-      descripción sin abreviaturas, contenido en ML/G/UN, precio como número y moneda, y la marca
+      descripción sin abreviaturas, contenido en ML/G/UN, precio como número y moneda, la condición de venta
+      (VENTA_LIBRE o BAJO_RECETA) cuando la lista la trae, y la marca
       cuando el archivo la trae en su propia columna) y fds: la ficha de datos de seguridad que lo nombra
       (peligro_deposito, numero_onu y su fuente), o null si ninguna FDS del proveedor lo nombra.
       Usá estos valores: no rehagas las cuentas.
