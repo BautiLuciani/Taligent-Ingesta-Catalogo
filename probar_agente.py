@@ -8,7 +8,9 @@ from types import SimpleNamespace
 from fastmcp import Client
 from fastmcp.client.transports import PythonStdioTransport
 
-from agente import RUTA_SERVIDOR, ejecutar_tool
+from pathlib import Path
+
+from agente import RUTA_SERVIDOR, ejecutar_tool, preparar_resultados
 
 errores = 0
 
@@ -54,6 +56,19 @@ async def main():
         r = await ejecutar_tool(cliente, pedido_falso("borrar_catalogo", {}))
         chequear("Tool que no existe -> is_error", r["is_error"], True)
         print(f"      lo que lee Haiku: {r['content'][:100]}")
+
+    print("\n--- preparar_resultados: cada corrida limpia SOLO su proveedor ---")
+    ruta = Path(carpeta_temporal) / "resultados.json"
+    antes = {"P03:LT-3303": {"estado": "lista_para_alta"}, "P03:LT-3306": {"estado": "duplicado"},
+             "P07:LHS-203": {"estado": "lista_para_alta"}}
+    ruta.write_text(json.dumps(antes), encoding="utf-8")
+    sacados = preparar_resultados(ruta, "P07")
+    chequear("Saca el único ítem de P07", sacados, 1)
+    chequear("Los de Litoral quedan", sorted(json.loads(ruta.read_text(encoding="utf-8"))), ["P03:LT-3303", "P03:LT-3306"])
+    anterior = json.loads((Path(carpeta_temporal) / "resultados_anterior.json").read_text(encoding="utf-8"))
+    chequear("La copia anterior tiene los 3 (no se pierde nada)", anterior, antes)
+    chequear("Un pedazo de código (P0) no saca nada: compara \"P0:\" entero", preparar_resultados(ruta, "P0"), 0)
+    chequear("Sin resultados.json previo: no hace nada", preparar_resultados(Path(carpeta_temporal) / "no_existe.json", "P07"), 0)
 
     shutil.rmtree(carpeta_temporal, ignore_errors=True)
     print(f"\nResultado: {'todo OK' if errores == 0 else f'{errores} con error'}")

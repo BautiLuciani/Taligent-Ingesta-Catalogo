@@ -1,10 +1,12 @@
 """Agente de ingesta: procesa los productos de un proveedor usando las tools del servidor MCP.
 
-Correr: python agente.py
+Correr: python agente.py P03   (o el proveedor que sea: P07...)
 """
+import argparse
 import asyncio
 import json
 import os
+import shutil
 import sys
 import time
 from datetime import datetime
@@ -220,18 +222,36 @@ async def procesar_tanda(cliente_claude, cliente_mcp: Client, modelo: str, syste
     return resultado
 
 
+def preparar_resultados(ruta_resultados: Path, proveedor_id: str) -> int:
+    """Antes de una corrida: guarda una copia de resultados.json y le saca los ítems de ESTE proveedor.
+
+    Cada corrida de un proveedor arranca limpia (decisión de la semana 1), pero sin borrar lo de los otros
+    proveedores. Corre ANTES de levantar el servidor: mientras corre el agente, el único que escribe
+    resultados.json sigue siendo registrar_ficha. Devuelve cuántos ítems se sacaron.
+    """
+    if not ruta_resultados.exists():
+        return 0
+    resultados = json.loads(ruta_resultados.read_text(encoding="utf-8"))
+    shutil.copyfile(ruta_resultados, ruta_resultados.with_name("resultados_anterior.json"))  # no se pierde nada
+    quedan = {item_id: r for item_id, r in resultados.items() if not item_id.startswith(f"{proveedor_id}:")}
+    ruta_resultados.write_text(json.dumps(quedan, ensure_ascii=False, indent=2), encoding="utf-8")
+    return len(resultados) - len(quedan)
+
+
 async def main():
+    argumentos = argparse.ArgumentParser(description="Procesa con el agente los productos nuevos de un proveedor.")
+    argumentos.add_argument("proveedor_id", help="Código del proveedor (ej. P03, P07). El servidor decide cuáles se permiten.")
+    proveedor_id = argumentos.parse_args().proveedor_id
+
     load_dotenv(CARPETA_PROYECTO / ".env")
     modelo = os.getenv("MODELO")
     if not modelo:
         sys.exit("ERROR: falta MODELO en el .env")
     cliente_claude = anthropic.Anthropic()  # toma ANTHROPIC_API_KEY del entorno
-    proveedor_id = "P03"
 
-    # Cada corrida arranca limpia: si quedó un resultados.json de antes, lo guardamos aparte (no se pierde)
-    resultados_previos = CARPETA_SALIDA / "resultados.json"
-    if resultados_previos.exists():
-        resultados_previos.replace(CARPETA_SALIDA / "resultados_anterior.json")
+    sacados = preparar_resultados(CARPETA_SALIDA / "resultados.json", proveedor_id)
+    if sacados:
+        print(f"Se sacaron {sacados} ítems de {proveedor_id} de una corrida anterior (copia en resultados_anterior.json)")
 
     CARPETA_TRAZAS.mkdir(parents=True, exist_ok=True)
     ruta_traza = CARPETA_TRAZAS / f"traza_{datetime.now():%Y%m%d_%H%M%S}.jsonl"
@@ -278,12 +298,13 @@ async def main():
         "traza": ruta_traza.name,
         "por_tanda": [{k: v for k, v in t.items() if k != "texto_final"} for t in tandas],
     }
-    (CARPETA_SALIDA / "corrida.json").write_text(json.dumps(reporte, ensure_ascii=False, indent=2), encoding="utf-8")
+    ruta_reporte = CARPETA_SALIDA / f"corrida_{proveedor_id}.json"  # uno por proveedor: no se pisan
+    ruta_reporte.write_text(json.dumps(reporte, ensure_ascii=False, indent=2), encoding="utf-8")
 
     print(f"\n=== Resumen: {registrados}/{total} productos registrados en {segundos:.0f} s"
           f" · costo total US$ {costo_total:.4f} · US$ {reporte['costo_por_ficha_usd']:.5f} por ficha")
     print(f"Tokens: {reporte['input_tokens']} in / {reporte['output_tokens']} out · vueltas: {reporte['vueltas']}"
-          f" · reporte: salida/corrida.json")
+          f" · reporte: salida/{ruta_reporte.name}")
     if reporte["faltan"]:
         print(f"⚠ Quedaron sin registrar: {reporte['faltan']}")
     if reporte["tandas_con_problemas"]:
