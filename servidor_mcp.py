@@ -417,11 +417,14 @@ def buscar_parecidos(
 
 # --- registrar_ficha: la ÚNICA tool que escribe ---
 # Para validar: todos los item_id que existen en los archivos de los proveedores habilitados, y todos los SKU.
-ITEMS_VALIDOS = {
-    fila["item_id"]
+# item_id -> los campos en conflicto entre archivos que encontró el CÓDIGO (paso 6D3). Sirve también de lista
+# de los ítems que existen. Con esto, Haiku no puede marcar un conflicto que el código no encontró (decisión 1).
+CONFLICTOS_POR_ITEM = {
+    fila["item_id"]: [conflicto["campo"] for conflicto in fila["calculado"].get("conflictos", [])]
     for proveedor_id, config in PROVEEDORES.items()
     for fila in leer_filas(proveedor_id, config)
 }
+ITEMS_VALIDOS = set(CONFLICTOS_POR_ITEM)
 SKUS_CATALOGO = {producto["sku"] for producto in CATALOGO}
 
 Estado = Literal[tuple(VOCABULARIO["estados"])]            # lista_para_alta | duplicado | a_revision
@@ -441,6 +444,13 @@ def validar_coherencia(item_id: str, estado: str, motivos: list[str], duplicado_
 
     if item_id not in ITEMS_VALIDOS:
         problemas.append(f"item_id {item_id!r} no existe en los archivos de los proveedores.")
+    conflictos = CONFLICTOS_POR_ITEM.get(item_id, [])
+    if "conflicto_entre_fuentes" in motivos and not conflictos:
+        problemas.append("conflicto_entre_fuentes solo va si el código encontró un conflicto (calculado.conflictos) y en "
+                         "este ítem no hay ninguno: que dos archivos lo escriban distinto no es un conflicto.")
+    if conflictos and estado != "duplicado" and "conflicto_entre_fuentes" not in motivos:
+        problemas.append(f"El código encontró un conflicto entre archivos en {', '.join(conflictos)}: el ítem va "
+                         "a_revision con el motivo conflicto_entre_fuentes.")
     if len(motivos) != len(set(motivos)):
         problemas.append("motivos_revision tiene motivos repetidos.")
     if duplicado_de is not None and duplicado_de not in SKUS_CATALOGO:

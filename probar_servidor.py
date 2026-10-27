@@ -276,6 +276,22 @@ async def main():
             "fuentes": {campo: fuente_206 for campo in ficha_ejemplo}}, raise_on_error=False)
         chequear("Se registra un ítem de P07 con fuente {archivo, pagina}", resultado.is_error, False)
 
+        print("\n--- registrar_ficha: conflictos entre archivos (paso 6E, decisión 1) ---")
+        fuente_andes = andes["P01:AN-1136"]["fuente"]
+        base_andes = {**base, "fuentes": {campo: fuente_andes for campo in ficha_ejemplo}}
+        resultado = await cliente.call_tool("registrar_ficha", {
+            **base_andes, "item_id": "P01:AN-1136", "estado": "a_revision",
+            "motivos_revision": ["conflicto_entre_fuentes"]}, raise_on_error=False)
+        chequear("AN-1136 (el código encontró el conflicto) a revisión con su motivo: se guarda", resultado.is_error, False)
+        resultado = await cliente.call_tool("registrar_ficha", {
+            **base_andes, "item_id": "P01:AN-1124", "estado": "a_revision",
+            "motivos_revision": ["conflicto_entre_fuentes"]}, raise_on_error=False)
+        chequear("AN-1124 (sin conflicto) marcado con conflicto: NO se guarda", resultado.is_error, True)
+        print(f"      lo que recibe el modelo: {resultado.content[0].text}")
+        resultado = await cliente.call_tool("registrar_ficha", {
+            **base_andes, "item_id": "P01:AN-1133", "estado": "lista_para_alta"}, raise_on_error=False)
+        chequear("AN-1133 (con conflicto) como lista_para_alta: NO se guarda", resultado.is_error, True)
+
         print("\n--- resources: el estándar ---")
         recursos = {str(r.uri) for r in await cliente.list_resources()}
         chequear("Hay 3 resources", sorted(recursos),
