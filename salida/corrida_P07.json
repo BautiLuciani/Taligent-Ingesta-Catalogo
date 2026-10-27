@@ -1,0 +1,50 @@
+{
+  "fecha": "2026-10-27 16:05",
+  "proveedor_id": "P07",
+  "modelo": "claude-haiku-5-5",
+  "effort": "high",
+  "tanda": 10,
+  "productos": 25,
+  "registrados": 25,
+  "faltan": [],
+  "tandas_con_problemas": [],
+  "segundos": 158.5,
+  "vueltas": 12,
+  "input_tokens": 214018,
+  "output_tokens": 44988,
+  "costo_total_usd": 0.0439,
+  "costo_por_ficha_usd": 0.00176,
+  "traza": "traza_20261027_160226.jsonl",
+  "por_tanda": [
+    {
+      "como_termino": "end_turn",
+      "vueltas": 4,
+      "input_tokens": 74543,
+      "output_tokens": 16632,
+      "costo_usd": 0.01577,
+      "esperados": 10,
+      "registrados": 10,
+      "faltan": []
+    },
+    {
+      "como_termino": "end_turn",
+      "vueltas": 4,
+      "input_tokens": 77188,
+      "output_tokens": 18619,
+      "costo_usd": 0.017028,
+      "esperados": 10,
+      "registrados": 10,
+      "faltan": []
+    },
+    {
+      "como_termino": "end_turn",
+      "vueltas": 4,
+      "input_tokens": 62287,
+      "output_tokens": 9737,
+      "costo_usd": 0.011097,
+      "esperados": 5,
+      "registrados": 5,
+      "faltan": []
+    }
+  ]
+}
