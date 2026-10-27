@@ -2,7 +2,7 @@
 import json
 from pathlib import Path
 
-from extractor_fds import leer_seccion_1, leer_seccion_14, lineas, secciones_citadas
+from extractor_fds import leer_fds, leer_seccion_1, leer_seccion_14, lineas, secciones_citadas
 
 CARPETA_EXPERIMENTOS = Path(__file__).parent / "salida" / "experimentos"
 
@@ -82,5 +82,21 @@ chequear("...y queda como problema", len(problemas), 1)
 chequear("Sin clase ni «No regulado»: None + problema",
          (leer_seccion_14(["Información relativa al transporte"])[0], len(leer_seccion_14(["Información relativa al transporte"])[2])),
          (None, 1))
+
+print("--- leer_fds (una FDS entera) ---")
+ficha = leer_fds(LAVANDINA, "FDS_Clarita_lavandina.pdf")
+chequear("Lavandina: el resultado completo", ficha, {
+    "archivo": "FDS_Clarita_lavandina.pdf", "codigos": ["LHS-206", "LHS-218", "LHS-263", "LHS-269"],
+    "peligro_deposito": "corrosivo", "numero_onu": "1791",
+    "fuente": {"archivo": "FDS_Clarita_lavandina.pdf", "pagina": 1}, "problemas": []})
+ficha = leer_fds(MULTIUSO, "FDS_Clarita_multiuso.pdf")
+chequear("Multiuso: no_peligroso, sin ONU, con fuente", (ficha["peligro_deposito"], ficha["numero_onu"], ficha["fuente"]),
+         ("no_peligroso", None, {"archivo": "FDS_Clarita_multiuso.pdf", "pagina": 1}))
+ficha = leer_fds([], "FDS_vacia.pdf")
+chequear("Respuesta sin citas: todo vacío, sin fuente", (ficha["codigos"], ficha["peligro_deposito"], ficha["fuente"]),
+         ([], None, None))
+chequear("...y con sus 2 problemas", len(ficha["problemas"]), 2)
+ficha = leer_fds([bloque("Identificación\r\nProducto: Lavandina Clarita\r\nSección 2. "), bloque(SECCION_14)], "FDS_x.pdf")
+chequear("Sección 1 sin códigos: queda como problema", ficha["problemas"], ["La sección 1 no lista códigos comerciales."])
 
 print(f"\nResultado: {'todo OK' if errores == 0 else f'{errores} con error'}")
