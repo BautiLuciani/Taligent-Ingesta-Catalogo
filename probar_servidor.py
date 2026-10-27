@@ -109,10 +109,39 @@ async def main():
                  None)
         chequear("AN-1178: el pie no ensucia la fila", andes["P01:AN-1178"]["original"]["fila"],
                  "AN-1178 Febril 1g Paracetamol Comp. x 10 VL 7792542521701 $ 120,52")
-        chequear("Las 26 con contenido, unidad, precio y condición",
-                 all(f["calculado"][k] is not None for f in filas_andes
-                     for k in ("contenido", "unidad", "precio_costo", "condicion_venta")), True)
+        chequear("Todas con precio y condición; contenido vacío solo en los 2 con conflicto (paso 6D3)",
+                 (all(f["calculado"]["precio_costo"] and f["calculado"]["condicion_venta"] for f in filas_andes),
+                  sorted(i for i, f in andes.items() if f["calculado"]["contenido"] is None)),
+                 (True, ["P01:AN-1133", "P01:AN-1136"]))
         chequear("LHS no trae condición de venta (no es lista de medicamentos)", "condicion_venta" in calculado_206, False)
+
+        print("\n--- el cruce PDF <-> Excel de Andes (paso 6D3) ---")
+        EXCEL = "Actualizacion_precios_Andes.xlsx"
+        c_1124 = andes["P01:AN-1124"]["calculado"]
+        chequear("AN-1124: rige el precio del Excel (más nuevo), 320.8 (Q01)", (c_1124["precio_costo"], c_1124["moneda"],
+                 c_1124["vigencia_precio"]), (320.8, "UYU", "2026-10-15"))
+        chequear("...con SU fuente: el Excel, hoja y fila 12", c_1124["fuentes"]["precio_costo"],
+                 {"archivo": EXCEL, "hoja": "Actualización", "fila": 12})
+        chequear("...y el contenido no cambió (30 G en los dos): sin conflictos", (c_1124["contenido"], c_1124["conflictos"]),
+                 (30, []))
+        c_1136 = andes["P01:AN-1136"]["calculado"]
+        chequear("AN-1136: conflicto de contenido, con las dos versiones y sus fuentes", c_1136["conflictos"], [
+            {"campo": "contenido", "versiones": [
+                {"valor": "20 UN", "fuente": {"archivo": "Lista_de_precios_octubre_2026.pdf", "pagina": 1}},
+                {"valor": "30 UN", "fuente": {"archivo": EXCEL, "hoja": "Actualización", "fila": 5}}]}])
+        chequear("...el contenido queda vacío (no se elige)", (c_1136["contenido"], c_1136["unidad"]), (None, None))
+        chequear("...pero el precio sí se resuelve por vigencia: 200.8", c_1136["precio_costo"], 200.8)
+        chequear("Con conflicto: solo AN-1133 y AN-1136",
+                 sorted(i for i, f in andes.items() if f["calculado"]["conflictos"]), ["P01:AN-1133", "P01:AN-1136"])
+        chequear("AN-1148 'Sobres x 6' vs 'Polvo p/ sol. oral, sobres x 6': NO es conflicto",
+                 (andes["P01:AN-1148"]["calculado"]["contenido"], andes["P01:AN-1148"]["calculado"]["conflictos"]), (6, []))
+        c_1103 = andes["P01:AN-1103"]["calculado"]
+        chequear("AN-1103 (no está en el Excel): precio y vigencia del PDF, sin fuentes aparte",
+                 (c_1103["precio_costo"], c_1103["vigencia_precio"], c_1103["fuentes"]), (265.29, "2026-10-01", {}))
+        chequear("Los 12 del Excel llevan su fila en original.actualizacion",
+                 sum("actualizacion" in f["original"] for f in filas_andes), 12)
+        chequear("LHS no tiene actualizaciones: sin conflictos ni fuentes aparte",
+                 ("conflictos" in calculado_206, "fuentes" in calculado_206), (False, False))
 
         print("\n--- calculado.fds: el cruce producto <-> FDS (paso 4C) ---")
         chequear("LHS-206: la lavandina, corrosivo + ONU 1791 con la fuente de SU FDS", lhs["P07:LHS-206"]["calculado"]["fds"],
@@ -267,6 +296,46 @@ async def main():
     chequear("Código en 2 FDS: sin peligro (no se elige una)", (resultado["peligro_deposito"], resultado["fuente"]), (None, None))
     chequear("...y queda el problema con los dos archivos", "FDS_a.pdf, FDS_b.pdf" in resultado["problemas"][0], True)
     chequear("Código que ninguna FDS nombra: None", fds_del_producto("X-999", {"X-100": [lavandina]}), None)
+
+    print("\n--- consolidar (casos armados, sin el servidor) ---")
+    from servidor_mcp import consolidar  # la función sola
+    MAPA_PDF = {"descripcion": "producto", "presentacion": "presentacion", "precio": "precio"}
+    MAPA_EXCEL = {"descripcion": "Producto", "presentacion": "Presentación", "precio": "Precio nuevo"}
+    PDF_01 = {"fecha": "2026-10-01"}
+
+    def fila_pdf():
+        """Una fila de Andes como la arma leer_filas_pdf, antes del cruce."""
+        return {"fuente": {"archivo": "a.pdf", "pagina": 1},
+                "original": {"producto": "Febril 1g", "presentacion": "Comp. x 10", "precio": "$ 120,52"},
+                "calculado": {"contenido": 10, "unidad": "UN", "precio_costo": 120.52, "moneda": "UYU",
+                              "descripcion_expandida": "FEBRIL 1G", "conflictos": [], "fuentes": {},
+                              "vigencia_precio": "2026-10-01"}}
+
+    def fila_excel(**cambios):
+        """Una fila del Excel de actualización, con lo que se le cambie."""
+        valores = {"Producto": "Febril 1 g", "Presentación": "Comprimidos x 10", "Precio nuevo": 130.0, **cambios}
+        return {"fuente": {"archivo": "b.xlsx", "hoja": "H", "fila": 5}, "original": valores}
+
+    fila = fila_pdf()
+    consolidar(fila, fila["original"], MAPA_PDF, PDF_01, fila_excel(), MAPA_EXCEL, {"fecha": "2026-09-01"}, "UYU")
+    chequear("Excel MÁS VIEJO que el PDF: rige el PDF", (fila["calculado"]["precio_costo"], fila["calculado"]["fuentes"]),
+             (120.52, {}))
+    fila = fila_pdf()
+    consolidar(fila, fila["original"], MAPA_PDF, PDF_01, fila_excel(), MAPA_EXCEL, None, "UYU")
+    chequear("Excel sin vigencia: no se decide el precio (vacío + conflicto)",
+             (fila["calculado"]["precio_costo"], [c["campo"] for c in fila["calculado"]["conflictos"]]),
+             (None, ["precio_costo"]))
+    fila = fila_pdf()
+    consolidar(fila, fila["original"], MAPA_PDF, PDF_01, fila_excel(), MAPA_EXCEL, {"fecha": "2026-10-01"}, "UYU")
+    chequear("Misma vigencia y precios distintos: no se decide", fila["calculado"]["precio_costo"], None)
+    fila = fila_pdf()
+    consolidar(fila, fila["original"], MAPA_PDF, PDF_01, fila_excel(**{"Precio nuevo": 120.52}), MAPA_EXCEL, None, "UYU")
+    chequear("Mismo precio en los dos: no hay nada que decidir (sin conflicto)", fila["calculado"]["conflictos"], [])
+    fila = fila_pdf()
+    consolidar(fila, fila["original"], MAPA_PDF, PDF_01, fila_excel(Producto="Febril 500 mg"), MAPA_EXCEL,
+               {"fecha": "2026-10-15"}, "UYU")
+    chequear("Nombre distinto (no solo espacios): conflicto de descripción",
+             [c["campo"] for c in fila["calculado"]["conflictos"]], ["descripcion"])
 
     shutil.rmtree(carpeta_temporal, ignore_errors=True)  # borramos la carpeta temporal de las pruebas
     print(f"\nResultado: {'todo OK' if errores == 0 else f'{errores} con error'}")

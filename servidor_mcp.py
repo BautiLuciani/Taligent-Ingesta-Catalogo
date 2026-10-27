@@ -5,6 +5,7 @@ Se comunica por stdio: NUNCA usar print() acá (stdout es el canal con el agente
 import csv
 import json
 import os
+import unicodedata
 from pathlib import Path
 from typing import Annotated, Any, Literal
 
@@ -15,6 +16,7 @@ from pydantic import BaseModel, Field
 from cuentas import (cargar_abreviaturas, cargar_vocabulario, contenido_de_presentacion, convertir_condicion,
                      convertir_contenido, convertir_numero, convertir_precio, expandir_abreviaturas, normalizar_gtin,
                      separar_contenido)
+from lector_excel import leer_tabla_excel
 
 CARPETA_DATA = Path(__file__).parent / "Data"
 ABREVIATURAS = cargar_abreviaturas()
@@ -54,6 +56,11 @@ PROVEEDORES = {
         "campos": {"descripcion": "producto", "presentacion": "presentacion", "ean": "ean", "precio": "precio",
                    "condicion": "condicion"},
         "moneda": "UYU",  # la lista está en "$" -> pesos uruguayos (estándar, sección 6)
+        # Un archivo posterior que actualiza la lista (paso 6D3): se cruza por código
+        "actualizaciones": [{
+            "excel": CARPETA_DATA / "proveedores" / "P01_Laboratorio_Andes" / "Actualizacion_precios_Andes.xlsx",
+            "campos": {"descripcion": "Producto", "presentacion": "Presentación", "precio": "Precio nuevo"},
+        }],
     },
 }
 
@@ -180,6 +187,95 @@ def leer_filas_pdf(proveedor_id: str, config: dict) -> list[dict]:
     return filas
 
 
+def contenido_de(valores: dict, mapa: dict) -> tuple[int | None, str | None]:
+    """El contenido ya normalizado (ML/G/UN) de una fila, desde su columna "contenido" o "presentacion"."""
+    if "contenido" in mapa:
+        return convertir_contenido(*separar_contenido(valores.get(mapa["contenido"])))
+    if "presentacion" in mapa:
+        return convertir_contenido(*contenido_de_presentacion(valores.get(mapa["presentacion"])))
+    return None, None
+
+
+def mismo_texto(a, b) -> bool:
+    """¿Dicen lo mismo, salvo espacios, mayúsculas o ligaduras? "Febril 500mg" = "Febril 500 mg" = "FEBRIL 500 MG"."""
+    def limpio(texto):
+        return unicodedata.normalize("NFKC", str(texto)).upper().replace(" ", "")
+    return limpio(a) == limpio(b)
+
+
+def consolidar(fila: dict, base: dict, mapa_base: dict, vigencia_base: dict | None,
+               actualizacion: dict, mapa_act: dict, vigencia_act: dict | None, moneda_lista: str) -> None:
+    """Cruza una fila con la fila de un archivo posterior del mismo proveedor (paso 6D3). Modifica la fila.
+
+    Lo exacto lo hace el código (decisión 1): compara valores YA normalizados, no cómo están escritos.
+    - Contenido o nombre distintos -> conflicto: el campo queda vacío y van las dos versiones con sus fuentes.
+    - Precio: no es conflicto, rige la lista de vigencia más reciente (estándar, sección 6), con SU fuente.
+      Si falta una vigencia, o tienen la misma y los precios difieren, no se puede decidir (decisión 2):
+      el precio queda vacío y va como conflicto.
+    """
+    calculado = fila["calculado"]
+    fuente_base, fuente_act = fila["fuente"], actualizacion["fuente"]
+    valores_act = actualizacion["original"]
+    fila["original"]["actualizacion"] = {"fuente": fuente_act, **valores_act}
+
+    def conflicto(campo, valor_base, valor_act):
+        calculado["conflictos"].append({"campo": campo, "versiones": [
+            {"valor": valor_base, "fuente": fuente_base}, {"valor": valor_act, "fuente": fuente_act}]})
+
+    # Contenido: se comparan los números ya normalizados ("Comp. x 20" = "Comp. rec. x 20" = 20 UN)
+    contenido_act = contenido_de(valores_act, mapa_act)
+    if contenido_act != (None, None) and contenido_act != (calculado["contenido"], calculado["unidad"]):
+        conflicto("contenido", f"{calculado['contenido']} {calculado['unidad']}", f"{contenido_act[0]} {contenido_act[1]}")
+        calculado["contenido"], calculado["unidad"] = None, None
+
+    # Nombre del producto: el mismo, salvo espacios y mayúsculas
+    if "descripcion" in mapa_act and not mismo_texto(base.get(mapa_base["descripcion"]), valores_act.get(mapa_act["descripcion"])):
+        conflicto("descripcion", base.get(mapa_base["descripcion"]), valores_act.get(mapa_act["descripcion"]))
+        calculado["descripcion_expandida"] = None
+
+    # Precio: rige la vigencia más reciente
+    if "precio" in mapa_act:
+        valor = valores_act.get(mapa_act["precio"])
+        precio_act, moneda_act = (float(valor), None) if isinstance(valor, (int, float)) else convertir_precio(valor)
+        moneda_act = moneda_act or moneda_lista
+        # Las fechas vienen en formato ISO ("2026-10-15"): de año a día, así que se comparan bien como texto
+        fecha_base = vigencia_base["fecha"] if vigencia_base else None
+        fecha_act = vigencia_act["fecha"] if vigencia_act else None
+        if precio_act is None or precio_act == calculado["precio_costo"]:
+            pass  # la actualización no trae precio, o trae el mismo: no cambia nada
+        elif fecha_base and fecha_act and fecha_act > fecha_base:
+            calculado["precio_costo"], calculado["moneda"] = precio_act, moneda_act
+            calculado["fuentes"]["precio_costo"] = calculado["fuentes"]["moneda"] = fuente_act
+            calculado["vigencia_precio"] = fecha_act
+        elif fecha_base and fecha_act and fecha_act < fecha_base:
+            pass  # la "actualización" es más vieja: rige la base
+        else:
+            conflicto("precio_costo", calculado["precio_costo"], precio_act)
+            calculado["precio_costo"], calculado["vigencia_precio"] = None, None
+
+
+def aplicar_actualizaciones(proveedor_id: str, config: dict, filas: list[dict]) -> None:
+    """Cruza por código las filas de un proveedor con sus archivos de actualización (los Excel posteriores).
+
+    A toda fila de un proveedor con actualizaciones le suma: calculado.conflictos (lista), calculado.fuentes
+    (la fuente de cada campo que NO sale de su fila) y calculado.vigencia_precio (desde cuándo rige su precio).
+    Un código que está solo en la actualización no es un alta (la actualización no presenta productos nuevos).
+    """
+    extraccion = json.loads(config["extraccion"].read_text(encoding="utf-8")) if "extraccion" in config else {}
+    vigencia_base = extraccion.get("vigencia")
+    for fila in filas:
+        fila["calculado"].update({"conflictos": [], "fuentes": {},
+                                  "vigencia_precio": vigencia_base["fecha"] if vigencia_base else None})
+    for act in config["actualizaciones"]:
+        tabla = leer_tabla_excel(act["excel"], act.get("hoja"))
+        por_codigo = {fila_excel["codigo"]: fila_excel for fila_excel in tabla["filas"]}
+        for fila in filas:
+            codigo = fila["item_id"].split(":", 1)[1]
+            if codigo in por_codigo:
+                consolidar(fila, fila["original"], config["campos"], vigencia_base,
+                           por_codigo[codigo], act["campos"], tabla["vigencia"], config["moneda"])
+
+
 # Cada formato de archivo, con la función que lo lee. Todas devuelven filas con la misma forma.
 LECTORES = {"csv": leer_filas_csv, "pdf": leer_filas_pdf}
 
@@ -222,6 +318,8 @@ def fds_del_producto(codigo: str, indice_fds: dict[str, list[dict]]) -> dict | N
 def leer_filas(proveedor_id: str, config: dict) -> list[dict]:
     """Lee las filas de un proveedor con el lector de su formato (CSV, PDF...) y le suma a cada una su FDS."""
     filas = LECTORES[config["formato"]](proveedor_id, config)
+    if "actualizaciones" in config:
+        aplicar_actualizaciones(proveedor_id, config, filas)
     indice_fds = indexar_fds(config.get("fds"))
     for fila in filas:
         codigo = fila["item_id"].split(":", 1)[1]  # "P07:LHS-206" -> "LHS-206"
