@@ -3,8 +3,9 @@ import copy
 import json
 from pathlib import Path
 
-from extractor_pdf import (buscar_fila, campos_desde_respuesta, codigo_al_inicio, codigos_en_citas, filas_de_un_texto,
-                           filas_desde_citas, filas_verificadas, normalizar_espacios, valor_en_fila, verificar_campos)
+from extractor_pdf import (COLUMNAS_POR_PDF, buscar_fila, campos_desde_respuesta, codigo_al_inicio, codigos_en_citas, filas_de_un_texto,
+                           filas_desde_citas, filas_verificadas, normalizar_espacios, tool_campos, valor_en_fila,
+                           verificar_campos)
 
 RUTA_EXPERIMENTO = Path(__file__).parent / "salida" / "experimentos" / "citas_lhs.json"
 
@@ -97,36 +98,39 @@ filas, _ = filas_verificadas(copy.deepcopy(respuesta["content"]))
 chequear("Con el paso 1 (3 pedidos) faltarían 22", len(codigos - set(filas)), 22)
 chequear("Bloque sin cita: no aporta códigos", codigos_en_citas([{"type": "text", "text": "LHS-206", "citations": None}]), set())
 
+COLUMNAS_LHS = COLUMNAS_POR_PDF["LHS_catalogo_nuevos_productos.pdf"]
+COLUMNAS_ANDES = COLUMNAS_POR_PDF["Lista_de_precios_octubre_2026.pdf"]
+
 print("--- verificar_campos ---")
 FILA_215 = "LHS-215 Limpiador Clarita Multiuso Lavanda X 500 ML 7792189253836 $ 83,84"
 BIEN_206 = {"descripcion": "Lavandina Clarita Concentrada", "contenido": "2000 ML",
             "ean": "7790840033469", "costo": "$ 88,04"}
-campos, problemas = verificar_campos("LHS-206", FILA_206, BIEN_206)
+campos, _, problemas = verificar_campos("LHS-206", FILA_206, BIEN_206, COLUMNAS_LHS, admite_ajeno=False)
 chequear("LHS-206 bien separado: quedan los 4", campos, BIEN_206)
 chequear("...sin problemas", problemas, [])
-campos, problemas = verificar_campos("LHS-275", FILA_275, {"descripcion": "Alcohol Clarita 96 %", "contenido": "500 CC",
-                                                           "ean": None, "costo": "$ 117,34"})
+campos, _, problemas = verificar_campos("LHS-275", FILA_275, {"descripcion": "Alcohol Clarita 96 %", "contenido": "500 CC",
+                                                           "ean": None, "costo": "$ 117,34"}, COLUMNAS_LHS, admite_ajeno=False)
 chequear("LHS-275 sin EAN: queda None y la fila cierra igual", (campos["ean"], problemas), (None, []))
-campos, _ = verificar_campos("LHS-275", FILA_275, {"descripcion": "Alcohol Clarita 96 %", "contenido": "500 CC",
-                                                   "ean": "", "costo": "$ 117,34"})
+campos, _, _ = verificar_campos("LHS-275", FILA_275, {"descripcion": "Alcohol Clarita 96 %", "contenido": "500 CC",
+                                                   "ean": "", "costo": "$ 117,34"}, COLUMNAS_LHS, admite_ajeno=False)
 chequear("EAN vacío \"\" se toma como None", campos["ean"], None)
-campos, problemas = verificar_campos("LHS-215", FILA_215, {"descripcion": "Limpiador Clarita Multiuso Lavanda",
+campos, _, problemas = verificar_campos("LHS-215", FILA_215, {"descripcion": "Limpiador Clarita Multiuso Lavanda",
                                                            "contenido": "X 500 ML", "ean": "7792189253836",
-                                                           "costo": "$ 83,84"})
+                                                           "costo": "$ 83,84"}, COLUMNAS_LHS, admite_ajeno=False)
 chequear("LHS-215 con la X en el contenido: cierra", problemas, [])
-campos, problemas = verificar_campos("LHS-215", FILA_215, {"descripcion": "Limpiador Clarita Multiuso Lavanda",
+campos, _, problemas = verificar_campos("LHS-215", FILA_215, {"descripcion": "Limpiador Clarita Multiuso Lavanda",
                                                            "contenido": "500 ML", "ean": "7792189253836",
-                                                           "costo": "$ 83,84"})
+                                                           "costo": "$ 83,84"}, COLUMNAS_LHS, admite_ajeno=False)
 chequear("LHS-215 con la X perdida: problema (falta algo)", len(problemas), 1)
-campos, problemas = verificar_campos("LHS-206", FILA_206, {**BIEN_206, "descripcion": "Lavandina Clarita Concentrada 2000 ML"})
+campos, _, problemas = verificar_campos("LHS-206", FILA_206, {**BIEN_206, "descripcion": "Lavandina Clarita Concentrada 2000 ML"}, COLUMNAS_LHS, admite_ajeno=False)
 chequear("Descripción que se comió el contenido: problema (sobra algo)", len(problemas), 1)
 chequear("...pero los campos no se tiran", campos["descripcion"], "Lavandina Clarita Concentrada 2000 ML")
-campos, problemas = verificar_campos("LHS-206", FILA_206, {**BIEN_206, "costo": "$ 88,40"})
+campos, _, problemas = verificar_campos("LHS-206", FILA_206, {**BIEN_206, "costo": "$ 88,40"}, COLUMNAS_LHS, admite_ajeno=False)
 chequear("Costo inventado: queda vacío", campos["costo"], None)
 chequear("...y es el único problema (el control 2 no se suma)", len(problemas), 1)
-campos, problemas = verificar_campos("LHS-206", FILA_206, {**BIEN_206, "ean": "7794288526675"})
+campos, _, problemas = verificar_campos("LHS-206", FILA_206, {**BIEN_206, "ean": "7794288526675"}, COLUMNAS_LHS, admite_ajeno=False)
 chequear("EAN de otra fila: queda vacío", (campos["ean"], len(problemas)), (None, 1))
-campos, problemas = verificar_campos("LHS-206", FILA_206, {**BIEN_206, "costo": "$\xa088,04"})
+campos, _, problemas = verificar_campos("LHS-206", FILA_206, {**BIEN_206, "costo": "$\xa088,04"}, COLUMNAS_LHS, admite_ajeno=False)
 chequear("Espacio raro en el valor: se normaliza y pasa", (campos["costo"], problemas), ("$ 88,04", []))
 
 print("--- campos_desde_respuesta ---")
@@ -141,24 +145,24 @@ def entrega(productos):
     return [{"type": "tool_use", "id": "x", "name": "entregar_campos", "input": {"productos": productos}}]
 
 
-productos, problemas = campos_desde_respuesta(entrega([P275, P206]), FILAS_2)
+productos, problemas = campos_desde_respuesta(entrega([P275, P206]), FILAS_2, COLUMNAS_LHS)
 chequear("Llegan desordenados: salen en el orden del PDF", [p["codigo"] for p in productos], ["LHS-206", "LHS-275"])
 chequear("...sin problemas en ningún lado", ([p["problemas"] for p in productos], problemas), ([[], []], []))
 chequear("...y cada producto conserva su página y su fila", (productos[0]["pagina"], productos[0]["fila"]), (1, FILA_206))
-productos, problemas = campos_desde_respuesta(entrega([P206]), FILAS_2)
+productos, problemas = campos_desde_respuesta(entrega([P206]), FILAS_2, COLUMNAS_LHS)
 chequear("Falta LHS-275: no desaparece", len(productos), 2)
 chequear("...queda con campos vacíos y su marca", (productos[1]["campos"]["costo"], len(productos[1]["problemas"])), (None, 1))
-productos, problemas = campos_desde_respuesta(entrega([P206, P275, {**P206, "codigo": "LHS-999"}, "basura"]), FILAS_2)
+productos, problemas = campos_desde_respuesta(entrega([P206, P275, {**P206, "codigo": "LHS-999"}, "basura"]), FILAS_2, COLUMNAS_LHS)
 chequear("Código inventado y basura: 2 problemas generales", len(problemas), 2)
 chequear("...y los productos buenos no se tocan", [p["problemas"] for p in productos], [[], []])
-productos, _ = campos_desde_respuesta(entrega([P206, P206, P275]), FILAS_2)
+productos, _ = campos_desde_respuesta(entrega([P206, P206, P275]), FILAS_2, COLUMNAS_LHS)
 chequear("Repetido idéntico: sin problemas", productos[0]["problemas"], [])
-productos, _ = campos_desde_respuesta(entrega([P206, {**P206, "contenido": "2000"}, P275]), FILAS_2)
+productos, _ = campos_desde_respuesta(entrega([P206, {**P206, "contenido": "2000"}, P275]), FILAS_2, COLUMNAS_LHS)
 chequear("Repetido distinto: marcado y sin campos", (len(productos[0]["problemas"]), productos[0]["campos"]["descripcion"]), (1, None))
-productos, problemas = campos_desde_respuesta([{"type": "text", "text": "Listo"}], FILAS_2)
+productos, problemas = campos_desde_respuesta([{"type": "text", "text": "Listo"}], FILAS_2, COLUMNAS_LHS)
 chequear("No llamó a la tool: problema general", len(problemas), 1)
 chequear("...y las 2 filas quedan marcadas, no desaparecen", [len(p["problemas"]) for p in productos], [1, 1])
-productos, _ = campos_desde_respuesta(entrega([{**P206, "costo": "$ 88,40"}, P275]), FILAS_2)
+productos, _ = campos_desde_respuesta(entrega([{**P206, "costo": "$ 88,40"}, P275]), FILAS_2, COLUMNAS_LHS)
 chequear("Costo inventado: pasa por verificar_campos y queda vacío", productos[0]["campos"]["costo"], None)
 
 print("--- codigo_al_inicio (paso 6B) ---")
@@ -230,5 +234,42 @@ chequear("Mismos códigos en dos páginas: no se elige ninguno (son 2: AN-1160 y
 filas_c, problemas_c = filas_desde_citas([bloque_citado(DOS), {"type": "text", "text": "AN-1199: no figura", "citations": None}])
 chequear("Haiku nombró un código que no está citado: problema de cobertura",
          problemas_c, ["AN-1199: Haiku lo nombró pero no aparece en ningún texto citado."])
+
+print("--- columnas por PDF y texto ajeno (paso 6B2) ---")
+herramienta = tool_campos(COLUMNAS_ANDES)
+propiedades = herramienta["input_schema"]["properties"]["productos"]["items"]["properties"]
+chequear("La tool de Andes tiene sus columnas + código + texto ajeno", list(propiedades),
+         ["codigo", "producto", "monodroga", "presentacion", "condicion", "ean", "precio", "texto_ajeno"])
+chequear("...y todas son obligatorias (se pueden mandar en null, no omitir)",
+         herramienta["input_schema"]["properties"]["productos"]["items"]["required"], list(propiedades))
+FILA_1106 = filas_a["AN-1106"]["fila"]
+BIEN_1106 = {"producto": "Antiacid 400 mg + 400 mg/5 ml", "monodroga": None, "presentacion": "Susp. x 200 ml",
+             "condicion": "VL", "ean": "7799252522035", "precio": "$ 156,16"}
+campos, ajeno, problemas = verificar_campos("AN-1106", FILA_1106, BIEN_1106, COLUMNAS_ANDES, admite_ajeno=False)
+chequear("AN-1106 (celda partida, sin monodroga): cierra", (campos, ajeno, problemas), (BIEN_1106, None, []))
+FILA_1178 = filas_a["AN-1178"]["fila"]
+PIE = "Laboratorio Andes S.A. · Lista de precios octubre 2026 Página 1 de 1"
+BIEN_1178 = {"producto": "Febril 1g", "monodroga": "Paracetamol", "presentacion": "Comp. x 10", "condicion": "VL",
+             "ean": "7792542521701", "precio": "$ 120,52"}
+campos, ajeno, problemas = verificar_campos("AN-1178", FILA_1178, {**BIEN_1178, "texto_ajeno": PIE}, COLUMNAS_ANDES,
+                                            admite_ajeno=True)
+chequear("AN-1178 (la última): el pie va como texto ajeno y cierra", (ajeno, problemas), (PIE, []))
+_, _, problemas = verificar_campos("AN-1178", FILA_1178, BIEN_1178, COLUMNAS_ANDES, admite_ajeno=True)
+chequear("...si no dice nada del pie, la fila no cierra (nada se pierde sin decirlo)", len(problemas), 1)
+_, ajeno, problemas = verificar_campos("AN-1106", FILA_1106, {**BIEN_1106, "texto_ajeno": "x"}, COLUMNAS_ANDES,
+                                       admite_ajeno=False)
+chequear("Texto ajeno en una fila que no es la última: no se acepta", (ajeno, len(problemas)), (None, 1))
+SIN_PRECIO = {**BIEN_1106, "precio": None, "texto_ajeno": "$ 156,16"}
+campos, _, problemas = verificar_campos("AN-1106", FILA_1106, SIN_PRECIO, COLUMNAS_ANDES, admite_ajeno=False)
+chequear("Esconder el precio como 'texto ajeno' en una fila cerrada: no pasa (precio vacío + el problema)",
+         (campos["precio"], len(problemas)), (None, 1))
+FILAS_LHS = {"LHS-269": filas_l["LHS-269"]}
+PIE_LHS = "Las fichas de datos de seguridad se envían por separado."
+P269 = {"codigo": "LHS-269", "descripcion": "Lavandina Clarita Concentrada", "contenido": "1000 ML",
+        "ean": "7793634603527", "costo": "$ 54,71", "texto_ajeno": PIE_LHS}
+productos, _ = campos_desde_respuesta(entrega([P269]), FILAS_LHS, COLUMNAS_LHS)
+chequear("LHS-269: sin problemas y el pie queda aparte", (productos[0]["problemas"], productos[0]["texto_ajeno"]),
+         ([], PIE_LHS))
+chequear("...y su 'fila' queda igual que antes (sin el pie)", productos[0]["fila"], FILA_269)
 
 print(f"\nResultado: {'todo OK' if errores == 0 else f'{errores} con error'}")
