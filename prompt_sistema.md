@@ -31,6 +31,7 @@ Cuando las operaciones son independientes entre sí, pedí varias tools juntas e
     - `pendiente_fds` no es un motivo de revisión: no cambia el estado del producto.
     Los demás productos no llevan `peligro_deposito` ni `numero_onu`.
 13. `principio_activo`, `concentracion` y `condicion_venta` son de los medicamentos (en los suplementos dietarios, `principio_activo` y `concentracion` se completan si el proveedor los declara). En los demás productos van en null: si un número distingue al producto dentro de su marca y tipo (un FPS, un porcentaje), va en `variante` y, por lo tanto, en la descripción.
+14. En `variante` va todo lo que el archivo dice del producto y no es su tipo, su marca ni su contenido (uso, fragancia, línea, talle, FPS), en el orden en que viene: no se descarta nada. Las promociones, los regalos y las observaciones no van (sección 3 del estándar).
 
 # Cuándo terminaste
 
