@@ -1,0 +1,740 @@
+{
+  "id": "msg_011CgUj6fahhrCx1S2VHUANe",
+  "container": null,
+  "content": [
+    {
+      "signature": "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",
+      "thinking": "",
+      "type": "thinking"
+    },
+    {
+      "citations": null,
+      "text": "Hay 18 productos. Varios nombres se repiten con distinto código y contenido, así que los separo por código.\n\n**DL-151**: ",
+      "type": "text"
+    },
+    {
+      "citations": [
+        {
+          "cited_text": "Dermalab Hydra Plus\r\nCrema. Textura liviana de rápida absorción. Hidratación facial de uso diario.\r\nContenido neto: 50 ml · Código: DL-151\r\nDermalab Purify\r\nGel limpiador. ",
+          "document_index": 0,
+          "document_title": "Dermalab_lanzamientos_2026.pdf",
+          "end_page_number": 2,
+          "file_id": null,
+          "start_page_number": 1,
+          "type": "page_location"
+        }
+      ],
+      "text": "Dermalab Hydra Plus es una crema. Tiene textura liviana de rápida absorción, con hidratación facial de uso diario. Su contenido neto es de 50 ml.",
+      "type": "text"
+    },
+    {
+      "citations": null,
+      "text": "\n\n**DL-103**: ",
+      "type": "text"
+    },
+    {
+      "citations": [
+        {
+          "cited_text": "Contenido neto: 50 ml · Código: DL-151\r\nDermalab Purify\r\nGel limpiador. Limpia en profundidad sin resecar. Para piel mixta a grasa.\r\n",
+          "document_index": 0,
+          "document_title": "Dermalab_lanzamientos_2026.pdf",
+          "end_page_number": 2,
+          "file_id": null,
+          "start_page_number": 1,
+          "type": "page_location"
+        }
+      ],
+      "text": "Dermalab Purify es un gel limpiador. Limpia en profundidad sin resecar y está indicado para piel mixta a grasa.",
+      "type": "text"
+    },
+    {
+      "citations": null,
+      "text": " ",
+      "type": "text"
+    },
+    {
+      "citations": [
+        {
+          "cited_text": "Contenido neto: 300 ml · Código: DL-103\r\nDermalab Sun SPF 50+\r\nProtector solar. ",
+          "document_index": 0,
+          "document_title": "Dermalab_lanzamientos_2026.pdf",
+          "end_page_number": 2,
+          "file_id": null,
+          "start_page_number": 1,
+          "type": "page_location"
+        }
+      ],
+      "text": "Su contenido neto es de 300 ml.",
+      "type": "text"
+    },
+    {
+      "citations": null,
+      "text": "\n\n**DL-106**: ",
+      "type": "text"
+    },
+    {
+      "citations": [
+        {
+          "cited_text": "Contenido neto: 300 ml · Código: DL-103\r\nDermalab Sun SPF 50+\r\nProtector solar. Amplio espectro UVA/UVB. Resistente al agua.\r\n",
+          "document_index": 0,
+          "document_title": "Dermalab_lanzamientos_2026.pdf",
+          "end_page_number": 2,
+          "file_id": null,
+          "start_page_number": 1,
+          "type": "page_location"
+        }
+      ],
+      "text": "Dermalab Sun SPF 50+ es un protector solar. Tiene amplio espectro UVA/UVB y es resistente al agua.",
+      "type": "text"
+    },
+    {
+      "citations": null,
+      "text": " ",
+      "type": "text"
+    },
+    {
+      "citations": [
+        {
+          "cited_text": "Contenido neto: 50 ml · Código: DL-106\r\nDermalab Urea 10 %\r\nCrema. ",
+          "document_index": 0,
+          "document_title": "Dermalab_lanzamientos_2026.pdf",
+          "end_page_number": 2,
+          "file_id": null,
+          "start_page_number": 1,
+          "type": "page_location"
+        }
+      ],
+      "text": "Su contenido neto es de 50 ml.",
+      "type": "text"
+    },
+    {
+      "citations": null,
+      "text": "\n\n**DL-109**: ",
+      "type": "text"
+    },
+    {
+      "citations": [
+        {
+          "cited_text": "Contenido neto: 50 ml · Código: DL-106\r\nDermalab Urea 10 %\r\nCrema. Textura liviana de rápida absorción. Hidratación intensa para el cuerpo, ideal para piel muy seca.\r\n",
+          "document_index": 0,
+          "document_title": "Dermalab_lanzamientos_2026.pdf",
+          "end_page_number": 2,
+          "file_id": null,
+          "start_page_number": 1,
+          "type": "page_location"
+        }
+      ],
+      "text": "Dermalab Urea 10 % es una crema. Tiene textura liviana de rápida absorción y ofrece hidratación intensa para el cuerpo, ideal para piel muy seca.",
+      "type": "text"
+    },
+    {
+      "citations": null,
+      "text": " ",
+      "type": "text"
+    },
+    {
+      "citations": [
+        {
+          "cited_text": "Contenido neto: 400 ml · Código: DL-109\r\nDermalab Lift\r\nSérum. ",
+          "document_index": 0,
+          "document_title": "Dermalab_lanzamientos_2026.pdf",
+          "end_page_number": 2,
+          "file_id": null,
+          "start_page_number": 1,
+          "type": "page_location"
+        }
+      ],
+      "text": "Su contenido neto es de 400 ml.",
+      "type": "text"
+    },
+    {
+      "citations": null,
+      "text": "\n\n**DL-112**: ",
+      "type": "text"
+    },
+    {
+      "citations": [
+        {
+          "cited_text": "Contenido neto: 400 ml · Código: DL-109\r\nDermalab Lift\r\nSérum. Con péptidos y ácido hialurónico. Reduce arrugas visibles en cuatro semanas.\r\n",
+          "document_index": 0,
+          "document_title": "Dermalab_lanzamientos_2026.pdf",
+          "end_page_number": 2,
+          "file_id": null,
+          "start_page_number": 1,
+          "type": "page_location"
+        }
+      ],
+      "text": "Dermalab Lift es un sérum con péptidos y ácido hialurónico. Reduce arrugas visibles en cuatro semanas.",
+      "type": "text"
+    },
+    {
+      "citations": null,
+      "text": " ",
+      "type": "text"
+    },
+    {
+      "citations": [
+        {
+          "cited_text": "Contenido neto: 30 ml · Código: DL-112\r\nDermalab Hydra Plus SPF 30\r\nCrema. ",
+          "document_index": 0,
+          "document_title": "Dermalab_lanzamientos_2026.pdf",
+          "end_page_number": 2,
+          "file_id": null,
+          "start_page_number": 1,
+          "type": "page_location"
+        }
+      ],
+      "text": "Su contenido neto es de 30 ml.",
+      "type": "text"
+    },
+    {
+      "citations": null,
+      "text": "\n\n**DL-115**: ",
+      "type": "text"
+    },
+    {
+      "citations": [
+        {
+          "cited_text": "Contenido neto: 30 ml · Código: DL-112\r\nDermalab Hydra Plus SPF 30\r\nCrema. Textura liviana de rápida absorción. Hidratación facial de uso diario.\r\n",
+          "document_index": 0,
+          "document_title": "Dermalab_lanzamientos_2026.pdf",
+          "end_page_number": 2,
+          "file_id": null,
+          "start_page_number": 1,
+          "type": "page_location"
+        }
+      ],
+      "text": "Dermalab Hydra Plus SPF 30 es una crema. Tiene textura liviana de rápida absorción y es para hidratación facial de uso diario.",
+      "type": "text"
+    },
+    {
+      "citations": null,
+      "text": " ",
+      "type": "text"
+    },
+    {
+      "citations": [
+        {
+          "cited_text": "Contenido neto: 50 ml · Código: DL-115\r\nDermalab Purify\r\nGel limpiador. ",
+          "document_index": 0,
+          "document_title": "Dermalab_lanzamientos_2026.pdf",
+          "end_page_number": 2,
+          "file_id": null,
+          "start_page_number": 1,
+          "type": "page_location"
+        }
+      ],
+      "text": "Su contenido neto es de 50 ml.",
+      "type": "text"
+    },
+    {
+      "citations": null,
+      "text": "\n\n**DL-118**: ",
+      "type": "text"
+    },
+    {
+      "citations": [
+        {
+          "cited_text": "Contenido neto: 50 ml · Código: DL-115\r\nDermalab Purify\r\nGel limpiador. Limpia en profundidad sin resecar. Para piel mixta a grasa.\r\n",
+          "document_index": 0,
+          "document_title": "Dermalab_lanzamientos_2026.pdf",
+          "end_page_number": 2,
+          "file_id": null,
+          "start_page_number": 1,
+          "type": "page_location"
+        }
+      ],
+      "text": "Dermalab Purify es un gel limpiador. Limpia en profundidad sin resecar y está indicado para piel mixta a grasa.",
+      "type": "text"
+    },
+    {
+      "citations": null,
+      "text": " ",
+      "type": "text"
+    },
+    {
+      "citations": [
+        {
+          "cited_text": "Contenido neto: 150 ml · Código: DL-118\r\nDermalab Sun SPF 30\r\nProtector solar. ",
+          "document_index": 0,
+          "document_title": "Dermalab_lanzamientos_2026.pdf",
+          "end_page_number": 2,
+          "file_id": null,
+          "start_page_number": 1,
+          "type": "page_location"
+        }
+      ],
+      "text": "Su contenido neto es de 150 ml.",
+      "type": "text"
+    },
+    {
+      "citations": null,
+      "text": " Este Purify es una presentación distinta del DL-103, que tiene 300 ml.\n\n**DL-121**: ",
+      "type": "text"
+    },
+    {
+      "citations": [
+        {
+          "cited_text": "Contenido neto: 150 ml · Código: DL-118\r\nDermalab Sun SPF 30\r\nProtector solar. Amplio espectro UVA/UVB. Resistente al agua.\r\n",
+          "document_index": 0,
+          "document_title": "Dermalab_lanzamientos_2026.pdf",
+          "end_page_number": 2,
+          "file_id": null,
+          "start_page_number": 1,
+          "type": "page_location"
+        }
+      ],
+      "text": "Dermalab Sun SPF 30 es un protector solar. Tiene amplio espectro UVA/UVB y es resistente al agua.",
+      "type": "text"
+    },
+    {
+      "citations": null,
+      "text": " ",
+      "type": "text"
+    },
+    {
+      "citations": [
+        {
+          "cited_text": "Contenido neto: 200 ml · Código: DL-121\r\nDermalab Lift Noche\r\nSérum. ",
+          "document_index": 0,
+          "document_title": "Dermalab_lanzamientos_2026.pdf",
+          "end_page_number": 2,
+          "file_id": null,
+          "start_page_number": 1,
+          "type": "page_location"
+        }
+      ],
+      "text": "Su contenido neto es de 200 ml.",
+      "type": "text"
+    },
+    {
+      "citations": null,
+      "text": "\n\n**DL-124**: ",
+      "type": "text"
+    },
+    {
+      "citations": [
+        {
+          "cited_text": "Contenido neto: 200 ml · Código: DL-121\r\nDermalab Lift Noche\r\nSérum. Con péptidos y ácido hialurónico. Reduce arrugas visibles en cuatro semanas.\r\n",
+          "document_index": 0,
+          "document_title": "Dermalab_lanzamientos_2026.pdf",
+          "end_page_number": 2,
+          "file_id": null,
+          "start_page_number": 1,
+          "type": "page_location"
+        }
+      ],
+      "text": "Dermalab Lift Noche es un sérum con péptidos y ácido hialurónico. Reduce arrugas visibles en cuatro semanas.",
+      "type": "text"
+    },
+    {
+      "citations": null,
+      "text": " ",
+      "type": "text"
+    },
+    {
+      "citations": [
+        {
+          "cited_text": "Contenido neto: 30 ml · Código: DL-124\r\nDermalab Sun SPF 50\r\nProtector solar. ",
+          "document_index": 0,
+          "document_title": "Dermalab_lanzamientos_2026.pdf",
+          "end_page_number": 2,
+          "file_id": null,
+          "start_page_number": 1,
+          "type": "page_location"
+        }
+      ],
+      "text": "Su contenido neto es de 30 ml.",
+      "type": "text"
+    },
+    {
+      "citations": null,
+      "text": "\n\n**DL-127**: ",
+      "type": "text"
+    },
+    {
+      "citations": [
+        {
+          "cited_text": "Contenido neto: 30 ml · Código: DL-124\r\nDermalab Sun SPF 50\r\nProtector solar. Amplio espectro UVA/UVB. Resistente al agua.\r\n",
+          "document_index": 0,
+          "document_title": "Dermalab_lanzamientos_2026.pdf",
+          "end_page_number": 2,
+          "file_id": null,
+          "start_page_number": 1,
+          "type": "page_location"
+        }
+      ],
+      "text": "Dermalab Sun SPF 50 es un protector solar. Tiene amplio espectro UVA/UVB y es resistente al agua.",
+      "type": "text"
+    },
+    {
+      "citations": null,
+      "text": " ",
+      "type": "text"
+    },
+    {
+      "citations": [
+        {
+          "cited_text": "Contenido neto: 200 ml · Código: DL-127\r\nDermalab Sensitive\r\nAgua micelar. ",
+          "document_index": 0,
+          "document_title": "Dermalab_lanzamientos_2026.pdf",
+          "end_page_number": 2,
+          "file_id": null,
+          "start_page_number": 1,
+          "type": "page_location"
+        }
+      ],
+      "text": "Su contenido neto es de 200 ml.",
+      "type": "text"
+    },
+    {
+      "citations": null,
+      "text": "\n\n**DL-154**: ",
+      "type": "text"
+    },
+    {
+      "citations": [
+        {
+          "cited_text": "Contenido neto: 200 ml · Código: DL-127\r\nDermalab Sensitive\r\nAgua micelar. Desmaquilla y limpia en un solo paso. Apta para piel sensible.\r\n",
+          "document_index": 0,
+          "document_title": "Dermalab_lanzamientos_2026.pdf",
+          "end_page_number": 2,
+          "file_id": null,
+          "start_page_number": 1,
+          "type": "page_location"
+        }
+      ],
+      "text": "Dermalab Sensitive es un agua micelar. Desmaquilla y limpia en un solo paso, y es apta para piel sensible.",
+      "type": "text"
+    },
+    {
+      "citations": null,
+      "text": " ",
+      "type": "text"
+    },
+    {
+      "citations": [
+        {
+          "cited_text": "Contenido neto: 400 ml · Código: DL-154\r\nDermalab Clear\r\nCrema. ",
+          "document_index": 0,
+          "document_title": "Dermalab_lanzamientos_2026.pdf",
+          "end_page_number": 2,
+          "file_id": null,
+          "start_page_number": 1,
+          "type": "page_location"
+        }
+      ],
+      "text": "Su contenido neto es de 400 ml.",
+      "type": "text"
+    },
+    {
+      "citations": null,
+      "text": "\n\n**DL-130**: ",
+      "type": "text"
+    },
+    {
+      "citations": [
+        {
+          "cited_text": "Contenido neto: 400 ml · Código: DL-154\r\nDermalab Clear\r\nCrema. Textura liviana de rápida absorción. Para piel con tendencia acneica: reduce brillos e imperfecciones.\r\n",
+          "document_index": 0,
+          "document_title": "Dermalab_lanzamientos_2026.pdf",
+          "end_page_number": 2,
+          "file_id": null,
+          "start_page_number": 1,
+          "type": "page_location"
+        }
+      ],
+      "text": "Dermalab Clear es una crema. Tiene textura liviana de rápida absorción y está indicada para piel con tendencia acneica, ya que reduce brillos e imperfecciones.",
+      "type": "text"
+    },
+    {
+      "citations": null,
+      "text": " ",
+      "type": "text"
+    },
+    {
+      "citations": [
+        {
+          "cited_text": "Contenido neto: 40 ml · Código: DL-130\r\nDermalab Sun SPF 30\r\nProtector solar. ",
+          "document_index": 0,
+          "document_title": "Dermalab_lanzamientos_2026.pdf",
+          "end_page_number": 2,
+          "file_id": null,
+          "start_page_number": 1,
+          "type": "page_location"
+        }
+      ],
+      "text": "Su contenido neto es de 40 ml.",
+      "type": "text"
+    },
+    {
+      "citations": null,
+      "text": "\n\n**DL-133**: ",
+      "type": "text"
+    },
+    {
+      "citations": [
+        {
+          "cited_text": "Contenido neto: 40 ml · Código: DL-130\r\nDermalab Sun SPF 30\r\nProtector solar. Amplio espectro UVA/UVB. Resistente al agua.\r\n",
+          "document_index": 0,
+          "document_title": "Dermalab_lanzamientos_2026.pdf",
+          "end_page_number": 2,
+          "file_id": null,
+          "start_page_number": 1,
+          "type": "page_location"
+        }
+      ],
+      "text": "Dermalab Sun SPF 30 es un protector solar. Tiene amplio espectro UVA/UVB y es resistente al agua.",
+      "type": "text"
+    },
+    {
+      "citations": null,
+      "text": " ",
+      "type": "text"
+    },
+    {
+      "citations": [
+        {
+          "cited_text": "Contenido neto: 50 ml · Código: DL-133\r\nDermalab Sun Kids SPF 50+\r\nDermalab S.A. Página 1 de 2",
+          "document_index": 0,
+          "document_title": "Dermalab_lanzamientos_2026.pdf",
+          "end_page_number": 2,
+          "file_id": null,
+          "start_page_number": 1,
+          "type": "page_location"
+        }
+      ],
+      "text": "Su contenido neto es de 50 ml.",
+      "type": "text"
+    },
+    {
+      "citations": null,
+      "text": "\n\n**DL-136**: ",
+      "type": "text"
+    },
+    {
+      "citations": [
+        {
+          "cited_text": "Contenido neto: 50 ml · Código: DL-133\r\nDermalab Sun Kids SPF 50+\r\nDermalab S.A. Página 1 de 2Protector solar. Amplio espectro UVA/UVB. Resistente al agua. Formulado especialmente para la piel de los niños.\r\n",
+          "document_index": 0,
+          "document_title": "Dermalab_lanzamientos_2026.pdf",
+          "end_page_number": 3,
+          "file_id": null,
+          "start_page_number": 1,
+          "type": "page_location"
+        }
+      ],
+      "text": "Dermalab Sun Kids SPF 50+ es un protector solar. Tiene amplio espectro UVA/UVB, es resistente al agua y está formulado especialmente para la piel de los niños.",
+      "type": "text"
+    },
+    {
+      "citations": null,
+      "text": " ",
+      "type": "text"
+    },
+    {
+      "citations": [
+        {
+          "cited_text": "Contenido neto: 200 ml · Código: DL-136\r\nDermalab Sun After Sun\r\nGel. ",
+          "document_index": 0,
+          "document_title": "Dermalab_lanzamientos_2026.pdf",
+          "end_page_number": 3,
+          "file_id": null,
+          "start_page_number": 2,
+          "type": "page_location"
+        }
+      ],
+      "text": "Su contenido neto es de 200 ml.",
+      "type": "text"
+    },
+    {
+      "citations": null,
+      "text": "\n\n**DL-139**: ",
+      "type": "text"
+    },
+    {
+      "citations": [
+        {
+          "cited_text": "Contenido neto: 200 ml · Código: DL-136\r\nDermalab Sun After Sun\r\nGel. Calma y refresca la piel después de la exposición al sol.\r\n",
+          "document_index": 0,
+          "document_title": "Dermalab_lanzamientos_2026.pdf",
+          "end_page_number": 3,
+          "file_id": null,
+          "start_page_number": 2,
+          "type": "page_location"
+        }
+      ],
+      "text": "Dermalab Sun After Sun es un gel que calma y refresca la piel después de la exposición al sol.",
+      "type": "text"
+    },
+    {
+      "citations": null,
+      "text": " ",
+      "type": "text"
+    },
+    {
+      "citations": [
+        {
+          "cited_text": "Contenido neto: 200 ml · Código: DL-139\r\nDermalab Sun SPF 50\r\nProtector solar. ",
+          "document_index": 0,
+          "document_title": "Dermalab_lanzamientos_2026.pdf",
+          "end_page_number": 3,
+          "file_id": null,
+          "start_page_number": 2,
+          "type": "page_location"
+        }
+      ],
+      "text": "Su contenido neto es de 200 ml.",
+      "type": "text"
+    },
+    {
+      "citations": null,
+      "text": "\n\n**DL-142**: ",
+      "type": "text"
+    },
+    {
+      "citations": [
+        {
+          "cited_text": "Contenido neto: 200 ml · Código: DL-139\r\nDermalab Sun SPF 50\r\nProtector solar. Amplio espectro UVA/UVB. Resistente al agua.\r\n",
+          "document_index": 0,
+          "document_title": "Dermalab_lanzamientos_2026.pdf",
+          "end_page_number": 3,
+          "file_id": null,
+          "start_page_number": 2,
+          "type": "page_location"
+        }
+      ],
+      "text": "Dermalab Sun SPF 50 es un protector solar. Tiene amplio espectro UVA/UVB y es resistente al agua.",
+      "type": "text"
+    },
+    {
+      "citations": null,
+      "text": " ",
+      "type": "text"
+    },
+    {
+      "citations": [
+        {
+          "cited_text": "Contenido neto: 50 ml · Código: DL-142\r\nDermalab Sensitive\r\nAgua micelar. ",
+          "document_index": 0,
+          "document_title": "Dermalab_lanzamientos_2026.pdf",
+          "end_page_number": 3,
+          "file_id": null,
+          "start_page_number": 2,
+          "type": "page_location"
+        }
+      ],
+      "text": "Su contenido neto es de 50 ml.",
+      "type": "text"
+    },
+    {
+      "citations": null,
+      "text": " Esta presentación es distinta del DL-127, que tiene 200 ml.\n\n**DL-145**: ",
+      "type": "text"
+    },
+    {
+      "citations": [
+        {
+          "cited_text": "Contenido neto: 50 ml · Código: DL-142\r\nDermalab Sensitive\r\nAgua micelar. Desmaquilla y limpia en un solo paso. Apta para piel sensible.\r\n",
+          "document_index": 0,
+          "document_title": "Dermalab_lanzamientos_2026.pdf",
+          "end_page_number": 3,
+          "file_id": null,
+          "start_page_number": 2,
+          "type": "page_location"
+        }
+      ],
+      "text": "Dermalab Sensitive es un agua micelar. Desmaquilla y limpia en un solo paso, y es apta para piel sensible.",
+      "type": "text"
+    },
+    {
+      "citations": null,
+      "text": " ",
+      "type": "text"
+    },
+    {
+      "citations": [
+        {
+          "cited_text": "Contenido neto: 200 ml · Código: DL-145\r\nDermalab Urea 10 %\r\nCrema. ",
+          "document_index": 0,
+          "document_title": "Dermalab_lanzamientos_2026.pdf",
+          "end_page_number": 3,
+          "file_id": null,
+          "start_page_number": 2,
+          "type": "page_location"
+        }
+      ],
+      "text": "Su contenido neto es de 200 ml.",
+      "type": "text"
+    },
+    {
+      "citations": null,
+      "text": " Esta presentación es distinta del DL-154, que tiene 400 ml.\n\n**DL-148**: ",
+      "type": "text"
+    },
+    {
+      "citations": [
+        {
+          "cited_text": "Contenido neto: 200 ml · Código: DL-145\r\nDermalab Urea 10 %\r\nCrema. Textura liviana de rápida absorción. Hidratación intensa para el cuerpo, ideal para piel muy seca.\r\n",
+          "document_index": 0,
+          "document_title": "Dermalab_lanzamientos_2026.pdf",
+          "end_page_number": 3,
+          "file_id": null,
+          "start_page_number": 2,
+          "type": "page_location"
+        }
+      ],
+      "text": "Dermalab Urea 10 % es una crema. Tiene textura liviana de rápida absorción y ofrece hidratación intensa para el cuerpo, ideal para piel muy seca.",
+      "type": "text"
+    },
+    {
+      "citations": null,
+      "text": " ",
+      "type": "text"
+    },
+    {
+      "citations": [
+        {
+          "cited_text": "Contenido neto: 200 ml · Código: DL-148\r\nDermalab S.A. Página 2 de 2",
+          "document_index": 0,
+          "document_title": "Dermalab_lanzamientos_2026.pdf",
+          "end_page_number": 3,
+          "file_id": null,
+          "start_page_number": 2,
+          "type": "page_location"
+        }
+      ],
+      "text": "Su contenido neto es de 200 ml.",
+      "type": "text"
+    },
+    {
+      "citations": null,
+      "text": " Esta presentación es distinta del DL-109, que tiene 400 ml.\n\nTodos los productos tienen nombre, tipo, descripción, contenido neto y código en el documento. El documento no incluye los precios ni los códigos EAN, ya que indica que están en la lista de precios vigente.",
+      "type": "text"
+    }
+  ],
+  "diagnostics": null,
+  "model": "claude-haiku-5-5",
+  "role": "assistant",
+  "stop_details": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "type": "message",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 6317,
+    "output_tokens": 5247,
+    "output_tokens_details": {
+      "thinking_tokens": 2995
+    },
+    "server_tool_use": null,
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}
