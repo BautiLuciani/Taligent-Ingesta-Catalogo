@@ -7993,7 +7993,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "COMPRIMIDOS",
-      "explicacion": "Sin principio activo en el archivo no se puede fijar la clase terapéutica; categoría queda vacía."
+      "explicacion": "Sin principio activo declarado no se puede asignar la categoría; queda null."
     }
   },
   "P01:AN-1106": {
@@ -8078,7 +8078,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "SUSPENSION",
-      "explicacion": "Sin principio activo en el archivo no se puede fijar la clase terapéutica; categoría queda vacía."
+      "explicacion": "Sin principio activo declarado no se puede asignar la categoría; queda null."
     }
   },
   "P01:AN-1109": {
@@ -8169,7 +8169,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "COMPRIMIDOS",
-      "explicacion": "El principio activo paracetamol (analgésico antifebril oral) lleva a Dolor y fiebre > Analgésicos y antifebriles orales."
+      "explicacion": "El principio activo PARACETAMOL es un analgésico/antifebril oral; tipo COMPRIMIDOS en Analgésicos y antifebriles orales."
     }
   },
   "P01:AN-1112": {
@@ -8260,7 +8260,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "COMPRIMIDOS",
-      "explicacion": "El principio activo metformina (antidiabético, bajo receta) lleva a Uso crónico > Metabolismo."
+      "explicacion": "El principio activo METFORMINA es antidiabético (metabolismo, bajo receta); tipo COMPRIMIDOS."
     }
   },
   "P01:AN-1115": {
@@ -8351,7 +8351,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "CAPSULAS",
-      "explicacion": "El principio activo omeprazol (antiácido y protector gástrico) lleva a Digestivo > Antiácidos y protectores gástricos."
+      "explicacion": "El principio activo OMEPRAZOL es un protector gástrico; tipo CAPSULAS en Antiácidos y protectores gástricos."
     }
   },
   "P01:AN-1118": {
@@ -8442,7 +8442,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "CAPSULAS",
-      "explicacion": "El principio activo omeprazol (antiácido y protector gástrico) lleva a Digestivo > Antiácidos y protectores gástricos."
+      "explicacion": "El principio activo OMEPRAZOL es un protector gástrico; tipo CAPSULAS en Antiácidos y protectores gástricos."
     }
   },
   "P01:AN-1121": {
@@ -8533,7 +8533,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "COMPRIMIDOS",
-      "explicacion": "El principio activo loperamida (antidiarreico) lleva a Digestivo > Antidiarreicos."
+      "explicacion": "El principio activo LOPERAMIDA es antidiarreico; tipo COMPRIMIDOS en Antidiarreicos."
     }
   },
   "P01:AN-1124": {
@@ -8626,7 +8626,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "CREMA",
-      "explicacion": "La hidrocortisona (corticoide tópico) lleva a Dermatológicos > Corticoides tópicos."
+      "explicacion": "Crema con HIDROCORTISONA (corticoide tópico) va en Corticoides tópicos."
     }
   },
   "P01:AN-1127": {
@@ -8717,7 +8717,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "COMPRIMIDOS",
-      "explicacion": "El principio activo loratadina (antihistamínico oral) lleva a Respiratorio > Antialérgicos."
+      "explicacion": "El principio activo LORATADINA es antihistamínico oral; tipo COMPRIMIDOS en Antialérgicos."
     }
   },
   "P01:AN-1130": {
@@ -8808,7 +8808,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "CREMA",
-      "explicacion": "La hidrocortisona (corticoide tópico) lleva a Dermatológicos > Corticoides tópicos."
+      "explicacion": "Crema con HIDROCORTISONA (corticoide tópico) va en Corticoides tópicos."
     }
   },
   "P01:AN-1133": {
@@ -8895,7 +8895,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "CREMA",
-      "explicacion": "Crema de clotrimazol, antimicótico tópico: Antimicóticos tópicos (MED-DER-ANF)."
+      "explicacion": "Crema de clotrimazol (principio activo antimicótico): va en Antimicóticos tópicos, MED-DER-ANF."
     }
   },
   "P01:AN-1136": {
@@ -8982,7 +8982,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "COMPRIMIDOS",
-      "explicacion": "Comprimidos de paracetamol para dolor y fiebre: Analgésicos y antifebriles orales (MED-DOL-ANA)."
+      "explicacion": "Comprimidos de paracetamol (analgésico y antifebril oral): va en Analgésicos y antifebriles orales, MED-DOL-ANA."
     }
   },
   "P01:AN-1139": {
@@ -9075,7 +9075,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "COMPRIMIDOS",
-      "explicacion": "Comprimidos de enalapril, antihipertensivo: Cardiovascular (MED-CRO-CAR)."
+      "explicacion": "Comprimidos de enalapril (principio activo antihipertensivo): va en Cardiovascular, MED-CRO-CAR."
     }
   },
   "P01:AN-1142": {
@@ -9168,7 +9168,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "COMPRIMIDOS",
-      "explicacion": "Comprimidos de paracetamol + clorfeniramina + fenilefrina, combinación antigripal: Antigripales (MED-RES-GRI)."
+      "explicacion": "Comprimidos de paracetamol + clorfeniramina + fenilefrina: combinación para gripe y resfrío, MED-RES-GRI."
     }
   },
   "P01:AN-1145": {
@@ -9259,7 +9259,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "SOBRES",
-      "explicacion": "Sobres de la combinación antigripal (paracetamol + clorfeniramina + fenilefrina): Antigripales (MED-RES-GRI)."
+      "explicacion": "Sobres de paracetamol + clorfeniramina + fenilefrina: combinación antigripal, MED-RES-GRI."
     }
   },
   "P01:AN-1148": {
@@ -9352,7 +9352,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "SOBRES",
-      "explicacion": "Sobres de la combinación antigripal (paracetamol + clorfeniramina + fenilefrina): Antigripales (MED-RES-GRI)."
+      "explicacion": "Sobres de paracetamol + clorfeniramina + fenilefrina (antigripal, MED-RES-GRI); el tipo sale de la lista original, no de la actualización."
     }
   },
   "P01:AN-1151": {
@@ -9445,7 +9445,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "GEL",
-      "explicacion": "Gel tópico de diclofenac, antiinflamatorio tópico: Antiinflamatorios tópicos (MED-DOL-TOP)."
+      "explicacion": "Gel tópico de diclofenac (antiinflamatorio tópico): va en Antiinflamatorios tópicos, MED-DOL-TOP."
     }
   },
   "P01:AN-1154": {
@@ -9538,7 +9538,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "COMPRIMIDOS",
-      "explicacion": "Comprimidos de ibuprofeno para dolor: Analgésicos y antifebriles orales (MED-DOL-ANA)."
+      "explicacion": "Comprimidos de ibuprofeno (analgésico y antifebril oral): va en Analgésicos y antifebriles orales, MED-DOL-ANA."
     }
   },
   "P01:AN-1157": {
@@ -9631,7 +9631,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "COMPRIMIDOS",
-      "explicacion": "Comprimidos de levotiroxina, para tiroides: Diabetes y tiroides (MED-CRO-MET)."
+      "explicacion": "Comprimidos de levotiroxina (tiroides, bajo receta): va en Metabolismo, MED-CRO-MET."
     }
   },
   "P01:AN-1160": {
@@ -9722,7 +9722,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "COMPRIMIDOS",
-      "explicacion": "Comprimidos de levotiroxina, para tiroides: Diabetes y tiroides (MED-CRO-MET)."
+      "explicacion": "Comprimidos de levotiroxina (tiroides, bajo receta): va en Metabolismo, MED-CRO-MET."
     }
   },
   "P01:AN-1163": {
@@ -9815,7 +9815,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "COMPRIMIDOS",
-      "explicacion": "En medicamentos la categoría sale del principio activo LOPERAMIDA (antidiarreico), no de la forma; va a MED-DIG-ANT."
+      "explicacion": "Comprimidos de loperamida, antidiarreico: el principio activo ubica la categoría MED-DIG-ANT."
     }
   },
   "P01:AN-1166": {
@@ -9908,7 +9908,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "COMPRIMIDOS",
-      "explicacion": "En medicamentos la categoría sale del principio activo BISACODILO (laxante), no de la forma; va a MED-DIG-LAX."
+      "explicacion": "Comprimidos de bisacodilo, laxante: el principio activo ubica la categoría MED-DIG-LAX."
     }
   },
   "P01:AN-1169": {
@@ -10001,7 +10001,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "COMPRIMIDOS",
-      "explicacion": "En medicamentos la categoría sale del principio activo ENALAPRIL (cardiovascular, venta bajo receta), no de la forma; va a MED-CRO-CAR."
+      "explicacion": "Comprimidos de enalapril, antihipertensivo bajo receta: el principio activo ubica la categoría MED-CRO-CAR."
     }
   },
   "P01:AN-1172": {
@@ -10092,7 +10092,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "JARABE",
-      "explicacion": "En medicamentos la categoría sale del principio activo DEXTROMETORFANO (para la tos), no de la forma; va a MED-RES-TOS."
+      "explicacion": "Jarabe de dextrometorfano, antitusivo: el principio activo ubica la categoría MED-RES-TOS."
     }
   },
   "P01:AN-1175": {
@@ -10183,7 +10183,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "JARABE",
-      "explicacion": "En medicamentos la categoría sale del principio activo PARACETAMOL (analgésico y antifebril oral), no de la forma; va a MED-DOL-ANA."
+      "explicacion": "Jarabe de paracetamol, analgésico y antifebril: el principio activo ubica la categoría MED-DOL-ANA."
     }
   },
   "P01:AN-1178": {
@@ -10274,7 +10274,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "COMPRIMIDOS",
-      "explicacion": "En medicamentos la categoría sale del principio activo PARACETAMOL (analgésico y antifebril oral), no de la forma; va a MED-DOL-ANA."
+      "explicacion": "Comprimidos de paracetamol 1 g, analgésico y antifebril: el principio activo ubica la categoría MED-DOL-ANA."
     }
   }
 }
