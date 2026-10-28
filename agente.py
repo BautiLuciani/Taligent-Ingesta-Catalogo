@@ -1,6 +1,6 @@
 """Agente de ingesta: procesa los productos de un proveedor usando las tools del servidor MCP.
 
-Correr: python agente.py P03   (o el proveedor que sea: P07...)
+Correr: python agente.py P03   (o el proveedor que sea: P01, P05, P07...)
 """
 import argparse
 import asyncio

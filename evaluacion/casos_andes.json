@@ -1,0 +1,1066 @@
+[
+  {
+    "item_id": "P01:AN-1124",
+    "por_que": "Q01: rige el precio del Excel (más nuevo), con su fuente: hoja y fila 12",
+    "esperado": {
+      "estado": "lista_para_alta",
+      "duplicado_de": null,
+      "motivos_revision": [],
+      "ficha": {
+        "gtin": "7796462699472",
+        "descripcion": "DERMACORT 1 % CREMA X 30 G",
+        "marca": "DERMACORT",
+        "tipo": "CREMA",
+        "variante": null,
+        "contenido": 30,
+        "unidad": "G",
+        "unidades_por_envase": 1,
+        "principio_activo": "HIDROCORTISONA",
+        "concentracion": "1 %",
+        "condicion_venta": "VENTA_LIBRE",
+        "categoria": "MED-DER-COR",
+        "precio_costo": 320.8,
+        "moneda": "UYU",
+        "proveedor_id": "P01",
+        "codigo_proveedor": "AN-1124"
+      },
+      "fuentes": {
+        "gtin": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "descripcion": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "marca": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "tipo": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "contenido": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "unidad": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "unidades_por_envase": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "principio_activo": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "concentracion": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "condicion_venta": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "categoria": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "precio_costo": {
+          "archivo": "Actualizacion_precios_Andes.xlsx",
+          "hoja": "Actualización",
+          "fila": 12
+        },
+        "moneda": {
+          "archivo": "Actualizacion_precios_Andes.xlsx",
+          "hoja": "Actualización",
+          "fila": 12
+        },
+        "proveedor_id": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "codigo_proveedor": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        }
+      }
+    }
+  },
+  {
+    "item_id": "P01:AN-1103",
+    "por_que": "Q13: sin monodroga -> principio activo faltante (el ejemplo del estándar)",
+    "esperado": {
+      "estado": "a_revision",
+      "duplicado_de": null,
+      "motivos_revision": [
+        "dato_obligatorio_faltante"
+      ],
+      "ficha": {
+        "gtin": "7794394922729",
+        "descripcion": "DOLOREX 400 MG COMPRIMIDOS X 20 UN",
+        "marca": "DOLOREX",
+        "tipo": "COMPRIMIDOS",
+        "variante": null,
+        "contenido": 20,
+        "unidad": "UN",
+        "unidades_por_envase": 1,
+        "principio_activo": null,
+        "concentracion": "400 MG",
+        "condicion_venta": "VENTA_LIBRE",
+        "categoria": "MED-DOL-ANA",
+        "precio_costo": 265.29,
+        "moneda": "UYU",
+        "proveedor_id": "P01",
+        "codigo_proveedor": "AN-1103"
+      },
+      "fuentes": {
+        "gtin": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "descripcion": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "marca": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "tipo": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "contenido": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "unidad": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "unidades_por_envase": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "concentracion": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "condicion_venta": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "categoria": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "precio_costo": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "moneda": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "proveedor_id": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "codigo_proveedor": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        }
+      }
+    }
+  },
+  {
+    "item_id": "P01:AN-1106",
+    "por_que": "Sin monodroga + concentración doble y 'Susp.' -> SUSPENSION",
+    "esperado": {
+      "estado": "a_revision",
+      "duplicado_de": null,
+      "motivos_revision": [
+        "dato_obligatorio_faltante"
+      ],
+      "ficha": {
+        "gtin": "7799252522035",
+        "descripcion": "ANTIACID 400 MG + 400 MG/5 ML SUSPENSION X 200 ML",
+        "marca": "ANTIACID",
+        "tipo": "SUSPENSION",
+        "variante": null,
+        "contenido": 200,
+        "unidad": "ML",
+        "unidades_por_envase": 1,
+        "principio_activo": null,
+        "concentracion": "400 MG + 400 MG/5 ML",
+        "condicion_venta": "VENTA_LIBRE",
+        "categoria": "MED-DIG-ACI",
+        "precio_costo": 156.16,
+        "moneda": "UYU",
+        "proveedor_id": "P01",
+        "codigo_proveedor": "AN-1106"
+      },
+      "fuentes": {
+        "gtin": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "descripcion": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "marca": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "tipo": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "contenido": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "unidad": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "unidades_por_envase": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "concentracion": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "condicion_venta": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "categoria": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "precio_costo": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "moneda": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "proveedor_id": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "codigo_proveedor": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        }
+      }
+    }
+  },
+  {
+    "item_id": "P01:AN-1136",
+    "por_que": "Conflicto de contenido PDF x 20 vs Excel x 30: contenido vacío, precio igual por vigencia",
+    "esperado": {
+      "estado": "a_revision",
+      "duplicado_de": null,
+      "motivos_revision": [
+        "conflicto_entre_fuentes"
+      ],
+      "ficha": {
+        "gtin": "7790950373011",
+        "descripcion": "FEBRIL 500 MG COMPRIMIDOS",
+        "marca": "FEBRIL",
+        "tipo": "COMPRIMIDOS",
+        "variante": null,
+        "contenido": null,
+        "unidad": null,
+        "unidades_por_envase": 1,
+        "principio_activo": "PARACETAMOL",
+        "concentracion": "500 MG",
+        "condicion_venta": "VENTA_LIBRE",
+        "categoria": "MED-DOL-ANA",
+        "precio_costo": 200.8,
+        "moneda": "UYU",
+        "proveedor_id": "P01",
+        "codigo_proveedor": "AN-1136"
+      },
+      "fuentes": {
+        "gtin": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "descripcion": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "marca": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "tipo": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "unidades_por_envase": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "principio_activo": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "concentracion": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "condicion_venta": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "categoria": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "precio_costo": {
+          "archivo": "Actualizacion_precios_Andes.xlsx",
+          "hoja": "Actualización",
+          "fila": 5
+        },
+        "moneda": {
+          "archivo": "Actualizacion_precios_Andes.xlsx",
+          "hoja": "Actualización",
+          "fila": 5
+        },
+        "proveedor_id": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "codigo_proveedor": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        }
+      }
+    }
+  },
+  {
+    "item_id": "P01:AN-1133",
+    "por_que": "Q08: conflicto de contenido x 20 gr vs x 30 g: contenido vacío",
+    "esperado": {
+      "estado": "a_revision",
+      "duplicado_de": null,
+      "motivos_revision": [
+        "conflicto_entre_fuentes"
+      ],
+      "ficha": {
+        "gtin": "7798467198943",
+        "descripcion": "MICOSTOP 1 % CREMA",
+        "marca": "MICOSTOP",
+        "tipo": "CREMA",
+        "variante": null,
+        "contenido": null,
+        "unidad": null,
+        "unidades_por_envase": 1,
+        "principio_activo": "CLOTRIMAZOL",
+        "concentracion": "1 %",
+        "condicion_venta": "VENTA_LIBRE",
+        "categoria": "MED-DER-ANF",
+        "precio_costo": 205.38,
+        "moneda": "UYU",
+        "proveedor_id": "P01",
+        "codigo_proveedor": "AN-1133"
+      },
+      "fuentes": {
+        "gtin": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "descripcion": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "marca": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "tipo": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "unidades_por_envase": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "principio_activo": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "concentracion": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "condicion_venta": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "categoria": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "precio_costo": {
+          "archivo": "Actualizacion_precios_Andes.xlsx",
+          "hoja": "Actualización",
+          "fila": 6
+        },
+        "moneda": {
+          "archivo": "Actualizacion_precios_Andes.xlsx",
+          "hoja": "Actualización",
+          "fila": 6
+        },
+        "proveedor_id": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "codigo_proveedor": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        }
+      }
+    }
+  },
+  {
+    "item_id": "P01:AN-1148",
+    "por_que": "'Sobres x 6' vs 'Polvo p/ sol. oral, sobres x 6': NO es conflicto",
+    "esperado": {
+      "estado": "lista_para_alta",
+      "duplicado_de": null,
+      "motivos_revision": [],
+      "ficha": {
+        "gtin": "7796730355338",
+        "descripcion": "GRIPANIL 500 MG + 4 MG + 10 MG SOBRES X 6 UN",
+        "marca": "GRIPANIL",
+        "tipo": "SOBRES",
+        "variante": null,
+        "contenido": 6,
+        "unidad": "UN",
+        "unidades_por_envase": 1,
+        "principio_activo": "PARACETAMOL + CLORFENIRAMINA + FENILEFRINA",
+        "concentracion": "500 MG + 4 MG + 10 MG",
+        "condicion_venta": "VENTA_LIBRE",
+        "categoria": "MED-RES-GRI",
+        "precio_costo": 182.26,
+        "moneda": "UYU",
+        "proveedor_id": "P01",
+        "codigo_proveedor": "AN-1148"
+      },
+      "fuentes": {
+        "gtin": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "descripcion": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "marca": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "tipo": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "contenido": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "unidad": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "unidades_por_envase": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "principio_activo": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "concentracion": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "condicion_venta": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "categoria": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "precio_costo": {
+          "archivo": "Actualizacion_precios_Andes.xlsx",
+          "hoja": "Actualización",
+          "fila": 9
+        },
+        "moneda": {
+          "archivo": "Actualizacion_precios_Andes.xlsx",
+          "hoja": "Actualización",
+          "fila": 9
+        },
+        "proveedor_id": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "codigo_proveedor": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        }
+      }
+    }
+  },
+  {
+    "item_id": "P01:AN-1145",
+    "por_que": "Concentración pegada '500mg+4mg+10mg' -> '500 MG + 4 MG + 10 MG'",
+    "esperado": {
+      "estado": "lista_para_alta",
+      "duplicado_de": null,
+      "motivos_revision": [],
+      "ficha": {
+        "gtin": "7791495114022",
+        "descripcion": "GRIPANIL 500 MG + 4 MG + 10 MG SOBRES X 12 UN",
+        "marca": "GRIPANIL",
+        "tipo": "SOBRES",
+        "variante": null,
+        "contenido": 12,
+        "unidad": "UN",
+        "unidades_por_envase": 1,
+        "principio_activo": "PARACETAMOL + CLORFENIRAMINA + FENILEFRINA",
+        "concentracion": "500 MG + 4 MG + 10 MG",
+        "condicion_venta": "VENTA_LIBRE",
+        "categoria": "MED-RES-GRI",
+        "precio_costo": 268.81,
+        "moneda": "UYU",
+        "proveedor_id": "P01",
+        "codigo_proveedor": "AN-1145"
+      },
+      "fuentes": {
+        "gtin": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "descripcion": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "marca": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "tipo": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "contenido": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "unidad": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "unidades_por_envase": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "principio_activo": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "concentracion": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "condicion_venta": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "categoria": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "precio_costo": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "moneda": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "proveedor_id": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "codigo_proveedor": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        }
+      }
+    }
+  },
+  {
+    "item_id": "P01:AN-1112",
+    "por_que": "VBR -> BAJO_RECETA; metformina va en Metabolismo",
+    "esperado": {
+      "estado": "lista_para_alta",
+      "duplicado_de": null,
+      "motivos_revision": [],
+      "ficha": {
+        "gtin": "7797092743948",
+        "descripcion": "GLUCOMET 850 MG COMPRIMIDOS X 60 UN",
+        "marca": "GLUCOMET",
+        "tipo": "COMPRIMIDOS",
+        "variante": null,
+        "contenido": 60,
+        "unidad": "UN",
+        "unidades_por_envase": 1,
+        "principio_activo": "METFORMINA",
+        "concentracion": "850 MG",
+        "condicion_venta": "BAJO_RECETA",
+        "categoria": "MED-CRO-MET",
+        "precio_costo": 175.49,
+        "moneda": "UYU",
+        "proveedor_id": "P01",
+        "codigo_proveedor": "AN-1112"
+      },
+      "fuentes": {
+        "gtin": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "descripcion": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "marca": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "tipo": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "contenido": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "unidad": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "unidades_por_envase": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "principio_activo": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "concentracion": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "condicion_venta": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "categoria": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "precio_costo": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "moneda": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "proveedor_id": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "codigo_proveedor": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        }
+      }
+    }
+  },
+  {
+    "item_id": "P01:AN-1157",
+    "por_que": "'50mcg' -> '50 MCG'; tiroides en Metabolismo; precio del Excel",
+    "esperado": {
+      "estado": "lista_para_alta",
+      "duplicado_de": null,
+      "motivos_revision": [],
+      "ficha": {
+        "gtin": "7790003122382",
+        "descripcion": "TIROXAN 50 MCG COMPRIMIDOS X 30 UN",
+        "marca": "TIROXAN",
+        "tipo": "COMPRIMIDOS",
+        "variante": null,
+        "contenido": 30,
+        "unidad": "UN",
+        "unidades_por_envase": 1,
+        "principio_activo": "LEVOTIROXINA",
+        "concentracion": "50 MCG",
+        "condicion_venta": "BAJO_RECETA",
+        "categoria": "MED-CRO-MET",
+        "precio_costo": 146.22,
+        "moneda": "UYU",
+        "proveedor_id": "P01",
+        "codigo_proveedor": "AN-1157"
+      },
+      "fuentes": {
+        "gtin": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "descripcion": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "marca": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "tipo": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "contenido": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "unidad": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "unidades_por_envase": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "principio_activo": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "concentracion": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "condicion_venta": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "categoria": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "precio_costo": {
+          "archivo": "Actualizacion_precios_Andes.xlsx",
+          "hoja": "Actualización",
+          "fila": 11
+        },
+        "moneda": {
+          "archivo": "Actualizacion_precios_Andes.xlsx",
+          "hoja": "Actualización",
+          "fila": 11
+        },
+        "proveedor_id": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "codigo_proveedor": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        }
+      }
+    }
+  },
+  {
+    "item_id": "P01:AN-1172",
+    "por_que": "'Jbe.' -> JARABE y '15mg/5ml' -> '15 MG/5 ML'",
+    "esperado": {
+      "estado": "lista_para_alta",
+      "duplicado_de": null,
+      "motivos_revision": [],
+      "ficha": {
+        "gtin": "7793821086737",
+        "descripcion": "TOSIL 15 MG/5 ML JARABE X 120 ML",
+        "marca": "TOSIL",
+        "tipo": "JARABE",
+        "variante": null,
+        "contenido": 120,
+        "unidad": "ML",
+        "unidades_por_envase": 1,
+        "principio_activo": "DEXTROMETORFANO",
+        "concentracion": "15 MG/5 ML",
+        "condicion_venta": "VENTA_LIBRE",
+        "categoria": "MED-RES-TOS",
+        "precio_costo": 213.12,
+        "moneda": "UYU",
+        "proveedor_id": "P01",
+        "codigo_proveedor": "AN-1172"
+      },
+      "fuentes": {
+        "gtin": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "descripcion": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "marca": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "tipo": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "contenido": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "unidad": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "unidades_por_envase": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "principio_activo": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "concentracion": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "condicion_venta": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "categoria": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "precio_costo": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "moneda": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "proveedor_id": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "codigo_proveedor": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        }
+      }
+    }
+  },
+  {
+    "item_id": "P01:AN-1151",
+    "por_que": "'Gel tópico' -> GEL; diclofenac tópico en Antiinflamatorios tópicos",
+    "esperado": {
+      "estado": "lista_para_alta",
+      "duplicado_de": null,
+      "motivos_revision": [],
+      "ficha": {
+        "gtin": "7797593529355",
+        "descripcion": "FLEXIGEL 1 % GEL X 60 G",
+        "marca": "FLEXIGEL",
+        "tipo": "GEL",
+        "variante": null,
+        "contenido": 60,
+        "unidad": "G",
+        "unidades_por_envase": 1,
+        "principio_activo": "DICLOFENAC",
+        "concentracion": "1 %",
+        "condicion_venta": "VENTA_LIBRE",
+        "categoria": "MED-DOL-TOP",
+        "precio_costo": 257.32,
+        "moneda": "UYU",
+        "proveedor_id": "P01",
+        "codigo_proveedor": "AN-1151"
+      },
+      "fuentes": {
+        "gtin": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "descripcion": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "marca": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "tipo": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "contenido": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "unidad": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "unidades_por_envase": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "principio_activo": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "concentracion": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "condicion_venta": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "categoria": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "precio_costo": {
+          "archivo": "Actualizacion_precios_Andes.xlsx",
+          "hoja": "Actualización",
+          "fila": 13
+        },
+        "moneda": {
+          "archivo": "Actualizacion_precios_Andes.xlsx",
+          "hoja": "Actualización",
+          "fila": 13
+        },
+        "proveedor_id": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "codigo_proveedor": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        }
+      }
+    }
+  },
+  {
+    "item_id": "P01:AN-1178",
+    "por_que": "Última fila del PDF (el pie no la ensucia) y '1g' -> '1 G'",
+    "esperado": {
+      "estado": "lista_para_alta",
+      "duplicado_de": null,
+      "motivos_revision": [],
+      "ficha": {
+        "gtin": "7792542521701",
+        "descripcion": "FEBRIL 1 G COMPRIMIDOS X 10 UN",
+        "marca": "FEBRIL",
+        "tipo": "COMPRIMIDOS",
+        "variante": null,
+        "contenido": 10,
+        "unidad": "UN",
+        "unidades_por_envase": 1,
+        "principio_activo": "PARACETAMOL",
+        "concentracion": "1 G",
+        "condicion_venta": "VENTA_LIBRE",
+        "categoria": "MED-DOL-ANA",
+        "precio_costo": 120.52,
+        "moneda": "UYU",
+        "proveedor_id": "P01",
+        "codigo_proveedor": "AN-1178"
+      },
+      "fuentes": {
+        "gtin": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "descripcion": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "marca": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "tipo": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "contenido": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "unidad": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "unidades_por_envase": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "principio_activo": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "concentracion": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "condicion_venta": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "categoria": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "precio_costo": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "moneda": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "proveedor_id": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        },
+        "codigo_proveedor": {
+          "archivo": "Lista_de_precios_octubre_2026.pdf",
+          "pagina": 1
+        }
+      }
+    }
+  }
+]
