@@ -115,6 +115,57 @@ async def main():
                  (True, ["P01:AN-1133", "P01:AN-1136"]))
         chequear("LHS no trae condición de venta (no es lista de medicamentos)", "condicion_venta" in calculado_206, False)
 
+        print("\n--- leer_archivo_proveedor: el folleto de Dermalab (paso 7C1) ---")
+        filas_dl = await leer_todas(cliente, "P05")
+        chequear("Dermalab tiene 18 filas", len(filas_dl), 18)
+        dermalab = {fila["item_id"]: fila for fila in filas_dl}
+        f_109 = dermalab["P05:DL-109"]
+        chequear("DL-109: fuente con página", f_109["fuente"], {"archivo": "Dermalab_lanzamientos_2026.pdf", "pagina": 1})
+        chequear("DL-109: en original va su bloque, tal cual", f_109["original"]["bloque"], [
+            "Dermalab Urea 10 %",
+            "Crema. Textura liviana de rápida absorción. Hidratación intensa para el cuerpo, ideal para piel muy seca."])
+        chequear("DL-109: nombre y tipo en original (los decide el agente)",
+                 (f_109["original"]["nombre"], f_109["original"]["tipo"]), ("Dermalab Urea 10 %", "Crema"))
+        chequear("DL-109: '400 ml' -> 400 ML", (f_109["calculado"]["contenido"], f_109["calculado"]["unidad"]), (400, "ML"))
+        CAMPOS_FOLLETO = {"nombre", "tipo", "descripcion", "contenido"}
+        chequear("DL-109: todo el folleto en su página: ningún campo del folleto va aparte",
+                 CAMPOS_FOLLETO & set(f_109["calculado"]["fuentes"]), set())
+        f_136 = dermalab["P05:DL-136"]
+        chequear("DL-136: la fila va con la pág. 2 (la del código)...", f_136["fuente"]["pagina"], 2)
+        chequear("...y el nombre, con SU fuente: la pág. 1", f_136["calculado"]["fuentes"]["nombre"],
+                 {"archivo": "Dermalab_lanzamientos_2026.pdf", "pagina": 1})
+        chequear("Solo DL-136 tiene un campo del folleto en otra página",
+                 [i for i, f in dermalab.items() if CAMPOS_FOLLETO & set(f["calculado"]["fuentes"])], ["P05:DL-136"])
+        c_103 = dermalab["P05:DL-103"]["calculado"]
+        chequear("DL-103: el folleto no trae EAN ni precio (y no está en la lista: paso 7C2)", (c_103["gtin"], c_103["motivo_gtin"], c_103["precio_costo"]),
+                 (None, "gtin_faltante", None))
+        chequear("Los 18 con contenido en ML", all(f["calculado"]["unidad"] == "ML" for f in filas_dl), True)
+
+        print("\n--- el cruce folleto <-> lista de precios de Dermalab (paso 7C2) ---")
+        filas_dl = await leer_todas(cliente, "P05")
+        dermalab = {fila["item_id"]: fila for fila in filas_dl}
+        LISTA = {"archivo": "Dermalab_lista_precios.xlsx", "hoja": "Lista"}
+        c_109 = dermalab["P05:DL-109"]["calculado"]
+        chequear("DL-109: el EAN lo completa la lista de precios (Q02)", (c_109["gtin"], c_109["motivo_gtin"]),
+                 ("7790670659075", None))
+        chequear("...con SU fuente: la lista, hoja Lista, fila 2", c_109["fuentes"]["gtin"], {**LISTA, "fila": 2})
+        chequear("DL-109: el costo también, 736.22 UYU, con la misma fuente",
+                 (c_109["precio_costo"], c_109["moneda"], c_109["fuentes"]["precio_costo"], c_109["fuentes"]["moneda"]),
+                 (736.22, "UYU", {**LISTA, "fila": 2}, {**LISTA, "fila": 2}))
+        chequear("Completar no es conflicto: Dermalab no tiene NINGÚN conflicto",
+                 [i for i, f in dermalab.items() if f["calculado"]["conflictos"]], [])
+        chequear("Ninguna lista trae vigencia: vigencia_precio vacía",
+                 {f["calculado"]["vigencia_precio"] for f in filas_dl}, {None})
+        chequear("Los 14 de la lista, con EAN válido y costo",
+                 sorted(i for i, f in dermalab.items() if f["calculado"]["gtin"] and f["calculado"]["precio_costo"]),
+                 [f"P05:DL-{n}" for n in range(109, 149, 3)])
+        chequear("Los 4 que no están en la lista: sin EAN ni precio (Q16)",
+                 sorted(i for i, f in dermalab.items() if f["calculado"]["motivo_gtin"] == "gtin_faltante"
+                        and f["calculado"]["precio_costo"] is None),
+                 ["P05:DL-103", "P05:DL-106", "P05:DL-151", "P05:DL-154"])
+        chequear("DL-136: el nombre de la pág. 1 Y el EAN y el costo de la lista, cada uno con su fuente",
+                 sorted(dermalab["P05:DL-136"]["calculado"]["fuentes"]), ["gtin", "moneda", "nombre", "precio_costo"])
+
         print("\n--- el cruce PDF <-> Excel de Andes (paso 6D3) ---")
         EXCEL = "Actualizacion_precios_Andes.xlsx"
         c_1124 = andes["P01:AN-1124"]["calculado"]
@@ -352,6 +403,38 @@ async def main():
                {"fecha": "2026-10-15"}, "UYU")
     chequear("Nombre distinto (no solo espacios): conflicto de descripción",
              [c["campo"] for c in fila["calculado"]["conflictos"]], ["descripcion"])
+
+    MAPA_LISTA = {"ean": "EAN", "precio": "Costo s/IVA"}
+
+    def fila_folleto(**calculado):
+        """Una fila de un folleto (sin EAN ni precio), antes del cruce, con lo que se le cambie."""
+        return {"fuente": {"archivo": "f.pdf", "pagina": 1}, "original": {"nombre": "Producto X"},
+                "calculado": {"gtin": None, "motivo_gtin": "gtin_faltante", "contenido": 50, "unidad": "ML",
+                              "precio_costo": None, "moneda": None, "conflictos": [], "fuentes": {},
+                              "vigencia_precio": None, **calculado}}
+
+    def fila_lista(**cambios):
+        """Una fila de la lista de precios, con lo que se le cambie."""
+        return {"fuente": {"archivo": "l.xlsx", "hoja": "Lista", "fila": 2},
+                "original": {"EAN": 7790670659075, "Costo s/IVA": 736.22, **cambios}}
+
+    fila = fila_folleto(gtin="7798965900758", motivo_gtin=None)
+    consolidar(fila, fila["original"], {}, None, fila_lista(), MAPA_LISTA, None, "UYU")
+    chequear("Los dos traen EAN y son distintos: conflicto (no se elige)",
+             (fila["calculado"]["gtin"], [c["campo"] for c in fila["calculado"]["conflictos"]]), (None, ["gtin"]))
+    fila = fila_folleto(gtin="7790670659075", motivo_gtin=None)
+    consolidar(fila, fila["original"], {}, None, fila_lista(), MAPA_LISTA, None, "UYU")
+    chequear("Los dos traen el MISMO EAN: sin conflicto y la fuente sigue siendo la de la fila",
+             (fila["calculado"]["conflictos"], "gtin" in fila["calculado"]["fuentes"]), ([], False))
+    fila = fila_folleto()
+    consolidar(fila, fila["original"], {}, None, fila_lista(EAN=None), MAPA_LISTA, None, "UYU")
+    chequear("La lista tampoco trae EAN: sigue faltando (no se inventa)",
+             (fila["calculado"]["gtin"], fila["calculado"]["motivo_gtin"]), (None, "gtin_faltante"))
+    fila = fila_folleto()
+    consolidar(fila, fila["original"], {}, None, fila_lista(EAN="7790670659076"), MAPA_LISTA, None, "UYU")
+    chequear("La lista completa un EAN con dígito verificador malo: queda inválido, con su fuente",
+             (fila["calculado"]["gtin"], fila["calculado"]["motivo_gtin"], "gtin" in fila["calculado"]["fuentes"]),
+             (None, "gtin_invalido", True))
 
     shutil.rmtree(carpeta_temporal, ignore_errors=True)  # borramos la carpeta temporal de las pruebas
     print(f"\nResultado: {'todo OK' if errores == 0 else f'{errores} con error'}")

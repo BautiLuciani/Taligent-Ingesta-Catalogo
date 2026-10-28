@@ -62,6 +62,19 @@ PROVEEDORES = {
             "campos": {"descripcion": "Producto", "presentacion": "Presentación", "precio": "Precio nuevo"},
         }],
     },
+    "P05": {
+        "formato": "pdf",
+        "extraccion": CARPETA_EXTRACCIONES / "Dermalab_lanzamientos_2026.json",  # lo armó extractor_folleto.py
+        # El folleto es prosa: cada producto trae nombre, tipo, descripción y contenido. NO trae EAN ni precio.
+        "campos": {"descripcion": "nombre", "contenido": "contenido"},
+        "moneda": "UYU",  # la lista no indica moneda -> pesos uruguayos (estándar, sección 6)
+        # La lista de precios trae lo que el folleto no: EAN y costo (paso 7C2). Se cruza por código.
+        # No trae vigencia: no hace falta, porque el folleto no tiene precio con el que competir.
+        "actualizaciones": [{
+            "excel": CARPETA_DATA / "proveedores" / "P05_Dermalab" / "Dermalab_lista_precios.xlsx",
+            "campos": {"ean": "EAN", "precio": "Costo s/IVA"},
+        }],
+    },
 }
 
 
@@ -140,7 +153,10 @@ def leer_filas_pdf(proveedor_id: str, config: dict) -> list[dict]:
     """Lee lo que sacó extractor_pdf.py de un PDF y arma cada fila con la MISMA forma que leer_filas_csv.
 
     La fuente es {archivo, pagina} (la página la dio la API con citations, no el modelo).
-    En original va la fila verificada del PDF, sus campos tal cual y los problemas de la extracción.
+    En original va la fila verificada del PDF (en un folleto en prosa, su bloque de renglones), sus campos tal cual
+    y los problemas de la extracción.
+    Un folleto trae la página de CADA campo (paso 7B): si un campo está en otra página que la de la fila
+    (DL-136: el nombre en la 1 y el código en la 2), su fuente va aparte, en calculado.fuentes.
     config["campos"] dice qué columna es cada cosa (cada PDF tiene las suyas): el contenido sale de "contenido"
     ("X 500 ML") o de "presentacion" ("Comp. rec. x 20"), y la condición de venta, solo si la lista la trae.
     El PDF no trae la marca en una columna aparte: no va en calculado, la decide el agente desde la descripción.
@@ -178,10 +194,15 @@ def leer_filas_pdf(proveedor_id: str, config: dict) -> list[dict]:
         }
         if "condicion" in mapa:  # solo las listas de medicamentos la traen
             calculado["condicion_venta"] = convertir_condicion(columna("condicion"))
+        fuente = producto["fuente"]
+        if "paginas" in producto:  # un folleto: la fuente de cada campo que está en OTRA página que la fila
+            calculado["fuentes"] = {campo: {"archivo": fuente["archivo"], "pagina": pagina}
+                                    for campo, pagina in producto["paginas"].items() if pagina != fuente["pagina"]}
+        texto = {"fila": producto["fila"]} if "fila" in producto else {"bloque": producto["bloque"]}
         filas.append({
             "item_id": f"{proveedor_id}:{producto['codigo']}",
-            "fuente": producto["fuente"],
-            "original": {"fila": producto["fila"], **campos, "problemas_extraccion": producto["problemas"]},
+            "fuente": fuente,
+            "original": {**texto, **campos, "problemas_extraccion": producto["problemas"]},
             "calculado": calculado,
         })
     return filas
@@ -208,10 +229,12 @@ def consolidar(fila: dict, base: dict, mapa_base: dict, vigencia_base: dict | No
     """Cruza una fila con la fila de un archivo posterior del mismo proveedor (paso 6D3). Modifica la fila.
 
     Lo exacto lo hace el código (decisión 1): compara valores YA normalizados, no cómo están escritos.
-    - Contenido o nombre distintos -> conflicto: el campo queda vacío y van las dos versiones con sus fuentes.
+    - Contenido, nombre o EAN distintos -> conflicto: el campo queda vacío y van las dos versiones con sus fuentes.
     - Precio: no es conflicto, rige la lista de vigencia más reciente (estándar, sección 6), con SU fuente.
       Si falta una vigencia, o tienen la misma y los precios difieren, no se puede decidir (decisión 2):
       el precio queda vacío y va como conflicto.
+    - Completar no es conflicto (paso 7C2): si la base NO trae un EAN o un precio y el otro archivo sí,
+      se toma ese, con SU fuente. No hay dos valores que comparar (Dermalab: el folleto no trae ni EAN ni precio).
     """
     calculado = fila["calculado"]
     fuente_base, fuente_act = fila["fuente"], actualizacion["fuente"]
@@ -233,6 +256,16 @@ def consolidar(fila: dict, base: dict, mapa_base: dict, vigencia_base: dict | No
         conflicto("descripcion", base.get(mapa_base["descripcion"]), valores_act.get(mapa_act["descripcion"]))
         calculado["descripcion_expandida"] = None
 
+    # EAN: si la base no lo trae, lo completa el otro archivo; si los dos lo traen y difieren, es conflicto
+    if "ean" in mapa_act and valores_act.get(mapa_act["ean"]) not in (None, ""):
+        gtin_act, motivo_act = normalizar_gtin(valores_act.get(mapa_act["ean"]))
+        if calculado["gtin"] is None and calculado["motivo_gtin"] == "gtin_faltante":
+            calculado["gtin"], calculado["motivo_gtin"] = gtin_act, motivo_act
+            calculado["fuentes"]["gtin"] = fuente_act
+        elif gtin_act != calculado["gtin"]:
+            conflicto("gtin", calculado["gtin"], gtin_act)
+            calculado["gtin"], calculado["motivo_gtin"] = None, None
+
     # Precio: rige la vigencia más reciente
     if "precio" in mapa_act:
         valor = valores_act.get(mapa_act["precio"])
@@ -243,6 +276,10 @@ def consolidar(fila: dict, base: dict, mapa_base: dict, vigencia_base: dict | No
         fecha_act = vigencia_act["fecha"] if vigencia_act else None
         if precio_act is None or precio_act == calculado["precio_costo"]:
             pass  # la actualización no trae precio, o trae el mismo: no cambia nada
+        elif calculado["precio_costo"] is None:  # la base no trae precio: completar no es conflicto
+            calculado["precio_costo"], calculado["moneda"] = precio_act, moneda_act
+            calculado["fuentes"]["precio_costo"] = calculado["fuentes"]["moneda"] = fuente_act
+            calculado["vigencia_precio"] = fecha_act
         elif fecha_base and fecha_act and fecha_act > fecha_base:
             calculado["precio_costo"], calculado["moneda"] = precio_act, moneda_act
             calculado["fuentes"]["precio_costo"] = calculado["fuentes"]["moneda"] = fuente_act
@@ -255,7 +292,8 @@ def consolidar(fila: dict, base: dict, mapa_base: dict, vigencia_base: dict | No
 
 
 def aplicar_actualizaciones(proveedor_id: str, config: dict, filas: list[dict]) -> None:
-    """Cruza por código las filas de un proveedor con sus archivos de actualización (los Excel posteriores).
+    """Cruza por código las filas de un proveedor con sus otros archivos (Excel): una lista posterior que actualiza
+    precios (Andes) o una lista que completa lo que el archivo principal no trae (Dermalab: EAN y costo).
 
     A toda fila de un proveedor con actualizaciones le suma: calculado.conflictos (lista), calculado.fuentes
     (la fuente de cada campo que NO sale de su fila) y calculado.vigencia_precio (desde cuándo rige su precio).
@@ -264,7 +302,8 @@ def aplicar_actualizaciones(proveedor_id: str, config: dict, filas: list[dict]) 
     extraccion = json.loads(config["extraccion"].read_text(encoding="utf-8")) if "extraccion" in config else {}
     vigencia_base = extraccion.get("vigencia")
     for fila in filas:
-        fila["calculado"].update({"conflictos": [], "fuentes": {},
+        fila["calculado"].setdefault("fuentes", {})  # un folleto ya puede traer las suyas (paso 7C)
+        fila["calculado"].update({"conflictos": [],
                                   "vigencia_precio": vigencia_base["fecha"] if vigencia_base else None})
     for act in config["actualizaciones"]:
         tabla = leer_tabla_excel(act["excel"], act.get("hoja"))
@@ -329,7 +368,7 @@ def leer_filas(proveedor_id: str, config: dict) -> list[dict]:
 
 @mcp.tool(annotations={"readOnlyHint": True})
 def leer_archivo_proveedor(
-    proveedor_id: Annotated[Literal["P01", "P03", "P07"], Field(description="Código del proveedor a leer.")],
+    proveedor_id: Annotated[Literal["P01", "P03", "P05", "P07"], Field(description="Código del proveedor a leer.")],
     desde: Annotated[int, Field(ge=0, description="Posición de la primera fila (empieza en 0).")] = 0,
     cantidad: Annotated[int, Field(ge=1, le=25, description="Cuántas filas devolver (máximo 25).")] = 10,
 ) -> dict:
