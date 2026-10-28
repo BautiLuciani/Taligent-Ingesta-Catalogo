@@ -92,7 +92,7 @@
   },
   {
     "item_id": "P01:AN-1103",
-    "por_que": "Q13: sin monodroga -> principio activo faltante (el ejemplo del estándar)",
+    "por_que": "Q13: sin monodroga -> principio activo faltante (el ejemplo del estándar); sin principio activo la categoría no se adivina (null)",
     "esperado": {
       "estado": "a_revision",
       "duplicado_de": null,
@@ -111,7 +111,7 @@
         "principio_activo": null,
         "concentracion": "400 MG",
         "condicion_venta": "VENTA_LIBRE",
-        "categoria": "MED-DOL-ANA",
+        "categoria": null,
         "precio_costo": 265.29,
         "moneda": "UYU",
         "proveedor_id": "P01",
@@ -154,10 +154,6 @@
           "archivo": "Lista_de_precios_octubre_2026.pdf",
           "pagina": 1
         },
-        "categoria": {
-          "archivo": "Lista_de_precios_octubre_2026.pdf",
-          "pagina": 1
-        },
         "precio_costo": {
           "archivo": "Lista_de_precios_octubre_2026.pdf",
           "pagina": 1
@@ -179,7 +175,7 @@
   },
   {
     "item_id": "P01:AN-1106",
-    "por_que": "Sin monodroga + concentración doble y 'Susp.' -> SUSPENSION",
+    "por_que": "Sin monodroga + concentración doble y 'Susp.' -> SUSPENSION; sin principio activo la categoría no se adivina (null)",
     "esperado": {
       "estado": "a_revision",
       "duplicado_de": null,
@@ -198,7 +194,7 @@
         "principio_activo": null,
         "concentracion": "400 MG + 400 MG/5 ML",
         "condicion_venta": "VENTA_LIBRE",
-        "categoria": "MED-DIG-ACI",
+        "categoria": null,
         "precio_costo": 156.16,
         "moneda": "UYU",
         "proveedor_id": "P01",
@@ -238,10 +234,6 @@
           "pagina": 1
         },
         "condicion_venta": {
-          "archivo": "Lista_de_precios_octubre_2026.pdf",
-          "pagina": 1
-        },
-        "categoria": {
           "archivo": "Lista_de_precios_octubre_2026.pdf",
           "pagina": 1
         },
