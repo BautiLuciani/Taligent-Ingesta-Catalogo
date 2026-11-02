@@ -1,0 +1,71 @@
+{
+  "fecha": "2026-11-02 18:06",
+  "lecturas": [
+    {
+      "pdf": "Lista_de_precios_octubre_2026.pdf",
+      "vez": 1,
+      "segundos": 51.4,
+      "costo_usd": 0.017315,
+      "rondas": 0,
+      "productos": 26,
+      "marcados": [],
+      "problemas_generales": 1,
+      "igual_al_commit": false
+    },
+    {
+      "pdf": "Lista_de_precios_octubre_2026.pdf",
+      "vez": 2,
+      "segundos": 43.9,
+      "costo_usd": 0.016005,
+      "rondas": 0,
+      "productos": 26,
+      "marcados": [],
+      "problemas_generales": 1,
+      "igual_al_commit": false
+    },
+    {
+      "pdf": "Lista_de_precios_octubre_2026.pdf",
+      "vez": 3,
+      "segundos": 42.4,
+      "costo_usd": 0.016387,
+      "rondas": 0,
+      "productos": 26,
+      "marcados": [],
+      "problemas_generales": 0,
+      "igual_al_commit": false
+    },
+    {
+      "pdf": "LHS_catalogo_nuevos_productos.pdf",
+      "vez": 1,
+      "segundos": 23.0,
+      "costo_usd": 0.007406,
+      "rondas": 0,
+      "productos": 25,
+      "marcados": [],
+      "problemas_generales": 0,
+      "igual_al_commit": true
+    },
+    {
+      "pdf": "LHS_catalogo_nuevos_productos.pdf",
+      "vez": 2,
+      "segundos": 24.9,
+      "costo_usd": 0.009176,
+      "rondas": 0,
+      "productos": 25,
+      "marcados": [],
+      "problemas_generales": 0,
+      "igual_al_commit": true
+    },
+    {
+      "pdf": "LHS_catalogo_nuevos_productos.pdf",
+      "vez": 3,
+      "segundos": 24.6,
+      "costo_usd": 0.008764,
+      "rondas": 0,
+      "productos": 25,
+      "marcados": [],
+      "problemas_generales": 0,
+      "igual_al_commit": true
+    }
+  ]
+}

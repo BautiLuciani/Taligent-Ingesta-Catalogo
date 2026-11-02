@@ -18,6 +18,7 @@ Correr: python extractor_pdf.py                       (LHS; reusa las llamadas y
 """
 import argparse
 import base64
+import hashlib
 import json
 import os
 import re
@@ -180,8 +181,11 @@ COLUMNAS_POR_PDF = {
         ("costo", "El precio, tal como está, con su símbolo de moneda (por ejemplo '$ 88,04')."),
     ],
     "Lista_de_precios_octubre_2026.pdf": [
-        ("producto", "El nombre comercial con su concentración, tal como está (por ejemplo 'Dolorex 400mg')."),
-        ("monodroga", "El principio activo, tal como está (por ejemplo 'Paracetamol')."),
+        # Semana 3, paso 1b: en las cremas y geles la concentración es un % ("Dermacort 1% Hidrocortisona") y Haiku
+        # metía el principio activo en el producto (6 de 6 llamadas). Se dice dónde termina cada columna.
+        ("producto", "El nombre comercial con su concentración (en mg, g, mcg, ml o %), tal como está "
+                     "(por ejemplo 'Dolorex 400mg'). Termina en la concentración: el principio activo no va acá."),
+        ("monodroga", "El principio activo (el nombre de la droga), tal como está (por ejemplo 'Paracetamol')."),
         ("presentacion", "La forma y la cantidad, tal como está (por ejemplo 'Comp. rec. x 20')."),
         ("condicion", "La condición de venta, tal como está (VL o VBR)."),
         ("ean", "El código de barras, tal como está."),
@@ -510,12 +514,23 @@ def filas_citadas_varias_veces(cliente, modelo: str, ruta_pdf: Path, de_nuevo: b
             rutas))
 
 
+def huella(pedido) -> str:
+    """6 letras que salen de lo que se pidió (los códigos de una ronda, las filas de una llamada 2).
+
+    Va en el nombre del JSON guardado: si otra corrida pide otra cosa, el nombre cambia y no se reusa una
+    respuesta que no corresponde (antes "ronda 1" se llamaba igual aunque se hubiera preguntado por otros códigos).
+    """
+    return hashlib.sha1(json.dumps(pedido, ensure_ascii=False).encode("utf-8")).hexdigest()[:6]
+
+
 def ronda_dirigida(cliente, modelo: str, ruta_pdf: Path, codigos: list[str], ronda: int, de_nuevo: bool) -> list[dict]:
     """Pregunta SOLO por los códigos que faltan, INTENTOS_POR_RONDA veces A LA VEZ, y devuelve las respuestas.
 
-    Cada intento se guarda en su JSON (.llamada1_r1_1.json, _r1_2...) y se reusa como las vueltas.
+    Cada intento se guarda en su JSON (.llamada1_r1_<huella>_1.json, ..._2) y se reusa solo si se pidió lo mismo.
     """
-    rutas = [CARPETA_EXTRACCIONES / f"{ruta_pdf.stem}.llamada1_r{ronda}_{n}.json" for n in range(1, INTENTOS_POR_RONDA + 1)]
+    marca = huella(codigos)
+    rutas = [CARPETA_EXTRACCIONES / f"{ruta_pdf.stem}.llamada1_r{ronda}_{marca}_{n}.json"
+             for n in range(1, INTENTOS_POR_RONDA + 1)]
     with ThreadPoolExecutor(max_workers=INTENTOS_POR_RONDA) as hilos:
         return list(hilos.map(
             lambda ruta: llamada_guardada(ruta, lambda: pedir_filas_citadas(cliente, modelo, ruta_pdf, codigos), de_nuevo),
@@ -563,8 +578,9 @@ def main():
         if not filas:
             sys.exit(f"No quedó ninguna fila. Problemas: {problemas}")
 
-        # Llamada 2: los campos de cada fila verificada (un JSON por ronda: las filas cambian si una ronda trajo algo)
-        sufijo = "" if ronda == 0 else f"_r{ronda}"
+        # Llamada 2: los campos de cada fila verificada (un JSON por ronda: las filas cambian si una ronda trajo algo;
+        # la huella de las filas va en el nombre para no reusar los campos de otras filas)
+        sufijo = "" if ronda == 0 else f"_r{ronda}_{huella([fila['fila'] for fila in filas.values()])}"
         respuesta_2 = llamada_guardada(CARPETA_EXTRACCIONES / f"{ruta_pdf.stem}.llamada2{sufijo}.json",
                                        lambda: pedir_campos(cliente, modelo, filas, columnas), argumentos.de_nuevo)
         respuestas_2.append(respuesta_2)
@@ -581,12 +597,16 @@ def main():
     costo_1 = sum(costo_usd(respuesta) for respuesta in respuestas_1)
     costo_2 = sum(costo_usd(respuesta) for respuesta in respuestas_2)
 
-    # La vigencia, solo en las listas de precios (para decidir qué precio rige si el proveedor manda otra lista)
+    # La vigencia, solo en las listas de precios (para decidir qué precio rige si el proveedor manda otra lista).
+    # Semana 3, paso 1b: se lee de la llamada propia UNIDA a todas las lecturas de la llamada 1. En la prueba de fuego
+    # la llamada propia no citó la vigencia en 2 de 3 lecturas, pero las lecturas de filas la citan casi siempre
+    # (12 de 13 guardadas): el encabezado del PDF entra en la primera cita. Más citas, misma regla: si aparecieran
+    # dos fechas distintas, no se elige.
     vigencia, costo_vigencia = None, 0.0
     if ruta_pdf.name in PDFS_CON_VIGENCIA:
         respuesta_v = llamada_guardada(CARPETA_EXTRACCIONES / f"{ruta_pdf.stem}.vigencia.json",
                                        lambda: pedir_vigencia(cliente, modelo, ruta_pdf), argumentos.de_nuevo)
-        vigencia, problemas_vigencia = vigencia_desde_citas(respuesta_v["content"], ruta_pdf.name)
+        vigencia, problemas_vigencia = vigencia_desde_citas(unir_contenidos(respuestas_1 + [respuesta_v]), ruta_pdf.name)
         problemas += problemas_vigencia
         costo_vigencia = costo_usd(respuesta_v)
 

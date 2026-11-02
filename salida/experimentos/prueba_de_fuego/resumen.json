@@ -1,0 +1,44 @@
+{
+  "fecha": "2026-11-02 18:30",
+  "lecturas": [
+    {
+      "pdf": "Lista_de_precios_octubre_2026.pdf",
+      "vez": 1,
+      "segundos": 61.9,
+      "costo_usd": 0.020963,
+      "rondas": 1,
+      "productos": 26,
+      "marcados": [],
+      "problemas_generales": [],
+      "igual_al_commit": true,
+      "diferencias": [],
+      "copia": "Lista_de_precios_octubre_2026_1.json"
+    },
+    {
+      "pdf": "Lista_de_precios_octubre_2026.pdf",
+      "vez": 2,
+      "segundos": 56.6,
+      "costo_usd": 0.018489,
+      "rondas": 0,
+      "productos": 26,
+      "marcados": [],
+      "problemas_generales": [],
+      "igual_al_commit": true,
+      "diferencias": [],
+      "copia": "Lista_de_precios_octubre_2026_2.json"
+    },
+    {
+      "pdf": "Lista_de_precios_octubre_2026.pdf",
+      "vez": 3,
+      "segundos": 45.0,
+      "costo_usd": 0.015826,
+      "rondas": 0,
+      "productos": 26,
+      "marcados": [],
+      "problemas_generales": [],
+      "igual_al_commit": true,
+      "diferencias": [],
+      "copia": "Lista_de_precios_octubre_2026_3.json"
+    }
+  ]
+}

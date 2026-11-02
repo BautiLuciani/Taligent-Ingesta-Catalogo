@@ -4,7 +4,7 @@ import json
 from pathlib import Path
 
 from extractor_pdf import (COLUMNAS_POR_PDF, campos_desde_respuesta, codigo_al_inicio, filas_de_un_texto,
-                           filas_desde_citas, normalizar_espacios, ordenar_como_el_pdf, que_falta, tool_campos,
+                           filas_desde_citas, huella, normalizar_espacios, ordenar_como_el_pdf, que_falta, tool_campos,
                            unir_contenidos, valor_en_fila, verificar_campos, vigencia_desde_citas)
 
 RUTA_EXPERIMENTO = Path(__file__).parent / "salida" / "experimentos" / "citas_lhs.json"
@@ -155,7 +155,7 @@ chequear("Solo la última (AN-1178) queda abierta, con el pie pegado",
 print("--- filas_desde_citas (citas REALES de LHS, paso 1) ---")
 filas_l, problemas_l = filas_desde_citas(copy.deepcopy(respuesta["content"]))
 chequear("Las 25 filas de LHS (la cita traía la tabla entera), sin problemas", (len(filas_l), problemas_l), (25, []))
-EXTRACCION_LHS = json.loads((RUTA_EXPERIMENTO.parents[1] / "extracciones" / "LHS_catalogo_nuevos_productos.json")
+EXTRACCION_LHS = json.loads((RUTA_EXPERIMENTO.parent / "lhs_extraccion_sem2.json")  # congelada (semana 3)
                             .read_text(encoding="utf-8"))
 chequear("Las mismas 24 filas cerradas que la extracción de LHS que ya teníamos",
          {c: f["fila"] for c, f in filas_l.items() if f["cerrada"]},
@@ -261,7 +261,8 @@ productos, _ = campos_desde_respuesta(entrega([{"codigo": "AN-1178", **BIEN_1178
 chequear("La última fila real de Andes (abierta pero completa) sigue pasando", productos[0]["problemas"], [])
 
 print("--- unir_contenidos: leer varias veces y unir (semana 3, paso 1b) ---")
-RUTA_BUENA = RUTA_EXPERIMENTO.parent.parent / "extracciones" / "Lista_de_precios_octubre_2026.llamada1_v1.json"
+# Las lecturas de referencia van CONGELADAS en experimentos/: las de extracciones/ las reescribe cada lectura nueva
+RUTA_BUENA = RUTA_EXPERIMENTO.parent / "andes_lectura_buena_sem2.json"
 BUENA = json.loads(RUTA_BUENA.read_text(encoding="utf-8"))["content"]  # la lectura de Andes de la semana 2
 filas_buena, _ = filas_desde_citas(BUENA)
 chequear("Unir no pierde bloques", len(unir_contenidos([{"content": CORTADA}, {"content": BUENA}])), len(CORTADA) + len(BUENA))
@@ -284,8 +285,7 @@ chequear("Un código sin cita (problema general): se vuelve a pedir",
          que_falta([], ["AN-1103: Haiku lo nombró pero no aparece en ningún texto citado."]), ["AN-1103"])
 chequear("Un problema general sin código no pide nada", que_falta([], ["Haiku no entregó los campos."]), [])
 # Las respuestas REALES del experimento del 02/11: la lectura mala (v2) + intentos de la ronda dirigida
-CARPETA_EXT = RUTA_BUENA.parent
-V2 = json.loads((CARPETA_EXT / "Lista_de_precios_octubre_2026.llamada1_v2.json").read_text(encoding="utf-8"))
+V2 = json.loads((RUTA_EXPERIMENTO.parent / "andes_lectura_mala_v2.json").read_text(encoding="utf-8"))  # la v2 cortada
 RONDA = {n: json.loads((RUTA_EXPERIMENTO.parent / f"andes_faltantes_actual_{n}.json").read_text(encoding="utf-8"))
          for n in (1, 2, 3)}
 filas_r, problemas_r = filas_desde_citas(unir_contenidos([V2, RONDA[2]]))
@@ -298,6 +298,24 @@ chequear("Lectura mala + un intento malo + uno bueno: 26 filas, 0 problemas", (l
 chequear("...fila por fila igual a la lectura buena de la semana 2", filas_r, filas_buena)
 chequear("...y EN EL MISMO ORDEN (la ronda trae las primeras filas al final, el orden lo da la cadena de citas)",
          list(filas_r), list(filas_buena))
+
+print("--- vigencia desde todas las lecturas (semana 3, paso 1b) ---")
+SIN_VIGENCIA = json.loads((RUTA_EXPERIMENTO.parent / "andes_faltantes_nueva_3.json").read_text(encoding="utf-8"))
+vigencia, problemas = vigencia_desde_citas(SIN_VIGENCIA["content"], "x.pdf")
+chequear("Una respuesta real que no citó la vigencia: None + problema", (vigencia, len(problemas)), (None, 1))
+vigencia, problemas = vigencia_desde_citas(unir_contenidos([SIN_VIGENCIA, V2]), "x.pdf")
+chequear("...unida a una lectura de filas (que cita el encabezado): la vigencia aparece",
+         (vigencia["fecha"], vigencia["texto"], problemas),
+         ("2026-10-01", "Lista de precios a farmacias · Vigencia desde el 1 de octubre de 2026", []))
+vigencia, problemas = vigencia_desde_citas(unir_contenidos([V2, RONDA[1], RONDA[3], {"content": VIGENCIA}]), "x.pdf")
+chequear("Varias lecturas que la citan igual: una sola vigencia, sin problemas", (vigencia["fecha"], problemas),
+         ("2026-10-01", []))
+
+print("--- huella del pedido (semana 3, paso 1b) ---")
+chequear("Lo mismo pedido dos veces: la misma huella", huella(["AN-1109"]), huella(["AN-1109"]))
+chequear("Otros códigos: otra huella (no se reusa la respuesta de otra pregunta)",
+         huella(["AN-1109"]) != huella(["AN-1127", "AN-1136"]), True)
+chequear("Son 6 letras", len(huella(["AN-1109"])), 6)
 
 print("--- ordenar_como_el_pdf (semana 3, paso 1b) ---")
 F = {c: {"codigo": c, "pagina": p} for c, p in [("B", 1), ("C", 1), ("A", 1), ("D", 2)]}
