@@ -4,6 +4,8 @@ Semana 2, paso 4. Haiku encuentra las secciones y la API las cita; el CÓDIGO le
 CITADO (que es el documento real, no texto generado) y traduce la clase con la tabla del estándar (sección 9).
 Paso 4A: la API cita la FDS de a una sección entera, y cada cita arranca con el título de su sección.
 
+Semana 3, paso 3: extraer_fds lee todas las FDS de la carpeta A LA VEZ (cada una es una llamada independiente).
+
 Correr: python extractor_fds.py            (las 7 FDS de LHS; reusa las llamadas ya guardadas)
         python extractor_fds.py --de-nuevo (vuelve a hacer las llamadas)
 """
@@ -14,6 +16,7 @@ import os
 import re
 import sys
 import unicodedata
+from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
 import anthropic
@@ -163,35 +166,39 @@ def pedir_secciones_citadas(cliente, modelo: str, ruta_fds: Path) -> dict:
 CARPETA_FDS_LHS = CARPETA_PROYECTO / "Data" / "proveedores" / "P07_Limpieza_Hogar_Sur" / "fichas_de_seguridad"
 
 
-def main():
-    """Lee todas las FDS de una carpeta (por defecto, las de LHS) y guarda qué códigos cubre cada una y su peligro."""
-    argumentos = argparse.ArgumentParser(description="Extrae las FDS de un proveedor.")
-    argumentos.add_argument("carpeta", nargs="?", type=Path, default=CARPETA_FDS_LHS,
-                            help="Carpeta fichas_de_seguridad de un proveedor (por defecto, la de LHS).")
-    argumentos.add_argument("--de-nuevo", action="store_true", help="Vuelve a hacer las llamadas.")
-    argumentos = argumentos.parse_args()
+def extraer_fds(cliente, modelo: str, carpeta: Path, de_nuevo: bool = False) -> dict:
+    """Lee todas las FDS de una carpeta A LA VEZ, guarda el resultado y lo devuelve (semana 3, paso 3).
 
-    load_dotenv(CARPETA_PROYECTO / ".env")
-    modelo = os.getenv("MODELO")
-    if not modelo:
-        sys.exit("ERROR: falta MODELO en el .env")
-    cliente = anthropic.Anthropic()
-    carpeta = argumentos.carpeta
+    Cada FDS es una llamada independiente: con hilos, las esperas a la API se superponen (fan-out, M4).
+    ThreadPoolExecutor.map devuelve los resultados en el MISMO orden en que se pidieron (alfabético por archivo),
+    así el JSON sale igual que cuando se leían de a una. El tope de llamadas a la vez lo pone llamada_guardada.
+    """
     proveedor = carpeta.parent.name  # ej. P07_Limpieza_Hogar_Sur
+    rutas_fds = sorted(carpeta.glob("*.pdf"))
+    if not rutas_fds:
+        raise ValueError(f"{carpeta} no tiene ninguna FDS (PDF).")
     carpeta_llamadas = CARPETA_EXTRACCIONES / f"fds_{proveedor}"
     carpeta_llamadas.mkdir(parents=True, exist_ok=True)
 
-    fichas, costo = [], 0.0
-    for ruta_fds in sorted(carpeta.glob("*.pdf")):
+    def leer_una(ruta_fds: Path) -> tuple[dict, float]:
         respuesta = llamada_guardada(carpeta_llamadas / f"{ruta_fds.stem}.llamada.json",
-                                     lambda: pedir_secciones_citadas(cliente, modelo, ruta_fds), argumentos.de_nuevo)
-        fichas.append(leer_fds(respuesta["content"], ruta_fds.name))
-        costo += costo_usd(respuesta)
+                                     lambda: pedir_secciones_citadas(cliente, modelo, ruta_fds), de_nuevo)
+        return leer_fds(respuesta["content"], ruta_fds.name), costo_usd(respuesta)
+
+    with ThreadPoolExecutor(max_workers=len(rutas_fds)) as hilos:
+        leidas = list(hilos.map(leer_una, rutas_fds))
+    fichas = [ficha for ficha, _ in leidas]
+    costo = sum(costo_una for _, costo_una in leidas)
 
     resultado = {"proveedor": proveedor, "modelo": modelo, "fichas": fichas, "costo_usd": round(costo, 6)}
     ruta_resultado = CARPETA_EXTRACCIONES / f"fds_{proveedor}.json"
     ruta_resultado.write_text(json.dumps(resultado, ensure_ascii=False, indent=2), encoding="utf-8")
+    return resultado
 
+
+def mostrar_resultado(resultado: dict) -> None:
+    """Imprime lo que sacó extraer_fds: cada FDS con su peligro, su número ONU y los códigos que cubre."""
+    fichas, proveedor = resultado["fichas"], resultado["proveedor"]
     print(f"\n{len(fichas)} FDS de {proveedor}:")
     for ficha in fichas:
         pagina = ficha["fuente"]["pagina"] if ficha["fuente"] else "-"
@@ -202,7 +209,26 @@ def main():
         for problema in ficha["problemas"]:
             print(f"  ⚠ {ficha['archivo']}: {problema}")
     print(f"\nCosto: US$ {resultado['costo_usd']:.6f}")
-    print(f"Resultado: {ruta_resultado.relative_to(CARPETA_PROYECTO)}")
+    print(f"Resultado: {(CARPETA_EXTRACCIONES / f'fds_{proveedor}.json').relative_to(CARPETA_PROYECTO)}")
+
+
+def main():
+    """Lee todas las FDS de una carpeta (por defecto, las de LHS) desde la terminal."""
+    argumentos = argparse.ArgumentParser(description="Extrae las FDS de un proveedor.")
+    argumentos.add_argument("carpeta", nargs="?", type=Path, default=CARPETA_FDS_LHS,
+                            help="Carpeta fichas_de_seguridad de un proveedor (por defecto, la de LHS).")
+    argumentos.add_argument("--de-nuevo", action="store_true", help="Vuelve a hacer las llamadas.")
+    argumentos = argumentos.parse_args()
+
+    load_dotenv(CARPETA_PROYECTO / ".env")
+    modelo = os.getenv("MODELO")
+    if not modelo:
+        sys.exit("ERROR: falta MODELO en el .env")
+    try:
+        resultado = extraer_fds(anthropic.Anthropic(), modelo, argumentos.carpeta, argumentos.de_nuevo)
+    except ValueError as error:
+        sys.exit(f"ERROR: {error}")
+    mostrar_resultado(resultado)
 
 
 if __name__ == "__main__":

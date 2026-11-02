@@ -1,6 +1,12 @@
 """Pruebas de extractor_fds.py con las citas REALES del paso 4A. Correr: python probar_extractor_fds.py"""
 import json
+import shutil
+import tempfile
+import time
 from pathlib import Path
+
+import extractor_fds
+import extractor_pdf
 
 from extractor_fds import leer_fds, leer_seccion_1, leer_seccion_14, lineas, secciones_citadas
 
@@ -98,5 +104,33 @@ chequear("Respuesta sin citas: todo vacío, sin fuente", (ficha["codigos"], fich
 chequear("...y con sus 2 problemas", len(ficha["problemas"]), 2)
 ficha = leer_fds([bloque("Identificación\r\nProducto: Lavandina Clarita\r\nSección 2. "), bloque(SECCION_14)], "FDS_x.pdf")
 chequear("Sección 1 sin códigos: queda como problema", ficha["problemas"], ["La sección 1 no lista códigos comerciales."])
+
+print("--- extraer_fds: las 7 FDS a la vez (semana 3, paso 3) ---")
+# Sin API: cada FDS responde con su llamada REAL guardada (congelada del commit), tardando 0,3 s como si fuera la red
+SEM2 = Path(__file__).parent / "salida" / "experimentos" / "fds_P07_sem2"
+CARPETA_FDS = Path(__file__).parent / "Data" / "proveedores" / "P07_Limpieza_Hogar_Sur" / "fichas_de_seguridad"
+
+
+def respuesta_guardada(cliente, modelo, ruta_fds):
+    time.sleep(0.3)
+    return json.loads((SEM2 / f"{ruta_fds.stem}.llamada.json").read_text(encoding="utf-8"))
+
+
+carpeta = Path(tempfile.mkdtemp())
+originales = (extractor_fds.pedir_secciones_citadas, extractor_fds.CARPETA_EXTRACCIONES)
+extractor_fds.pedir_secciones_citadas, extractor_fds.CARPETA_EXTRACCIONES = respuesta_guardada, carpeta
+try:
+    inicio = time.perf_counter()
+    resultado = extractor_fds.extraer_fds(None, "modelo", CARPETA_FDS, de_nuevo=True)
+    segundos = time.perf_counter() - inicio
+finally:
+    extractor_fds.pedir_secciones_citadas, extractor_fds.CARPETA_EXTRACCIONES = originales
+esperado = json.loads((SEM2 / "resultado.json").read_text(encoding="utf-8"))
+chequear("Las 7 fichas iguales a las de la semana 2, en el mismo orden", resultado["fichas"], esperado["fichas"])
+chequear("...con el mismo costo", round(resultado["costo_usd"], 6), round(esperado["costo_usd"], 6))
+tope = extractor_pdf.TOPE_LLAMADAS
+chequear(f"A la vez: 7 llamadas de 0,3 s con la puerta de {tope} tardan ~0,6 s, no 2,1 s",
+         segundos < 7 * 0.3 * 0.5, True)
+shutil.rmtree(carpeta, ignore_errors=True)
 
 print(f"\nResultado: {'todo OK' if errores == 0 else f'{errores} con error'}")
