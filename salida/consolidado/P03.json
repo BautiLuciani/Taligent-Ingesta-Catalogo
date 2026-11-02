@@ -1,0 +1,1355 @@
+{
+  "proveedor_id": "P03",
+  "filas": [
+    {
+      "item_id": "P03:LT-3303",
+      "fuente": {
+        "archivo": "litoral_altas_102026.csv",
+        "linea": 2
+      },
+      "original": {
+        "codigo": "LT-3303",
+        "descripcion": "PASTA DENTAL BLANQ.",
+        "marca": "SONRISA",
+        "contenido": "90",
+        "unidad": "GR",
+        "ean": "7793469616846",
+        "precio": "68,91"
+      },
+      "calculado": {
+        "gtin": "7793469616846",
+        "motivo_gtin": null,
+        "descripcion_expandida": "PASTA DENTAL BLANQUEADORA",
+        "marca": "SONRISA",
+        "contenido": 90,
+        "unidad": "G",
+        "precio_costo": 68.91,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P03:LT-3306",
+      "fuente": {
+        "archivo": "litoral_altas_102026.csv",
+        "linea": 3
+      },
+      "original": {
+        "codigo": "LT-3306",
+        "descripcion": "Jabon Antibacterial",
+        "marca": "LAVANDA REAL",
+        "contenido": "125",
+        "unidad": "GR",
+        "ean": "7790863076870",
+        "precio": "45,37"
+      },
+      "calculado": {
+        "gtin": "7790863076870",
+        "motivo_gtin": null,
+        "descripcion_expandida": "JABON ANTIBACTERIAL",
+        "marca": "LAVANDA REAL",
+        "contenido": 125,
+        "unidad": "G",
+        "precio_costo": 45.37,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P03:LT-3309",
+      "fuente": {
+        "archivo": "litoral_altas_102026.csv",
+        "linea": 4
+      },
+      "original": {
+        "codigo": "LT-3309",
+        "descripcion": "Pasta Dental Menta Fresca",
+        "marca": "DENTIBLANC",
+        "contenido": "90",
+        "unidad": "G",
+        "ean": "7792214191911",
+        "precio": "65,74"
+      },
+      "calculado": {
+        "gtin": "7792214191911",
+        "motivo_gtin": null,
+        "descripcion_expandida": "PASTA DENTAL MENTA FRESCA",
+        "marca": "DENTIBLANC",
+        "contenido": 90,
+        "unidad": "G",
+        "precio_costo": 65.74,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P03:LT-3312",
+      "fuente": {
+        "archivo": "litoral_altas_102026.csv",
+        "linea": 5
+      },
+      "original": {
+        "codigo": "LT-3312",
+        "descripcion": "JABON LIQUIDO NEUTRO",
+        "marca": "PUREZA",
+        "contenido": "0,5",
+        "unidad": "LT",
+        "ean": "7799626810102",
+        "precio": "115,87"
+      },
+      "calculado": {
+        "gtin": "7799626810102",
+        "motivo_gtin": null,
+        "descripcion_expandida": "JABON LIQUIDO NEUTRO",
+        "marca": "PUREZA",
+        "contenido": 500,
+        "unidad": "ML",
+        "precio_costo": 115.87,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P03:LT-3315",
+      "fuente": {
+        "archivo": "litoral_altas_102026.csv",
+        "linea": 6
+      },
+      "original": {
+        "codigo": "LT-3315",
+        "descripcion": "PASTA DENTAL SENSIBLE",
+        "marca": "DENTIBLANC",
+        "contenido": "90",
+        "unidad": "GR",
+        "ean": "7799643701780",
+        "precio": "66,87"
+      },
+      "calculado": {
+        "gtin": "7799643701780",
+        "motivo_gtin": null,
+        "descripcion_expandida": "PASTA DENTAL SENSIBLE",
+        "marca": "DENTIBLANC",
+        "contenido": 90,
+        "unidad": "G",
+        "precio_costo": 66.87,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P03:LT-3318",
+      "fuente": {
+        "archivo": "litoral_altas_102026.csv",
+        "linea": 7
+      },
+      "original": {
+        "codigo": "LT-3318",
+        "descripcion": "ALGODON ZIG ZAG",
+        "marca": "NUBE",
+        "contenido": "140",
+        "unidad": "G",
+        "ean": "7790267858324",
+        "precio": "69,21"
+      },
+      "calculado": {
+        "gtin": "7790267858324",
+        "motivo_gtin": null,
+        "descripcion_expandida": "ALGODON ZIG ZAG",
+        "marca": "NUBE",
+        "contenido": 140,
+        "unidad": "G",
+        "precio_costo": 69.21,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P03:LT-3321",
+      "fuente": {
+        "archivo": "litoral_altas_102026.csv",
+        "linea": 8
+      },
+      "original": {
+        "codigo": "LT-3321",
+        "descripcion": "Pasta Dental Blanqueadora",
+        "marca": "DENTIBLANC",
+        "contenido": "180",
+        "unidad": "G",
+        "ean": "7797556693871",
+        "precio": "124,76"
+      },
+      "calculado": {
+        "gtin": "7797556693871",
+        "motivo_gtin": null,
+        "descripcion_expandida": "PASTA DENTAL BLANQUEADORA",
+        "marca": "DENTIBLANC",
+        "contenido": 180,
+        "unidad": "G",
+        "precio_costo": 124.76,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P03:LT-3324",
+      "fuente": {
+        "archivo": "litoral_altas_102026.csv",
+        "linea": 9
+      },
+      "original": {
+        "codigo": "LT-3324",
+        "descripcion": "Jabon Liquido Neutro",
+        "marca": "PUREZA",
+        "contenido": "250",
+        "unidad": "CC",
+        "ean": "7790342802839",
+        "precio": "68,54"
+      },
+      "calculado": {
+        "gtin": "7790342802839",
+        "motivo_gtin": null,
+        "descripcion_expandida": "JABON LIQUIDO NEUTRO",
+        "marca": "PUREZA",
+        "contenido": 250,
+        "unidad": "ML",
+        "precio_costo": 68.54,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P03:LT-3327",
+      "fuente": {
+        "archivo": "litoral_altas_102026.csv",
+        "linea": 10
+      },
+      "original": {
+        "codigo": "LT-3327",
+        "descripcion": "CEPILLO DENTAL MEDIO",
+        "marca": "SONRISA",
+        "contenido": "2",
+        "unidad": "UNID",
+        "ean": "7798971881317",
+        "precio": "96,95"
+      },
+      "calculado": {
+        "gtin": "7798971881317",
+        "motivo_gtin": null,
+        "descripcion_expandida": "CEPILLO DENTAL MEDIO",
+        "marca": "SONRISA",
+        "contenido": 2,
+        "unidad": "UN",
+        "precio_costo": 96.95,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P03:LT-3330",
+      "fuente": {
+        "archivo": "litoral_altas_102026.csv",
+        "linea": 11
+      },
+      "original": {
+        "codigo": "LT-3330",
+        "descripcion": "PASTA DENTAL BLANQ.",
+        "marca": "DENTIBLANC",
+        "contenido": "70",
+        "unidad": "G",
+        "ean": "7792497428735",
+        "precio": "55,51"
+      },
+      "calculado": {
+        "gtin": "7792497428735",
+        "motivo_gtin": null,
+        "descripcion_expandida": "PASTA DENTAL BLANQUEADORA",
+        "marca": "DENTIBLANC",
+        "contenido": 70,
+        "unidad": "G",
+        "precio_costo": 55.51,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P03:LT-3333",
+      "fuente": {
+        "archivo": "litoral_altas_102026.csv",
+        "linea": 12
+      },
+      "original": {
+        "codigo": "LT-3333",
+        "descripcion": "Pasta Dental Blanq.",
+        "marca": "DENTIBLANC",
+        "contenido": "90",
+        "unidad": "G",
+        "ean": "7798096023746",
+        "precio": "67,82"
+      },
+      "calculado": {
+        "gtin": "7798096023746",
+        "motivo_gtin": null,
+        "descripcion_expandida": "PASTA DENTAL BLANQUEADORA",
+        "marca": "DENTIBLANC",
+        "contenido": 90,
+        "unidad": "G",
+        "precio_costo": 67.82,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P03:LT-3336",
+      "fuente": {
+        "archivo": "litoral_altas_102026.csv",
+        "linea": 13
+      },
+      "original": {
+        "codigo": "LT-3336",
+        "descripcion": "ENJUAGUE BUCAL SIN ALCOHOL",
+        "marca": "DENTIBLANC",
+        "contenido": "250",
+        "unidad": "CC",
+        "ean": "7791018588972",
+        "precio": "101,78"
+      },
+      "calculado": {
+        "gtin": "7791018588972",
+        "motivo_gtin": null,
+        "descripcion_expandida": "ENJUAGUE BUCAL SIN ALCOHOL",
+        "marca": "DENTIBLANC",
+        "contenido": 250,
+        "unidad": "ML",
+        "precio_costo": 101.78,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P03:LT-3339",
+      "fuente": {
+        "archivo": "litoral_altas_102026.csv",
+        "linea": 14
+      },
+      "original": {
+        "codigo": "LT-3339",
+        "descripcion": "PASTA DENTAL SENSIBLE",
+        "marca": "DENTIBLANC",
+        "contenido": "70",
+        "unidad": "GR",
+        "ean": "7790865988232",
+        "precio": "56,25"
+      },
+      "calculado": {
+        "gtin": "7790865988232",
+        "motivo_gtin": null,
+        "descripcion_expandida": "PASTA DENTAL SENSIBLE",
+        "marca": "DENTIBLANC",
+        "contenido": 70,
+        "unidad": "G",
+        "precio_costo": 56.25,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P03:LT-3342",
+      "fuente": {
+        "archivo": "litoral_altas_102026.csv",
+        "linea": 15
+      },
+      "original": {
+        "codigo": "LT-3342",
+        "descripcion": "Algodon Zig Zag",
+        "marca": "NUBE",
+        "contenido": "70",
+        "unidad": "GRS",
+        "ean": "7796168081588",
+        "precio": "47,78"
+      },
+      "calculado": {
+        "gtin": "7796168081588",
+        "motivo_gtin": null,
+        "descripcion_expandida": "ALGODON ZIG ZAG",
+        "marca": "NUBE",
+        "contenido": 70,
+        "unidad": "G",
+        "precio_costo": 47.78,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P03:LT-3345",
+      "fuente": {
+        "archivo": "litoral_altas_102026.csv",
+        "linea": 16
+      },
+      "original": {
+        "codigo": "LT-3345",
+        "descripcion": "Jabon Liquido Antibacterial",
+        "marca": "PUREZA",
+        "contenido": "0,25",
+        "unidad": "LT",
+        "ean": "7793358846682",
+        "precio": "76,17"
+      },
+      "calculado": {
+        "gtin": "7793358846682",
+        "motivo_gtin": null,
+        "descripcion_expandida": "JABON LIQUIDO ANTIBACTERIAL",
+        "marca": "PUREZA",
+        "contenido": 250,
+        "unidad": "ML",
+        "precio_costo": 76.17,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P03:LT-3348",
+      "fuente": {
+        "archivo": "litoral_altas_102026.csv",
+        "linea": 17
+      },
+      "original": {
+        "codigo": "LT-3348",
+        "descripcion": "Pasta Dental Menta Fresca",
+        "marca": "DENTIBLANC",
+        "contenido": "70",
+        "unidad": "GRS",
+        "ean": "7793619638384",
+        "precio": "59,43"
+      },
+      "calculado": {
+        "gtin": "7793619638384",
+        "motivo_gtin": null,
+        "descripcion_expandida": "PASTA DENTAL MENTA FRESCA",
+        "marca": "DENTIBLANC",
+        "contenido": 70,
+        "unidad": "G",
+        "precio_costo": 59.43,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P03:LT-3351",
+      "fuente": {
+        "archivo": "litoral_altas_102026.csv",
+        "linea": 18
+      },
+      "original": {
+        "codigo": "LT-3351",
+        "descripcion": "Jabon Liquido Avena",
+        "marca": "PUREZA",
+        "contenido": "500",
+        "unidad": "ML",
+        "ean": "7798948345705",
+        "precio": "112,34"
+      },
+      "calculado": {
+        "gtin": "7798948345705",
+        "motivo_gtin": null,
+        "descripcion_expandida": "JABON LIQUIDO AVENA",
+        "marca": "PUREZA",
+        "contenido": 500,
+        "unidad": "ML",
+        "precio_costo": 112.34,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P03:LT-3354",
+      "fuente": {
+        "archivo": "litoral_altas_102026.csv",
+        "linea": 19
+      },
+      "original": {
+        "codigo": "LT-3354",
+        "descripcion": "Pasta Dental Sensible",
+        "marca": "SONRISA",
+        "contenido": "70",
+        "unidad": "GR",
+        "ean": "7795848010542",
+        "precio": "61,20"
+      },
+      "calculado": {
+        "gtin": "7795848010542",
+        "motivo_gtin": null,
+        "descripcion_expandida": "PASTA DENTAL SENSIBLE",
+        "marca": "SONRISA",
+        "contenido": 70,
+        "unidad": "G",
+        "precio_costo": 61.2,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P03:LT-3357",
+      "fuente": {
+        "archivo": "litoral_altas_102026.csv",
+        "linea": 20
+      },
+      "original": {
+        "codigo": "LT-3357",
+        "descripcion": "JABON ANTIBACTERIAL",
+        "marca": "PUREZA",
+        "contenido": "125",
+        "unidad": "GR",
+        "ean": "",
+        "precio": "48,42"
+      },
+      "calculado": {
+        "gtin": null,
+        "motivo_gtin": "gtin_faltante",
+        "descripcion_expandida": "JABON ANTIBACTERIAL",
+        "marca": "PUREZA",
+        "contenido": 125,
+        "unidad": "G",
+        "precio_costo": 48.42,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P03:LT-3360",
+      "fuente": {
+        "archivo": "litoral_altas_102026.csv",
+        "linea": 21
+      },
+      "original": {
+        "codigo": "LT-3360",
+        "descripcion": "Jabon Avena",
+        "marca": "PUREZA",
+        "contenido": "90",
+        "unidad": "GRS",
+        "ean": "7794413279544",
+        "precio": "37,82"
+      },
+      "calculado": {
+        "gtin": "7794413279544",
+        "motivo_gtin": null,
+        "descripcion_expandida": "JABON AVENA",
+        "marca": "PUREZA",
+        "contenido": 90,
+        "unidad": "G",
+        "precio_costo": 37.82,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P03:LT-3363",
+      "fuente": {
+        "archivo": "litoral_altas_102026.csv",
+        "linea": 22
+      },
+      "original": {
+        "codigo": "LT-3363",
+        "descripcion": "CEPILLO DENTAL SUAVE",
+        "marca": "DENTIBLANC",
+        "contenido": "1",
+        "unidad": "UN",
+        "ean": "7792998932205",
+        "precio": "52,52"
+      },
+      "calculado": {
+        "gtin": "7792998932205",
+        "motivo_gtin": null,
+        "descripcion_expandida": "CEPILLO DENTAL SUAVE",
+        "marca": "DENTIBLANC",
+        "contenido": 1,
+        "unidad": "UN",
+        "precio_costo": 52.52,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P03:LT-3366",
+      "fuente": {
+        "archivo": "litoral_altas_102026.csv",
+        "linea": 23
+      },
+      "original": {
+        "codigo": "LT-3366",
+        "descripcion": "Hisopos",
+        "marca": "NUBE",
+        "contenido": "200",
+        "unidad": "UN",
+        "ean": "7792055312834",
+        "precio": "71,09"
+      },
+      "calculado": {
+        "gtin": "7792055312834",
+        "motivo_gtin": null,
+        "descripcion_expandida": "HISOPOS",
+        "marca": "NUBE",
+        "contenido": 200,
+        "unidad": "UN",
+        "precio_costo": 71.09,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P03:LT-3369",
+      "fuente": {
+        "archivo": "litoral_altas_102026.csv",
+        "linea": 24
+      },
+      "original": {
+        "codigo": "LT-3369",
+        "descripcion": "CEPILLO DENTAL SUAVE",
+        "marca": "SONRISA",
+        "contenido": "2",
+        "unidad": "UN",
+        "ean": "7790743922976",
+        "precio": "89,57"
+      },
+      "calculado": {
+        "gtin": "7790743922976",
+        "motivo_gtin": null,
+        "descripcion_expandida": "CEPILLO DENTAL SUAVE",
+        "marca": "SONRISA",
+        "contenido": 2,
+        "unidad": "UN",
+        "precio_costo": 89.57,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P03:LT-3372",
+      "fuente": {
+        "archivo": "litoral_altas_102026.csv",
+        "linea": 25
+      },
+      "original": {
+        "codigo": "LT-3372",
+        "descripcion": "Cepillo Dental Medio",
+        "marca": "DENTIBLANC",
+        "contenido": "1",
+        "unidad": "UN",
+        "ean": "7799894711811",
+        "precio": "56,75"
+      },
+      "calculado": {
+        "gtin": "7799894711811",
+        "motivo_gtin": null,
+        "descripcion_expandida": "CEPILLO DENTAL MEDIO",
+        "marca": "DENTIBLANC",
+        "contenido": 1,
+        "unidad": "UN",
+        "precio_costo": 56.75,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P03:LT-3375",
+      "fuente": {
+        "archivo": "litoral_altas_102026.csv",
+        "linea": 26
+      },
+      "original": {
+        "codigo": "LT-3375",
+        "descripcion": "JABON GLICERINA",
+        "marca": "LAVANDA REAL",
+        "contenido": "90",
+        "unidad": "G",
+        "ean": "7796805044617",
+        "precio": "32,86"
+      },
+      "calculado": {
+        "gtin": "7796805044617",
+        "motivo_gtin": null,
+        "descripcion_expandida": "JABON GLICERINA",
+        "marca": "LAVANDA REAL",
+        "contenido": 90,
+        "unidad": "G",
+        "precio_costo": 32.86,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P03:LT-3378",
+      "fuente": {
+        "archivo": "litoral_altas_102026.csv",
+        "linea": 27
+      },
+      "original": {
+        "codigo": "LT-3378",
+        "descripcion": "Pasta Dental Menta Fresca",
+        "marca": "SONRISA",
+        "contenido": "70",
+        "unidad": "G",
+        "ean": "7797460628105",
+        "precio": "60,43"
+      },
+      "calculado": {
+        "gtin": "7797460628105",
+        "motivo_gtin": null,
+        "descripcion_expandida": "PASTA DENTAL MENTA FRESCA",
+        "marca": "SONRISA",
+        "contenido": 70,
+        "unidad": "G",
+        "precio_costo": 60.43,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P03:LT-3381",
+      "fuente": {
+        "archivo": "litoral_altas_102026.csv",
+        "linea": 28
+      },
+      "original": {
+        "codigo": "LT-3381",
+        "descripcion": "JABON LIQUIDO AVENA",
+        "marca": "PUREZA",
+        "contenido": "250",
+        "unidad": "ML",
+        "ean": "7799349440273",
+        "precio": "63,47"
+      },
+      "calculado": {
+        "gtin": "7799349440273",
+        "motivo_gtin": null,
+        "descripcion_expandida": "JABON LIQUIDO AVENA",
+        "marca": "PUREZA",
+        "contenido": 250,
+        "unidad": "ML",
+        "precio_costo": 63.47,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P03:LT-3384",
+      "fuente": {
+        "archivo": "litoral_altas_102026.csv",
+        "linea": 29
+      },
+      "original": {
+        "codigo": "LT-3384",
+        "descripcion": "JABON AVENA",
+        "marca": "LAVANDA REAL",
+        "contenido": "125",
+        "unidad": "G",
+        "ean": "7795777303821",
+        "precio": "45,46"
+      },
+      "calculado": {
+        "gtin": "7795777303821",
+        "motivo_gtin": null,
+        "descripcion_expandida": "JABON AVENA",
+        "marca": "LAVANDA REAL",
+        "contenido": 125,
+        "unidad": "G",
+        "precio_costo": 45.46,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P03:LT-3387",
+      "fuente": {
+        "archivo": "litoral_altas_102026.csv",
+        "linea": 30
+      },
+      "original": {
+        "codigo": "LT-3387",
+        "descripcion": "Pasta Dental Caries",
+        "marca": "DENTIBLANC",
+        "contenido": "70",
+        "unidad": "GRS",
+        "ean": "7792922330572",
+        "precio": "63,89"
+      },
+      "calculado": {
+        "gtin": "7792922330572",
+        "motivo_gtin": null,
+        "descripcion_expandida": "PASTA DENTAL CARIES",
+        "marca": "DENTIBLANC",
+        "contenido": 70,
+        "unidad": "G",
+        "precio_costo": 63.89,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P03:LT-3390",
+      "fuente": {
+        "archivo": "litoral_altas_102026.csv",
+        "linea": 31
+      },
+      "original": {
+        "codigo": "LT-3390",
+        "descripcion": "JABON AVENA",
+        "marca": "LAVANDA REAL",
+        "contenido": "90",
+        "unidad": "GRS",
+        "ean": "7797702204005",
+        "precio": "35,08"
+      },
+      "calculado": {
+        "gtin": "7797702204005",
+        "motivo_gtin": null,
+        "descripcion_expandida": "JABON AVENA",
+        "marca": "LAVANDA REAL",
+        "contenido": 90,
+        "unidad": "G",
+        "precio_costo": 35.08,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P03:LT-3393",
+      "fuente": {
+        "archivo": "litoral_altas_102026.csv",
+        "linea": 32
+      },
+      "original": {
+        "codigo": "LT-3393",
+        "descripcion": "Pasta Dental Caries",
+        "marca": "DENTIBLANC",
+        "contenido": "90",
+        "unidad": "GR",
+        "ean": "7796606860782",
+        "precio": "67,32"
+      },
+      "calculado": {
+        "gtin": "7796606860782",
+        "motivo_gtin": null,
+        "descripcion_expandida": "PASTA DENTAL CARIES",
+        "marca": "DENTIBLANC",
+        "contenido": 90,
+        "unidad": "G",
+        "precio_costo": 67.32,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P03:LT-3396",
+      "fuente": {
+        "archivo": "litoral_altas_102026.csv",
+        "linea": 33
+      },
+      "original": {
+        "codigo": "LT-3396",
+        "descripcion": "Jabon Glicerina",
+        "marca": "PUREZA",
+        "contenido": "90",
+        "unidad": "GR",
+        "ean": "7794062327283",
+        "precio": "37,64"
+      },
+      "calculado": {
+        "gtin": "7794062327283",
+        "motivo_gtin": null,
+        "descripcion_expandida": "JABON GLICERINA",
+        "marca": "PUREZA",
+        "contenido": 90,
+        "unidad": "G",
+        "precio_costo": 37.64,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P03:LT-3399",
+      "fuente": {
+        "archivo": "litoral_altas_102026.csv",
+        "linea": 34
+      },
+      "original": {
+        "codigo": "LT-3399",
+        "descripcion": "JABON GLICERINA",
+        "marca": "PUREZA",
+        "contenido": "125",
+        "unidad": "G",
+        "ean": "7790829525725",
+        "precio": "42,48"
+      },
+      "calculado": {
+        "gtin": "7790829525725",
+        "motivo_gtin": null,
+        "descripcion_expandida": "JABON GLICERINA",
+        "marca": "PUREZA",
+        "contenido": 125,
+        "unidad": "G",
+        "precio_costo": 42.48,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P03:LT-3402",
+      "fuente": {
+        "archivo": "litoral_altas_102026.csv",
+        "linea": 35
+      },
+      "original": {
+        "codigo": "LT-3402",
+        "descripcion": "JABON GLICERINA",
+        "marca": "LAVANDA REAL",
+        "contenido": "125",
+        "unidad": "G",
+        "ean": "7795538327196",
+        "precio": "41,70"
+      },
+      "calculado": {
+        "gtin": "7795538327196",
+        "motivo_gtin": null,
+        "descripcion_expandida": "JABON GLICERINA",
+        "marca": "LAVANDA REAL",
+        "contenido": 125,
+        "unidad": "G",
+        "precio_costo": 41.7,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P03:LT-3405",
+      "fuente": {
+        "archivo": "litoral_altas_102026.csv",
+        "linea": 36
+      },
+      "original": {
+        "codigo": "LT-3405",
+        "descripcion": "JABON AVENA",
+        "marca": "PUREZA",
+        "contenido": "125",
+        "unidad": "GRS",
+        "ean": "7798762369147",
+        "precio": "39,89"
+      },
+      "calculado": {
+        "gtin": "7798762369147",
+        "motivo_gtin": null,
+        "descripcion_expandida": "JABON AVENA",
+        "marca": "PUREZA",
+        "contenido": 125,
+        "unidad": "G",
+        "precio_costo": 39.89,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P03:LT-3408",
+      "fuente": {
+        "archivo": "litoral_altas_102026.csv",
+        "linea": 37
+      },
+      "original": {
+        "codigo": "LT-3408",
+        "descripcion": "PASTA DENTAL CARIES",
+        "marca": "DENTIBLANC",
+        "contenido": "180",
+        "unidad": "GRS",
+        "ean": "7796556998863",
+        "precio": "125,31"
+      },
+      "calculado": {
+        "gtin": "7796556998863",
+        "motivo_gtin": null,
+        "descripcion_expandida": "PASTA DENTAL CARIES",
+        "marca": "DENTIBLANC",
+        "contenido": 180,
+        "unidad": "G",
+        "precio_costo": 125.31,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P03:LT-3411",
+      "fuente": {
+        "archivo": "litoral_altas_102026.csv",
+        "linea": 38
+      },
+      "original": {
+        "codigo": "LT-3411",
+        "descripcion": "PASTA DENTAL SENSIBLE",
+        "marca": "SONRISA",
+        "contenido": "90",
+        "unidad": "GR",
+        "ean": "7795219613808",
+        "precio": "70,60"
+      },
+      "calculado": {
+        "gtin": "7795219613808",
+        "motivo_gtin": null,
+        "descripcion_expandida": "PASTA DENTAL SENSIBLE",
+        "marca": "SONRISA",
+        "contenido": 90,
+        "unidad": "G",
+        "precio_costo": 70.6,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P03:LT-3414",
+      "fuente": {
+        "archivo": "litoral_altas_102026.csv",
+        "linea": 39
+      },
+      "original": {
+        "codigo": "LT-3414",
+        "descripcion": "PASTA DENTAL BLANQUEADORA",
+        "marca": "SONRISA",
+        "contenido": "70",
+        "unidad": "GR",
+        "ean": "7794283405838",
+        "precio": "55,96"
+      },
+      "calculado": {
+        "gtin": "7794283405838",
+        "motivo_gtin": null,
+        "descripcion_expandida": "PASTA DENTAL BLANQUEADORA",
+        "marca": "SONRISA",
+        "contenido": 70,
+        "unidad": "G",
+        "precio_costo": 55.96,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P03:LT-3417",
+      "fuente": {
+        "archivo": "litoral_altas_102026.csv",
+        "linea": 40
+      },
+      "original": {
+        "codigo": "LT-3417",
+        "descripcion": "ENJUAGUE BUCAL S/ ALCOHOL",
+        "marca": "DENTIBLANC",
+        "contenido": "0,5",
+        "unidad": "LT",
+        "ean": "7795205443723",
+        "precio": "161,71"
+      },
+      "calculado": {
+        "gtin": "7795205443723",
+        "motivo_gtin": null,
+        "descripcion_expandida": "ENJUAGUE BUCAL SIN ALCOHOL",
+        "marca": "DENTIBLANC",
+        "contenido": 500,
+        "unidad": "ML",
+        "precio_costo": 161.71,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P03:LT-3450",
+      "fuente": {
+        "archivo": "litoral_altas_102026.csv",
+        "linea": 41
+      },
+      "original": {
+        "codigo": "LT-3450",
+        "descripcion": "Hisopos",
+        "marca": "NUBE",
+        "contenido": "100",
+        "unidad": "UNID",
+        "ean": "",
+        "precio": "41,84"
+      },
+      "calculado": {
+        "gtin": null,
+        "motivo_gtin": "gtin_faltante",
+        "descripcion_expandida": "HISOPOS",
+        "marca": "NUBE",
+        "contenido": 100,
+        "unidad": "UN",
+        "precio_costo": 41.84,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P03:LT-3420",
+      "fuente": {
+        "archivo": "litoral_altas_102026.csv",
+        "linea": 42
+      },
+      "original": {
+        "codigo": "LT-3420",
+        "descripcion": "ALGODON HIDROFILO",
+        "marca": "NUBE",
+        "contenido": "70",
+        "unidad": "GRS",
+        "ean": "7799874686399",
+        "precio": "41,15"
+      },
+      "calculado": {
+        "gtin": "7799874686399",
+        "motivo_gtin": null,
+        "descripcion_expandida": "ALGODON HIDROFILO",
+        "marca": "NUBE",
+        "contenido": 70,
+        "unidad": "G",
+        "precio_costo": 41.15,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P03:LT-3423",
+      "fuente": {
+        "archivo": "litoral_altas_102026.csv",
+        "linea": 43
+      },
+      "original": {
+        "codigo": "LT-3423",
+        "descripcion": "Algodon Hidrofilo",
+        "marca": "NUBE",
+        "contenido": "140",
+        "unidad": "G",
+        "ean": "7793675505019",
+        "precio": "65,81"
+      },
+      "calculado": {
+        "gtin": "7793675505019",
+        "motivo_gtin": null,
+        "descripcion_expandida": "ALGODON HIDROFILO",
+        "marca": "NUBE",
+        "contenido": 140,
+        "unidad": "G",
+        "precio_costo": 65.81,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P03:LT-3426",
+      "fuente": {
+        "archivo": "litoral_altas_102026.csv",
+        "linea": 44
+      },
+      "original": {
+        "codigo": "LT-3426",
+        "descripcion": "CEPILLO DENTAL MEDIO",
+        "marca": "SONRISA",
+        "contenido": "1",
+        "unidad": "UNID",
+        "ean": "7792916781618",
+        "precio": "52,54"
+      },
+      "calculado": {
+        "gtin": "7792916781618",
+        "motivo_gtin": null,
+        "descripcion_expandida": "CEPILLO DENTAL MEDIO",
+        "marca": "SONRISA",
+        "contenido": 1,
+        "unidad": "UN",
+        "precio_costo": 52.54,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P03:LT-3429",
+      "fuente": {
+        "archivo": "litoral_altas_102026.csv",
+        "linea": 45
+      },
+      "original": {
+        "codigo": "LT-3429",
+        "descripcion": "Cepillo Dental Suave",
+        "marca": "SONRISA",
+        "contenido": "1",
+        "unidad": "UNID",
+        "ean": "7799645764783",
+        "precio": "52,83"
+      },
+      "calculado": {
+        "gtin": "7799645764783",
+        "motivo_gtin": null,
+        "descripcion_expandida": "CEPILLO DENTAL SUAVE",
+        "marca": "SONRISA",
+        "contenido": 1,
+        "unidad": "UN",
+        "precio_costo": 52.83,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P03:LT-3447",
+      "fuente": {
+        "archivo": "litoral_altas_102026.csv",
+        "linea": 46
+      },
+      "original": {
+        "codigo": "LT-3447",
+        "descripcion": "JABON ANTIBAC.",
+        "marca": "PUREZA",
+        "contenido": "90",
+        "unidad": "GR",
+        "ean": "",
+        "precio": "34,20"
+      },
+      "calculado": {
+        "gtin": null,
+        "motivo_gtin": "gtin_faltante",
+        "descripcion_expandida": "JABON ANTIBACTERIAL",
+        "marca": "PUREZA",
+        "contenido": 90,
+        "unidad": "G",
+        "precio_costo": 34.2,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P03:LT-3432",
+      "fuente": {
+        "archivo": "litoral_altas_102026.csv",
+        "linea": 47
+      },
+      "original": {
+        "codigo": "LT-3432",
+        "descripcion": "PASTA DENTAL MENTA FRESCA",
+        "marca": "SONRISA",
+        "contenido": "180",
+        "unidad": "GRS",
+        "ean": "7798055626131",
+        "precio": "114,38"
+      },
+      "calculado": {
+        "gtin": "7798055626131",
+        "motivo_gtin": null,
+        "descripcion_expandida": "PASTA DENTAL MENTA FRESCA",
+        "marca": "SONRISA",
+        "contenido": 180,
+        "unidad": "G",
+        "precio_costo": 114.38,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P03:LT-3435",
+      "fuente": {
+        "archivo": "litoral_altas_102026.csv",
+        "linea": 48
+      },
+      "original": {
+        "codigo": "LT-3435",
+        "descripcion": "Cepillo Dental Medio",
+        "marca": "DENTIBLANC",
+        "contenido": "2",
+        "unidad": "UN",
+        "ean": "7790145357833",
+        "precio": "94,33"
+      },
+      "calculado": {
+        "gtin": "7790145357833",
+        "motivo_gtin": null,
+        "descripcion_expandida": "CEPILLO DENTAL MEDIO",
+        "marca": "DENTIBLANC",
+        "contenido": 2,
+        "unidad": "UN",
+        "precio_costo": 94.33,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P03:LT-3438",
+      "fuente": {
+        "archivo": "litoral_altas_102026.csv",
+        "linea": 49
+      },
+      "original": {
+        "codigo": "LT-3438",
+        "descripcion": "PASTA DENTAL MENTA FRESCA",
+        "marca": "DENTIBLANC",
+        "contenido": "180",
+        "unidad": "G",
+        "ean": "7792649499088",
+        "precio": "108,93"
+      },
+      "calculado": {
+        "gtin": "7792649499088",
+        "motivo_gtin": null,
+        "descripcion_expandida": "PASTA DENTAL MENTA FRESCA",
+        "marca": "DENTIBLANC",
+        "contenido": 180,
+        "unidad": "G",
+        "precio_costo": 108.93,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P03:LT-3441",
+      "fuente": {
+        "archivo": "litoral_altas_102026.csv",
+        "linea": 50
+      },
+      "original": {
+        "codigo": "LT-3441",
+        "descripcion": "Pasta Dental Sensible",
+        "marca": "SONRISA",
+        "contenido": "180",
+        "unidad": "G",
+        "ean": "7790487691688",
+        "precio": "123,80"
+      },
+      "calculado": {
+        "gtin": "7790487691688",
+        "motivo_gtin": null,
+        "descripcion_expandida": "PASTA DENTAL SENSIBLE",
+        "marca": "SONRISA",
+        "contenido": 180,
+        "unidad": "G",
+        "precio_costo": 123.8,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P03:LT-3444",
+      "fuente": {
+        "archivo": "litoral_altas_102026.csv",
+        "linea": 51
+      },
+      "original": {
+        "codigo": "LT-3444",
+        "descripcion": "Pasta Dental Sensible",
+        "marca": "DENTIBLANC",
+        "contenido": "180",
+        "unidad": "GR",
+        "ean": "7792011235092",
+        "precio": "119,93"
+      },
+      "calculado": {
+        "gtin": "7792011235092",
+        "motivo_gtin": null,
+        "descripcion_expandida": "PASTA DENTAL SENSIBLE",
+        "marca": "DENTIBLANC",
+        "contenido": 180,
+        "unidad": "G",
+        "precio_costo": 119.93,
+        "moneda": "UYU",
+        "fds": null
+      }
+    }
+  ]
+}

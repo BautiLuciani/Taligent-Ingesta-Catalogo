@@ -8,9 +8,13 @@ Paso 3: etapa 1, la lectura. Patrón fan-out / fan-in (M4 §1.2), es un workflow
     (problemas_de_lectura del servidor, la misma función que usa leer_archivo_proveedor). Con algún problema,
     ese proveedor queda frenado con su motivo y no pasa a las fichas (M4 §1.1).
 
+Paso 4: el fan-in por código, a la vista. Por cada proveedor que sigue, la MISMA consolidación del servidor
+(leer_filas: precio por vigencia, conflictos, lo que completa otro archivo y la FDS de cada código) se guarda en
+salida/consolidado/Pxx.json: es lo que van a ver los fichadores, el contrato entre la etapa 1 y la 2.
+
 Qué puede hacer cada pieza (blast radius, M4 §7.2):
   - Lectores (extractores): leen un archivo y escriben SU extracción en salida/extracciones/. Nada más.
-  - Orquestador: lanza, junta y decide quién sigue. No escribe fichas.
+  - Orquestador: lanza, junta, decide quién sigue y guarda lo consolidado. No escribe fichas.
 
 Correr: python orquestador.py              (reusa las lecturas guardadas: instantáneo y gratis)
         python orquestador.py --de-nuevo   (lee todo desde cero a la vez y mide el tiempo; ~US$ 0,04)
@@ -33,6 +37,7 @@ from extractor_pdf import TOPE_LLAMADAS, extraer_pdf
 
 CARPETA_PROYECTO = Path(__file__).parent
 CARPETA_SALIDA = CARPETA_PROYECTO / "salida"
+CARPETA_CONSOLIDADO = CARPETA_SALIDA / "consolidado"
 DATA = CARPETA_PROYECTO / "Data" / "proveedores"
 
 # Qué se lee con IA y con qué lector: configuración, no código (un archivo nuevo = una línea más).
@@ -88,6 +93,31 @@ def chequear_lecturas(lecturas: list[dict]) -> tuple[list[str], dict[str, list[s
     return siguen, frenados
 
 
+def consolidar_proveedores(siguen: list[str]) -> dict[str, dict]:
+    """Paso 4: el fan-in por código. Guarda lo consolidado de cada proveedor que sigue y devuelve un resumen.
+
+    Usa leer_filas del servidor (la misma función que usa la tool leer_archivo_proveedor, no una copia):
+    así hay una sola versión de la verdad. Lo guardado es lo que van a recibir los fichadores.
+    """
+    from servidor_mcp import PROVEEDORES as CONFIGURACION, leer_filas
+
+    CARPETA_CONSOLIDADO.mkdir(parents=True, exist_ok=True)
+    resumen = {}
+    for proveedor_id in siguen:
+        filas = leer_filas(proveedor_id, CONFIGURACION[proveedor_id])
+        ruta = CARPETA_CONSOLIDADO / f"{proveedor_id}.json"
+        ruta.write_text(json.dumps({"proveedor_id": proveedor_id, "filas": filas}, ensure_ascii=False, indent=2),
+                        encoding="utf-8")
+        calculados = [fila["calculado"] for fila in filas]
+        resumen[proveedor_id] = {
+            "productos": len(filas),
+            "con_fds": sum(1 for c in calculados if c.get("fds")),
+            "con_datos_de_otro_archivo": sum(1 for c in calculados if c.get("fuentes")),
+            "con_conflicto": sum(1 for c in calculados if c.get("conflictos")),
+        }
+    return resumen
+
+
 def etapa_lectura(cliente, modelo: str, de_nuevo: bool) -> dict:
     """Etapa 1: lanza todos los trabajos de lectura a la vez, los junta y decide qué proveedores siguen."""
     reloj = time.perf_counter()
@@ -125,6 +155,12 @@ def mostrar(etapa: dict) -> None:
         print(f"✖ {proveedor_id} frenado ({len(problemas)} problema(s)):")
         for problema in problemas[:5]:
             print(f"    - {problema}")
+    if etapa.get("consolidado"):
+        print("\n=== Consolidado por código (lo que van a ver los fichadores, en salida/consolidado/)")
+        print(f"{'proveedor':<10}{'productos':>10}{'con FDS':>9}{'con datos de otro archivo':>27}{'con conflicto':>15}")
+        for proveedor_id, r in etapa["consolidado"].items():
+            print(f"{proveedor_id:<10}{r['productos']:>10}{r['con_fds']:>9}{r['con_datos_de_otro_archivo']:>27}"
+                  f"{r['con_conflicto']:>15}")
 
 
 def main():
@@ -138,6 +174,7 @@ def main():
         sys.exit("ERROR: falta MODELO en el .env")
 
     etapa = etapa_lectura(anthropic.Anthropic(), modelo, de_nuevo)
+    etapa["consolidado"] = consolidar_proveedores(etapa["siguen"])  # paso 4: solo los que pasaron el chequeo
     mostrar(etapa)
     ruta = CARPETA_SALIDA / "medicion_lectura.json"
     ruta.write_text(json.dumps(etapa, ensure_ascii=False, indent=2), encoding="utf-8")

@@ -1,19 +1,19 @@
 {
-  "fecha": "2026-11-02 20:10",
-  "de_nuevo": true,
+  "fecha": "2026-11-02 20:31",
+  "de_nuevo": false,
   "tope_llamadas": 4,
-  "segundos": 72.0,
-  "segundos_uno_detras_de_otro": 243.6,
-  "costo_usd": 0.043592,
+  "segundos": 0.1,
+  "segundos_uno_detras_de_otro": 0.4,
+  "costo_usd": 0.045995,
   "lecturas": [
     {
       "proveedor_id": "P07",
       "tipo": "pdf",
       "archivo": "LHS_catalogo_nuevos_productos.pdf",
       "inicio": 0.0,
-      "fin": 62.2,
-      "segundos": 62.2,
-      "costo_usd": 0.008709,
+      "fin": 0.1,
+      "segundos": 0.1,
+      "costo_usd": 0.008757,
       "error": null
     },
     {
@@ -21,9 +21,9 @@
       "tipo": "fds",
       "archivo": "fichas_de_seguridad",
       "inicio": 0.0,
-      "fin": 56.7,
-      "segundos": 56.7,
-      "costo_usd": 0.005295,
+      "fin": 0.1,
+      "segundos": 0.1,
+      "costo_usd": 0.005418,
       "error": null
     },
     {
@@ -31,9 +31,9 @@
       "tipo": "pdf",
       "archivo": "Lista_de_precios_octubre_2026.pdf",
       "inicio": 0.0,
-      "fin": 72.0,
-      "segundos": 72.0,
-      "costo_usd": 0.016855,
+      "fin": 0.1,
+      "segundos": 0.1,
+      "costo_usd": 0.018902,
       "error": null
     },
     {
@@ -41,9 +41,9 @@
       "tipo": "folleto",
       "archivo": "Dermalab_lanzamientos_2026.pdf",
       "inicio": 0.0,
-      "fin": 52.7,
-      "segundos": 52.7,
-      "costo_usd": 0.012733,
+      "fin": 0.1,
+      "segundos": 0.1,
+      "costo_usd": 0.012918,
       "error": null
     }
   ],
@@ -53,5 +53,31 @@
     "P01",
     "P05"
   ],
-  "frenados": {}
+  "frenados": {},
+  "consolidado": {
+    "P03": {
+      "productos": 50,
+      "con_fds": 0,
+      "con_datos_de_otro_archivo": 0,
+      "con_conflicto": 0
+    },
+    "P07": {
+      "productos": 25,
+      "con_fds": 22,
+      "con_datos_de_otro_archivo": 0,
+      "con_conflicto": 0
+    },
+    "P01": {
+      "productos": 26,
+      "con_fds": 0,
+      "con_datos_de_otro_archivo": 12,
+      "con_conflicto": 2
+    },
+    "P05": {
+      "productos": 18,
+      "con_fds": 0,
+      "con_datos_de_otro_archivo": 14,
+      "con_conflicto": 0
+    }
+  }
 }

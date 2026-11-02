@@ -1,6 +1,7 @@
 {
   "archivo": "Dermalab_lanzamientos_2026.pdf",
   "modelo": "claude-haiku-5-5",
+  "tandas_extra": 0,
   "productos": [
     {
       "codigo": "DL-151",
@@ -436,5 +437,5 @@
     }
   ],
   "problemas": [],
-  "costo_usd": 0.00376
+  "costo_usd": 0.012918
 }

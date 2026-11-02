@@ -1,5 +1,12 @@
 """Pruebas del orquestador sin IA: lectores falsos que tardan (y uno que falla). Correr: python probar_orquestador.py"""
+import asyncio
+import json
+import shutil
+import tempfile
 import time
+from pathlib import Path
+
+from fastmcp import Client
 
 import orquestador
 
@@ -56,5 +63,41 @@ chequear("El error del folleto queda anotado, con su tipo", folleto["error"], "R
 chequear("...Dermalab (P05) queda frenado con ese motivo",
          etapa["frenados"], {"P05": ["Dermalab_lanzamientos_2026.pdf: RuntimeError: no quedó ninguna fila"]})
 chequear("...y los otros 3 siguen igual", etapa["siguen"], ["P03", "P07", "P01"])
+
+print("--- consolidar_proveedores: el fan-in por código (paso 4) ---")
+carpeta = Path(tempfile.mkdtemp())
+original = orquestador.CARPETA_CONSOLIDADO
+orquestador.CARPETA_CONSOLIDADO = carpeta
+try:
+    resumen = orquestador.consolidar_proveedores(["P03", "P07", "P01", "P05"])
+finally:
+    orquestador.CARPETA_CONSOLIDADO = original
+chequear("Se guarda un archivo por proveedor", sorted(p.name for p in carpeta.glob("*.json")),
+         ["P01.json", "P03.json", "P05.json", "P07.json"])
+chequear("Litoral: 50 productos, un solo archivo (nada que cruzar)", resumen["P03"],
+         {"productos": 50, "con_fds": 0, "con_datos_de_otro_archivo": 0, "con_conflicto": 0})
+chequear("LHS: 22 de 25 cruzados con su FDS", (resumen["P07"]["productos"], resumen["P07"]["con_fds"]), (25, 22))
+chequear("Andes: 12 con datos del Excel y 2 con conflicto",
+         (resumen["P01"]["con_datos_de_otro_archivo"], resumen["P01"]["con_conflicto"]), (12, 2))
+chequear("Dermalab: 14 completados por la lista", resumen["P05"]["con_datos_de_otro_archivo"], 14)
+
+
+async def filas_de_la_tool(proveedor_id: str) -> list[dict]:
+    """Todas las filas de un proveedor tal como las recibe un fichador (la tool del servidor, de a tandas)."""
+    filas, desde = [], 0
+    async with Client(Path(__file__).parent / "servidor_mcp.py") as cliente:
+        while desde is not None:
+            datos = (await cliente.call_tool("leer_archivo_proveedor",
+                                             {"proveedor_id": proveedor_id, "desde": desde, "cantidad": 25})).data
+            filas += datos["filas"]
+            desde = datos["siguiente"]
+    return filas
+
+
+for proveedor_id in ("P01", "P05"):
+    guardado = json.loads((carpeta / f"{proveedor_id}.json").read_text(encoding="utf-8"))["filas"]
+    chequear(f"{proveedor_id}: lo guardado es EXACTAMENTE lo que recibe el fichador por la tool",
+             guardado == asyncio.run(filas_de_la_tool(proveedor_id)), True)
+shutil.rmtree(carpeta, ignore_errors=True)
 
 print(f"\nResultado: {'todo OK' if errores == 0 else f'{errores} con error'}")
