@@ -105,7 +105,8 @@ def filas_desde_citas(contenido: list[dict]) -> tuple[dict[str, dict], list[str]
 
     Un código puede aparecer en varias citas (los pedazos se pisan). Se elige así:
     - Si hay versiones cerradas (completas), se usa una; si dicen cosas distintas (más allá de espacios), no se elige.
-    - Si solo hay abiertas (la última fila de la tabla), se usa la más larga.
+    - Si solo hay abiertas (la última fila de la tabla, o una cita cortada), se usa la más larga;
+      si le faltan columnas, campos_desde_respuesta no la elige (semana 3, paso 1b).
     - Toda versión cortada tiene que ser el principio de la elegida; y todas, de la misma página. Si no, no se elige.
     Cobertura: un código que Haiku nombró en su respuesta y que no quedó con fila es un problema (no desaparece).
     Devuelve (filas, problemas): filas = {codigo: {"codigo", "pagina", "fila", "cerrada"}}. La página la da la API.
@@ -274,6 +275,12 @@ def campos_desde_respuesta(contenido: list[dict], filas: dict[str, dict],
         else:
             campos, ajeno, problemas_fila = verificar_campos(
                 codigo, fila["fila"], entregados[codigo], columnas, admite_ajeno=not fila.get("cerrada", True))
+            # Semana 3, paso 1b: una fila ABIERTA (ningún código la cierra) con columnas vacías no es la última fila
+            # de la tabla (esa trae todas sus columnas, y el pie): es una cita cortada a la mitad. No se elige.
+            if not fila.get("cerrada", True) and any(valor is None for valor in campos.values()):
+                campos, ajeno = dict(vacios), None
+                problemas_fila.append(f"{codigo}: su fila quedó abierta y le faltan columnas "
+                                      "(una cita cortada a la mitad): no se elige.")
         fila_del_producto = fila["fila"][:-len(ajeno) - 1] if ajeno and not problemas_fila else fila["fila"]
         productos.append({**fila, "fila": fila_del_producto, "campos": campos, "texto_ajeno": ajeno,
                           "problemas": problemas_fila})

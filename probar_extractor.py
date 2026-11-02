@@ -244,4 +244,20 @@ vigencia, _ = vigencia_desde_citas([{"type": "text", "text": "Vigencia desde el 
                                    "x.pdf")
 chequear("Lo que escribió Haiku sin cita no cuenta", vigencia, None)
 
+print("--- fila abierta y cortada (semana 3, paso 1b) ---")
+CORTADA = json.loads((RUTA_EXPERIMENTO.parent / "andes_llamada1_cortada.json").read_text(encoding="utf-8"))["content"]
+filas_c, _ = filas_desde_citas(CORTADA)
+chequear("Andes real (lectura del 02/11): AN-1127 quedó abierta y cortada en 'Comp.'",
+         (filas_c["AN-1127"]["cerrada"], filas_c["AN-1127"]["fila"]), (False, "AN-1127 Alergix 10 mg Loratadina Comp."))
+chequear("...y las únicas abiertas son las 4 cortadas",
+         sorted(c for c, f in filas_c.items() if not f["cerrada"]), ["AN-1127", "AN-1136", "AN-1142", "AN-1166"])
+CORTADOS_1127 = {"codigo": "AN-1127", "producto": "Alergix 10 mg", "monodroga": "Loratadina", "presentacion": "Comp.",
+                 "condicion": None, "ean": None, "precio": None}
+productos, _ = campos_desde_respuesta(entrega([CORTADOS_1127]), {"AN-1127": filas_c["AN-1127"]}, COLUMNAS_ANDES)
+chequear("Abierta con columnas vacías: no se elige (ni siquiera el 'Comp.' a medias) + 1 problema",
+         (productos[0]["campos"]["presentacion"], len(productos[0]["problemas"])), (None, 1))
+productos, _ = campos_desde_respuesta(entrega([{"codigo": "AN-1178", **BIEN_1178, "texto_ajeno": PIE}]),
+                                      {"AN-1178": filas_a["AN-1178"]}, COLUMNAS_ANDES)
+chequear("La última fila real de Andes (abierta pero completa) sigue pasando", productos[0]["problemas"], [])
+
 print(f"\nResultado: {'todo OK' if errores == 0 else f'{errores} con error'}")
