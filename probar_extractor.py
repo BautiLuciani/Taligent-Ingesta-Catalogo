@@ -1,7 +1,13 @@
 """Pruebas de extractor_pdf.py con el texto REAL que citó la API en el paso 1. Correr: python probar_extractor.py"""
 import copy
 import json
+import shutil
+import tempfile
+import threading
+import time
 from pathlib import Path
+
+import extractor_pdf
 
 from extractor_pdf import (COLUMNAS_POR_PDF, campos_desde_respuesta, codigo_al_inicio, filas_de_un_texto,
                            filas_desde_citas, huella, normalizar_espacios, ordenar_como_el_pdf, que_falta, tool_campos,
@@ -324,5 +330,59 @@ chequear("Sin cadena: queda el orden de aparición (y la página 2 al final)", l
          ["B", "C", "A", "D"])
 chequear("Una cadena que se contradice no hace perder filas", sorted(ordenar_como_el_pdf(F, {"A": {"B"}, "B": {"A"}})),
          ["A", "B", "C", "D"])
+
+print("--- la puerta: tope de llamadas a la vez (semana 3, paso 3) ---")
+carpeta = Path(tempfile.mkdtemp())
+en_curso, maximo, candado = 0, 0, threading.Lock()
+
+
+def llamada_falsa():
+    """Una 'llamada a la API' que tarda un poco y anota cuántas hay en curso a la vez."""
+    global en_curso, maximo
+    with candado:
+        en_curso += 1
+        maximo = max(maximo, en_curso)
+    time.sleep(0.2)
+    with candado:
+        en_curso -= 1
+    return {"stop_reason": "end_turn", "content": []}
+
+
+hilos = [threading.Thread(target=extractor_pdf.llamada_guardada, args=(carpeta / f"l{n}.json", llamada_falsa, True))
+         for n in range(10)]
+for hilo in hilos:
+    hilo.start()
+for hilo in hilos:
+    hilo.join()
+chequear(f"10 llamadas largadas a la vez: nunca más de {extractor_pdf.TOPE_LLAMADAS} en curso",
+         maximo, extractor_pdf.TOPE_LLAMADAS)
+chequear("...y las 10 terminaron (y quedaron guardadas)", len(list(carpeta.glob("l*.json"))), 10)
+
+print("--- extraer_pdf de punta a punta, con respuestas REALES guardadas (semana 3, paso 3) ---")
+# Las vueltas devuelven la lectura mala (v2); la ronda 1, un intento que no citó y uno bueno. Sin API.
+EXPERIMENTOS = RUTA_EXPERIMENTO.parent
+cola_rondas = [RONDA[2], RONDA[3]]
+originales = (extractor_pdf.pedir_filas_citadas, extractor_pdf.pedir_campos, extractor_pdf.pedir_vigencia,
+              extractor_pdf.CARPETA_EXTRACCIONES)
+extractor_pdf.pedir_filas_citadas = lambda c, m, p, codigos=None: V2 if codigos is None else cola_rondas.pop(0)
+extractor_pdf.pedir_campos = lambda c, m, f, col: json.loads(
+    (EXPERIMENTOS / "andes_llamada2_sem2.json").read_text(encoding="utf-8"))
+extractor_pdf.pedir_vigencia = lambda c, m, p: json.loads(
+    (EXPERIMENTOS / "citas_andes_vigencia.json").read_text(encoding="utf-8"))
+extractor_pdf.CARPETA_EXTRACCIONES = carpeta
+try:
+    ruta_andes = Path(__file__).parent / "Data" / "proveedores" / "P01_Laboratorio_Andes" / "Lista_de_precios_octubre_2026.pdf"
+    resultado = extractor_pdf.extraer_pdf(None, "modelo", ruta_andes, de_nuevo=True)
+finally:
+    (extractor_pdf.pedir_filas_citadas, extractor_pdf.pedir_campos, extractor_pdf.pedir_vigencia,
+     extractor_pdf.CARPETA_EXTRACCIONES) = originales
+SEM2 = json.loads((EXPERIMENTOS / "andes_extraccion_sem2.json").read_text(encoding="utf-8"))
+chequear("Con 1 ronda, los 26 productos iguales a la extracción de la semana 2 (orden incluido)",
+         (resultado["rondas"], resultado["productos"] == SEM2["productos"]), (1, True))
+chequear("...la vigencia igual, y sin problemas", (resultado["vigencia"] == SEM2["vigencia"], resultado["problemas"]),
+         (True, []))
+chequear("...y lo dejó guardado en la carpeta de extracciones", (carpeta / "Lista_de_precios_octubre_2026.json").exists(),
+         True)
+shutil.rmtree(carpeta, ignore_errors=True)
 
 print(f"\nResultado: {'todo OK' if errores == 0 else f'{errores} con error'}")

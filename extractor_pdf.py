@@ -23,6 +23,7 @@ import json
 import os
 import re
 import sys
+import threading
 import unicodedata
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
@@ -460,15 +461,25 @@ def pedir_campos(cliente, modelo: str, filas: dict[str, dict], columnas: list[tu
     return respuesta.model_dump()
 
 
+# Semana 3, paso 3: cuántas llamadas a la API pueden estar en curso A LA VEZ, sumando todos los extractores.
+# Paso 2: la cuenta permite 80.000 tokens de salida por minuto y cada llamada con thinking gasta mucho de salida.
+# Es una "puerta con N lugares" (semáforo): el que llega cuando está llena, espera a que se libere uno.
+# Todas las llamadas de los extractores (PDF, folleto, FDS) pasan por llamada_guardada: el tope se pone una sola vez.
+TOPE_LLAMADAS = 4
+PUERTA = threading.BoundedSemaphore(TOPE_LLAMADAS)
+
+
 def llamada_guardada(ruta_json: Path, hacer_llamada, de_nuevo: bool) -> dict:
     """Reusa una llamada ya guardada (no se vuelve a pagar); si no existe o se pide de nuevo, la hace y la guarda.
 
     Se guarda ENTERA antes de analizarla: si algo sale raro, se mira sin volver a pagar.
+    La llamada pasa por la PUERTA: nunca hay más de TOPE_LLAMADAS en curso, aunque las larguen muchos hilos.
     """
     if ruta_json.exists() and not de_nuevo:
         print(f"(reuso {ruta_json.name})")
         return json.loads(ruta_json.read_text(encoding="utf-8"))
-    respuesta = hacer_llamada()
+    with PUERTA:
+        respuesta = hacer_llamada()
     ruta_json.write_text(json.dumps(respuesta, ensure_ascii=False, indent=2), encoding="utf-8")
     if respuesta["stop_reason"] not in ("end_turn", "tool_use"):
         print(f"⚠ {ruta_json.name}: terminó con {respuesta['stop_reason']!r}. Mirá el JSON antes de seguir.")
@@ -550,39 +561,32 @@ def que_falta(productos: list[dict], problemas: list[str]) -> list[str]:
     return sorted(sin_fila | cortadas)
 
 
-def main():
-    """Extrae los productos de un PDF (por defecto, el de Limpieza Hogar Sur) y guarda el resultado verificado."""
-    argumentos = argparse.ArgumentParser(description="Extrae los productos de un PDF de proveedor.")
-    argumentos.add_argument("pdf", nargs="?", type=Path, default=RUTA_LHS, help="PDF a extraer (por defecto, LHS).")
-    argumentos.add_argument("--de-nuevo", action="store_true", help="Vuelve a hacer todas las llamadas.")
-    argumentos = argumentos.parse_args()
+def extraer_pdf(cliente, modelo: str, ruta_pdf: Path, de_nuevo: bool = False) -> dict:
+    """Extrae los productos de un PDF con tabla, los verifica, guarda el resultado y lo devuelve (semana 3, paso 3).
 
-    load_dotenv(CARPETA_PROYECTO / ".env")
-    modelo = os.getenv("MODELO")
-    if not modelo:
-        sys.exit("ERROR: falta MODELO en el .env")
-    cliente = anthropic.Anthropic()
-    ruta_pdf = argumentos.pdf
+    Es lo que hacía main, como función: así el orquestador puede leer varios archivos a la vez.
+    No usa sys.exit: si el PDF no está configurado o no queda ninguna fila, lanza un error que el que llama atrapa
+    (en un hilo, sys.exit cortaría solo ese hilo y en silencio).
+    """
     CARPETA_EXTRACCIONES.mkdir(parents=True, exist_ok=True)
-
     if ruta_pdf.name not in COLUMNAS_POR_PDF:
-        sys.exit(f"ERROR: {ruta_pdf.name} no tiene sus columnas en COLUMNAS_POR_PDF")
+        raise ValueError(f"{ruta_pdf.name} no tiene sus columnas en COLUMNAS_POR_PDF")
     columnas = COLUMNAS_POR_PDF[ruta_pdf.name]
 
     # Llamada 1: VUELTAS_CITAS veces a la vez; el código une las citas y arma las filas con su página (paso 1b)
-    respuestas_1 = filas_citadas_varias_veces(cliente, modelo, ruta_pdf, argumentos.de_nuevo)
+    respuestas_1 = filas_citadas_varias_veces(cliente, modelo, ruta_pdf, de_nuevo)
     respuestas_2 = []
     ronda = 0
     while True:
         filas, problemas = filas_desde_citas(unir_contenidos(respuestas_1))
         if not filas:
-            sys.exit(f"No quedó ninguna fila. Problemas: {problemas}")
+            raise RuntimeError(f"{ruta_pdf.name}: no quedó ninguna fila. Problemas: {problemas}")
 
         # Llamada 2: los campos de cada fila verificada (un JSON por ronda: las filas cambian si una ronda trajo algo;
         # la huella de las filas va en el nombre para no reusar los campos de otras filas)
         sufijo = "" if ronda == 0 else f"_r{ronda}_{huella([fila['fila'] for fila in filas.values()])}"
         respuesta_2 = llamada_guardada(CARPETA_EXTRACCIONES / f"{ruta_pdf.stem}.llamada2{sufijo}.json",
-                                       lambda: pedir_campos(cliente, modelo, filas, columnas), argumentos.de_nuevo)
+                                       lambda: pedir_campos(cliente, modelo, filas, columnas), de_nuevo)
         respuestas_2.append(respuesta_2)
         productos, problemas_campos = campos_desde_respuesta(respuesta_2["content"], filas, columnas)
         problemas += problemas_campos
@@ -592,8 +596,8 @@ def main():
         if not faltan or ronda == RONDAS_MAX:
             break
         ronda += 1
-        print(f"Ronda {ronda}: faltan {len(faltan)} ({', '.join(faltan)}); se pregunta solo por ellos")
-        respuestas_1 += ronda_dirigida(cliente, modelo, ruta_pdf, faltan, ronda, argumentos.de_nuevo)
+        print(f"{ruta_pdf.stem} · ronda {ronda}: faltan {len(faltan)} ({', '.join(faltan)}); se pregunta solo por ellos")
+        respuestas_1 += ronda_dirigida(cliente, modelo, ruta_pdf, faltan, ronda, de_nuevo)
     costo_1 = sum(costo_usd(respuesta) for respuesta in respuestas_1)
     costo_2 = sum(costo_usd(respuesta) for respuesta in respuestas_2)
 
@@ -605,7 +609,7 @@ def main():
     vigencia, costo_vigencia = None, 0.0
     if ruta_pdf.name in PDFS_CON_VIGENCIA:
         respuesta_v = llamada_guardada(CARPETA_EXTRACCIONES / f"{ruta_pdf.stem}.vigencia.json",
-                                       lambda: pedir_vigencia(cliente, modelo, ruta_pdf), argumentos.de_nuevo)
+                                       lambda: pedir_vigencia(cliente, modelo, ruta_pdf), de_nuevo)
         vigencia, problemas_vigencia = vigencia_desde_citas(unir_contenidos(respuestas_1 + [respuesta_v]), ruta_pdf.name)
         problemas += problemas_vigencia
         costo_vigencia = costo_usd(respuesta_v)
@@ -628,8 +632,13 @@ def main():
     }
     ruta_resultado = CARPETA_EXTRACCIONES / f"{ruta_pdf.stem}.json"
     ruta_resultado.write_text(json.dumps(resultado, ensure_ascii=False, indent=2), encoding="utf-8")
+    return resultado
 
-    marcados = [p for p in resultado["productos"] if p["problemas"]]
+
+def mostrar_resultado(resultado: dict) -> None:
+    """Imprime lo que sacó extraer_pdf: cada producto, la vigencia, las rondas, los problemas y el costo."""
+    productos, problemas = resultado["productos"], resultado["problemas"]
+    marcados = [p for p in productos if p["problemas"]]
     print(f"\n{len(productos)} productos · {len(productos) - len(marcados)} sin problemas · {len(marcados)} marcados")
     for p in resultado["productos"]:
         marca = " ⚠" if p["problemas"] else ""
@@ -640,14 +649,33 @@ def main():
     for p in marcados:
         for problema in p["problemas"]:
             print(f"  ⚠ {problema}")
-    if ruta_pdf.name in PDFS_CON_VIGENCIA:
+    if resultado["archivo"] in PDFS_CON_VIGENCIA:
+        vigencia = resultado["vigencia"]
         print(f"\nVigencia: {vigencia['fecha'] + ' · ' + repr(vigencia['texto']) if vigencia else 'NO SE PUDO LEER'}")
-    print(f"\nRondas dirigidas: {ronda} de {RONDAS_MAX} posibles")
+    print(f"\nRondas dirigidas: {resultado['rondas']} de {RONDAS_MAX} posibles")
     print(f"Problemas generales: {problemas or 'ninguno'}")
     print(f"Costo: llamada 1 US$ {resultado['costo_usd']['llamada_1']:.6f} · "
           f"llamada 2 US$ {resultado['costo_usd']['llamada_2']:.6f} · "
           f"vigencia US$ {resultado['costo_usd']['vigencia']:.6f} · total US$ {resultado['costo_usd']['total']:.6f}")
-    print(f"Resultado: {ruta_resultado.relative_to(CARPETA_PROYECTO)}")
+    print(f"Resultado: {(CARPETA_EXTRACCIONES / resultado['archivo']).with_suffix('.json').relative_to(CARPETA_PROYECTO)}")
+
+
+def main():
+    """Extrae los productos de un PDF (por defecto, el de Limpieza Hogar Sur) desde la terminal."""
+    argumentos = argparse.ArgumentParser(description="Extrae los productos de un PDF de proveedor.")
+    argumentos.add_argument("pdf", nargs="?", type=Path, default=RUTA_LHS, help="PDF a extraer (por defecto, LHS).")
+    argumentos.add_argument("--de-nuevo", action="store_true", help="Vuelve a hacer todas las llamadas.")
+    argumentos = argumentos.parse_args()
+
+    load_dotenv(CARPETA_PROYECTO / ".env")
+    modelo = os.getenv("MODELO")
+    if not modelo:
+        sys.exit("ERROR: falta MODELO en el .env")
+    try:
+        resultado = extraer_pdf(anthropic.Anthropic(), modelo, argumentos.pdf, argumentos.de_nuevo)
+    except (ValueError, RuntimeError) as error:
+        sys.exit(f"ERROR: {error}")
+    mostrar_resultado(resultado)
 
 
 if __name__ == "__main__":
