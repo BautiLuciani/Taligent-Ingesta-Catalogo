@@ -1,0 +1,77 @@
+{
+  "fecha": "2026-11-02 19:34",
+  "de_nuevo": true,
+  "tope_llamadas": 4,
+  "segundos": 62.0,
+  "segundos_uno_detras_de_otro": 168.1,
+  "costo_usd": 0.033077,
+  "lecturas": [
+    {
+      "proveedor_id": "P07",
+      "tipo": "pdf",
+      "archivo": "LHS_catalogo_nuevos_productos.pdf",
+      "inicio": 0.0,
+      "fin": 44.0,
+      "segundos": 44.0,
+      "costo_usd": 0.008048,
+      "error": null
+    },
+    {
+      "proveedor_id": "P07",
+      "tipo": "fds",
+      "archivo": "fichas_de_seguridad",
+      "inicio": 0.0,
+      "fin": 40.7,
+      "segundos": 40.7,
+      "costo_usd": 0.005319,
+      "error": null
+    },
+    {
+      "proveedor_id": "P01",
+      "tipo": "pdf",
+      "archivo": "Lista_de_precios_octubre_2026.pdf",
+      "inicio": 0.0,
+      "fin": 62.0,
+      "segundos": 62.0,
+      "costo_usd": 0.015802,
+      "error": null
+    },
+    {
+      "proveedor_id": "P05",
+      "tipo": "folleto",
+      "archivo": "Dermalab_lanzamientos_2026.pdf",
+      "inicio": 0.0,
+      "fin": 21.4,
+      "segundos": 21.4,
+      "costo_usd": 0.003908,
+      "error": null
+    }
+  ],
+  "siguen": [
+    "P03",
+    "P07",
+    "P01"
+  ],
+  "frenados": {
+    "P05": [
+      "Dermalab_lanzamientos_2026.json: DL-103: Haiku lo nombró pero no aparece en ningún cierre citado.",
+      "Dermalab_lanzamientos_2026.json: DL-106: Haiku lo nombró pero no aparece en ningún cierre citado.",
+      "Dermalab_lanzamientos_2026.json: DL-109: Haiku lo nombró pero no aparece en ningún cierre citado.",
+      "Dermalab_lanzamientos_2026.json: DL-112: Haiku lo nombró pero no aparece en ningún cierre citado.",
+      "Dermalab_lanzamientos_2026.json: DL-115: Haiku lo nombró pero no aparece en ningún cierre citado.",
+      "Dermalab_lanzamientos_2026.json: DL-118: Haiku lo nombró pero no aparece en ningún cierre citado.",
+      "Dermalab_lanzamientos_2026.json: DL-121: Haiku lo nombró pero no aparece en ningún cierre citado.",
+      "Dermalab_lanzamientos_2026.json: DL-124: Haiku lo nombró pero no aparece en ningún cierre citado.",
+      "Dermalab_lanzamientos_2026.json: DL-127: Haiku lo nombró pero no aparece en ningún cierre citado.",
+      "Dermalab_lanzamientos_2026.json: DL-130: Haiku lo nombró pero no aparece en ningún cierre citado.",
+      "Dermalab_lanzamientos_2026.json: DL-133: Haiku lo nombró pero no aparece en ningún cierre citado.",
+      "Dermalab_lanzamientos_2026.json: DL-136: Haiku lo nombró pero no aparece en ningún cierre citado.",
+      "Dermalab_lanzamientos_2026.json: DL-139: Haiku lo nombró pero no aparece en ningún cierre citado.",
+      "Dermalab_lanzamientos_2026.json: DL-142: Haiku lo nombró pero no aparece en ningún cierre citado.",
+      "Dermalab_lanzamientos_2026.json: DL-145: Haiku lo nombró pero no aparece en ningún cierre citado.",
+      "Dermalab_lanzamientos_2026.json: DL-148: Haiku lo nombró pero no aparece en ningún cierre citado.",
+      "Dermalab_lanzamientos_2026.json: DL-151: Haiku lo nombró pero no aparece en ningún cierre citado.",
+      "Dermalab_lanzamientos_2026.json: DL-154: Haiku lo nombró pero no aparece en ningún cierre citado."
+    ]
+  }
+}

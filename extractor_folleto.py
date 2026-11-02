@@ -23,6 +23,7 @@ import json
 import os
 import re
 import sys
+from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
 import anthropic
@@ -30,7 +31,7 @@ from dotenv import load_dotenv
 
 from extractor_fds import lineas
 from extractor_pdf import (CARPETA_EXTRACCIONES, CARPETA_PROYECTO, EFFORT, MAX_TOKENS, PATRON_CODIGO_EN_TEXTO,
-                           costo_usd, llamada_guardada, sin_espacios)
+                           VUELTAS_CITAS, costo_usd, llamada_guardada, sin_espacios, unir_contenidos)
 
 RUTA_DERMALAB = CARPETA_PROYECTO / "Data" / "proveedores" / "P05_Dermalab" / "Dermalab_lanzamientos_2026.pdf"
 
@@ -217,16 +218,29 @@ def pedir_bloques_citados(cliente, modelo: str, ruta_pdf: Path) -> dict:
     return respuesta.model_dump()
 
 
+def bloques_citados_varias_veces(cliente, modelo: str, ruta_pdf: Path, de_nuevo: bool) -> list[dict]:
+    """La llamada del folleto, VUELTAS_CITAS veces A LA VEZ (semana 3, paso 3; lo mismo que el PDF de Andes en el 1b).
+
+    Prueba de fuego del 02/11: leído desde cero, Haiku describió los 18 productos SIN citar ninguno (en la semana 2
+    había citado los 18). Se comprobó con las respuestas reales que unir lecturas no inventa: buena + sin citas
+    = la buena, en cualquier orden. Cada vuelta se guarda en su JSON (.llamada_v1.json, _v2, _v3).
+    """
+    rutas = [CARPETA_EXTRACCIONES / f"{ruta_pdf.stem}.llamada_v{n}.json" for n in range(1, VUELTAS_CITAS + 1)]
+    with ThreadPoolExecutor(max_workers=VUELTAS_CITAS) as hilos:
+        return list(hilos.map(
+            lambda ruta: llamada_guardada(ruta, lambda: pedir_bloques_citados(cliente, modelo, ruta_pdf), de_nuevo),
+            rutas))
+
+
 def extraer_folleto(cliente, modelo: str, ruta_pdf: Path, de_nuevo: bool = False) -> dict:
     """Extrae los productos de un folleto en prosa, guarda el resultado y lo devuelve (semana 3, paso 3).
 
     Es lo que hacía main, como función: así el orquestador lo lanza junto con los otros archivos.
-    Es una sola llamada (pasa por la puerta de llamada_guardada como todas).
+    Lee el folleto varias veces a la vez y une las citas (cada llamada pasa por la puerta de llamada_guardada).
     """
     CARPETA_EXTRACCIONES.mkdir(parents=True, exist_ok=True)
-    respuesta = llamada_guardada(CARPETA_EXTRACCIONES / f"{ruta_pdf.stem}.llamada.json",
-                                 lambda: pedir_bloques_citados(cliente, modelo, ruta_pdf), de_nuevo)
-    armados, problemas = productos_del_folleto(respuesta["content"])
+    respuestas = bloques_citados_varias_veces(cliente, modelo, ruta_pdf, de_nuevo)
+    armados, problemas = productos_del_folleto(unir_contenidos(respuestas))
 
     productos = []
     for codigo, producto in armados.items():
@@ -241,7 +255,7 @@ def extraer_folleto(cliente, modelo: str, ruta_pdf: Path, de_nuevo: bool = False
         })
 
     resultado = {"archivo": ruta_pdf.name, "modelo": modelo, "productos": productos, "problemas": problemas,
-                 "costo_usd": round(costo_usd(respuesta), 6)}
+                 "costo_usd": round(sum(costo_usd(r) for r in respuestas), 6)}
     ruta_resultado = CARPETA_EXTRACCIONES / f"{ruta_pdf.stem}.json"
     ruta_resultado.write_text(json.dumps(resultado, ensure_ascii=False, indent=2), encoding="utf-8")
     return resultado
@@ -260,7 +274,7 @@ def mostrar_resultado(resultado: dict) -> None:
         distintas = " (nombre en pág. %d)" % pag["nombre"] if pag["nombre"] != p["fuente"]["pagina"] else ""
         print(f"  {p['codigo']:<7} pág. {p['fuente']['pagina']}{distintas} · {c['nombre']} | {c['tipo']} | {c['contenido']}")
     print(f"\nProblemas generales: {problemas or 'ninguno'}")
-    print(f"Costo: US$ {resultado['costo_usd']:.6f} (una sola llamada)")
+    print(f"Costo: US$ {resultado['costo_usd']:.6f} ({VUELTAS_CITAS} lecturas a la vez)")
     print(f"Resultado: {(CARPETA_EXTRACCIONES / resultado['archivo']).with_suffix('.json').relative_to(CARPETA_PROYECTO)}")
 
 

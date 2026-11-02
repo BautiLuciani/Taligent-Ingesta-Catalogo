@@ -1,0 +1,57 @@
+{
+  "fecha": "2026-11-02 20:10",
+  "de_nuevo": true,
+  "tope_llamadas": 4,
+  "segundos": 72.0,
+  "segundos_uno_detras_de_otro": 243.6,
+  "costo_usd": 0.043592,
+  "lecturas": [
+    {
+      "proveedor_id": "P07",
+      "tipo": "pdf",
+      "archivo": "LHS_catalogo_nuevos_productos.pdf",
+      "inicio": 0.0,
+      "fin": 62.2,
+      "segundos": 62.2,
+      "costo_usd": 0.008709,
+      "error": null
+    },
+    {
+      "proveedor_id": "P07",
+      "tipo": "fds",
+      "archivo": "fichas_de_seguridad",
+      "inicio": 0.0,
+      "fin": 56.7,
+      "segundos": 56.7,
+      "costo_usd": 0.005295,
+      "error": null
+    },
+    {
+      "proveedor_id": "P01",
+      "tipo": "pdf",
+      "archivo": "Lista_de_precios_octubre_2026.pdf",
+      "inicio": 0.0,
+      "fin": 72.0,
+      "segundos": 72.0,
+      "costo_usd": 0.016855,
+      "error": null
+    },
+    {
+      "proveedor_id": "P05",
+      "tipo": "folleto",
+      "archivo": "Dermalab_lanzamientos_2026.pdf",
+      "inicio": 0.0,
+      "fin": 52.7,
+      "segundos": 52.7,
+      "costo_usd": 0.012733,
+      "error": null
+    }
+  ],
+  "siguen": [
+    "P03",
+    "P07",
+    "P01",
+    "P05"
+  ],
+  "frenados": {}
+}

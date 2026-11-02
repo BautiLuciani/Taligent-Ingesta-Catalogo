@@ -182,13 +182,25 @@ chequear("El 1er renglón termina en punto (cita cortada): problema",
 chequear("Sin punto no hay tipo: problema", campos_del_bloque(armado("Producto X", "Texto sin punto"))[2],
          ["no se encuentra el tipo de producto (lo que va antes del primer punto) en 'Texto sin punto'"])
 
-print("\n--- extraer_folleto como función (semana 3, paso 3) ---")
-# Sin API: la llamada responde con la REAL de la semana 2 (congelada del commit)
+print("\n--- unir lecturas del folleto (semana 3, paso 3) ---")
 EXPERIMENTOS = Path(__file__).parent / "salida" / "experimentos"
+BUENA = json.loads((EXPERIMENTOS / "dermalab_llamada_sem2.json").read_text(encoding="utf-8"))
+SIN_CITAS = json.loads((EXPERIMENTOS / "dermalab_llamada_sin_citas.json").read_text(encoding="utf-8"))  # 02/11
+armados_buena, _ = productos_del_folleto(BUENA["content"])
+armados, problemas = productos_del_folleto(SIN_CITAS["content"])
+chequear("Lectura real sin citas (02/11): 0 productos y los 18 como problema", (len(armados), len(problemas)), (0, 18))
+for nombre, lecturas in [("sin citas + buena", [SIN_CITAS, BUENA]), ("buena + sin citas", [BUENA, SIN_CITAS]),
+                         ("buena + buena", [BUENA, BUENA])]:
+    armados, problemas = productos_del_folleto(extractor_folleto.unir_contenidos(lecturas))
+    chequear(f"Unir {nombre} = la buena (18, sin problemas, mismo orden)",
+             (len(armados), problemas, list(armados) == list(armados_buena), armados == armados_buena), (18, [], True, True))
+
+print("\n--- extraer_folleto como función, con 3 lecturas a la vez (semana 3, paso 3) ---")
+# Sin API: dos vueltas responden como la lectura sin citas del 02/11 y una como la de la semana 2
 carpeta = Path(tempfile.mkdtemp())
 originales = (extractor_folleto.pedir_bloques_citados, extractor_folleto.CARPETA_EXTRACCIONES)
-extractor_folleto.pedir_bloques_citados = lambda c, m, p: json.loads(
-    (EXPERIMENTOS / "dermalab_llamada_sem2.json").read_text(encoding="utf-8"))
+cola = [SIN_CITAS, BUENA, SIN_CITAS]
+extractor_folleto.pedir_bloques_citados = lambda c, m, p: cola.pop(0)
 extractor_folleto.CARPETA_EXTRACCIONES = carpeta
 try:
     ruta = Path(__file__).parent / "Data" / "proveedores" / "P05_Dermalab" / "Dermalab_lanzamientos_2026.pdf"
