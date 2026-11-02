@@ -212,6 +212,33 @@ chequear("Los 18 productos iguales a la extracción de la semana 2 (orden y pág
          (len(resultado["productos"]), resultado["productos"] == esperado["productos"]), (18, True))
 chequear("...sin problemas y lo dejó guardado", (resultado["problemas"], (carpeta / "Dermalab_lanzamientos_2026.json").exists()),
          ([], True))
+chequear("...sin tandas extra (una de las 3 lecturas alcanzó)", resultado["tandas_extra"], 0)
 shutil.rmtree(carpeta, ignore_errors=True)
+
+print("\n--- tandas extra si el folleto sigue sin citar (semana 3, paso 3) ---")
+pedidas = []
+
+
+def lectura_de_la_cola(c, m, p):
+    pedidas.append(1)
+    return cola.pop(0)
+
+
+carpeta = Path(tempfile.mkdtemp())  # nunca la carpeta real de extracciones
+extractor_folleto.pedir_bloques_citados, extractor_folleto.CARPETA_EXTRACCIONES = lectura_de_la_cola, carpeta
+try:
+    cola = [SIN_CITAS] * 3 + [SIN_CITAS, BUENA, SIN_CITAS]  # las 3 primeras fallan; la tanda extra trae una buena
+    resultado = extractor_folleto.extraer_folleto(None, "modelo", ruta, de_nuevo=True)
+    chequear("Las 3 lecturas sin citas: 1 tanda extra y los 18 iguales a la semana 2",
+             (resultado["tandas_extra"], len(pedidas), resultado["productos"] == esperado["productos"]), (1, 6, True))
+    pedidas.clear()
+    cola = [SIN_CITAS] * 9  # todo falla
+    resultado = extractor_folleto.extraer_folleto(None, "modelo", ruta, de_nuevo=True)
+    chequear("Si todo falla: frena en el tope (2 tandas extra, 9 lecturas) y los 18 quedan como problema",
+             (resultado["tandas_extra"], len(pedidas), len(resultado["productos"]), len(resultado["problemas"])),
+             (2, 9, 0, 18))
+finally:
+    extractor_folleto.pedir_bloques_citados, extractor_folleto.CARPETA_EXTRACCIONES = originales
+    shutil.rmtree(carpeta, ignore_errors=True)
 
 print(f"\nResultado: {'todo OK' if errores == 0 else f'{errores} con error'}")
