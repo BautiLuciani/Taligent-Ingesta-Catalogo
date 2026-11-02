@@ -217,24 +217,15 @@ def pedir_bloques_citados(cliente, modelo: str, ruta_pdf: Path) -> dict:
     return respuesta.model_dump()
 
 
-def main():
-    """Extrae los productos de un folleto en prosa (por defecto, el de Dermalab) y guarda el resultado verificado."""
-    argumentos = argparse.ArgumentParser(description="Extrae los productos de un folleto en prosa.")
-    argumentos.add_argument("pdf", nargs="?", type=Path, default=RUTA_DERMALAB,
-                            help="Folleto a extraer (por defecto, el de Dermalab).")
-    argumentos.add_argument("--de-nuevo", action="store_true", help="Vuelve a hacer la llamada.")
-    argumentos = argumentos.parse_args()
+def extraer_folleto(cliente, modelo: str, ruta_pdf: Path, de_nuevo: bool = False) -> dict:
+    """Extrae los productos de un folleto en prosa, guarda el resultado y lo devuelve (semana 3, paso 3).
 
-    load_dotenv(CARPETA_PROYECTO / ".env")
-    modelo = os.getenv("MODELO")
-    if not modelo:
-        sys.exit("ERROR: falta MODELO en el .env")
-    cliente = anthropic.Anthropic()
-    ruta_pdf = argumentos.pdf
+    Es lo que hacía main, como función: así el orquestador lo lanza junto con los otros archivos.
+    Es una sola llamada (pasa por la puerta de llamada_guardada como todas).
+    """
     CARPETA_EXTRACCIONES.mkdir(parents=True, exist_ok=True)
-
     respuesta = llamada_guardada(CARPETA_EXTRACCIONES / f"{ruta_pdf.stem}.llamada.json",
-                                 lambda: pedir_bloques_citados(cliente, modelo, ruta_pdf), argumentos.de_nuevo)
+                                 lambda: pedir_bloques_citados(cliente, modelo, ruta_pdf), de_nuevo)
     armados, problemas = productos_del_folleto(respuesta["content"])
 
     productos = []
@@ -253,7 +244,12 @@ def main():
                  "costo_usd": round(costo_usd(respuesta), 6)}
     ruta_resultado = CARPETA_EXTRACCIONES / f"{ruta_pdf.stem}.json"
     ruta_resultado.write_text(json.dumps(resultado, ensure_ascii=False, indent=2), encoding="utf-8")
+    return resultado
 
+
+def mostrar_resultado(resultado: dict) -> None:
+    """Imprime lo que sacó extraer_folleto: cada producto con su página (y la del nombre si es otra), y el costo."""
+    productos, problemas = resultado["productos"], resultado["problemas"]
     marcados = [p for p in productos if p["problemas"]]
     print(f"\n{len(productos)} productos · {len(productos) - len(marcados)} sin problemas · {len(marcados)} marcados")
     for p in productos:
@@ -265,7 +261,22 @@ def main():
         print(f"  {p['codigo']:<7} pág. {p['fuente']['pagina']}{distintas} · {c['nombre']} | {c['tipo']} | {c['contenido']}")
     print(f"\nProblemas generales: {problemas or 'ninguno'}")
     print(f"Costo: US$ {resultado['costo_usd']:.6f} (una sola llamada)")
-    print(f"Resultado: {ruta_resultado.relative_to(CARPETA_PROYECTO)}")
+    print(f"Resultado: {(CARPETA_EXTRACCIONES / resultado['archivo']).with_suffix('.json').relative_to(CARPETA_PROYECTO)}")
+
+
+def main():
+    """Extrae los productos de un folleto en prosa (por defecto, el de Dermalab) desde la terminal."""
+    argumentos = argparse.ArgumentParser(description="Extrae los productos de un folleto en prosa.")
+    argumentos.add_argument("pdf", nargs="?", type=Path, default=RUTA_DERMALAB,
+                            help="Folleto a extraer (por defecto, el de Dermalab).")
+    argumentos.add_argument("--de-nuevo", action="store_true", help="Vuelve a hacer la llamada.")
+    argumentos = argumentos.parse_args()
+
+    load_dotenv(CARPETA_PROYECTO / ".env")
+    modelo = os.getenv("MODELO")
+    if not modelo:
+        sys.exit("ERROR: falta MODELO en el .env")
+    mostrar_resultado(extraer_folleto(anthropic.Anthropic(), modelo, argumentos.pdf, argumentos.de_nuevo))
 
 
 if __name__ == "__main__":

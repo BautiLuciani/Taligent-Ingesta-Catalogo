@@ -1,0 +1,440 @@
+{
+  "archivo": "Dermalab_lanzamientos_2026.pdf",
+  "modelo": "claude-haiku-5-5",
+  "productos": [
+    {
+      "codigo": "DL-151",
+      "fuente": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      },
+      "bloque": [
+        "Dermalab Hydra Plus",
+        "Crema. Textura liviana de rápida absorción. Hidratación facial de uso diario."
+      ],
+      "campos": {
+        "nombre": "Dermalab Hydra Plus",
+        "tipo": "Crema",
+        "descripcion": "Textura liviana de rápida absorción. Hidratación facial de uso diario.",
+        "contenido": "50 ml"
+      },
+      "paginas": {
+        "nombre": 1,
+        "tipo": 1,
+        "descripcion": 1,
+        "contenido": 1
+      },
+      "problemas": []
+    },
+    {
+      "codigo": "DL-103",
+      "fuente": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      },
+      "bloque": [
+        "Dermalab Purify",
+        "Gel limpiador. Limpia en profundidad sin resecar. Para piel mixta a grasa."
+      ],
+      "campos": {
+        "nombre": "Dermalab Purify",
+        "tipo": "Gel limpiador",
+        "descripcion": "Limpia en profundidad sin resecar. Para piel mixta a grasa.",
+        "contenido": "300 ml"
+      },
+      "paginas": {
+        "nombre": 1,
+        "tipo": 1,
+        "descripcion": 1,
+        "contenido": 1
+      },
+      "problemas": []
+    },
+    {
+      "codigo": "DL-106",
+      "fuente": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      },
+      "bloque": [
+        "Dermalab Sun SPF 50+",
+        "Protector solar. Amplio espectro UVA/UVB. Resistente al agua."
+      ],
+      "campos": {
+        "nombre": "Dermalab Sun SPF 50+",
+        "tipo": "Protector solar",
+        "descripcion": "Amplio espectro UVA/UVB. Resistente al agua.",
+        "contenido": "50 ml"
+      },
+      "paginas": {
+        "nombre": 1,
+        "tipo": 1,
+        "descripcion": 1,
+        "contenido": 1
+      },
+      "problemas": []
+    },
+    {
+      "codigo": "DL-109",
+      "fuente": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      },
+      "bloque": [
+        "Dermalab Urea 10 %",
+        "Crema. Textura liviana de rápida absorción. Hidratación intensa para el cuerpo, ideal para piel muy seca."
+      ],
+      "campos": {
+        "nombre": "Dermalab Urea 10 %",
+        "tipo": "Crema",
+        "descripcion": "Textura liviana de rápida absorción. Hidratación intensa para el cuerpo, ideal para piel muy seca.",
+        "contenido": "400 ml"
+      },
+      "paginas": {
+        "nombre": 1,
+        "tipo": 1,
+        "descripcion": 1,
+        "contenido": 1
+      },
+      "problemas": []
+    },
+    {
+      "codigo": "DL-112",
+      "fuente": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      },
+      "bloque": [
+        "Dermalab Lift",
+        "Sérum. Con péptidos y ácido hialurónico. Reduce arrugas visibles en cuatro semanas."
+      ],
+      "campos": {
+        "nombre": "Dermalab Lift",
+        "tipo": "Sérum",
+        "descripcion": "Con péptidos y ácido hialurónico. Reduce arrugas visibles en cuatro semanas.",
+        "contenido": "30 ml"
+      },
+      "paginas": {
+        "nombre": 1,
+        "tipo": 1,
+        "descripcion": 1,
+        "contenido": 1
+      },
+      "problemas": []
+    },
+    {
+      "codigo": "DL-115",
+      "fuente": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      },
+      "bloque": [
+        "Dermalab Hydra Plus SPF 30",
+        "Crema. Textura liviana de rápida absorción. Hidratación facial de uso diario."
+      ],
+      "campos": {
+        "nombre": "Dermalab Hydra Plus SPF 30",
+        "tipo": "Crema",
+        "descripcion": "Textura liviana de rápida absorción. Hidratación facial de uso diario.",
+        "contenido": "50 ml"
+      },
+      "paginas": {
+        "nombre": 1,
+        "tipo": 1,
+        "descripcion": 1,
+        "contenido": 1
+      },
+      "problemas": []
+    },
+    {
+      "codigo": "DL-118",
+      "fuente": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      },
+      "bloque": [
+        "Dermalab Purify",
+        "Gel limpiador. Limpia en profundidad sin resecar. Para piel mixta a grasa."
+      ],
+      "campos": {
+        "nombre": "Dermalab Purify",
+        "tipo": "Gel limpiador",
+        "descripcion": "Limpia en profundidad sin resecar. Para piel mixta a grasa.",
+        "contenido": "150 ml"
+      },
+      "paginas": {
+        "nombre": 1,
+        "tipo": 1,
+        "descripcion": 1,
+        "contenido": 1
+      },
+      "problemas": []
+    },
+    {
+      "codigo": "DL-121",
+      "fuente": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      },
+      "bloque": [
+        "Dermalab Sun SPF 30",
+        "Protector solar. Amplio espectro UVA/UVB. Resistente al agua."
+      ],
+      "campos": {
+        "nombre": "Dermalab Sun SPF 30",
+        "tipo": "Protector solar",
+        "descripcion": "Amplio espectro UVA/UVB. Resistente al agua.",
+        "contenido": "200 ml"
+      },
+      "paginas": {
+        "nombre": 1,
+        "tipo": 1,
+        "descripcion": 1,
+        "contenido": 1
+      },
+      "problemas": []
+    },
+    {
+      "codigo": "DL-124",
+      "fuente": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      },
+      "bloque": [
+        "Dermalab Lift Noche",
+        "Sérum. Con péptidos y ácido hialurónico. Reduce arrugas visibles en cuatro semanas."
+      ],
+      "campos": {
+        "nombre": "Dermalab Lift Noche",
+        "tipo": "Sérum",
+        "descripcion": "Con péptidos y ácido hialurónico. Reduce arrugas visibles en cuatro semanas.",
+        "contenido": "30 ml"
+      },
+      "paginas": {
+        "nombre": 1,
+        "tipo": 1,
+        "descripcion": 1,
+        "contenido": 1
+      },
+      "problemas": []
+    },
+    {
+      "codigo": "DL-127",
+      "fuente": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      },
+      "bloque": [
+        "Dermalab Sun SPF 50",
+        "Protector solar. Amplio espectro UVA/UVB. Resistente al agua."
+      ],
+      "campos": {
+        "nombre": "Dermalab Sun SPF 50",
+        "tipo": "Protector solar",
+        "descripcion": "Amplio espectro UVA/UVB. Resistente al agua.",
+        "contenido": "200 ml"
+      },
+      "paginas": {
+        "nombre": 1,
+        "tipo": 1,
+        "descripcion": 1,
+        "contenido": 1
+      },
+      "problemas": []
+    },
+    {
+      "codigo": "DL-154",
+      "fuente": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      },
+      "bloque": [
+        "Dermalab Sensitive",
+        "Agua micelar. Desmaquilla y limpia en un solo paso. Apta para piel sensible."
+      ],
+      "campos": {
+        "nombre": "Dermalab Sensitive",
+        "tipo": "Agua micelar",
+        "descripcion": "Desmaquilla y limpia en un solo paso. Apta para piel sensible.",
+        "contenido": "400 ml"
+      },
+      "paginas": {
+        "nombre": 1,
+        "tipo": 1,
+        "descripcion": 1,
+        "contenido": 1
+      },
+      "problemas": []
+    },
+    {
+      "codigo": "DL-130",
+      "fuente": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      },
+      "bloque": [
+        "Dermalab Clear",
+        "Crema. Textura liviana de rápida absorción. Para piel con tendencia acneica: reduce brillos e imperfecciones."
+      ],
+      "campos": {
+        "nombre": "Dermalab Clear",
+        "tipo": "Crema",
+        "descripcion": "Textura liviana de rápida absorción. Para piel con tendencia acneica: reduce brillos e imperfecciones.",
+        "contenido": "40 ml"
+      },
+      "paginas": {
+        "nombre": 1,
+        "tipo": 1,
+        "descripcion": 1,
+        "contenido": 1
+      },
+      "problemas": []
+    },
+    {
+      "codigo": "DL-133",
+      "fuente": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      },
+      "bloque": [
+        "Dermalab Sun SPF 30",
+        "Protector solar. Amplio espectro UVA/UVB. Resistente al agua."
+      ],
+      "campos": {
+        "nombre": "Dermalab Sun SPF 30",
+        "tipo": "Protector solar",
+        "descripcion": "Amplio espectro UVA/UVB. Resistente al agua.",
+        "contenido": "50 ml"
+      },
+      "paginas": {
+        "nombre": 1,
+        "tipo": 1,
+        "descripcion": 1,
+        "contenido": 1
+      },
+      "problemas": []
+    },
+    {
+      "codigo": "DL-136",
+      "fuente": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 2
+      },
+      "bloque": [
+        "Dermalab Sun Kids SPF 50+",
+        "Protector solar. Amplio espectro UVA/UVB. Resistente al agua. Formulado especialmente para la piel de los niños."
+      ],
+      "campos": {
+        "nombre": "Dermalab Sun Kids SPF 50+",
+        "tipo": "Protector solar",
+        "descripcion": "Amplio espectro UVA/UVB. Resistente al agua. Formulado especialmente para la piel de los niños.",
+        "contenido": "200 ml"
+      },
+      "paginas": {
+        "nombre": 1,
+        "tipo": 2,
+        "descripcion": 2,
+        "contenido": 2
+      },
+      "problemas": []
+    },
+    {
+      "codigo": "DL-139",
+      "fuente": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 2
+      },
+      "bloque": [
+        "Dermalab Sun After Sun",
+        "Gel. Calma y refresca la piel después de la exposición al sol."
+      ],
+      "campos": {
+        "nombre": "Dermalab Sun After Sun",
+        "tipo": "Gel",
+        "descripcion": "Calma y refresca la piel después de la exposición al sol.",
+        "contenido": "200 ml"
+      },
+      "paginas": {
+        "nombre": 2,
+        "tipo": 2,
+        "descripcion": 2,
+        "contenido": 2
+      },
+      "problemas": []
+    },
+    {
+      "codigo": "DL-142",
+      "fuente": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 2
+      },
+      "bloque": [
+        "Dermalab Sun SPF 50",
+        "Protector solar. Amplio espectro UVA/UVB. Resistente al agua."
+      ],
+      "campos": {
+        "nombre": "Dermalab Sun SPF 50",
+        "tipo": "Protector solar",
+        "descripcion": "Amplio espectro UVA/UVB. Resistente al agua.",
+        "contenido": "50 ml"
+      },
+      "paginas": {
+        "nombre": 2,
+        "tipo": 2,
+        "descripcion": 2,
+        "contenido": 2
+      },
+      "problemas": []
+    },
+    {
+      "codigo": "DL-145",
+      "fuente": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 2
+      },
+      "bloque": [
+        "Dermalab Sensitive",
+        "Agua micelar. Desmaquilla y limpia en un solo paso. Apta para piel sensible."
+      ],
+      "campos": {
+        "nombre": "Dermalab Sensitive",
+        "tipo": "Agua micelar",
+        "descripcion": "Desmaquilla y limpia en un solo paso. Apta para piel sensible.",
+        "contenido": "200 ml"
+      },
+      "paginas": {
+        "nombre": 2,
+        "tipo": 2,
+        "descripcion": 2,
+        "contenido": 2
+      },
+      "problemas": []
+    },
+    {
+      "codigo": "DL-148",
+      "fuente": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 2
+      },
+      "bloque": [
+        "Dermalab Urea 10 %",
+        "Crema. Textura liviana de rápida absorción. Hidratación intensa para el cuerpo, ideal para piel muy seca."
+      ],
+      "campos": {
+        "nombre": "Dermalab Urea 10 %",
+        "tipo": "Crema",
+        "descripcion": "Textura liviana de rápida absorción. Hidratación intensa para el cuerpo, ideal para piel muy seca.",
+        "contenido": "200 ml"
+      },
+      "paginas": {
+        "nombre": 2,
+        "tipo": 2,
+        "descripcion": 2,
+        "contenido": 2
+      },
+      "problemas": []
+    }
+  ],
+  "problemas": [],
+  "costo_usd": 0.00376
+}

@@ -1,6 +1,10 @@
 """Pruebas de extractor_folleto.py con las citas REALES del paso 7A. Correr: python probar_extractor_folleto.py"""
 import json
+import shutil
+import tempfile
 from pathlib import Path
+
+import extractor_folleto
 
 from extractor_folleto import bloques_de_una_cita, campos_del_bloque, leer_cierre, productos_del_folleto, renglones_con_pagina
 
@@ -177,5 +181,25 @@ chequear("El 1er renglón termina en punto (cita cortada): problema",
          ["el primer renglón no parece un nombre ('Para piel mixta a grasa.'): la cita pudo empezar a mitad del producto"])
 chequear("Sin punto no hay tipo: problema", campos_del_bloque(armado("Producto X", "Texto sin punto"))[2],
          ["no se encuentra el tipo de producto (lo que va antes del primer punto) en 'Texto sin punto'"])
+
+print("\n--- extraer_folleto como función (semana 3, paso 3) ---")
+# Sin API: la llamada responde con la REAL de la semana 2 (congelada del commit)
+EXPERIMENTOS = Path(__file__).parent / "salida" / "experimentos"
+carpeta = Path(tempfile.mkdtemp())
+originales = (extractor_folleto.pedir_bloques_citados, extractor_folleto.CARPETA_EXTRACCIONES)
+extractor_folleto.pedir_bloques_citados = lambda c, m, p: json.loads(
+    (EXPERIMENTOS / "dermalab_llamada_sem2.json").read_text(encoding="utf-8"))
+extractor_folleto.CARPETA_EXTRACCIONES = carpeta
+try:
+    ruta = Path(__file__).parent / "Data" / "proveedores" / "P05_Dermalab" / "Dermalab_lanzamientos_2026.pdf"
+    resultado = extractor_folleto.extraer_folleto(None, "modelo", ruta, de_nuevo=True)
+finally:
+    extractor_folleto.pedir_bloques_citados, extractor_folleto.CARPETA_EXTRACCIONES = originales
+esperado = json.loads((EXPERIMENTOS / "dermalab_extraccion_sem2.json").read_text(encoding="utf-8"))
+chequear("Los 18 productos iguales a la extracción de la semana 2 (orden y páginas incluidos)",
+         (len(resultado["productos"]), resultado["productos"] == esperado["productos"]), (18, True))
+chequear("...sin problemas y lo dejó guardado", (resultado["problemas"], (carpeta / "Dermalab_lanzamientos_2026.json").exists()),
+         ([], True))
+shutil.rmtree(carpeta, ignore_errors=True)
 
 print(f"\nResultado: {'todo OK' if errores == 0 else f'{errores} con error'}")
