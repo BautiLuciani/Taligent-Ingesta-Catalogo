@@ -1,6 +1,8 @@
 {
   "archivo": "LHS_catalogo_nuevos_productos.pdf",
   "modelo": "claude-haiku-5-5",
+  "vigencia": null,
+  "rondas": 0,
   "productos": [
     {
       "codigo": "LHS-203",
@@ -405,8 +407,9 @@
   ],
   "problemas": [],
   "costo_usd": {
-    "llamada_1": 0.002595,
+    "llamada_1": 0.00753,
     "llamada_2": 0.001226,
-    "total": 0.003822
+    "vigencia": 0.0,
+    "total": 0.008757
   }
 }

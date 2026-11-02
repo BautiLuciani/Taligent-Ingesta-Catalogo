@@ -9,6 +9,7 @@
       "pagina": 1
     }
   },
+  "rondas": 0,
   "productos": [
     {
       "codigo": "AN-1103",
@@ -481,9 +482,9 @@
   ],
   "problemas": [],
   "costo_usd": {
-    "llamada_1": 0.006249,
+    "llamada_1": 0.016623,
     "llamada_2": 0.001626,
     "vigencia": 0.000653,
-    "total": 0.008529
+    "total": 0.018902
   }
 }

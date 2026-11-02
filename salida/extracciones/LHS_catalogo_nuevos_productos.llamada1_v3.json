@@ -1,0 +1,575 @@
+{
+  "id": "msg_011CgejvJvc8Pyz1fdHSSjJ4",
+  "container": null,
+  "content": [
+    {
+      "signature": "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",
+      "thinking": "",
+      "type": "thinking"
+    },
+    {
+      "citations": null,
+      "text": "Según el catálogo \"Nuevos productos · Temporada primavera-verano 2026\" de Limpieza Hogar Sur S.A., ",
+      "type": "text"
+    },
+    {
+      "citations": [
+        {
+          "cited_text": "Descripción Contenido EAN Costo\r\nLHS-203 Limpiador Clarita Multiuso Lavanda 900 ML 7798367700178 $ 143,33\r\nLHS-206 Lavandina Clarita Concentrada 2000 ML 7790840033469 $ 88,04\r\nLHS-209 Alcohol Clarita 70 % 250 CC 7794288526675 $ 64,64\r\nLHS-212 Alcohol En Gel Clarita 250ML 7790046159017 $ 188,15\r\nLHS-215 Limpiador Clarita Multiuso Lavanda X 500 ML 7792189253836 $ 83,84\r\nLHS-218 Lavandina Clarita Ropa Blanca 2 LT 7799677765789 $ 82,46\r\nLHS-221 Alcohol En Gel Clarita Aloe 250ML 7792315884774 $ 185,79\r\nLHS-224 Repelente Fulmin Crema 60g 7796862563595 $ 159,50\r\nLHS-227 Alcohol En Gel Clarita Aloe 60 ML 7795270976522 $ 64,97\r\nLHS-230 Alcohol Clarita 70 % 1 L 7792715614612 $ 195,08\r\nLHS-233 Repelente Fulmin Aerosol 170 CC 7791592718338 $ 156,76\r\nLHS-275 Alcohol Clarita 96 % 500 CC $ 117,34\r\nLHS-236 Limpiador Clarita Multiuso Cocina 900 ML 7793326504736 $ 146,13\r\nLHS-239 Alcohol En Gel Clarita 500ML 7791723703325 $ 282,93\r\nLHS-242 Alcohol Clarita 96 % 1 LT 7798133076711 $ 168,14\r\nLHS-245 Limpiador Clarita Multiuso Cocina 500 ML 7793568706615 $ 83,63\r\nLHS-248 Alcohol Clarita 70 % 500 ML 7797159155318 $ 124,16\r\nLHS-251 Alcohol Clarita 96 % 250 ML 7792138038309 $ 76,06\r\nLHS-254 Repelente Fulmin Crema Niños 100g 7792476159797 $ 194,70\r\nLHS-257 Alcohol En Gel Clarita 60cc 7797772062109 $ 64,35\r\nLHS-272 Repelente Fulmin Crema 100 G $ 194,54\r\nLHS-260 Insecticida Fulmin Cucarachas 360 CC 7798382040495 $ 158,17\r\nLHS-263 Lavandina Clarita Ropa Blanca 1 LT 7794419396986 $ 59,59\r\nLHS-266 Repelente Fulmin Crema Niños 60GR 7797934045896 $ 145,19\r\nLHS-269 Lavandina Clarita Concentrada 1000 ML 7793634603527 $ 54,71\r\nLas fichas de datos de seguridad se envían por separado.\r\n",
+          "document_index": 0,
+          "document_title": "LHS_catalogo_nuevos_productos.pdf",
+          "end_page_number": 2,
+          "file_id": null,
+          "start_page_number": 1,
+          "type": "page_location"
+        }
+      ],
+      "text": "cada producto tiene código, descripción, contenido, EAN y costo",
+      "type": "text"
+    },
+    {
+      "citations": null,
+      "text": ". Además, ",
+      "type": "text"
+    },
+    {
+      "citations": [
+        {
+          "cited_text": "Descripción Contenido EAN Costo\r\nLHS-203 Limpiador Clarita Multiuso Lavanda 900 ML 7798367700178 $ 143,33\r\nLHS-206 Lavandina Clarita Concentrada 2000 ML 7790840033469 $ 88,04\r\nLHS-209 Alcohol Clarita 70 % 250 CC 7794288526675 $ 64,64\r\nLHS-212 Alcohol En Gel Clarita 250ML 7790046159017 $ 188,15\r\nLHS-215 Limpiador Clarita Multiuso Lavanda X 500 ML 7792189253836 $ 83,84\r\nLHS-218 Lavandina Clarita Ropa Blanca 2 LT 7799677765789 $ 82,46\r\nLHS-221 Alcohol En Gel Clarita Aloe 250ML 7792315884774 $ 185,79\r\nLHS-224 Repelente Fulmin Crema 60g 7796862563595 $ 159,50\r\nLHS-227 Alcohol En Gel Clarita Aloe 60 ML 7795270976522 $ 64,97\r\nLHS-230 Alcohol Clarita 70 % 1 L 7792715614612 $ 195,08\r\nLHS-233 Repelente Fulmin Aerosol 170 CC 7791592718338 $ 156,76\r\nLHS-275 Alcohol Clarita 96 % 500 CC $ 117,34\r\nLHS-236 Limpiador Clarita Multiuso Cocina 900 ML 7793326504736 $ 146,13\r\nLHS-239 Alcohol En Gel Clarita 500ML 7791723703325 $ 282,93\r\nLHS-242 Alcohol Clarita 96 % 1 LT 7798133076711 $ 168,14\r\nLHS-245 Limpiador Clarita Multiuso Cocina 500 ML 7793568706615 $ 83,63\r\nLHS-248 Alcohol Clarita 70 % 500 ML 7797159155318 $ 124,16\r\nLHS-251 Alcohol Clarita 96 % 250 ML 7792138038309 $ 76,06\r\nLHS-254 Repelente Fulmin Crema Niños 100g 7792476159797 $ 194,70\r\nLHS-257 Alcohol En Gel Clarita 60cc 7797772062109 $ 64,35\r\nLHS-272 Repelente Fulmin Crema 100 G $ 194,54\r\nLHS-260 Insecticida Fulmin Cucarachas 360 CC 7798382040495 $ 158,17\r\nLHS-263 Lavandina Clarita Ropa Blanca 1 LT 7794419396986 $ 59,59\r\nLHS-266 Repelente Fulmin Crema Niños 60GR 7797934045896 $ 145,19\r\nLHS-269 Lavandina Clarita Concentrada 1000 ML 7793634603527 $ 54,71\r\nLas fichas de datos de seguridad se envían por separado.\r\n",
+          "document_index": 0,
+          "document_title": "LHS_catalogo_nuevos_productos.pdf",
+          "end_page_number": 2,
+          "file_id": null,
+          "start_page_number": 1,
+          "type": "page_location"
+        }
+      ],
+      "text": "las fichas de datos de seguridad se envían por separado",
+      "type": "text"
+    },
+    {
+      "citations": null,
+      "text": ", así que no figuran por producto.\n\nLHS-203: ",
+      "type": "text"
+    },
+    {
+      "citations": [
+        {
+          "cited_text": "Descripción Contenido EAN Costo\r\nLHS-203 Limpiador Clarita Multiuso Lavanda 900 ML 7798367700178 $ 143,33\r\nLHS-206 Lavandina Clarita Concentrada 2000 ML 7790840033469 $ 88,04\r\nLHS-209 Alcohol Clarita 70 % 250 CC 7794288526675 $ 64,64\r\nLHS-212 Alcohol En Gel Clarita 250ML 7790046159017 $ 188,15\r\nLHS-215 Limpiador Clarita Multiuso Lavanda X 500 ML 7792189253836 $ 83,84\r\nLHS-218 Lavandina Clarita Ropa Blanca 2 LT 7799677765789 $ 82,46\r\nLHS-221 Alcohol En Gel Clarita Aloe 250ML 7792315884774 $ 185,79\r\nLHS-224 Repelente Fulmin Crema 60g 7796862563595 $ 159,50\r\nLHS-227 Alcohol En Gel Clarita Aloe 60 ML 7795270976522 $ 64,97\r\nLHS-230 Alcohol Clarita 70 % 1 L 7792715614612 $ 195,08\r\nLHS-233 Repelente Fulmin Aerosol 170 CC 7791592718338 $ 156,76\r\nLHS-275 Alcohol Clarita 96 % 500 CC $ 117,34\r\nLHS-236 Limpiador Clarita Multiuso Cocina 900 ML 7793326504736 $ 146,13\r\nLHS-239 Alcohol En Gel Clarita 500ML 7791723703325 $ 282,93\r\nLHS-242 Alcohol Clarita 96 % 1 LT 7798133076711 $ 168,14\r\nLHS-245 Limpiador Clarita Multiuso Cocina 500 ML 7793568706615 $ 83,63\r\nLHS-248 Alcohol Clarita 70 % 500 ML 7797159155318 $ 124,16\r\nLHS-251 Alcohol Clarita 96 % 250 ML 7792138038309 $ 76,06\r\nLHS-254 Repelente Fulmin Crema Niños 100g 7792476159797 $ 194,70\r\nLHS-257 Alcohol En Gel Clarita 60cc 7797772062109 $ 64,35\r\nLHS-272 Repelente Fulmin Crema 100 G $ 194,54\r\nLHS-260 Insecticida Fulmin Cucarachas 360 CC 7798382040495 $ 158,17\r\nLHS-263 Lavandina Clarita Ropa Blanca 1 LT 7794419396986 $ 59,59\r\nLHS-266 Repelente Fulmin Crema Niños 60GR 7797934045896 $ 145,19\r\nLHS-269 Lavandina Clarita Concentrada 1000 ML 7793634603527 $ 54,71\r\nLas fichas de datos de seguridad se envían por separado.\r\n",
+          "document_index": 0,
+          "document_title": "LHS_catalogo_nuevos_productos.pdf",
+          "end_page_number": 2,
+          "file_id": null,
+          "start_page_number": 1,
+          "type": "page_location"
+        }
+      ],
+      "text": "Limpiador Clarita Multiuso Lavanda, contenido 900 ML, EAN 7798367700178, costo $ 143,33.",
+      "type": "text"
+    },
+    {
+      "citations": null,
+      "text": "\n\nLHS-206: ",
+      "type": "text"
+    },
+    {
+      "citations": [
+        {
+          "cited_text": "Descripción Contenido EAN Costo\r\nLHS-203 Limpiador Clarita Multiuso Lavanda 900 ML 7798367700178 $ 143,33\r\nLHS-206 Lavandina Clarita Concentrada 2000 ML 7790840033469 $ 88,04\r\nLHS-209 Alcohol Clarita 70 % 250 CC 7794288526675 $ 64,64\r\nLHS-212 Alcohol En Gel Clarita 250ML 7790046159017 $ 188,15\r\nLHS-215 Limpiador Clarita Multiuso Lavanda X 500 ML 7792189253836 $ 83,84\r\nLHS-218 Lavandina Clarita Ropa Blanca 2 LT 7799677765789 $ 82,46\r\nLHS-221 Alcohol En Gel Clarita Aloe 250ML 7792315884774 $ 185,79\r\nLHS-224 Repelente Fulmin Crema 60g 7796862563595 $ 159,50\r\nLHS-227 Alcohol En Gel Clarita Aloe 60 ML 7795270976522 $ 64,97\r\nLHS-230 Alcohol Clarita 70 % 1 L 7792715614612 $ 195,08\r\nLHS-233 Repelente Fulmin Aerosol 170 CC 7791592718338 $ 156,76\r\nLHS-275 Alcohol Clarita 96 % 500 CC $ 117,34\r\nLHS-236 Limpiador Clarita Multiuso Cocina 900 ML 7793326504736 $ 146,13\r\nLHS-239 Alcohol En Gel Clarita 500ML 7791723703325 $ 282,93\r\nLHS-242 Alcohol Clarita 96 % 1 LT 7798133076711 $ 168,14\r\nLHS-245 Limpiador Clarita Multiuso Cocina 500 ML 7793568706615 $ 83,63\r\nLHS-248 Alcohol Clarita 70 % 500 ML 7797159155318 $ 124,16\r\nLHS-251 Alcohol Clarita 96 % 250 ML 7792138038309 $ 76,06\r\nLHS-254 Repelente Fulmin Crema Niños 100g 7792476159797 $ 194,70\r\nLHS-257 Alcohol En Gel Clarita 60cc 7797772062109 $ 64,35\r\nLHS-272 Repelente Fulmin Crema 100 G $ 194,54\r\nLHS-260 Insecticida Fulmin Cucarachas 360 CC 7798382040495 $ 158,17\r\nLHS-263 Lavandina Clarita Ropa Blanca 1 LT 7794419396986 $ 59,59\r\nLHS-266 Repelente Fulmin Crema Niños 60GR 7797934045896 $ 145,19\r\nLHS-269 Lavandina Clarita Concentrada 1000 ML 7793634603527 $ 54,71\r\nLas fichas de datos de seguridad se envían por separado.\r\n",
+          "document_index": 0,
+          "document_title": "LHS_catalogo_nuevos_productos.pdf",
+          "end_page_number": 2,
+          "file_id": null,
+          "start_page_number": 1,
+          "type": "page_location"
+        }
+      ],
+      "text": "Lavandina Clarita Concentrada, contenido 2000 ML, EAN 7790840033469, costo $ 88,04.",
+      "type": "text"
+    },
+    {
+      "citations": null,
+      "text": "\n\nLHS-209: ",
+      "type": "text"
+    },
+    {
+      "citations": [
+        {
+          "cited_text": "Descripción Contenido EAN Costo\r\nLHS-203 Limpiador Clarita Multiuso Lavanda 900 ML 7798367700178 $ 143,33\r\nLHS-206 Lavandina Clarita Concentrada 2000 ML 7790840033469 $ 88,04\r\nLHS-209 Alcohol Clarita 70 % 250 CC 7794288526675 $ 64,64\r\nLHS-212 Alcohol En Gel Clarita 250ML 7790046159017 $ 188,15\r\nLHS-215 Limpiador Clarita Multiuso Lavanda X 500 ML 7792189253836 $ 83,84\r\nLHS-218 Lavandina Clarita Ropa Blanca 2 LT 7799677765789 $ 82,46\r\nLHS-221 Alcohol En Gel Clarita Aloe 250ML 7792315884774 $ 185,79\r\nLHS-224 Repelente Fulmin Crema 60g 7796862563595 $ 159,50\r\nLHS-227 Alcohol En Gel Clarita Aloe 60 ML 7795270976522 $ 64,97\r\nLHS-230 Alcohol Clarita 70 % 1 L 7792715614612 $ 195,08\r\nLHS-233 Repelente Fulmin Aerosol 170 CC 7791592718338 $ 156,76\r\nLHS-275 Alcohol Clarita 96 % 500 CC $ 117,34\r\nLHS-236 Limpiador Clarita Multiuso Cocina 900 ML 7793326504736 $ 146,13\r\nLHS-239 Alcohol En Gel Clarita 500ML 7791723703325 $ 282,93\r\nLHS-242 Alcohol Clarita 96 % 1 LT 7798133076711 $ 168,14\r\nLHS-245 Limpiador Clarita Multiuso Cocina 500 ML 7793568706615 $ 83,63\r\nLHS-248 Alcohol Clarita 70 % 500 ML 7797159155318 $ 124,16\r\nLHS-251 Alcohol Clarita 96 % 250 ML 7792138038309 $ 76,06\r\nLHS-254 Repelente Fulmin Crema Niños 100g 7792476159797 $ 194,70\r\nLHS-257 Alcohol En Gel Clarita 60cc 7797772062109 $ 64,35\r\nLHS-272 Repelente Fulmin Crema 100 G $ 194,54\r\nLHS-260 Insecticida Fulmin Cucarachas 360 CC 7798382040495 $ 158,17\r\nLHS-263 Lavandina Clarita Ropa Blanca 1 LT 7794419396986 $ 59,59\r\nLHS-266 Repelente Fulmin Crema Niños 60GR 7797934045896 $ 145,19\r\nLHS-269 Lavandina Clarita Concentrada 1000 ML 7793634603527 $ 54,71\r\nLas fichas de datos de seguridad se envían por separado.\r\n",
+          "document_index": 0,
+          "document_title": "LHS_catalogo_nuevos_productos.pdf",
+          "end_page_number": 2,
+          "file_id": null,
+          "start_page_number": 1,
+          "type": "page_location"
+        }
+      ],
+      "text": "Alcohol Clarita 70 %, contenido 250 CC, EAN 7794288526675, costo $ 64,64.",
+      "type": "text"
+    },
+    {
+      "citations": null,
+      "text": "\n\nLHS-212: ",
+      "type": "text"
+    },
+    {
+      "citations": [
+        {
+          "cited_text": "Descripción Contenido EAN Costo\r\nLHS-203 Limpiador Clarita Multiuso Lavanda 900 ML 7798367700178 $ 143,33\r\nLHS-206 Lavandina Clarita Concentrada 2000 ML 7790840033469 $ 88,04\r\nLHS-209 Alcohol Clarita 70 % 250 CC 7794288526675 $ 64,64\r\nLHS-212 Alcohol En Gel Clarita 250ML 7790046159017 $ 188,15\r\nLHS-215 Limpiador Clarita Multiuso Lavanda X 500 ML 7792189253836 $ 83,84\r\nLHS-218 Lavandina Clarita Ropa Blanca 2 LT 7799677765789 $ 82,46\r\nLHS-221 Alcohol En Gel Clarita Aloe 250ML 7792315884774 $ 185,79\r\nLHS-224 Repelente Fulmin Crema 60g 7796862563595 $ 159,50\r\nLHS-227 Alcohol En Gel Clarita Aloe 60 ML 7795270976522 $ 64,97\r\nLHS-230 Alcohol Clarita 70 % 1 L 7792715614612 $ 195,08\r\nLHS-233 Repelente Fulmin Aerosol 170 CC 7791592718338 $ 156,76\r\nLHS-275 Alcohol Clarita 96 % 500 CC $ 117,34\r\nLHS-236 Limpiador Clarita Multiuso Cocina 900 ML 7793326504736 $ 146,13\r\nLHS-239 Alcohol En Gel Clarita 500ML 7791723703325 $ 282,93\r\nLHS-242 Alcohol Clarita 96 % 1 LT 7798133076711 $ 168,14\r\nLHS-245 Limpiador Clarita Multiuso Cocina 500 ML 7793568706615 $ 83,63\r\nLHS-248 Alcohol Clarita 70 % 500 ML 7797159155318 $ 124,16\r\nLHS-251 Alcohol Clarita 96 % 250 ML 7792138038309 $ 76,06\r\nLHS-254 Repelente Fulmin Crema Niños 100g 7792476159797 $ 194,70\r\nLHS-257 Alcohol En Gel Clarita 60cc 7797772062109 $ 64,35\r\nLHS-272 Repelente Fulmin Crema 100 G $ 194,54\r\nLHS-260 Insecticida Fulmin Cucarachas 360 CC 7798382040495 $ 158,17\r\nLHS-263 Lavandina Clarita Ropa Blanca 1 LT 7794419396986 $ 59,59\r\nLHS-266 Repelente Fulmin Crema Niños 60GR 7797934045896 $ 145,19\r\nLHS-269 Lavandina Clarita Concentrada 1000 ML 7793634603527 $ 54,71\r\nLas fichas de datos de seguridad se envían por separado.\r\n",
+          "document_index": 0,
+          "document_title": "LHS_catalogo_nuevos_productos.pdf",
+          "end_page_number": 2,
+          "file_id": null,
+          "start_page_number": 1,
+          "type": "page_location"
+        }
+      ],
+      "text": "Alcohol En Gel Clarita, contenido 250ML, EAN 7790046159017, costo $ 188,15.",
+      "type": "text"
+    },
+    {
+      "citations": null,
+      "text": "\n\nLHS-215: ",
+      "type": "text"
+    },
+    {
+      "citations": [
+        {
+          "cited_text": "Descripción Contenido EAN Costo\r\nLHS-203 Limpiador Clarita Multiuso Lavanda 900 ML 7798367700178 $ 143,33\r\nLHS-206 Lavandina Clarita Concentrada 2000 ML 7790840033469 $ 88,04\r\nLHS-209 Alcohol Clarita 70 % 250 CC 7794288526675 $ 64,64\r\nLHS-212 Alcohol En Gel Clarita 250ML 7790046159017 $ 188,15\r\nLHS-215 Limpiador Clarita Multiuso Lavanda X 500 ML 7792189253836 $ 83,84\r\nLHS-218 Lavandina Clarita Ropa Blanca 2 LT 7799677765789 $ 82,46\r\nLHS-221 Alcohol En Gel Clarita Aloe 250ML 7792315884774 $ 185,79\r\nLHS-224 Repelente Fulmin Crema 60g 7796862563595 $ 159,50\r\nLHS-227 Alcohol En Gel Clarita Aloe 60 ML 7795270976522 $ 64,97\r\nLHS-230 Alcohol Clarita 70 % 1 L 7792715614612 $ 195,08\r\nLHS-233 Repelente Fulmin Aerosol 170 CC 7791592718338 $ 156,76\r\nLHS-275 Alcohol Clarita 96 % 500 CC $ 117,34\r\nLHS-236 Limpiador Clarita Multiuso Cocina 900 ML 7793326504736 $ 146,13\r\nLHS-239 Alcohol En Gel Clarita 500ML 7791723703325 $ 282,93\r\nLHS-242 Alcohol Clarita 96 % 1 LT 7798133076711 $ 168,14\r\nLHS-245 Limpiador Clarita Multiuso Cocina 500 ML 7793568706615 $ 83,63\r\nLHS-248 Alcohol Clarita 70 % 500 ML 7797159155318 $ 124,16\r\nLHS-251 Alcohol Clarita 96 % 250 ML 7792138038309 $ 76,06\r\nLHS-254 Repelente Fulmin Crema Niños 100g 7792476159797 $ 194,70\r\nLHS-257 Alcohol En Gel Clarita 60cc 7797772062109 $ 64,35\r\nLHS-272 Repelente Fulmin Crema 100 G $ 194,54\r\nLHS-260 Insecticida Fulmin Cucarachas 360 CC 7798382040495 $ 158,17\r\nLHS-263 Lavandina Clarita Ropa Blanca 1 LT 7794419396986 $ 59,59\r\nLHS-266 Repelente Fulmin Crema Niños 60GR 7797934045896 $ 145,19\r\nLHS-269 Lavandina Clarita Concentrada 1000 ML 7793634603527 $ 54,71\r\nLas fichas de datos de seguridad se envían por separado.\r\n",
+          "document_index": 0,
+          "document_title": "LHS_catalogo_nuevos_productos.pdf",
+          "end_page_number": 2,
+          "file_id": null,
+          "start_page_number": 1,
+          "type": "page_location"
+        }
+      ],
+      "text": "Limpiador Clarita Multiuso Lavanda, contenido X 500 ML, EAN 7792189253836, costo $ 83,84.",
+      "type": "text"
+    },
+    {
+      "citations": null,
+      "text": "\n\nLHS-218: ",
+      "type": "text"
+    },
+    {
+      "citations": [
+        {
+          "cited_text": "Descripción Contenido EAN Costo\r\nLHS-203 Limpiador Clarita Multiuso Lavanda 900 ML 7798367700178 $ 143,33\r\nLHS-206 Lavandina Clarita Concentrada 2000 ML 7790840033469 $ 88,04\r\nLHS-209 Alcohol Clarita 70 % 250 CC 7794288526675 $ 64,64\r\nLHS-212 Alcohol En Gel Clarita 250ML 7790046159017 $ 188,15\r\nLHS-215 Limpiador Clarita Multiuso Lavanda X 500 ML 7792189253836 $ 83,84\r\nLHS-218 Lavandina Clarita Ropa Blanca 2 LT 7799677765789 $ 82,46\r\nLHS-221 Alcohol En Gel Clarita Aloe 250ML 7792315884774 $ 185,79\r\nLHS-224 Repelente Fulmin Crema 60g 7796862563595 $ 159,50\r\nLHS-227 Alcohol En Gel Clarita Aloe 60 ML 7795270976522 $ 64,97\r\nLHS-230 Alcohol Clarita 70 % 1 L 7792715614612 $ 195,08\r\nLHS-233 Repelente Fulmin Aerosol 170 CC 7791592718338 $ 156,76\r\nLHS-275 Alcohol Clarita 96 % 500 CC $ 117,34\r\nLHS-236 Limpiador Clarita Multiuso Cocina 900 ML 7793326504736 $ 146,13\r\nLHS-239 Alcohol En Gel Clarita 500ML 7791723703325 $ 282,93\r\nLHS-242 Alcohol Clarita 96 % 1 LT 7798133076711 $ 168,14\r\nLHS-245 Limpiador Clarita Multiuso Cocina 500 ML 7793568706615 $ 83,63\r\nLHS-248 Alcohol Clarita 70 % 500 ML 7797159155318 $ 124,16\r\nLHS-251 Alcohol Clarita 96 % 250 ML 7792138038309 $ 76,06\r\nLHS-254 Repelente Fulmin Crema Niños 100g 7792476159797 $ 194,70\r\nLHS-257 Alcohol En Gel Clarita 60cc 7797772062109 $ 64,35\r\nLHS-272 Repelente Fulmin Crema 100 G $ 194,54\r\nLHS-260 Insecticida Fulmin Cucarachas 360 CC 7798382040495 $ 158,17\r\nLHS-263 Lavandina Clarita Ropa Blanca 1 LT 7794419396986 $ 59,59\r\nLHS-266 Repelente Fulmin Crema Niños 60GR 7797934045896 $ 145,19\r\nLHS-269 Lavandina Clarita Concentrada 1000 ML 7793634603527 $ 54,71\r\nLas fichas de datos de seguridad se envían por separado.\r\n",
+          "document_index": 0,
+          "document_title": "LHS_catalogo_nuevos_productos.pdf",
+          "end_page_number": 2,
+          "file_id": null,
+          "start_page_number": 1,
+          "type": "page_location"
+        }
+      ],
+      "text": "Lavandina Clarita Ropa Blanca, contenido 2 LT, EAN 7799677765789, costo $ 82,46.",
+      "type": "text"
+    },
+    {
+      "citations": null,
+      "text": "\n\nLHS-221: ",
+      "type": "text"
+    },
+    {
+      "citations": [
+        {
+          "cited_text": "Descripción Contenido EAN Costo\r\nLHS-203 Limpiador Clarita Multiuso Lavanda 900 ML 7798367700178 $ 143,33\r\nLHS-206 Lavandina Clarita Concentrada 2000 ML 7790840033469 $ 88,04\r\nLHS-209 Alcohol Clarita 70 % 250 CC 7794288526675 $ 64,64\r\nLHS-212 Alcohol En Gel Clarita 250ML 7790046159017 $ 188,15\r\nLHS-215 Limpiador Clarita Multiuso Lavanda X 500 ML 7792189253836 $ 83,84\r\nLHS-218 Lavandina Clarita Ropa Blanca 2 LT 7799677765789 $ 82,46\r\nLHS-221 Alcohol En Gel Clarita Aloe 250ML 7792315884774 $ 185,79\r\nLHS-224 Repelente Fulmin Crema 60g 7796862563595 $ 159,50\r\nLHS-227 Alcohol En Gel Clarita Aloe 60 ML 7795270976522 $ 64,97\r\nLHS-230 Alcohol Clarita 70 % 1 L 7792715614612 $ 195,08\r\nLHS-233 Repelente Fulmin Aerosol 170 CC 7791592718338 $ 156,76\r\nLHS-275 Alcohol Clarita 96 % 500 CC $ 117,34\r\nLHS-236 Limpiador Clarita Multiuso Cocina 900 ML 7793326504736 $ 146,13\r\nLHS-239 Alcohol En Gel Clarita 500ML 7791723703325 $ 282,93\r\nLHS-242 Alcohol Clarita 96 % 1 LT 7798133076711 $ 168,14\r\nLHS-245 Limpiador Clarita Multiuso Cocina 500 ML 7793568706615 $ 83,63\r\nLHS-248 Alcohol Clarita 70 % 500 ML 7797159155318 $ 124,16\r\nLHS-251 Alcohol Clarita 96 % 250 ML 7792138038309 $ 76,06\r\nLHS-254 Repelente Fulmin Crema Niños 100g 7792476159797 $ 194,70\r\nLHS-257 Alcohol En Gel Clarita 60cc 7797772062109 $ 64,35\r\nLHS-272 Repelente Fulmin Crema 100 G $ 194,54\r\nLHS-260 Insecticida Fulmin Cucarachas 360 CC 7798382040495 $ 158,17\r\nLHS-263 Lavandina Clarita Ropa Blanca 1 LT 7794419396986 $ 59,59\r\nLHS-266 Repelente Fulmin Crema Niños 60GR 7797934045896 $ 145,19\r\nLHS-269 Lavandina Clarita Concentrada 1000 ML 7793634603527 $ 54,71\r\nLas fichas de datos de seguridad se envían por separado.\r\n",
+          "document_index": 0,
+          "document_title": "LHS_catalogo_nuevos_productos.pdf",
+          "end_page_number": 2,
+          "file_id": null,
+          "start_page_number": 1,
+          "type": "page_location"
+        }
+      ],
+      "text": "Alcohol En Gel Clarita Aloe, contenido 250ML, EAN 7792315884774, costo $ 185,79.",
+      "type": "text"
+    },
+    {
+      "citations": null,
+      "text": "\n\nLHS-224: ",
+      "type": "text"
+    },
+    {
+      "citations": [
+        {
+          "cited_text": "Descripción Contenido EAN Costo\r\nLHS-203 Limpiador Clarita Multiuso Lavanda 900 ML 7798367700178 $ 143,33\r\nLHS-206 Lavandina Clarita Concentrada 2000 ML 7790840033469 $ 88,04\r\nLHS-209 Alcohol Clarita 70 % 250 CC 7794288526675 $ 64,64\r\nLHS-212 Alcohol En Gel Clarita 250ML 7790046159017 $ 188,15\r\nLHS-215 Limpiador Clarita Multiuso Lavanda X 500 ML 7792189253836 $ 83,84\r\nLHS-218 Lavandina Clarita Ropa Blanca 2 LT 7799677765789 $ 82,46\r\nLHS-221 Alcohol En Gel Clarita Aloe 250ML 7792315884774 $ 185,79\r\nLHS-224 Repelente Fulmin Crema 60g 7796862563595 $ 159,50\r\nLHS-227 Alcohol En Gel Clarita Aloe 60 ML 7795270976522 $ 64,97\r\nLHS-230 Alcohol Clarita 70 % 1 L 7792715614612 $ 195,08\r\nLHS-233 Repelente Fulmin Aerosol 170 CC 7791592718338 $ 156,76\r\nLHS-275 Alcohol Clarita 96 % 500 CC $ 117,34\r\nLHS-236 Limpiador Clarita Multiuso Cocina 900 ML 7793326504736 $ 146,13\r\nLHS-239 Alcohol En Gel Clarita 500ML 7791723703325 $ 282,93\r\nLHS-242 Alcohol Clarita 96 % 1 LT 7798133076711 $ 168,14\r\nLHS-245 Limpiador Clarita Multiuso Cocina 500 ML 7793568706615 $ 83,63\r\nLHS-248 Alcohol Clarita 70 % 500 ML 7797159155318 $ 124,16\r\nLHS-251 Alcohol Clarita 96 % 250 ML 7792138038309 $ 76,06\r\nLHS-254 Repelente Fulmin Crema Niños 100g 7792476159797 $ 194,70\r\nLHS-257 Alcohol En Gel Clarita 60cc 7797772062109 $ 64,35\r\nLHS-272 Repelente Fulmin Crema 100 G $ 194,54\r\nLHS-260 Insecticida Fulmin Cucarachas 360 CC 7798382040495 $ 158,17\r\nLHS-263 Lavandina Clarita Ropa Blanca 1 LT 7794419396986 $ 59,59\r\nLHS-266 Repelente Fulmin Crema Niños 60GR 7797934045896 $ 145,19\r\nLHS-269 Lavandina Clarita Concentrada 1000 ML 7793634603527 $ 54,71\r\nLas fichas de datos de seguridad se envían por separado.\r\n",
+          "document_index": 0,
+          "document_title": "LHS_catalogo_nuevos_productos.pdf",
+          "end_page_number": 2,
+          "file_id": null,
+          "start_page_number": 1,
+          "type": "page_location"
+        }
+      ],
+      "text": "Repelente Fulmin Crema, contenido 60g, EAN 7796862563595, costo $ 159,50.",
+      "type": "text"
+    },
+    {
+      "citations": null,
+      "text": "\n\nLHS-227: ",
+      "type": "text"
+    },
+    {
+      "citations": [
+        {
+          "cited_text": "Descripción Contenido EAN Costo\r\nLHS-203 Limpiador Clarita Multiuso Lavanda 900 ML 7798367700178 $ 143,33\r\nLHS-206 Lavandina Clarita Concentrada 2000 ML 7790840033469 $ 88,04\r\nLHS-209 Alcohol Clarita 70 % 250 CC 7794288526675 $ 64,64\r\nLHS-212 Alcohol En Gel Clarita 250ML 7790046159017 $ 188,15\r\nLHS-215 Limpiador Clarita Multiuso Lavanda X 500 ML 7792189253836 $ 83,84\r\nLHS-218 Lavandina Clarita Ropa Blanca 2 LT 7799677765789 $ 82,46\r\nLHS-221 Alcohol En Gel Clarita Aloe 250ML 7792315884774 $ 185,79\r\nLHS-224 Repelente Fulmin Crema 60g 7796862563595 $ 159,50\r\nLHS-227 Alcohol En Gel Clarita Aloe 60 ML 7795270976522 $ 64,97\r\nLHS-230 Alcohol Clarita 70 % 1 L 7792715614612 $ 195,08\r\nLHS-233 Repelente Fulmin Aerosol 170 CC 7791592718338 $ 156,76\r\nLHS-275 Alcohol Clarita 96 % 500 CC $ 117,34\r\nLHS-236 Limpiador Clarita Multiuso Cocina 900 ML 7793326504736 $ 146,13\r\nLHS-239 Alcohol En Gel Clarita 500ML 7791723703325 $ 282,93\r\nLHS-242 Alcohol Clarita 96 % 1 LT 7798133076711 $ 168,14\r\nLHS-245 Limpiador Clarita Multiuso Cocina 500 ML 7793568706615 $ 83,63\r\nLHS-248 Alcohol Clarita 70 % 500 ML 7797159155318 $ 124,16\r\nLHS-251 Alcohol Clarita 96 % 250 ML 7792138038309 $ 76,06\r\nLHS-254 Repelente Fulmin Crema Niños 100g 7792476159797 $ 194,70\r\nLHS-257 Alcohol En Gel Clarita 60cc 7797772062109 $ 64,35\r\nLHS-272 Repelente Fulmin Crema 100 G $ 194,54\r\nLHS-260 Insecticida Fulmin Cucarachas 360 CC 7798382040495 $ 158,17\r\nLHS-263 Lavandina Clarita Ropa Blanca 1 LT 7794419396986 $ 59,59\r\nLHS-266 Repelente Fulmin Crema Niños 60GR 7797934045896 $ 145,19\r\nLHS-269 Lavandina Clarita Concentrada 1000 ML 7793634603527 $ 54,71\r\nLas fichas de datos de seguridad se envían por separado.\r\n",
+          "document_index": 0,
+          "document_title": "LHS_catalogo_nuevos_productos.pdf",
+          "end_page_number": 2,
+          "file_id": null,
+          "start_page_number": 1,
+          "type": "page_location"
+        }
+      ],
+      "text": "Alcohol En Gel Clarita Aloe, contenido 60 ML, EAN 7795270976522, costo $ 64,97.",
+      "type": "text"
+    },
+    {
+      "citations": null,
+      "text": "\n\nLHS-230: ",
+      "type": "text"
+    },
+    {
+      "citations": [
+        {
+          "cited_text": "Descripción Contenido EAN Costo\r\nLHS-203 Limpiador Clarita Multiuso Lavanda 900 ML 7798367700178 $ 143,33\r\nLHS-206 Lavandina Clarita Concentrada 2000 ML 7790840033469 $ 88,04\r\nLHS-209 Alcohol Clarita 70 % 250 CC 7794288526675 $ 64,64\r\nLHS-212 Alcohol En Gel Clarita 250ML 7790046159017 $ 188,15\r\nLHS-215 Limpiador Clarita Multiuso Lavanda X 500 ML 7792189253836 $ 83,84\r\nLHS-218 Lavandina Clarita Ropa Blanca 2 LT 7799677765789 $ 82,46\r\nLHS-221 Alcohol En Gel Clarita Aloe 250ML 7792315884774 $ 185,79\r\nLHS-224 Repelente Fulmin Crema 60g 7796862563595 $ 159,50\r\nLHS-227 Alcohol En Gel Clarita Aloe 60 ML 7795270976522 $ 64,97\r\nLHS-230 Alcohol Clarita 70 % 1 L 7792715614612 $ 195,08\r\nLHS-233 Repelente Fulmin Aerosol 170 CC 7791592718338 $ 156,76\r\nLHS-275 Alcohol Clarita 96 % 500 CC $ 117,34\r\nLHS-236 Limpiador Clarita Multiuso Cocina 900 ML 7793326504736 $ 146,13\r\nLHS-239 Alcohol En Gel Clarita 500ML 7791723703325 $ 282,93\r\nLHS-242 Alcohol Clarita 96 % 1 LT 7798133076711 $ 168,14\r\nLHS-245 Limpiador Clarita Multiuso Cocina 500 ML 7793568706615 $ 83,63\r\nLHS-248 Alcohol Clarita 70 % 500 ML 7797159155318 $ 124,16\r\nLHS-251 Alcohol Clarita 96 % 250 ML 7792138038309 $ 76,06\r\nLHS-254 Repelente Fulmin Crema Niños 100g 7792476159797 $ 194,70\r\nLHS-257 Alcohol En Gel Clarita 60cc 7797772062109 $ 64,35\r\nLHS-272 Repelente Fulmin Crema 100 G $ 194,54\r\nLHS-260 Insecticida Fulmin Cucarachas 360 CC 7798382040495 $ 158,17\r\nLHS-263 Lavandina Clarita Ropa Blanca 1 LT 7794419396986 $ 59,59\r\nLHS-266 Repelente Fulmin Crema Niños 60GR 7797934045896 $ 145,19\r\nLHS-269 Lavandina Clarita Concentrada 1000 ML 7793634603527 $ 54,71\r\nLas fichas de datos de seguridad se envían por separado.\r\n",
+          "document_index": 0,
+          "document_title": "LHS_catalogo_nuevos_productos.pdf",
+          "end_page_number": 2,
+          "file_id": null,
+          "start_page_number": 1,
+          "type": "page_location"
+        }
+      ],
+      "text": "Alcohol Clarita 70 %, contenido 1 L, EAN 7792715614612, costo $ 195,08.",
+      "type": "text"
+    },
+    {
+      "citations": null,
+      "text": "\n\nLHS-233: ",
+      "type": "text"
+    },
+    {
+      "citations": [
+        {
+          "cited_text": "Descripción Contenido EAN Costo\r\nLHS-203 Limpiador Clarita Multiuso Lavanda 900 ML 7798367700178 $ 143,33\r\nLHS-206 Lavandina Clarita Concentrada 2000 ML 7790840033469 $ 88,04\r\nLHS-209 Alcohol Clarita 70 % 250 CC 7794288526675 $ 64,64\r\nLHS-212 Alcohol En Gel Clarita 250ML 7790046159017 $ 188,15\r\nLHS-215 Limpiador Clarita Multiuso Lavanda X 500 ML 7792189253836 $ 83,84\r\nLHS-218 Lavandina Clarita Ropa Blanca 2 LT 7799677765789 $ 82,46\r\nLHS-221 Alcohol En Gel Clarita Aloe 250ML 7792315884774 $ 185,79\r\nLHS-224 Repelente Fulmin Crema 60g 7796862563595 $ 159,50\r\nLHS-227 Alcohol En Gel Clarita Aloe 60 ML 7795270976522 $ 64,97\r\nLHS-230 Alcohol Clarita 70 % 1 L 7792715614612 $ 195,08\r\nLHS-233 Repelente Fulmin Aerosol 170 CC 7791592718338 $ 156,76\r\nLHS-275 Alcohol Clarita 96 % 500 CC $ 117,34\r\nLHS-236 Limpiador Clarita Multiuso Cocina 900 ML 7793326504736 $ 146,13\r\nLHS-239 Alcohol En Gel Clarita 500ML 7791723703325 $ 282,93\r\nLHS-242 Alcohol Clarita 96 % 1 LT 7798133076711 $ 168,14\r\nLHS-245 Limpiador Clarita Multiuso Cocina 500 ML 7793568706615 $ 83,63\r\nLHS-248 Alcohol Clarita 70 % 500 ML 7797159155318 $ 124,16\r\nLHS-251 Alcohol Clarita 96 % 250 ML 7792138038309 $ 76,06\r\nLHS-254 Repelente Fulmin Crema Niños 100g 7792476159797 $ 194,70\r\nLHS-257 Alcohol En Gel Clarita 60cc 7797772062109 $ 64,35\r\nLHS-272 Repelente Fulmin Crema 100 G $ 194,54\r\nLHS-260 Insecticida Fulmin Cucarachas 360 CC 7798382040495 $ 158,17\r\nLHS-263 Lavandina Clarita Ropa Blanca 1 LT 7794419396986 $ 59,59\r\nLHS-266 Repelente Fulmin Crema Niños 60GR 7797934045896 $ 145,19\r\nLHS-269 Lavandina Clarita Concentrada 1000 ML 7793634603527 $ 54,71\r\nLas fichas de datos de seguridad se envían por separado.\r\n",
+          "document_index": 0,
+          "document_title": "LHS_catalogo_nuevos_productos.pdf",
+          "end_page_number": 2,
+          "file_id": null,
+          "start_page_number": 1,
+          "type": "page_location"
+        }
+      ],
+      "text": "Repelente Fulmin Aerosol, contenido 170 CC, EAN 7791592718338, costo $ 156,76.",
+      "type": "text"
+    },
+    {
+      "citations": null,
+      "text": "\n\nLHS-275: ",
+      "type": "text"
+    },
+    {
+      "citations": [
+        {
+          "cited_text": "Descripción Contenido EAN Costo\r\nLHS-203 Limpiador Clarita Multiuso Lavanda 900 ML 7798367700178 $ 143,33\r\nLHS-206 Lavandina Clarita Concentrada 2000 ML 7790840033469 $ 88,04\r\nLHS-209 Alcohol Clarita 70 % 250 CC 7794288526675 $ 64,64\r\nLHS-212 Alcohol En Gel Clarita 250ML 7790046159017 $ 188,15\r\nLHS-215 Limpiador Clarita Multiuso Lavanda X 500 ML 7792189253836 $ 83,84\r\nLHS-218 Lavandina Clarita Ropa Blanca 2 LT 7799677765789 $ 82,46\r\nLHS-221 Alcohol En Gel Clarita Aloe 250ML 7792315884774 $ 185,79\r\nLHS-224 Repelente Fulmin Crema 60g 7796862563595 $ 159,50\r\nLHS-227 Alcohol En Gel Clarita Aloe 60 ML 7795270976522 $ 64,97\r\nLHS-230 Alcohol Clarita 70 % 1 L 7792715614612 $ 195,08\r\nLHS-233 Repelente Fulmin Aerosol 170 CC 7791592718338 $ 156,76\r\nLHS-275 Alcohol Clarita 96 % 500 CC $ 117,34\r\nLHS-236 Limpiador Clarita Multiuso Cocina 900 ML 7793326504736 $ 146,13\r\nLHS-239 Alcohol En Gel Clarita 500ML 7791723703325 $ 282,93\r\nLHS-242 Alcohol Clarita 96 % 1 LT 7798133076711 $ 168,14\r\nLHS-245 Limpiador Clarita Multiuso Cocina 500 ML 7793568706615 $ 83,63\r\nLHS-248 Alcohol Clarita 70 % 500 ML 7797159155318 $ 124,16\r\nLHS-251 Alcohol Clarita 96 % 250 ML 7792138038309 $ 76,06\r\nLHS-254 Repelente Fulmin Crema Niños 100g 7792476159797 $ 194,70\r\nLHS-257 Alcohol En Gel Clarita 60cc 7797772062109 $ 64,35\r\nLHS-272 Repelente Fulmin Crema 100 G $ 194,54\r\nLHS-260 Insecticida Fulmin Cucarachas 360 CC 7798382040495 $ 158,17\r\nLHS-263 Lavandina Clarita Ropa Blanca 1 LT 7794419396986 $ 59,59\r\nLHS-266 Repelente Fulmin Crema Niños 60GR 7797934045896 $ 145,19\r\nLHS-269 Lavandina Clarita Concentrada 1000 ML 7793634603527 $ 54,71\r\nLas fichas de datos de seguridad se envían por separado.\r\n",
+          "document_index": 0,
+          "document_title": "LHS_catalogo_nuevos_productos.pdf",
+          "end_page_number": 2,
+          "file_id": null,
+          "start_page_number": 1,
+          "type": "page_location"
+        }
+      ],
+      "text": "Alcohol Clarita 96 %, contenido 500 CC, costo $ 117,34.",
+      "type": "text"
+    },
+    {
+      "citations": null,
+      "text": " El EAN no figura en el documento.\n\nLHS-236: ",
+      "type": "text"
+    },
+    {
+      "citations": [
+        {
+          "cited_text": "Descripción Contenido EAN Costo\r\nLHS-203 Limpiador Clarita Multiuso Lavanda 900 ML 7798367700178 $ 143,33\r\nLHS-206 Lavandina Clarita Concentrada 2000 ML 7790840033469 $ 88,04\r\nLHS-209 Alcohol Clarita 70 % 250 CC 7794288526675 $ 64,64\r\nLHS-212 Alcohol En Gel Clarita 250ML 7790046159017 $ 188,15\r\nLHS-215 Limpiador Clarita Multiuso Lavanda X 500 ML 7792189253836 $ 83,84\r\nLHS-218 Lavandina Clarita Ropa Blanca 2 LT 7799677765789 $ 82,46\r\nLHS-221 Alcohol En Gel Clarita Aloe 250ML 7792315884774 $ 185,79\r\nLHS-224 Repelente Fulmin Crema 60g 7796862563595 $ 159,50\r\nLHS-227 Alcohol En Gel Clarita Aloe 60 ML 7795270976522 $ 64,97\r\nLHS-230 Alcohol Clarita 70 % 1 L 7792715614612 $ 195,08\r\nLHS-233 Repelente Fulmin Aerosol 170 CC 7791592718338 $ 156,76\r\nLHS-275 Alcohol Clarita 96 % 500 CC $ 117,34\r\nLHS-236 Limpiador Clarita Multiuso Cocina 900 ML 7793326504736 $ 146,13\r\nLHS-239 Alcohol En Gel Clarita 500ML 7791723703325 $ 282,93\r\nLHS-242 Alcohol Clarita 96 % 1 LT 7798133076711 $ 168,14\r\nLHS-245 Limpiador Clarita Multiuso Cocina 500 ML 7793568706615 $ 83,63\r\nLHS-248 Alcohol Clarita 70 % 500 ML 7797159155318 $ 124,16\r\nLHS-251 Alcohol Clarita 96 % 250 ML 7792138038309 $ 76,06\r\nLHS-254 Repelente Fulmin Crema Niños 100g 7792476159797 $ 194,70\r\nLHS-257 Alcohol En Gel Clarita 60cc 7797772062109 $ 64,35\r\nLHS-272 Repelente Fulmin Crema 100 G $ 194,54\r\nLHS-260 Insecticida Fulmin Cucarachas 360 CC 7798382040495 $ 158,17\r\nLHS-263 Lavandina Clarita Ropa Blanca 1 LT 7794419396986 $ 59,59\r\nLHS-266 Repelente Fulmin Crema Niños 60GR 7797934045896 $ 145,19\r\nLHS-269 Lavandina Clarita Concentrada 1000 ML 7793634603527 $ 54,71\r\nLas fichas de datos de seguridad se envían por separado.\r\n",
+          "document_index": 0,
+          "document_title": "LHS_catalogo_nuevos_productos.pdf",
+          "end_page_number": 2,
+          "file_id": null,
+          "start_page_number": 1,
+          "type": "page_location"
+        }
+      ],
+      "text": "Limpiador Clarita Multiuso Cocina, contenido 900 ML, EAN 7793326504736, costo $ 146,13.",
+      "type": "text"
+    },
+    {
+      "citations": null,
+      "text": "\n\nLHS-239: ",
+      "type": "text"
+    },
+    {
+      "citations": [
+        {
+          "cited_text": "Descripción Contenido EAN Costo\r\nLHS-203 Limpiador Clarita Multiuso Lavanda 900 ML 7798367700178 $ 143,33\r\nLHS-206 Lavandina Clarita Concentrada 2000 ML 7790840033469 $ 88,04\r\nLHS-209 Alcohol Clarita 70 % 250 CC 7794288526675 $ 64,64\r\nLHS-212 Alcohol En Gel Clarita 250ML 7790046159017 $ 188,15\r\nLHS-215 Limpiador Clarita Multiuso Lavanda X 500 ML 7792189253836 $ 83,84\r\nLHS-218 Lavandina Clarita Ropa Blanca 2 LT 7799677765789 $ 82,46\r\nLHS-221 Alcohol En Gel Clarita Aloe 250ML 7792315884774 $ 185,79\r\nLHS-224 Repelente Fulmin Crema 60g 7796862563595 $ 159,50\r\nLHS-227 Alcohol En Gel Clarita Aloe 60 ML 7795270976522 $ 64,97\r\nLHS-230 Alcohol Clarita 70 % 1 L 7792715614612 $ 195,08\r\nLHS-233 Repelente Fulmin Aerosol 170 CC 7791592718338 $ 156,76\r\nLHS-275 Alcohol Clarita 96 % 500 CC $ 117,34\r\nLHS-236 Limpiador Clarita Multiuso Cocina 900 ML 7793326504736 $ 146,13\r\nLHS-239 Alcohol En Gel Clarita 500ML 7791723703325 $ 282,93\r\nLHS-242 Alcohol Clarita 96 % 1 LT 7798133076711 $ 168,14\r\nLHS-245 Limpiador Clarita Multiuso Cocina 500 ML 7793568706615 $ 83,63\r\nLHS-248 Alcohol Clarita 70 % 500 ML 7797159155318 $ 124,16\r\nLHS-251 Alcohol Clarita 96 % 250 ML 7792138038309 $ 76,06\r\nLHS-254 Repelente Fulmin Crema Niños 100g 7792476159797 $ 194,70\r\nLHS-257 Alcohol En Gel Clarita 60cc 7797772062109 $ 64,35\r\nLHS-272 Repelente Fulmin Crema 100 G $ 194,54\r\nLHS-260 Insecticida Fulmin Cucarachas 360 CC 7798382040495 $ 158,17\r\nLHS-263 Lavandina Clarita Ropa Blanca 1 LT 7794419396986 $ 59,59\r\nLHS-266 Repelente Fulmin Crema Niños 60GR 7797934045896 $ 145,19\r\nLHS-269 Lavandina Clarita Concentrada 1000 ML 7793634603527 $ 54,71\r\nLas fichas de datos de seguridad se envían por separado.\r\n",
+          "document_index": 0,
+          "document_title": "LHS_catalogo_nuevos_productos.pdf",
+          "end_page_number": 2,
+          "file_id": null,
+          "start_page_number": 1,
+          "type": "page_location"
+        }
+      ],
+      "text": "Alcohol En Gel Clarita, contenido 500ML, EAN 7791723703325, costo $ 282,93.",
+      "type": "text"
+    },
+    {
+      "citations": null,
+      "text": "\n\nLHS-242: ",
+      "type": "text"
+    },
+    {
+      "citations": [
+        {
+          "cited_text": "Descripción Contenido EAN Costo\r\nLHS-203 Limpiador Clarita Multiuso Lavanda 900 ML 7798367700178 $ 143,33\r\nLHS-206 Lavandina Clarita Concentrada 2000 ML 7790840033469 $ 88,04\r\nLHS-209 Alcohol Clarita 70 % 250 CC 7794288526675 $ 64,64\r\nLHS-212 Alcohol En Gel Clarita 250ML 7790046159017 $ 188,15\r\nLHS-215 Limpiador Clarita Multiuso Lavanda X 500 ML 7792189253836 $ 83,84\r\nLHS-218 Lavandina Clarita Ropa Blanca 2 LT 7799677765789 $ 82,46\r\nLHS-221 Alcohol En Gel Clarita Aloe 250ML 7792315884774 $ 185,79\r\nLHS-224 Repelente Fulmin Crema 60g 7796862563595 $ 159,50\r\nLHS-227 Alcohol En Gel Clarita Aloe 60 ML 7795270976522 $ 64,97\r\nLHS-230 Alcohol Clarita 70 % 1 L 7792715614612 $ 195,08\r\nLHS-233 Repelente Fulmin Aerosol 170 CC 7791592718338 $ 156,76\r\nLHS-275 Alcohol Clarita 96 % 500 CC $ 117,34\r\nLHS-236 Limpiador Clarita Multiuso Cocina 900 ML 7793326504736 $ 146,13\r\nLHS-239 Alcohol En Gel Clarita 500ML 7791723703325 $ 282,93\r\nLHS-242 Alcohol Clarita 96 % 1 LT 7798133076711 $ 168,14\r\nLHS-245 Limpiador Clarita Multiuso Cocina 500 ML 7793568706615 $ 83,63\r\nLHS-248 Alcohol Clarita 70 % 500 ML 7797159155318 $ 124,16\r\nLHS-251 Alcohol Clarita 96 % 250 ML 7792138038309 $ 76,06\r\nLHS-254 Repelente Fulmin Crema Niños 100g 7792476159797 $ 194,70\r\nLHS-257 Alcohol En Gel Clarita 60cc 7797772062109 $ 64,35\r\nLHS-272 Repelente Fulmin Crema 100 G $ 194,54\r\nLHS-260 Insecticida Fulmin Cucarachas 360 CC 7798382040495 $ 158,17\r\nLHS-263 Lavandina Clarita Ropa Blanca 1 LT 7794419396986 $ 59,59\r\nLHS-266 Repelente Fulmin Crema Niños 60GR 7797934045896 $ 145,19\r\nLHS-269 Lavandina Clarita Concentrada 1000 ML 7793634603527 $ 54,71\r\nLas fichas de datos de seguridad se envían por separado.\r\n",
+          "document_index": 0,
+          "document_title": "LHS_catalogo_nuevos_productos.pdf",
+          "end_page_number": 2,
+          "file_id": null,
+          "start_page_number": 1,
+          "type": "page_location"
+        }
+      ],
+      "text": "Alcohol Clarita 96 %, contenido 1 LT, EAN 7798133076711, costo $ 168,14.",
+      "type": "text"
+    },
+    {
+      "citations": null,
+      "text": "\n\nLHS-245: ",
+      "type": "text"
+    },
+    {
+      "citations": [
+        {
+          "cited_text": "Descripción Contenido EAN Costo\r\nLHS-203 Limpiador Clarita Multiuso Lavanda 900 ML 7798367700178 $ 143,33\r\nLHS-206 Lavandina Clarita Concentrada 2000 ML 7790840033469 $ 88,04\r\nLHS-209 Alcohol Clarita 70 % 250 CC 7794288526675 $ 64,64\r\nLHS-212 Alcohol En Gel Clarita 250ML 7790046159017 $ 188,15\r\nLHS-215 Limpiador Clarita Multiuso Lavanda X 500 ML 7792189253836 $ 83,84\r\nLHS-218 Lavandina Clarita Ropa Blanca 2 LT 7799677765789 $ 82,46\r\nLHS-221 Alcohol En Gel Clarita Aloe 250ML 7792315884774 $ 185,79\r\nLHS-224 Repelente Fulmin Crema 60g 7796862563595 $ 159,50\r\nLHS-227 Alcohol En Gel Clarita Aloe 60 ML 7795270976522 $ 64,97\r\nLHS-230 Alcohol Clarita 70 % 1 L 7792715614612 $ 195,08\r\nLHS-233 Repelente Fulmin Aerosol 170 CC 7791592718338 $ 156,76\r\nLHS-275 Alcohol Clarita 96 % 500 CC $ 117,34\r\nLHS-236 Limpiador Clarita Multiuso Cocina 900 ML 7793326504736 $ 146,13\r\nLHS-239 Alcohol En Gel Clarita 500ML 7791723703325 $ 282,93\r\nLHS-242 Alcohol Clarita 96 % 1 LT 7798133076711 $ 168,14\r\nLHS-245 Limpiador Clarita Multiuso Cocina 500 ML 7793568706615 $ 83,63\r\nLHS-248 Alcohol Clarita 70 % 500 ML 7797159155318 $ 124,16\r\nLHS-251 Alcohol Clarita 96 % 250 ML 7792138038309 $ 76,06\r\nLHS-254 Repelente Fulmin Crema Niños 100g 7792476159797 $ 194,70\r\nLHS-257 Alcohol En Gel Clarita 60cc 7797772062109 $ 64,35\r\nLHS-272 Repelente Fulmin Crema 100 G $ 194,54\r\nLHS-260 Insecticida Fulmin Cucarachas 360 CC 7798382040495 $ 158,17\r\nLHS-263 Lavandina Clarita Ropa Blanca 1 LT 7794419396986 $ 59,59\r\nLHS-266 Repelente Fulmin Crema Niños 60GR 7797934045896 $ 145,19\r\nLHS-269 Lavandina Clarita Concentrada 1000 ML 7793634603527 $ 54,71\r\nLas fichas de datos de seguridad se envían por separado.\r\n",
+          "document_index": 0,
+          "document_title": "LHS_catalogo_nuevos_productos.pdf",
+          "end_page_number": 2,
+          "file_id": null,
+          "start_page_number": 1,
+          "type": "page_location"
+        }
+      ],
+      "text": "Limpiador Clarita Multiuso Cocina, contenido 500 ML, EAN 7793568706615, costo $ 83,63.",
+      "type": "text"
+    },
+    {
+      "citations": null,
+      "text": "\n\nLHS-248: ",
+      "type": "text"
+    },
+    {
+      "citations": [
+        {
+          "cited_text": "Descripción Contenido EAN Costo\r\nLHS-203 Limpiador Clarita Multiuso Lavanda 900 ML 7798367700178 $ 143,33\r\nLHS-206 Lavandina Clarita Concentrada 2000 ML 7790840033469 $ 88,04\r\nLHS-209 Alcohol Clarita 70 % 250 CC 7794288526675 $ 64,64\r\nLHS-212 Alcohol En Gel Clarita 250ML 7790046159017 $ 188,15\r\nLHS-215 Limpiador Clarita Multiuso Lavanda X 500 ML 7792189253836 $ 83,84\r\nLHS-218 Lavandina Clarita Ropa Blanca 2 LT 7799677765789 $ 82,46\r\nLHS-221 Alcohol En Gel Clarita Aloe 250ML 7792315884774 $ 185,79\r\nLHS-224 Repelente Fulmin Crema 60g 7796862563595 $ 159,50\r\nLHS-227 Alcohol En Gel Clarita Aloe 60 ML 7795270976522 $ 64,97\r\nLHS-230 Alcohol Clarita 70 % 1 L 7792715614612 $ 195,08\r\nLHS-233 Repelente Fulmin Aerosol 170 CC 7791592718338 $ 156,76\r\nLHS-275 Alcohol Clarita 96 % 500 CC $ 117,34\r\nLHS-236 Limpiador Clarita Multiuso Cocina 900 ML 7793326504736 $ 146,13\r\nLHS-239 Alcohol En Gel Clarita 500ML 7791723703325 $ 282,93\r\nLHS-242 Alcohol Clarita 96 % 1 LT 7798133076711 $ 168,14\r\nLHS-245 Limpiador Clarita Multiuso Cocina 500 ML 7793568706615 $ 83,63\r\nLHS-248 Alcohol Clarita 70 % 500 ML 7797159155318 $ 124,16\r\nLHS-251 Alcohol Clarita 96 % 250 ML 7792138038309 $ 76,06\r\nLHS-254 Repelente Fulmin Crema Niños 100g 7792476159797 $ 194,70\r\nLHS-257 Alcohol En Gel Clarita 60cc 7797772062109 $ 64,35\r\nLHS-272 Repelente Fulmin Crema 100 G $ 194,54\r\nLHS-260 Insecticida Fulmin Cucarachas 360 CC 7798382040495 $ 158,17\r\nLHS-263 Lavandina Clarita Ropa Blanca 1 LT 7794419396986 $ 59,59\r\nLHS-266 Repelente Fulmin Crema Niños 60GR 7797934045896 $ 145,19\r\nLHS-269 Lavandina Clarita Concentrada 1000 ML 7793634603527 $ 54,71\r\nLas fichas de datos de seguridad se envían por separado.\r\n",
+          "document_index": 0,
+          "document_title": "LHS_catalogo_nuevos_productos.pdf",
+          "end_page_number": 2,
+          "file_id": null,
+          "start_page_number": 1,
+          "type": "page_location"
+        }
+      ],
+      "text": "Alcohol Clarita 70 %, contenido 500 ML, EAN 7797159155318, costo $ 124,16.",
+      "type": "text"
+    },
+    {
+      "citations": null,
+      "text": "\n\nLHS-251: ",
+      "type": "text"
+    },
+    {
+      "citations": [
+        {
+          "cited_text": "Descripción Contenido EAN Costo\r\nLHS-203 Limpiador Clarita Multiuso Lavanda 900 ML 7798367700178 $ 143,33\r\nLHS-206 Lavandina Clarita Concentrada 2000 ML 7790840033469 $ 88,04\r\nLHS-209 Alcohol Clarita 70 % 250 CC 7794288526675 $ 64,64\r\nLHS-212 Alcohol En Gel Clarita 250ML 7790046159017 $ 188,15\r\nLHS-215 Limpiador Clarita Multiuso Lavanda X 500 ML 7792189253836 $ 83,84\r\nLHS-218 Lavandina Clarita Ropa Blanca 2 LT 7799677765789 $ 82,46\r\nLHS-221 Alcohol En Gel Clarita Aloe 250ML 7792315884774 $ 185,79\r\nLHS-224 Repelente Fulmin Crema 60g 7796862563595 $ 159,50\r\nLHS-227 Alcohol En Gel Clarita Aloe 60 ML 7795270976522 $ 64,97\r\nLHS-230 Alcohol Clarita 70 % 1 L 7792715614612 $ 195,08\r\nLHS-233 Repelente Fulmin Aerosol 170 CC 7791592718338 $ 156,76\r\nLHS-275 Alcohol Clarita 96 % 500 CC $ 117,34\r\nLHS-236 Limpiador Clarita Multiuso Cocina 900 ML 7793326504736 $ 146,13\r\nLHS-239 Alcohol En Gel Clarita 500ML 7791723703325 $ 282,93\r\nLHS-242 Alcohol Clarita 96 % 1 LT 7798133076711 $ 168,14\r\nLHS-245 Limpiador Clarita Multiuso Cocina 500 ML 7793568706615 $ 83,63\r\nLHS-248 Alcohol Clarita 70 % 500 ML 7797159155318 $ 124,16\r\nLHS-251 Alcohol Clarita 96 % 250 ML 7792138038309 $ 76,06\r\nLHS-254 Repelente Fulmin Crema Niños 100g 7792476159797 $ 194,70\r\nLHS-257 Alcohol En Gel Clarita 60cc 7797772062109 $ 64,35\r\nLHS-272 Repelente Fulmin Crema 100 G $ 194,54\r\nLHS-260 Insecticida Fulmin Cucarachas 360 CC 7798382040495 $ 158,17\r\nLHS-263 Lavandina Clarita Ropa Blanca 1 LT 7794419396986 $ 59,59\r\nLHS-266 Repelente Fulmin Crema Niños 60GR 7797934045896 $ 145,19\r\nLHS-269 Lavandina Clarita Concentrada 1000 ML 7793634603527 $ 54,71\r\nLas fichas de datos de seguridad se envían por separado.\r\n",
+          "document_index": 0,
+          "document_title": "LHS_catalogo_nuevos_productos.pdf",
+          "end_page_number": 2,
+          "file_id": null,
+          "start_page_number": 1,
+          "type": "page_location"
+        }
+      ],
+      "text": "Alcohol Clarita 96 %, contenido 250 ML, EAN 7792138038309, costo $ 76,06.",
+      "type": "text"
+    },
+    {
+      "citations": null,
+      "text": "\n\nLHS-254: ",
+      "type": "text"
+    },
+    {
+      "citations": [
+        {
+          "cited_text": "Descripción Contenido EAN Costo\r\nLHS-203 Limpiador Clarita Multiuso Lavanda 900 ML 7798367700178 $ 143,33\r\nLHS-206 Lavandina Clarita Concentrada 2000 ML 7790840033469 $ 88,04\r\nLHS-209 Alcohol Clarita 70 % 250 CC 7794288526675 $ 64,64\r\nLHS-212 Alcohol En Gel Clarita 250ML 7790046159017 $ 188,15\r\nLHS-215 Limpiador Clarita Multiuso Lavanda X 500 ML 7792189253836 $ 83,84\r\nLHS-218 Lavandina Clarita Ropa Blanca 2 LT 7799677765789 $ 82,46\r\nLHS-221 Alcohol En Gel Clarita Aloe 250ML 7792315884774 $ 185,79\r\nLHS-224 Repelente Fulmin Crema 60g 7796862563595 $ 159,50\r\nLHS-227 Alcohol En Gel Clarita Aloe 60 ML 7795270976522 $ 64,97\r\nLHS-230 Alcohol Clarita 70 % 1 L 7792715614612 $ 195,08\r\nLHS-233 Repelente Fulmin Aerosol 170 CC 7791592718338 $ 156,76\r\nLHS-275 Alcohol Clarita 96 % 500 CC $ 117,34\r\nLHS-236 Limpiador Clarita Multiuso Cocina 900 ML 7793326504736 $ 146,13\r\nLHS-239 Alcohol En Gel Clarita 500ML 7791723703325 $ 282,93\r\nLHS-242 Alcohol Clarita 96 % 1 LT 7798133076711 $ 168,14\r\nLHS-245 Limpiador Clarita Multiuso Cocina 500 ML 7793568706615 $ 83,63\r\nLHS-248 Alcohol Clarita 70 % 500 ML 7797159155318 $ 124,16\r\nLHS-251 Alcohol Clarita 96 % 250 ML 7792138038309 $ 76,06\r\nLHS-254 Repelente Fulmin Crema Niños 100g 7792476159797 $ 194,70\r\nLHS-257 Alcohol En Gel Clarita 60cc 7797772062109 $ 64,35\r\nLHS-272 Repelente Fulmin Crema 100 G $ 194,54\r\nLHS-260 Insecticida Fulmin Cucarachas 360 CC 7798382040495 $ 158,17\r\nLHS-263 Lavandina Clarita Ropa Blanca 1 LT 7794419396986 $ 59,59\r\nLHS-266 Repelente Fulmin Crema Niños 60GR 7797934045896 $ 145,19\r\nLHS-269 Lavandina Clarita Concentrada 1000 ML 7793634603527 $ 54,71\r\nLas fichas de datos de seguridad se envían por separado.\r\n",
+          "document_index": 0,
+          "document_title": "LHS_catalogo_nuevos_productos.pdf",
+          "end_page_number": 2,
+          "file_id": null,
+          "start_page_number": 1,
+          "type": "page_location"
+        }
+      ],
+      "text": "Repelente Fulmin Crema Niños, contenido 100g, EAN 7792476159797, costo $ 194,70.",
+      "type": "text"
+    },
+    {
+      "citations": null,
+      "text": "\n\nLHS-257: ",
+      "type": "text"
+    },
+    {
+      "citations": [
+        {
+          "cited_text": "Descripción Contenido EAN Costo\r\nLHS-203 Limpiador Clarita Multiuso Lavanda 900 ML 7798367700178 $ 143,33\r\nLHS-206 Lavandina Clarita Concentrada 2000 ML 7790840033469 $ 88,04\r\nLHS-209 Alcohol Clarita 70 % 250 CC 7794288526675 $ 64,64\r\nLHS-212 Alcohol En Gel Clarita 250ML 7790046159017 $ 188,15\r\nLHS-215 Limpiador Clarita Multiuso Lavanda X 500 ML 7792189253836 $ 83,84\r\nLHS-218 Lavandina Clarita Ropa Blanca 2 LT 7799677765789 $ 82,46\r\nLHS-221 Alcohol En Gel Clarita Aloe 250ML 7792315884774 $ 185,79\r\nLHS-224 Repelente Fulmin Crema 60g 7796862563595 $ 159,50\r\nLHS-227 Alcohol En Gel Clarita Aloe 60 ML 7795270976522 $ 64,97\r\nLHS-230 Alcohol Clarita 70 % 1 L 7792715614612 $ 195,08\r\nLHS-233 Repelente Fulmin Aerosol 170 CC 7791592718338 $ 156,76\r\nLHS-275 Alcohol Clarita 96 % 500 CC $ 117,34\r\nLHS-236 Limpiador Clarita Multiuso Cocina 900 ML 7793326504736 $ 146,13\r\nLHS-239 Alcohol En Gel Clarita 500ML 7791723703325 $ 282,93\r\nLHS-242 Alcohol Clarita 96 % 1 LT 7798133076711 $ 168,14\r\nLHS-245 Limpiador Clarita Multiuso Cocina 500 ML 7793568706615 $ 83,63\r\nLHS-248 Alcohol Clarita 70 % 500 ML 7797159155318 $ 124,16\r\nLHS-251 Alcohol Clarita 96 % 250 ML 7792138038309 $ 76,06\r\nLHS-254 Repelente Fulmin Crema Niños 100g 7792476159797 $ 194,70\r\nLHS-257 Alcohol En Gel Clarita 60cc 7797772062109 $ 64,35\r\nLHS-272 Repelente Fulmin Crema 100 G $ 194,54\r\nLHS-260 Insecticida Fulmin Cucarachas 360 CC 7798382040495 $ 158,17\r\nLHS-263 Lavandina Clarita Ropa Blanca 1 LT 7794419396986 $ 59,59\r\nLHS-266 Repelente Fulmin Crema Niños 60GR 7797934045896 $ 145,19\r\nLHS-269 Lavandina Clarita Concentrada 1000 ML 7793634603527 $ 54,71\r\nLas fichas de datos de seguridad se envían por separado.\r\n",
+          "document_index": 0,
+          "document_title": "LHS_catalogo_nuevos_productos.pdf",
+          "end_page_number": 2,
+          "file_id": null,
+          "start_page_number": 1,
+          "type": "page_location"
+        }
+      ],
+      "text": "Alcohol En Gel Clarita, contenido 60cc, EAN 7797772062109, costo $ 64,35.",
+      "type": "text"
+    },
+    {
+      "citations": null,
+      "text": "\n\nLHS-272: ",
+      "type": "text"
+    },
+    {
+      "citations": [
+        {
+          "cited_text": "Descripción Contenido EAN Costo\r\nLHS-203 Limpiador Clarita Multiuso Lavanda 900 ML 7798367700178 $ 143,33\r\nLHS-206 Lavandina Clarita Concentrada 2000 ML 7790840033469 $ 88,04\r\nLHS-209 Alcohol Clarita 70 % 250 CC 7794288526675 $ 64,64\r\nLHS-212 Alcohol En Gel Clarita 250ML 7790046159017 $ 188,15\r\nLHS-215 Limpiador Clarita Multiuso Lavanda X 500 ML 7792189253836 $ 83,84\r\nLHS-218 Lavandina Clarita Ropa Blanca 2 LT 7799677765789 $ 82,46\r\nLHS-221 Alcohol En Gel Clarita Aloe 250ML 7792315884774 $ 185,79\r\nLHS-224 Repelente Fulmin Crema 60g 7796862563595 $ 159,50\r\nLHS-227 Alcohol En Gel Clarita Aloe 60 ML 7795270976522 $ 64,97\r\nLHS-230 Alcohol Clarita 70 % 1 L 7792715614612 $ 195,08\r\nLHS-233 Repelente Fulmin Aerosol 170 CC 7791592718338 $ 156,76\r\nLHS-275 Alcohol Clarita 96 % 500 CC $ 117,34\r\nLHS-236 Limpiador Clarita Multiuso Cocina 900 ML 7793326504736 $ 146,13\r\nLHS-239 Alcohol En Gel Clarita 500ML 7791723703325 $ 282,93\r\nLHS-242 Alcohol Clarita 96 % 1 LT 7798133076711 $ 168,14\r\nLHS-245 Limpiador Clarita Multiuso Cocina 500 ML 7793568706615 $ 83,63\r\nLHS-248 Alcohol Clarita 70 % 500 ML 7797159155318 $ 124,16\r\nLHS-251 Alcohol Clarita 96 % 250 ML 7792138038309 $ 76,06\r\nLHS-254 Repelente Fulmin Crema Niños 100g 7792476159797 $ 194,70\r\nLHS-257 Alcohol En Gel Clarita 60cc 7797772062109 $ 64,35\r\nLHS-272 Repelente Fulmin Crema 100 G $ 194,54\r\nLHS-260 Insecticida Fulmin Cucarachas 360 CC 7798382040495 $ 158,17\r\nLHS-263 Lavandina Clarita Ropa Blanca 1 LT 7794419396986 $ 59,59\r\nLHS-266 Repelente Fulmin Crema Niños 60GR 7797934045896 $ 145,19\r\nLHS-269 Lavandina Clarita Concentrada 1000 ML 7793634603527 $ 54,71\r\nLas fichas de datos de seguridad se envían por separado.\r\n",
+          "document_index": 0,
+          "document_title": "LHS_catalogo_nuevos_productos.pdf",
+          "end_page_number": 2,
+          "file_id": null,
+          "start_page_number": 1,
+          "type": "page_location"
+        }
+      ],
+      "text": "Repelente Fulmin Crema, contenido 100 G, costo $ 194,54.",
+      "type": "text"
+    },
+    {
+      "citations": null,
+      "text": " El EAN no figura en el documento.\n\nLHS-260: ",
+      "type": "text"
+    },
+    {
+      "citations": [
+        {
+          "cited_text": "Descripción Contenido EAN Costo\r\nLHS-203 Limpiador Clarita Multiuso Lavanda 900 ML 7798367700178 $ 143,33\r\nLHS-206 Lavandina Clarita Concentrada 2000 ML 7790840033469 $ 88,04\r\nLHS-209 Alcohol Clarita 70 % 250 CC 7794288526675 $ 64,64\r\nLHS-212 Alcohol En Gel Clarita 250ML 7790046159017 $ 188,15\r\nLHS-215 Limpiador Clarita Multiuso Lavanda X 500 ML 7792189253836 $ 83,84\r\nLHS-218 Lavandina Clarita Ropa Blanca 2 LT 7799677765789 $ 82,46\r\nLHS-221 Alcohol En Gel Clarita Aloe 250ML 7792315884774 $ 185,79\r\nLHS-224 Repelente Fulmin Crema 60g 7796862563595 $ 159,50\r\nLHS-227 Alcohol En Gel Clarita Aloe 60 ML 7795270976522 $ 64,97\r\nLHS-230 Alcohol Clarita 70 % 1 L 7792715614612 $ 195,08\r\nLHS-233 Repelente Fulmin Aerosol 170 CC 7791592718338 $ 156,76\r\nLHS-275 Alcohol Clarita 96 % 500 CC $ 117,34\r\nLHS-236 Limpiador Clarita Multiuso Cocina 900 ML 7793326504736 $ 146,13\r\nLHS-239 Alcohol En Gel Clarita 500ML 7791723703325 $ 282,93\r\nLHS-242 Alcohol Clarita 96 % 1 LT 7798133076711 $ 168,14\r\nLHS-245 Limpiador Clarita Multiuso Cocina 500 ML 7793568706615 $ 83,63\r\nLHS-248 Alcohol Clarita 70 % 500 ML 7797159155318 $ 124,16\r\nLHS-251 Alcohol Clarita 96 % 250 ML 7792138038309 $ 76,06\r\nLHS-254 Repelente Fulmin Crema Niños 100g 7792476159797 $ 194,70\r\nLHS-257 Alcohol En Gel Clarita 60cc 7797772062109 $ 64,35\r\nLHS-272 Repelente Fulmin Crema 100 G $ 194,54\r\nLHS-260 Insecticida Fulmin Cucarachas 360 CC 7798382040495 $ 158,17\r\nLHS-263 Lavandina Clarita Ropa Blanca 1 LT 7794419396986 $ 59,59\r\nLHS-266 Repelente Fulmin Crema Niños 60GR 7797934045896 $ 145,19\r\nLHS-269 Lavandina Clarita Concentrada 1000 ML 7793634603527 $ 54,71\r\nLas fichas de datos de seguridad se envían por separado.\r\n",
+          "document_index": 0,
+          "document_title": "LHS_catalogo_nuevos_productos.pdf",
+          "end_page_number": 2,
+          "file_id": null,
+          "start_page_number": 1,
+          "type": "page_location"
+        }
+      ],
+      "text": "Insecticida Fulmin Cucarachas, contenido 360 CC, EAN 7798382040495, costo $ 158,17.",
+      "type": "text"
+    },
+    {
+      "citations": null,
+      "text": "\n\nLHS-263: ",
+      "type": "text"
+    },
+    {
+      "citations": [
+        {
+          "cited_text": "Descripción Contenido EAN Costo\r\nLHS-203 Limpiador Clarita Multiuso Lavanda 900 ML 7798367700178 $ 143,33\r\nLHS-206 Lavandina Clarita Concentrada 2000 ML 7790840033469 $ 88,04\r\nLHS-209 Alcohol Clarita 70 % 250 CC 7794288526675 $ 64,64\r\nLHS-212 Alcohol En Gel Clarita 250ML 7790046159017 $ 188,15\r\nLHS-215 Limpiador Clarita Multiuso Lavanda X 500 ML 7792189253836 $ 83,84\r\nLHS-218 Lavandina Clarita Ropa Blanca 2 LT 7799677765789 $ 82,46\r\nLHS-221 Alcohol En Gel Clarita Aloe 250ML 7792315884774 $ 185,79\r\nLHS-224 Repelente Fulmin Crema 60g 7796862563595 $ 159,50\r\nLHS-227 Alcohol En Gel Clarita Aloe 60 ML 7795270976522 $ 64,97\r\nLHS-230 Alcohol Clarita 70 % 1 L 7792715614612 $ 195,08\r\nLHS-233 Repelente Fulmin Aerosol 170 CC 7791592718338 $ 156,76\r\nLHS-275 Alcohol Clarita 96 % 500 CC $ 117,34\r\nLHS-236 Limpiador Clarita Multiuso Cocina 900 ML 7793326504736 $ 146,13\r\nLHS-239 Alcohol En Gel Clarita 500ML 7791723703325 $ 282,93\r\nLHS-242 Alcohol Clarita 96 % 1 LT 7798133076711 $ 168,14\r\nLHS-245 Limpiador Clarita Multiuso Cocina 500 ML 7793568706615 $ 83,63\r\nLHS-248 Alcohol Clarita 70 % 500 ML 7797159155318 $ 124,16\r\nLHS-251 Alcohol Clarita 96 % 250 ML 7792138038309 $ 76,06\r\nLHS-254 Repelente Fulmin Crema Niños 100g 7792476159797 $ 194,70\r\nLHS-257 Alcohol En Gel Clarita 60cc 7797772062109 $ 64,35\r\nLHS-272 Repelente Fulmin Crema 100 G $ 194,54\r\nLHS-260 Insecticida Fulmin Cucarachas 360 CC 7798382040495 $ 158,17\r\nLHS-263 Lavandina Clarita Ropa Blanca 1 LT 7794419396986 $ 59,59\r\nLHS-266 Repelente Fulmin Crema Niños 60GR 7797934045896 $ 145,19\r\nLHS-269 Lavandina Clarita Concentrada 1000 ML 7793634603527 $ 54,71\r\nLas fichas de datos de seguridad se envían por separado.\r\n",
+          "document_index": 0,
+          "document_title": "LHS_catalogo_nuevos_productos.pdf",
+          "end_page_number": 2,
+          "file_id": null,
+          "start_page_number": 1,
+          "type": "page_location"
+        }
+      ],
+      "text": "Lavandina Clarita Ropa Blanca, contenido 1 LT, EAN 7794419396986, costo $ 59,59.",
+      "type": "text"
+    },
+    {
+      "citations": null,
+      "text": "\n\nLHS-266: ",
+      "type": "text"
+    },
+    {
+      "citations": [
+        {
+          "cited_text": "Descripción Contenido EAN Costo\r\nLHS-203 Limpiador Clarita Multiuso Lavanda 900 ML 7798367700178 $ 143,33\r\nLHS-206 Lavandina Clarita Concentrada 2000 ML 7790840033469 $ 88,04\r\nLHS-209 Alcohol Clarita 70 % 250 CC 7794288526675 $ 64,64\r\nLHS-212 Alcohol En Gel Clarita 250ML 7790046159017 $ 188,15\r\nLHS-215 Limpiador Clarita Multiuso Lavanda X 500 ML 7792189253836 $ 83,84\r\nLHS-218 Lavandina Clarita Ropa Blanca 2 LT 7799677765789 $ 82,46\r\nLHS-221 Alcohol En Gel Clarita Aloe 250ML 7792315884774 $ 185,79\r\nLHS-224 Repelente Fulmin Crema 60g 7796862563595 $ 159,50\r\nLHS-227 Alcohol En Gel Clarita Aloe 60 ML 7795270976522 $ 64,97\r\nLHS-230 Alcohol Clarita 70 % 1 L 7792715614612 $ 195,08\r\nLHS-233 Repelente Fulmin Aerosol 170 CC 7791592718338 $ 156,76\r\nLHS-275 Alcohol Clarita 96 % 500 CC $ 117,34\r\nLHS-236 Limpiador Clarita Multiuso Cocina 900 ML 7793326504736 $ 146,13\r\nLHS-239 Alcohol En Gel Clarita 500ML 7791723703325 $ 282,93\r\nLHS-242 Alcohol Clarita 96 % 1 LT 7798133076711 $ 168,14\r\nLHS-245 Limpiador Clarita Multiuso Cocina 500 ML 7793568706615 $ 83,63\r\nLHS-248 Alcohol Clarita 70 % 500 ML 7797159155318 $ 124,16\r\nLHS-251 Alcohol Clarita 96 % 250 ML 7792138038309 $ 76,06\r\nLHS-254 Repelente Fulmin Crema Niños 100g 7792476159797 $ 194,70\r\nLHS-257 Alcohol En Gel Clarita 60cc 7797772062109 $ 64,35\r\nLHS-272 Repelente Fulmin Crema 100 G $ 194,54\r\nLHS-260 Insecticida Fulmin Cucarachas 360 CC 7798382040495 $ 158,17\r\nLHS-263 Lavandina Clarita Ropa Blanca 1 LT 7794419396986 $ 59,59\r\nLHS-266 Repelente Fulmin Crema Niños 60GR 7797934045896 $ 145,19\r\nLHS-269 Lavandina Clarita Concentrada 1000 ML 7793634603527 $ 54,71\r\nLas fichas de datos de seguridad se envían por separado.\r\n",
+          "document_index": 0,
+          "document_title": "LHS_catalogo_nuevos_productos.pdf",
+          "end_page_number": 2,
+          "file_id": null,
+          "start_page_number": 1,
+          "type": "page_location"
+        }
+      ],
+      "text": "Repelente Fulmin Crema Niños, contenido 60GR, EAN 7797934045896, costo $ 145,19.",
+      "type": "text"
+    },
+    {
+      "citations": null,
+      "text": "\n\nLHS-269: ",
+      "type": "text"
+    },
+    {
+      "citations": [
+        {
+          "cited_text": "Descripción Contenido EAN Costo\r\nLHS-203 Limpiador Clarita Multiuso Lavanda 900 ML 7798367700178 $ 143,33\r\nLHS-206 Lavandina Clarita Concentrada 2000 ML 7790840033469 $ 88,04\r\nLHS-209 Alcohol Clarita 70 % 250 CC 7794288526675 $ 64,64\r\nLHS-212 Alcohol En Gel Clarita 250ML 7790046159017 $ 188,15\r\nLHS-215 Limpiador Clarita Multiuso Lavanda X 500 ML 7792189253836 $ 83,84\r\nLHS-218 Lavandina Clarita Ropa Blanca 2 LT 7799677765789 $ 82,46\r\nLHS-221 Alcohol En Gel Clarita Aloe 250ML 7792315884774 $ 185,79\r\nLHS-224 Repelente Fulmin Crema 60g 7796862563595 $ 159,50\r\nLHS-227 Alcohol En Gel Clarita Aloe 60 ML 7795270976522 $ 64,97\r\nLHS-230 Alcohol Clarita 70 % 1 L 7792715614612 $ 195,08\r\nLHS-233 Repelente Fulmin Aerosol 170 CC 7791592718338 $ 156,76\r\nLHS-275 Alcohol Clarita 96 % 500 CC $ 117,34\r\nLHS-236 Limpiador Clarita Multiuso Cocina 900 ML 7793326504736 $ 146,13\r\nLHS-239 Alcohol En Gel Clarita 500ML 7791723703325 $ 282,93\r\nLHS-242 Alcohol Clarita 96 % 1 LT 7798133076711 $ 168,14\r\nLHS-245 Limpiador Clarita Multiuso Cocina 500 ML 7793568706615 $ 83,63\r\nLHS-248 Alcohol Clarita 70 % 500 ML 7797159155318 $ 124,16\r\nLHS-251 Alcohol Clarita 96 % 250 ML 7792138038309 $ 76,06\r\nLHS-254 Repelente Fulmin Crema Niños 100g 7792476159797 $ 194,70\r\nLHS-257 Alcohol En Gel Clarita 60cc 7797772062109 $ 64,35\r\nLHS-272 Repelente Fulmin Crema 100 G $ 194,54\r\nLHS-260 Insecticida Fulmin Cucarachas 360 CC 7798382040495 $ 158,17\r\nLHS-263 Lavandina Clarita Ropa Blanca 1 LT 7794419396986 $ 59,59\r\nLHS-266 Repelente Fulmin Crema Niños 60GR 7797934045896 $ 145,19\r\nLHS-269 Lavandina Clarita Concentrada 1000 ML 7793634603527 $ 54,71\r\nLas fichas de datos de seguridad se envían por separado.\r\n",
+          "document_index": 0,
+          "document_title": "LHS_catalogo_nuevos_productos.pdf",
+          "end_page_number": 2,
+          "file_id": null,
+          "start_page_number": 1,
+          "type": "page_location"
+        }
+      ],
+      "text": "Lavandina Clarita Concentrada, contenido 1000 ML, EAN 7793634603527, costo $ 54,71.",
+      "type": "text"
+    }
+  ],
+  "diagnostics": null,
+  "model": "claude-haiku-5-5",
+  "role": "assistant",
+  "stop_details": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "type": "message",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 3599,
+    "output_tokens": 4091,
+    "output_tokens_details": {
+      "thinking_tokens": 2200
+    },
+    "server_tool_use": null,
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

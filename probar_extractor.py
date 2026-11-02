@@ -4,8 +4,8 @@ import json
 from pathlib import Path
 
 from extractor_pdf import (COLUMNAS_POR_PDF, campos_desde_respuesta, codigo_al_inicio, filas_de_un_texto,
-                           filas_desde_citas, normalizar_espacios, tool_campos, valor_en_fila, verificar_campos,
-                           vigencia_desde_citas)
+                           filas_desde_citas, normalizar_espacios, ordenar_como_el_pdf, que_falta, tool_campos,
+                           unir_contenidos, valor_en_fila, verificar_campos, vigencia_desde_citas)
 
 RUTA_EXPERIMENTO = Path(__file__).parent / "salida" / "experimentos" / "citas_lhs.json"
 
@@ -259,5 +259,52 @@ chequear("Abierta con columnas vacías: no se elige (ni siquiera el 'Comp.' a me
 productos, _ = campos_desde_respuesta(entrega([{"codigo": "AN-1178", **BIEN_1178, "texto_ajeno": PIE}]),
                                       {"AN-1178": filas_a["AN-1178"]}, COLUMNAS_ANDES)
 chequear("La última fila real de Andes (abierta pero completa) sigue pasando", productos[0]["problemas"], [])
+
+print("--- unir_contenidos: leer varias veces y unir (semana 3, paso 1b) ---")
+RUTA_BUENA = RUTA_EXPERIMENTO.parent.parent / "extracciones" / "Lista_de_precios_octubre_2026.llamada1_v1.json"
+BUENA = json.loads(RUTA_BUENA.read_text(encoding="utf-8"))["content"]  # la lectura de Andes de la semana 2
+filas_buena, _ = filas_desde_citas(BUENA)
+chequear("Unir no pierde bloques", len(unir_contenidos([{"content": CORTADA}, {"content": BUENA}])), len(CORTADA) + len(BUENA))
+filas_u, problemas_u = filas_desde_citas(unir_contenidos([{"content": CORTADA}, {"content": BUENA}]))
+chequear("Lectura cortada + lectura buena = la buena (26 filas, 0 problemas)", (len(filas_u), problemas_u), (26, []))
+chequear("...fila por fila igual a la buena (las cortadas se descartan por ser el principio de la completa)",
+         filas_u, filas_buena)
+filas_u, _ = filas_desde_citas(unir_contenidos([{"content": BUENA}, {"content": CORTADA}]))
+chequear("...y el orden de las vueltas no importa", filas_u, filas_buena)
+filas_u, problemas_u = filas_desde_citas(unir_contenidos([{"content": CORTADA}, {"content": CORTADA}]))
+chequear("Cortada + cortada sigue mal: unir no inventa (15 filas, 11 sin cita)", (len(filas_u), len(problemas_u)), (15, 11))
+
+print("--- que_falta y rondas dirigidas (semana 3, paso 1b) ---")
+cortado, = campos_desde_respuesta(entrega([CORTADOS_1127]), {"AN-1127": filas_c["AN-1127"]}, COLUMNAS_ANDES)[0]
+ultima, = campos_desde_respuesta(entrega([{"codigo": "AN-1178", **BIEN_1178, "texto_ajeno": PIE}]),
+                                 {"AN-1178": filas_a["AN-1178"]}, COLUMNAS_ANDES)[0]
+chequear("Fila cortada (abierta con problemas): se vuelve a pedir", que_falta([cortado], []), ["AN-1127"])
+chequear("La última fila real (abierta pero completa): NO se vuelve a pedir", que_falta([ultima], []), [])
+chequear("Un código sin cita (problema general): se vuelve a pedir",
+         que_falta([], ["AN-1103: Haiku lo nombró pero no aparece en ningún texto citado."]), ["AN-1103"])
+chequear("Un problema general sin código no pide nada", que_falta([], ["Haiku no entregó los campos."]), [])
+# Las respuestas REALES del experimento del 02/11: la lectura mala (v2) + intentos de la ronda dirigida
+CARPETA_EXT = RUTA_BUENA.parent
+V2 = json.loads((CARPETA_EXT / "Lista_de_precios_octubre_2026.llamada1_v2.json").read_text(encoding="utf-8"))
+RONDA = {n: json.loads((RUTA_EXPERIMENTO.parent / f"andes_faltantes_actual_{n}.json").read_text(encoding="utf-8"))
+         for n in (1, 2, 3)}
+filas_r, problemas_r = filas_desde_citas(unir_contenidos([V2, RONDA[2]]))
+chequear("Lectura mala + un intento que no citó: sigue igual, no empeora", (len(filas_r), len(problemas_r)), (15, 11))
+filas_r, problemas_r = filas_desde_citas(unir_contenidos([V2, RONDA[1]]))
+chequear("Lectura mala + intento 1: queda 1 sin cita (AN-1103)...", (len(filas_r), problemas_r[0][:7]), (25, "AN-1103"))
+chequear("...y la ronda siguiente pediría solo ese", que_falta([], problemas_r), ["AN-1103"])
+filas_r, problemas_r = filas_desde_citas(unir_contenidos([V2, RONDA[2], RONDA[3]]))
+chequear("Lectura mala + un intento malo + uno bueno: 26 filas, 0 problemas", (len(filas_r), problemas_r), (26, []))
+chequear("...fila por fila igual a la lectura buena de la semana 2", filas_r, filas_buena)
+chequear("...y EN EL MISMO ORDEN (la ronda trae las primeras filas al final, el orden lo da la cadena de citas)",
+         list(filas_r), list(filas_buena))
+
+print("--- ordenar_como_el_pdf (semana 3, paso 1b) ---")
+F = {c: {"codigo": c, "pagina": p} for c, p in [("B", 1), ("C", 1), ("A", 1), ("D", 2)]}
+chequear("Cadena completa: A < B < C", list(ordenar_como_el_pdf(F, {"B": {"A"}, "C": {"B"}})), ["A", "B", "C", "D"])
+chequear("Sin cadena: queda el orden de aparición (y la página 2 al final)", list(ordenar_como_el_pdf(F, {})),
+         ["B", "C", "A", "D"])
+chequear("Una cadena que se contradice no hace perder filas", sorted(ordenar_como_el_pdf(F, {"A": {"B"}, "B": {"A"}})),
+         ["A", "B", "C", "D"])
 
 print(f"\nResultado: {'todo OK' if errores == 0 else f'{errores} con error'}")
