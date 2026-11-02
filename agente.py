@@ -1,6 +1,9 @@
 """Agente de ingesta: procesa los productos de un proveedor usando las tools del servidor MCP.
 
 Correr: python agente.py P03   (o el proveedor que sea: P01, P05, P07...)
+
+Semana 3: fichar_tanda corre UNA tanda sola, en modo propuesta, para que el orquestador reparta las tandas
+entre varios fichadores a la vez (cada uno en su hilo). Así lo usa orquestador.py; esta forma de correr sigue igual.
 """
 import argparse
 import asyncio
@@ -15,6 +18,7 @@ from pathlib import Path
 import anthropic
 from dotenv import load_dotenv
 from fastmcp import Client
+from fastmcp.client.transports import PythonStdioTransport
 from fastmcp.exceptions import ToolError
 
 CARPETA_PROYECTO = Path(__file__).parent
@@ -139,7 +143,7 @@ async def correr_loop(cliente_claude, cliente_mcp: Client, modelo: str, system: 
         uso["input_tokens"] += respuesta.usage.input_tokens
         uso["output_tokens"] += respuesta.usage.output_tokens
         pedidos = [bloque for bloque in respuesta.content if bloque.type == "tool_use"]
-        print(f"   vuelta {uso['vueltas']:>2} · {respuesta.stop_reason:<9} · "
+        print(f"   {uso.get('etiqueta', '')}vuelta {uso['vueltas']:>2} · {respuesta.stop_reason:<9} · "
               f"{respuesta.usage.input_tokens:>6} in / {respuesta.usage.output_tokens:>5} out · "
               f"pidió: {', '.join(p.name for p in pedidos) or '-'}")
         anotar(ruta_traza, {
@@ -168,7 +172,9 @@ async def correr_loop(cliente_claude, cliente_mcp: Client, modelo: str, system: 
             resultado = await ejecutar_tool(cliente_mcp, pedido)
             resultados.append(resultado)
             if pedido.name == "registrar_ficha" and not resultado["is_error"]:
-                uso["registrados"].add(json.loads(resultado["content"])["registrado"])
+                item_id = json.loads(resultado["content"])["registrado"]
+                uso["registrados"].add(item_id)
+                uso["propuestas"][item_id] = pedido.input  # la última ACEPTADA de cada ítem (semana 3, paso 5)
             anotar(ruta_traza, {"evento": "tool_result", "vuelta": uso["vueltas"], "tool": pedido.name, **resultado})
 
         # TODOS los resultados juntos, en UN solo mensaje user y sin texto agregado (M2 + doc de tools en paralelo)
@@ -186,15 +192,18 @@ async def items_de_la_tanda(cliente_mcp: Client, proveedor_id: str, desde: int, 
 
 
 async def procesar_tanda(cliente_claude, cliente_mcp: Client, modelo: str, system: str, tools: list[dict],
-                         proveedor_id: str, desde: int, cantidad: int, ruta_traza: Path) -> dict:
+                         proveedor_id: str, desde: int, cantidad: int, ruta_traza: Path, etiqueta: str = "") -> dict:
     """Una conversación nueva con el agente para procesar una tanda de productos.
 
     Al terminar, el CÓDIGO chequea que cada producto de la tanda haya quedado registrado.
     Si falta alguno, le manda UN solo recordatorio en la misma conversación (decisión del paso 4).
+    Devuelve también las propuestas: lo que el agente registró y el servidor aceptó, por ítem (semana 3).
+    etiqueta: un prefijo para los print (con varios fichadores a la vez, para saber de quién es cada línea).
     """
     esperados, _ = await items_de_la_tanda(cliente_mcp, proveedor_id, desde, cantidad)
     mensajes = [{"role": "user", "content": mensaje_de_tanda(proveedor_id, desde, cantidad)}]
-    uso = {"vueltas": 0, "input_tokens": 0, "output_tokens": 0, "registrados": set()}
+    uso = {"vueltas": 0, "input_tokens": 0, "output_tokens": 0, "registrados": set(), "propuestas": {},
+           "etiqueta": etiqueta}
     anotar(ruta_traza, {"evento": "inicio_tanda", "proveedor_id": proveedor_id, "desde": desde, "esperados": esperados})
 
     como_termino, texto_final = await correr_loop(
@@ -203,7 +212,7 @@ async def procesar_tanda(cliente_claude, cliente_mcp: Client, modelo: str, syste
 
     faltan = [item for item in esperados if item not in uso["registrados"]]
     if faltan and como_termino == "end_turn":
-        print(f"   ⚠ faltó registrar {faltan}: le mandamos un recordatorio")
+        print(f"   {etiqueta}⚠ faltó registrar {faltan}: le mandamos un recordatorio")
         # Mensaje NUEVO de usuario, después de que terminó el turno (nunca pegado a los tool_result)
         recordatorio = f"Te faltó registrar estos productos de la tanda: {', '.join(faltan)}. Registralos."
         mensajes.append({"role": "user", "content": recordatorio})
@@ -218,9 +227,35 @@ async def procesar_tanda(cliente_claude, cliente_mcp: Client, modelo: str, syste
         "como_termino": como_termino, "texto_final": texto_final, "vueltas": uso["vueltas"],
         "input_tokens": uso["input_tokens"], "output_tokens": uso["output_tokens"], "costo_usd": round(costo, 6),
         "esperados": len(esperados), "registrados": len(esperados) - len(faltan), "faltan": faltan,
+        "propuestas": uso["propuestas"],
     }
     anotar(ruta_traza, {"evento": "fin_tanda", **resultado})
     return resultado
+
+
+def fichar_tanda(cliente_claude, modelo: str, proveedor_id: str, desde: int, cantidad: int, ruta_traza: Path) -> dict:
+    """Semana 3, paso 5: UNA tanda, sola y en modo propuesta. La corre un fichador, cada uno en su propio hilo.
+
+    Por qué cada pieza es "propia" del fichador:
+      - Su propio asyncio.run (su propio loop): la llamada a Claude es síncrona y frena el loop donde corre.
+        Si los fichadores compartieran un loop, irían de a uno sin que nada avise (paralelo de mentira).
+      - Su propio servidor MCP, en modo propuesta: valida igual que siempre, pero NO escribe resultados.json
+        (si varios escribieran a la vez, se pisarían). Lo guarda un único escritor (paso 6).
+      - Su propio archivo de traza: dos hilos agregando líneas al mismo archivo las pueden mezclar.
+    Devuelve lo mismo que procesar_tanda, con las propuestas aceptadas.
+    """
+    return asyncio.run(_fichar_tanda(cliente_claude, modelo, proveedor_id, desde, cantidad, ruta_traza))
+
+
+async def _fichar_tanda(cliente_claude, modelo: str, proveedor_id: str, desde: int, cantidad: int,
+                        ruta_traza: Path) -> dict:
+    # Al servidor se le pasa SOLO la variable del modo propuesta (no la clave de la API: no la necesita, M4 §7.2)
+    transporte = PythonStdioTransport(RUTA_SERVIDOR, env={"INGESTA_MODO_PROPUESTA": "1"})
+    async with Client(transporte) as cliente_mcp:
+        system = await armar_system_prompt(cliente_mcp)
+        tools = await obtener_tools(cliente_mcp)
+        return await procesar_tanda(cliente_claude, cliente_mcp, modelo, system, tools, proveedor_id, desde,
+                                    cantidad, ruta_traza, etiqueta=f"[{proveedor_id} desde {desde}] ")
 
 
 async def revisar_lectura(proveedor_id: str) -> None:
@@ -314,7 +349,7 @@ async def main():
         "costo_total_usd": round(costo_total, 4),
         "costo_por_ficha_usd": round(costo_total / max(registrados, 1), 5),
         "traza": ruta_traza.name,
-        "por_tanda": [{k: v for k, v in t.items() if k != "texto_final"} for t in tandas],
+        "por_tanda": [{k: v for k, v in t.items() if k not in ("texto_final", "propuestas")} for t in tandas],
     }
     ruta_reporte = CARPETA_SALIDA / f"corrida_{proveedor_id}.json"  # uno por proveedor: no se pisan
     ruta_reporte.write_text(json.dumps(reporte, ensure_ascii=False, indent=2), encoding="utf-8")

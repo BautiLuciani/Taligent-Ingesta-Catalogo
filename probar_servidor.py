@@ -354,6 +354,22 @@ async def main():
             original = (CARPETA_ESTANDAR / archivo).read_text(encoding="utf-8-sig")
             chequear(f"{uri} es idéntico a {archivo} ({len(texto)} caracteres)", texto, original)
 
+    print("\n--- registrar_ficha en modo propuesta (semana 3, paso 5): valida igual, pero NO escribe ---")
+    carpeta_propuesta = tempfile.mkdtemp()
+    transporte = PythonStdioTransport(RUTA_SERVIDOR, env={"INGESTA_CARPETA_SALIDA": carpeta_propuesta,
+                                                          "INGESTA_MODO_PROPUESTA": "1"})
+    async with Client(transporte) as cliente:
+        resultado = await cliente.call_tool("registrar_ficha", {**base, "item_id": "P03:LT-3303",
+                                                                "estado": "lista_para_alta"}, raise_on_error=False)
+        chequear("Coherente: se acepta, igual que siempre", resultado.is_error, False)
+        chequear("...con la misma respuesta que ve el agente", (resultado.data["registrado"], resultado.data["estado"]),
+                 ("P03:LT-3303", "lista_para_alta"))
+        resultado = await cliente.call_tool("registrar_ficha", {**base, "item_id": "P03:LT-3306",
+                                                                "estado": "duplicado"}, raise_on_error=False)
+        chequear("Incoherente (duplicado sin SKU): se rechaza igual que siempre", resultado.is_error, True)
+    chequear("No escribió resultados.json", (Path(carpeta_propuesta) / "resultados.json").exists(), False)
+    shutil.rmtree(carpeta_propuesta, ignore_errors=True)
+
     print("\n--- fds_del_producto (casos armados, sin el servidor) ---")
     from servidor_mcp import fds_del_producto  # la función sola: no levanta el servidor
     lavandina = {"archivo": "FDS_a.pdf", "codigos": ["X-100"], "peligro_deposito": "corrosivo", "numero_onu": "1791",

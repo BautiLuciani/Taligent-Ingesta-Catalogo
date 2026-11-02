@@ -12,12 +12,21 @@ Paso 4: el fan-in por código, a la vista. Por cada proveedor que sigue, la MISM
 (leer_filas: precio por vigencia, conflictos, lo que completa otro archivo y la FDS de cada código) se guarda en
 salida/consolidado/Pxx.json: es lo que van a ver los fichadores, el contrato entre la etapa 1 y la 2.
 
+Paso 5: etapa 2, las fichas. Las tandas de TODOS los proveedores que siguen van a una sola fila y las toman
+FICHADORES fichadores a la vez (el primero que se libera agarra la siguiente, sea del proveedor que sea).
+Cada fichador corre agente.fichar_tanda en su hilo: su propio loop, su propio servidor en modo propuesta y su
+propia traza. Los fichadores NO escriben: proponen. Lo propuesto queda en salida/propuestas.json para el
+único escritor (paso 6).
+
 Qué puede hacer cada pieza (blast radius, M4 §7.2):
   - Lectores (extractores): leen un archivo y escriben SU extracción en salida/extracciones/. Nada más.
-  - Orquestador: lanza, junta, decide quién sigue y guarda lo consolidado. No escribe fichas.
+  - Fichadores: leen los datos y PROPONEN fichas, solo de los productos de SU tanda. No escriben resultados.
+  - Orquestador: lanza, junta, decide quién sigue, guarda lo consolidado y las propuestas. No escribe fichas.
 
-Correr: python orquestador.py              (reusa las lecturas guardadas: instantáneo y gratis)
-        python orquestador.py --de-nuevo   (lee todo desde cero a la vez y mide el tiempo; ~US$ 0,04)
+Correr: python orquestador.py                    (reusa las lecturas guardadas: instantáneo y gratis)
+        python orquestador.py --de-nuevo         (lee todo desde cero a la vez y mide el tiempo; ~US$ 0,04)
+        python orquestador.py --fichas           (además, las fichas con 3 fichadores a la vez; ~US$ 0,16)
+        python orquestador.py --fichas --fichadores 1   (lo mismo, de a uno: para comparar en el paso 8)
 """
 import argparse
 import json
@@ -31,6 +40,7 @@ from pathlib import Path
 import anthropic
 from dotenv import load_dotenv
 
+from agente import CARPETA_TRAZAS, TANDA, fichar_tanda
 from extractor_fds import extraer_fds
 from extractor_folleto import extraer_folleto
 from extractor_pdf import TOPE_LLAMADAS, extraer_pdf
@@ -52,6 +62,11 @@ LECTORES = {"pdf": extraer_pdf, "fds": extraer_fds, "folleto": extraer_folleto}
 
 # Los proveedores que se procesan esta semana (P06 está apartado hasta la semana 5)
 PROVEEDORES = ["P03", "P07", "P01", "P05"]
+
+# Cuántos fichadores a la vez. Lo decidió el paso 2 con los límites de la cuenta: con 4 se pasa el límite de
+# tokens de SALIDA por minuto (80.000; el thinking cuenta como salida). Más fichadores no es más rápido: es 429.
+FICHADORES = 3
+FICHADOR = fichar_tanda  # quién corre cada tanda (las pruebas lo cambian por uno falso, sin IA)
 
 
 def leer(trabajo: tuple, cliente, modelo: str, de_nuevo: bool, reloj: float) -> dict:
@@ -118,6 +133,114 @@ def consolidar_proveedores(siguen: list[str]) -> dict[str, dict]:
     return resumen
 
 
+def armar_tandas(consolidado: dict[str, dict]) -> list[tuple[str, int, int]]:
+    """Las tandas de todos los proveedores que siguen, en UNA sola fila: (proveedor, desde, cantidad).
+
+    Ejemplo: P05 con 18 productos -> ("P05", 0, 10) y ("P05", 10, 8).
+    """
+    return [(proveedor_id, desde, min(TANDA, resumen["productos"] - desde))
+            for proveedor_id, resumen in consolidado.items()
+            for desde in range(0, resumen["productos"], TANDA)]
+
+
+def items_de_la_tanda(proveedor_id: str, desde: int, cantidad: int) -> list[str]:
+    """Los productos de una tanda, sacados de lo consolidado (el contrato entre la etapa 1 y la 2)."""
+    filas = json.loads((CARPETA_CONSOLIDADO / f"{proveedor_id}.json").read_text(encoding="utf-8"))["filas"]
+    return [fila["item_id"] for fila in filas[desde:desde + cantidad]]
+
+
+def fichar(tanda: tuple, cliente, modelo: str, reloj: float, carpeta_trazas: Path) -> dict:
+    """Corre UNA tanda con un fichador y devuelve qué pasó: cuándo empezó y terminó, cuánto costó, qué propuso.
+
+    Igual que leer(): si el fichador falla, el error queda anotado y no tira abajo a los demás.
+    """
+    proveedor_id, desde, cantidad = tanda
+    inicio = time.perf_counter() - reloj
+    error, resultado = None, {}
+    try:
+        resultado = FICHADOR(cliente, modelo, proveedor_id, desde, cantidad,
+                             carpeta_trazas / f"{proveedor_id}_desde_{desde:03d}.jsonl")
+    except Exception as excepcion:
+        error = f"{type(excepcion).__name__}: {excepcion}"
+    fin = time.perf_counter() - reloj
+    return {"proveedor_id": proveedor_id, "desde": desde, "cantidad": cantidad, "inicio": round(inicio, 1),
+            "fin": round(fin, 1), "segundos": round(fin - inicio, 1),
+            "como_termino": resultado.get("como_termino"), "registrados": resultado.get("registrados", 0),
+            "faltan": resultado.get("faltan", items_de_la_tanda(proveedor_id, desde, cantidad) if error else []),
+            "vueltas": resultado.get("vueltas", 0), "input_tokens": resultado.get("input_tokens", 0),
+            "output_tokens": resultado.get("output_tokens", 0), "costo_usd": resultado.get("costo_usd", 0.0),
+            "error": error, "propuestas": resultado.get("propuestas", {})}
+
+
+def juntar_propuestas(fichas: list[dict]) -> tuple[dict[str, dict], list[str]]:
+    """Fan-in de la etapa 2: junta las propuestas de todas las tandas. Devuelve (propuestas, fuera_de_su_tanda).
+
+    Cada fichador solo puede proponer los productos de SU tanda (blast radius, M4 §7.2): si propuso uno de otra
+    tanda, no se toma (podría pisar al fichador al que le tocaba) y queda anotado para revisarlo.
+    """
+    propuestas, fuera = {}, []
+    for ficha in fichas:
+        suyos = set(items_de_la_tanda(ficha["proveedor_id"], ficha["desde"], ficha["cantidad"]))
+        for item_id, propuesta in ficha["propuestas"].items():
+            if item_id in suyos:
+                propuestas[item_id] = propuesta
+            else:
+                fuera.append(f"{item_id} (lo propuso la tanda {ficha['proveedor_id']} desde {ficha['desde']})")
+    return propuestas, fuera
+
+
+def etapa_fichas(cliente, modelo: str, consolidado: dict[str, dict], fichadores: int) -> tuple[dict, dict]:
+    """Etapa 2: reparte todas las tandas entre `fichadores` fichadores a la vez y junta lo que propusieron.
+
+    El ThreadPoolExecutor ES la fila: con max_workers=3 corre 3 tandas, y cuando una termina arranca la siguiente.
+    Devuelve (la medición, las propuestas por ítem).
+    """
+    tandas = armar_tandas(consolidado)
+    carpeta_trazas = CARPETA_TRAZAS / f"paralelo_{datetime.now():%Y%m%d_%H%M%S}_{fichadores}"
+    carpeta_trazas.mkdir(parents=True, exist_ok=True)
+    reloj = time.perf_counter()
+    with ThreadPoolExecutor(max_workers=fichadores) as hilos:
+        fichas = list(hilos.map(lambda tanda: fichar(tanda, cliente, modelo, reloj, carpeta_trazas), tandas))
+    segundos = time.perf_counter() - reloj
+    propuestas, fuera = juntar_propuestas(fichas)
+    etapa = {
+        "fecha": f"{datetime.now():%Y-%m-%d %H:%M}",
+        "fichadores": fichadores,
+        "tanda": TANDA,
+        "segundos": round(segundos, 1),
+        "segundos_uno_detras_de_otro": round(sum(f["segundos"] for f in fichas), 1),
+        "costo_usd": round(sum(f["costo_usd"] for f in fichas), 6),
+        "productos": sum(f["cantidad"] for f in fichas),
+        "propuestas": len(propuestas),
+        "faltan": [item for f in fichas for item in f["faltan"]],
+        "tandas_con_problemas": [f"{f['proveedor_id']} desde {f['desde']}: {f['error'] or f['como_termino']}"
+                                 for f in fichas if f["error"] or f["como_termino"] != "end_turn"],
+        "fuera_de_su_tanda": fuera,
+        "trazas": carpeta_trazas.name,
+        "tandas": [{k: v for k, v in f.items() if k != "propuestas"} for f in fichas],
+    }
+    return etapa, propuestas
+
+
+def mostrar_fichas(etapa: dict) -> None:
+    """Imprime cada tanda con su carril de tiempo y el resumen de la etapa 2."""
+    print(f"\n=== Etapa 2: fichas con {etapa['fichadores']} fichador(es) a la vez (tandas de {etapa['tanda']})")
+    print(f"{'tanda':<16}{'empieza':>8}{'termina':>8}{'seg':>6}{'fichas':>8}{'US$':>9}")
+    for f in etapa["tandas"]:
+        estado = f"  ✖ {f['error'] or f['como_termino']}" if f["error"] or f["como_termino"] != "end_turn" else ""
+        print(f"{f['proveedor_id'] + ' desde ' + str(f['desde']):<16}{f['inicio']:>8.1f}{f['fin']:>8.1f}"
+              f"{f['segundos']:>6.1f}{str(f['registrados']) + '/' + str(f['cantidad']):>8}{f['costo_usd']:>9.4f}{estado}")
+    print(f"\nA la vez: {etapa['segundos']:.1f} s · una detrás de otra serían {etapa['segundos_uno_detras_de_otro']:.1f} s"
+          f" · US$ {etapa['costo_usd']:.4f}")
+    print(f"Propuestas: {etapa['propuestas']}/{etapa['productos']} productos · trazas en salida/trazas/{etapa['trazas']}/")
+    if etapa["faltan"]:
+        print(f"⚠ Sin propuesta: {etapa['faltan']}")
+    if etapa["tandas_con_problemas"]:
+        print(f"⚠ Tandas que no terminaron bien: {etapa['tandas_con_problemas']}")
+    if etapa["fuera_de_su_tanda"]:
+        print(f"⚠ Propuestas de productos de otra tanda (no se toman): {etapa['fuera_de_su_tanda']}")
+
+
 def etapa_lectura(cliente, modelo: str, de_nuevo: bool) -> dict:
     """Etapa 1: lanza todos los trabajos de lectura a la vez, los junta y decide qué proveedores siguen."""
     reloj = time.perf_counter()
@@ -164,21 +287,35 @@ def mostrar(etapa: dict) -> None:
 
 
 def main():
-    argumentos = argparse.ArgumentParser(description="Lee en paralelo los archivos de los proveedores.")
+    argumentos = argparse.ArgumentParser(description="Lee en paralelo los archivos de los proveedores y arma las fichas.")
     argumentos.add_argument("--de-nuevo", action="store_true", help="Lee todo desde cero (paga las llamadas).")
-    de_nuevo = argumentos.parse_args().de_nuevo
+    argumentos.add_argument("--fichas", action="store_true", help="Corre también la etapa 2, las fichas (paga).")
+    argumentos.add_argument("--fichadores", type=int, default=FICHADORES, help=f"Fichadores a la vez (default {FICHADORES}).")
+    opciones = argumentos.parse_args()
+    de_nuevo = opciones.de_nuevo
 
     load_dotenv(CARPETA_PROYECTO / ".env")
     modelo = os.getenv("MODELO")
     if not modelo:
         sys.exit("ERROR: falta MODELO en el .env")
 
-    etapa = etapa_lectura(anthropic.Anthropic(), modelo, de_nuevo)
+    cliente = anthropic.Anthropic()  # uno solo para todos los hilos: el cliente de Anthropic se puede compartir
+    etapa = etapa_lectura(cliente, modelo, de_nuevo)
     etapa["consolidado"] = consolidar_proveedores(etapa["siguen"])  # paso 4: solo los que pasaron el chequeo
     mostrar(etapa)
     ruta = CARPETA_SALIDA / "medicion_lectura.json"
     ruta.write_text(json.dumps(etapa, ensure_ascii=False, indent=2), encoding="utf-8")
     print(f"Guardado en salida/{ruta.name}")
+
+    if not opciones.fichas:
+        return
+    fichas, propuestas = etapa_fichas(cliente, modelo, etapa["consolidado"], opciones.fichadores)
+    mostrar_fichas(fichas)
+    # Las propuestas son la entrada del único escritor (paso 6). La medición, una por cantidad de fichadores (paso 8)
+    (CARPETA_SALIDA / "propuestas.json").write_text(json.dumps(propuestas, ensure_ascii=False, indent=2), encoding="utf-8")
+    ruta = CARPETA_SALIDA / f"medicion_fichas_{opciones.fichadores}.json"
+    ruta.write_text(json.dumps(fichas, ensure_ascii=False, indent=2), encoding="utf-8")
+    print(f"Guardado en salida/propuestas.json y salida/{ruta.name}")
 
 
 if __name__ == "__main__":

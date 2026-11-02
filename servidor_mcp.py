@@ -27,6 +27,12 @@ VOCABULARIO = cargar_vocabulario()
 CARPETA_SALIDA = Path(os.getenv("INGESTA_CARPETA_SALIDA", Path(__file__).parent / "salida"))
 RUTA_RESULTADOS = CARPETA_SALIDA / "resultados.json"
 
+# Modo propuesta (semana 3, paso 5): con varios fichadores a la vez, registrar_ficha valida igual pero NO escribe.
+# Si dos procesos hicieran "leer resultados.json -> agregar -> guardar" al mismo tiempo, uno pisaría al otro
+# y se perdería una ficha sin ningún error (race condition, M4 §6). Lo escribe un único escritor: el código.
+MODO_PROPUESTA = os.getenv("INGESTA_MODO_PROPUESTA") == "1"
+PROPUESTAS: dict[str, dict] = {}  # en modo propuesta: lo aceptado por ESTE proceso (solo en memoria, para contar)
+
 # Lo que sacó extractor_pdf.py de cada PDF (semana 2). Es una ENTRADA, no una salida de las pruebas:
 # por eso no depende de INGESTA_CARPETA_SALIDA.
 CARPETA_EXTRACCIONES = Path(__file__).parent / "salida" / "extracciones"
@@ -558,6 +564,35 @@ def guardar_resultado(resultado: dict) -> int:
     return len(resultados)
 
 
+def problemas_del_registro(item_id: str, estado: str, ficha: dict, categoria_decidida_por: CategoriaDecididaPor,
+                           motivos_revision: list[str], duplicado_de: str | None) -> list[str]:
+    """Todo lo que se revisa antes de aceptar una ficha (vacío = OK).
+
+    Es una función aparte para que la usen los dos: registrar_ficha (el agente recibe el error y corrige)
+    y el escritor del paso 6, que vuelve a revisar cada propuesta antes de guardarla.
+    """
+    problemas = validar_coherencia(item_id, estado, motivos_revision, duplicado_de)
+    if ficha.get(categoria_decidida_por.campo) != categoria_decidida_por.valor:
+        problemas.append(f"categoria_decidida_por cita {categoria_decidida_por.campo}={categoria_decidida_por.valor!r}, "
+                        f"pero en la ficha ese campo vale {ficha.get(categoria_decidida_por.campo)!r}. "
+                        "Tiene que citar un dato real de la ficha.")
+    return problemas
+
+
+def armar_resultado(item_id: str, estado: str, ficha: dict, fuentes: dict, categoria_decidida_por: CategoriaDecididaPor,
+                    motivos_revision: list[str], duplicado_de: str | None) -> dict:
+    """El resultado de un ítem tal como se guarda en resultados.json (una sola forma, la usen quien la use)."""
+    return {
+        "item_id": item_id,
+        "estado": estado,
+        "duplicado_de": duplicado_de,
+        "motivos_revision": motivos_revision,
+        "ficha": ficha,
+        "fuentes": fuentes,
+        "categoria_decidida_por": categoria_decidida_por.model_dump(),
+    }
+
+
 @mcp.tool(annotations={"readOnlyHint": False, "destructiveHint": False, "idempotentHint": True})
 def registrar_ficha(
     item_id: Annotated[str, Field(description="Identificador del ítem, tal como vino en la fila (ej. P03:LT-3303).")],
@@ -578,23 +613,16 @@ def registrar_ficha(
     En categoria_decidida_por indicá qué campo de la ficha (tipo, variante o marca) decidió la
     categoría, con su valor exacto y una frase corta de por qué.
     """
-    problemas = validar_coherencia(item_id, estado, motivos_revision, duplicado_de)
-    if ficha.get(categoria_decidida_por.campo) != categoria_decidida_por.valor:
-        problemas.append(f"categoria_decidida_por cita {categoria_decidida_por.campo}={categoria_decidida_por.valor!r}, "
-                        f"pero en la ficha ese campo vale {ficha.get(categoria_decidida_por.campo)!r}. "
-                        "Tiene que citar un dato real de la ficha.")
+    problemas = problemas_del_registro(item_id, estado, ficha, categoria_decidida_por, motivos_revision, duplicado_de)
     if problemas:
         raise ToolError("No se guardó. Corregí esto y volvé a registrar: " + " | ".join(problemas))
 
-    total = guardar_resultado({
-        "item_id": item_id,
-        "estado": estado,
-        "duplicado_de": duplicado_de,
-        "motivos_revision": motivos_revision,
-        "ficha": ficha,
-        "fuentes": fuentes,
-        "categoria_decidida_por": categoria_decidida_por.model_dump(),
-    })
+    resultado = armar_resultado(item_id, estado, ficha, fuentes, categoria_decidida_por, motivos_revision, duplicado_de)
+    if MODO_PROPUESTA:
+        PROPUESTAS[item_id] = resultado  # aceptada, pero no se escribe: la guarda el escritor (paso 6)
+        total = len(PROPUESTAS)
+    else:
+        total = guardar_resultado(resultado)
     return {"registrado": item_id, "estado": estado, "total_registrados": total}
 
 

@@ -3,6 +3,8 @@ import asyncio
 import json
 import shutil
 import tempfile
+import time
+from concurrent.futures import ThreadPoolExecutor
 from types import SimpleNamespace
 
 from fastmcp import Client
@@ -10,7 +12,7 @@ from fastmcp.client.transports import PythonStdioTransport
 
 from pathlib import Path
 
-from agente import RUTA_SERVIDOR, ejecutar_tool, preparar_resultados
+from agente import CARPETA_SALIDA, RUTA_SERVIDOR, ejecutar_tool, fichar_tanda, preparar_resultados
 
 errores = 0
 
@@ -28,6 +30,85 @@ def chequear(origen, obtenido, esperado):
 def pedido_falso(nombre, argumentos, id_="toolu_prueba"):
     """Imita un bloque tool_use de la respuesta de Haiku (tiene .id, .name y .input)."""
     return SimpleNamespace(id=id_, name=nombre, input=argumentos)
+
+
+class ClaudeFalso:
+    """Imita al cliente de Anthropic SIN IA: devuelve respuestas armadas a mano, una por llamada.
+
+    Cada llamada tarda ESPERA segundos con time.sleep: frena el hilo igual que la llamada real (que es síncrona).
+    Así se puede medir si varios fichadores trabajan de verdad a la vez, sin gastar un peso.
+    """
+    ESPERA = 1.0
+
+    def __init__(self, item_id: str):
+        ficha = {"gtin": "7793469616846", "marca": "SONRISA", "tipo": "PASTA DENTAL", "contenido": 90, "unidad": "G"}
+        base = {"item_id": item_id, "ficha": ficha, "fuentes": {},
+                "categoria_decidida_por": {"campo": "tipo", "valor": "PASTA DENTAL", "explicacion": "Cuidado bucal."}}
+        # 1ª respuesta: registra el ítem bien y después lo registra MAL (duplicado sin SKU). 2ª: termina.
+        self.respuestas = [
+            self.respuesta("tool_use", [pedido_falso("registrar_ficha", {**base, "estado": "lista_para_alta"}, "t1"),
+                                        pedido_falso("registrar_ficha", {**base, "estado": "duplicado"}, "t2")]),
+            self.respuesta("end_turn", [SimpleNamespace(type="text", text="Listo.")]),
+        ]
+        self.messages = self  # para que ande cliente.messages.stream(...)
+
+    @staticmethod
+    def respuesta(stop_reason, bloques):
+        for bloque in bloques:
+            bloque.type = getattr(bloque, "type", "tool_use")
+        return SimpleNamespace(stop_reason=stop_reason, content=bloques,
+                               usage=SimpleNamespace(input_tokens=100, output_tokens=10))
+
+    def stream(self, **_):
+        time.sleep(self.ESPERA)
+        respuesta = self.respuestas.pop(0)
+        return _Stream(respuesta)
+
+
+class _Stream:
+    """Lo mínimo de un stream: se usa con "with" y entrega la respuesta completa."""
+    def __init__(self, respuesta):
+        self.respuesta = respuesta
+
+    def __enter__(self):
+        return self
+
+    def __exit__(self, *_):
+        return False
+
+    def get_final_message(self):
+        return self.respuesta
+
+
+def probar_fichar_tanda(carpeta: Path):
+    """fichar_tanda con un Claude falso: propuestas, que no escriba, y que 3 a la vez sea paralelo DE VERDAD."""
+    from servidor_mcp import PROVEEDORES, leer_filas
+    items = [fila["item_id"] for fila in leer_filas("P03", PROVEEDORES["P03"])[:3]]
+    ruta_resultados = CARPETA_SALIDA / "resultados.json"
+    antes = ruta_resultados.stat().st_mtime if ruta_resultados.exists() else None
+
+    print("\n--- fichar_tanda: una tanda sola, en modo propuesta (Claude falso, sin gastar) ---")
+    inicio = time.perf_counter()
+    r = fichar_tanda(ClaudeFalso(items[0]), "falso", "P03", 0, 1, carpeta / "traza_0.jsonl")
+    una_sola = time.perf_counter() - inicio
+    chequear("Terminó bien", r["como_termino"], "end_turn")
+    chequear("El ítem quedó registrado (1/1)", (r["registrados"], r["esperados"]), (1, 1))
+    chequear("Hay una propuesta, la de su ítem", list(r["propuestas"]), [items[0]])
+    chequear("La rechazada (duplicado sin SKU) no pisa a la aceptada", r["propuestas"][items[0]]["estado"], "lista_para_alta")
+    despues = ruta_resultados.stat().st_mtime if ruta_resultados.exists() else None
+    chequear("No tocó salida/resultados.json", despues, antes)
+
+    print("\n--- fichar_tanda: 3 tandas a la vez, cada una en su hilo ---")
+    inicio = time.perf_counter()
+    with ThreadPoolExecutor(max_workers=3) as hilos:
+        resultados = list(hilos.map(
+            lambda n: fichar_tanda(ClaudeFalso(items[n]), "falso", "P03", n, 1, carpeta / f"traza_{n}.jsonl"), range(3)))
+    tres = time.perf_counter() - inicio
+    chequear("Cada una propuso SU ítem", [list(r["propuestas"]) for r in resultados], [[item] for item in items])
+    print(f"      una tanda sola: {una_sola:.1f} s · tres a la vez: {tres:.1f} s (de a una serían ~{3 * una_sola:.1f} s)")
+    chequear("Tres a la vez tardan menos que dos de a una (paralelo de verdad)", tres < 2 * una_sola, True)
+    chequear("Cada fichador escribió su propia traza", sorted(p.name for p in carpeta.glob("traza_*.jsonl")),
+             ["traza_0.jsonl", "traza_1.jsonl", "traza_2.jsonl"])
 
 
 async def main():
@@ -75,3 +156,9 @@ async def main():
 
 
 asyncio.run(main())
+
+# fichar_tanda hace su propio asyncio.run (como en el orquestador, dentro de un hilo): por eso va afuera de main()
+carpeta_trazas = Path(tempfile.mkdtemp())
+probar_fichar_tanda(carpeta_trazas)
+shutil.rmtree(carpeta_trazas, ignore_errors=True)
+print(f"\nResultado final: {'todo OK' if errores == 0 else f'{errores} con error'}")
