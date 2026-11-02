@@ -366,6 +366,26 @@ def leer_filas(proveedor_id: str, config: dict) -> list[dict]:
     return filas
 
 
+def problemas_de_lectura(config: dict) -> list[str]:
+    """Chequeo entre etapas (semana 3, paso 1b, M4 §1.1): ¿la lectura de los archivos de este proveedor quedó limpia?
+
+    Mira lo que dejaron los extractores con IA (PDF, folleto y FDS): los problemas generales y los de cada producto
+    o cada FDS. Si hay alguno, ese proveedor no se procesa: un error de la lectura no pasa a las fichas disfrazado de
+    otra cosa (el 02/11, una lectura cortada de Andes apareció como "Andes al 50%" en el evaluador).
+    Un proveedor sin extracción (CSV) no tiene nada que revisar acá. Si falta el archivo, lo avisa su lector.
+    """
+    problemas = []
+    for clave in ("extraccion", "fds"):
+        ruta = config.get(clave)
+        if ruta is None or not ruta.exists():
+            continue
+        datos = json.loads(ruta.read_text(encoding="utf-8"))
+        problemas += [f"{ruta.name}: {problema}" for problema in datos.get("problemas", [])]
+        for parte in datos.get("productos", []) + datos.get("fichas", []):
+            problemas += [f"{ruta.name}: {problema}" for problema in parte["problemas"]]
+    return problemas
+
+
 @mcp.tool(annotations={"readOnlyHint": True})
 def leer_archivo_proveedor(
     proveedor_id: Annotated[Literal["P01", "P03", "P05", "P07"], Field(description="Código del proveedor a leer.")],
@@ -386,6 +406,11 @@ def leer_archivo_proveedor(
       Lo que calculado no trae (por ejemplo, la marca en un PDF) lo decidís desde original.
     Si 'siguiente' no es null, hay más filas: volvé a llamarla con desde=siguiente.
     """
+    problemas = problemas_de_lectura(PROVEEDORES[proveedor_id])
+    if problemas:  # chequeo entre etapas: lo garantiza el código, antes de gastar en fichas
+        raise ToolError(f"La lectura de los archivos de {proveedor_id} quedó con {len(problemas)} problema(s): "
+                        "no se procesa. Hay que volver a leerlos (extractor con --de-nuevo) o revisar la extracción. "
+                        + " | ".join(problemas[:5]))
     filas = leer_filas(proveedor_id, PROVEEDORES[proveedor_id])
     total = len(filas)
     if desde >= total:

@@ -15,6 +15,7 @@ from pathlib import Path
 import anthropic
 from dotenv import load_dotenv
 from fastmcp import Client
+from fastmcp.exceptions import ToolError
 
 CARPETA_PROYECTO = Path(__file__).parent
 RUTA_SERVIDOR = CARPETA_PROYECTO / "servidor_mcp.py"
@@ -222,6 +223,18 @@ async def procesar_tanda(cliente_claude, cliente_mcp: Client, modelo: str, syste
     return resultado
 
 
+async def revisar_lectura(proveedor_id: str) -> None:
+    """Chequeo entre etapas (semana 3, paso 1b, M4 §1.1): ¿se puede procesar este proveedor?
+
+    Le pregunta al servidor desde el CÓDIGO (sin IA). Si la lectura de sus archivos quedó con problemas, o el
+    proveedor no se permite (P06), el servidor contesta con un error y se frena acá, ANTES de preparar_resultados:
+    así una lectura mala nunca borra las fichas buenas de una corrida anterior, ni se gasta en fichas.
+    Levanta el servidor un momento solo para esto (un par de segundos), para no tocar el orden del resto.
+    """
+    async with Client(RUTA_SERVIDOR) as cliente_mcp:
+        await items_de_la_tanda(cliente_mcp, proveedor_id, 0, 1)
+
+
 def preparar_resultados(ruta_resultados: Path, proveedor_id: str) -> int:
     """Antes de una corrida: guarda una copia de resultados.json y le saca los ítems de ESTE proveedor.
 
@@ -248,6 +261,11 @@ async def main():
     if not modelo:
         sys.exit("ERROR: falta MODELO en el .env")
     cliente_claude = anthropic.Anthropic()  # toma ANTHROPIC_API_KEY del entorno
+
+    try:
+        await revisar_lectura(proveedor_id)
+    except ToolError as error:
+        sys.exit(f"✖ No se procesa {proveedor_id}: {error}")
 
     sacados = preparar_resultados(CARPETA_SALIDA / "resultados.json", proveedor_id)
     if sacados:

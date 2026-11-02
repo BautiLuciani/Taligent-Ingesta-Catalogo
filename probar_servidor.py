@@ -436,6 +436,33 @@ async def main():
              (fila["calculado"]["gtin"], fila["calculado"]["motivo_gtin"], "gtin" in fila["calculado"]["fuentes"]),
              (None, "gtin_invalido", True))
 
+    print("\n--- problemas_de_lectura: chequeo entre etapas (semana 3, paso 1b) ---")
+    from servidor_mcp import PROVEEDORES, problemas_de_lectura
+    for proveedor_id in ("P01", "P03", "P05", "P07"):
+        chequear(f"{proveedor_id}: la lectura actual está limpia", problemas_de_lectura(PROVEEDORES[proveedor_id]), [])
+    carpeta = Path(carpeta_temporal)
+
+    def extraccion(nombre, datos):
+        """Un JSON de extracción armado a mano, en la carpeta temporal."""
+        ruta = carpeta / nombre
+        ruta.write_text(json.dumps(datos, ensure_ascii=False), encoding="utf-8")
+        return ruta
+
+    limpia = extraccion("limpia.json", {"problemas": [], "productos": [{"codigo": "A-100", "problemas": []}]})
+    chequear("Extracción sin problemas: nada que frenar", problemas_de_lectura({"extraccion": limpia}), [])
+    general = extraccion("general.json", {"problemas": ["AN-1103: Haiku lo nombró pero no aparece en ningún texto citado."],
+                                          "productos": []})
+    chequear("Problema general (un producto sin cita): frena, con el nombre del archivo",
+             problemas_de_lectura({"extraccion": general}),
+             ["general.json: AN-1103: Haiku lo nombró pero no aparece en ningún texto citado."])
+    de_producto = extraccion("producto.json", {"problemas": [], "productos": [
+        {"codigo": "AN-1127", "problemas": ["AN-1127: su fila quedó abierta y le faltan columnas"]}]})
+    chequear("Problema de un producto (una fila cortada): frena", len(problemas_de_lectura({"extraccion": de_producto})), 1)
+    fds = extraccion("fds.json", {"fichas": [{"archivo": "FDS_x.pdf", "problemas": ["sección 14 sin clase"]}]})
+    chequear("Problema en una FDS: frena", problemas_de_lectura({"extraccion": limpia, "fds": fds}),
+             ["fds.json: sección 14 sin clase"])
+    chequear("Proveedor sin extracción (CSV): nada que revisar", problemas_de_lectura({"archivo": "x.csv"}), [])
+
     shutil.rmtree(carpeta_temporal, ignore_errors=True)  # borramos la carpeta temporal de las pruebas
     print(f"\nResultado: {'todo OK' if errores == 0 else f'{errores} con error'}")
 
