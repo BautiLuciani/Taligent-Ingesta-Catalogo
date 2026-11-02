@@ -1,0 +1,60 @@
+{
+  "fecha": "2026-11-02 17:01",
+  "modo": "secuencial",
+  "segundos_total": 780.0,
+  "segundos_por_etapa": {
+    "lectura": 121.2,
+    "fichas": 658.8
+  },
+  "costo_total_usd": 0.2002,
+  "pasos": [
+    {
+      "etapa": "lectura",
+      "paso": "PDF de LHS",
+      "segundos": 25.7,
+      "costo_usd": 0.004235
+    },
+    {
+      "etapa": "lectura",
+      "paso": "PDF de Andes",
+      "segundos": 35.3,
+      "costo_usd": 0.005904
+    },
+    {
+      "etapa": "lectura",
+      "paso": "FDS de LHS",
+      "segundos": 38.7,
+      "costo_usd": 0.005588
+    },
+    {
+      "etapa": "lectura",
+      "paso": "Folleto de Dermalab",
+      "segundos": 21.5,
+      "costo_usd": 0.00355
+    },
+    {
+      "etapa": "fichas",
+      "paso": "Agente P03 Litoral",
+      "segundos": 237.2,
+      "costo_usd": 0.0679
+    },
+    {
+      "etapa": "fichas",
+      "paso": "Agente P07 LHS",
+      "segundos": 165.4,
+      "costo_usd": 0.0448
+    },
+    {
+      "etapa": "fichas",
+      "paso": "Agente P01 Andes",
+      "segundos": 121.4,
+      "costo_usd": 0.0314
+    },
+    {
+      "etapa": "fichas",
+      "paso": "Agente P05 Dermalab",
+      "segundos": 134.8,
+      "costo_usd": 0.0368
+    }
+  ]
+}
