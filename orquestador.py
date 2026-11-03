@@ -18,15 +18,21 @@ Cada fichador corre agente.fichar_tanda en su hilo: su propio loop, su propio se
 propia traza. Los fichadores NO escriben: proponen. Lo propuesto queda en salida/propuestas.json para el
 único escritor (paso 6).
 
+Paso 6: el único escritor (escritor.py, código sin IA). Revisa por proveedor que no falte ni sobre ningún producto,
+vuelve a validar cada propuesta con la regla del servidor y escribe resultados.json una sola vez. Un proveedor con
+algún problema no se escribe: sus fichas anteriores quedan intactas.
+
 Qué puede hacer cada pieza (blast radius, M4 §7.2):
   - Lectores (extractores): leen un archivo y escriben SU extracción en salida/extracciones/. Nada más.
   - Fichadores: leen los datos y PROPONEN fichas, solo de los productos de SU tanda. No escriben resultados.
+  - Escritor: el ÚNICO que escribe resultados.json, y solo lo que pasó su revisión.
   - Orquestador: lanza, junta, decide quién sigue, guarda lo consolidado y las propuestas. No escribe fichas.
 
 Correr: python orquestador.py                    (reusa las lecturas guardadas: instantáneo y gratis)
         python orquestador.py --de-nuevo         (lee todo desde cero a la vez y mide el tiempo; ~US$ 0,04)
         python orquestador.py --fichas           (además, las fichas con 3 fichadores a la vez; ~US$ 0,16)
         python orquestador.py --fichas --fichadores 1   (lo mismo, de a uno: para comparar en el paso 8)
+        python orquestador.py --escribir         (solo escribe, con el salida/propuestas.json que ya está: gratis)
 """
 import argparse
 import json
@@ -41,6 +47,8 @@ import anthropic
 from dotenv import load_dotenv
 
 from agente import CARPETA_TRAZAS, TANDA, fichar_tanda
+from escritor import escribir
+from escritor import mostrar as mostrar_escritura
 from extractor_fds import extraer_fds
 from extractor_folleto import extraer_folleto
 from extractor_pdf import TOPE_LLAMADAS, extraer_pdf
@@ -241,6 +249,12 @@ def mostrar_fichas(etapa: dict) -> None:
         print(f"⚠ Propuestas de productos de otra tanda (no se toman): {etapa['fuera_de_su_tanda']}")
 
 
+def etapa_escritura(propuestas: dict, siguen: list[str]) -> dict:
+    """Etapa 3: el único escritor guarda las propuestas de los proveedores que siguen (paso 6)."""
+    from servidor_mcp import RUTA_RESULTADOS  # la misma ruta que usaba registrar_ficha
+    return escribir(propuestas, siguen, CARPETA_CONSOLIDADO, RUTA_RESULTADOS)
+
+
 def etapa_lectura(cliente, modelo: str, de_nuevo: bool) -> dict:
     """Etapa 1: lanza todos los trabajos de lectura a la vez, los junta y decide qué proveedores siguen."""
     reloj = time.perf_counter()
@@ -291,6 +305,8 @@ def main():
     argumentos.add_argument("--de-nuevo", action="store_true", help="Lee todo desde cero (paga las llamadas).")
     argumentos.add_argument("--fichas", action="store_true", help="Corre también la etapa 2, las fichas (paga).")
     argumentos.add_argument("--fichadores", type=int, default=FICHADORES, help=f"Fichadores a la vez (default {FICHADORES}).")
+    argumentos.add_argument("--escribir", action="store_true",
+                            help="Solo escribe resultados.json con el salida/propuestas.json que ya está (gratis).")
     opciones = argumentos.parse_args()
     de_nuevo = opciones.de_nuevo
 
@@ -307,15 +323,26 @@ def main():
     ruta.write_text(json.dumps(etapa, ensure_ascii=False, indent=2), encoding="utf-8")
     print(f"Guardado en salida/{ruta.name}")
 
-    if not opciones.fichas:
+    ruta_propuestas = CARPETA_SALIDA / "propuestas.json"
+    if opciones.fichas:
+        fichas, propuestas = etapa_fichas(cliente, modelo, etapa["consolidado"], opciones.fichadores)
+        mostrar_fichas(fichas)
+        # Las propuestas se guardan ANTES de escribir: si algo falla después, lo que se pagó no se pierde
+        ruta_propuestas.write_text(json.dumps(propuestas, ensure_ascii=False, indent=2), encoding="utf-8")
+    elif opciones.escribir:
+        if not ruta_propuestas.exists():
+            sys.exit("✖ No hay salida/propuestas.json para escribir: corré primero con --fichas.")
+        propuestas = json.loads(ruta_propuestas.read_text(encoding="utf-8"))
+    else:
         return
-    fichas, propuestas = etapa_fichas(cliente, modelo, etapa["consolidado"], opciones.fichadores)
-    mostrar_fichas(fichas)
-    # Las propuestas son la entrada del único escritor (paso 6). La medición, una por cantidad de fichadores (paso 8)
-    (CARPETA_SALIDA / "propuestas.json").write_text(json.dumps(propuestas, ensure_ascii=False, indent=2), encoding="utf-8")
-    ruta = CARPETA_SALIDA / f"medicion_fichas_{opciones.fichadores}.json"
-    ruta.write_text(json.dumps(fichas, ensure_ascii=False, indent=2), encoding="utf-8")
-    print(f"Guardado en salida/propuestas.json y salida/{ruta.name}")
+
+    informe = etapa_escritura(propuestas, etapa["siguen"])
+    mostrar_escritura(informe)
+    if opciones.fichas:  # la medición, una por cantidad de fichadores (para comparar en el paso 8)
+        fichas["escritor"] = informe
+        ruta = CARPETA_SALIDA / f"medicion_fichas_{opciones.fichadores}.json"
+        ruta.write_text(json.dumps(fichas, ensure_ascii=False, indent=2), encoding="utf-8")
+        print(f"Guardado en salida/{ruta_propuestas.name} y salida/{ruta.name}")
 
 
 if __name__ == "__main__":

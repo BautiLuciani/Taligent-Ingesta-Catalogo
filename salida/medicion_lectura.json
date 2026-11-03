@@ -1,9 +1,9 @@
 {
-  "fecha": "2026-11-02 20:49",
+  "fecha": "2026-11-02 21:14",
   "de_nuevo": false,
   "tope_llamadas": 4,
-  "segundos": 0.2,
-  "segundos_uno_detras_de_otro": 0.6,
+  "segundos": 0.1,
+  "segundos_uno_detras_de_otro": 0.4,
   "costo_usd": 0.045995,
   "lecturas": [
     {
@@ -21,8 +21,8 @@
       "tipo": "fds",
       "archivo": "fichas_de_seguridad",
       "inicio": 0.0,
-      "fin": 0.2,
-      "segundos": 0.2,
+      "fin": 0.1,
+      "segundos": 0.1,
       "costo_usd": 0.005418,
       "error": null
     },
@@ -31,8 +31,8 @@
       "tipo": "pdf",
       "archivo": "Lista_de_precios_octubre_2026.pdf",
       "inicio": 0.0,
-      "fin": 0.2,
-      "segundos": 0.2,
+      "fin": 0.1,
+      "segundos": 0.1,
       "costo_usd": 0.018902,
       "error": null
     },
