@@ -306,6 +306,10 @@ async def main():
                                               "motivos_revision": ["sin_precio"]}),
             ("categoría sin explicar", {"item_id": "P03:LT-3321", "estado": "lista_para_alta",
                                         "categoria_decidida_por": None}),
+            ("sin EAN como lista_para_alta (lo que pide la PD de Natural Vida)",
+             {"item_id": "P03:LT-3357", "estado": "lista_para_alta"}),
+            ("sin EAN a revisión pero sin su motivo gtin_faltante",
+             {"item_id": "P03:LT-3357", "estado": "a_revision", "motivos_revision": ["dato_obligatorio_faltante"]}),
             ("categoría explicada con un dato inventado", {"item_id": "P03:LT-3324", "estado": "lista_para_alta",
                                                            "categoria_decidida_por": {"campo": "tipo", "valor": "JABON",
                                                                                       "explicacion": "Es un jabón."}}),
@@ -314,7 +318,8 @@ async def main():
             resultado = await cliente.call_tool(
                 "registrar_ficha", {**base, **argumentos}, raise_on_error=False)
             chequear(nombre, resultado.is_error, True)
-            if nombre in ("duplicado sin SKU", "categoría explicada con un dato inventado"):
+            if nombre in ("duplicado sin SKU", "categoría explicada con un dato inventado",
+                          "sin EAN como lista_para_alta (lo que pide la PD de Natural Vida)"):
                 print(f"      lo que recibe el modelo: {resultado.content[0].text}")
 
         guardado = json.loads((Path(carpeta_temporal) / "resultados.json").read_text(encoding="utf-8"))
@@ -342,6 +347,32 @@ async def main():
         resultado = await cliente.call_tool("registrar_ficha", {
             **base_andes, "item_id": "P01:AN-1133", "estado": "lista_para_alta"}, raise_on_error=False)
         chequear("AN-1133 (con conflicto) como lista_para_alta: NO se guarda", resultado.is_error, True)
+
+        print("\n--- leer_archivo_proveedor: el mail de Natural Vida (semana 3, paso 7) ---")
+        nv = {fila["item_id"]: fila for fila in await leer_todas(cliente, "P09")}
+        chequear("Natural Vida tiene 14 productos", len(nv), 14)
+        chequear("NV-203 en la línea 10, sin EAN (\"se lo paso la semana que viene\")",
+                 (nv["P09:NV-203"]["fuente"]["linea"], nv["P09:NV-203"]["calculado"]["motivo_gtin"]), (10, "gtin_faltante"))
+        chequear("NV-206 también sin EAN", nv["P09:NV-206"]["calculado"]["motivo_gtin"], "gtin_faltante")
+        chequear("Q06: NV-212 cuesta 262,87 UYU, línea 13",
+                 (nv["P09:NV-212"]["calculado"]["precio_costo"], nv["P09:NV-212"]["calculado"]["moneda"],
+                  nv["P09:NV-212"]["fuente"]["linea"]), (262.87, "UYU", 13))
+        chequear("NV-212: el contenido son los 10 comprimidos (el '1 g' es la concentración)",
+                 (nv["P09:NV-212"]["calculado"]["contenido"], nv["P09:NV-212"]["calculado"]["unidad"]), (10, "UN"))
+        chequear("NV-239 colágeno: 300 G", (nv["P09:NV-239"]["calculado"]["contenido"], nv["P09:NV-239"]["calculado"]["unidad"]),
+                 (300, "G"))
+        chequear("NV-209: su EAN tiene mal el dígito verificador (termina en 9, tendría que ser 6)",
+                 (nv["P09:NV-209"]["calculado"]["gtin"], nv["P09:NV-209"]["calculado"]["motivo_gtin"]), (None, "gtin_invalido"))
+        chequear("NV-212 con su EAN válido", nv["P09:NV-212"]["calculado"]["gtin"], "7798469024080")
+        chequear("La marca la fija el código: NATURAL VIDA, citando el asunto (línea 4)",
+                 (nv["P09:NV-218"]["calculado"]["marca"], nv["P09:NV-218"]["calculado"]["fuentes"]["marca"]["linea"]),
+                 ("NATURAL VIDA", 4))
+        chequear("La PD no llega a los fichadores (no está en ninguna fila)",
+                 any("sistema de carga" in json.dumps(fila, ensure_ascii=False) for fila in nv.values()), False)
+        resultado = await cliente.call_tool("registrar_ficha", {
+            **base, "item_id": "P09:NV-203", "estado": "lista_para_alta",
+            "fuentes": {campo: nv["P09:NV-203"]["fuente"] for campo in ficha_ejemplo}}, raise_on_error=False)
+        chequear("NV-203 como lista_para_alta (lo que pide la PD): NO se guarda", resultado.is_error, True)
 
         print("\n--- resources: el estándar ---")
         recursos = {str(r.uri) for r in await cliente.list_resources()}
@@ -478,6 +509,26 @@ async def main():
     chequear("Problema en una FDS: frena", problemas_de_lectura({"extraccion": limpia, "fds": fds}),
              ["fds.json: sección 14 sin clase"])
     chequear("Proveedor sin extracción (CSV): nada que revisar", problemas_de_lectura({"archivo": "x.csv"}), [])
+
+    print("\n--- leer_mail (casos armados, sin el servidor) ---")
+    from servidor_mcp import leer_mail
+    chequear("El mail de Natural Vida se lee limpio", problemas_de_lectura(PROVEEDORES["P09"]), [])
+    otras = leer_mail("P09", PROVEEDORES["P09"])["otras_lineas"]
+    chequear("La PD queda en otras_lineas, con su número de línea (27)",
+             [o["linea"] for o in otras if "sistema de carga" in o["texto"]], [27])
+    mail = carpeta / "mail.txt"
+    mail.write_text("Hola\n- Zinc 15 mg, 60 comprimidos — cód. NV-1 — EAN 7799515902222 — $ 273,44\n"
+                    "- Zinc 15 mg, 30 comprimidos — cód. NV-2 — sin precio\n", encoding="utf-8")
+    leido = leer_mail("P09", {"archivo": mail, "moneda": "UYU"})
+    chequear("Un mail sin marca configurada: el código no la completa", "marca" in leido["filas"][0]["calculado"], False)
+    chequear("Marca configurada que NO está en el asunto: problema de lectura (no se inventa una fuente)",
+             leer_mail("P09", {"archivo": mail, "moneda": "UYU", "marca": "NATURAL VIDA"})["problemas"][0],
+             "la marca 'NATURAL VIDA' no aparece en el asunto del mail: no se puede citar")
+    chequear("Mail armado: 1 producto bien leído", [f["item_id"] for f in leido["filas"]], ["P09:NV-1"])
+    chequear("...y la línea 3, que parece producto pero está rota, queda como problema",
+             leido["problemas"][0].startswith("línea 3: parece un producto"), True)
+    chequear("...que frena al proveedor en el chequeo entre etapas",
+             len(problemas_de_lectura({"formato": "mail", "archivo": mail, "moneda": "UYU"})), 1)
 
     shutil.rmtree(carpeta_temporal, ignore_errors=True)  # borramos la carpeta temporal de las pruebas
     print(f"\nResultado: {'todo OK' if errores == 0 else f'{errores} con error'}")

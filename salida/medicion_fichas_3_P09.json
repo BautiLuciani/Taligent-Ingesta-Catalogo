@@ -1,0 +1,56 @@
+{
+  "fecha": "2026-11-03 13:27",
+  "fichadores": 3,
+  "tanda": 10,
+  "segundos": 55.2,
+  "segundos_uno_detras_de_otro": 86.0,
+  "costo_usd": 0.024733,
+  "productos": 14,
+  "propuestas": 14,
+  "faltan": [],
+  "tandas_con_problemas": [],
+  "fuera_de_su_tanda": [],
+  "trazas": "paralelo_20261103_132659_3",
+  "tandas": [
+    {
+      "proveedor_id": "P09",
+      "desde": 0,
+      "cantidad": 10,
+      "inicio": 0.0,
+      "fin": 55.2,
+      "segundos": 55.2,
+      "como_termino": "end_turn",
+      "registrados": 10,
+      "faltan": [],
+      "vueltas": 4,
+      "input_tokens": 77984,
+      "output_tokens": 15355,
+      "costo_usd": 0.015476,
+      "error": null
+    },
+    {
+      "proveedor_id": "P09",
+      "desde": 10,
+      "cantidad": 4,
+      "inicio": 0.0,
+      "fin": 30.8,
+      "segundos": 30.8,
+      "como_termino": "end_turn",
+      "registrados": 4,
+      "faltan": [],
+      "vueltas": 4,
+      "input_tokens": 60772,
+      "output_tokens": 6359,
+      "costo_usd": 0.009257,
+      "error": null
+    }
+  ],
+  "escritor": {
+    "escritos": {
+      "P09": 14
+    },
+    "frenados": {},
+    "ignoradas": [],
+    "total_en_archivo": 133
+  }
+}

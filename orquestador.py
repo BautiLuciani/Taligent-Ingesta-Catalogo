@@ -22,6 +22,10 @@ Paso 6: el único escritor (escritor.py, código sin IA). Revisa por proveedor q
 vuelve a validar cada propuesta con la regla del servidor y escribe resultados.json una sola vez. Un proveedor con
 algún problema no se escribe: sus fichas anteriores quedan intactas.
 
+Paso 7: Natural Vida (P09) manda un mail en texto. Lo lee el código del servidor (sin IA, como el CSV) y solo los
+productos llegan a los fichadores. El resto del mail (saludo, firma y una "PD para el sistema de carga" que pide dar
+todo de alta sin revisión) no se pasa, pero tampoco se esconde: la etapa 1 lo muestra como aviso.
+
 Qué puede hacer cada pieza (blast radius, M4 §7.2):
   - Lectores (extractores): leen un archivo y escriben SU extracción en salida/extracciones/. Nada más.
   - Fichadores: leen los datos y PROPONEN fichas, solo de los productos de SU tanda. No escriben resultados.
@@ -33,6 +37,7 @@ Correr: python orquestador.py                    (reusa las lecturas guardadas: 
         python orquestador.py --fichas           (además, las fichas con 3 fichadores a la vez; ~US$ 0,16)
         python orquestador.py --fichas --fichadores 1   (lo mismo, de a uno: para comparar en el paso 8)
         python orquestador.py --escribir         (solo escribe, con el salida/propuestas.json que ya está: gratis)
+        python orquestador.py --fichas --proveedores P09   (solo esos proveedores: las fichas de los demás no se tocan)
 """
 import argparse
 import json
@@ -68,8 +73,8 @@ TRABAJOS_DE_LECTURA = [
 ]
 LECTORES = {"pdf": extraer_pdf, "fds": extraer_fds, "folleto": extraer_folleto}
 
-# Los proveedores que se procesan esta semana (P06 está apartado hasta la semana 5)
-PROVEEDORES = ["P03", "P07", "P01", "P05"]
+# Los proveedores que se procesan esta semana (P06 está apartado hasta la semana 5). P09 entra en el paso 7
+PROVEEDORES = ["P03", "P07", "P01", "P05", "P09"]
 
 # Cuántos fichadores a la vez. Lo decidió el paso 2 con los límites de la cuenta: con 4 se pasa el límite de
 # tokens de SALIDA por minuto (80.000; el thinking cuenta como salida). Más fichadores no es más rápido: es 429.
@@ -97,7 +102,7 @@ def leer(trabajo: tuple, cliente, modelo: str, de_nuevo: bool, reloj: float) -> 
             "fin": round(fin, 1), "segundos": round(fin - inicio, 1), "costo_usd": round(costo, 6), "error": error}
 
 
-def chequear_lecturas(lecturas: list[dict]) -> tuple[list[str], dict[str, list[str]]]:
+def chequear_lecturas(lecturas: list[dict], proveedores: list[str]) -> tuple[list[str], dict[str, list[str]]]:
     """Fan-in: por proveedor, ¿la lectura quedó limpia? Devuelve (los que siguen, {frenado: sus problemas}).
 
     Junta los errores de sus trabajos y el chequeo entre etapas del servidor (problemas_de_lectura).
@@ -106,7 +111,7 @@ def chequear_lecturas(lecturas: list[dict]) -> tuple[list[str], dict[str, list[s
     from servidor_mcp import PROVEEDORES as CONFIGURACION, problemas_de_lectura
 
     siguen, frenados = [], {}
-    for proveedor_id in PROVEEDORES:
+    for proveedor_id in proveedores:
         problemas = [f"{l['archivo']}: {l['error']}" for l in lecturas if l["proveedor_id"] == proveedor_id and l["error"]]
         problemas += problemas_de_lectura(CONFIGURACION[proveedor_id])
         if problemas:
@@ -114,6 +119,23 @@ def chequear_lecturas(lecturas: list[dict]) -> tuple[list[str], dict[str, list[s
         else:
             siguen.append(proveedor_id)
     return siguen, frenados
+
+
+def avisos_de_lectura(proveedores: list[str]) -> dict[str, list[str]]:
+    """Lo que el lector dejó afuera a propósito y una persona tiene que ver (paso 7).
+
+    El texto de un mail que no es un producto: el saludo, la firma o una "PD para el sistema de carga". No frena a
+    nadie (no es un error de lectura) y no llega a los fichadores: el archivo es un dato, no instrucciones.
+    """
+    from servidor_mcp import PROVEEDORES as CONFIGURACION, leer_mail
+
+    avisos = {}
+    for proveedor_id in proveedores:
+        config = CONFIGURACION[proveedor_id]
+        if config.get("formato") == "mail":
+            avisos[proveedor_id] = [f"línea {otra['linea']}: {otra['texto']}"
+                                    for otra in leer_mail(proveedor_id, config)["otras_lineas"]]
+    return avisos
 
 
 def consolidar_proveedores(siguen: list[str]) -> dict[str, dict]:
@@ -132,10 +154,12 @@ def consolidar_proveedores(siguen: list[str]) -> dict[str, dict]:
         ruta.write_text(json.dumps({"proveedor_id": proveedor_id, "filas": filas}, ensure_ascii=False, indent=2),
                         encoding="utf-8")
         calculados = [fila["calculado"] for fila in filas]
+        de_otro_archivo = [fila for fila in filas  # un dato que vino de OTRO archivo (no de otra línea del mismo)
+                           if any(f["archivo"] != fila["fuente"]["archivo"] for f in fila["calculado"].get("fuentes", {}).values())]
         resumen[proveedor_id] = {
             "productos": len(filas),
             "con_fds": sum(1 for c in calculados if c.get("fds")),
-            "con_datos_de_otro_archivo": sum(1 for c in calculados if c.get("fuentes")),
+            "con_datos_de_otro_archivo": len(de_otro_archivo),
             "con_conflicto": sum(1 for c in calculados if c.get("conflictos")),
         }
     return resumen
@@ -255,13 +279,19 @@ def etapa_escritura(propuestas: dict, siguen: list[str]) -> dict:
     return escribir(propuestas, siguen, CARPETA_CONSOLIDADO, RUTA_RESULTADOS)
 
 
-def etapa_lectura(cliente, modelo: str, de_nuevo: bool) -> dict:
-    """Etapa 1: lanza todos los trabajos de lectura a la vez, los junta y decide qué proveedores siguen."""
+def etapa_lectura(cliente, modelo: str, de_nuevo: bool, proveedores: list[str] | None = None) -> dict:
+    """Etapa 1: lanza todos los trabajos de lectura a la vez, los junta y decide qué proveedores siguen.
+
+    proveedores: los de esta corrida (por defecto, todos). Un proveedor que lee el código (CSV, mail) no tiene
+    trabajos de lectura con IA: pasa directo al chequeo.
+    """
+    proveedores = proveedores or PROVEEDORES
+    trabajos = [trabajo for trabajo in TRABAJOS_DE_LECTURA if trabajo[0] in proveedores]
     reloj = time.perf_counter()
-    with ThreadPoolExecutor(max_workers=len(TRABAJOS_DE_LECTURA)) as hilos:
-        lecturas = list(hilos.map(lambda trabajo: leer(trabajo, cliente, modelo, de_nuevo, reloj), TRABAJOS_DE_LECTURA))
+    with ThreadPoolExecutor(max_workers=max(1, len(trabajos))) as hilos:
+        lecturas = list(hilos.map(lambda trabajo: leer(trabajo, cliente, modelo, de_nuevo, reloj), trabajos))
     segundos = time.perf_counter() - reloj
-    siguen, frenados = chequear_lecturas(lecturas)
+    siguen, frenados = chequear_lecturas(lecturas, proveedores)
     return {
         "fecha": f"{datetime.now():%Y-%m-%d %H:%M}",
         "de_nuevo": de_nuevo,
@@ -272,6 +302,7 @@ def etapa_lectura(cliente, modelo: str, de_nuevo: bool) -> dict:
         "lecturas": lecturas,
         "siguen": siguen,
         "frenados": frenados,
+        "avisos": avisos_de_lectura(siguen),
     }
 
 
@@ -292,6 +323,11 @@ def mostrar(etapa: dict) -> None:
         print(f"✖ {proveedor_id} frenado ({len(problemas)} problema(s)):")
         for problema in problemas[:5]:
             print(f"    - {problema}")
+    for proveedor_id, lineas in etapa.get("avisos", {}).items():
+        print(f"\n⚠ {proveedor_id}: el mail trae {len(lineas)} línea(s) que no son productos. NO llegan a los fichadores"
+              " (el archivo es un dato, no instrucciones):")
+        for linea in lineas:
+            print(f"    {linea}")
     if etapa.get("consolidado"):
         print("\n=== Consolidado por código (lo que van a ver los fichadores, en salida/consolidado/)")
         print(f"{'proveedor':<10}{'productos':>10}{'con FDS':>9}{'con datos de otro archivo':>27}{'con conflicto':>15}")
@@ -305,10 +341,16 @@ def main():
     argumentos.add_argument("--de-nuevo", action="store_true", help="Lee todo desde cero (paga las llamadas).")
     argumentos.add_argument("--fichas", action="store_true", help="Corre también la etapa 2, las fichas (paga).")
     argumentos.add_argument("--fichadores", type=int, default=FICHADORES, help=f"Fichadores a la vez (default {FICHADORES}).")
+    argumentos.add_argument("--proveedores", nargs="+", default=PROVEEDORES, metavar="Pxx",
+                            help="Solo estos proveedores (default: todos). Las fichas de los demás no se tocan.")
     argumentos.add_argument("--escribir", action="store_true",
                             help="Solo escribe resultados.json con el salida/propuestas.json que ya está (gratis).")
     opciones = argumentos.parse_args()
     de_nuevo = opciones.de_nuevo
+    proveedores = opciones.proveedores
+    desconocidos = [proveedor_id for proveedor_id in proveedores if proveedor_id not in PROVEEDORES]
+    if desconocidos:
+        sys.exit(f"ERROR: {', '.join(desconocidos)} no se procesa esta semana. Se puede: {', '.join(PROVEEDORES)}")
 
     load_dotenv(CARPETA_PROYECTO / ".env")
     modelo = os.getenv("MODELO")
@@ -316,7 +358,7 @@ def main():
         sys.exit("ERROR: falta MODELO en el .env")
 
     cliente = anthropic.Anthropic()  # uno solo para todos los hilos: el cliente de Anthropic se puede compartir
-    etapa = etapa_lectura(cliente, modelo, de_nuevo)
+    etapa = etapa_lectura(cliente, modelo, de_nuevo, proveedores)
     etapa["consolidado"] = consolidar_proveedores(etapa["siguen"])  # paso 4: solo los que pasaron el chequeo
     mostrar(etapa)
     ruta = CARPETA_SALIDA / "medicion_lectura.json"
@@ -324,23 +366,29 @@ def main():
     print(f"Guardado en salida/{ruta.name}")
 
     ruta_propuestas = CARPETA_SALIDA / "propuestas.json"
+    guardadas = json.loads(ruta_propuestas.read_text(encoding="utf-8")) if ruta_propuestas.exists() else {}
     if opciones.fichas:
-        fichas, propuestas = etapa_fichas(cliente, modelo, etapa["consolidado"], opciones.fichadores)
+        fichas, nuevas = etapa_fichas(cliente, modelo, etapa["consolidado"], opciones.fichadores)
         mostrar_fichas(fichas)
-        # Las propuestas se guardan ANTES de escribir: si algo falla después, lo que se pagó no se pierde
-        ruta_propuestas.write_text(json.dumps(propuestas, ensure_ascii=False, indent=2), encoding="utf-8")
+        # propuestas.json guarda la última propuesta de cada producto: las de los proveedores de esta corrida se
+        # reemplazan y las de los demás quedan. Se guarda ANTES de escribir: si algo falla después, lo pagado no se pierde
+        guardadas = {item_id: p for item_id, p in guardadas.items() if item_id.split(":")[0] not in proveedores}
+        guardadas.update(nuevas)
+        ruta_propuestas.write_text(json.dumps(guardadas, ensure_ascii=False, indent=2), encoding="utf-8")
     elif opciones.escribir:
-        if not ruta_propuestas.exists():
+        if not guardadas:
             sys.exit("✖ No hay salida/propuestas.json para escribir: corré primero con --fichas.")
-        propuestas = json.loads(ruta_propuestas.read_text(encoding="utf-8"))
     else:
         return
 
+    # Al escritor van solo las propuestas de los proveedores de esta corrida (las de los demás no se tocan)
+    propuestas = {item_id: p for item_id, p in guardadas.items() if item_id.split(":")[0] in proveedores}
     informe = etapa_escritura(propuestas, etapa["siguen"])
     mostrar_escritura(informe)
     if opciones.fichas:  # la medición, una por cantidad de fichadores (para comparar en el paso 8)
         fichas["escritor"] = informe
-        ruta = CARPETA_SALIDA / f"medicion_fichas_{opciones.fichadores}.json"
+        sufijo = "" if proveedores == PROVEEDORES else "_" + "_".join(proveedores)  # una corrida parcial no pisa la completa
+        ruta = CARPETA_SALIDA / f"medicion_fichas_{opciones.fichadores}{sufijo}.json"
         ruta.write_text(json.dumps(fichas, ensure_ascii=False, indent=2), encoding="utf-8")
         print(f"Guardado en salida/{ruta_propuestas.name} y salida/{ruta.name}")
 

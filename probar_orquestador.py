@@ -49,8 +49,8 @@ chequear("4 trabajos de 0,3 a 0,5 s: a la vez tardan lo que el más lento (~0,5 
          (etapa["segundos"] < 0.9, etapa["segundos_uno_detras_de_otro"] >= 1.6), (True, True))
 chequear("...todos empiezan juntos (carriles en paralelo)", all(l["inicio"] < 0.2 for l in etapa["lecturas"]), True)
 chequear("...el costo suma el de cada uno (número o detalle con 'total')", etapa["costo_usd"], 0.029)
-chequear("...y con las lecturas limpias, siguen los 4 proveedores", (etapa["siguen"], etapa["frenados"]),
-         (["P03", "P07", "P01", "P05"], {}))
+chequear("...y con las lecturas limpias, siguen los 5 proveedores", (etapa["siguen"], etapa["frenados"]),
+         (["P03", "P07", "P01", "P05", "P09"], {}))
 
 print("--- un lector que falla: se anota, no tira abajo a los demás (fan-in) ---")
 orquestador.LECTORES.update({"pdf": lector_falso(0.3, {"total": 0.01}), "fds": lector_falso(0.3, 0.005),
@@ -63,7 +63,13 @@ folleto = next(l for l in etapa["lecturas"] if l["tipo"] == "folleto")
 chequear("El error del folleto queda anotado, con su tipo", folleto["error"], "RuntimeError: no quedó ninguna fila")
 chequear("...Dermalab (P05) queda frenado con ese motivo",
          etapa["frenados"], {"P05": ["Dermalab_lanzamientos_2026.pdf: RuntimeError: no quedó ninguna fila"]})
-chequear("...y los otros 3 siguen igual", etapa["siguen"], ["P03", "P07", "P01"])
+chequear("...y los otros 4 siguen igual", etapa["siguen"], ["P03", "P07", "P01", "P09"])
+
+print("--- Natural Vida (paso 7): un mail que lee el código ---")
+etapa = orquestador.etapa_lectura(None, "modelo", de_nuevo=False, proveedores=["P09"])
+chequear("Solo P09: ningún trabajo de lectura con IA, y sigue a las fichas", (etapa["lecturas"], etapa["siguen"]), ([], ["P09"]))
+chequear("La PD aparece como aviso, con su línea (no se esconde)",
+         [aviso.split(":")[0] for aviso in etapa["avisos"]["P09"] if "sistema de carga" in aviso], ["línea 27"])
 
 print("--- consolidar_proveedores: el fan-in por código (paso 4) ---")
 carpeta = Path(tempfile.mkdtemp())

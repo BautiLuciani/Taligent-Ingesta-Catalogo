@@ -37,8 +37,10 @@ class ClaudeFalso:
 
     Cada llamada tarda ESPERA segundos con time.sleep: frena el hilo igual que la llamada real (que es síncrona).
     Así se puede medir si varios fichadores trabajan de verdad a la vez, sin gastar un peso.
+    ESPERA es de 2 s (no 1): así pesa más que lo que tarda en arrancar cada servidor (3 a la vez en una PC
+    cargada arrancan más lento), y la prueba mide el paralelo, no la velocidad de la PC.
     """
-    ESPERA = 1.0
+    ESPERA = 2.0
 
     def __init__(self, item_id: str):
         ficha = {"gtin": "7793469616846", "marca": "SONRISA", "tipo": "PASTA DENTAL", "contenido": 90, "unidad": "G"}

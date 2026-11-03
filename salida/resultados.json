@@ -10276,5 +10276,1213 @@
       "valor": "UREA 10 %",
       "explicacion": "Crema de urea para hidratación intensa del cuerpo: va en Hidratación corporal, según la taxonomía."
     }
+  },
+  "P09:NV-203": {
+    "item_id": "P09:NV-203",
+    "estado": "a_revision",
+    "duplicado_de": null,
+    "motivos_revision": [
+      "gtin_faltante"
+    ],
+    "ficha": {
+      "gtin": null,
+      "descripcion": "NATURAL VIDA VALERIANA 300 MG CAPSULAS X 30 UN",
+      "marca": "NATURAL VIDA",
+      "tipo": "CAPSULAS",
+      "variante": null,
+      "contenido": 30,
+      "unidad": "UN",
+      "unidades_por_envase": 1,
+      "principio_activo": "VALERIANA",
+      "concentracion": "300 MG",
+      "condicion_venta": null,
+      "categoria": "NUT-SUP-SUE",
+      "precio_costo": 357.43,
+      "moneda": "UYU",
+      "proveedor_id": "P09",
+      "codigo_proveedor": "NV-203"
+    },
+    "fuentes": {
+      "descripcion": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 10
+      },
+      "marca": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 4
+      },
+      "tipo": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 10
+      },
+      "contenido": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 10
+      },
+      "unidad": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 10
+      },
+      "unidades_por_envase": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 10
+      },
+      "principio_activo": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 10
+      },
+      "concentracion": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 10
+      },
+      "categoria": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 10
+      },
+      "precio_costo": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 10
+      },
+      "moneda": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 10
+      },
+      "proveedor_id": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 10
+      },
+      "codigo_proveedor": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 10
+      }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "CAPSULAS",
+      "explicacion": "La categoría la decide el principio activo VALERIANA (sueño y relajación); el tipo CAPSULAS solo indica la forma."
+    }
+  },
+  "P09:NV-206": {
+    "item_id": "P09:NV-206",
+    "estado": "a_revision",
+    "duplicado_de": null,
+    "motivos_revision": [
+      "gtin_faltante"
+    ],
+    "ficha": {
+      "gtin": null,
+      "descripcion": "NATURAL VIDA HIERRO 30 MG COMPRIMIDOS X 30 UN",
+      "marca": "NATURAL VIDA",
+      "tipo": "COMPRIMIDOS",
+      "variante": null,
+      "contenido": 30,
+      "unidad": "UN",
+      "unidades_por_envase": 1,
+      "principio_activo": "HIERRO",
+      "concentracion": "30 MG",
+      "condicion_venta": null,
+      "categoria": "NUT-VIT-MIN",
+      "precio_costo": 319.12,
+      "moneda": "UYU",
+      "proveedor_id": "P09",
+      "codigo_proveedor": "NV-206"
+    },
+    "fuentes": {
+      "descripcion": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 11
+      },
+      "marca": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 4
+      },
+      "tipo": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 11
+      },
+      "contenido": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 11
+      },
+      "unidad": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 11
+      },
+      "unidades_por_envase": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 11
+      },
+      "principio_activo": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 11
+      },
+      "concentracion": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 11
+      },
+      "categoria": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 11
+      },
+      "precio_costo": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 11
+      },
+      "moneda": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 11
+      },
+      "proveedor_id": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 11
+      },
+      "codigo_proveedor": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 11
+      }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "COMPRIMIDOS",
+      "explicacion": "La categoría la decide el principio activo HIERRO (minerales); el tipo COMPRIMIDOS solo indica la forma."
+    }
+  },
+  "P09:NV-209": {
+    "item_id": "P09:NV-209",
+    "estado": "a_revision",
+    "duplicado_de": null,
+    "motivos_revision": [
+      "gtin_invalido"
+    ],
+    "ficha": {
+      "gtin": null,
+      "descripcion": "NATURAL VIDA CURCUMA 500 MG CAPSULAS X 120 UN",
+      "marca": "NATURAL VIDA",
+      "tipo": "CAPSULAS",
+      "variante": null,
+      "contenido": 120,
+      "unidad": "UN",
+      "unidades_por_envase": 1,
+      "principio_activo": "CURCUMA",
+      "concentracion": "500 MG",
+      "condicion_venta": null,
+      "categoria": "NUT-SUP-NAT",
+      "precio_costo": 692.24,
+      "moneda": "UYU",
+      "proveedor_id": "P09",
+      "codigo_proveedor": "NV-209"
+    },
+    "fuentes": {
+      "descripcion": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 12
+      },
+      "marca": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 4
+      },
+      "tipo": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 12
+      },
+      "contenido": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 12
+      },
+      "unidad": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 12
+      },
+      "unidades_por_envase": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 12
+      },
+      "principio_activo": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 12
+      },
+      "concentracion": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 12
+      },
+      "categoria": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 12
+      },
+      "precio_costo": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 12
+      },
+      "moneda": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 12
+      },
+      "proveedor_id": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 12
+      },
+      "codigo_proveedor": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 12
+      }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "CAPSULAS",
+      "explicacion": "La categoría la decide el principio activo CURCUMA (extracto vegetal, naturales y herbales); el tipo solo indica la forma."
+    }
+  },
+  "P09:NV-212": {
+    "item_id": "P09:NV-212",
+    "estado": "lista_para_alta",
+    "duplicado_de": null,
+    "motivos_revision": [],
+    "ficha": {
+      "gtin": "7798469024080",
+      "descripcion": "NATURAL VIDA VITAMINA C 1 G COMPRIMIDOS EFERVESCENTES X 10 UN",
+      "marca": "NATURAL VIDA",
+      "tipo": "COMPRIMIDOS EFERVESCENTES",
+      "variante": null,
+      "contenido": 10,
+      "unidad": "UN",
+      "unidades_por_envase": 1,
+      "principio_activo": "VITAMINA C",
+      "concentracion": "1 G",
+      "condicion_venta": null,
+      "categoria": "NUT-VIT-VIT",
+      "precio_costo": 262.87,
+      "moneda": "UYU",
+      "proveedor_id": "P09",
+      "codigo_proveedor": "NV-212"
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 13
+      },
+      "descripcion": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 13
+      },
+      "marca": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 4
+      },
+      "tipo": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 13
+      },
+      "contenido": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 13
+      },
+      "unidad": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 13
+      },
+      "unidades_por_envase": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 13
+      },
+      "principio_activo": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 13
+      },
+      "concentracion": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 13
+      },
+      "categoria": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 13
+      },
+      "precio_costo": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 13
+      },
+      "moneda": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 13
+      },
+      "proveedor_id": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 13
+      },
+      "codigo_proveedor": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 13
+      }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "COMPRIMIDOS EFERVESCENTES",
+      "explicacion": "La categoría la decide el principio activo VITAMINA C (vitamina individual); el tipo solo indica la forma."
+    }
+  },
+  "P09:NV-215": {
+    "item_id": "P09:NV-215",
+    "estado": "lista_para_alta",
+    "duplicado_de": null,
+    "motivos_revision": [],
+    "ficha": {
+      "gtin": "7794471871513",
+      "descripcion": "NATURAL VIDA MELATONINA 5 MG COMPRIMIDOS X 60 UN",
+      "marca": "NATURAL VIDA",
+      "tipo": "COMPRIMIDOS",
+      "variante": null,
+      "contenido": 60,
+      "unidad": "UN",
+      "unidades_por_envase": 1,
+      "principio_activo": "MELATONINA",
+      "concentracion": "5 MG",
+      "condicion_venta": null,
+      "categoria": "NUT-SUP-SUE",
+      "precio_costo": 597.23,
+      "moneda": "UYU",
+      "proveedor_id": "P09",
+      "codigo_proveedor": "NV-215"
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 14
+      },
+      "descripcion": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 14
+      },
+      "marca": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 4
+      },
+      "tipo": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 14
+      },
+      "contenido": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 14
+      },
+      "unidad": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 14
+      },
+      "unidades_por_envase": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 14
+      },
+      "principio_activo": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 14
+      },
+      "concentracion": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 14
+      },
+      "categoria": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 14
+      },
+      "precio_costo": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 14
+      },
+      "moneda": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 14
+      },
+      "proveedor_id": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 14
+      },
+      "codigo_proveedor": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 14
+      }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "COMPRIMIDOS",
+      "explicacion": "La categoría la decide el principio activo MELATONINA (sueño y relajación); el tipo solo indica la forma."
+    }
+  },
+  "P09:NV-218": {
+    "item_id": "P09:NV-218",
+    "estado": "lista_para_alta",
+    "duplicado_de": null,
+    "motivos_revision": [],
+    "ficha": {
+      "gtin": "7792775731267",
+      "descripcion": "NATURAL VIDA CITRATO DE MAGNESIO 400 MG CAPSULAS X 60 UN",
+      "marca": "NATURAL VIDA",
+      "tipo": "CAPSULAS",
+      "variante": null,
+      "contenido": 60,
+      "unidad": "UN",
+      "unidades_por_envase": 1,
+      "principio_activo": "CITRATO DE MAGNESIO",
+      "concentracion": "400 MG",
+      "condicion_venta": null,
+      "categoria": "NUT-VIT-MIN",
+      "precio_costo": 436.0,
+      "moneda": "UYU",
+      "proveedor_id": "P09",
+      "codigo_proveedor": "NV-218"
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 15
+      },
+      "descripcion": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 15
+      },
+      "marca": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 4
+      },
+      "tipo": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 15
+      },
+      "contenido": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 15
+      },
+      "unidad": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 15
+      },
+      "unidades_por_envase": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 15
+      },
+      "principio_activo": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 15
+      },
+      "concentracion": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 15
+      },
+      "categoria": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 15
+      },
+      "precio_costo": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 15
+      },
+      "moneda": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 15
+      },
+      "proveedor_id": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 15
+      },
+      "codigo_proveedor": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 15
+      }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "CAPSULAS",
+      "explicacion": "La categoría la decide el principio activo CITRATO DE MAGNESIO (minerales); el tipo solo indica la forma."
+    }
+  },
+  "P09:NV-221": {
+    "item_id": "P09:NV-221",
+    "estado": "lista_para_alta",
+    "duplicado_de": null,
+    "motivos_revision": [],
+    "ficha": {
+      "gtin": "7798896933221",
+      "descripcion": "NATURAL VIDA MELATONINA 5 MG COMPRIMIDOS X 30 UN",
+      "marca": "NATURAL VIDA",
+      "tipo": "COMPRIMIDOS",
+      "variante": null,
+      "contenido": 30,
+      "unidad": "UN",
+      "unidades_por_envase": 1,
+      "principio_activo": "MELATONINA",
+      "concentracion": "5 MG",
+      "condicion_venta": null,
+      "categoria": "NUT-SUP-SUE",
+      "precio_costo": 412.05,
+      "moneda": "UYU",
+      "proveedor_id": "P09",
+      "codigo_proveedor": "NV-221"
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 16
+      },
+      "descripcion": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 16
+      },
+      "marca": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 4
+      },
+      "tipo": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 16
+      },
+      "contenido": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 16
+      },
+      "unidad": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 16
+      },
+      "unidades_por_envase": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 16
+      },
+      "principio_activo": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 16
+      },
+      "concentracion": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 16
+      },
+      "categoria": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 16
+      },
+      "precio_costo": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 16
+      },
+      "moneda": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 16
+      },
+      "proveedor_id": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 16
+      },
+      "codigo_proveedor": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 16
+      }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "COMPRIMIDOS",
+      "explicacion": "La categoría la decide el principio activo MELATONINA (sueño y relajación); el tipo solo indica la forma."
+    }
+  },
+  "P09:NV-224": {
+    "item_id": "P09:NV-224",
+    "estado": "lista_para_alta",
+    "duplicado_de": null,
+    "motivos_revision": [],
+    "ficha": {
+      "gtin": "7799016979914",
+      "descripcion": "NATURAL VIDA ZINC 15 MG COMPRIMIDOS X 120 UN",
+      "marca": "NATURAL VIDA",
+      "tipo": "COMPRIMIDOS",
+      "variante": null,
+      "contenido": 120,
+      "unidad": "UN",
+      "unidades_por_envase": 1,
+      "principio_activo": "ZINC",
+      "concentracion": "15 MG",
+      "condicion_venta": null,
+      "categoria": "NUT-VIT-MIN",
+      "precio_costo": 484.05,
+      "moneda": "UYU",
+      "proveedor_id": "P09",
+      "codigo_proveedor": "NV-224"
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 17
+      },
+      "descripcion": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 17
+      },
+      "marca": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 4
+      },
+      "tipo": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 17
+      },
+      "contenido": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 17
+      },
+      "unidad": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 17
+      },
+      "unidades_por_envase": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 17
+      },
+      "principio_activo": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 17
+      },
+      "concentracion": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 17
+      },
+      "categoria": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 17
+      },
+      "precio_costo": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 17
+      },
+      "moneda": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 17
+      },
+      "proveedor_id": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 17
+      },
+      "codigo_proveedor": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 17
+      }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "COMPRIMIDOS",
+      "explicacion": "La categoría la decide el principio activo ZINC (minerales); el tipo solo indica la forma."
+    }
+  },
+  "P09:NV-227": {
+    "item_id": "P09:NV-227",
+    "estado": "lista_para_alta",
+    "duplicado_de": null,
+    "motivos_revision": [],
+    "ficha": {
+      "gtin": "7797687069545",
+      "descripcion": "NATURAL VIDA MELATONINA 3 MG COMPRIMIDOS X 30 UN",
+      "marca": "NATURAL VIDA",
+      "tipo": "COMPRIMIDOS",
+      "variante": null,
+      "contenido": 30,
+      "unidad": "UN",
+      "unidades_por_envase": 1,
+      "principio_activo": "MELATONINA",
+      "concentracion": "3 MG",
+      "condicion_venta": null,
+      "categoria": "NUT-SUP-SUE",
+      "precio_costo": 348.9,
+      "moneda": "UYU",
+      "proveedor_id": "P09",
+      "codigo_proveedor": "NV-227"
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 18
+      },
+      "descripcion": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 18
+      },
+      "marca": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 4
+      },
+      "tipo": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 18
+      },
+      "contenido": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 18
+      },
+      "unidad": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 18
+      },
+      "unidades_por_envase": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 18
+      },
+      "principio_activo": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 18
+      },
+      "concentracion": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 18
+      },
+      "categoria": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 18
+      },
+      "precio_costo": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 18
+      },
+      "moneda": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 18
+      },
+      "proveedor_id": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 18
+      },
+      "codigo_proveedor": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 18
+      }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "COMPRIMIDOS",
+      "explicacion": "La categoría la decide el principio activo MELATONINA (sueño y relajación); el tipo solo indica la forma."
+    }
+  },
+  "P09:NV-230": {
+    "item_id": "P09:NV-230",
+    "estado": "lista_para_alta",
+    "duplicado_de": null,
+    "motivos_revision": [],
+    "ficha": {
+      "gtin": "7791681280616",
+      "descripcion": "NATURAL VIDA VITAMINA C 1 G COMPRIMIDOS EFERVESCENTES X 20 UN",
+      "marca": "NATURAL VIDA",
+      "tipo": "COMPRIMIDOS EFERVESCENTES",
+      "variante": null,
+      "contenido": 20,
+      "unidad": "UN",
+      "unidades_por_envase": 1,
+      "principio_activo": "VITAMINA C",
+      "concentracion": "1 G",
+      "condicion_venta": null,
+      "categoria": "NUT-VIT-VIT",
+      "precio_costo": 452.87,
+      "moneda": "UYU",
+      "proveedor_id": "P09",
+      "codigo_proveedor": "NV-230"
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 19
+      },
+      "descripcion": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 19
+      },
+      "marca": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 4
+      },
+      "tipo": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 19
+      },
+      "contenido": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 19
+      },
+      "unidad": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 19
+      },
+      "unidades_por_envase": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 19
+      },
+      "principio_activo": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 19
+      },
+      "concentracion": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 19
+      },
+      "categoria": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 19
+      },
+      "precio_costo": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 19
+      },
+      "moneda": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 19
+      },
+      "proveedor_id": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 19
+      },
+      "codigo_proveedor": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 19
+      }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "COMPRIMIDOS EFERVESCENTES",
+      "explicacion": "La categoría la decide el principio activo VITAMINA C (vitamina individual); el tipo solo indica la forma."
+    }
+  },
+  "P09:NV-233": {
+    "item_id": "P09:NV-233",
+    "estado": "lista_para_alta",
+    "duplicado_de": null,
+    "motivos_revision": [],
+    "ficha": {
+      "gtin": "7799515902222",
+      "descripcion": "NATURAL VIDA ZINC 15 MG COMPRIMIDOS X 60 UN",
+      "marca": "NATURAL VIDA",
+      "tipo": "COMPRIMIDOS",
+      "variante": null,
+      "contenido": 60,
+      "unidad": "UN",
+      "unidades_por_envase": 1,
+      "principio_activo": "ZINC",
+      "concentracion": "15 MG",
+      "condicion_venta": null,
+      "categoria": "NUT-VIT-MIN",
+      "precio_costo": 273.44,
+      "moneda": "UYU",
+      "proveedor_id": "P09",
+      "codigo_proveedor": "NV-233"
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 20
+      },
+      "descripcion": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 20
+      },
+      "marca": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 4
+      },
+      "tipo": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 20
+      },
+      "contenido": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 20
+      },
+      "unidad": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 20
+      },
+      "unidades_por_envase": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 20
+      },
+      "principio_activo": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 20
+      },
+      "concentracion": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 20
+      },
+      "categoria": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 20
+      },
+      "precio_costo": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 20
+      },
+      "moneda": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 20
+      },
+      "proveedor_id": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 20
+      },
+      "codigo_proveedor": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 20
+      }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "COMPRIMIDOS",
+      "explicacion": "La forma es comprimidos; la categoría Minerales sale del principio activo ZINC declarado en el nombre del producto."
+    }
+  },
+  "P09:NV-236": {
+    "item_id": "P09:NV-236",
+    "estado": "lista_para_alta",
+    "duplicado_de": null,
+    "motivos_revision": [],
+    "ficha": {
+      "gtin": "7796282753194",
+      "descripcion": "NATURAL VIDA MELATONINA 3 MG COMPRIMIDOS X 60 UN",
+      "marca": "NATURAL VIDA",
+      "tipo": "COMPRIMIDOS",
+      "variante": null,
+      "contenido": 60,
+      "unidad": "UN",
+      "unidades_por_envase": 1,
+      "principio_activo": "MELATONINA",
+      "concentracion": "3 MG",
+      "condicion_venta": null,
+      "categoria": "NUT-SUP-SUE",
+      "precio_costo": 563.54,
+      "moneda": "UYU",
+      "proveedor_id": "P09",
+      "codigo_proveedor": "NV-236"
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 21
+      },
+      "descripcion": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 21
+      },
+      "marca": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 4
+      },
+      "tipo": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 21
+      },
+      "contenido": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 21
+      },
+      "unidad": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 21
+      },
+      "unidades_por_envase": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 21
+      },
+      "principio_activo": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 21
+      },
+      "concentracion": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 21
+      },
+      "categoria": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 21
+      },
+      "precio_costo": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 21
+      },
+      "moneda": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 21
+      },
+      "proveedor_id": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 21
+      },
+      "codigo_proveedor": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 21
+      }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "COMPRIMIDOS",
+      "explicacion": "La forma es comprimidos; la categoría Sueño y relajación sale del principio activo MELATONINA declarado en el nombre."
+    }
+  },
+  "P09:NV-239": {
+    "item_id": "P09:NV-239",
+    "estado": "lista_para_alta",
+    "duplicado_de": null,
+    "motivos_revision": [],
+    "ficha": {
+      "gtin": "7798171145820",
+      "descripcion": "NATURAL VIDA COLAGENO HIDROLIZADO POLVO X 300 G",
+      "marca": "NATURAL VIDA",
+      "tipo": "POLVO",
+      "variante": null,
+      "contenido": 300,
+      "unidad": "G",
+      "unidades_por_envase": 1,
+      "principio_activo": "COLAGENO HIDROLIZADO",
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "NUT-SUP-COL",
+      "precio_costo": 887.58,
+      "moneda": "UYU",
+      "proveedor_id": "P09",
+      "codigo_proveedor": "NV-239"
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 22
+      },
+      "descripcion": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 22
+      },
+      "marca": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 4
+      },
+      "tipo": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 22
+      },
+      "contenido": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 22
+      },
+      "unidad": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 22
+      },
+      "unidades_por_envase": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 22
+      },
+      "principio_activo": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 22
+      },
+      "categoria": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 22
+      },
+      "precio_costo": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 22
+      },
+      "moneda": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 22
+      },
+      "proveedor_id": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 22
+      },
+      "codigo_proveedor": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 22
+      }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "POLVO",
+      "explicacion": "La forma es polvo; la categoría Colágeno y articulaciones sale del principio activo COLÁGENO HIDROLIZADO declarado en el nombre."
+    }
+  },
+  "P09:NV-242": {
+    "item_id": "P09:NV-242",
+    "estado": "lista_para_alta",
+    "duplicado_de": null,
+    "motivos_revision": [],
+    "ficha": {
+      "gtin": "7790071457973",
+      "descripcion": "NATURAL VIDA CITRATO DE MAGNESIO 400 MG CAPSULAS X 120 UN",
+      "marca": "NATURAL VIDA",
+      "tipo": "CAPSULAS",
+      "variante": null,
+      "contenido": 120,
+      "unidad": "UN",
+      "unidades_por_envase": 1,
+      "principio_activo": "CITRATO DE MAGNESIO",
+      "concentracion": "400 MG",
+      "condicion_venta": null,
+      "categoria": "NUT-VIT-MIN",
+      "precio_costo": 744.9,
+      "moneda": "UYU",
+      "proveedor_id": "P09",
+      "codigo_proveedor": "NV-242"
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 23
+      },
+      "descripcion": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 23
+      },
+      "marca": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 4
+      },
+      "tipo": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 23
+      },
+      "contenido": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 23
+      },
+      "unidad": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 23
+      },
+      "unidades_por_envase": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 23
+      },
+      "principio_activo": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 23
+      },
+      "concentracion": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 23
+      },
+      "categoria": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 23
+      },
+      "precio_costo": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 23
+      },
+      "moneda": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 23
+      },
+      "proveedor_id": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 23
+      },
+      "codigo_proveedor": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 23
+      }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "CAPSULAS",
+      "explicacion": "La forma es cápsulas; la categoría Minerales sale del principio activo CITRATO DE MAGNESIO declarado en el nombre."
+    }
   }
 }

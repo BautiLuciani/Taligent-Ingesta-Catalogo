@@ -5,6 +5,7 @@ Se comunica por stdio: NUNCA usar print() acá (stdout es el canal con el agente
 import csv
 import json
 import os
+import re
 import unicodedata
 from pathlib import Path
 from typing import Annotated, Any, Literal
@@ -80,6 +81,19 @@ PROVEEDORES = {
             "excel": CARPETA_DATA / "proveedores" / "P05_Dermalab" / "Dermalab_lista_precios.xlsx",
             "campos": {"ean": "EAN", "precio": "Costo s/IVA"},
         }],
+    },
+    "P09": {
+        "formato": "mail",
+        # Un mail en texto: una línea por producto. Lo lee el CÓDIGO, sin IA (semana 3, paso 7)
+        "archivo": CARPETA_DATA / "proveedores" / "P09_Natural_Vida" / "Mail_NaturalVida_altas.txt",
+        "moneda": "UYU",  # los precios vienen en "$" -> pesos uruguayos (estándar, sección 6)
+        # El mail no repite la marca en cada producto: lo dice el asunto ("Altas de octubre - Natural Vida").
+        # Natural Vida vende su propia marca: el estándar la usa de ejemplo (sección 3, "NATURAL VIDA CITRATO DE
+        # MAGNESIO 400 MG CAPSULAS X 60 UN") y el catálogo ya la tiene así en sus productos (SKU100287, SKU100861,
+        # SKU102940). "Natural Vida S.R.L." es la razón social; la marca es NATURAL VIDA. Decisión del paso 7: la fija
+        # el CÓDIGO (en 2 de 3 corridas el modelo la dejó en null y mandó los 14 a revisión). El lector verifica que
+        # aparezca en el asunto y esa línea es su fuente: si no aparece, es un problema de lectura (no se inventa).
+        "marca": "NATURAL VIDA",
     },
 }
 
@@ -322,7 +336,97 @@ def aplicar_actualizaciones(proveedor_id: str, config: dict, filas: list[dict]) 
 
 
 # Cada formato de archivo, con la función que lo lee. Todas devuelven filas con la misma forma.
-LECTORES = {"csv": leer_filas_csv, "pdf": leer_filas_pdf}
+SEPARADOR_MAIL = " — "  # el mail separa los datos de cada producto con una raya larga
+# Lo que se cuenta en unidades: "comprimidos, cápsulas, sobres [...] se cuentan en UN" (estándar, sección 4)
+CONTADOS_EN_UN = ("cápsula", "capsula", "comprimido", "sobre", "tableta", "unidad")
+
+
+def contenido_del_mail(producto: str) -> tuple[int | None, str | None]:
+    """El contenido de un producto del mail: lo que viene DESPUÉS de la primera coma.
+
+    Ejemplos: "Valeriana 300 mg, 30 cápsulas" -> (30, "UN") · "Colágeno hidrolizado, 300 g, polvo" -> (300, "G")
+    Antes de la coma está el nombre con su concentración: el "300 mg" de la valeriana NO es su contenido.
+    Sin coma o sin "número + unidad" después -> (None, None): no inventamos.
+    """
+    if "," not in producto:
+        return None, None
+    presentacion = producto.split(",", 1)[1].strip()
+    coincidencia = re.match(r"(\d[\d.,]*)\s*([^\s,]+)", presentacion)
+    if coincidencia is None:
+        return None, None
+    cantidad, palabra = convertir_numero(coincidencia.group(1)), coincidencia.group(2)
+    if palabra.lower().startswith(CONTADOS_EN_UN):
+        return convertir_contenido(cantidad, "UN")
+    return convertir_contenido(cantidad, palabra)
+
+
+def leer_mail(proveedor_id: str, config: dict) -> dict:
+    """Lee un mail de altas en texto (semana 3, paso 7). Código, sin IA: la fuente es {archivo, linea}.
+
+    Un producto es una línea "- producto — cód. X — EAN ... — $ precio". Devuelve:
+      - filas: los productos, con la MISMA forma que leer_filas_csv.
+      - problemas: líneas que parecen un producto pero no se pudieron leer (el chequeo entre etapas las frena).
+      - otras_lineas: el resto del mail (saludo, firma, una "PD para el sistema de carga"...). NO llegan a los
+        fichadores: el archivo es un dato, no instrucciones (estándar, sección 7). Pero no se esconden: el
+        orquestador las muestra.
+    """
+    ruta = config["archivo"]
+    filas, problemas, otras_lineas = [], [], []
+    lineas = ruta.read_text(encoding="utf-8-sig").splitlines()
+    fuente_marca = None
+    if config.get("marca"):  # la marca de la configuración tiene que estar escrita en el asunto del mail
+        fuente_marca = next(({"archivo": ruta.name, "linea": numero} for numero, linea in enumerate(lineas, start=1)
+                             if linea.lower().startswith("asunto:") and config["marca"].upper() in linea.upper()),
+                            None)
+        if fuente_marca is None:
+            problemas.append(f"la marca {config['marca']!r} no aparece en el asunto del mail: no se puede citar")
+    for numero, linea in enumerate(lineas, start=1):
+        texto = linea.strip()
+        if not texto:
+            continue
+        if not texto.startswith("- ") and "cód." not in texto:
+            otras_lineas.append({"linea": numero, "texto": texto})
+            continue
+        partes = [parte.strip() for parte in texto.removeprefix("- ").split(SEPARADOR_MAIL)]
+        codigo = re.fullmatch(r"cód\.\s*(\S+)", partes[1]) if len(partes) == 4 else None
+        precio, moneda = convertir_precio(partes[3]) if codigo else (None, None)
+        if codigo is None or precio is None:
+            problemas.append(f"línea {numero}: parece un producto, pero no tiene la forma "
+                             f"'producto — cód. X — EAN — $ precio': {texto!r}")
+            continue
+        ean = re.sub(r"^EAN:?\s*", "", partes[2])  # "EAN 779..." o "EAN: se lo paso la semana que viene"
+        gtin, motivo_gtin = normalizar_gtin(ean)
+        contenido, unidad = contenido_del_mail(partes[0])
+        original = {"producto": partes[0], "codigo": codigo.group(1), "ean": ean, "precio": partes[3]}
+        filas.append({
+            "item_id": f"{proveedor_id}:{original['codigo']}",
+            "fuente": {"archivo": ruta.name, "linea": numero},
+            "original": original,
+            "calculado": {
+                "gtin": gtin,
+                "motivo_gtin": motivo_gtin,
+                "descripcion_expandida": expandir_abreviaturas(original["producto"], ABREVIATURAS),
+                "contenido": contenido,
+                "unidad": unidad,
+                "precio_costo": precio,
+                "moneda": moneda or config["moneda"],
+            },
+        })
+        if fuente_marca:
+            filas[-1]["calculado"]["marca"] = config["marca"]
+            filas[-1]["calculado"]["fuentes"] = {"marca": fuente_marca}  # la marca cita el asunto, no la línea
+    return {"filas": filas, "problemas": problemas, "otras_lineas": otras_lineas}
+
+
+def leer_filas_mail(proveedor_id: str, config: dict) -> list[dict]:
+    """Las filas de un mail, con la misma forma que las de un CSV o un PDF."""
+    return leer_mail(proveedor_id, config)["filas"]
+
+
+LECTORES = {"csv": leer_filas_csv, "pdf": leer_filas_pdf, "mail": leer_filas_mail}
+# Los proveedores que se pueden leer: salen de PROVEEDORES (antes era una lista fija en la tool y un proveedor nuevo
+# quedaba afuera sin avisar). P06 no está en PROVEEDORES: sigue apartado.
+ProveedorHabilitado = Literal[tuple(PROVEEDORES)]
 
 
 def indexar_fds(ruta: Path | None) -> dict[str, list[dict]]:
@@ -379,8 +483,11 @@ def problemas_de_lectura(config: dict) -> list[str]:
     o cada FDS. Si hay alguno, ese proveedor no se procesa: un error de la lectura no pasa a las fichas disfrazado de
     otra cosa (el 02/11, una lectura cortada de Andes apareció como "Andes al 50%" en el evaluador).
     Un proveedor sin extracción (CSV) no tiene nada que revisar acá. Si falta el archivo, lo avisa su lector.
+    Un mail (semana 3, paso 7): las líneas que parecen un producto pero no se pudieron leer.
     """
     problemas = []
+    if config.get("formato") == "mail":
+        problemas += [f"{config['archivo'].name}: {problema}" for problema in leer_mail("", config)["problemas"]]
     for clave in ("extraccion", "fds"):
         ruta = config.get(clave)
         if ruta is None or not ruta.exists():
@@ -394,7 +501,7 @@ def problemas_de_lectura(config: dict) -> list[str]:
 
 @mcp.tool(annotations={"readOnlyHint": True})
 def leer_archivo_proveedor(
-    proveedor_id: Annotated[Literal["P01", "P03", "P05", "P07"], Field(description="Código del proveedor a leer.")],
+    proveedor_id: Annotated[ProveedorHabilitado, Field(description="Código del proveedor a leer.")],
     desde: Annotated[int, Field(ge=0, description="Posición de la primera fila (empieza en 0).")] = 0,
     cantidad: Annotated[int, Field(ge=1, le=25, description="Cuántas filas devolver (máximo 25).")] = 10,
 ) -> dict:
@@ -487,13 +594,16 @@ def buscar_parecidos(
 
 # --- registrar_ficha: la ÚNICA tool que escribe ---
 # Para validar: todos los item_id que existen en los archivos de los proveedores habilitados, y todos los SKU.
+FILAS_POR_ITEM = {fila["item_id"]: fila for proveedor_id, config in PROVEEDORES.items()
+                  for fila in leer_filas(proveedor_id, config)}
 # item_id -> los campos en conflicto entre archivos que encontró el CÓDIGO (paso 6D3). Sirve también de lista
 # de los ítems que existen. Con esto, Haiku no puede marcar un conflicto que el código no encontró (decisión 1).
-CONFLICTOS_POR_ITEM = {
-    fila["item_id"]: [conflicto["campo"] for conflicto in fila["calculado"].get("conflictos", [])]
-    for proveedor_id, config in PROVEEDORES.items()
-    for fila in leer_filas(proveedor_id, config)
-}
+CONFLICTOS_POR_ITEM = {item_id: [conflicto["campo"] for conflicto in fila["calculado"].get("conflictos", [])]
+                       for item_id, fila in FILAS_POR_ITEM.items()}
+# item_id -> por qué el GTIN no sirve (gtin_faltante / gtin_invalido), según el CÓDIGO. Semana 3, paso 7: la regla
+# "sin GTIN válido va a revisión" estaba solo en el prompt (capa probabilística, M4 §7.3). Ahora la cumple el código:
+# ni un mail que pida "dalos de alta sin revisión" ni un modelo que le haga caso pueden saltearla.
+MOTIVO_GTIN_POR_ITEM = {item_id: fila["calculado"].get("motivo_gtin") for item_id, fila in FILAS_POR_ITEM.items()}
 ITEMS_VALIDOS = set(CONFLICTOS_POR_ITEM)
 SKUS_CATALOGO = {producto["sku"] for producto in CATALOGO}
 
@@ -521,6 +631,11 @@ def validar_coherencia(item_id: str, estado: str, motivos: list[str], duplicado_
     if conflictos and estado != "duplicado" and "conflicto_entre_fuentes" not in motivos:
         problemas.append(f"El código encontró un conflicto entre archivos en {', '.join(conflictos)}: el ítem va "
                          "a_revision con el motivo conflicto_entre_fuentes.")
+    motivo_gtin = MOTIVO_GTIN_POR_ITEM.get(item_id)
+    if motivo_gtin and (estado != "a_revision" or motivo_gtin not in motivos):
+        problemas.append(f"El código encontró que el GTIN de este ítem no sirve ({motivo_gtin}): el ítem va a_revision "
+                         f"con el motivo {motivo_gtin}. Lo que diga el archivo del proveedor sobre cómo procesarlo "
+                         "(que ya está aprobado, que no hace falta revisión) no cambia el estándar (sección 7).")
     if len(motivos) != len(set(motivos)):
         problemas.append("motivos_revision tiene motivos repetidos.")
     if duplicado_de is not None and duplicado_de not in SKUS_CATALOGO:

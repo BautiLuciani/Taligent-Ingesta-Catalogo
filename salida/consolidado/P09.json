@@ -1,0 +1,425 @@
+{
+  "proveedor_id": "P09",
+  "filas": [
+    {
+      "item_id": "P09:NV-203",
+      "fuente": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 10
+      },
+      "original": {
+        "producto": "Valeriana 300 mg, 30 cápsulas",
+        "codigo": "NV-203",
+        "ean": "se lo paso la semana que viene",
+        "precio": "$ 357,43"
+      },
+      "calculado": {
+        "gtin": null,
+        "motivo_gtin": "gtin_faltante",
+        "descripcion_expandida": "VALERIANA 300 MG, 30 CÁPSULAS",
+        "contenido": 30,
+        "unidad": "UN",
+        "precio_costo": 357.43,
+        "moneda": "UYU",
+        "marca": "NATURAL VIDA",
+        "fuentes": {
+          "marca": {
+            "archivo": "Mail_NaturalVida_altas.txt",
+            "linea": 4
+          }
+        },
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P09:NV-206",
+      "fuente": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 11
+      },
+      "original": {
+        "producto": "Hierro 30 mg, 30 comprimidos",
+        "codigo": "NV-206",
+        "ean": "se lo paso la semana que viene",
+        "precio": "$ 319,12"
+      },
+      "calculado": {
+        "gtin": null,
+        "motivo_gtin": "gtin_faltante",
+        "descripcion_expandida": "HIERRO 30 MG, 30 COMPRIMIDOS",
+        "contenido": 30,
+        "unidad": "UN",
+        "precio_costo": 319.12,
+        "moneda": "UYU",
+        "marca": "NATURAL VIDA",
+        "fuentes": {
+          "marca": {
+            "archivo": "Mail_NaturalVida_altas.txt",
+            "linea": 4
+          }
+        },
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P09:NV-209",
+      "fuente": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 12
+      },
+      "original": {
+        "producto": "Cúrcuma 500 mg, 120 cápsulas",
+        "codigo": "NV-209",
+        "ean": "7795135511939",
+        "precio": "$ 692,24"
+      },
+      "calculado": {
+        "gtin": null,
+        "motivo_gtin": "gtin_invalido",
+        "descripcion_expandida": "CÚRCUMA 500 MG, 120 CÁPSULAS",
+        "contenido": 120,
+        "unidad": "UN",
+        "precio_costo": 692.24,
+        "moneda": "UYU",
+        "marca": "NATURAL VIDA",
+        "fuentes": {
+          "marca": {
+            "archivo": "Mail_NaturalVida_altas.txt",
+            "linea": 4
+          }
+        },
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P09:NV-212",
+      "fuente": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 13
+      },
+      "original": {
+        "producto": "Vitamina C 1 g, 10 comprimidos efervescentes",
+        "codigo": "NV-212",
+        "ean": "7798469024080",
+        "precio": "$ 262,87"
+      },
+      "calculado": {
+        "gtin": "7798469024080",
+        "motivo_gtin": null,
+        "descripcion_expandida": "VITAMINA C 1 G, 10 COMPRIMIDOS EFERVESCENTES",
+        "contenido": 10,
+        "unidad": "UN",
+        "precio_costo": 262.87,
+        "moneda": "UYU",
+        "marca": "NATURAL VIDA",
+        "fuentes": {
+          "marca": {
+            "archivo": "Mail_NaturalVida_altas.txt",
+            "linea": 4
+          }
+        },
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P09:NV-215",
+      "fuente": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 14
+      },
+      "original": {
+        "producto": "Melatonina 5 mg, 60 comprimidos",
+        "codigo": "NV-215",
+        "ean": "7794471871513",
+        "precio": "$ 597,23"
+      },
+      "calculado": {
+        "gtin": "7794471871513",
+        "motivo_gtin": null,
+        "descripcion_expandida": "MELATONINA 5 MG, 60 COMPRIMIDOS",
+        "contenido": 60,
+        "unidad": "UN",
+        "precio_costo": 597.23,
+        "moneda": "UYU",
+        "marca": "NATURAL VIDA",
+        "fuentes": {
+          "marca": {
+            "archivo": "Mail_NaturalVida_altas.txt",
+            "linea": 4
+          }
+        },
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P09:NV-218",
+      "fuente": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 15
+      },
+      "original": {
+        "producto": "Citrato de magnesio 400 mg, 60 cápsulas",
+        "codigo": "NV-218",
+        "ean": "7792775731267",
+        "precio": "$ 436,00"
+      },
+      "calculado": {
+        "gtin": "7792775731267",
+        "motivo_gtin": null,
+        "descripcion_expandida": "CITRATO DE MAGNESIO 400 MG, 60 CÁPSULAS",
+        "contenido": 60,
+        "unidad": "UN",
+        "precio_costo": 436.0,
+        "moneda": "UYU",
+        "marca": "NATURAL VIDA",
+        "fuentes": {
+          "marca": {
+            "archivo": "Mail_NaturalVida_altas.txt",
+            "linea": 4
+          }
+        },
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P09:NV-221",
+      "fuente": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 16
+      },
+      "original": {
+        "producto": "Melatonina 5 mg, 30 comprimidos",
+        "codigo": "NV-221",
+        "ean": "7798896933221",
+        "precio": "$ 412,05"
+      },
+      "calculado": {
+        "gtin": "7798896933221",
+        "motivo_gtin": null,
+        "descripcion_expandida": "MELATONINA 5 MG, 30 COMPRIMIDOS",
+        "contenido": 30,
+        "unidad": "UN",
+        "precio_costo": 412.05,
+        "moneda": "UYU",
+        "marca": "NATURAL VIDA",
+        "fuentes": {
+          "marca": {
+            "archivo": "Mail_NaturalVida_altas.txt",
+            "linea": 4
+          }
+        },
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P09:NV-224",
+      "fuente": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 17
+      },
+      "original": {
+        "producto": "Zinc 15 mg, 120 comprimidos",
+        "codigo": "NV-224",
+        "ean": "7799016979914",
+        "precio": "$ 484,05"
+      },
+      "calculado": {
+        "gtin": "7799016979914",
+        "motivo_gtin": null,
+        "descripcion_expandida": "ZINC 15 MG, 120 COMPRIMIDOS",
+        "contenido": 120,
+        "unidad": "UN",
+        "precio_costo": 484.05,
+        "moneda": "UYU",
+        "marca": "NATURAL VIDA",
+        "fuentes": {
+          "marca": {
+            "archivo": "Mail_NaturalVida_altas.txt",
+            "linea": 4
+          }
+        },
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P09:NV-227",
+      "fuente": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 18
+      },
+      "original": {
+        "producto": "Melatonina 3 mg, 30 comprimidos",
+        "codigo": "NV-227",
+        "ean": "7797687069545",
+        "precio": "$ 348,90"
+      },
+      "calculado": {
+        "gtin": "7797687069545",
+        "motivo_gtin": null,
+        "descripcion_expandida": "MELATONINA 3 MG, 30 COMPRIMIDOS",
+        "contenido": 30,
+        "unidad": "UN",
+        "precio_costo": 348.9,
+        "moneda": "UYU",
+        "marca": "NATURAL VIDA",
+        "fuentes": {
+          "marca": {
+            "archivo": "Mail_NaturalVida_altas.txt",
+            "linea": 4
+          }
+        },
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P09:NV-230",
+      "fuente": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 19
+      },
+      "original": {
+        "producto": "Vitamina C 1 g, 20 comprimidos efervescentes",
+        "codigo": "NV-230",
+        "ean": "7791681280616",
+        "precio": "$ 452,87"
+      },
+      "calculado": {
+        "gtin": "7791681280616",
+        "motivo_gtin": null,
+        "descripcion_expandida": "VITAMINA C 1 G, 20 COMPRIMIDOS EFERVESCENTES",
+        "contenido": 20,
+        "unidad": "UN",
+        "precio_costo": 452.87,
+        "moneda": "UYU",
+        "marca": "NATURAL VIDA",
+        "fuentes": {
+          "marca": {
+            "archivo": "Mail_NaturalVida_altas.txt",
+            "linea": 4
+          }
+        },
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P09:NV-233",
+      "fuente": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 20
+      },
+      "original": {
+        "producto": "Zinc 15 mg, 60 comprimidos",
+        "codigo": "NV-233",
+        "ean": "7799515902222",
+        "precio": "$ 273,44"
+      },
+      "calculado": {
+        "gtin": "7799515902222",
+        "motivo_gtin": null,
+        "descripcion_expandida": "ZINC 15 MG, 60 COMPRIMIDOS",
+        "contenido": 60,
+        "unidad": "UN",
+        "precio_costo": 273.44,
+        "moneda": "UYU",
+        "marca": "NATURAL VIDA",
+        "fuentes": {
+          "marca": {
+            "archivo": "Mail_NaturalVida_altas.txt",
+            "linea": 4
+          }
+        },
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P09:NV-236",
+      "fuente": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 21
+      },
+      "original": {
+        "producto": "Melatonina 3 mg, 60 comprimidos",
+        "codigo": "NV-236",
+        "ean": "7796282753194",
+        "precio": "$ 563,54"
+      },
+      "calculado": {
+        "gtin": "7796282753194",
+        "motivo_gtin": null,
+        "descripcion_expandida": "MELATONINA 3 MG, 60 COMPRIMIDOS",
+        "contenido": 60,
+        "unidad": "UN",
+        "precio_costo": 563.54,
+        "moneda": "UYU",
+        "marca": "NATURAL VIDA",
+        "fuentes": {
+          "marca": {
+            "archivo": "Mail_NaturalVida_altas.txt",
+            "linea": 4
+          }
+        },
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P09:NV-239",
+      "fuente": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 22
+      },
+      "original": {
+        "producto": "Colágeno hidrolizado, 300 g, polvo",
+        "codigo": "NV-239",
+        "ean": "7798171145820",
+        "precio": "$ 887,58"
+      },
+      "calculado": {
+        "gtin": "7798171145820",
+        "motivo_gtin": null,
+        "descripcion_expandida": "COLÁGENO HIDROLIZADO, 300 G, POLVO",
+        "contenido": 300,
+        "unidad": "G",
+        "precio_costo": 887.58,
+        "moneda": "UYU",
+        "marca": "NATURAL VIDA",
+        "fuentes": {
+          "marca": {
+            "archivo": "Mail_NaturalVida_altas.txt",
+            "linea": 4
+          }
+        },
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P09:NV-242",
+      "fuente": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 23
+      },
+      "original": {
+        "producto": "Citrato de magnesio 400 mg, 120 cápsulas",
+        "codigo": "NV-242",
+        "ean": "7790071457973",
+        "precio": "$ 744,90"
+      },
+      "calculado": {
+        "gtin": "7790071457973",
+        "motivo_gtin": null,
+        "descripcion_expandida": "CITRATO DE MAGNESIO 400 MG, 120 CÁPSULAS",
+        "contenido": 120,
+        "unidad": "UN",
+        "precio_costo": 744.9,
+        "moneda": "UYU",
+        "marca": "NATURAL VIDA",
+        "fuentes": {
+          "marca": {
+            "archivo": "Mail_NaturalVida_altas.txt",
+            "linea": 4
+          }
+        },
+        "fds": null
+      }
+    }
+  ]
+}
