@@ -161,6 +161,12 @@ chequear("...y la tanda que falló queda anotada con su error",
          tres["tandas_con_problemas"], ["P05 desde 10: RuntimeError: se cayó el servidor"])
 chequear("La propuesta de un producto de otra tanda no se toma", "P03:LT-3999" in propuestas, False)
 chequear("...y queda anotada", tres["fuera_de_su_tanda"], ["P03:LT-3999 (lo propuso la tanda P03 desde 0)"])
+chequear("Con 1 fichador, todas las tandas van por el carril 1", {f["fichador"] for f in uno["tandas"]}, {1})
+chequear("Con 3, se usan los carriles 1, 2 y 3", {f["fichador"] for f in tres["tandas"]}, {1, 2, 3})
+chequear("En un mismo carril, una tanda empieza cuando termina la anterior (nunca dos a la vez)",
+         all(a["fin"] <= b["inicio"] + 0.05 for carril in (1, 2, 3)
+             for a, b in zip(*(lambda ts: (ts, ts[1:]))(sorted((f for f in tres["tandas"] if f["fichador"] == carril),
+                                                                key=lambda f: f["inicio"])))), True)
 chequear("Cada tanda guarda sus carriles (empieza/termina) y no sus propuestas",
          ("inicio" in tres["tandas"][0], "propuestas" in tres["tandas"][0]), (True, False))
 shutil.rmtree(carpeta, ignore_errors=True)

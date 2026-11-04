@@ -43,6 +43,7 @@ import argparse
 import json
 import os
 import sys
+import threading
 import time
 from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime
@@ -187,6 +188,10 @@ def fichar(tanda: tuple, cliente, modelo: str, reloj: float, carpeta_trazas: Pat
     Igual que leer(): si el fichador falla, el error queda anotado y no tira abajo a los demás.
     """
     proveedor_id, desde, cantidad = tanda
+    # Qué fichador (hilo) la corre: el pool nombra sus hilos "fichador_0", "fichador_1"... (paso 8: el gráfico de
+    # carriles necesita saber en qué carril fue cada tanda, no solo cuándo empezó y terminó)
+    nombre_hilo = threading.current_thread().name
+    fichador = int(nombre_hilo.rsplit("_", 1)[1]) + 1 if nombre_hilo.startswith("fichador_") else 1
     inicio = time.perf_counter() - reloj
     error, resultado = None, {}
     try:
@@ -195,7 +200,8 @@ def fichar(tanda: tuple, cliente, modelo: str, reloj: float, carpeta_trazas: Pat
     except Exception as excepcion:
         error = f"{type(excepcion).__name__}: {excepcion}"
     fin = time.perf_counter() - reloj
-    return {"proveedor_id": proveedor_id, "desde": desde, "cantidad": cantidad, "inicio": round(inicio, 1),
+    return {"proveedor_id": proveedor_id, "desde": desde, "cantidad": cantidad, "fichador": fichador,
+            "inicio": round(inicio, 1),
             "fin": round(fin, 1), "segundos": round(fin - inicio, 1),
             "como_termino": resultado.get("como_termino"), "registrados": resultado.get("registrados", 0),
             "faltan": resultado.get("faltan", items_de_la_tanda(proveedor_id, desde, cantidad) if error else []),
@@ -231,7 +237,7 @@ def etapa_fichas(cliente, modelo: str, consolidado: dict[str, dict], fichadores:
     carpeta_trazas = CARPETA_TRAZAS / f"paralelo_{datetime.now():%Y%m%d_%H%M%S}_{fichadores}"
     carpeta_trazas.mkdir(parents=True, exist_ok=True)
     reloj = time.perf_counter()
-    with ThreadPoolExecutor(max_workers=fichadores) as hilos:
+    with ThreadPoolExecutor(max_workers=fichadores, thread_name_prefix="fichador") as hilos:
         fichas = list(hilos.map(lambda tanda: fichar(tanda, cliente, modelo, reloj, carpeta_trazas), tandas))
     segundos = time.perf_counter() - reloj
     propuestas, fuera = juntar_propuestas(fichas)

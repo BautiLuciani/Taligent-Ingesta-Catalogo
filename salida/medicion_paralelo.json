@@ -1,0 +1,95 @@
+{
+  "fecha": "2026-11-04 11:11",
+  "corridas": {
+    "1": {
+      "segundos_fichas": 786.2,
+      "segundos_con_todo": 795.2,
+      "costo_usd": 0.221374,
+      "tandas": 15,
+      "propuestas": 133,
+      "tandas_con_problemas": [],
+      "evaluador": {
+        "total": {
+          "casos": 63,
+          "fichas_ok": 63,
+          "fuentes_ok": 63
+        },
+        "por_archivo": {
+          "casos_andes.json": {
+            "casos": 12,
+            "fichas_ok": 12,
+            "fuentes_ok": 12
+          },
+          "casos_dermalab.json": {
+            "casos": 12,
+            "fichas_ok": 12,
+            "fuentes_ok": 12
+          },
+          "casos_lhs.json": {
+            "casos": 12,
+            "fichas_ok": 12,
+            "fuentes_ok": 12
+          },
+          "casos_litoral.json": {
+            "casos": 13,
+            "fichas_ok": 13,
+            "fuentes_ok": 13
+          },
+          "casos_naturalvida.json": {
+            "casos": 14,
+            "fichas_ok": 14,
+            "fuentes_ok": 14
+          }
+        },
+        "mal": []
+      },
+      "resultados": "resultados_1.json"
+    },
+    "3": {
+      "segundos_fichas": 277.4,
+      "segundos_con_todo": 283.1,
+      "costo_usd": 0.217141,
+      "tandas": 15,
+      "propuestas": 133,
+      "tandas_con_problemas": [],
+      "evaluador": {
+        "total": {
+          "casos": 63,
+          "fichas_ok": 63,
+          "fuentes_ok": 63
+        },
+        "por_archivo": {
+          "casos_andes.json": {
+            "casos": 12,
+            "fichas_ok": 12,
+            "fuentes_ok": 12
+          },
+          "casos_dermalab.json": {
+            "casos": 12,
+            "fichas_ok": 12,
+            "fuentes_ok": 12
+          },
+          "casos_lhs.json": {
+            "casos": 12,
+            "fichas_ok": 12,
+            "fuentes_ok": 12
+          },
+          "casos_litoral.json": {
+            "casos": 13,
+            "fichas_ok": 13,
+            "fuentes_ok": 13
+          },
+          "casos_naturalvida.json": {
+            "casos": 14,
+            "fichas_ok": 14,
+            "fuentes_ok": 14
+          }
+        },
+        "mal": []
+      },
+      "resultados": "resultados_3.json"
+    }
+  },
+  "aceleracion": 2.83,
+  "diferencias_entre_corridas": []
+}
