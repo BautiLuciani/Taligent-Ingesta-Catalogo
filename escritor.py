@@ -7,6 +7,8 @@ Los fichadores proponen (salida/propuestas.json); el escritor decide qué se gua
   3. Un proveedor con algún problema NO se escribe: sus fichas anteriores quedan intactas y se informa por qué
      (una corrida mala nunca borra fichas buenas, como el chequeo del paso 1b). Los demás se escriben igual.
   4. Escribe una sola vez, en el orden del archivo de cada proveedor, con copia en resultados_anterior.json.
+  5. Paso 9 (detector): si la propuesta viene marcada "inestable" (las dos corridas no coincidieron), la marca se
+     escribe al lado de la ficha, no adentro: la ficha sigue siendo la del estándar y la marca avisa que hay que mirarla.
 """
 import json
 import shutil
@@ -59,10 +61,13 @@ def revisar_proveedor(proveedor_id: str, esperados: list[str], propuestas: dict)
         if encontrados:
             problemas += [f"{item_id}: {problema}" for problema in encontrados]
             continue
-        resultados.append(armar_resultado(
+        resultado = armar_resultado(
             item_id, propuesta["estado"], propuesta["ficha"], propuesta["fuentes"],
             CategoriaDecididaPor.model_validate(propuesta["categoria_decidida_por"]),
-            propuesta.get("motivos_revision", []), propuesta.get("duplicado_de")))
+            propuesta.get("motivos_revision", []), propuesta.get("duplicado_de"))
+        if propuesta.get("inestable"):  # paso 9: el detector la marcó (las dos corridas no coincidieron)
+            resultado["inestable"] = propuesta["inestable"]
+        resultados.append(resultado)
     return resultados, problemas
 
 
@@ -93,7 +98,9 @@ def escribir(propuestas: dict, proveedores: list[str], carpeta_consolidado: Path
         temporal = ruta_resultados.with_suffix(".tmp")  # temporal + renombrar: nunca queda un archivo a medias
         temporal.write_text(json.dumps(archivo, ensure_ascii=False, indent=2), encoding="utf-8")
         temporal.replace(ruta_resultados)
-    return {"escritos": escritos, "frenados": frenados, "ignoradas": ignoradas, "total_en_archivo": len(archivo)}
+    inestables = [r["item_id"] for resultados in nuevos.values() for r in resultados if r.get("inestable")]
+    return {"escritos": escritos, "frenados": frenados, "ignoradas": ignoradas, "inestables": inestables,
+            "total_en_archivo": len(archivo)}
 
 
 def mostrar(informe: dict) -> None:
@@ -107,4 +114,7 @@ def mostrar(informe: dict) -> None:
             print(f"    - {problema}")
     if informe["ignoradas"]:
         print(f"⚠ Propuestas de proveedores que no se procesaron (no se escriben): {informe['ignoradas']}")
+    if informe.get("inestables"):
+        print(f"⚠ {len(informe['inestables'])} ficha(s) escrita(s) con la marca \"inestable\" (mirarlas antes de dar de alta):"
+              f" {', '.join(informe['inestables'])}")
     print(f"resultados.json: {informe['total_en_archivo']} fichas en total")

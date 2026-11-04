@@ -169,6 +169,61 @@ chequear("En un mismo carril, una tanda empieza cuando termina la anterior (nunc
                                                                 key=lambda f: f["inicio"])))), True)
 chequear("Cada tanda guarda sus carriles (empieza/termina) y no sus propuestas",
          ("inicio" in tres["tandas"][0], "propuestas" in tres["tandas"][0]), (True, False))
+
+print("--- comparar_propuestas: qué difiere entre dos versiones del mismo producto (paso 9) ---")
+base = {"estado": "lista_para_alta", "motivos_revision": [], "duplicado_de": None,
+        "ficha": {"marca": "NATURAL VIDA", "contenido": 30}, "fuentes": {"marca": {"archivo": "m.txt", "linea": 4}},
+        "categoria_decidida_por": {"campo": "tipo", "valor": "CAPSULAS", "explicacion": "Una frase."}}
+chequear("Iguales: nada que marcar", orquestador.comparar_propuestas(base, dict(base)), [])
+chequear("La explicación de la categoría (texto libre) no cuenta",
+         orquestador.comparar_propuestas(base, {**base, "categoria_decidida_por": {**base["categoria_decidida_por"],
+                                                                                   "explicacion": "Otra frase."}}), [])
+chequear("Los motivos en otro orden son los mismos",
+         orquestador.comparar_propuestas({**base, "motivos_revision": ["a", "b"]}, {**base, "motivos_revision": ["b", "a"]}), [])
+chequear("Marca vacía y a revisión (el caso de Natural Vida del paso 7): se ven los 4 campos",
+         orquestador.comparar_propuestas(base, {**base, "estado": "a_revision", "motivos_revision": ["dato_obligatorio_faltante"],
+                                                "ficha": {**base["ficha"], "marca": None}, "fuentes": {}}),
+         ["estado", "motivos_revision", "ficha.marca", "fuentes.marca"])
+
+print("--- etapa_fichas con detector: cada tanda dos veces (A y B) ---")
+
+
+class FichadorDudoso(FichadorFalso):
+    """Como el falso de arriba, pero en la corrida B duda en un producto y se olvida de otro."""
+
+    def __call__(self, cliente, modelo, proveedor_id, desde, cantidad, ruta_traza):
+        resultado = super().__call__(cliente, modelo, proveedor_id, desde, cantidad, ruta_traza)
+        for propuesta in resultado["propuestas"].values():
+            propuesta["ficha"] = {"marca": "SONRISA"}
+        if ruta_traza.name.endswith("_B.jsonl"):
+            if (proveedor_id, desde) == ("P03", 10):
+                resultado["propuestas"]["P03:LT-3333"]["ficha"] = {"marca": None}  # la B duda en la marca
+            if (proveedor_id, desde) == ("P07", 0):
+                resultado["propuestas"].pop("P07:LHS-203")                       # la B se olvida de uno
+        return resultado
+
+
+orquestador.CARPETA_CONSOLIDADO = carpeta
+orquestador.CARPETA_TRAZAS = carpeta / "trazas"
+orquestador.FICHADOR = dudoso = FichadorDudoso(0.1)
+try:
+    con_detector, propuestas = orquestador.etapa_fichas(None, "modelo", consolidado, 3, detector=True)
+finally:
+    orquestador.FICHADOR, orquestador.CARPETA_TRAZAS = originales
+    orquestador.CARPETA_CONSOLIDADO = original
+chequear("26 trabajos (13 tandas x 2), nunca más de 3 a la vez", (len(con_detector["tandas"]), dudoso.maximo), (26, 3))
+chequear("Cada tanda tiene su A y su B", sorted({(f["proveedor_id"], f["desde"], f["version"]) for f in con_detector["tandas"]})[:2],
+         [("P01", 0, "A"), ("P01", 0, "B")])
+chequear("Los productos se cuentan una vez (119), no dos", con_detector["productos"], 119)
+chequear("Detector: 2 inestables (la que duda y la que una corrida olvidó)",
+         [i["item_id"] for i in con_detector["inestables"]], ["P03:LT-3333", "P07:LHS-203"])
+chequear("...LT-3333: va la versión A, marcada con el campo que difiere y la otra versión",
+         (propuestas["P03:LT-3333"]["ficha"]["marca"], propuestas["P03:LT-3333"]["inestable"]["campos"],
+          propuestas["P03:LT-3333"]["inestable"]["otra_version"]["ficha"]["marca"]), ("SONRISA", ["ficha.marca"], None))
+chequear("...LHS-203: no falta (la A lo propuso), pero queda sin segunda opinión",
+         ("P07:LHS-203" in con_detector["faltan"], propuestas["P07:LHS-203"]["inestable"]["otra_version"]), (False, None))
+chequear("Los que coinciden van sin marca", "inestable" in propuestas["P03:LT-3303"], False)
+chequear("Faltan solo las 8 de la tanda que se cayó en A y en B", len(con_detector["faltan"]), 8)
 shutil.rmtree(carpeta, ignore_errors=True)
 
 print(f"\nResultado: {'todo OK' if errores == 0 else f'{errores} con error'}")

@@ -91,5 +91,15 @@ informe = escribir({}, ["P03", "P07"], consolidado, ruta)
 chequear("Los 2 frenados, ninguno escrito", (sorted(informe["frenados"]), informe["escritos"]), (["P03", "P07"], {}))
 chequear("resultados.json igual que antes", ruta.read_text(encoding="utf-8"), antes)
 
+print("--- escribir: la marca del detector (paso 9) ---")
+marcadas = copy.deepcopy(completas)
+marcadas["P03:LT-3309"]["inestable"] = {"campos": ["ficha.marca"], "otra_version": propuesta("P03:LT-3309")}
+informe = escribir(marcadas, ["P03", "P07"], consolidado, ruta)
+archivo = json.loads(ruta.read_text(encoding="utf-8"))
+chequear("La ficha marcada se escribe igual, con su marca al lado (no adentro de la ficha)",
+         (archivo["P03:LT-3309"]["inestable"]["campos"], "inestable" in archivo["P03:LT-3309"]["ficha"]), (["ficha.marca"], False))
+chequear("Las que coinciden van sin marca", "inestable" in archivo["P03:LT-3303"], False)
+chequear("El informe dice cuáles quedaron marcadas", informe["inestables"], ["P03:LT-3309"])
+
 shutil.rmtree(carpeta, ignore_errors=True)
 print(f"\nResultado: {'todo OK' if errores == 0 else f'{errores} con error'}")

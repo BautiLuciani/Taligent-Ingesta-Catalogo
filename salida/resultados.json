@@ -162,7 +162,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "JABON",
-      "explicacion": "El jabón antibacterial va en Higiene corporal > Jabones (CUI-HIG-JAB)."
+      "explicacion": "El jabón (en barra) va en Higiene corporal > Jabones (CUI-HIG-JAB)."
     }
   },
   "P03:LT-3309": {
@@ -1241,7 +1241,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "JABON LIQUIDO",
-      "explicacion": "El jabón líquido de manos va en Higiene corporal > Jabones (CUI-HIG-JAB)."
+      "explicacion": "El jabón líquido va en Higiene corporal > Jabones (CUI-HIG-JAB)."
     }
   },
   "P03:LT-3348": {
@@ -1572,7 +1572,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "JABON",
-      "explicacion": "Jabón en barra antibacterial de 125 G; coincide con SKU102275 (JABON PUREZA ANTIBAC. 125G) en marca, tipo, variante y contenido."
+      "explicacion": "El jabón va en Higiene corporal > Jabones (CUI-HIG-JAB)."
     }
   },
   "P03:LT-3360": {
@@ -1655,7 +1655,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "JABON",
-      "explicacion": "El jabón en barra va en Higiene corporal > Jabones (CUI-HIG-JAB)."
+      "explicacion": "El jabón va en Higiene corporal > Jabones (CUI-HIG-JAB)."
     }
   },
   "P03:LT-3363": {
@@ -1738,7 +1738,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "CEPILLO DENTAL",
-      "explicacion": "El tipo cepillo dental va en Higiene bucal > Cepillos (CUI-BUC-CEP)."
+      "explicacion": "El tipo CEPILLO DENTAL corresponde a la categoría Higiene bucal > Cepillos."
     }
   },
   "P03:LT-3366": {
@@ -1817,7 +1817,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "HISOPOS",
-      "explicacion": "El tipo hisopos va en Higiene corporal > Algodones e hisopos (CUI-HIG-ALG)."
+      "explicacion": "El tipo HISOPOS corresponde a la categoría Higiene corporal > Algodones e hisopos."
     }
   },
   "P03:LT-3369": {
@@ -1900,7 +1900,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "CEPILLO DENTAL",
-      "explicacion": "El tipo cepillo dental va en Higiene bucal > Cepillos (CUI-BUC-CEP)."
+      "explicacion": "El tipo CEPILLO DENTAL corresponde a la categoría Higiene bucal > Cepillos."
     }
   },
   "P03:LT-3372": {
@@ -1983,7 +1983,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "CEPILLO DENTAL",
-      "explicacion": "El tipo cepillo dental va en Higiene bucal > Cepillos (CUI-BUC-CEP)."
+      "explicacion": "El tipo CEPILLO DENTAL corresponde a la categoría Higiene bucal > Cepillos."
     }
   },
   "P03:LT-3375": {
@@ -2066,7 +2066,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "JABON",
-      "explicacion": "El tipo jabón en barra va en Higiene corporal > Jabones (CUI-HIG-JAB)."
+      "explicacion": "El tipo JABON corresponde a la categoría Higiene corporal > Jabones."
     }
   },
   "P03:LT-3378": {
@@ -2149,7 +2149,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "PASTA DENTAL",
-      "explicacion": "La pasta dental va en Higiene bucal > Pastas dentales (CUI-BUC-PAS)."
+      "explicacion": "El tipo PASTA DENTAL corresponde a la categoría Higiene bucal > Pastas dentales."
     }
   },
   "P03:LT-3381": {
@@ -2232,7 +2232,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "JABON LIQUIDO",
-      "explicacion": "El jabón líquido va en Higiene corporal > Jabones (CUI-HIG-JAB), que incluye el jabón líquido de manos."
+      "explicacion": "El tipo JABON LIQUIDO corresponde a la categoría Higiene corporal > Jabones (jabón líquido de manos)."
     }
   },
   "P03:LT-3384": {
@@ -2315,7 +2315,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "JABON",
-      "explicacion": "El tipo jabón en barra va en Higiene corporal > Jabones (CUI-HIG-JAB)."
+      "explicacion": "El tipo JABON corresponde a la categoría Higiene corporal > Jabones."
     }
   },
   "P03:LT-3387": {
@@ -2398,7 +2398,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "PASTA DENTAL",
-      "explicacion": "La pasta dental va en Higiene bucal > Pastas dentales (CUI-BUC-PAS)."
+      "explicacion": "El tipo PASTA DENTAL corresponde a la categoría Higiene bucal > Pastas dentales."
     }
   },
   "P03:LT-3390": {
@@ -2481,7 +2481,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "JABON",
-      "explicacion": "El tipo jabón en barra va en Higiene corporal > Jabones (CUI-HIG-JAB)."
+      "explicacion": "El tipo JABON corresponde a la categoría Higiene corporal > Jabones."
     }
   },
   "P03:LT-3393": {
@@ -2564,7 +2564,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "PASTA DENTAL",
-      "explicacion": "La pasta dental va en Higiene bucal > Pastas dentales."
+      "explicacion": "El tipo PASTA DENTAL va en Higiene bucal > Pastas dentales."
     }
   },
   "P03:LT-3396": {
@@ -2647,7 +2647,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "JABON",
-      "explicacion": "El jabón en barra va en Higiene corporal > Jabones."
+      "explicacion": "El tipo JABON va en Higiene corporal > Jabones."
     }
   },
   "P03:LT-3399": {
@@ -2730,7 +2730,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "JABON",
-      "explicacion": "El jabón en barra va en Higiene corporal > Jabones."
+      "explicacion": "El tipo JABON va en Higiene corporal > Jabones."
     }
   },
   "P03:LT-3402": {
@@ -2813,7 +2813,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "JABON",
-      "explicacion": "El jabón en barra va en Higiene corporal > Jabones."
+      "explicacion": "El tipo JABON va en Higiene corporal > Jabones."
     }
   },
   "P03:LT-3405": {
@@ -2896,7 +2896,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "JABON",
-      "explicacion": "El jabón en barra va en Higiene corporal > Jabones."
+      "explicacion": "El tipo JABON va en Higiene corporal > Jabones."
     }
   },
   "P03:LT-3408": {
@@ -2979,7 +2979,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "PASTA DENTAL",
-      "explicacion": "La pasta dental va en Higiene bucal > Pastas dentales."
+      "explicacion": "El tipo PASTA DENTAL va en Higiene bucal > Pastas dentales."
     }
   },
   "P03:LT-3411": {
@@ -3062,7 +3062,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "PASTA DENTAL",
-      "explicacion": "La pasta dental va en Higiene bucal > Pastas dentales."
+      "explicacion": "El tipo PASTA DENTAL va en Higiene bucal > Pastas dentales."
     }
   },
   "P03:LT-3414": {
@@ -3145,7 +3145,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "PASTA DENTAL",
-      "explicacion": "La pasta dental va en Higiene bucal > Pastas dentales."
+      "explicacion": "El tipo PASTA DENTAL va en Higiene bucal > Pastas dentales."
     }
   },
   "P03:LT-3417": {
@@ -3228,7 +3228,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "ENJUAGUE BUCAL",
-      "explicacion": "El enjuague bucal va en Higiene bucal > Enjuagues."
+      "explicacion": "El tipo ENJUAGUE BUCAL va en Higiene bucal > Enjuagues."
     }
   },
   "P03:LT-3450": {
@@ -3306,7 +3306,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "HISOPOS",
-      "explicacion": "Los hisopos van en Cuidado personal > Higiene corporal > Algodones e hisopos."
+      "explicacion": "El tipo HISOPOS va en Higiene corporal > Algodones e hisopos."
     }
   },
   "P03:LT-3420": {
@@ -3389,7 +3389,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "ALGODON",
-      "explicacion": "El algodón hidrófilo va en Algodones e hisopos (CUI-HIG-ALG)."
+      "explicacion": "El algodón hidrófilo es un algodón de higiene; va en Algodones e hisopos."
     }
   },
   "P03:LT-3423": {
@@ -3472,7 +3472,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "ALGODON",
-      "explicacion": "El algodón hidrófilo va en Algodones e hisopos (CUI-HIG-ALG)."
+      "explicacion": "El algodón hidrófilo es un algodón de higiene; va en Algodones e hisopos."
     }
   },
   "P03:LT-3426": {
@@ -3555,7 +3555,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "CEPILLO DENTAL",
-      "explicacion": "El cepillo dental va en Higiene bucal > Cepillos (CUI-BUC-CEP)."
+      "explicacion": "El cepillo dental va en Higiene bucal > Cepillos."
     }
   },
   "P03:LT-3429": {
@@ -3638,7 +3638,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "CEPILLO DENTAL",
-      "explicacion": "El cepillo dental va en Higiene bucal > Cepillos (CUI-BUC-CEP)."
+      "explicacion": "El cepillo dental va en Higiene bucal > Cepillos."
     }
   },
   "P03:LT-3447": {
@@ -3720,7 +3720,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "JABON",
-      "explicacion": "El jabón antibacterial va en Higiene corporal > Jabones (CUI-HIG-JAB)."
+      "explicacion": "El jabón de barra va en Higiene corporal > Jabones."
     }
   },
   "P03:LT-3432": {
@@ -3803,7 +3803,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "PASTA DENTAL",
-      "explicacion": "La pasta dental va en Higiene bucal > Pastas dentales (CUI-BUC-PAS)."
+      "explicacion": "La pasta dental va en Higiene bucal > Pastas dentales."
     }
   },
   "P03:LT-3435": {
@@ -3886,7 +3886,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "CEPILLO DENTAL",
-      "explicacion": "El cepillo dental va en Higiene bucal > Cepillos (CUI-BUC-CEP)."
+      "explicacion": "El cepillo dental va en Higiene bucal > Cepillos."
     }
   },
   "P03:LT-3438": {
@@ -3969,7 +3969,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "PASTA DENTAL",
-      "explicacion": "La pasta dental va en Higiene bucal > Pastas dentales (CUI-BUC-PAS)."
+      "explicacion": "La pasta dental va en Higiene bucal > Pastas dentales."
     }
   },
   "P03:LT-3441": {
@@ -4052,7 +4052,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "PASTA DENTAL",
-      "explicacion": "La pasta dental va en Higiene bucal > Pastas dentales (CUI-BUC-PAS)."
+      "explicacion": "La pasta dental va en Higiene bucal > Pastas dentales."
     }
   },
   "P03:LT-3444": {
@@ -4135,7 +4135,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "PASTA DENTAL",
-      "explicacion": "La pasta dental va en Higiene bucal > Pastas dentales (CUI-BUC-PAS)."
+      "explicacion": "La pasta dental va en Higiene bucal > Pastas dentales."
     }
   },
   "P07:LHS-203": {
@@ -4224,7 +4224,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "LIMPIADOR",
-      "explicacion": "Limpiador multiuso de superficies; cae en Limpiadores de baño y cocina, la categoría general de limpiadores."
+      "explicacion": "Limpiador multiuso de superficies; el tipo LIMPIADOR va a Limpieza, y la categoría de limpiadores de baño y cocina es la más cercana."
     }
   },
   "P07:LHS-206": {
@@ -4317,7 +4317,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "LAVANDINA",
-      "explicacion": "La lavandina va en Desinfectantes y lavandinas."
+      "explicacion": "El tipo LAVANDINA va a Hogar y limpieza > Desinfectantes y lavandinas."
     }
   },
   "P07:LHS-209": {
@@ -4410,7 +4410,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "ALCOHOL",
-      "explicacion": "Alcohol al 70 % va en Alcohol y alcohol en gel."
+      "explicacion": "El tipo ALCOHOL va a Hogar y limpieza > Alcohol y alcohol en gel."
     }
   },
   "P07:LHS-212": {
@@ -4499,7 +4499,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "ALCOHOL EN GEL",
-      "explicacion": "El alcohol en gel va en Alcohol y alcohol en gel."
+      "explicacion": "El tipo ALCOHOL EN GEL va a Hogar y limpieza > Alcohol y alcohol en gel."
     }
   },
   "P07:LHS-215": {
@@ -4588,7 +4588,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "LIMPIADOR",
-      "explicacion": "Limpiador multiuso de superficies; cae en Limpiadores de baño y cocina, la categoría general de limpiadores."
+      "explicacion": "Limpiador multiuso de superficies; el tipo LIMPIADOR va a Limpieza, y la categoría de limpiadores de baño y cocina es la más cercana."
     }
   },
   "P07:LHS-218": {
@@ -4681,7 +4681,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "LAVANDINA",
-      "explicacion": "La lavandina va en Desinfectantes y lavandinas."
+      "explicacion": "El tipo LAVANDINA va a Hogar y limpieza > Desinfectantes y lavandinas."
     }
   },
   "P07:LHS-221": {
@@ -4770,7 +4770,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "ALCOHOL EN GEL",
-      "explicacion": "El alcohol en gel va en Alcohol y alcohol en gel; el GTIN ya existe como SKU102464."
+      "explicacion": "El tipo ALCOHOL EN GEL va a Hogar y limpieza > Alcohol y alcohol en gel; el GTIN ya existe en el catálogo como SKU102464."
     }
   },
   "P07:LHS-224": {
@@ -4859,7 +4859,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "REPELENTE",
-      "explicacion": "Repelente corporal en crema va en Repelentes corporales."
+      "explicacion": "El tipo REPELENTE va a Hogar y limpieza > Insecticidas y repelentes > Repelentes corporales; CREMA es la forma, va en variante."
     }
   },
   "P07:LHS-227": {
@@ -4952,7 +4952,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "ALCOHOL EN GEL",
-      "explicacion": "El alcohol en gel va en Alcohol y alcohol en gel."
+      "explicacion": "El tipo ALCOHOL EN GEL va a Hogar y limpieza > Alcohol y alcohol en gel."
     }
   },
   "P07:LHS-230": {
@@ -5045,7 +5045,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "ALCOHOL",
-      "explicacion": "Alcohol al 70 % va en Alcohol y alcohol en gel."
+      "explicacion": "El tipo ALCOHOL va a Hogar y limpieza > Alcohol y alcohol en gel."
     }
   },
   "P07:LHS-233": {
@@ -5138,7 +5138,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "REPELENTE",
-      "explicacion": "Repelente de uso corporal en aerosol: va en Insecticidas y repelentes > Repelentes corporales."
+      "explicacion": "El tipo REPELENTE corresponde a la categoría de repelentes de Insecticidas y repelentes."
     }
   },
   "P07:LHS-275": {
@@ -5230,7 +5230,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "ALCOHOL",
-      "explicacion": "Alcohol de 96 %: va en Hogar y limpieza > Limpieza > Alcohol y alcohol en gel."
+      "explicacion": "El tipo ALCOHOL corresponde a Alcohol y alcohol en gel de Hogar y limpieza."
     }
   },
   "P07:LHS-236": {
@@ -5319,7 +5319,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "LIMPIADOR",
-      "explicacion": "Limpiador multiuso de cocina: va en Hogar y limpieza > Limpieza > Limpiadores de baño y cocina."
+      "explicacion": "Un limpiador de cocina va en Limpiadores de baño y cocina de Hogar y limpieza."
     }
   },
   "P07:LHS-239": {
@@ -5408,7 +5408,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "ALCOHOL EN GEL",
-      "explicacion": "Alcohol en gel: va en Hogar y limpieza > Limpieza > Alcohol y alcohol en gel."
+      "explicacion": "El alcohol en gel va en Alcohol y alcohol en gel de Hogar y limpieza."
     }
   },
   "P07:LHS-242": {
@@ -5501,7 +5501,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "ALCOHOL",
-      "explicacion": "Alcohol 96 %: va en Hogar y limpieza > Limpieza > Alcohol y alcohol en gel."
+      "explicacion": "El tipo ALCOHOL corresponde a Alcohol y alcohol en gel de Hogar y limpieza."
     }
   },
   "P07:LHS-245": {
@@ -5590,7 +5590,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "LIMPIADOR",
-      "explicacion": "Limpiador multiuso de cocina: va en Hogar y limpieza > Limpieza > Limpiadores de baño y cocina."
+      "explicacion": "Un limpiador de cocina va en Limpiadores de baño y cocina de Hogar y limpieza."
     }
   },
   "P07:LHS-248": {
@@ -5679,7 +5679,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "ALCOHOL",
-      "explicacion": "Alcohol 70 %: va en Hogar y limpieza > Limpieza > Alcohol y alcohol en gel. El GTIN ya existe como SKU101505."
+      "explicacion": "El tipo ALCOHOL corresponde a Alcohol y alcohol en gel de Hogar y limpieza."
     }
   },
   "P07:LHS-251": {
@@ -5772,7 +5772,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "ALCOHOL",
-      "explicacion": "Alcohol 96 %: va en Hogar y limpieza > Limpieza > Alcohol y alcohol en gel."
+      "explicacion": "El tipo ALCOHOL corresponde a Alcohol y alcohol en gel de Hogar y limpieza."
     }
   },
   "P07:LHS-254": {
@@ -5861,7 +5861,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "REPELENTE",
-      "explicacion": "Repelente de uso corporal (crema para niños): va en Insecticidas y repelentes > Repelentes corporales."
+      "explicacion": "El tipo REPELENTE corresponde a la categoría de repelentes de Insecticidas y repelentes; la crema para niños va en variante."
     }
   },
   "P07:LHS-257": {
@@ -5950,7 +5950,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "ALCOHOL EN GEL",
-      "explicacion": "Alcohol en gel: va en Hogar y limpieza > Limpieza > Alcohol y alcohol en gel."
+      "explicacion": "El alcohol en gel va en Alcohol y alcohol en gel de Hogar y limpieza."
     }
   },
   "P07:LHS-272": {
@@ -6038,7 +6038,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "REPELENTE",
-      "explicacion": "Tipo REPELENTE (producto corporal) va en Insecticidas y repelentes > Repelentes corporales."
+      "explicacion": "Repelente en crema va en Repelentes corporales; sin GTIN y coincide con SKU102282 (REPELENTE FULMIN CREMA 100GRS), posible duplicado."
     }
   },
   "P07:LHS-260": {
@@ -6131,7 +6131,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "INSECTICIDA",
-      "explicacion": "Tipo INSECTICIDA de ambiente (spray para cucarachas) va en Insecticidas de ambiente."
+      "explicacion": "Insecticida de ambiente en aerosol (FDS clase 2.1), va en Insecticidas de ambiente."
     }
   },
   "P07:LHS-263": {
@@ -6224,7 +6224,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "LAVANDINA",
-      "explicacion": "Tipo LAVANDINA va en Limpieza > Desinfectantes y lavandinas."
+      "explicacion": "Lavandina para ropa es desinfectante del hogar, va en Desinfectantes y lavandinas."
     }
   },
   "P07:LHS-266": {
@@ -6313,7 +6313,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "REPELENTE",
-      "explicacion": "Tipo REPELENTE (producto corporal) va en Insecticidas y repelentes > Repelentes corporales."
+      "explicacion": "Repelente corporal en crema va en Repelentes corporales; el GTIN ya existe en el catálogo como SKU101834."
     }
   },
   "P07:LHS-269": {
@@ -6406,7 +6406,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "LAVANDINA",
-      "explicacion": "Tipo LAVANDINA va en Limpieza > Desinfectantes y lavandinas."
+      "explicacion": "Lavandina concentrada es desinfectante del hogar, va en Desinfectantes y lavandinas."
     }
   },
   "P01:AN-1103": {
@@ -6491,7 +6491,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "COMPRIMIDOS",
-      "explicacion": "Sin principio activo declarado, la categoría queda en null; el tipo no la determina."
+      "explicacion": "Sin principio activo en el archivo, la categoría queda null; el tipo COMPRIMIDOS no la define."
     }
   },
   "P01:AN-1106": {
@@ -6576,7 +6576,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "SUSPENSION",
-      "explicacion": "Sin principio activo declarado, la categoría queda en null; el tipo no la determina."
+      "explicacion": "Sin principio activo en el archivo, la categoría queda null; el tipo SUSPENSION no la define."
     }
   },
   "P01:AN-1109": {
@@ -6667,7 +6667,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "COMPRIMIDOS",
-      "explicacion": "El principio activo PARACETAMOL (analgésico y antifebril oral) decide la categoría MED-DOL-ANA; el tipo COMPRIMIDOS no la determina."
+      "explicacion": "Paracetamol (analgésico antifebril) en comprimidos: va en Analgésicos y antifebriles orales."
     }
   },
   "P01:AN-1112": {
@@ -6758,7 +6758,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "COMPRIMIDOS",
-      "explicacion": "El principio activo METFORMINA (diabetes, bajo receta) decide la categoría MED-CRO-MET; el tipo no la determina."
+      "explicacion": "Metformina (principio activo de la fila) para diabetes, bajo receta: va en Metabolismo."
     }
   },
   "P01:AN-1115": {
@@ -6849,7 +6849,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "CAPSULAS",
-      "explicacion": "El principio activo OMEPRAZOL (protector gástrico) decide la categoría MED-DIG-ACI; el tipo no la determina."
+      "explicacion": "Omeprazol (protector gástrico, principio de la fila) en cápsulas: va en Antiácidos y protectores gástricos."
     }
   },
   "P01:AN-1118": {
@@ -6940,7 +6940,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "CAPSULAS",
-      "explicacion": "El principio activo OMEPRAZOL (protector gástrico) decide la categoría MED-DIG-ACI; el tipo no la determina."
+      "explicacion": "Omeprazol (protector gástrico, principio de la fila) en cápsulas: va en Antiácidos y protectores gástricos."
     }
   },
   "P01:AN-1121": {
@@ -7031,7 +7031,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "COMPRIMIDOS",
-      "explicacion": "El principio activo LOPERAMIDA (antidiarreico) decide la categoría MED-DIG-ANT; el tipo no la determina."
+      "explicacion": "Loperamida (antidiarreico, principio de la fila) en comprimidos: va en Antidiarreicos."
     }
   },
   "P01:AN-1124": {
@@ -7124,7 +7124,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "CREMA",
-      "explicacion": "El principio activo HIDROCORTISONA (corticoide tópico) decide la categoría MED-DER-COR; el tipo no la determina."
+      "explicacion": "Crema de hidrocortisona (corticoide tópico, principio de la fila): va en Corticoides tópicos."
     }
   },
   "P01:AN-1127": {
@@ -7215,7 +7215,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "COMPRIMIDOS",
-      "explicacion": "El principio activo LORATADINA (antihistamínico oral) decide la categoría MED-RES-ALE; el tipo no la determina."
+      "explicacion": "Loratadina (antialérgico, principio de la fila) en comprimidos: va en Antialérgicos."
     }
   },
   "P01:AN-1130": {
@@ -7306,7 +7306,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "CREMA",
-      "explicacion": "El principio activo HIDROCORTISONA (corticoide tópico) decide la categoría MED-DER-COR; el tipo no la determina."
+      "explicacion": "Crema de hidrocortisona (corticoide tópico, principio de la fila): va en Corticoides tópicos."
     }
   },
   "P01:AN-1133": {
@@ -7393,7 +7393,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "CREMA",
-      "explicacion": "Crema con clotrimazol (antimicótico tópico, principio activo): va en Antimicóticos tópicos."
+      "explicacion": "Principio clotrimazol, antimicótico tópico: MED-DER-ANF. La crema confirma la forma."
     }
   },
   "P01:AN-1136": {
@@ -7480,7 +7480,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "COMPRIMIDOS",
-      "explicacion": "Comprimidos recubiertos de paracetamol (principio activo analgésico/antifebril): va en Analgésicos y antifebriles orales."
+      "explicacion": "Paracetamol oral, analgésico y antifebril: MED-DOL-ANA. Comp. rec. es comprimido."
     }
   },
   "P01:AN-1139": {
@@ -7573,7 +7573,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "COMPRIMIDOS",
-      "explicacion": "Comprimidos de enalapril (antihipertensivo, principio activo): va en Cardiovascular, venta bajo receta."
+      "explicacion": "Enalapril es antihipertensivo: MED-CRO-CAR. Comprimidos es la forma declarada."
     }
   },
   "P01:AN-1142": {
@@ -7666,7 +7666,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "COMPRIMIDOS",
-      "explicacion": "Comprimidos de paracetamol + clorfeniramina + fenilefrina (combinación para gripe y resfrío): va en Antigripales."
+      "explicacion": "Combinación para síntomas de gripe (antigripal): MED-RES-GRI. Comp. x 10 es comprimido."
     }
   },
   "P01:AN-1145": {
@@ -7757,7 +7757,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "SOBRES",
-      "explicacion": "Sobres de paracetamol + clorfeniramina + fenilefrina (combinación antigripal): va en Antigripales."
+      "explicacion": "Combinación antigripal: MED-RES-GRI. La presentación Sobres x 12 da el tipo SOBRES."
     }
   },
   "P01:AN-1148": {
@@ -7850,7 +7850,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "SOBRES",
-      "explicacion": "Sobres de paracetamol + clorfeniramina + fenilefrina (combinación antigripal): va en Antigripales."
+      "explicacion": "Combinación antigripal: MED-RES-GRI. La presentación Sobres x 6 da el tipo SOBRES (la actualización no decide tipo)."
     }
   },
   "P01:AN-1151": {
@@ -7943,7 +7943,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "GEL",
-      "explicacion": "Gel tópico de diclofenac (antiinflamatorio tópico, principio activo): va en Antiinflamatorios tópicos."
+      "explicacion": "Diclofenac tópico, antiinflamatorio tópico: MED-DOL-TOP. El gel tópico confirma la forma."
     }
   },
   "P01:AN-1154": {
@@ -8036,7 +8036,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "COMPRIMIDOS",
-      "explicacion": "Comprimidos de ibuprofeno (analgésico oral, principio activo): va en Analgésicos y antifebriles orales."
+      "explicacion": "Ibuprofeno oral, analgésico y antifebril: MED-DOL-ANA. Comprimidos x 20."
     }
   },
   "P01:AN-1157": {
@@ -8129,7 +8129,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "COMPRIMIDOS",
-      "explicacion": "Comprimidos de levotiroxina (hormona tiroidea, principio activo): va en Metabolismo, venta bajo receta."
+      "explicacion": "Levotiroxina para tiroides: MED-CRO-MET. Comprimidos x 30 y venta bajo receta."
     }
   },
   "P01:AN-1160": {
@@ -8220,7 +8220,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "COMPRIMIDOS",
-      "explicacion": "Comprimidos de levotiroxina (hormona tiroidea, principio activo): va en Metabolismo, venta bajo receta."
+      "explicacion": "Levotiroxina para tiroides: MED-CRO-MET. Comprimidos x 30 y venta bajo receta."
     }
   },
   "P01:AN-1163": {
@@ -8244,7 +8244,9 @@
       "precio_costo": 121.28,
       "moneda": "UYU",
       "proveedor_id": "P01",
-      "codigo_proveedor": "AN-1163"
+      "codigo_proveedor": "AN-1163",
+      "peligro_deposito": null,
+      "numero_onu": null
     },
     "fuentes": {
       "gtin": {
@@ -8313,7 +8315,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "COMPRIMIDOS",
-      "explicacion": "Comprimidos; la categoría sale del principio activo LOPERAMIDA, antidiarreico (MED-DIG-ANT)."
+      "explicacion": "Medicamento con principio activo loperamida (antidiarreico): categoría MED-DIG-ANT por la monodroga; el tipo COMPRIMIDOS confirma la forma."
     }
   },
   "P01:AN-1166": {
@@ -8337,7 +8339,9 @@
       "precio_costo": 109.31,
       "moneda": "UYU",
       "proveedor_id": "P01",
-      "codigo_proveedor": "AN-1166"
+      "codigo_proveedor": "AN-1166",
+      "peligro_deposito": null,
+      "numero_onu": null
     },
     "fuentes": {
       "gtin": {
@@ -8406,7 +8410,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "COMPRIMIDOS",
-      "explicacion": "Comprimidos; la categoría sale del principio activo BISACODILO, laxante (MED-DIG-LAX)."
+      "explicacion": "Medicamento con principio activo bisacodilo (laxante): categoría MED-DIG-LAX por la monodroga; el tipo COMPRIMIDOS confirma la forma."
     }
   },
   "P01:AN-1169": {
@@ -8430,7 +8434,9 @@
       "precio_costo": 153.27,
       "moneda": "UYU",
       "proveedor_id": "P01",
-      "codigo_proveedor": "AN-1169"
+      "codigo_proveedor": "AN-1169",
+      "peligro_deposito": null,
+      "numero_onu": null
     },
     "fuentes": {
       "gtin": {
@@ -8499,7 +8505,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "COMPRIMIDOS",
-      "explicacion": "Comprimidos; la categoría sale del principio activo ENALAPRIL, antihipertensivo (MED-CRO-CAR)."
+      "explicacion": "Medicamento con principio activo enalapril (antihipertensivo, venta bajo receta): categoría MED-CRO-CAR por la monodroga; tipo COMPRIMIDOS."
     }
   },
   "P01:AN-1172": {
@@ -8523,7 +8529,9 @@
       "precio_costo": 213.12,
       "moneda": "UYU",
       "proveedor_id": "P01",
-      "codigo_proveedor": "AN-1172"
+      "codigo_proveedor": "AN-1172",
+      "peligro_deposito": null,
+      "numero_onu": null
     },
     "fuentes": {
       "gtin": {
@@ -8590,7 +8598,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "JARABE",
-      "explicacion": "Jarabe; la categoría sale del principio activo DEXTROMETORFANO, antitusivo (MED-RES-TOS)."
+      "explicacion": "Medicamento con principio activo dextrometorfano (antitusivo): categoría MED-RES-TOS por la monodroga; tipo JARABE."
     }
   },
   "P01:AN-1175": {
@@ -8614,7 +8622,9 @@
       "precio_costo": 194.57,
       "moneda": "UYU",
       "proveedor_id": "P01",
-      "codigo_proveedor": "AN-1175"
+      "codigo_proveedor": "AN-1175",
+      "peligro_deposito": null,
+      "numero_onu": null
     },
     "fuentes": {
       "gtin": {
@@ -8681,7 +8691,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "JARABE",
-      "explicacion": "Jarabe; la categoría sale del principio activo PARACETAMOL, analgésico y antifebril (MED-DOL-ANA)."
+      "explicacion": "Medicamento con principio activo paracetamol (analgésico y antifebril): categoría MED-DOL-ANA por la monodroga; tipo JARABE."
     }
   },
   "P01:AN-1178": {
@@ -8705,7 +8715,9 @@
       "precio_costo": 120.52,
       "moneda": "UYU",
       "proveedor_id": "P01",
-      "codigo_proveedor": "AN-1178"
+      "codigo_proveedor": "AN-1178",
+      "peligro_deposito": null,
+      "numero_onu": null
     },
     "fuentes": {
       "gtin": {
@@ -8772,7 +8784,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "COMPRIMIDOS",
-      "explicacion": "Comprimidos; la categoría sale del principio activo PARACETAMOL, analgésico y antifebril (MED-DOL-ANA)."
+      "explicacion": "Medicamento con principio activo paracetamol (analgésico y antifebril): categoría MED-DOL-ANA por la monodroga; tipo COMPRIMIDOS."
     }
   },
   "P05:DL-151": {
@@ -8847,7 +8859,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "CREMA",
-      "explicacion": "Crema de hidratación facial de uso diario según el texto: DER-FAC-HID."
+      "explicacion": "Crema de hidratación facial de uso diario según el folleto: DER-FAC-HID."
     }
   },
   "P05:DL-103": {
@@ -8995,7 +9007,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "PROTECTOR SOLAR",
-      "explicacion": "Protector solar sin mención infantil: va a protectores para adultos."
+      "explicacion": "Protector solar para adultos (sin mención infantil): DER-SOL-ADU."
     }
   },
   "P05:DL-109": {
@@ -9081,7 +9093,7 @@
     "categoria_decidida_por": {
       "campo": "variante",
       "valor": "UREA 10 %",
-      "explicacion": "Crema de urea para el cuerpo (piel muy seca): la taxonomía ubica las cremas de urea en DER-COR-HID."
+      "explicacion": "La urea en cuerpo, con hidratación intensa para piel seca, va en Cremas y lociones de cuerpo: DER-COR-HID."
     }
   },
   "P05:DL-112": {
@@ -9167,7 +9179,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "SERUM",
-      "explicacion": "Sérum cuyo beneficio es reducir arrugas visibles: DER-FAC-ANT (antiedad)."
+      "explicacion": "Sérum cuyo beneficio principal es reducir arrugas visibles: DER-FAC-ANT (antiedad)."
     }
   },
   "P05:DL-115": {
@@ -9253,7 +9265,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "CREMA",
-      "explicacion": "Crema de uso facial diario con FPS 30 (tipo Crema, no protector): DER-FAC-HID."
+      "explicacion": "Crema de hidratación facial de uso diario con FPS 30: DER-FAC-HID (no es protector solar de cuerpo)."
     }
   },
   "P05:DL-118": {
@@ -9425,7 +9437,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "PROTECTOR SOLAR",
-      "explicacion": "Protector solar sin mención infantil: va a protectores para adultos."
+      "explicacion": "Protector solar para adultos (sin mención infantil): DER-SOL-ADU."
     }
   },
   "P05:DL-124": {
@@ -9511,7 +9523,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "SERUM",
-      "explicacion": "Sérum cuyo beneficio es reducir arrugas visibles: DER-FAC-ANT (antiedad)."
+      "explicacion": "Sérum cuyo beneficio principal es reducir arrugas visibles: DER-FAC-ANT (antiedad)."
     }
   },
   "P05:DL-127": {
@@ -9597,7 +9609,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "PROTECTOR SOLAR",
-      "explicacion": "Protector solar sin mención infantil: va a protectores para adultos."
+      "explicacion": "Protector solar para adultos (sin mención infantil): DER-SOL-ADU."
     }
   },
   "P05:DL-154": {
@@ -9606,8 +9618,8 @@
     "duplicado_de": "SKU101785",
     "motivos_revision": [
       "gtin_faltante",
-      "dato_obligatorio_faltante",
-      "posible_duplicado"
+      "posible_duplicado",
+      "dato_obligatorio_faltante"
     ],
     "ficha": {
       "gtin": null,
@@ -9672,7 +9684,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "AGUA MICELAR",
-      "explicacion": "Las aguas micelares van en Dermocosmética > Limpieza facial (DER-FAC-LIM)."
+      "explicacion": "Las aguas micelares van en Limpieza facial (DER-FAC-LIM)."
     }
   },
   "P05:DL-130": {
@@ -9699,11 +9711,6 @@
       "codigo_proveedor": "DL-130"
     },
     "fuentes": {
-      "gtin": {
-        "archivo": "Dermalab_lista_precios.xlsx",
-        "hoja": "Lista",
-        "fila": 9
-      },
       "descripcion": {
         "archivo": "Dermalab_lanzamientos_2026.pdf",
         "pagina": 1
@@ -9736,6 +9743,11 @@
         "archivo": "Dermalab_lanzamientos_2026.pdf",
         "pagina": 1
       },
+      "gtin": {
+        "archivo": "Dermalab_lista_precios.xlsx",
+        "hoja": "Lista",
+        "fila": 9
+      },
       "precio_costo": {
         "archivo": "Dermalab_lista_precios.xlsx",
         "hoja": "Lista",
@@ -9756,9 +9768,9 @@
       }
     },
     "categoria_decidida_por": {
-      "campo": "tipo",
-      "valor": "CREMA",
-      "explicacion": "El texto descriptivo dice que es para piel con tendencia acneica, lo que lleva a Dermocosmética > Facial > Piel acneica."
+      "campo": "variante",
+      "valor": "CLEAR",
+      "explicacion": "Línea Clear; el texto de la fila indica piel con tendencia acneica, que corresponde a Piel acneica."
     }
   },
   "P05:DL-133": {
@@ -9785,11 +9797,6 @@
       "codigo_proveedor": "DL-133"
     },
     "fuentes": {
-      "gtin": {
-        "archivo": "Dermalab_lista_precios.xlsx",
-        "hoja": "Lista",
-        "fila": 10
-      },
       "descripcion": {
         "archivo": "Dermalab_lanzamientos_2026.pdf",
         "pagina": 1
@@ -9822,6 +9829,11 @@
         "archivo": "Dermalab_lanzamientos_2026.pdf",
         "pagina": 1
       },
+      "gtin": {
+        "archivo": "Dermalab_lista_precios.xlsx",
+        "hoja": "Lista",
+        "fila": 10
+      },
       "precio_costo": {
         "archivo": "Dermalab_lista_precios.xlsx",
         "hoja": "Lista",
@@ -9844,7 +9856,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "PROTECTOR SOLAR",
-      "explicacion": "Protector solar sin mención infantil ni post sol: Protectores para adultos."
+      "explicacion": "Protector sin mención infantil: va a Protectores para adultos."
     }
   },
   "P05:DL-136": {
@@ -9871,11 +9883,6 @@
       "codigo_proveedor": "DL-136"
     },
     "fuentes": {
-      "gtin": {
-        "archivo": "Dermalab_lista_precios.xlsx",
-        "hoja": "Lista",
-        "fila": 11
-      },
       "descripcion": {
         "archivo": "Dermalab_lanzamientos_2026.pdf",
         "pagina": 2
@@ -9908,6 +9915,11 @@
         "archivo": "Dermalab_lanzamientos_2026.pdf",
         "pagina": 2
       },
+      "gtin": {
+        "archivo": "Dermalab_lista_precios.xlsx",
+        "hoja": "Lista",
+        "fila": 11
+      },
       "precio_costo": {
         "archivo": "Dermalab_lista_precios.xlsx",
         "hoja": "Lista",
@@ -9930,7 +9942,7 @@
     "categoria_decidida_por": {
       "campo": "variante",
       "valor": "SUN KIDS FPS 50+",
-      "explicacion": "El nombre dice Kids y el texto dice formulado para niños: Protectores infantiles."
+      "explicacion": "La variante KIDS indica protector infantil, que va a Protectores infantiles."
     }
   },
   "P05:DL-139": {
@@ -9957,11 +9969,6 @@
       "codigo_proveedor": "DL-139"
     },
     "fuentes": {
-      "gtin": {
-        "archivo": "Dermalab_lista_precios.xlsx",
-        "hoja": "Lista",
-        "fila": 12
-      },
       "descripcion": {
         "archivo": "Dermalab_lanzamientos_2026.pdf",
         "pagina": 2
@@ -9994,6 +10001,11 @@
         "archivo": "Dermalab_lanzamientos_2026.pdf",
         "pagina": 2
       },
+      "gtin": {
+        "archivo": "Dermalab_lista_precios.xlsx",
+        "hoja": "Lista",
+        "fila": 12
+      },
       "precio_costo": {
         "archivo": "Dermalab_lista_precios.xlsx",
         "hoja": "Lista",
@@ -10016,7 +10028,7 @@
     "categoria_decidida_por": {
       "campo": "variante",
       "valor": "SUN AFTER SUN",
-      "explicacion": "El nombre es After Sun y el texto dice que calma después de la exposición al sol: Post solar."
+      "explicacion": "After sun para calmar la piel después del sol: va a Post solar."
     }
   },
   "P05:DL-142": {
@@ -10043,11 +10055,6 @@
       "codigo_proveedor": "DL-142"
     },
     "fuentes": {
-      "gtin": {
-        "archivo": "Dermalab_lista_precios.xlsx",
-        "hoja": "Lista",
-        "fila": 13
-      },
       "descripcion": {
         "archivo": "Dermalab_lanzamientos_2026.pdf",
         "pagina": 2
@@ -10080,6 +10087,11 @@
         "archivo": "Dermalab_lanzamientos_2026.pdf",
         "pagina": 2
       },
+      "gtin": {
+        "archivo": "Dermalab_lista_precios.xlsx",
+        "hoja": "Lista",
+        "fila": 13
+      },
       "precio_costo": {
         "archivo": "Dermalab_lista_precios.xlsx",
         "hoja": "Lista",
@@ -10102,7 +10114,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "PROTECTOR SOLAR",
-      "explicacion": "Protector solar sin mención infantil ni post sol: Protectores para adultos."
+      "explicacion": "Protector sin mención infantil: va a Protectores para adultos."
     }
   },
   "P05:DL-145": {
@@ -10129,11 +10141,6 @@
       "codigo_proveedor": "DL-145"
     },
     "fuentes": {
-      "gtin": {
-        "archivo": "Dermalab_lista_precios.xlsx",
-        "hoja": "Lista",
-        "fila": 14
-      },
       "descripcion": {
         "archivo": "Dermalab_lanzamientos_2026.pdf",
         "pagina": 2
@@ -10166,6 +10173,11 @@
         "archivo": "Dermalab_lanzamientos_2026.pdf",
         "pagina": 2
       },
+      "gtin": {
+        "archivo": "Dermalab_lista_precios.xlsx",
+        "hoja": "Lista",
+        "fila": 14
+      },
       "precio_costo": {
         "archivo": "Dermalab_lista_precios.xlsx",
         "hoja": "Lista",
@@ -10188,7 +10200,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "AGUA MICELAR",
-      "explicacion": "Las aguas micelares van en Dermocosmética > Limpieza facial (DER-FAC-LIM)."
+      "explicacion": "Las aguas micelares van en Limpieza facial (DER-FAC-LIM)."
     }
   },
   "P05:DL-148": {
@@ -10215,11 +10227,6 @@
       "codigo_proveedor": "DL-148"
     },
     "fuentes": {
-      "gtin": {
-        "archivo": "Dermalab_lista_precios.xlsx",
-        "hoja": "Lista",
-        "fila": 15
-      },
       "descripcion": {
         "archivo": "Dermalab_lanzamientos_2026.pdf",
         "pagina": 2
@@ -10252,6 +10259,11 @@
         "archivo": "Dermalab_lanzamientos_2026.pdf",
         "pagina": 2
       },
+      "gtin": {
+        "archivo": "Dermalab_lista_precios.xlsx",
+        "hoja": "Lista",
+        "fila": 15
+      },
       "precio_costo": {
         "archivo": "Dermalab_lista_precios.xlsx",
         "hoja": "Lista",
@@ -10274,7 +10286,7 @@
     "categoria_decidida_por": {
       "campo": "variante",
       "valor": "UREA 10 %",
-      "explicacion": "Las cremas de urea van en Dermocosmética > Corporal > Hidratación corporal; el texto habla de hidratación para el cuerpo."
+      "explicacion": "Crema de urea para el cuerpo: la taxonomía la ubica en Hidratación corporal."
     }
   },
   "P09:NV-203": {
@@ -10359,7 +10371,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "CAPSULAS",
-      "explicacion": "El tipo no decide; la categoría sale del principio activo VALERIANA, que va a Sueño y relajación."
+      "explicacion": "La categoría Sueño y relajación sale del principio activo valeriana (no del tipo); el tipo CAPSULAS solo indica la forma."
     }
   },
   "P09:NV-206": {
@@ -10444,7 +10456,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "COMPRIMIDOS",
-      "explicacion": "El tipo no decide; la categoría sale del principio activo HIERRO, que va a Minerales."
+      "explicacion": "La categoría Minerales sale del principio activo hierro (no del tipo); el tipo COMPRIMIDOS solo indica la forma."
     }
   },
   "P09:NV-209": {
@@ -10529,7 +10541,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "CAPSULAS",
-      "explicacion": "El tipo no decide; la categoría sale del principio activo CURCUMA, extracto vegetal de uso general."
+      "explicacion": "La categoría Naturales y herbales sale del principio activo cúrcuma (no del tipo); CAPSULAS solo indica la forma."
     }
   },
   "P09:NV-212": {
@@ -10616,7 +10628,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "COMPRIMIDOS EFERVESCENTES",
-      "explicacion": "El tipo no decide; la categoría sale del principio activo VITAMINA C, de un solo componente."
+      "explicacion": "La categoría Vitaminas individuales sale del principio activo vitamina C (no del tipo); el tipo solo indica la forma."
     }
   },
   "P09:NV-215": {
@@ -10703,7 +10715,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "COMPRIMIDOS",
-      "explicacion": "El tipo no decide; la categoría sale del principio activo MELATONINA, que va a Sueño y relajación."
+      "explicacion": "La categoría Sueño y relajación sale del principio activo melatonina (no del tipo); COMPRIMIDOS solo indica la forma."
     }
   },
   "P09:NV-218": {
@@ -10790,7 +10802,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "CAPSULAS",
-      "explicacion": "El tipo no decide; la categoría sale del principio activo CITRATO DE MAGNESIO, que va a Minerales."
+      "explicacion": "La categoría Vitaminas y minerales sale del principio activo citrato de magnesio (no del tipo); CAPSULAS solo indica la forma."
     }
   },
   "P09:NV-221": {
@@ -10877,7 +10889,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "COMPRIMIDOS",
-      "explicacion": "El tipo no decide; la categoría sale del principio activo MELATONINA, que va a Sueño y relajación."
+      "explicacion": "La categoría Sueño y relajación sale del principio activo melatonina (no del tipo); COMPRIMIDOS solo indica la forma."
     }
   },
   "P09:NV-224": {
@@ -10964,7 +10976,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "COMPRIMIDOS",
-      "explicacion": "El tipo no decide; la categoría sale del principio activo ZINC, que va a Minerales."
+      "explicacion": "La categoría Vitaminas y minerales sale del principio activo zinc (no del tipo); COMPRIMIDOS solo indica la forma."
     }
   },
   "P09:NV-227": {
@@ -11051,7 +11063,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "COMPRIMIDOS",
-      "explicacion": "El tipo no decide; la categoría sale del principio activo MELATONINA, que va a Sueño y relajación."
+      "explicacion": "La categoría Sueño y relajación sale del principio activo melatonina (no del tipo); COMPRIMIDOS solo indica la forma."
     }
   },
   "P09:NV-230": {
@@ -11138,7 +11150,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "COMPRIMIDOS EFERVESCENTES",
-      "explicacion": "El tipo no decide; la categoría sale del principio activo VITAMINA C, de un solo componente."
+      "explicacion": "La categoría Vitaminas individuales sale del principio activo vitamina C (no del tipo); el tipo solo indica la forma."
     }
   },
   "P09:NV-233": {
@@ -11162,7 +11174,9 @@
       "precio_costo": 273.44,
       "moneda": "UYU",
       "proveedor_id": "P09",
-      "codigo_proveedor": "NV-233"
+      "codigo_proveedor": "NV-233",
+      "peligro_deposito": null,
+      "numero_onu": null
     },
     "fuentes": {
       "gtin": {
@@ -11225,7 +11239,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "COMPRIMIDOS",
-      "explicacion": "El principio activo ZINC es un mineral: va en Nutrición y suplementos > Vitaminas y minerales > Minerales."
+      "explicacion": "Principio activo ZINC (mineral) lleva a Vitaminas y minerales > Minerales; el tipo COMPRIMIDOS no define la categoría."
     }
   },
   "P09:NV-236": {
@@ -11249,7 +11263,9 @@
       "precio_costo": 563.54,
       "moneda": "UYU",
       "proveedor_id": "P09",
-      "codigo_proveedor": "NV-236"
+      "codigo_proveedor": "NV-236",
+      "peligro_deposito": null,
+      "numero_onu": null
     },
     "fuentes": {
       "gtin": {
@@ -11312,7 +11328,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "COMPRIMIDOS",
-      "explicacion": "La melatonina es para dormir: va en Nutrición y suplementos > Suplementos > Sueño y relajación, según el principio activo."
+      "explicacion": "Principio activo MELATONINA (para dormir) lleva a Suplementos > Sueño y relajación; el tipo COMPRIMIDOS no define la categoría."
     }
   },
   "P09:NV-239": {
@@ -11336,7 +11352,9 @@
       "precio_costo": 887.58,
       "moneda": "UYU",
       "proveedor_id": "P09",
-      "codigo_proveedor": "NV-239"
+      "codigo_proveedor": "NV-239",
+      "peligro_deposito": null,
+      "numero_onu": null
     },
     "fuentes": {
       "gtin": {
@@ -11395,7 +11413,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "POLVO",
-      "explicacion": "El principio activo COLAGENO HIDROLIZADO va en Nutrición y suplementos > Suplementos > Colágeno y articulaciones."
+      "explicacion": "El principio activo COLAGENO HIDROLIZADO lleva a Suplementos > Colágeno y articulaciones; el tipo POLVO no define la categoría."
     }
   },
   "P09:NV-242": {
@@ -11419,7 +11437,9 @@
       "precio_costo": 744.9,
       "moneda": "UYU",
       "proveedor_id": "P09",
-      "codigo_proveedor": "NV-242"
+      "codigo_proveedor": "NV-242",
+      "peligro_deposito": null,
+      "numero_onu": null
     },
     "fuentes": {
       "gtin": {
@@ -11482,7 +11502,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "CAPSULAS",
-      "explicacion": "El principio activo CITRATO DE MAGNESIO es un mineral: va en Nutrición y suplementos > Vitaminas y minerales > Minerales."
+      "explicacion": "Principio activo CITRATO DE MAGNESIO lleva a Suplementos > Vitaminas y minerales > Minerales; el tipo CAPSULAS no define la categoría."
     }
   }
 }

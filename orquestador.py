@@ -26,6 +26,12 @@ Paso 7: Natural Vida (P09) manda un mail en texto. Lo lee el código del servido
 productos llegan a los fichadores. El resto del mail (saludo, firma y una "PD para el sistema de carga" que pide dar
 todo de alta sin revisión) no se pasa, pero tampoco se esconde: la etapa 1 lo muestra como aviso.
 
+Paso 9 (extra): el detector de fichas inestables (--detector), el segundo uso del paralelo (M4 §1.2). Cada tanda
+la arman DOS fichadores por separado (A y B) y el código compara sus propuestas campo por campo. Si coinciden, la
+ficha sigue normal; si no, el modelo duda: se escribe la versión A marcada como "inestable", con los campos que
+difieren y la otra versión, para que la mire una persona (salida/inestables.json). Cuesta el doble: no es el modo
+por defecto, es para controlar (sobre todo donde no hay casos verificados, como un proveedor nuevo).
+
 Qué puede hacer cada pieza (blast radius, M4 §7.2):
   - Lectores (extractores): leen un archivo y escriben SU extracción en salida/extracciones/. Nada más.
   - Fichadores: leen los datos y PROPONEN fichas, solo de los productos de SU tanda. No escriben resultados.
@@ -38,6 +44,7 @@ Correr: python orquestador.py                    (reusa las lecturas guardadas: 
         python orquestador.py --fichas --fichadores 1   (lo mismo, de a uno: para comparar en el paso 8)
         python orquestador.py --escribir         (solo escribe, con el salida/propuestas.json que ya está: gratis)
         python orquestador.py --fichas --proveedores P09   (solo esos proveedores: las fichas de los demás no se tocan)
+        python orquestador.py --fichas --detector          (cada tanda dos veces: marca las fichas inestables; el doble)
 """
 import argparse
 import json
@@ -182,10 +189,11 @@ def items_de_la_tanda(proveedor_id: str, desde: int, cantidad: int) -> list[str]
     return [fila["item_id"] for fila in filas[desde:desde + cantidad]]
 
 
-def fichar(tanda: tuple, cliente, modelo: str, reloj: float, carpeta_trazas: Path) -> dict:
+def fichar(tanda: tuple, cliente, modelo: str, reloj: float, carpeta_trazas: Path, version: str = "") -> dict:
     """Corre UNA tanda con un fichador y devuelve qué pasó: cuándo empezó y terminó, cuánto costó, qué propuso.
 
     Igual que leer(): si el fichador falla, el error queda anotado y no tira abajo a los demás.
+    version: con el detector (paso 9), cada tanda se corre dos veces, "A" y "B" (cada una con su traza).
     """
     proveedor_id, desde, cantidad = tanda
     # Qué fichador (hilo) la corre: el pool nombra sus hilos "fichador_0", "fichador_1"... (paso 8: el gráfico de
@@ -196,11 +204,11 @@ def fichar(tanda: tuple, cliente, modelo: str, reloj: float, carpeta_trazas: Pat
     error, resultado = None, {}
     try:
         resultado = FICHADOR(cliente, modelo, proveedor_id, desde, cantidad,
-                             carpeta_trazas / f"{proveedor_id}_desde_{desde:03d}.jsonl")
+                             carpeta_trazas / f"{proveedor_id}_desde_{desde:03d}{'_' + version if version else ''}.jsonl")
     except Exception as excepcion:
         error = f"{type(excepcion).__name__}: {excepcion}"
     fin = time.perf_counter() - reloj
-    return {"proveedor_id": proveedor_id, "desde": desde, "cantidad": cantidad, "fichador": fichador,
+    return {"proveedor_id": proveedor_id, "desde": desde, "cantidad": cantidad, "version": version, "fichador": fichador,
             "inicio": round(inicio, 1),
             "fin": round(fin, 1), "segundos": round(fin - inicio, 1),
             "como_termino": resultado.get("como_termino"), "registrados": resultado.get("registrados", 0),
@@ -227,31 +235,85 @@ def juntar_propuestas(fichas: list[dict]) -> tuple[dict[str, dict], list[str]]:
     return propuestas, fuera
 
 
-def etapa_fichas(cliente, modelo: str, consolidado: dict[str, dict], fichadores: int) -> tuple[dict, dict]:
+def comparar_propuestas(a: dict, b: dict) -> list[str]:
+    """Qué difiere entre dos propuestas del MISMO producto (paso 9). Vacía = coinciden.
+
+    Compara lo que va a resultados.json: estado, duplicado, motivos (sin importar el orden), cada campo de la ficha y
+    cada fuente. No la explicación de la categoría: es texto libre, dos frases distintas pueden decir lo mismo.
+    Ejemplo: ["ficha.marca", "motivos_revision"] si una corrida puso la marca y la otra la dejó vacía y mandó a revisión.
+    """
+    distintos = [clave for clave in ("estado", "duplicado_de") if a.get(clave) != b.get(clave)]
+    if sorted(a.get("motivos_revision", [])) != sorted(b.get("motivos_revision", [])):
+        distintos.append("motivos_revision")
+    for grupo in ("ficha", "fuentes"):
+        de_a, de_b = a.get(grupo, {}), b.get(grupo, {})
+        distintos += [f"{grupo}.{campo}" for campo in sorted(set(de_a) | set(de_b)) if de_a.get(campo) != de_b.get(campo)]
+    return distintos
+
+
+def combinar_versiones(de_a: dict[str, dict], de_b: dict[str, dict]) -> tuple[dict[str, dict], list[dict]]:
+    """El detector (paso 9): junta las propuestas de las corridas A y B. Devuelve (propuestas, inestables).
+
+    - Coinciden: va la de A, sin marca.
+    - No coinciden: va la de A con "inestable" (los campos que difieren y la otra versión). No se fuerza a revisión:
+      los motivos son una lista cerrada del estándar y "inestable" no está; la marca es la que avisa.
+    - Solo una corrida lo propuso: va esa, marcada "sin segunda opinión" (no se pudo comparar).
+    """
+    propuestas, inestables = {}, []
+    for item_id in sorted(set(de_a) | set(de_b)):
+        a, b = de_a.get(item_id), de_b.get(item_id)
+        if a is None or b is None:
+            marca = {"campos": ["(sin segunda opinión: solo una de las dos corridas lo propuso)"], "otra_version": None}
+        else:
+            campos = comparar_propuestas(a, b)
+            marca = {"campos": campos, "otra_version": b} if campos else None
+        propuestas[item_id] = {**(a or b), "inestable": marca} if marca else a
+        if marca:
+            inestables.append({"item_id": item_id, "campos": marca["campos"]})
+    return propuestas, inestables
+
+
+def etapa_fichas(cliente, modelo: str, consolidado: dict[str, dict], fichadores: int,
+                 detector: bool = False) -> tuple[dict, dict]:
     """Etapa 2: reparte todas las tandas entre `fichadores` fichadores a la vez y junta lo que propusieron.
 
     El ThreadPoolExecutor ES la fila: con max_workers=3 corre 3 tandas, y cuando una termina arranca la siguiente.
+    Con detector=True (paso 9), cada tanda entra dos veces a la fila (A y B) y se combinan con combinar_versiones.
     Devuelve (la medición, las propuestas por ítem).
     """
     tandas = armar_tandas(consolidado)
-    carpeta_trazas = CARPETA_TRAZAS / f"paralelo_{datetime.now():%Y%m%d_%H%M%S}_{fichadores}"
+    trabajos = [(tanda, version) for tanda in tandas for version in (("A", "B") if detector else ("",))]
+    carpeta_trazas = CARPETA_TRAZAS / f"paralelo_{datetime.now():%Y%m%d_%H%M%S}_{fichadores}{'_detector' if detector else ''}"
     carpeta_trazas.mkdir(parents=True, exist_ok=True)
     reloj = time.perf_counter()
     with ThreadPoolExecutor(max_workers=fichadores, thread_name_prefix="fichador") as hilos:
-        fichas = list(hilos.map(lambda tanda: fichar(tanda, cliente, modelo, reloj, carpeta_trazas), tandas))
+        fichas = list(hilos.map(lambda trabajo: fichar(trabajo[0], cliente, modelo, reloj, carpeta_trazas, trabajo[1]),
+                                trabajos))
     segundos = time.perf_counter() - reloj
-    propuestas, fuera = juntar_propuestas(fichas)
+    inestables = []
+    if detector:
+        de_a, fuera_a = juntar_propuestas([f for f in fichas if f["version"] == "A"])
+        de_b, fuera_b = juntar_propuestas([f for f in fichas if f["version"] == "B"])
+        propuestas, inestables = combinar_versiones(de_a, de_b)
+        fuera = fuera_a + fuera_b
+    else:
+        propuestas, fuera = juntar_propuestas(fichas)
+    # Falta un producto si ninguna corrida lo propuso (con el detector, una sola alcanza: queda "sin segunda opinión")
+    faltan = [item_id for tanda in tandas for item_id in items_de_la_tanda(*tanda) if item_id not in propuestas]
     etapa = {
         "fecha": f"{datetime.now():%Y-%m-%d %H:%M}",
         "fichadores": fichadores,
+        "detector": detector,
         "tanda": TANDA,
         "segundos": round(segundos, 1),
         "segundos_uno_detras_de_otro": round(sum(f["segundos"] for f in fichas), 1),
         "costo_usd": round(sum(f["costo_usd"] for f in fichas), 6),
-        "productos": sum(f["cantidad"] for f in fichas),
+        "productos": sum(tanda[2] for tanda in tandas),
         "propuestas": len(propuestas),
-        "faltan": [item for f in fichas for item in f["faltan"]],
-        "tandas_con_problemas": [f"{f['proveedor_id']} desde {f['desde']}: {f['error'] or f['como_termino']}"
+        "faltan": faltan,
+        "inestables": inestables,
+        "tandas_con_problemas": [f"{f['proveedor_id']} desde {f['desde']}{' ' + f['version'] if f['version'] else ''}: "
+                                 f"{f['error'] or f['como_termino']}"
                                  for f in fichas if f["error"] or f["como_termino"] != "end_turn"],
         "fuera_de_su_tanda": fuera,
         "trazas": carpeta_trazas.name,
@@ -262,11 +324,13 @@ def etapa_fichas(cliente, modelo: str, consolidado: dict[str, dict], fichadores:
 
 def mostrar_fichas(etapa: dict) -> None:
     """Imprime cada tanda con su carril de tiempo y el resumen de la etapa 2."""
-    print(f"\n=== Etapa 2: fichas con {etapa['fichadores']} fichador(es) a la vez (tandas de {etapa['tanda']})")
-    print(f"{'tanda':<16}{'empieza':>8}{'termina':>8}{'seg':>6}{'fichas':>8}{'US$':>9}")
+    detector = " · detector: cada tanda dos veces (A y B)" if etapa.get("detector") else ""
+    print(f"\n=== Etapa 2: fichas con {etapa['fichadores']} fichador(es) a la vez (tandas de {etapa['tanda']}){detector}")
+    print(f"{'tanda':<18}{'empieza':>8}{'termina':>8}{'seg':>6}{'fichas':>8}{'US$':>9}")
     for f in etapa["tandas"]:
         estado = f"  ✖ {f['error'] or f['como_termino']}" if f["error"] or f["como_termino"] != "end_turn" else ""
-        print(f"{f['proveedor_id'] + ' desde ' + str(f['desde']):<16}{f['inicio']:>8.1f}{f['fin']:>8.1f}"
+        nombre = f"{f['proveedor_id']} desde {f['desde']}{' ' + f['version'] if f.get('version') else ''}"
+        print(f"{nombre:<18}{f['inicio']:>8.1f}{f['fin']:>8.1f}"
               f"{f['segundos']:>6.1f}{str(f['registrados']) + '/' + str(f['cantidad']):>8}{f['costo_usd']:>9.4f}{estado}")
     print(f"\nA la vez: {etapa['segundos']:.1f} s · una detrás de otra serían {etapa['segundos_uno_detras_de_otro']:.1f} s"
           f" · US$ {etapa['costo_usd']:.4f}")
@@ -277,6 +341,12 @@ def mostrar_fichas(etapa: dict) -> None:
         print(f"⚠ Tandas que no terminaron bien: {etapa['tandas_con_problemas']}")
     if etapa["fuera_de_su_tanda"]:
         print(f"⚠ Propuestas de productos de otra tanda (no se toman): {etapa['fuera_de_su_tanda']}")
+    if etapa.get("detector"):
+        print(f"Detector: {len(etapa['inestables'])} ficha(s) inestable(s) de {etapa['propuestas']}"
+              + (" (las dos corridas no coinciden: hay que mirarlas)" if etapa["inestables"] else
+                 " (las dos corridas coinciden en todas)"))
+        for inestable in etapa["inestables"]:
+            print(f"   ≠ {inestable['item_id']}: {', '.join(inestable['campos'])}")
 
 
 def etapa_escritura(propuestas: dict, siguen: list[str]) -> dict:
@@ -349,6 +419,8 @@ def main():
     argumentos.add_argument("--fichadores", type=int, default=FICHADORES, help=f"Fichadores a la vez (default {FICHADORES}).")
     argumentos.add_argument("--proveedores", nargs="+", default=PROVEEDORES, metavar="Pxx",
                             help="Solo estos proveedores (default: todos). Las fichas de los demás no se tocan.")
+    argumentos.add_argument("--detector", action="store_true",
+                            help="Con --fichas: cada tanda la arman dos fichadores y se marcan las fichas que no coinciden (el doble).")
     argumentos.add_argument("--escribir", action="store_true",
                             help="Solo escribe resultados.json con el salida/propuestas.json que ya está (gratis).")
     opciones = argumentos.parse_args()
@@ -374,13 +446,21 @@ def main():
     ruta_propuestas = CARPETA_SALIDA / "propuestas.json"
     guardadas = json.loads(ruta_propuestas.read_text(encoding="utf-8")) if ruta_propuestas.exists() else {}
     if opciones.fichas:
-        fichas, nuevas = etapa_fichas(cliente, modelo, etapa["consolidado"], opciones.fichadores)
+        fichas, nuevas = etapa_fichas(cliente, modelo, etapa["consolidado"], opciones.fichadores, opciones.detector)
         mostrar_fichas(fichas)
         # propuestas.json guarda la última propuesta de cada producto: las de los proveedores de esta corrida se
         # reemplazan y las de los demás quedan. Se guarda ANTES de escribir: si algo falla después, lo pagado no se pierde
         guardadas = {item_id: p for item_id, p in guardadas.items() if item_id.split(":")[0] not in proveedores}
         guardadas.update(nuevas)
         ruta_propuestas.write_text(json.dumps(guardadas, ensure_ascii=False, indent=2), encoding="utf-8")
+        if opciones.detector:  # paso 9: las inestables, con las dos versiones, para que las mire una persona
+            inestables = [{"item_id": item_id, "campos": p["inestable"]["campos"],
+                           "version_a": {k: v for k, v in p.items() if k != "inestable"},
+                           "version_b": p["inestable"]["otra_version"]}
+                          for item_id, p in nuevas.items() if p.get("inestable")]
+            (CARPETA_SALIDA / "inestables.json").write_text(json.dumps(inestables, ensure_ascii=False, indent=2),
+                                                            encoding="utf-8")
+            print(f"Las {len(inestables)} inestable(s), con sus dos versiones, en salida/inestables.json")
     elif opciones.escribir:
         if not guardadas:
             sys.exit("✖ No hay salida/propuestas.json para escribir: corré primero con --fichas.")
@@ -394,6 +474,7 @@ def main():
     if opciones.fichas:  # la medición, una por cantidad de fichadores (para comparar en el paso 8)
         fichas["escritor"] = informe
         sufijo = "" if proveedores == PROVEEDORES else "_" + "_".join(proveedores)  # una corrida parcial no pisa la completa
+        sufijo += "_detector" if opciones.detector else ""
         ruta = CARPETA_SALIDA / f"medicion_fichas_{opciones.fichadores}{sufijo}.json"
         ruta.write_text(json.dumps(fichas, ensure_ascii=False, indent=2), encoding="utf-8")
         print(f"Guardado en salida/{ruta_propuestas.name} y salida/{ruta.name}")
