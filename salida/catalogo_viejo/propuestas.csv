@@ -1,0 +1,631 @@
+﻿sku;campo;actual;propuesto;origen;por_que
+SKU100007;unidad;ML.;ML;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU100007;variante;;COLOR;ia;Indica la línea para cabello teñido, distingue al shampoo dentro de Brisa.
+SKU100007;descripcion;SH. BRISA COLOR 400ML.;SHAMPOO BRISA COLOR X 400 ML;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU100021;descripcion;DOLOREX 600 MG COMP. 10UN;DOLOREX 600 MG COMPRIMIDOS X 10 UN;codigo;Armada con los campos, sin abreviaturas (estándar, secciones 2 y 3)
+SKU100049;variante;;AVENA;ia;Ingrediente que define la variante del gel de ducha Dermovita.
+SKU100049;descripcion;GEL DE DUCHA DERMOVITA AVENA 750ML;GEL DE DUCHA DERMOVITA AVENA X 750 ML;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU100056;unidad;GR;G;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU100056;descripcion;VITALIA COLAGENO HIDROLIZADO POLVO 300GR;VITALIA COLAGENO HIDROLIZADO POLVO X 300 G;codigo;Armada con los campos, sin abreviaturas (estándar, secciones 2 y 3)
+SKU100063;variante;;OXIDO DE ZINC;ia;Principio activo que distingue la crema Dermovita de otras de su línea.
+SKU100063;descripcion;CREMA DERMOVITA OXIDO DE ZINC 120G;CREMA DERMOVITA OXIDO DE ZINC X 120 G;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU100070;unidad;ML.;ML;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU100070;variante;;COCO;ia;Fragancia que distingue el gel de ducha Dermovita.
+SKU100070;descripcion;GEL DE DUCHA DERMOVITA COCO 400ML.;GEL DE DUCHA DERMOVITA COCO X 400 ML;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU100077;unidad;GR;G;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU100077;variante;;REPARACION;ia;Uso o línea del tratamiento capilar Higienol.
+SKU100077;descripcion;TRAT. CAP. HIGIENOL REPARACION 250GR;TRATAMIENTO CAPILAR HIGIENOL REPARACION X 250 G;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU100084;unidad;CC;ML;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU100084;variante;;SIN PERFUME;ia;Fragancia (sin perfume) que distingue el desodorante Vitalia.
+SKU100084;descripcion;DESOD. AEROSOL VITALIA S/ PERF. 250CC;DESODORANTE AEROSOL VITALIA SIN PERFUME X 250 ML;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU100091;unidad;ML.;ML;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU100091;variante;;NEUTRO;ia;Fragancia o tipo de jabón íntimo que distingue la variante Dermovita.
+SKU100091;descripcion;JABON INTIMO DERMOVITA NEUTRO 200ML.;JABON INTIMO DERMOVITA NEUTRO X 200 ML;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU100098;variante;;HOMBRE;ia;Línea por público objetivo del desodorante Suavit.
+SKU100098;descripcion;DESOD. AER. SUAVIT HOMBRE 150ML;DESODORANTE AEROSOL SUAVIT HOMBRE X 150 ML;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU100105;unidad;CC;ML;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU100105;variante;;CABELLO SECO;ia;Tipo de cabello para el que está indicado el acondicionador.
+SKU100105;descripcion;ACONDICIONADOR SUAVIT CAB. SECO 200CC;ACONDICIONADOR SUAVIT CABELLO SECO X 200 ML;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU100126;unidad;GR;G;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU100126;variante;;MENTA FRESCA;ia;Sabor que distingue la pasta dental Dermovita.
+SKU100126;descripcion;PASTA DENTAL DERMOVITA MENTA FRESCA 90GR;PASTA DENTAL DERMOVITA MENTA FRESCA X 90 G;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU100140;unidad;CC;ML;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU100140;variante;;SIN PERFUME;ia;Fragancia (sin perfume) que distingue el desodorante Brisa.
+SKU100140;descripcion;DESOD. AER. BRISA S/ PERF. 150CC;DESODORANTE AEROSOL BRISA SIN PERFUME X 150 ML;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU100147;unidad;UNID;UN;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU100147;descripcion;DERMOVITA MELATONINA 3 MG COMPRIMIDOS 30UNID;DERMOVITA MELATONINA 3 MG COMPRIMIDOS X 30 UN;codigo;Armada con los campos, sin abreviaturas (estándar, secciones 2 y 3)
+SKU100154;unidad;ML.;ML;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU100154;variante;;RIZOS;ia;Tipo de cabello para el que está indicado el shampoo.
+SKU100154;descripcion;SH. BELLAFLOR RIZOS 400ML.;SHAMPOO BELLAFLOR RIZOS X 400 ML;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU100175;variante;;MUJER;ia;Línea por público objetivo del desodorante roll on Dermovita.
+SKU100175;descripcion;DESOD. ROLL ON DERMOVITA MUJER 50ML;DESODORANTE ROLL ON DERMOVITA MUJER X 50 ML;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU100182;descripcion;HISOPOS SUAVIT 200UN;HISOPOS SUAVIT X 200 UN;codigo;Armada con los campos, sin abreviaturas (estándar, secciones 2 y 3)
+SKU100189;variante;;NEUTRO;ia;Fragancia que distingue el jabón líquido Vitalia.
+SKU100189;descripcion;JABON LIQUIDO VITALIA NEUTRO 500ML;JABON LIQUIDO VITALIA NEUTRO X 500 ML;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU100210;unidad;GRS;G;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU100210;variante;;NUTRICION;ia;Uso o línea del tratamiento capilar Bellaflor.
+SKU100210;descripcion;TRAT. CAP. BELLAFLOR NUTRICION 250GRS;TRATAMIENTO CAPILAR BELLAFLOR NUTRICION X 250 G;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU100217;unidad;GRS;G;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU100217;variante;;MENTA FRESCA;ia;Sabor que distingue la pasta dental Sonrisa.
+SKU100217;descripcion;PASTA DENTAL SONRISA MENTA FRESCA 90GRS;PASTA DENTAL SONRISA MENTA FRESCA X 90 G;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU100224;variante;;RECIEN NACIDO;ia;Público objetivo que define la línea de toallitas Suavit.
+SKU100224;descripcion;TOALLITAS HUMEDAS SUAVIT RECIEN NACIDO 50UN;TOALLITAS HUMEDAS SUAVIT RECIEN NACIDO X 50 UN;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU100231;unidad;ML.;ML;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU100231;variante;;NEUTRO;ia;Fragancia que distingue el jabón íntimo Vitalia.
+SKU100231;descripcion;JABON INTIMO VITALIA NEUTRO 200ML.;JABON INTIMO VITALIA NEUTRO X 200 ML;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU100238;unidad;ML.;ML;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU100238;variante;;RIZOS;ia;Tipo de cabello para el que está indicado el acondicionador.
+SKU100238;descripcion;ACOND. HIGIENOL RIZOS 400ML.;ACONDICIONADOR HIGIENOL RIZOS X 400 ML;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU100259;unidad;UNID;UN;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU100259;descripcion;HIGIENOL VALERIANA 300 MG CAPS. 60UNID;HIGIENOL VALERIANA 300 MG CAPSULAS X 60 UN;codigo;Armada con los campos, sin abreviaturas (estándar, secciones 2 y 3)
+SKU100266;unidad;ML.;ML;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU100266;variante;;ALOE;ia;Fragancia que distingue el alcohol en gel Vitalia.
+SKU100266;descripcion;ALCOHOL EN GEL VITALIA ALOE 250ML.;ALCOHOL EN GEL VITALIA ALOE X 250 ML;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU100322;unidad;ML.;ML;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU100322;variante;;MULTIUSO COCINA;ia;Uso que distingue el limpiador Dermovita.
+SKU100322;descripcion;LIMPIADOR DERMOVITA MULTIUSO COCINA 900ML.;LIMPIADOR DERMOVITA MULTIUSO COCINA X 900 ML;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU100378;unidad;ML.;ML;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU100378;variante;;CABELLO GRASO;ia;Tipo de cabello para el que está indicado el shampoo.
+SKU100378;descripcion;SH. DERMOVITA CAB. GRASO 750ML.;SHAMPOO DERMOVITA CABELLO GRASO X 750 ML;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU100420;unidad;GRS;G;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU100420;variante;;ETAPA 1;ia;Etapa de la leche infantil, define la variante del producto.
+SKU100420;descripcion;LECHE INFANTIL SUAVIT ETAPA 1 400GRS;LECHE INFANTIL SUAVIT ETAPA 1 X 400 G;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU100427;unidad;CC;ML;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU100427;variante;;CABELLO SECO;ia;Tipo de cabello para el que está indicado el acondicionador.
+SKU100427;descripcion;ACOND. VITALIA CAB. SECO 400CC;ACONDICIONADOR VITALIA CABELLO SECO X 400 ML;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU100434;variante;;HIDROFILO;ia;Tipo de algodón que distingue el producto dentro de Suavit.
+SKU100434;descripcion;ALGODON SUAVIT HIDROFILO 140G;ALGODON SUAVIT HIDROFILO X 140 G;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU100434;revisar;;;codigo;La IA decidió distinto para 'HIDROFILO' en productos ALGODON: es variante en SKU100434, SKU102541 y no en SKU104193. Confirmar cuál va
+SKU100448;unidad;ML.;ML;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU100448;variante;;ANTIBACTERIAL;ia;Uso antibacterial distingue este jabón líquido Suavit de otros de la misma marca.
+SKU100448;descripcion;JABON LIQUIDO SUAVIT ANTIBAC. 500ML.;JABON LIQUIDO SUAVIT ANTIBACTERIAL X 500 ML;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU100455;descripcion;DERMOVITA MELATONINA 5 MG COMP. 30UN;DERMOVITA MELATONINA 5 MG COMPRIMIDOS X 30 UN;codigo;Armada con los campos, sin abreviaturas (estándar, secciones 2 y 3)
+SKU100476;variante;;CABELLO SECO;ia;"Tipo de cabello para el que está indicado el shampoo; distingue la variante."
+SKU100476;descripcion;SH. BRISA CAB. SECO 750ML;SHAMPOO BRISA CABELLO SECO X 750 ML;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU100497;variante;;HOMBRE;ia;Línea por género del desodorante, distingue de la versión mujer.
+SKU100497;descripcion;DESOD. AER. VITALIA HOMBRE 150ML;DESODORANTE AEROSOL VITALIA HOMBRE X 150 ML;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU100504;unidad;ML.;ML;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU100504;variante;;COLOR;ia;Línea para cabello teñido, distingue el acondicionador dentro de la marca.
+SKU100504;descripcion;ACOND. HIGIENOL COLOR 750ML.;ACONDICIONADOR HIGIENOL COLOR X 750 ML;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU100518;unidad;ML.;ML;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU100518;variante;;MANZANILLA;ia;Fragancia del jabón íntimo.
+SKU100518;descripcion;JABON INTIMO AQUAVIVA MANZANILLA 200ML.;JABON INTIMO AQUAVIVA MANZANILLA X 200 ML;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU100539;variante;;CREMA;ia;Presentación del repelente que lo distingue de otros repelentes de la marca.
+SKU100539;descripcion;REPELENTE VITALIA CREMA 60G;REPELENTE VITALIA CREMA X 60 G;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU100546;variante;;G;ia;Talle del pañal.
+SKU100546;descripcion;PAÑALES DERMOVITA G 60UN;PAÑALES DERMOVITA G X 60 UN;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU100560;unidad;GR;G;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU100560;variante;;MENTA FRESCA;ia;Fragancia de la pasta dental.
+SKU100560;descripcion;PASTA DENTAL DERMOVITA MENTA FRESCA 70GR;PASTA DENTAL DERMOVITA MENTA FRESCA X 70 G;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU100567;unidad;GR;G;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU100567;variante;;CREMA;ia;Presentación del repelente que lo distingue dentro de la marca.
+SKU100567;descripcion;REPELENTE BELLAFLOR CREMA 100GR;REPELENTE BELLAFLOR CREMA X 100 G;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU100574;variante;;RIZOS;ia;Línea para tipo de cabello, distingue el shampoo.
+SKU100574;descripcion;SH. HIGIENOL RIZOS 750ML;SHAMPOO HIGIENOL RIZOS X 750 ML;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU100581;unidad;ML.;ML;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU100581;variante;;RIZOS;ia;"Línea para tipo de cabello; el contenido distinto no cambia la variante."
+SKU100581;descripcion;SH. HIGIENOL RIZOS 400ML.;SHAMPOO HIGIENOL RIZOS X 400 ML;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU100616;variante;;G;ia;Talle del pañal.
+SKU100616;descripcion;PAÑALES DERMOVITA G 48UN;PAÑALES DERMOVITA G X 48 UN;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU100644;unidad;CC;ML;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU100644;variante;;CABELLO SECO;ia;Tipo de cabello para el que está indicado el acondicionador.
+SKU100644;descripcion;ACOND. HIGIENOL CAB. SECO 750CC;ACONDICIONADOR HIGIENOL CABELLO SECO X 750 ML;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU100665;unidad;CC;ML;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU100665;variante;;NEUTRO;ia;Fragancia o versión neutra del jabón líquido.
+SKU100665;descripcion;JABON LIQUIDO SUAVIT NEUTRO 500CC;JABON LIQUIDO SUAVIT NEUTRO X 500 ML;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU100679;unidad;GR;G;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU100679;revisar;TRAT. CAP. NATIVA REP/CION 500GR;;codigo;Tiene REP/CION: una abreviatura que no está en el vocabulario. La tiene que escribir completa una persona (sección 2)
+SKU100700;variante;;MULTIUSO COCINA;ia;Uso específico del limpiador.
+SKU100700;descripcion;LIMPIADOR HIGIENOL MULTIUSO COCINA 900ML;LIMPIADOR HIGIENOL MULTIUSO COCINA X 900 ML;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU100707;unidad;UNID;UN;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU100707;variante;;ALOE;ia;Fragancia o componente de las toallitas.
+SKU100707;descripcion;TOALLITAS HUMEDAS HIGIENOL ALOE 80UNID;TOALLITAS HUMEDAS HIGIENOL ALOE X 80 UN;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU100721;unidad;CC;ML;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU100721;variante;;96 %;ia;Porcentaje de concentración del alcohol.
+SKU100721;descripcion;ALCOHOL BELLAFLOR 96 % 250CC;ALCOHOL BELLAFLOR 96 % X 250 ML;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU100728;unidad;CC;ML;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU100728;variante;;ANTICASPA;ia;Uso anticaspa del shampoo.
+SKU100728;descripcion;SHAMPOO BELLAFLOR ANTICASPA 750CC;SHAMPOO BELLAFLOR ANTICASPA X 750 ML;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU100735;unidad;ML.;ML;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU100735;variante;;MUJER;ia;Línea por género del desodorante, distingue de la versión hombre.
+SKU100735;descripcion;DESOD. AER. VITALIA MUJER 150ML.;DESODORANTE AEROSOL VITALIA MUJER X 150 ML;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU100742;variante;;AEROSOL;ia;Presentación del repelente que lo distingue dentro de la marca.
+SKU100742;descripcion;REPELENTE DERMOVITA AER. 170ML;REPELENTE DERMOVITA AEROSOL X 170 ML;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU100756;unidad;ML.;ML;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU100756;variante;;ALOE;ia;Fragancia o componente del alcohol en gel.
+SKU100756;descripcion;ALCOHOL EN GEL BELLAFLOR ALOE 250ML.;ALCOHOL EN GEL BELLAFLOR ALOE X 250 ML;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU100763;unidad;UNID;UN;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU100763;descripcion;BELLAFLOR ZINC 15 MG COMPRIMIDOS 120UNID;BELLAFLOR ZINC 15 MG COMPRIMIDOS X 120 UN;codigo;Armada con los campos, sin abreviaturas (estándar, secciones 2 y 3)
+SKU100770;unidad;UNID;UN;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU100770;descripcion;HIGIENOL ZINC 15 MG COMP. 60UNID;HIGIENOL ZINC 15 MG COMPRIMIDOS X 60 UN;codigo;Armada con los campos, sin abreviaturas (estándar, secciones 2 y 3)
+SKU100812;unidad;CC;ML;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU100812;variante;;LISO;ia;Tipo de cabello para el que está indicado el acondicionador.
+SKU100812;descripcion;ACOND. NATIVA LISO 750CC;ACONDICIONADOR NATIVA LISO X 750 ML;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU100819;unidad;GR;G;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU100819;variante;;SENSIBLE;ia;Uso para dientes sensibles, distingue la pasta dental.
+SKU100819;descripcion;PASTA DENTAL HIGIENOL SENSIBLE 90GR;PASTA DENTAL HIGIENOL SENSIBLE X 90 G;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU100833;descripcion;VITALIA VALERIANA 300 MG CAPSULAS 30UN;VITALIA VALERIANA 300 MG CAPSULAS X 30 UN;codigo;Armada con los campos, sin abreviaturas (estándar, secciones 2 y 3)
+SKU100847;variante;;G;ia;Talle del pañal.
+SKU100847;descripcion;PAÑALES SUAVIT G 36UN;PAÑALES SUAVIT G X 36 UN;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU100889;unidad;GRS;G;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU100889;variante;;ANTIBACTERIAL;ia;Uso antibacterial del jabón.
+SKU100889;descripcion;JABON PUREZA ANTIBAC. 90GRS;JABON PUREZA ANTIBACTERIAL X 90 G;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU100910;unidad;CC;ML;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU100910;variante;;HYDRA PLUS;ia;Nombre de línea del producto dentro de la marca DERMALAB.
+SKU100910;descripcion;CREMA DERMALAB HYDRA PLUS 50CC;CREMA DERMALAB HYDRA PLUS X 50 ML;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU100945;variante;;ANTICASPA;ia;Uso específico del shampoo que lo distingue de otras variantes de NATIVA.
+SKU100945;descripcion;SHAMPOO NATIVA ANTICASPA 750ML;SHAMPOO NATIVA ANTICASPA X 750 ML;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU100952;unidad;CC;ML;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU100952;variante;;LISO;ia;Tipo de cabello al que está destinado el acondicionador, que lo distingue dentro de VITALIA.
+SKU100952;descripcion;ACOND. VITALIA LISO 400CC;ACONDICIONADOR VITALIA LISO X 400 ML;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU100973;unidad;CC;ML;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU100973;variante;;ROPA BLANCA;ia;Uso específico de la lavandina, para prendas blancas.
+SKU100973;descripcion;LAVANDINA HIGIENOL ROPA BLANCA 1000CC;LAVANDINA HIGIENOL ROPA BLANCA X 1000 ML;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU100994;variante;;ANTIBACTERIAL;ia;Característica de uso que distingue este jabón líquido dentro de VITALIA.
+SKU100994;descripcion;JABON LIQUIDO VITALIA ANTIBAC. 500ML;JABON LIQUIDO VITALIA ANTIBACTERIAL X 500 ML;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU101001;variante;;XG;ia;Talle del pañal.
+SKU101001;descripcion;PAÑALES DERMOVITA XG 60UN;PAÑALES DERMOVITA XG X 60 UN;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU101008;unidad;UNID;UN;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU101008;variante;;XG;ia;Talle del pañal.
+SKU101008;descripcion;PAÑALES SUAVIT XG 60UNID;PAÑALES SUAVIT XG X 60 UN;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU101015;unidad;GR;G;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU101015;variante;;ETAPA 3;ia;Etapa de la leche infantil.
+SKU101015;descripcion;LECHE INFANTIL SUAVIT ETAPA 3 400GR;LECHE INFANTIL SUAVIT ETAPA 3 X 400 G;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU101043;variante;;ALOE;ia;Fragancia o variante de uso del alcohol en gel.
+SKU101043;descripcion;ALCOHOL EN GEL VITALIA ALOE 60ML;ALCOHOL EN GEL VITALIA ALOE X 60 ML;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU101064;variante;;SIN PERFUME;ia;Variante de fragancia de las toallitas.
+SKU101064;descripcion;TOALLITAS HUMEDAS HIGIENOL S/ PERF. 80UN;TOALLITAS HUMEDAS HIGIENOL SIN PERFUME X 80 UN;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU101078;variante;;NEUTRO;ia;Variante de fragancia del jabón íntimo.
+SKU101078;descripcion;JABON INTIMO VITALIA NEUTRO 400ML;JABON INTIMO VITALIA NEUTRO X 400 ML;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU101099;unidad;ML.;ML;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU101099;variante;;MOSCAS Y MOSQUITOS;ia;Uso específico del insecticida, para moscas y mosquitos.
+SKU101099;descripcion;INSECTICIDA SUAVIT MOSCAS Y MOSQUITOS 360ML.;INSECTICIDA SUAVIT MOSCAS Y MOSQUITOS X 360 ML;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU101120;variante;;COLOR;ia;Tipo de cabello o uso del shampoo para cabello teñido, que lo distingue dentro de BELLAFLOR.
+SKU101120;descripcion;SH. BELLAFLOR COLOR 200ML;SHAMPOO BELLAFLOR COLOR X 200 ML;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU101127;unidad;CC;ML;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU101127;variante;;COLOR;ia;Tipo de cabello o uso del shampoo para cabello teñido, que lo distingue dentro de BRISA.
+SKU101127;descripcion;SH. BRISA COLOR 200CC;SHAMPOO BRISA COLOR X 200 ML;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU101211;unidad;ML.;ML;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU101211;variante;;PIEL SENSIBLE;ia;Tipo de piel al que está destinada la espuma de afeitar.
+SKU101211;descripcion;ESPUMA DE AFEITAR BELLAFLOR PIEL SENSIBLE 200ML.;ESPUMA DE AFEITAR BELLAFLOR PIEL SENSIBLE X 200 ML;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU101225;unidad;ML.;ML;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU101225;variante;;ALOE;ia;Fragancia o variante de uso del alcohol en gel.
+SKU101225;descripcion;ALCOHOL EN GEL HIGIENOL ALOE 500ML.;ALCOHOL EN GEL HIGIENOL ALOE X 500 ML;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU101232;variante;;ANTICASPA;ia;Uso específico del shampoo que lo distingue dentro de NATIVA.
+SKU101232;descripcion;SH. NATIVA ANTICASPA 200ML;SHAMPOO NATIVA ANTICASPA X 200 ML;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU101246;unidad;CC;ML;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU101246;variante;;FIJACION FUERTE;ia;Grado de fijación que distingue a la laca dentro de SUAVIT.
+SKU101246;descripcion;LACA SUAVIT FIJ. FUERTE 400CC;LACA SUAVIT FIJACION FUERTE X 400 ML;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU101302;unidad;ML.;ML;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU101302;variante;;COLOR;ia;Tipo de cabello o uso del shampoo para cabello teñido, que lo distingue dentro de ALBORADA.
+SKU101302;descripcion;SH. ALBORADA COLOR 400ML.;SHAMPOO ALBORADA COLOR X 400 ML;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU101309;variante;;SIN PERFUME;ia;Variante de fragancia de las toallitas.
+SKU101309;descripcion;TOALLITAS HUMEDAS SUAVIT S/ PERF. 100UN;TOALLITAS HUMEDAS SUAVIT SIN PERFUME X 100 UN;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU101330;unidad;ML.;ML;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU101330;variante;;SPORT;ia;Línea del desodorante dentro de FRESCOR.
+SKU101330;descripcion;DESOD. AER. FRESCOR SPORT 250ML.;DESODORANTE AEROSOL FRESCOR SPORT X 250 ML;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU101344;unidad;UNID;UN;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU101344;variante;;M;ia;Talle del pañal.
+SKU101344;descripcion;PAÑALES SUAVIT M 30UNID;PAÑALES SUAVIT M X 30 UN;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU101351;variante;;LISO;ia;Tipo de cabello al que está destinado el acondicionador, que lo distingue dentro de VITALIA.
+SKU101351;descripcion;ACOND. VITALIA LISO 200ML;ACONDICIONADOR VITALIA LISO X 200 ML;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU101372;unidad;CC;ML;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU101372;variante;;SIN PERFUME;ia;Variante de fragancia del desodorante roll on.
+SKU101372;descripcion;DESOD. ROLL ON HIGIENOL S/ PERF. 50CC;DESODORANTE ROLL ON HIGIENOL SIN PERFUME X 50 ML;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU101379;unidad;GRS;G;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU101379;descripcion;HIGIENOL COLAGENO HIDROLIZADO POLVO 300GRS;HIGIENOL COLAGENO HIDROLIZADO POLVO X 300 G;codigo;Armada con los campos, sin abreviaturas (estándar, secciones 2 y 3)
+SKU101386;unidad;CC;ML;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU101386;variante;;96 %;ia;Porcentaje de concentración del alcohol, que lo distingue dentro de CLARITA.
+SKU101386;descripcion;ALCOHOL CLARITA 96 % 500CC;ALCOHOL CLARITA 96 % X 500 ML;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU101400;unidad;GRS;G;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU101400;variante;;NUTRICION;ia;Línea de tratamiento capilar que distingue al producto dentro de la marca.
+SKU101400;descripcion;TRATAMIENTO CAPILAR ALBORADA NUTRICION 250GRS;TRATAMIENTO CAPILAR ALBORADA NUTRICION X 250 G;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU101414;unidad;ML.;ML;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU101414;variante;;CABELLO SECO;ia;Uso para cabello seco, distingue la variante del acondicionador.
+SKU101414;descripcion;ACOND. ALBORADA CAB. SECO 400ML.;ACONDICIONADOR ALBORADA CABELLO SECO X 400 ML;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU101421;variante;;ETAPA 3;ia;Etapa de la leche infantil, según la sección 1.
+SKU101421;descripcion;LECHE INFANTIL VITALIA ETAPA 3 400G;LECHE INFANTIL VITALIA ETAPA 3 X 400 G;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU101463;descripcion;SUAVIT VITAMINA C 1 G COMP. EFERVESCENTES 20UN;SUAVIT VITAMINA C 1 G COMPRIMIDOS EFERVESCENTES X 20 UN;codigo;Armada con los campos, sin abreviaturas (estándar, secciones 2 y 3)
+SKU101477;variante;;XG;ia;Talle del pañal.
+SKU101477;descripcion;PAÑALES SUAVIT XG 36UN;PAÑALES SUAVIT XG X 36 UN;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU101484;unidad;UNID;UN;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU101484;descripcion;VITALIA CURCUMA 500 MG CAPS. 60UNID;VITALIA CURCUMA 500 MG CAPSULAS X 60 UN;codigo;Armada con los campos, sin abreviaturas (estándar, secciones 2 y 3)
+SKU101498;unidad;GRS;G;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU101498;variante;;SIN PERFUME;ia;Fragancia (ausencia de perfume) que distingue al desodorante.
+SKU101498;descripcion;DESOD. BARRA DERMOVITA SIN PERF. 50GRS;DESODORANTE BARRA DERMOVITA SIN PERFUME X 50 G;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU101505;unidad;ML.;ML;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU101505;variante;;70 %;ia;Porcentaje de concentración del alcohol, con el símbolo que lo acompaña.
+SKU101505;descripcion;ALCOHOL CLARITA 70 % 500ML.;ALCOHOL CLARITA 70 % X 500 ML;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU101533;variante;;XXG;ia;Talle del pañal.
+SKU101533;descripcion;PAÑALES PEQUEÑOS PASOS XXG 48UN;PAÑALES PEQUEÑOS PASOS XXG X 48 UN;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU101554;unidad;CC;ML;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU101554;variante;;MULTIUSO LAVANDA;ia;Uso multiuso y fragancia lavanda del limpiador.
+SKU101554;descripcion;LIMPIADOR DERMOVITA MULTIUSO LAVANDA 900CC;LIMPIADOR DERMOVITA MULTIUSO LAVANDA X 900 ML;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU101596;unidad;CC;ML;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU101596;variante;;COLOR;ia;Línea para cabello teñido que distingue al acondicionador.
+SKU101596;descripcion;ACOND. VITALIA COLOR 200CC;ACONDICIONADOR VITALIA COLOR X 200 ML;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU101631;variante;;ANTISARRO BAÑO;ia;Uso antisarro para baño que distingue al limpiador.
+SKU101631;descripcion;LIMPIADOR CLARITA ANTISARRO BAÑO 500ML;LIMPIADOR CLARITA ANTISARRO BAÑO X 500 ML;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU101645;unidad;ML.;ML;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU101645;variante;;CABELLO SECO;ia;Uso para cabello seco, distingue la variante del acondicionador.
+SKU101645;descripcion;ACOND. HIGIENOL CAB. SECO 400ML.;ACONDICIONADOR HIGIENOL CABELLO SECO X 400 ML;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU101652;unidad;ML.;ML;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU101652;variante;;COLOR;ia;Línea para cabello teñido que distingue al acondicionador.
+SKU101652;descripcion;ACOND. ALBORADA COLOR 200ML.;ACONDICIONADOR ALBORADA COLOR X 200 ML;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU101659;variante;;NEUTRO;ia;Fragancia o formulación neutra que distingue al jabón íntimo.
+SKU101659;descripcion;JABON INTIMO DERMOVITA NEUTRO 400ML;JABON INTIMO DERMOVITA NEUTRO X 400 ML;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU101680;variante;;M;ia;Talle del pañal.
+SKU101680;descripcion;PAÑALES HIGIENOL M 48UN;PAÑALES HIGIENOL M X 48 UN;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU101687;variante;;96 %;ia;Porcentaje de concentración del alcohol, con el símbolo que lo acompaña.
+SKU101687;descripcion;ALCOHOL BELLAFLOR 96 % 500ML;ALCOHOL BELLAFLOR 96 % X 500 ML;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU101694;variante;;XXG;ia;Talle del pañal.
+SKU101694;descripcion;PAÑALES SUAVIT XXG 36UN;PAÑALES SUAVIT XXG X 36 UN;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU101722;unidad;CC;ML;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU101722;variante;;MOSCAS Y MOSQUITOS;ia;Uso o blanco del insecticida que distingue al producto.
+SKU101722;descripcion;INSECTICIDA BELLAFLOR MOSCAS Y MOSQUITOS 360CC;INSECTICIDA BELLAFLOR MOSCAS Y MOSQUITOS X 360 ML;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU101729;variante;;BEBE MANZANILLA;ia;Línea infantil y fragancia manzanilla que distinguen al shampoo.
+SKU101729;descripcion;SH. AQUAVIVA BEBE MANZANILLA 400ML;SHAMPOO AQUAVIVA BEBE MANZANILLA X 400 ML;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU101736;unidad;GRS;G;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU101736;variante;;ANTIBACTERIAL;ia;Línea antibacterial que distingue al jabón.
+SKU101736;descripcion;JABON DERMOVITA ANTIBACTERIAL 125GRS;JABON DERMOVITA ANTIBACTERIAL X 125 G;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU101771;unidad;ML.;ML;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU101771;variante;;MUJER;ia;Línea dirigida a mujer que distingue al desodorante.
+SKU101771;descripcion;DESOD. ROLL ON AQUAVIVA MUJER 50ML.;DESODORANTE ROLL ON AQUAVIVA MUJER X 50 ML;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU101778;unidad;CC;ML;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU101778;variante;;RIZOS;ia;Uso para cabello rizado que distingue al shampoo.
+SKU101778;descripcion;SH. NATIVA RIZOS 200CC;SHAMPOO NATIVA RIZOS X 200 ML;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU101785;variante;;SENSITIVE;ia;Línea para piel sensible que distingue al agua micelar.
+SKU101785;descripcion;AGUA MICELAR DERMALAB SENSITIVE 400ML;AGUA MICELAR DERMALAB SENSITIVE X 400 ML;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU101792;unidad;UNID;UN;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU101792;variante;;ALOE;ia;Fragancia o ingrediente aloe que distingue a las toallitas.
+SKU101792;descripcion;TOALLITAS HUMEDAS HIGIENOL ALOE 50UNID;TOALLITAS HUMEDAS HIGIENOL ALOE X 50 UN;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU101806;unidad;CC;ML;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU101806;variante;;BEBE;ia;Línea infantil que distingue al shampoo.
+SKU101806;descripcion;SH. AQUAVIVA BEBE 200CC;SHAMPOO AQUAVIVA BEBE X 200 ML;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU101813;unidad;GRS;G;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU101813;variante;;NUTRICION;ia;Línea de tratamiento capilar que distingue al producto dentro de la marca.
+SKU101813;descripcion;TRAT. CAP. HIGIENOL NUTRICION 500GRS;TRATAMIENTO CAPILAR HIGIENOL NUTRICION X 500 G;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU101827;variante;;BEBE MANZANILLA;ia;"BEBE indica la línea infantil y MANZANILLA la fragancia; ambas distinguen el producto dentro de DERMOVITA."
+SKU101827;descripcion;SH. DERMOVITA BEBE MANZANILLA 400ML;SHAMPOO DERMOVITA BEBE MANZANILLA X 400 ML;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU101848;variante;;BEBE;ia;BEBE indica la línea infantil, que distingue este shampoo del resto de HIGIENOL.
+SKU101848;descripcion;SH. HIGIENOL BEBE 400ML;SHAMPOO HIGIENOL BEBE X 400 ML;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU101862;unidad;CC;ML;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU101862;variante;;COLOR;ia;COLOR indica el uso para cabello teñido, que distingue la variante dentro de DERMOVITA.
+SKU101862;descripcion;SH. DERMOVITA COLOR 200CC;SHAMPOO DERMOVITA COLOR X 200 ML;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU101883;variante;;MEDIO;ia;MEDIO indica la dureza de las cerdas, que distingue el cepillo dentro de VITALIA.
+SKU101883;descripcion;CEPILLO DENTAL VITALIA MEDIO 2UN;CEPILLO DENTAL VITALIA MEDIO X 2 UN;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU101911;unidad;ML.;ML;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU101911;variante;;NEUTRO;ia;NEUTRO indica la formulación de pH neutro, que distingue el jabón íntimo.
+SKU101911;descripcion;JABON INTIMO HIGIENOL NEUTRO 400ML.;JABON INTIMO HIGIENOL NEUTRO X 400 ML;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU101918;unidad;UNID;UN;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU101918;variante;;SIN PERFUME;ia;SIN PERFUME indica la versión sin fragancia, que distingue la toallita.
+SKU101918;descripcion;TOALLITAS HUMEDAS HIGIENOL S/ PERF. 50UNID;TOALLITAS HUMEDAS HIGIENOL SIN PERFUME X 50 UN;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU101967;unidad;UNID;UN;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU101967;variante;;SUAVE;ia;SUAVE indica la dureza de las cerdas, que distingue el cepillo dentro de DENTIBLANC.
+SKU101967;descripcion;CEPILLO DENTAL DENTIBLANC SUAVE 2UNID;CEPILLO DENTAL DENTIBLANC SUAVE X 2 UN;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU101988;unidad;CC;ML;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU101988;variante;;MULTIUSO COCINA;ia;MULTIUSO COCINA indica el uso previsto, que distingue el limpiador dentro de BELLAFLOR.
+SKU101988;descripcion;LIMPIADOR BELLAFLOR MULTIUSO COCINA 900CC;LIMPIADOR BELLAFLOR MULTIUSO COCINA X 900 ML;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU101995;unidad;UNID;UN;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU101995;variante;;M;ia;M es el talle del pañal.
+SKU101995;descripcion;PAÑALES SUAVIT M 48UNID;PAÑALES SUAVIT M X 48 UN;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU102002;unidad;UNID;UN;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU102002;variante;;SIN PERFUME;ia;SIN PERFUME indica la versión sin fragancia, que distingue la toallita.
+SKU102002;descripcion;TOALLITAS HUMEDAS BELLAFLOR S/ PERF. 50UNID;TOALLITAS HUMEDAS BELLAFLOR SIN PERFUME X 50 UN;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU102009;variante;;P;ia;P es el talle del pañal.
+SKU102009;descripcion;PAÑALES HIGIENOL P 30UN;PAÑALES HIGIENOL P X 30 UN;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU102051;unidad;ML.;ML;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU102051;variante;;AVENA;ia;AVENA indica la línea o fórmula del gel, que distingue el producto dentro de PUREZA.
+SKU102051;descripcion;GEL DE DUCHA PUREZA AVENA 400ML.;GEL DE DUCHA PUREZA AVENA X 400 ML;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU102072;unidad;GRS;G;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU102072;variante;;HOMBRE;ia;HOMBRE indica el público al que va dirigido el desodorante.
+SKU102072;descripcion;DESODORANTE BARRA SUAVIT HOMBRE 50GRS;DESODORANTE BARRA SUAVIT HOMBRE X 50 G;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU102086;variante;;NUTRICION;ia;NUTRICION indica la línea o uso del tratamiento, que distingue el producto dentro de NATIVA.
+SKU102086;descripcion;TRAT. CAP. NATIVA NUTRICION 250G;TRATAMIENTO CAPILAR NATIVA NUTRICION X 250 G;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU102107;unidad;CC;ML;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU102107;variante;;CABELLO GRASO;ia;CABELLO GRASO indica el tipo de cabello para el que es el shampoo.
+SKU102107;descripcion;SH. BRISA CAB. GRASO 400CC;SHAMPOO BRISA CABELLO GRASO X 400 ML;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU102114;unidad;ML.;ML;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU102114;variante;;NEUTRO;ia;NEUTRO indica la formulación de pH neutro, que distingue el jabón líquido.
+SKU102114;descripcion;JABON LIQUIDO VITALIA NEUTRO 250ML.;JABON LIQUIDO VITALIA NEUTRO X 250 ML;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU102121;unidad;UNID;UN;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU102121;variante;;ALOE;ia;ALOE indica la fórmula de la toallita, que distingue el producto dentro de PEQUEÑOS PASOS.
+SKU102121;descripcion;TOALLITAS HUMEDAS PEQUEÑOS PASOS ALOE 50UNID;TOALLITAS HUMEDAS PEQUEÑOS PASOS ALOE X 50 UN;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU102128;variante;;COLOR;ia;COLOR indica el uso para cabello teñido, que distingue la variante dentro de NATIVA.
+SKU102128;descripcion;SH. NATIVA COLOR 750ML;SHAMPOO NATIVA COLOR X 750 ML;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU102135;variante;;RIZOS;ia;RIZOS indica el tipo de cabello para el que es el shampoo.
+SKU102135;descripcion;SH. BELLAFLOR RIZOS 750ML;SHAMPOO BELLAFLOR RIZOS X 750 ML;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU102191;unidad;CC;ML;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU102191;variante;;MENTA;ia;MENTA indica el sabor del enjuague, que distingue el producto dentro de DENTIBLANC.
+SKU102191;descripcion;ENJUAGUE BUCAL DENTIBLANC MENTA 500CC;ENJUAGUE BUCAL DENTIBLANC MENTA X 500 ML;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU102212;unidad;GR;G;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU102212;variante;;OXIDO DE ZINC;ia;OXIDO DE ZINC es el principio que define la crema y la distingue dentro de DERMOVITA.
+SKU102212;descripcion;CREMA DERMOVITA OXIDO DE ZINC 60GR;CREMA DERMOVITA OXIDO DE ZINC X 60 G;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU102254;unidad;CC;ML;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU102254;variante;;SIN PERFUME;ia;SIN PERFUME indica la versión sin fragancia, que distingue el desodorante.
+SKU102254;descripcion;DESOD. ROLL ON AQUAVIVA S/ PERF. 50CC;DESODORANTE ROLL ON AQUAVIVA SIN PERFUME X 50 ML;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU102268;variante;;CONCENTRADA;ia;CONCENTRADA indica una versión distinta de la lavandina, que se diferencia de la común.
+SKU102268;descripcion;LAVANDINA HIGIENOL CONCENTRADA 2000ML;LAVANDINA HIGIENOL CONCENTRADA X 2000 ML;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU102275;variante;;ANTIBACTERIAL;ia;ANTIBACTERIAL indica la función del jabón, que distingue el producto dentro de PUREZA.
+SKU102275;descripcion;JABON PUREZA ANTIBAC. 125G;JABON PUREZA ANTIBACTERIAL X 125 G;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU102282;unidad;GRS;G;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU102282;variante;;CREMA;ia;CREMA indica la forma del repelente, que lo distingue de otras presentaciones de FULMIN.
+SKU102282;descripcion;REPELENTE FULMIN CREMA 100GRS;REPELENTE FULMIN CREMA X 100 G;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU102296;unidad;ML.;ML;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU102296;variante;;SIN PERFUME;ia;Define la fragancia (sin perfume) dentro del desodorante aerosol.
+SKU102296;descripcion;DESOD. AER. HIGIENOL S/ PERF. 250ML.;DESODORANTE AEROSOL HIGIENOL SIN PERFUME X 250 ML;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU102303;variante;;RIZOS;ia;Indica el uso para cabello rizado, que distingue al shampoo.
+SKU102303;descripcion;SH. HIGIENOL RIZOS 200ML;SHAMPOO HIGIENOL RIZOS X 200 ML;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU102310;unidad;UNID;UN;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU102310;variante;;RECIEN NACIDO;ia;Indica el uso para recién nacido, que distingue la toallita.
+SKU102310;descripcion;TOALLITAS HUMEDAS SUAVIT RECIEN NACIDO 80UNID;TOALLITAS HUMEDAS SUAVIT RECIEN NACIDO X 80 UN;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU102331;unidad;ML.;ML;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU102331;variante;;COOL MINT;ia;Es el sabor/fragancia del enjuague bucal.
+SKU102331;descripcion;ENJUAGUE BUCAL PURE CARE COOL MINT 1000ML.;ENJUAGUE BUCAL PURE CARE COOL MINT X 1000 ML;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU102380;variante;;XG;ia;Es el talle del pañal.
+SKU102380;descripcion;PAÑALES HIGIENOL XG 30UN;PAÑALES HIGIENOL XG X 30 UN;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU102387;unidad;UNID;UN;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU102387;variante;;MEDIO;ia;Indica la dureza de las cerdas del cepillo.
+SKU102387;descripcion;CEPILLO DENTAL SONRISA MEDIO 2UNID;CEPILLO DENTAL SONRISA MEDIO X 2 UN;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU102394;variante;;SENSIBLE;ia;Indica el uso o línea para dientes sensibles.
+SKU102394;descripcion;PASTA DENTAL HIGIENOL SENSIBLE 180G;PASTA DENTAL HIGIENOL SENSIBLE X 180 G;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU102436;variante;;P;ia;Es el talle del pañal.
+SKU102436;descripcion;PAÑALES DERMOVITA P 60UN;PAÑALES DERMOVITA P X 60 UN;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU102450;variante;;PIEL SENSIBLE;ia;Indica el tipo de piel para el que está pensada la espuma.
+SKU102450;descripcion;ESPUMA DE AFEITAR DERMOVITA PIEL SENSIBLE 300ML;ESPUMA DE AFEITAR DERMOVITA PIEL SENSIBLE X 300 ML;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU102457;unidad;UNID;UN;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU102457;descripcion;DOLOREX 400 MG COMP. 10UNID;DOLOREX 400 MG COMPRIMIDOS X 10 UN;codigo;Armada con los campos, sin abreviaturas (estándar, secciones 2 y 3)
+SKU102478;unidad;GRS;G;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU102478;variante;;BLANQUEADORA;ia;Indica el uso o línea de la pasta dental.
+SKU102478;descripcion;PASTA DENTAL BELLAFLOR BLANQ. 70GRS;PASTA DENTAL BELLAFLOR BLANQUEADORA X 70 G;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU102485;unidad;GRS;G;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU102485;variante;;HOMBRE;ia;Indica el público al que va dirigido el desodorante, distinguiéndolo dentro de la marca.
+SKU102485;descripcion;DESOD. BARRA FRESCOR HOMBRE 50GRS;DESODORANTE BARRA FRESCOR HOMBRE X 50 G;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU102499;unidad;GR;G;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU102499;variante;;ZIG ZAG;ia;Indica el formato del algodón, que lo distingue dentro de la marca.
+SKU102499;descripcion;ALGODON HIGIENOL ZIG ZAG 140GR;ALGODON HIGIENOL ZIG ZAG X 140 G;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU102506;variante;;ALOE;ia;Es la fragancia o línea de la toallita.
+SKU102506;descripcion;TOALLITAS HUMEDAS SUAVIT ALOE 80UN;TOALLITAS HUMEDAS SUAVIT ALOE X 80 UN;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU102520;unidad;GR;G;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU102520;variante;;CARIES;ia;Indica el uso preventivo de la pasta dental.
+SKU102520;descripcion;PASTA DENTAL DERMOVITA CARIES 180GR;PASTA DENTAL DERMOVITA CARIES X 180 G;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU102527;unidad;GRS;G;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU102527;variante;;CREMA NIÑOS;ia;Indica la forma farmacéutica (crema) y el público (niños) del repelente.
+SKU102527;descripcion;REPELENTE HIGIENOL CREMA NIÑOS 100GRS;REPELENTE HIGIENOL CREMA NIÑOS X 100 G;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU102541;unidad;GRS;G;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU102541;variante;;HIDROFILO;ia;Indica la característica del algodón, que lo distingue dentro de la marca.
+SKU102541;descripcion;ALGODON NUBE HIDROFILO 140GRS;ALGODON NUBE HIDROFILO X 140 G;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU102541;revisar;;;codigo;La IA decidió distinto para 'HIDROFILO' en productos ALGODON: es variante en SKU100434, SKU102541 y no en SKU104193. Confirmar cuál va
+SKU102562;variante;;ETAPA 3;ia;Es la etapa de la leche infantil.
+SKU102562;descripcion;LECHE INFANTIL CRECER ETAPA 3 400G;LECHE INFANTIL CRECER ETAPA 3 X 400 G;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU102569;unidad;CC;ML;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU102569;variante;;CABELLO SECO;ia;Indica el tipo de cabello para el que está pensado el acondicionador.
+SKU102569;descripcion;ACOND. VITALIA CAB. SECO 750CC;ACONDICIONADOR VITALIA CABELLO SECO X 750 ML;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU102590;unidad;ML.;ML;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU102590;variante;;CABELLO GRASO;ia;Indica el tipo de cabello para el que está pensado el shampoo.
+SKU102590;descripcion;SH. NATIVA CAB. GRASO 400ML.;SHAMPOO NATIVA CABELLO GRASO X 400 ML;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU102597;variante;;RIZOS;ia;Indica el uso para cabello rizado, que distingue al shampoo.
+SKU102597;descripcion;SH. ALBORADA RIZOS 400ML;SHAMPOO ALBORADA RIZOS X 400 ML;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU102604;unidad;ML.;ML;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU102604;descripcion;ALCOHOL EN GEL BELLAFLOR 60ML.;ALCOHOL EN GEL BELLAFLOR X 60 ML;codigo;Armada con los campos, sin abreviaturas (estándar, secciones 2 y 3)
+SKU102618;unidad;UNID;UN;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU102618;variante;;XXG;ia;Es el talle del pañal.
+SKU102618;descripcion;PAÑALES DERMOVITA XXG 48UNID;PAÑALES DERMOVITA XXG X 48 UN;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU102625;unidad;GRS;G;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU102625;variante;;ANTIBACTERIAL;ia;Indica la línea o uso antibacterial del jabón.
+SKU102625;descripcion;JABON VITALIA ANTIBAC. 125GRS;JABON VITALIA ANTIBACTERIAL X 125 G;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU102632;descripcion;HISOPOS NUBE 100UN;HISOPOS NUBE X 100 UN;codigo;Armada con los campos, sin abreviaturas (estándar, secciones 2 y 3)
+SKU102646;unidad;CC;ML;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU102646;variante;;COLOR;ia;Indica el uso para cabello teñido o con color.
+SKU102646;descripcion;ACOND. BRISA COLOR 200CC;ACONDICIONADOR BRISA COLOR X 200 ML;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU102653;variante;;SIN PERFUME;ia;Define la fragancia (sin perfume) de la toallita.
+SKU102653;descripcion;TOALLITAS HUMEDAS PEQUEÑOS PASOS SIN PERF. 80UN;TOALLITAS HUMEDAS PEQUEÑOS PASOS SIN PERFUME X 80 UN;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU102674;descripcion;DERMOVITA VITAMINA C 1 G COMP. EFERVESCENTES 20UN;DERMOVITA VITAMINA C 1 G COMPRIMIDOS EFERVESCENTES X 20 UN;codigo;Armada con los campos, sin abreviaturas (estándar, secciones 2 y 3)
+SKU102688;unidad;UNID;UN;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU102688;descripcion;BELLAFLOR CITRATO DE MAGNESIO 400 MG CAPS. 120UNID;BELLAFLOR CITRATO DE MAGNESIO 400 MG CAPSULAS X 120 UN;codigo;Armada con los campos, sin abreviaturas (estándar, secciones 2 y 3)
+SKU102716;variante;;SUAVE;ia;Indica la dureza de las cerdas del cepillo.
+SKU102716;descripcion;CEPILLO DENTAL BELLAFLOR SUAVE 1UN;CEPILLO DENTAL BELLAFLOR SUAVE X 1 UN;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU102723;descripcion;HISOPOS SUAVIT 100UN;HISOPOS SUAVIT X 100 UN;codigo;Armada con los campos, sin abreviaturas (estándar, secciones 2 y 3)
+SKU102765;unidad;ML.;ML;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU102765;variante;;RIZOS;ia;Tipo de cabello, distingue el acondicionador dentro de la marca.
+SKU102765;descripcion;ACOND. HIGIENOL RIZOS 200ML.;ACONDICIONADOR HIGIENOL RIZOS X 200 ML;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU102779;variante;;SUAVE;ia;Dureza de las cerdas, distingue el cepillo dentro de la marca.
+SKU102779;descripcion;CEPILLO DENTAL VITALIA SUAVE 1UN;CEPILLO DENTAL VITALIA SUAVE X 1 UN;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU102786;variante;;ANTIBACTERIAL;ia;Uso antibacterial, distingue el jabón dentro de la marca.
+SKU102786;descripcion;JABON LAVANDA REAL ANTIBAC. 125G;JABON LAVANDA REAL ANTIBACTERIAL X 125 G;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU102793;variante;;MULTIUSO LAVANDA;ia;Uso multiuso y fragancia lavanda, distinguen el limpiador.
+SKU102793;descripcion;LIMPIADOR HIGIENOL MULTIUSO LAVANDA 500ML;LIMPIADOR HIGIENOL MULTIUSO LAVANDA X 500 ML;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU102821;unidad;CC;ML;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU102821;variante;;HOMBRE;ia;Línea por público, distingue el desodorante dentro de la marca.
+SKU102821;descripcion;DESOD. ROLL ON HIGIENOL HOMBRE 50CC;DESODORANTE ROLL ON HIGIENOL HOMBRE X 50 ML;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU102856;unidad;ML.;ML;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU102856;variante;;NEUTRO;ia;Fragancia neutra, distingue el jabón líquido dentro de la marca.
+SKU102856;descripcion;JABON LIQUIDO SUAVIT NEUTRO 250ML.;JABON LIQUIDO SUAVIT NEUTRO X 250 ML;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU102863;variante;;G;ia;Talle G del pañal, con unidad UN.
+SKU102863;descripcion;PAÑALES SUAVIT G 60UN;PAÑALES SUAVIT G X 60 UN;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU102877;unidad;CC;ML;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU102877;descripcion;ALCOHOL EN GEL HIGIENOL 60CC;ALCOHOL EN GEL HIGIENOL X 60 ML;codigo;Armada con los campos, sin abreviaturas (estándar, secciones 2 y 3)
+SKU102898;unidad;UNID;UN;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU102898;descripcion;GLUCOMET 850 MG COMP. 30UNID;GLUCOMET 850 MG COMPRIMIDOS X 30 UN;codigo;Armada con los campos, sin abreviaturas (estándar, secciones 2 y 3)
+SKU102926;descripcion;VITALIA VITAMINA C 1 G COMP. EFERVESCENTES 10UN;VITALIA VITAMINA C 1 G COMPRIMIDOS EFERVESCENTES X 10 UN;codigo;Armada con los campos, sin abreviaturas (estándar, secciones 2 y 3)
+SKU102940;unidad;UNID;UN;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU102940;descripcion;NATURAL VIDA HIERRO 30 MG COMP. 60UNID;NATURAL VIDA HIERRO 30 MG COMPRIMIDOS X 60 UN;codigo;Armada con los campos, sin abreviaturas (estándar, secciones 2 y 3)
+SKU102954;unidad;UNID;UN;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU102954;variante;;XXG;ia;Talle XXG del pañal.
+SKU102954;descripcion;PAÑALES HIGIENOL XXG 48UNID;PAÑALES HIGIENOL XXG X 48 UN;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU102968;variante;;MENTOL;ia;Fragancia mentol, distingue la espuma de afeitar.
+SKU102968;descripcion;ESPUMA DE AFEITAR DERMOVITA MENTOL 300ML;ESPUMA DE AFEITAR DERMOVITA MENTOL X 300 ML;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU102996;unidad;ML.;ML;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU102996;variante;;MOSCAS Y MOSQUITOS;ia;Uso contra plagas específicas, distingue el insecticida.
+SKU102996;descripcion;INSECTICIDA HIGIENOL MOSCAS Y MOSQUITOS 360ML.;INSECTICIDA HIGIENOL MOSCAS Y MOSQUITOS X 360 ML;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU103031;unidad;CC;ML;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU103031;variante;;ALOE;ia;Fragancia o línea aloe, distingue el alcohol en gel.
+SKU103031;descripcion;ALCOHOL EN GEL HIGIENOL ALOE 250CC;ALCOHOL EN GEL HIGIENOL ALOE X 250 ML;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU103073;variante;;CARIES;ia;Uso anticaries, distingue la pasta dental dentro de la marca.
+SKU103073;descripcion;PASTA DENTAL SONRISA CARIES 180G;PASTA DENTAL SONRISA CARIES X 180 G;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU103087;unidad;ML.;ML;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU103087;variante;;AVENA;ia;Línea avena, distingue el gel de ducha dentro de la marca.
+SKU103087;descripcion;GEL DE DUCHA PUREZA AVENA 750ML.;GEL DE DUCHA PUREZA AVENA X 750 ML;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU103094;unidad;ML.;ML;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU103094;variante;;CONCENTRADA;ia;Presentación concentrada, distingue la lavandina dentro de la marca.
+SKU103094;descripcion;LAVANDINA HIGIENOL CONCENTRADA 1000ML.;LAVANDINA HIGIENOL CONCENTRADA X 1000 ML;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU103122;unidad;GRS;G;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU103122;variante;;ETAPA 2;ia;Etapa de la leche infantil.
+SKU103122;descripcion;LECHE INFANTIL HIGIENOL ETAPA 2 400GRS;LECHE INFANTIL HIGIENOL ETAPA 2 X 400 G;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU103143;unidad;ML.;ML;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU103143;variante;;HIDRATANTE;ia;Uso hidratante, distingue el gel de ducha dentro de la marca.
+SKU103143;descripcion;GEL DE DUCHA SUAVIT HIDRAT. 750ML.;GEL DE DUCHA SUAVIT HIDRATANTE X 750 ML;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU103199;unidad;ML.;ML;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU103199;variante;;MUJER;ia;Línea por público, distingue el desodorante dentro de la marca.
+SKU103199;descripcion;DESODORANTE ROLL ON VITALIA MUJER 50ML.;DESODORANTE ROLL ON VITALIA MUJER X 50 ML;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU103220;variante;;ANTICASPA;ia;Uso anticaspa, distingue el shampoo dentro de la marca.
+SKU103220;descripcion;SHAMPOO DERMOVITA ANTICASPA 750ML;SHAMPOO DERMOVITA ANTICASPA X 750 ML;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU103234;unidad;GRS;G;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU103234;variante;;CREMA NIÑOS;ia;Forma crema y público niños, distinguen el repelente.
+SKU103234;descripcion;REPELENTE VITALIA CREMA NIÑOS 60GRS;REPELENTE VITALIA CREMA NIÑOS X 60 G;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU103255;unidad;ML.;ML;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU103255;variante;;PIEL SENSIBLE;ia;Uso para piel sensible, distingue la espuma de afeitar.
+SKU103255;descripcion;ESPUMA DE AFEITAR DERMOVITA PIEL SENSIBLE 200ML.;ESPUMA DE AFEITAR DERMOVITA PIEL SENSIBLE X 200 ML;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU103276;variante;;MUJER;ia;Línea por público, distingue el desodorante dentro de la marca.
+SKU103276;descripcion;DESOD. BARRA DERMOVITA MUJER 50G;DESODORANTE BARRA DERMOVITA MUJER X 50 G;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU103283;variante;;MENTA FRESCA;ia;Fragancia menta fresca, distingue la pasta dental.
+SKU103283;descripcion;PASTA DENTAL BELLAFLOR MENTA FRESCA 180G;PASTA DENTAL BELLAFLOR MENTA FRESCA X 180 G;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU103353;unidad;CC;ML;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU103353;variante;;CABELLO GRASO;ia;Tipo de cabello, distingue el shampoo dentro de la marca.
+SKU103353;descripcion;SHAMPOO ALBORADA CAB. GRASO 400CC;SHAMPOO ALBORADA CABELLO GRASO X 400 ML;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU103388;unidad;CC;ML;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU103388;variante;;MULTIUSO LAVANDA;ia;Uso multiuso y fragancia lavanda, distinguen el limpiador.
+SKU103388;descripcion;LIMPIADOR DERMOVITA MULTIUSO LAVANDA 500CC;LIMPIADOR DERMOVITA MULTIUSO LAVANDA X 500 ML;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU103409;variante;;G;ia;Talle G del pañal, con unidad UN.
+SKU103409;descripcion;PAÑALES HIGIENOL G 48UN;PAÑALES HIGIENOL G X 48 UN;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU103416;variante;;ANTIBACTERIAL;ia;Uso antibacterial distingue este jabón dentro de la marca.
+SKU103416;descripcion;JABON DERMOVITA ANTIBAC. 90G;JABON DERMOVITA ANTIBACTERIAL X 90 G;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU103437;variante;;MEDIO;ia;Dureza de las cerdas que distingue el cepillo dentro de la marca.
+SKU103437;descripcion;CEPILLO DENTAL VITALIA MEDIO 1UN;CEPILLO DENTAL VITALIA MEDIO X 1 UN;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU103444;unidad;ML.;ML;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU103444;variante;;FIJACION NORMAL;ia;Tipo de fijación que distingue la laca dentro de la marca.
+SKU103444;descripcion;LACA BELLAFLOR FIJ. NORMAL 200ML.;LACA BELLAFLOR FIJACION NORMAL X 200 ML;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU103458;variante;;LISO;ia;Tipo de cabello para el que está indicado el acondicionador.
+SKU103458;descripcion;ACOND. BRISA LISO 400ML;ACONDICIONADOR BRISA LISO X 400 ML;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU103507;unidad;CC;ML;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU103507;variante;;COLOR;ia;Uso para cabello teñido que distingue el shampoo.
+SKU103507;descripcion;SH. DERMOVITA COLOR 400CC;SHAMPOO DERMOVITA COLOR X 400 ML;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU103514;unidad;ML.;ML;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU103514;variante;;AVENA;ia;Fragancia o línea de avena que distingue el gel dentro de la marca.
+SKU103514;descripcion;GEL DE DUCHA SUAVIT AVENA 750ML.;GEL DE DUCHA SUAVIT AVENA X 750 ML;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU103535;variante;;MULTIUSO COCINA;ia;Uso específico para cocina que distingue el limpiador.
+SKU103535;descripcion;LIMPIADOR DERMOVITA MULTIUSO COCINA 500ML;LIMPIADOR DERMOVITA MULTIUSO COCINA X 500 ML;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU103549;variante;;HOMBRE;ia;Línea dirigida a hombres que distingue el desodorante.
+SKU103549;descripcion;DESOD. BARRA BELLAFLOR HOMBRE 50G;DESODORANTE BARRA BELLAFLOR HOMBRE X 50 G;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU103556;unidad;ML.;ML;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU103556;variante;;RIZOS;ia;Tipo de cabello para el que está indicado el shampoo.
+SKU103556;descripcion;SH. ALBORADA RIZOS 750ML.;SHAMPOO ALBORADA RIZOS X 750 ML;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU103563;unidad;CC;ML;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU103563;variante;;ROPA BLANCA;ia;Uso para ropa blanca que distingue la lavandina.
+SKU103563;descripcion;LAVANDINA SUAVIT ROPA BLANCA 1000CC;LAVANDINA SUAVIT ROPA BLANCA X 1000 ML;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU103577;unidad;ML.;ML;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU103577;variante;;BEBE;ia;Línea para bebés que distingue el shampoo.
+SKU103577;descripcion;SH. BELLAFLOR BEBE 400ML.;SHAMPOO BELLAFLOR BEBE X 400 ML;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU103591;unidad;ML.;ML;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU103591;variante;;MUJER;ia;Línea dirigida a mujeres que distingue el desodorante.
+SKU103591;descripcion;DESOD. AER. VITALIA MUJER 250ML.;DESODORANTE AEROSOL VITALIA MUJER X 250 ML;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU103612;unidad;ML.;ML;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU103612;variante;;RIZOS;ia;Tipo de cabello para el que está indicado el shampoo.
+SKU103612;descripcion;SHAMPOO BELLAFLOR RIZOS 200ML.;SHAMPOO BELLAFLOR RIZOS X 200 ML;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU103633;variante;;AVENA;ia;Fragancia o línea de avena que distingue el gel dentro de la marca.
+SKU103633;descripcion;GEL DE DUCHA SUAVIT AVENA 400ML;GEL DE DUCHA SUAVIT AVENA X 400 ML;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU103640;unidad;CC;ML;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU103640;variante;;96 %;ia;Porcentaje de concentración del alcohol que distingue el producto.
+SKU103640;descripcion;ALCOHOL DERMOVITA 96 % 1000CC;ALCOHOL DERMOVITA 96 % X 1000 ML;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU103654;variante;;M;ia;Talle del pañal que distingue el producto.
+SKU103654;descripcion;PAÑALES DERMOVITA M 30UN;PAÑALES DERMOVITA M X 30 UN;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU103703;unidad;ML.;ML;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU103703;variante;;CABELLO SECO;ia;Tipo de cabello para el que está indicado el shampoo.
+SKU103703;descripcion;SH. HIGIENOL CAB. SECO 400ML.;SHAMPOO HIGIENOL CABELLO SECO X 400 ML;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU103731;variante;;OXIDO DE ZINC;ia;Fórmula con óxido de zinc que distingue la crema dentro de la marca.
+SKU103731;descripcion;CREMA HIGIENOL OXIDO DE ZINC 60G;CREMA HIGIENOL OXIDO DE ZINC X 60 G;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU103745;variante;;CABELLO GRASO;ia;Tipo de cabello para el que está indicado el shampoo.
+SKU103745;descripcion;SHAMPOO ALBORADA CAB. GRASO 200ML;SHAMPOO ALBORADA CABELLO GRASO X 200 ML;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU103759;unidad;UNID;UN;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU103759;variante;;M;ia;Talle del pañal que distingue el producto.
+SKU103759;descripcion;PAÑALES HIGIENOL M 36UNID;PAÑALES HIGIENOL M X 36 UN;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU103794;unidad;GRS;G;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU103794;variante;;ETAPA 1;ia;Etapa de la leche infantil que distingue el producto.
+SKU103794;descripcion;LECHE INFANTIL CRECER ETAPA 1 800GRS;LECHE INFANTIL CRECER ETAPA 1 X 800 G;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU103892;unidad;CC;ML;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU103892;variante;;ANTIBACTERIAL;ia;Uso antibacterial distingue este jabón líquido dentro de la marca.
+SKU103892;descripcion;JABON LIQUIDO VITALIA ANTIBAC. 250CC;JABON LIQUIDO VITALIA ANTIBACTERIAL X 250 ML;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU103934;unidad;ML.;ML;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU103934;variante;;SIN PERFUME;ia;Presentación sin fragancia que distingue el desodorante.
+SKU103934;descripcion;DESOD. ROLL ON DERMOVITA SIN PERF. 50ML.;DESODORANTE ROLL ON DERMOVITA SIN PERFUME X 50 ML;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU103941;unidad;ML.;ML;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU103941;variante;;BEBE MANZANILLA;ia;Línea para bebés con fragancia de manzanilla que distingue el shampoo.
+SKU103941;descripcion;SH. DERMOVITA BEBE MANZANILLA 200ML.;SHAMPOO DERMOVITA BEBE MANZANILLA X 200 ML;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU103962;unidad;GRS;G;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU103962;variante;;ANTIBACTERIAL;ia;Uso antibacterial distingue este jabón dentro de la marca.
+SKU103962;descripcion;JABON LAVANDA REAL ANTIBAC. 90GRS;JABON LAVANDA REAL ANTIBACTERIAL X 90 G;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU103969;unidad;CC;ML;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU103969;variante;;MOSCAS Y MOSQUITOS;ia;Indica el uso del insecticida (para qué plagas), lo que distingue al producto dentro de la marca.
+SKU103969;descripcion;INSECTICIDA FULMIN MOSCAS Y MOSQUITOS 360CC;INSECTICIDA FULMIN MOSCAS Y MOSQUITOS X 360 ML;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU103976;unidad;UNID;UN;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU103976;descripcion;FEBRIL 500 MG COMP. 10UNID;FEBRIL 500 MG COMPRIMIDOS X 10 UN;codigo;Armada con los campos, sin abreviaturas (estándar, secciones 2 y 3)
+SKU103983;unidad;UNID;UN;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU103983;variante;;ALOE;ia;Fragancia o línea de la toallita húmeda.
+SKU103983;descripcion;TOALLITAS HUMEDAS AQUAVIVA ALOE 80UNID;TOALLITAS HUMEDAS AQUAVIVA ALOE X 80 UN;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU103990;revisar;TRAT. CAP. BELLAFLOR REP/CION 500G;;codigo;Tiene REP/CION: una abreviatura que no está en el vocabulario. La tiene que escribir completa una persona (sección 2)
+SKU103997;unidad;ML.;ML;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU103997;variante;;FIJACION NORMAL;ia;Grado de fijación de la laca, distingue la variante.
+SKU103997;descripcion;LACA SUAVIT FIJACION NORMAL 400ML.;LACA SUAVIT FIJACION NORMAL X 400 ML;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU104018;unidad;ML.;ML;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU104018;variante;;ANTICASPA;ia;Uso específico del shampoo.
+SKU104018;descripcion;SH. HIGIENOL ANTICASPA 200ML.;SHAMPOO HIGIENOL ANTICASPA X 200 ML;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU104046;unidad;CC;ML;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU104046;variante;;MENTA;ia;Fragancia del enjuague bucal.
+SKU104046;descripcion;ENJUAGUE BUCAL DERMOVITA MENTA 250CC;ENJUAGUE BUCAL DERMOVITA MENTA X 250 ML;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU104074;unidad;CC;ML;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU104074;variante;;SIN PERFUME;ia;Indica la versión sin fragancia del desodorante.
+SKU104074;descripcion;DESOD. AEROSOL FRESCOR SIN PERFUME 250CC;DESODORANTE AEROSOL FRESCOR SIN PERFUME X 250 ML;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU104081;unidad;UNID;UN;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU104081;descripcion;SUAVIT HIERRO 30 MG COMP. 60UNID;SUAVIT HIERRO 30 MG COMPRIMIDOS X 60 UN;codigo;Armada con los campos, sin abreviaturas (estándar, secciones 2 y 3)
+SKU104102;unidad;UNID;UN;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU104102;variante;;XG;ia;Talle del pañal.
+SKU104102;descripcion;PAÑALES SUAVIT XG 30UNID;PAÑALES SUAVIT XG X 30 UN;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU104130;unidad;ML.;ML;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU104130;variante;;PIEL SENSIBLE;ia;Uso o tipo de piel para el que está indicada la espuma.
+SKU104130;descripcion;ESPUMA DE AFEITAR SUAVIT PIEL SENSIBLE 300ML.;ESPUMA DE AFEITAR SUAVIT PIEL SENSIBLE X 300 ML;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU104137;unidad;UNID;UN;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU104137;descripcion;VITALIA HIERRO 30 MG COMP. 60UNID;VITALIA HIERRO 30 MG COMPRIMIDOS X 60 UN;codigo;Armada con los campos, sin abreviaturas (estándar, secciones 2 y 3)
+SKU104144;unidad;UNID;UN;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU104144;descripcion;SUAVIT CITRATO DE MAGNESIO 400 MG CAPS. 60UNID;SUAVIT CITRATO DE MAGNESIO 400 MG CAPSULAS X 60 UN;codigo;Armada con los campos, sin abreviaturas (estándar, secciones 2 y 3)
+SKU104151;unidad;ML.;ML;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU104151;variante;;ALOE;ia;Fragancia o línea del alcohol en gel.
+SKU104151;descripcion;ALCOHOL EN GEL BELLAFLOR ALOE 60ML.;ALCOHOL EN GEL BELLAFLOR ALOE X 60 ML;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU104165;variante;;COLOR;ia;Uso del acondicionador (cabello teñido), distingue la variante.
+SKU104165;descripcion;ACOND. HIGIENOL COLOR 400ML;ACONDICIONADOR HIGIENOL COLOR X 400 ML;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU104186;unidad;ML.;ML;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU104186;variante;;70 %;ia;Porcentaje de concentración del alcohol.
+SKU104186;descripcion;ALCOHOL DERMOVITA 70 % 500ML.;ALCOHOL DERMOVITA 70 % X 500 ML;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU104193;unidad;GR;G;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU104193;descripcion;ALGODON VITALIA HIDROFILO 70GR;ALGODON VITALIA X 70 G;ia;Las palabras ['HIDROFILO'] no son variante: no van (sección 3)
+SKU104193;revisar;;;codigo;La IA decidió distinto para 'HIDROFILO' en productos ALGODON: es variante en SKU100434, SKU102541 y no en SKU104193. Confirmar cuál va
+SKU104200;unidad;UNID;UN;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU104200;variante;;ALOE;ia;Fragancia o línea de la toallita húmeda.
+SKU104200;descripcion;TOALLITAS HUMEDAS HIGIENOL ALOE 100UNID;TOALLITAS HUMEDAS HIGIENOL ALOE X 100 UN;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU104207;variante;;BLANQUEADORA;ia;Uso específico de la pasta dental.
+SKU104207;descripcion;PASTA DENTAL HIGIENOL BLANQ. 70G;PASTA DENTAL HIGIENOL BLANQUEADORA X 70 G;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU104228;unidad;ML.;ML;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU104228;variante;;HIDRATANTE;ia;Uso o línea del gel de ducha.
+SKU104228;descripcion;GEL DE DUCHA SUAVIT HIDRAT. 400ML.;GEL DE DUCHA SUAVIT HIDRATANTE X 400 ML;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU104235;variante;;FIJACION NORMAL;ia;Grado de fijación de la laca, distingue la variante.
+SKU104235;descripcion;LACA BRISA FIJ. NORMAL 400ML;LACA BRISA FIJACION NORMAL X 400 ML;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU104242;variante;;ETAPA 2;ia;Etapa de la leche infantil.
+SKU104242;descripcion;LECHE INFANTIL VITALIA ETAPA 2 800G;LECHE INFANTIL VITALIA ETAPA 2 X 800 G;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU104277;variante;;LISO;ia;Uso del acondicionador (cabello liso), distingue la variante.
+SKU104277;descripcion;ACOND. HIGIENOL LISO 200ML;ACONDICIONADOR HIGIENOL LISO X 200 ML;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU104284;unidad;CC;ML;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU104284;variante;;MENTA;ia;Fragancia del enjuague bucal.
+SKU104284;descripcion;ENJUAGUE BUCAL BELLAFLOR MENTA 250CC;ENJUAGUE BUCAL BELLAFLOR MENTA X 250 ML;ia;Armada con los campos y la variante decidida (secciones 2 y 3)
+SKU104305;descripcion;VITALIA MELATONINA 5 MG COMP. 30UN;VITALIA MELATONINA 5 MG COMPRIMIDOS X 30 UN;codigo;Armada con los campos, sin abreviaturas (estándar, secciones 2 y 3)
+SKU104312;unidad;UNID;UN;codigo;Unidad vieja: va ML, G o UN (estándar, sección 4)
+SKU104312;variante;;XXG;ia;Talle del pañal.
+SKU104312;descripcion;PAÑALES PEQUEÑOS PASOS XXG 60UNID;PAÑALES PEQUEÑOS PASOS XXG X 60 UN;ia;Armada con los campos y la variante decidida (secciones 2 y 3)

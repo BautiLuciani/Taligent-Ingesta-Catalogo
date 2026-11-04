@@ -1,0 +1,4 @@
+{
+  "pedido": "Productos del catálogo:\n{\"sku\": \"SKU103990\", \"descripcion\": \"TRATAMIENTO CAPILAR BELLAFLOR REP/CION 500G\", \"marca\": \"BELLAFLOR\", \"tipo\": \"TRATAMIENTO CAPILAR\", \"condicion_venta\": null, \"palabras_de_mas\": [\"REP\", \"CION\"]}",
+  "respuesta": "```json\n[{\"sku\": \"SKU103990\", \"variante\": \"REP/CION\", \"por_que\": \"REP/CION indica la línea de reparación del tratamiento capilar, que distingue al producto dentro de la marca y el tipo; se conserva el separador tal como figura en la descripción.\"}]\n```"
+}
