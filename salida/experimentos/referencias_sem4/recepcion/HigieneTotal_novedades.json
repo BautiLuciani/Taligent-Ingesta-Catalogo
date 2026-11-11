@@ -1,0 +1,149 @@
+{
+  "archivo": "HigieneTotal_novedades.xlsx",
+  "receta": {
+    "formato": "excel",
+    "archivo": "HigieneTotal_novedades.xlsx",
+    "hoja": "Altas",
+    "campos": {
+      "descripcion": "Descripcion",
+      "ean": "EAN13",
+      "precio": "Costo",
+      "contenido": "Cont.",
+      "unidad": "UM"
+    },
+    "contenido_en": "cantidad_y_unidad_separadas",
+    "separador_decimal": ",",
+    "moneda": "UYU",
+    "decisiones": {
+      "evidencia_hoja": "Altas",
+      "hojas_que_no_entran": [
+        {
+          "hoja": "Discontinuados",
+          "motivo": "Productos discontinuados, dados de baja; no son productos nuevos y no se cargan."
+        }
+      ],
+      "columnas_que_no_van": [
+        {
+          "columna": "Item",
+          "motivo": "Es el código interno del proveedor (p. ej. HT40003), no es un dato del formulario. Figura como columna_codigo en el resumen."
+        }
+      ],
+      "evidencia_moneda": null,
+      "evidencia_separador": null
+    }
+  },
+  "controles": [
+    {
+      "control": "El modelo entregó el formulario",
+      "ok": true,
+      "detalle": ""
+    },
+    {
+      "control": "El formulario vino completo y bien armado",
+      "ok": true,
+      "detalle": ""
+    },
+    {
+      "control": "La hoja elegida existe y tiene productos",
+      "ok": true,
+      "detalle": ""
+    },
+    {
+      "control": "Cada hoja quedó decidida una sola vez (entra o no entra)",
+      "ok": true,
+      "detalle": ""
+    },
+    {
+      "control": "La hoja elegida no se llama como lo que no entra (estándar, sección 7)",
+      "ok": true,
+      "detalle": ""
+    },
+    {
+      "control": "La evidencia de la hoja está en el archivo",
+      "ok": true,
+      "detalle": ""
+    },
+    {
+      "control": "Todas las columnas nombradas son de esa hoja",
+      "ok": true,
+      "detalle": ""
+    },
+    {
+      "control": "Ninguna columna se usa para dos datos (salvo el contenido con su unidad o dentro de la descripción)",
+      "ok": true,
+      "detalle": ""
+    },
+    {
+      "control": "Ninguna columna se usa y a la vez figura en 'no van'",
+      "ok": true,
+      "detalle": ""
+    },
+    {
+      "control": "Ninguna columna queda sin decidir",
+      "ok": true,
+      "detalle": ""
+    },
+    {
+      "control": "Hay una columna de descripción",
+      "ok": true,
+      "detalle": ""
+    },
+    {
+      "control": "El separador decimal sale de los datos",
+      "ok": true,
+      "detalle": "ningún decimal escrito como texto: ',' (estándar, sección 4)"
+    },
+    {
+      "control": "«EAN13» tiene forma de código de barras",
+      "ok": true,
+      "detalle": "23 de 23 filas"
+    },
+    {
+      "control": "«Costo» son números",
+      "ok": true,
+      "detalle": "28 de 28 filas"
+    },
+    {
+      "control": "Las columnas de contenido tienen sentido juntas",
+      "ok": true,
+      "detalle": ""
+    },
+    {
+      "control": "El contenido se puede calcular (cantidad_y_unidad_separadas)",
+      "ok": true,
+      "detalle": "28 de 28 filas"
+    },
+    {
+      "control": "La moneda coincide con lo que dice el archivo",
+      "ok": true,
+      "detalle": "eligió UYU; el archivo no menciona dólares"
+    }
+  ],
+  "problemas": [],
+  "avisos": [],
+  "propuesta": {
+    "hoja_productos_nuevos": "Altas",
+    "evidencia_hoja": "Altas",
+    "hojas_que_no_entran": [
+      {
+        "hoja": "Discontinuados",
+        "motivo": "Productos discontinuados, dados de baja; no son productos nuevos y no se cargan."
+      }
+    ],
+    "columna_descripcion": "Descripcion",
+    "columna_ean": "EAN13",
+    "columna_precio": "Costo",
+    "columna_contenido": "Cont.",
+    "columna_unidad": "UM",
+    "moneda": "UYU",
+    "evidencia_moneda": null,
+    "columnas_que_no_van": [
+      {
+        "columna": "Item",
+        "motivo": "Es el código interno del proveedor (p. ej. HT40003), no es un dato del formulario. Figura como columna_codigo en el resumen."
+      }
+    ]
+  },
+  "costo_usd": 0.000531,
+  "stop_reason": "tool_use"
+}

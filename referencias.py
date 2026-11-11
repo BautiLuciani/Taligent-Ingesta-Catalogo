@@ -12,10 +12,17 @@ from pathlib import Path
 
 CARPETA_REFERENCIAS = Path(__file__).parent / "salida" / "experimentos" / "referencias_sem3"
 RUTA_RESULTADOS_REFERENCIA = CARPETA_REFERENCIAS / "resultados.json"
+# Semana 4, paso 3: lo nuevo, congelado aparte en referencias_sem4/:
+#   - recepcion/: los resultados del recepcionista (las recetas de Rivera, Higiene Total y Norte), del commit d52a7cc;
+#   - extracciones/: las 4 de la semana 3 (copiadas tal cual) + las FDS de Rivera y Norte leídas el 11/11.
+CARPETA_REFERENCIAS_SEM4 = Path(__file__).parent / "salida" / "experimentos" / "referencias_sem4"
+CARPETA_RECEPCION_REFERENCIA = CARPETA_REFERENCIAS_SEM4 / "recepcion"
 
-# Para ESTE proceso: los imports de servidor_mcp que hagan las pruebas leen la copia congelada.
-os.environ["INGESTA_CARPETA_EXTRACCIONES"] = str(CARPETA_REFERENCIAS / "extracciones")
+# Para ESTE proceso: los imports de servidor_mcp que hagan las pruebas leen las copias congeladas.
+os.environ["INGESTA_CARPETA_EXTRACCIONES"] = str(CARPETA_REFERENCIAS_SEM4 / "extracciones")
+os.environ["INGESTA_CARPETA_RECEPCION"] = str(CARPETA_RECEPCION_REFERENCIA)
 
 # Para los servidores que levantan las pruebas: son OTROS procesos y fastmcp los arranca con un entorno limpio
-# (no heredan os.environ), así que la variable se les pasa explícita en env.
-ENTORNO_PRUEBAS = {"INGESTA_CARPETA_EXTRACCIONES": os.environ["INGESTA_CARPETA_EXTRACCIONES"]}
+# (no heredan os.environ), así que las variables se les pasan explícitas en env.
+VARIABLES_DE_CARPETAS = ("INGESTA_CARPETA_EXTRACCIONES", "INGESTA_CARPETA_RECEPCION")
+ENTORNO_PRUEBAS = {variable: os.environ[variable] for variable in VARIABLES_DE_CARPETAS}

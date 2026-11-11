@@ -18,6 +18,7 @@ from cuentas import (cargar_abreviaturas, cargar_vocabulario, contenido_de_prese
                      convertir_contenido, convertir_numero, convertir_precio, expandir_abreviaturas, normalizar_gtin,
                      separar_contenido)
 from lector_excel import leer_tabla_excel
+from recepcion import contenido_de_la_fila
 
 CARPETA_DATA = Path(__file__).parent / "Data"
 ABREVIATURAS = cargar_abreviaturas()
@@ -41,9 +42,10 @@ PROPUESTAS: dict[str, dict] = {}  # en modo propuesta: lo aceptado por ESTE proc
 CARPETA_EXTRACCIONES = Path(os.getenv("INGESTA_CARPETA_EXTRACCIONES",
                                       Path(__file__).parent / "salida" / "extracciones"))
 
-# Cómo leer el archivo de cada proveedor habilitado.
+# Cómo leer el archivo de cada proveedor de las semanas 1 a 3: escrito A MANO (queda así: no se rompe lo que anda).
+# Los de la semana 4 en adelante entran SOLOS (proveedores_recibidos, abajo).
 # P06 (Bebé Feliz) NO está: es el proveedor apartado hasta la semana 5.
-PROVEEDORES = {
+PROVEEDORES_A_MANO = {
     "P03": {
         "formato": "csv",
         "archivo": CARPETA_DATA / "proveedores" / "P03_Distribuidora_Litoral" / "litoral_altas_102026.csv",
@@ -99,6 +101,53 @@ PROVEEDORES = {
         "marca": "NATURAL VIDA",
     },
 }
+
+# --- Semana 4, paso 3: los proveedores que entran SOLOS, con la receta del recepcionista ---
+
+# Dónde dejó sus resultados el recepcionista (recepcion.py). Tiene su variable de entorno: las pruebas la apuntan a
+# una copia congelada (referencias.py), porque cada recepción reescribe esta carpeta.
+CARPETA_RECEPCION = Path(os.getenv("INGESTA_CARPETA_RECEPCION", Path(__file__).parent / "salida" / "recepcion"))
+RUTA_PROVEEDORES_CSV = CARPETA_DATA / "proveedores" / "proveedores.csv"  # qué manda cada proveedor (la guía)
+APARTADOS = {"P06"}  # Bebé Feliz: apartado hasta la semana 5. Lo frena el código, no la memoria
+
+
+def proveedores_recibidos(carpeta_recepcion: Path = CARPETA_RECEPCION) -> dict[str, dict]:
+    """Los proveedores que entran SIN configuración a mano: un Excel suyo (según proveedores.csv) pasó por el
+    recepcionista y su resultado está en carpeta_recepcion/<archivo>.json.
+
+    Se arma la misma configuración que antes se escribía a mano: formato, archivo, receta, moneda y, si el proveedor
+    tiene carpeta fichas_de_seguridad, dónde van sus FDS leídas. Si la receta NO entró, el proveedor igual figura
+    (con receta None y sus problemas): así el chequeo entre etapas lo frena con el motivo, en vez de desaparecer.
+    Los de PROVEEDORES_A_MANO y los apartados no se tocan. Un Excel sin recepción todavía no cuenta.
+    """
+    recibidos = {}
+    with open(RUTA_PROVEEDORES_CSV, encoding="utf-8-sig", newline="") as archivo:
+        for proveedor in csv.DictReader(archivo):
+            proveedor_id = proveedor["proveedor_id"]
+            if proveedor_id in PROVEEDORES_A_MANO or proveedor_id in APARTADOS:
+                continue
+            carpeta = CARPETA_DATA / "proveedores" / proveedor["carpeta"]
+            excels = [a.strip() for a in proveedor["archivos"].split("|") if a.strip().lower().endswith(".xlsx")]
+            for nombre in excels:
+                ruta_resultado = carpeta_recepcion / f"{Path(nombre).stem}.json"
+                if not ruta_resultado.exists():
+                    continue
+                resultado = json.loads(ruta_resultado.read_text(encoding="utf-8"))
+                receta = resultado["receta"]
+                config = {"formato": "excel", "archivo": carpeta / nombre, "receta": receta,
+                          "problemas_recepcion": resultado["problemas"],
+                          "moneda": receta["moneda"] if receta else None}
+                if (carpeta / "fichas_de_seguridad").is_dir():  # lo que va a dejar extractor_fds.py para esa carpeta
+                    config["fds"] = CARPETA_EXTRACCIONES / f"fds_{proveedor['carpeta']}.json"
+                if proveedor_id in recibidos:  # dos Excel del mismo proveedor: todavía no se sabe cruzarlos solos
+                    config["receta"] = None
+                    config["problemas_recepcion"] = [f"{proveedor_id} trae más de un Excel con receta: no se elige uno."]
+                recibidos[proveedor_id] = config
+    return recibidos
+
+
+# Todos los proveedores habilitados: los de antes, escritos a mano, y los que entraron solos
+PROVEEDORES = {**PROVEEDORES_A_MANO, **proveedores_recibidos()}
 
 
 # --- Catálogo actual: se carga una sola vez al arrancar el servidor ---
@@ -227,6 +276,47 @@ def leer_filas_pdf(proveedor_id: str, config: dict) -> list[dict]:
             "fuente": fuente,
             "original": {**texto, **campos, "problemas_extraccion": producto["problemas"]},
             "calculado": calculado,
+        })
+    return filas
+
+
+def leer_filas_excel(proveedor_id: str, config: dict) -> list[dict]:
+    """Lee un Excel con su RECETA (semana 4, paso 3) y arma cada fila con la MISMA forma que leer_filas_csv.
+
+    La receta la armó el recepcionista (recepcion.py: el modelo propone, el código verifica con todas las filas):
+    qué hoja, qué columna es cada dato, dónde está el contenido, el separador decimal y la moneda. Acá no se decide
+    nada: se aplica. La fuente es {archivo, hoja, fila}. El contenido sale de contenido_de_la_fila, la MISMA función
+    con la que se verificó la receta: lo que se calcula acá es exactamente lo que se probó.
+    El Excel no trae la marca en una columna aparte: no va en calculado, la decide el agente desde la descripción.
+    """
+    receta = config["receta"]
+    if receta is None:  # la receta no entró en la recepción: no hay filas (el motivo lo da problemas_de_lectura)
+        return []
+    campos = receta["campos"]
+    separador = receta["separador_decimal"]
+    columnas = {"descripcion": campos.get("descripcion"), "contenido": campos.get("contenido"),
+                "unidad": campos.get("unidad")}
+    filas = []
+    for fila in leer_tabla_excel(config["archivo"], receta["hoja"])["filas"]:
+        original = fila["original"]
+        gtin, motivo_gtin = normalizar_gtin(original.get(campos["ean"])) if "ean" in campos else (None, "gtin_faltante")
+        contenido, unidad = contenido_de_la_fila(original, receta["contenido_en"], columnas, separador)
+        precio = original.get(campos["precio"]) if "precio" in campos else None
+        if precio is not None and not isinstance(precio, (int, float)):
+            precio = convertir_numero(precio, separador)  # escrito como texto: con el separador calculado
+        filas.append({
+            "item_id": f"{proveedor_id}:{fila['codigo']}",
+            "fuente": fila["fuente"],
+            "original": original,
+            "calculado": {
+                "gtin": gtin,
+                "motivo_gtin": motivo_gtin,
+                "descripcion_expandida": expandir_abreviaturas(original.get(campos["descripcion"]), ABREVIATURAS),
+                "contenido": contenido,
+                "unidad": unidad,
+                "precio_costo": float(precio) if precio is not None else None,
+                "moneda": receta["moneda"],
+            },
         })
     return filas
 
@@ -426,7 +516,7 @@ def leer_filas_mail(proveedor_id: str, config: dict) -> list[dict]:
     return leer_mail(proveedor_id, config)["filas"]
 
 
-LECTORES = {"csv": leer_filas_csv, "pdf": leer_filas_pdf, "mail": leer_filas_mail}
+LECTORES = {"csv": leer_filas_csv, "pdf": leer_filas_pdf, "mail": leer_filas_mail, "excel": leer_filas_excel}
 # Los proveedores que se pueden leer: salen de PROVEEDORES (antes era una lista fija en la tool y un proveedor nuevo
 # quedaba afuera sin avisar). P06 no está en PROVEEDORES: sigue apartado.
 ProveedorHabilitado = Literal[tuple(PROVEEDORES)]
@@ -468,7 +558,14 @@ def fds_del_producto(codigo: str, indice_fds: dict[str, list[dict]]) -> dict | N
 
 
 def leer_filas(proveedor_id: str, config: dict) -> list[dict]:
-    """Lee las filas de un proveedor con el lector de su formato (CSV, PDF...) y le suma a cada una su FDS."""
+    """Lee las filas de un proveedor con el lector de su formato (CSV, PDF...) y le suma a cada una su FDS.
+
+    Un proveedor recibido (Excel) con la lectura incompleta (receta que no entró, FDS sin leer) no da filas: no se
+    procesa, y el motivo lo da problemas_de_lectura. Nunca se arma una fila "a medias" (ej. todas en pendiente_fds
+    solo porque faltó correr el extractor de FDS).
+    """
+    if config.get("formato") == "excel" and problemas_de_lectura(config):
+        return []
     filas = LECTORES[config["formato"]](proveedor_id, config)
     if "actualizaciones" in config:
         aplicar_actualizaciones(proveedor_id, config, filas)
@@ -489,6 +586,13 @@ def problemas_de_lectura(config: dict) -> list[str]:
     Un mail (semana 3, paso 7): las líneas que parecen un producto pero no se pudieron leer.
     """
     problemas = []
+    if config.get("formato") == "excel":  # semana 4: un proveedor que entró solo
+        if config["receta"] is None:
+            problemas += [f"{config['archivo'].name}: la receta no entró en la recepción: {problema}"
+                          for problema in config["problemas_recepcion"]] or [f"{config['archivo'].name}: sin receta"]
+        if "fds" in config and not config["fds"].exists():
+            problemas.append(f"Faltan sus FDS leídas ({config['fds'].name}): primero hay que correr extractor_fds.py "
+                             "sobre su carpeta fichas_de_seguridad")
     if config.get("formato") == "mail":
         problemas += [f"{config['archivo'].name}: {problema}" for problema in leer_mail("", config)["problemas"]]
     for clave in ("extraccion", "fds"):

@@ -250,11 +250,12 @@ def fichar_tanda(cliente_claude, modelo: str, proveedor_id: str, desde: int, can
 async def _fichar_tanda(cliente_claude, modelo: str, proveedor_id: str, desde: int, cantidad: int,
                         ruta_traza: Path) -> dict:
     # Al servidor se le pasa SOLO lo que necesita (no la clave de la API: no la necesita, M4 §7.2): el modo
-    # propuesta y, si alguien la fijó, la carpeta de extracciones (las pruebas la apuntan a la copia congelada,
-    # semana 4, paso 0). Hay que pasarla a mano: fastmcp arranca el servidor con un entorno limpio.
+    # propuesta y, si alguien las fijó, las carpetas de extracciones y de recepción (las pruebas las apuntan a copias
+    # congeladas, semana 4, pasos 0 y 3). Hay que pasarlas a mano: fastmcp arranca el servidor con un entorno limpio.
     entorno = {"INGESTA_MODO_PROPUESTA": "1"}
-    if os.getenv("INGESTA_CARPETA_EXTRACCIONES"):
-        entorno["INGESTA_CARPETA_EXTRACCIONES"] = os.environ["INGESTA_CARPETA_EXTRACCIONES"]
+    for variable in ("INGESTA_CARPETA_EXTRACCIONES", "INGESTA_CARPETA_RECEPCION"):
+        if os.getenv(variable):
+            entorno[variable] = os.environ[variable]
     transporte = PythonStdioTransport(RUTA_SERVIDOR, env=entorno)
     async with Client(transporte) as cliente_mcp:
         system = await armar_system_prompt(cliente_mcp)

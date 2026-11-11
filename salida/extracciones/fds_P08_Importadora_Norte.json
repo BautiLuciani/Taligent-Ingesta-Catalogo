@@ -1,0 +1,33 @@
+{
+  "proveedor": "P08_Importadora_Norte",
+  "modelo": "claude-haiku-5-5",
+  "fichas": [
+    {
+      "archivo": "FDS_PureCare_in_afe.pdf",
+      "codigos": [
+        "IN7015"
+      ],
+      "peligro_deposito": "aerosol_inflamable",
+      "numero_onu": "1950",
+      "fuente": {
+        "archivo": "FDS_PureCare_in_afe.pdf",
+        "pagina": 1
+      },
+      "problemas": []
+    },
+    {
+      "archivo": "FDS_PureCare_in_sec.pdf",
+      "codigos": [
+        "IN7003"
+      ],
+      "peligro_deposito": "aerosol_inflamable",
+      "numero_onu": "1950",
+      "fuente": {
+        "archivo": "FDS_PureCare_in_sec.pdf",
+        "pagina": 1
+      },
+      "problemas": []
+    }
+  ],
+  "costo_usd": 0.001563
+}

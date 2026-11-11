@@ -1,0 +1,41 @@
+{
+  "proveedor": "P02_Cosmetica_Rivera",
+  "modelo": "claude-haiku-5-5",
+  "fichas": [
+    {
+      "archivo": "FDS_Brisa_Frescor_desaer.pdf",
+      "codigos": [
+        "RIV-1209",
+        "RIV-1248",
+        "RIV-1284",
+        "RIV-1290",
+        "RIV-1296",
+        "RIV-1332",
+        "RIV-1347"
+      ],
+      "peligro_deposito": "aerosol_inflamable",
+      "numero_onu": "1950",
+      "fuente": {
+        "archivo": "FDS_Brisa_Frescor_desaer.pdf",
+        "pagina": 1
+      },
+      "problemas": []
+    },
+    {
+      "archivo": "FDS_Brisa_laca.pdf",
+      "codigos": [
+        "RIV-1218",
+        "RIV-1266",
+        "RIV-1320"
+      ],
+      "peligro_deposito": "aerosol_inflamable",
+      "numero_onu": "1950",
+      "fuente": {
+        "archivo": "FDS_Brisa_laca.pdf",
+        "pagina": 1
+      },
+      "problemas": []
+    }
+  ],
+  "costo_usd": 0.001489
+}
