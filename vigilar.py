@@ -11,7 +11,9 @@ y este programa hace todo solo, sin tocar código ni configuración:
   5. fichas + único escritor: el orquestador, solo para ese proveedor (con los hooks y los permisos del módulo 5);
   6. el pedido al proveedor;
   7. lo anota en salida/bandeja.json con la huella del contenido: el mismo archivo no se procesa dos veces, pero si
-     cambia (otra huella), sí.
+     cambia (otra huella), sí;
+  8. el acuse de recibo (paso 9): un informe legible de lo que entendió y decidió, en salida/acuses/. Se arma
+     SIEMPRE, también si el archivo no entró o lo rechazaron (es cuando más importa enterarse).
 
 Hoy entra solo un Excel: es lo que sabe recibir el recepcionista. Un PDF, CSV o mail de un proveedor nuevo
 necesitaría su propio recepcionista (queda anotado como "formato no soportado", no se procesa a ciegas).
@@ -83,6 +85,12 @@ class Pasos:
 
     def pedir(self, proveedor_id: str) -> int:
         return subprocess.run([sys.executable, "pedido_proveedor.py", proveedor_id], cwd=CARPETA_PROYECTO).returncode
+
+    def acusar(self, ruta: Path, registro: dict) -> Path:
+        """El acuse de recibo (paso 9): lo arma el código con lo ya guardado, sin IA. Devuelve dónde quedó."""
+        from acuse import RUTA_HOOKS, RUTA_RESULTADOS, armar_acuse, guardar_acuse, leer_json
+        texto = armar_acuse(ruta, registro, leer_json(RUTA_RESULTADOS, {}), leer_json(RUTA_HOOKS, {}))
+        return guardar_acuse(ruta, registro, texto)
 
     def fichas_escritas(self, proveedor_id: str) -> tuple[int, int]:
         """(cuántas fichas del proveedor quedaron en resultados.json, cuántos productos tenía que tener)."""
@@ -167,7 +175,13 @@ def una_vuelta(pasos, carpeta: Path = CARPETA_ENTRADA, ruta_registro: Path = RUT
         ruta_registro.write_text(json.dumps(registro, ensure_ascii=False, indent=2), encoding="utf-8")
         print(f"{'✅' if resultado['estado'] == 'procesado' else '⛔'} {clave}: {resultado['estado']}"
               + (f" — {resultado['motivo']}" if resultado.get("motivo") else ""))
-        hechos.append({"archivo": clave, **resultado})
+        try:  # el acuse informa; si falla, lo procesado ya está anotado y la bandeja sigue
+            acuse = pasos.acusar(ruta, registro[clave])
+            print(f"📄 Acuse de recibo: {ruta_relativa(acuse)}")
+        except Exception as error:
+            acuse = None
+            print(f"⚠ No se pudo armar el acuse de {clave}: {type(error).__name__}: {error}")
+        hechos.append({"archivo": clave, **resultado, "acuse": acuse})
     return hechos
 
 

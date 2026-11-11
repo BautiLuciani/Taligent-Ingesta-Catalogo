@@ -1,4 +1,4 @@
-"""Pruebas de la bandeja de entrada (semana 4, paso 7) sin IA: pasos falsos y una bandeja temporal.
+"""Pruebas de la bandeja de entrada (semana 4, pasos 7 y 9B) sin IA: pasos falsos y una bandeja temporal.
 Correr: python probar_vigilar.py"""
 import json
 import shutil
@@ -27,10 +27,11 @@ def chequear(origen, obtenido, esperado):
 
 class PasosFalsos:
     """Los pasos de la bandeja sin IA: anotan qué se llamó y contestan lo que se les pide."""
-    def __init__(self, receta_entra=True, problemas_fds=None, codigo_fichar=0, escritas=(14, 14), explota=False):
-        self.llamadas = []
+    def __init__(self, receta_entra=True, problemas_fds=None, codigo_fichar=0, escritas=(14, 14), explota=False,
+                 acuse_explota=False):
+        self.llamadas, self.acuses = [], []
         self.receta_entra, self.problemas_fds, self.codigo_fichar = receta_entra, problemas_fds or [], codigo_fichar
-        self.escritas, self.explota = escritas, explota
+        self.escritas, self.explota, self.acuse_explota = escritas, explota, acuse_explota
 
     def recibir(self, ruta):
         self.llamadas.append(("recibir", ruta.name))
@@ -53,6 +54,13 @@ class PasosFalsos:
     def pedir(self, proveedor_id):
         self.llamadas.append(("pedir", proveedor_id))
         return 0
+
+    def acusar(self, ruta, registro):
+        self.llamadas.append(("acusar", ruta.name))
+        if self.acuse_explota:
+            raise ValueError("no se pudo leer resultados.json")
+        self.acuses.append((ruta.parent.name, registro["estado"], registro["huella"]))
+        return ruta.parent / f"acuse_{ruta.stem}.md"
 
 
 def bandeja_con(*archivos) -> tuple[Path, Path]:
@@ -80,8 +88,12 @@ pasos, tamanios = PasosFalsos(), {}
 chequear("1ª mirada: recién llegó, solo mide el tamaño (nada procesado)", una_vuelta(pasos, entrada, registro, tamanios), [])
 hechos = una_vuelta(pasos, entrada, registro, tamanios)
 chequear("2ª mirada: mismo tamaño -> lo procesa", [(h["proveedor_id"], h["estado"]) for h in hechos], [("P08", "procesado")])
-chequear("En orden: recepción, FDS (tiene la carpeta), fichas, pedido", pasos.llamadas,
-         [("recibir", "NorteImports_new_items_Q4.xlsx"), ("leer_fds", "P08_Importadora_Norte"), ("fichar", "P08"), ("pedir", "P08")])
+chequear("En orden: recepción, FDS (tiene la carpeta), fichas, pedido y, al final, el acuse", pasos.llamadas,
+         [("recibir", "NorteImports_new_items_Q4.xlsx"), ("leer_fds", "P08_Importadora_Norte"), ("fichar", "P08"), ("pedir", "P08"),
+          ("acusar", "NorteImports_new_items_Q4.xlsx")])
+chequear("9B · el acuse recibe lo que quedó anotado (estado y huella del registro)", pasos.acuses,
+         [("P08_Importadora_Norte", "procesado", huella_del_archivo(NORTE))])
+chequear("9B · y la bandeja devuelve dónde quedó el acuse", hechos[0]["acuse"].name, "acuse_NorteImports_new_items_Q4.md")
 anotado = json.loads(registro.read_text(encoding="utf-8"))
 clave = next(iter(anotado))
 chequear("Queda anotado en el registro, con su huella", (anotado[clave]["estado"], anotado[clave]["huella"]),
@@ -135,6 +147,23 @@ chequear("Los demás, cada uno con su estado", [hechos[c]["estado"] for c in ("P
          ["rechazado", "formato_no_soportado", "rechazado"])
 chequear("Todos quedan en el registro (no se reintentan cada 5 s; si el archivo cambia, sí)",
          len(json.loads(registro.read_text(encoding="utf-8"))), 4)
+chequear("9B · los 4 tienen acuse, también los rechazados y el que explotó",
+         sorted((carpeta, estado) for carpeta, estado, _ in pasos.acuses),
+         [("P04_Higiene_Total", "error"), ("P06_Bebe_Feliz", "rechazado"), ("P07_Limpieza_Hogar_Sur", "formato_no_soportado"),
+          ("Varios", "rechazado")])
+shutil.rmtree(entrada.parent, ignore_errors=True)
+
+print("--- 9B · si el acuse falla, lo procesado queda igual y la bandeja sigue ---")
+entrada, registro = bandeja_con(("P08_Importadora_Norte", "NorteImports_new_items_Q4.xlsx", NORTE),
+                                ("Varios", "lista.xlsx", NORTE))
+pasos, tamanios = PasosFalsos(acuse_explota=True), {}
+una_vuelta(pasos, entrada, registro, tamanios)
+hechos = {Path(h["archivo"]).parent.name: h for h in una_vuelta(pasos, entrada, registro, tamanios)}
+chequear("Los dos archivos se procesaron igual, cada uno con su estado",
+         (hechos["P08_Importadora_Norte"]["estado"], hechos["Varios"]["estado"]), ("procesado", "rechazado"))
+chequear("...sin acuse (None), pero anotados en el registro",
+         ([h["acuse"] for h in hechos.values()], len(json.loads(registro.read_text(encoding="utf-8")))), ([None, None], 2))
+chequear("...y no se reprocesan en la próxima mirada", una_vuelta(pasos, entrada, registro, tamanios), [])
 shutil.rmtree(entrada.parent, ignore_errors=True)
 
 chequear("La bandeja real es entrada/, al lado del proyecto", vigilar.CARPETA_ENTRADA.name, "entrada")
