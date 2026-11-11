@@ -1,0 +1,1166 @@
+[
+  {
+    "item_id": "P02:RIV-1203",
+    "por_que": "Q09: el EAN 7793092189062 tiene el digito verificador mal -> sin GTIN y a revision; no hay acondicionador NATIVA LISO 200 en el catalogo (solo 750)",
+    "esperado": {
+      "estado": "a_revision",
+      "duplicado_de": null,
+      "motivos_revision": [
+        "gtin_invalido"
+      ],
+      "ficha": {
+        "gtin": null,
+        "descripcion": "ACONDICIONADOR NATIVA LISO X 200 ML",
+        "marca": "NATIVA",
+        "tipo": "ACONDICIONADOR",
+        "variante": "LISO",
+        "contenido": 200,
+        "unidad": "ML",
+        "unidades_por_envase": 1,
+        "principio_activo": null,
+        "concentracion": null,
+        "condicion_venta": null,
+        "categoria": "CUI-CAP-ACO",
+        "precio_costo": 104.24,
+        "moneda": "UYU",
+        "proveedor_id": "P02",
+        "codigo_proveedor": "RIV-1203"
+      },
+      "fuentes": {
+        "descripcion": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 7
+        },
+        "marca": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 7
+        },
+        "tipo": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 7
+        },
+        "variante": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 7
+        },
+        "contenido": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 7
+        },
+        "unidad": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 7
+        },
+        "unidades_por_envase": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 7
+        },
+        "categoria": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 7
+        },
+        "precio_costo": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 7
+        },
+        "moneda": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 7
+        },
+        "proveedor_id": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 7
+        },
+        "codigo_proveedor": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 7
+        }
+      }
+    }
+  },
+  {
+    "item_id": "P02:RIV-1206",
+    "por_que": "Q10: EAN con guiones normalizado = SKU100714 -> duplicado; 400 CC = 400 ML",
+    "esperado": {
+      "estado": "duplicado",
+      "duplicado_de": "SKU100714",
+      "motivos_revision": [],
+      "ficha": {
+        "gtin": "7797137444038",
+        "descripcion": "ACONDICIONADOR BRISA COLOR X 400 ML",
+        "marca": "BRISA",
+        "tipo": "ACONDICIONADOR",
+        "variante": "COLOR",
+        "contenido": 400,
+        "unidad": "ML",
+        "unidades_por_envase": 1,
+        "principio_activo": null,
+        "concentracion": null,
+        "condicion_venta": null,
+        "categoria": "CUI-CAP-ACO",
+        "precio_costo": 147.76,
+        "moneda": "UYU",
+        "proveedor_id": "P02",
+        "codigo_proveedor": "RIV-1206"
+      },
+      "fuentes": {
+        "gtin": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 8
+        },
+        "descripcion": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 8
+        },
+        "marca": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 8
+        },
+        "tipo": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 8
+        },
+        "variante": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 8
+        },
+        "contenido": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 8
+        },
+        "unidad": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 8
+        },
+        "unidades_por_envase": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 8
+        },
+        "categoria": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 8
+        },
+        "precio_costo": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 8
+        },
+        "moneda": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 8
+        },
+        "proveedor_id": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 8
+        },
+        "codigo_proveedor": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 8
+        }
+      }
+    }
+  },
+  {
+    "item_id": "P02:RIV-1215",
+    "por_que": "Duplicado por GTIN (SKU102128, escrito 'SH. NATIVA COLOR 750ML' en el catalogo viejo); 750cc en minuscula",
+    "esperado": {
+      "estado": "duplicado",
+      "duplicado_de": "SKU102128",
+      "motivos_revision": [],
+      "ficha": {
+        "gtin": "7794047919526",
+        "descripcion": "SHAMPOO NATIVA COLOR X 750 ML",
+        "marca": "NATIVA",
+        "tipo": "SHAMPOO",
+        "variante": "COLOR",
+        "contenido": 750,
+        "unidad": "ML",
+        "unidades_por_envase": 1,
+        "principio_activo": null,
+        "concentracion": null,
+        "condicion_venta": null,
+        "categoria": "CUI-CAP-SHA",
+        "precio_costo": 228.04,
+        "moneda": "UYU",
+        "proveedor_id": "P02",
+        "codigo_proveedor": "RIV-1215"
+      },
+      "fuentes": {
+        "gtin": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 9
+        },
+        "descripcion": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 9
+        },
+        "marca": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 9
+        },
+        "tipo": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 9
+        },
+        "variante": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 9
+        },
+        "contenido": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 9
+        },
+        "unidad": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 9
+        },
+        "unidades_por_envase": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 9
+        },
+        "categoria": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 9
+        },
+        "precio_costo": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 9
+        },
+        "moneda": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 9
+        },
+        "proveedor_id": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 9
+        },
+        "codigo_proveedor": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 9
+        }
+      }
+    }
+  },
+  {
+    "item_id": "P02:RIV-1212",
+    "por_que": "Aerosol que no figura en ninguna FDS -> pendiente_fds (fuente: su fila); igual es duplicado de SKU101925 (decision de Bauti: se pide la FDS)",
+    "esperado": {
+      "estado": "duplicado",
+      "duplicado_de": "SKU101925",
+      "motivos_revision": [],
+      "ficha": {
+        "gtin": "7797985763688",
+        "descripcion": "DESODORANTE AEROSOL BRISA HOMBRE X 150 ML",
+        "marca": "BRISA",
+        "tipo": "DESODORANTE AEROSOL",
+        "variante": "HOMBRE",
+        "contenido": 150,
+        "unidad": "ML",
+        "unidades_por_envase": 1,
+        "principio_activo": null,
+        "concentracion": null,
+        "condicion_venta": null,
+        "categoria": "CUI-DES-AER",
+        "precio_costo": 78.95,
+        "moneda": "UYU",
+        "proveedor_id": "P02",
+        "codigo_proveedor": "RIV-1212",
+        "peligro_deposito": "pendiente_fds",
+        "numero_onu": null
+      },
+      "fuentes": {
+        "gtin": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 50
+        },
+        "descripcion": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 50
+        },
+        "marca": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 50
+        },
+        "tipo": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 50
+        },
+        "variante": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 50
+        },
+        "contenido": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 50
+        },
+        "unidad": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 50
+        },
+        "unidades_por_envase": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 50
+        },
+        "categoria": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 50
+        },
+        "precio_costo": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 50
+        },
+        "moneda": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 50
+        },
+        "proveedor_id": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 50
+        },
+        "codigo_proveedor": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 50
+        },
+        "peligro_deposito": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 50
+        }
+      }
+    }
+  },
+  {
+    "item_id": "P02:RIV-1218",
+    "por_que": "Laca: FIJ. -> FIJACION; 'PACK PROMO CON NECESER' es una observacion, no un pack; aerosol ONU 1950 desde su FDS",
+    "esperado": {
+      "estado": "lista_para_alta",
+      "duplicado_de": null,
+      "motivos_revision": [],
+      "ficha": {
+        "gtin": "7795881296972",
+        "descripcion": "LACA BRISA FIJACION FUERTE X 400 ML",
+        "marca": "BRISA",
+        "tipo": "LACA",
+        "variante": "FIJACION FUERTE",
+        "contenido": 400,
+        "unidad": "ML",
+        "unidades_por_envase": 1,
+        "principio_activo": null,
+        "concentracion": null,
+        "condicion_venta": null,
+        "categoria": "CUI-CAP-FIJ",
+        "precio_costo": 207.35,
+        "moneda": "UYU",
+        "proveedor_id": "P02",
+        "codigo_proveedor": "RIV-1218",
+        "peligro_deposito": "aerosol_inflamable",
+        "numero_onu": "1950"
+      },
+      "fuentes": {
+        "gtin": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 10
+        },
+        "descripcion": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 10
+        },
+        "marca": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 10
+        },
+        "tipo": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 10
+        },
+        "variante": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 10
+        },
+        "contenido": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 10
+        },
+        "unidad": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 10
+        },
+        "unidades_por_envase": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 10
+        },
+        "categoria": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 10
+        },
+        "precio_costo": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 10
+        },
+        "moneda": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 10
+        },
+        "proveedor_id": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 10
+        },
+        "codigo_proveedor": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 10
+        },
+        "peligro_deposito": {
+          "archivo": "FDS_Brisa_laca.pdf",
+          "pagina": 1
+        },
+        "numero_onu": {
+          "archivo": "FDS_Brisa_laca.pdf",
+          "pagina": 1
+        }
+      }
+    }
+  },
+  {
+    "item_id": "P02:RIV-1266",
+    "por_que": "Laca con 'PROMO: LLEVA 2 PAGA 1' (no va a la ficha); aerosol desde su FDS",
+    "esperado": {
+      "estado": "lista_para_alta",
+      "duplicado_de": null,
+      "motivos_revision": [],
+      "ficha": {
+        "gtin": "7793662132327",
+        "descripcion": "LACA BRISA FIJACION FUERTE X 200 ML",
+        "marca": "BRISA",
+        "tipo": "LACA",
+        "variante": "FIJACION FUERTE",
+        "contenido": 200,
+        "unidad": "ML",
+        "unidades_por_envase": 1,
+        "principio_activo": null,
+        "concentracion": null,
+        "condicion_venta": null,
+        "categoria": "CUI-CAP-FIJ",
+        "precio_costo": 130.72,
+        "moneda": "UYU",
+        "proveedor_id": "P02",
+        "codigo_proveedor": "RIV-1266",
+        "peligro_deposito": "aerosol_inflamable",
+        "numero_onu": "1950"
+      },
+      "fuentes": {
+        "gtin": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 25
+        },
+        "descripcion": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 25
+        },
+        "marca": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 25
+        },
+        "tipo": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 25
+        },
+        "variante": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 25
+        },
+        "contenido": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 25
+        },
+        "unidad": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 25
+        },
+        "unidades_por_envase": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 25
+        },
+        "categoria": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 25
+        },
+        "precio_costo": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 25
+        },
+        "moneda": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 25
+        },
+        "proveedor_id": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 25
+        },
+        "codigo_proveedor": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 25
+        },
+        "peligro_deposito": {
+          "archivo": "FDS_Brisa_laca.pdf",
+          "pagina": 1
+        },
+        "numero_onu": {
+          "archivo": "FDS_Brisa_laca.pdf",
+          "pagina": 1
+        }
+      }
+    }
+  },
+  {
+    "item_id": "P02:RIV-1248",
+    "por_que": "Aerosol: AER. -> AEROSOL, S/ PERF. -> SIN PERFUME; ONU 1950 desde la FDS de desodorantes",
+    "esperado": {
+      "estado": "lista_para_alta",
+      "duplicado_de": null,
+      "motivos_revision": [],
+      "ficha": {
+        "gtin": "7798056682495",
+        "descripcion": "DESODORANTE AEROSOL FRESCOR SIN PERFUME X 150 ML",
+        "marca": "FRESCOR",
+        "tipo": "DESODORANTE AEROSOL",
+        "variante": "SIN PERFUME",
+        "contenido": 150,
+        "unidad": "ML",
+        "unidades_por_envase": 1,
+        "principio_activo": null,
+        "concentracion": null,
+        "condicion_venta": null,
+        "categoria": "CUI-DES-AER",
+        "precio_costo": 86.93,
+        "moneda": "UYU",
+        "proveedor_id": "P02",
+        "codigo_proveedor": "RIV-1248",
+        "peligro_deposito": "aerosol_inflamable",
+        "numero_onu": "1950"
+      },
+      "fuentes": {
+        "gtin": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 51
+        },
+        "descripcion": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 51
+        },
+        "marca": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 51
+        },
+        "tipo": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 51
+        },
+        "variante": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 51
+        },
+        "contenido": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 51
+        },
+        "unidad": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 51
+        },
+        "unidades_por_envase": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 51
+        },
+        "categoria": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 51
+        },
+        "precio_costo": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 51
+        },
+        "moneda": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 51
+        },
+        "proveedor_id": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 51
+        },
+        "codigo_proveedor": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 51
+        },
+        "peligro_deposito": {
+          "archivo": "FDS_Brisa_Frescor_desaer.pdf",
+          "pagina": 1
+        },
+        "numero_onu": {
+          "archivo": "FDS_Brisa_Frescor_desaer.pdf",
+          "pagina": 1
+        }
+      }
+    }
+  },
+  {
+    "item_id": "P02:RIV-1293",
+    "por_que": "Desodorante en BARRA: no es aerosol, no lleva peligro_deposito ni FDS",
+    "esperado": {
+      "estado": "lista_para_alta",
+      "duplicado_de": null,
+      "motivos_revision": [],
+      "ficha": {
+        "gtin": "7795133736485",
+        "descripcion": "DESODORANTE BARRA FRESCOR SIN PERFUME X 50 G",
+        "marca": "FRESCOR",
+        "tipo": "DESODORANTE BARRA",
+        "variante": "SIN PERFUME",
+        "contenido": 50,
+        "unidad": "G",
+        "unidades_por_envase": 1,
+        "principio_activo": null,
+        "concentracion": null,
+        "condicion_venta": null,
+        "categoria": "CUI-DES-BAR",
+        "precio_costo": 94.17,
+        "moneda": "UYU",
+        "proveedor_id": "P02",
+        "codigo_proveedor": "RIV-1293",
+        "peligro_deposito": null,
+        "numero_onu": null
+      },
+      "fuentes": {
+        "gtin": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 54
+        },
+        "descripcion": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 54
+        },
+        "marca": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 54
+        },
+        "tipo": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 54
+        },
+        "variante": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 54
+        },
+        "contenido": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 54
+        },
+        "unidad": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 54
+        },
+        "unidades_por_envase": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 54
+        },
+        "categoria": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 54
+        },
+        "precio_costo": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 54
+        },
+        "moneda": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 54
+        },
+        "proveedor_id": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 54
+        },
+        "codigo_proveedor": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 54
+        }
+      }
+    }
+  },
+  {
+    "item_id": "P02:RIV-1233",
+    "por_que": "TRAT. CAP. -> TRATAMIENTO CAPILAR; REP/CION -> REPARACION (como en el catalogo, SKU103605); 'NUEVO AROMA' no va; 250 GRS -> 250 G",
+    "esperado": {
+      "estado": "lista_para_alta",
+      "duplicado_de": null,
+      "motivos_revision": [],
+      "ficha": {
+        "gtin": "7798764197571",
+        "descripcion": "TRATAMIENTO CAPILAR ALBORADA REPARACION X 250 G",
+        "marca": "ALBORADA",
+        "tipo": "TRATAMIENTO CAPILAR",
+        "variante": "REPARACION",
+        "contenido": 250,
+        "unidad": "G",
+        "unidades_por_envase": 1,
+        "principio_activo": null,
+        "concentracion": null,
+        "condicion_venta": null,
+        "categoria": "CUI-CAP-ACO",
+        "precio_costo": 151.1,
+        "moneda": "UYU",
+        "proveedor_id": "P02",
+        "codigo_proveedor": "RIV-1233"
+      },
+      "fuentes": {
+        "gtin": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 15
+        },
+        "descripcion": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 15
+        },
+        "marca": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 15
+        },
+        "tipo": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 15
+        },
+        "variante": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 15
+        },
+        "contenido": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 15
+        },
+        "unidad": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 15
+        },
+        "unidades_por_envase": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 15
+        },
+        "categoria": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 15
+        },
+        "precio_costo": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 15
+        },
+        "moneda": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 15
+        },
+        "proveedor_id": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 15
+        },
+        "codigo_proveedor": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 15
+        }
+      }
+    }
+  },
+  {
+    "item_id": "P02:RIV-1275",
+    "por_que": "0,5 KG con coma decimal -> 500 G",
+    "esperado": {
+      "estado": "lista_para_alta",
+      "duplicado_de": null,
+      "motivos_revision": [],
+      "ficha": {
+        "gtin": "7798610293297",
+        "descripcion": "TRATAMIENTO CAPILAR ALBORADA NUTRICION X 500 G",
+        "marca": "ALBORADA",
+        "tipo": "TRATAMIENTO CAPILAR",
+        "variante": "NUTRICION",
+        "contenido": 500,
+        "unidad": "G",
+        "unidades_por_envase": 1,
+        "principio_activo": null,
+        "concentracion": null,
+        "condicion_venta": null,
+        "categoria": "CUI-CAP-ACO",
+        "precio_costo": 244.02,
+        "moneda": "UYU",
+        "proveedor_id": "P02",
+        "codigo_proveedor": "RIV-1275"
+      },
+      "fuentes": {
+        "gtin": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 28
+        },
+        "descripcion": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 28
+        },
+        "marca": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 28
+        },
+        "tipo": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 28
+        },
+        "variante": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 28
+        },
+        "contenido": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 28
+        },
+        "unidad": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 28
+        },
+        "unidades_por_envase": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 28
+        },
+        "categoria": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 28
+        },
+        "precio_costo": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 28
+        },
+        "moneda": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 28
+        },
+        "proveedor_id": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 28
+        },
+        "codigo_proveedor": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 28
+        }
+      }
+    }
+  },
+  {
+    "item_id": "P02:RIV-1239",
+    "por_que": "CAB. SECO -> CABELLO SECO; EAN con guiones normalizado",
+    "esperado": {
+      "estado": "lista_para_alta",
+      "duplicado_de": null,
+      "motivos_revision": [],
+      "ficha": {
+        "gtin": "7799517845237",
+        "descripcion": "SHAMPOO ALBORADA CABELLO SECO X 750 ML",
+        "marca": "ALBORADA",
+        "tipo": "SHAMPOO",
+        "variante": "CABELLO SECO",
+        "contenido": 750,
+        "unidad": "ML",
+        "unidades_por_envase": 1,
+        "principio_activo": null,
+        "concentracion": null,
+        "condicion_venta": null,
+        "categoria": "CUI-CAP-SHA",
+        "precio_costo": 224.46,
+        "moneda": "UYU",
+        "proveedor_id": "P02",
+        "codigo_proveedor": "RIV-1239"
+      },
+      "fuentes": {
+        "gtin": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 17
+        },
+        "descripcion": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 17
+        },
+        "marca": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 17
+        },
+        "tipo": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 17
+        },
+        "variante": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 17
+        },
+        "contenido": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 17
+        },
+        "unidad": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 17
+        },
+        "unidades_por_envase": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 17
+        },
+        "categoria": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 17
+        },
+        "precio_costo": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 17
+        },
+        "moneda": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 17
+        },
+        "proveedor_id": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 17
+        },
+        "codigo_proveedor": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 17
+        }
+      }
+    }
+  },
+  {
+    "item_id": "P02:RIV-1317",
+    "por_que": "CAB. GRASO -> CABELLO GRASO; 200cc -> 200 ML; EAN con guiones",
+    "esperado": {
+      "estado": "lista_para_alta",
+      "duplicado_de": null,
+      "motivos_revision": [],
+      "ficha": {
+        "gtin": "7796197363891",
+        "descripcion": "SHAMPOO BRISA CABELLO GRASO X 200 ML",
+        "marca": "BRISA",
+        "tipo": "SHAMPOO",
+        "variante": "CABELLO GRASO",
+        "contenido": 200,
+        "unidad": "ML",
+        "unidades_por_envase": 1,
+        "principio_activo": null,
+        "concentracion": null,
+        "condicion_venta": null,
+        "categoria": "CUI-CAP-SHA",
+        "precio_costo": 90.58,
+        "moneda": "UYU",
+        "proveedor_id": "P02",
+        "codigo_proveedor": "RIV-1317"
+      },
+      "fuentes": {
+        "gtin": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 38
+        },
+        "descripcion": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 38
+        },
+        "marca": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 38
+        },
+        "tipo": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 38
+        },
+        "variante": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 38
+        },
+        "contenido": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 38
+        },
+        "unidad": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 38
+        },
+        "unidades_por_envase": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 38
+        },
+        "categoria": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 38
+        },
+        "precio_costo": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 38
+        },
+        "moneda": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 38
+        },
+        "proveedor_id": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 38
+        },
+        "codigo_proveedor": {
+          "archivo": "ALTAS RIVERA OCT.xlsx",
+          "hoja": "Altas",
+          "fila": 38
+        }
+      }
+    }
+  }
+]
