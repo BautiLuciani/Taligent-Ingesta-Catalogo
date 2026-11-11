@@ -22,6 +22,7 @@ from fastmcp.client.transports import PythonStdioTransport
 from fastmcp.exceptions import ToolError
 
 from hooks import HooksDeLaTanda
+from permisos import tools_permitidas
 
 CARPETA_PROYECTO = Path(__file__).parent
 RUTA_SERVIDOR = CARPETA_PROYECTO / "servidor_mcp.py"
@@ -71,11 +72,20 @@ async def armar_system_prompt(cliente_mcp: Client) -> str:
     return "\n\n".join(partes)
 
 
-async def obtener_tools(cliente_mcp: Client) -> list[dict]:
-    """Pide las tools al servidor y las pasa al formato que espera la API de Claude."""
+async def obtener_tools(cliente_mcp: Client, rol: str = "fichador") -> list[dict]:
+    """Pide las tools al servidor y le pasa al modelo SOLO las permitidas para su rol (semana 4, paso 6: candado 1).
+
+    Si la tabla de permisos nombra una tool que el servidor no tiene, falla al arrancar: un error de configuración no
+    puede pasar en silencio (el agente arrancaría sin una tool que su tarea necesita).
+    """
+    permitidas = tools_permitidas(rol)
+    del_servidor = {tool.name: tool for tool in await cliente_mcp.list_tools()}
+    faltan = sorted(permitidas - set(del_servidor))
+    if faltan:
+        raise ValueError(f"Los permisos del {rol} nombran tools que el servidor no tiene: {', '.join(faltan)}")
     return [
         {"name": tool.name, "description": tool.description, "input_schema": tool.input_schema}
-        for tool in await cliente_mcp.list_tools()
+        for nombre, tool in del_servidor.items() if nombre in permitidas
     ]
 
 
@@ -222,7 +232,8 @@ async def procesar_tanda(cliente_claude, cliente_mcp: Client, modelo: str, syste
     esperados, _ = await items_de_la_tanda(cliente_mcp, proveedor_id, desde, cantidad)
     mensajes = [{"role": "user", "content": mensaje_de_tanda(proveedor_id, desde, cantidad)}]
     uso = {"vueltas": 0, "input_tokens": 0, "output_tokens": 0, "etiqueta": etiqueta}
-    hooks = HooksDeLaTanda(esperados)
+    # Candado 2 de los permisos (paso 6): el hook frena cualquier tool que no sea de las que el modelo recibió
+    hooks = HooksDeLaTanda(esperados, permitidas={tool["name"] for tool in tools})
     anotar(ruta_traza, {"evento": "inicio_tanda", "proveedor_id": proveedor_id, "desde": desde, "esperados": esperados})
 
     como_termino, texto_final = await correr_loop(

@@ -81,10 +81,12 @@ class HooksDeLaTanda:
     """Los 3 hooks de UNA conversación del fichador, con su memoria: qué se aceptó y qué se frenó.
 
     esperados: los item_id de la tanda (los sabe el código, no el modelo).
+    permitidas: las tools que puede usar este agente (semana 4, paso 6, permisos.py). None = no se controla.
     """
 
-    def __init__(self, esperados: list[str]):
+    def __init__(self, esperados: list[str], permitidas: set[str] | None = None):
         self.esperados = list(esperados)
+        self.permitidas = permitidas
         self.aceptadas: dict[str, dict] = {}  # item_id -> lo que registró el modelo y el servidor aceptó (la última)
         self.frenos: list[dict] = []          # cada freno: hook, item_id, motivo
         self.frenos_al_terminar = 0
@@ -94,6 +96,11 @@ class HooksDeLaTanda:
 
     def antes_de_tool(self, nombre: str, argumentos: dict) -> str | None:
         """Antes de ejecutar una tool. Devuelve el motivo si frena (la tool no se ejecuta), o None si pasa."""
+        if self.permitidas is not None and nombre not in self.permitidas:  # paso 6: permisos por agente (candado 2)
+            self._frenar("permisos", argumentos.get("item_id") if isinstance(argumentos, dict) else None,
+                         f"la tool {nombre!r} no está permitida para este agente")
+            return (f"[permisos] La tool {nombre!r} no está permitida para este agente. Solo podés usar: "
+                    f"{', '.join(sorted(self.permitidas))}.")
         if nombre != "registrar_ficha":
             return None
         ficha = argumentos.get("ficha")
