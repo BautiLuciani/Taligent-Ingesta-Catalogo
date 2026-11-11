@@ -133,8 +133,12 @@ class FichadorFalso:
         propuestas = {item: {"item_id": item, "estado": "lista_para_alta"} for item in items}
         if (proveedor_id, desde) == ("P03", 0):
             propuestas["P03:LT-3999"] = {"item_id": "P03:LT-3999"}  # uno que NO es de su tanda
+        frenos = []
+        if (proveedor_id, desde) == ("P07", 0):  # semana 4, paso 5: en esta tanda un hook frenó una ficha
+            frenos = [{"hook": "antes_de_tool", "item_id": items[0], "motivo": "gtin inválido", "corregido": True}]
         return {"como_termino": "end_turn", "registrados": cantidad, "faltan": [], "vueltas": 2,
-                "input_tokens": 100, "output_tokens": 10, "costo_usd": 0.01, "propuestas": propuestas}
+                "input_tokens": 100, "output_tokens": 10, "costo_usd": 0.01, "propuestas": propuestas,
+                "frenos": frenos}
 
 
 consolidado = {"P03": {"productos": 50}, "P07": {"productos": 25}, "P01": {"productos": 26}, "P05": {"productos": 18}}
@@ -173,6 +177,9 @@ chequear("En un mismo carril, una tanda empieza cuando termina la anterior (nunc
                                                                 key=lambda f: f["inicio"])))), True)
 chequear("Cada tanda guarda sus carriles (empieza/termina) y no sus propuestas",
          ("inicio" in tres["tandas"][0], "propuestas" in tres["tandas"][0]), (True, False))
+chequear("Semana 4: los frenos de los hooks se juntan, con la tanda que los tuvo",
+         [(f["proveedor_id"], f["desde"], f["hook"], f["corregido"]) for f in tres["frenos"]],
+         [("P07", 0, "antes_de_tool", True)])
 
 print("--- comparar_propuestas: qué difiere entre dos versiones del mismo producto (paso 9) ---")
 base = {"estado": "lista_para_alta", "motivos_revision": [], "duplicado_de": None,

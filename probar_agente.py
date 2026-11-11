@@ -45,7 +45,8 @@ class ClaudeFalso:
 
     def __init__(self, item_id: str):
         ficha = {"gtin": "7793469616846", "marca": "SONRISA", "tipo": "PASTA DENTAL", "contenido": 90, "unidad": "G"}
-        base = {"item_id": item_id, "ficha": ficha, "fuentes": {},
+        fuente = {"archivo": "litoral_altas_102026.csv", "linea": 2}
+        base = {"item_id": item_id, "ficha": ficha, "fuentes": {campo: fuente for campo in ficha},  # con fuentes: pasa los hooks
                 "categoria_decidida_por": {"campo": "tipo", "valor": "PASTA DENTAL", "explicacion": "Cuidado bucal."}}
         # 1ª respuesta: registra el ítem bien y después lo registra MAL (duplicado sin SKU). 2ª: termina.
         self.respuestas = [

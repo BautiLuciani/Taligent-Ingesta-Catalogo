@@ -16,6 +16,7 @@ from pathlib import Path
 
 from pydantic import ValidationError
 
+from hooks import campos_sin_fuente, problemas_de_la_ficha
 from servidor_mcp import VOCABULARIO, CategoriaDecididaPor, armar_resultado, problemas_del_registro
 
 
@@ -44,7 +45,13 @@ def revisar_propuesta(item_id: str, propuesta: dict) -> list[str]:
         problemas.append("categoria_decidida_por inválida o ausente")
     if problemas:  # con la forma rota, la regla del estándar no se puede aplicar
         return problemas
-    return problemas_del_registro(item_id, estado, propuesta["ficha"], categoria, motivos, propuesta.get("duplicado_de"))
+    problemas = problemas_del_registro(item_id, estado, propuesta["ficha"], categoria, motivos, propuesta.get("duplicado_de"))
+    # Semana 4, paso 5: las MISMAS reglas de los hooks (defensa en profundidad: la propuesta pasó por un archivo)
+    problemas += problemas_de_la_ficha(propuesta["ficha"])
+    sin_fuente = campos_sin_fuente(propuesta["ficha"], propuesta["fuentes"])
+    if sin_fuente:
+        problemas.append(f"campos completados sin fuente: {', '.join(sin_fuente)}")
+    return problemas
 
 
 def revisar_proveedor(proveedor_id: str, esperados: list[str], propuestas: dict) -> tuple[list[dict], list[str]]:

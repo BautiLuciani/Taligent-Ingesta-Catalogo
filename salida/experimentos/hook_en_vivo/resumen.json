@@ -1,0 +1,22 @@
+{
+  "inyectado": {
+    "item_id": "P03:LT-3303",
+    "gtin_de_haiku": "7793469616846",
+    "gtin_inyectado": "7793469616847"
+  },
+  "frenos": [
+    {
+      "hook": "antes_de_tool",
+      "item_id": "P03:LT-3303",
+      "motivo": "gtin 7793469616847 tiene el dígito verificador inválido (con esos 12 primeros dígitos, termina en 6)",
+      "corregido": true
+    }
+  ],
+  "gtin_final": "7793469616846",
+  "corregido": true,
+  "registrados": 10,
+  "esperados": 10,
+  "vueltas": 5,
+  "costo_usd": 0.017574,
+  "como_termino": "end_turn"
+}

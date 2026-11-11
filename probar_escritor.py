@@ -25,7 +25,7 @@ def propuesta(item_id, **cambios):
     """Una propuesta válida, como la que junta el orquestador (lo que mandó el agente a registrar_ficha)."""
     ficha = {"gtin": "7793469616846", "marca": "SONRISA", "tipo": "PASTA DENTAL", "contenido": 90, "unidad": "G"}
     return {"item_id": item_id, "estado": "lista_para_alta", "ficha": ficha,
-            "fuentes": {"gtin": {"archivo": "x.csv", "linea": 2}},
+            "fuentes": {campo: {"archivo": "x.csv", "linea": 2} for campo in ficha},  # cada campo con su fuente
             "categoria_decidida_por": {"campo": "tipo", "valor": "PASTA DENTAL", "explicacion": "Cuidado bucal."},
             **cambios}
 
@@ -52,6 +52,17 @@ chequear("Sin categoria_decidida_por", revisar_propuesta("P03:LT-3303", propuest
          ["categoria_decidida_por inválida o ausente"])
 chequear("Guardada bajo otro ítem", revisar_propuesta("P03:LT-3309", completas["P03:LT-3303"]),
          ["la propuesta dice ser de 'P03:LT-3303'"])
+print("--- revisar_propuesta: las mismas reglas de los hooks (semana 4, paso 5) ---")
+mala = propuesta("P03:LT-3303")
+mala["ficha"] = {**mala["ficha"], "gtin": "7793469616847"}
+chequear("GTIN con el dígito verificador mal: el escritor tampoco lo escribe",
+         ["dígito verificador" in p for p in revisar_propuesta("P03:LT-3303", mala)], [True])
+mala = propuesta("P03:LT-3303")
+mala["ficha"] = {**mala["ficha"], "unidad": "GRS"}
+chequear("Unidad fuera del vocabulario", revisar_propuesta("P03:LT-3303", mala), ["unidad 'GRS' no está en el vocabulario"])
+mala = propuesta("P03:LT-3303")
+del mala["fuentes"]["marca"]
+chequear("Un campo completado sin fuente", revisar_propuesta("P03:LT-3303", mala), ["campos completados sin fuente: marca"])
 
 print("--- escribir: todo completo ---")
 ruta.write_text(json.dumps({"P03:LT-9000": {"viejo": True}, "P01:AN-1101": {"de_otra_corrida": True}}), encoding="utf-8")

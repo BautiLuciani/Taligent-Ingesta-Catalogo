@@ -215,7 +215,8 @@ def fichar(tanda: tuple, cliente, modelo: str, reloj: float, carpeta_trazas: Pat
             "faltan": resultado.get("faltan", items_de_la_tanda(proveedor_id, desde, cantidad) if error else []),
             "vueltas": resultado.get("vueltas", 0), "input_tokens": resultado.get("input_tokens", 0),
             "output_tokens": resultado.get("output_tokens", 0), "costo_usd": resultado.get("costo_usd", 0.0),
-            "error": error, "propuestas": resultado.get("propuestas", {})}
+            "error": error, "propuestas": resultado.get("propuestas", {}),
+            "frenos": resultado.get("frenos", [])}  # semana 4, paso 5: lo que frenaron los hooks en esa tanda
 
 
 def juntar_propuestas(fichas: list[dict]) -> tuple[dict[str, dict], list[str]]:
@@ -317,7 +318,10 @@ def etapa_fichas(cliente, modelo: str, consolidado: dict[str, dict], fichadores:
                                  for f in fichas if f["error"] or f["como_termino"] != "end_turn"],
         "fuera_de_su_tanda": fuera,
         "trazas": carpeta_trazas.name,
-        "tandas": [{k: v for k, v in f.items() if k != "propuestas"} for f in fichas],
+        # Semana 4, paso 5: todos los frenos de los hooks, con la tanda que los tuvo (es lo que va a salida/hooks.json)
+        "frenos": [{"proveedor_id": f["proveedor_id"], "desde": f["desde"], "version": f["version"], **freno}
+                   for f in fichas for freno in f["frenos"]],
+        "tandas": [{k: v for k, v in f.items() if k not in ("propuestas", "frenos")} for f in fichas],
     }
     return etapa, propuestas
 
@@ -341,6 +345,12 @@ def mostrar_fichas(etapa: dict) -> None:
         print(f"⚠ Tandas que no terminaron bien: {etapa['tandas_con_problemas']}")
     if etapa["fuera_de_su_tanda"]:
         print(f"⚠ Propuestas de productos de otra tanda (no se toman): {etapa['fuera_de_su_tanda']}")
+    frenos = etapa.get("frenos", [])
+    corregidos = sum(1 for freno in frenos if freno["corregido"])
+    print(f"Hooks: {len(frenos)} freno(s)" + (f", {corregidos} corregido(s) por el modelo" if frenos else "")
+          + " · detalle en salida/hooks.json")
+    for freno in frenos:
+        print(f"   {'✔' if freno['corregido'] else '✖'} {freno['hook']} · {freno['item_id']} · {freno['motivo'][:110]}")
     if etapa.get("detector"):
         print(f"Detector: {len(etapa['inestables'])} ficha(s) inestable(s) de {etapa['propuestas']}"
               + (" (las dos corridas no coinciden: hay que mirarlas)" if etapa["inestables"] else
@@ -453,6 +463,11 @@ def main():
         guardadas = {item_id: p for item_id, p in guardadas.items() if item_id.split(":")[0] not in proveedores}
         guardadas.update(nuevas)
         ruta_propuestas.write_text(json.dumps(guardadas, ensure_ascii=False, indent=2), encoding="utf-8")
+        # Semana 4, paso 5: los frenos de los hooks de esta corrida (cada uno con si el modelo lo corrigió)
+        (CARPETA_SALIDA / "hooks.json").write_text(json.dumps(
+            {"fecha": fichas["fecha"], "proveedores": proveedores, "frenos": fichas["frenos"],
+             "total": len(fichas["frenos"]), "corregidos": sum(1 for f in fichas["frenos"] if f["corregido"])},
+            ensure_ascii=False, indent=2), encoding="utf-8")
         if opciones.detector:  # paso 9: las inestables, con las dos versiones, para que las mire una persona
             inestables = [{"item_id": item_id, "campos": p["inestable"]["campos"],
                            "version_a": {k: v for k, v in p.items() if k != "inestable"},

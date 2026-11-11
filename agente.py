@@ -21,6 +21,8 @@ from fastmcp import Client
 from fastmcp.client.transports import PythonStdioTransport
 from fastmcp.exceptions import ToolError
 
+from hooks import HooksDeLaTanda
+
 CARPETA_PROYECTO = Path(__file__).parent
 RUTA_SERVIDOR = CARPETA_PROYECTO / "servidor_mcp.py"
 RUTA_PROMPT = CARPETA_PROYECTO / "prompt_sistema.md"
@@ -129,10 +131,12 @@ def resumir_bloques(contenido) -> list[dict]:
 
 
 async def correr_loop(cliente_claude, cliente_mcp: Client, modelo: str, system: str, tools: list[dict],
-                      mensajes: list, uso: dict, ruta_traza: Path) -> tuple[str, str]:
+                      mensajes: list, uso: dict, ruta_traza: Path, hooks: HooksDeLaTanda) -> tuple[str, str]:
     """El loop del M2: pedirle a Claude, ejecutar las tools que pida, devolverle los resultados... hasta que termine.
 
-    Modifica `mensajes` (el historial) y `uso` (vueltas, tokens y los item_id que quedaron registrados).
+    Semana 4, paso 5: antes de cada tool corre hooks.antes_de_tool (si frena, la tool NO se ejecuta y el modelo recibe
+    el motivo como error) y después, hooks.despues_de_tool (la memoria: qué fichas aceptó el servidor).
+    Modifica `mensajes` (el historial) y `uso` (vueltas y tokens).
     Devuelve (como_termino, texto_final). como_termino es "end_turn" si terminó bien.
     """
     for _ in range(MAX_VUELTAS):
@@ -179,12 +183,16 @@ async def correr_loop(cliente_claude, cliente_mcp: Client, modelo: str, system: 
         # Haiku puede pedir varias tools juntas: las ejecutamos DE A UNA, en orden (un solo escritor)
         resultados = []
         for pedido in pedidos:
-            resultado = await ejecutar_tool(cliente_mcp, pedido)
+            motivo = hooks.antes_de_tool(pedido.name, pedido.input)
+            if motivo:  # el hook frenó: la tool no se ejecuta y el motivo vuelve como error (el "exit 2" del M5)
+                resultado = {"type": "tool_result", "tool_use_id": pedido.id, "content": motivo, "is_error": True}
+                print(f"   {uso.get('etiqueta', '')}⛔ {motivo[:150]}")
+                anotar(ruta_traza, {"evento": "hook_antes_de_tool", "vuelta": uso["vueltas"], "tool": pedido.name,
+                                    "motivo": motivo})
+            else:
+                resultado = await ejecutar_tool(cliente_mcp, pedido)
+                hooks.despues_de_tool(pedido.name, pedido.input, resultado)
             resultados.append(resultado)
-            if pedido.name == "registrar_ficha" and not resultado["is_error"]:
-                item_id = json.loads(resultado["content"])["registrado"]
-                uso["registrados"].add(item_id)
-                uso["propuestas"][item_id] = pedido.input  # la última ACEPTADA de cada ítem (semana 3, paso 5)
             anotar(ruta_traza, {"evento": "tool_result", "vuelta": uso["vueltas"], "tool": pedido.name, **resultado})
 
         # TODOS los resultados juntos, en UN solo mensaje user y sin texto agregado (M2 + doc de tools en paralelo)
@@ -205,39 +213,38 @@ async def procesar_tanda(cliente_claude, cliente_mcp: Client, modelo: str, syste
                          proveedor_id: str, desde: int, cantidad: int, ruta_traza: Path, etiqueta: str = "") -> dict:
     """Una conversación nueva con el agente para procesar una tanda de productos.
 
-    Al terminar, el CÓDIGO chequea que cada producto de la tanda haya quedado registrado.
-    Si falta alguno, le manda UN solo recordatorio en la misma conversación (decisión del paso 4).
-    Devuelve también las propuestas: lo que el agente registró y el servidor aceptó, por ítem (semana 3).
+    Cuando el modelo dice que terminó, corre el hook al_terminar (semana 4, paso 5): si falta registrar algún producto
+    o una ficha tiene un campo completado sin fuente, le devuelve el motivo en la misma conversación y sigue (como mucho
+    hooks.TOPE_FRENOS_AL_TERMINAR veces; era el "recordatorio" de la semana 1, que ahora es este hook).
+    Devuelve también las propuestas (lo que el servidor aceptó y los hooks dejaron pasar, por ítem) y los frenos.
     etiqueta: un prefijo para los print (con varios fichadores a la vez, para saber de quién es cada línea).
     """
     esperados, _ = await items_de_la_tanda(cliente_mcp, proveedor_id, desde, cantidad)
     mensajes = [{"role": "user", "content": mensaje_de_tanda(proveedor_id, desde, cantidad)}]
-    uso = {"vueltas": 0, "input_tokens": 0, "output_tokens": 0, "registrados": set(), "propuestas": {},
-           "etiqueta": etiqueta}
+    uso = {"vueltas": 0, "input_tokens": 0, "output_tokens": 0, "etiqueta": etiqueta}
+    hooks = HooksDeLaTanda(esperados)
     anotar(ruta_traza, {"evento": "inicio_tanda", "proveedor_id": proveedor_id, "desde": desde, "esperados": esperados})
 
     como_termino, texto_final = await correr_loop(
-        cliente_claude, cliente_mcp, modelo, system, tools, mensajes, uso, ruta_traza
+        cliente_claude, cliente_mcp, modelo, system, tools, mensajes, uso, ruta_traza, hooks
     )
-
-    faltan = [item for item in esperados if item not in uso["registrados"]]
-    if faltan and como_termino == "end_turn":
-        print(f"   {etiqueta}⚠ faltó registrar {faltan}: le mandamos un recordatorio")
+    while como_termino == "end_turn" and (motivo := hooks.al_terminar()):
+        print(f"   {etiqueta}⛔ {motivo[:150]}")
         # Mensaje NUEVO de usuario, después de que terminó el turno (nunca pegado a los tool_result)
-        recordatorio = f"Te faltó registrar estos productos de la tanda: {', '.join(faltan)}. Registralos."
-        mensajes.append({"role": "user", "content": recordatorio})
-        anotar(ruta_traza, {"evento": "recordatorio", "faltan": faltan})
+        mensajes.append({"role": "user", "content": motivo})
+        anotar(ruta_traza, {"evento": "hook_al_terminar", "motivo": motivo})
         como_termino, texto_final = await correr_loop(
-            cliente_claude, cliente_mcp, modelo, system, tools, mensajes, uso, ruta_traza
+            cliente_claude, cliente_mcp, modelo, system, tools, mensajes, uso, ruta_traza, hooks
         )
-        faltan = [item for item in esperados if item not in uso["registrados"]]
+    faltan = [item for item in esperados if item not in hooks.aceptadas]
 
     costo = (uso["input_tokens"] * PRECIO_INPUT + uso["output_tokens"] * PRECIO_OUTPUT) / 1_000_000
     resultado = {
         "como_termino": como_termino, "texto_final": texto_final, "vueltas": uso["vueltas"],
         "input_tokens": uso["input_tokens"], "output_tokens": uso["output_tokens"], "costo_usd": round(costo, 6),
         "esperados": len(esperados), "registrados": len(esperados) - len(faltan), "faltan": faltan,
-        "propuestas": uso["propuestas"],
+        "propuestas": hooks.aceptadas,
+        "frenos": hooks.resumen_de_frenos(),
     }
     anotar(ruta_traza, {"evento": "fin_tanda", **resultado})
     return resultado
