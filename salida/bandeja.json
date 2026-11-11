@@ -6,5 +6,21 @@
     "proveedor_id": "P08",
     "fichas": 14,
     "costo_recepcion_y_fds_usd": 0.002015
+  },
+  "entrada/P02_Cosmetica_Rivera/ALTAS RIVERA OCT.xlsx": {
+    "huella": "001b7c99e25c",
+    "fecha": "2026-11-11 16:37:35",
+    "estado": "procesado",
+    "proveedor_id": "P02",
+    "fichas": 50,
+    "costo_recepcion_y_fds_usd": 0.001972
+  },
+  "entrada/P04_Higiene_Total/HigieneTotal_novedades.xlsx": {
+    "huella": "b848de76ada4",
+    "fecha": "2026-11-11 16:38:38",
+    "estado": "procesado",
+    "proveedor_id": "P04",
+    "fichas": 28,
+    "costo_recepcion_y_fds_usd": 0.000531
   }
 }

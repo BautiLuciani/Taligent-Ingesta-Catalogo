@@ -1,7 +1,7 @@
 {
   "proveedor_id": "P04",
   "archivo": "HigieneTotal_novedades.xlsx",
-  "ruta": "Data/proveedores/P04_Higiene_Total/HigieneTotal_novedades.xlsx",
+  "ruta": "entrada/P04_Higiene_Total/HigieneTotal_novedades.xlsx",
   "receta": {
     "formato": "excel",
     "archivo": "HigieneTotal_novedades.xlsx",

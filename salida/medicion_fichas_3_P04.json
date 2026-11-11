@@ -1,0 +1,82 @@
+{
+  "fecha": "2026-11-11 16:38",
+  "fichadores": 3,
+  "detector": false,
+  "tanda": 10,
+  "segundos": 53.6,
+  "segundos_uno_detras_de_otro": 159.8,
+  "costo_usd": 0.045536,
+  "productos": 28,
+  "propuestas": 28,
+  "faltan": [],
+  "inestables": [],
+  "tandas_con_problemas": [],
+  "fuera_de_su_tanda": [],
+  "trazas": "paralelo_20261111_163739_3",
+  "frenos": [],
+  "tandas": [
+    {
+      "proveedor_id": "P04",
+      "desde": 0,
+      "cantidad": 10,
+      "version": "",
+      "fichador": 1,
+      "inicio": 0.0,
+      "fin": 53.4,
+      "segundos": 53.4,
+      "como_termino": "end_turn",
+      "registrados": 10,
+      "faltan": [],
+      "vueltas": 4,
+      "input_tokens": 76613,
+      "output_tokens": 15162,
+      "costo_usd": 0.015242,
+      "error": null
+    },
+    {
+      "proveedor_id": "P04",
+      "desde": 10,
+      "cantidad": 10,
+      "version": "",
+      "fichador": 2,
+      "inicio": 0.0,
+      "fin": 53.6,
+      "segundos": 53.6,
+      "como_termino": "end_turn",
+      "registrados": 10,
+      "faltan": [],
+      "vueltas": 4,
+      "input_tokens": 77977,
+      "output_tokens": 15298,
+      "costo_usd": 0.015447,
+      "error": null
+    },
+    {
+      "proveedor_id": "P04",
+      "desde": 20,
+      "cantidad": 8,
+      "version": "",
+      "fichador": 3,
+      "inicio": 0.0,
+      "fin": 52.8,
+      "segundos": 52.8,
+      "como_termino": "end_turn",
+      "registrados": 8,
+      "faltan": [],
+      "vueltas": 4,
+      "input_tokens": 76687,
+      "output_tokens": 14356,
+      "costo_usd": 0.014847,
+      "error": null
+    }
+  ],
+  "escritor": {
+    "escritos": {
+      "P04": 28
+    },
+    "frenados": {},
+    "ignoradas": [],
+    "inestables": [],
+    "total_en_archivo": 225
+  }
+}

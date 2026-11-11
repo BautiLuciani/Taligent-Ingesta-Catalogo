@@ -1,5 +1,5 @@
 {
-  "fecha": "2026-11-11 16:22",
+  "fecha": "2026-11-11 16:37",
   "de_nuevo": false,
   "tope_llamadas": 4,
   "segundos": 0.0,
@@ -7,14 +7,14 @@
   "costo_usd": 0,
   "lecturas": [],
   "siguen": [
-    "P08"
+    "P04"
   ],
   "frenados": {},
   "avisos": {},
   "consolidado": {
-    "P08": {
-      "productos": 14,
-      "con_fds": 2,
+    "P04": {
+      "productos": 28,
+      "con_fds": 0,
       "con_datos_de_otro_archivo": 0,
       "con_conflicto": 0
     }

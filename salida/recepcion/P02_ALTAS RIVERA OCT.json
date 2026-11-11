@@ -1,7 +1,7 @@
 {
   "proveedor_id": "P02",
   "archivo": "ALTAS RIVERA OCT.xlsx",
-  "ruta": "Data/proveedores/P02_Cosmetica_Rivera/ALTAS RIVERA OCT.xlsx",
+  "ruta": "entrada/P02_Cosmetica_Rivera/ALTAS RIVERA OCT.xlsx",
   "receta": {
     "formato": "excel",
     "archivo": "ALTAS RIVERA OCT.xlsx",

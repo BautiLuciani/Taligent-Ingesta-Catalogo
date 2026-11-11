@@ -12646,5 +12646,7461 @@
       "valor": "CAPSULAS",
       "explicacion": "Vitamina D3 en softgels (cápsulas blandas) como suplemento: va en Nutrición > Vitaminas individuales (NUT-VIT-VIT)."
     }
+  },
+  "P02:RIV-1203": {
+    "item_id": "P02:RIV-1203",
+    "estado": "a_revision",
+    "motivos_revision": [
+      "gtin_invalido"
+    ],
+    "ficha": {
+      "gtin": null,
+      "descripcion": "ACONDICIONADOR NATIVA LISO X 200 ML",
+      "marca": "NATIVA",
+      "tipo": "ACONDICIONADOR",
+      "variante": "LISO",
+      "contenido": 200,
+      "unidad": "ML",
+      "unidades_por_envase": 1,
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "CUI-CAP-ACO",
+      "precio_costo": 104.24,
+      "moneda": "UYU",
+      "proveedor_id": "P02",
+      "codigo_proveedor": "RIV-1203"
+    },
+    "fuentes": {
+      "descripcion": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 7
+      },
+      "marca": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 7
+      },
+      "tipo": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 7
+      },
+      "variante": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 7
+      },
+      "contenido": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 7
+      },
+      "unidad": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 7
+      },
+      "unidades_por_envase": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 7
+      },
+      "categoria": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 7
+      },
+      "precio_costo": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 7
+      },
+      "moneda": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 7
+      },
+      "proveedor_id": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 7
+      },
+      "codigo_proveedor": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 7
+      }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "ACONDICIONADOR",
+      "explicacion": "El tipo ACONDICIONADOR va en Cabello > Acondicionadores y tratamientos."
+    }
+  },
+  "P02:RIV-1206": {
+    "item_id": "P02:RIV-1206",
+    "estado": "duplicado",
+    "duplicado_de": "SKU100714",
+    "ficha": {
+      "gtin": "7797137444038",
+      "descripcion": "ACONDICIONADOR BRISA COLOR X 400 ML",
+      "marca": "BRISA",
+      "tipo": "ACONDICIONADOR",
+      "variante": "COLOR",
+      "contenido": 400,
+      "unidad": "ML",
+      "unidades_por_envase": 1,
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "CUI-CAP-ACO",
+      "precio_costo": 147.76,
+      "moneda": "UYU",
+      "proveedor_id": "P02",
+      "codigo_proveedor": "RIV-1206"
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 8
+      },
+      "descripcion": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 8
+      },
+      "marca": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 8
+      },
+      "tipo": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 8
+      },
+      "variante": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 8
+      },
+      "contenido": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 8
+      },
+      "unidad": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 8
+      },
+      "unidades_por_envase": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 8
+      },
+      "categoria": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 8
+      },
+      "precio_costo": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 8
+      },
+      "moneda": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 8
+      },
+      "proveedor_id": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 8
+      },
+      "codigo_proveedor": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 8
+      }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "ACONDICIONADOR",
+      "explicacion": "El tipo ACONDICIONADOR va en Cabello > Acondicionadores y tratamientos."
+    }
+  },
+  "P02:RIV-1215": {
+    "item_id": "P02:RIV-1215",
+    "estado": "duplicado",
+    "duplicado_de": "SKU102128",
+    "ficha": {
+      "gtin": "7794047919526",
+      "descripcion": "SHAMPOO NATIVA COLOR X 750 ML",
+      "marca": "NATIVA",
+      "tipo": "SHAMPOO",
+      "variante": "COLOR",
+      "contenido": 750,
+      "unidad": "ML",
+      "unidades_por_envase": 1,
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "CUI-CAP-SHA",
+      "precio_costo": 228.04,
+      "moneda": "UYU",
+      "proveedor_id": "P02",
+      "codigo_proveedor": "RIV-1215"
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 9
+      },
+      "descripcion": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 9
+      },
+      "marca": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 9
+      },
+      "tipo": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 9
+      },
+      "variante": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 9
+      },
+      "contenido": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 9
+      },
+      "unidad": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 9
+      },
+      "unidades_por_envase": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 9
+      },
+      "categoria": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 9
+      },
+      "precio_costo": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 9
+      },
+      "moneda": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 9
+      },
+      "proveedor_id": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 9
+      },
+      "codigo_proveedor": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 9
+      }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "SHAMPOO",
+      "explicacion": "El tipo SHAMPOO va en Cabello > Shampoo."
+    }
+  },
+  "P02:RIV-1218": {
+    "item_id": "P02:RIV-1218",
+    "estado": "lista_para_alta",
+    "ficha": {
+      "gtin": "7795881296972",
+      "descripcion": "LACA BRISA FIJACION FUERTE X 400 ML",
+      "marca": "BRISA",
+      "tipo": "LACA",
+      "variante": "FIJACION FUERTE",
+      "contenido": 400,
+      "unidad": "ML",
+      "unidades_por_envase": 1,
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "CUI-CAP-FIJ",
+      "precio_costo": 207.35,
+      "moneda": "UYU",
+      "proveedor_id": "P02",
+      "codigo_proveedor": "RIV-1218",
+      "peligro_deposito": "aerosol_inflamable",
+      "numero_onu": "1950"
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 10
+      },
+      "descripcion": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 10
+      },
+      "marca": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 10
+      },
+      "tipo": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 10
+      },
+      "variante": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 10
+      },
+      "contenido": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 10
+      },
+      "unidad": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 10
+      },
+      "unidades_por_envase": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 10
+      },
+      "categoria": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 10
+      },
+      "precio_costo": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 10
+      },
+      "moneda": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 10
+      },
+      "proveedor_id": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 10
+      },
+      "codigo_proveedor": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 10
+      },
+      "peligro_deposito": {
+        "archivo": "FDS_Brisa_laca.pdf",
+        "pagina": 1
+      },
+      "numero_onu": {
+        "archivo": "FDS_Brisa_laca.pdf",
+        "pagina": 1
+      }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "LACA",
+      "explicacion": "La laca para peinar va en Cabello > Fijación."
+    }
+  },
+  "P02:RIV-1221": {
+    "item_id": "P02:RIV-1221",
+    "estado": "lista_para_alta",
+    "ficha": {
+      "gtin": "7798224690956",
+      "descripcion": "ACONDICIONADOR ALBORADA RIZOS X 200 ML",
+      "marca": "ALBORADA",
+      "tipo": "ACONDICIONADOR",
+      "variante": "RIZOS",
+      "contenido": 200,
+      "unidad": "ML",
+      "unidades_por_envase": 1,
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "CUI-CAP-ACO",
+      "precio_costo": 97.39,
+      "moneda": "UYU",
+      "proveedor_id": "P02",
+      "codigo_proveedor": "RIV-1221"
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 11
+      },
+      "descripcion": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 11
+      },
+      "marca": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 11
+      },
+      "tipo": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 11
+      },
+      "variante": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 11
+      },
+      "contenido": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 11
+      },
+      "unidad": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 11
+      },
+      "unidades_por_envase": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 11
+      },
+      "categoria": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 11
+      },
+      "precio_costo": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 11
+      },
+      "moneda": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 11
+      },
+      "proveedor_id": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 11
+      },
+      "codigo_proveedor": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 11
+      }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "ACONDICIONADOR",
+      "explicacion": "El tipo ACONDICIONADOR va en Cabello > Acondicionadores y tratamientos."
+    }
+  },
+  "P02:RIV-1224": {
+    "item_id": "P02:RIV-1224",
+    "estado": "lista_para_alta",
+    "ficha": {
+      "gtin": "7796508198013",
+      "descripcion": "ACONDICIONADOR NATIVA RIZOS X 750 ML",
+      "marca": "NATIVA",
+      "tipo": "ACONDICIONADOR",
+      "variante": "RIZOS",
+      "contenido": 750,
+      "unidad": "ML",
+      "unidades_por_envase": 1,
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "CUI-CAP-ACO",
+      "precio_costo": 259.48,
+      "moneda": "UYU",
+      "proveedor_id": "P02",
+      "codigo_proveedor": "RIV-1224"
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 12
+      },
+      "descripcion": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 12
+      },
+      "marca": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 12
+      },
+      "tipo": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 12
+      },
+      "variante": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 12
+      },
+      "contenido": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 12
+      },
+      "unidad": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 12
+      },
+      "unidades_por_envase": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 12
+      },
+      "categoria": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 12
+      },
+      "precio_costo": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 12
+      },
+      "moneda": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 12
+      },
+      "proveedor_id": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 12
+      },
+      "codigo_proveedor": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 12
+      }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "ACONDICIONADOR",
+      "explicacion": "El tipo ACONDICIONADOR va en Cabello > Acondicionadores y tratamientos."
+    }
+  },
+  "P02:RIV-1227": {
+    "item_id": "P02:RIV-1227",
+    "estado": "lista_para_alta",
+    "ficha": {
+      "gtin": "7799181018920",
+      "descripcion": "SHAMPOO NATIVA COLOR X 200 ML",
+      "marca": "NATIVA",
+      "tipo": "SHAMPOO",
+      "variante": "COLOR",
+      "contenido": 200,
+      "unidad": "ML",
+      "unidades_por_envase": 1,
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "CUI-CAP-SHA",
+      "precio_costo": 98.26,
+      "moneda": "UYU",
+      "proveedor_id": "P02",
+      "codigo_proveedor": "RIV-1227"
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 13
+      },
+      "descripcion": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 13
+      },
+      "marca": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 13
+      },
+      "tipo": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 13
+      },
+      "variante": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 13
+      },
+      "contenido": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 13
+      },
+      "unidad": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 13
+      },
+      "unidades_por_envase": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 13
+      },
+      "categoria": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 13
+      },
+      "precio_costo": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 13
+      },
+      "moneda": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 13
+      },
+      "proveedor_id": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 13
+      },
+      "codigo_proveedor": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 13
+      }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "SHAMPOO",
+      "explicacion": "El tipo SHAMPOO va en Cabello > Shampoo."
+    }
+  },
+  "P02:RIV-1230": {
+    "item_id": "P02:RIV-1230",
+    "estado": "lista_para_alta",
+    "ficha": {
+      "gtin": "7791396383145",
+      "descripcion": "ACONDICIONADOR NATIVA CABELLO SECO X 200 ML",
+      "marca": "NATIVA",
+      "tipo": "ACONDICIONADOR",
+      "variante": "CABELLO SECO",
+      "contenido": 200,
+      "unidad": "ML",
+      "unidades_por_envase": 1,
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "CUI-CAP-ACO",
+      "precio_costo": 86.6,
+      "moneda": "UYU",
+      "proveedor_id": "P02",
+      "codigo_proveedor": "RIV-1230"
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 14
+      },
+      "descripcion": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 14
+      },
+      "marca": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 14
+      },
+      "tipo": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 14
+      },
+      "variante": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 14
+      },
+      "contenido": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 14
+      },
+      "unidad": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 14
+      },
+      "unidades_por_envase": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 14
+      },
+      "categoria": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 14
+      },
+      "precio_costo": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 14
+      },
+      "moneda": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 14
+      },
+      "proveedor_id": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 14
+      },
+      "codigo_proveedor": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 14
+      }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "ACONDICIONADOR",
+      "explicacion": "El tipo ACONDICIONADOR va en Cabello > Acondicionadores y tratamientos."
+    }
+  },
+  "P02:RIV-1233": {
+    "item_id": "P02:RIV-1233",
+    "estado": "lista_para_alta",
+    "ficha": {
+      "gtin": "7798764197571",
+      "descripcion": "TRATAMIENTO CAPILAR ALBORADA REPARACION X 250 G",
+      "marca": "ALBORADA",
+      "tipo": "TRATAMIENTO CAPILAR",
+      "variante": "REPARACION",
+      "contenido": 250,
+      "unidad": "G",
+      "unidades_por_envase": 1,
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "CUI-CAP-ACO",
+      "precio_costo": 151.1,
+      "moneda": "UYU",
+      "proveedor_id": "P02",
+      "codigo_proveedor": "RIV-1233"
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 15
+      },
+      "descripcion": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 15
+      },
+      "marca": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 15
+      },
+      "tipo": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 15
+      },
+      "variante": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 15
+      },
+      "contenido": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 15
+      },
+      "unidad": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 15
+      },
+      "unidades_por_envase": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 15
+      },
+      "categoria": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 15
+      },
+      "precio_costo": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 15
+      },
+      "moneda": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 15
+      },
+      "proveedor_id": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 15
+      },
+      "codigo_proveedor": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 15
+      }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "TRATAMIENTO CAPILAR",
+      "explicacion": "El tratamiento capilar va en Cabello > Acondicionadores y tratamientos."
+    }
+  },
+  "P02:RIV-1236": {
+    "item_id": "P02:RIV-1236",
+    "estado": "lista_para_alta",
+    "ficha": {
+      "gtin": "7795113452930",
+      "descripcion": "ACONDICIONADOR ALBORADA LISO X 400 ML",
+      "marca": "ALBORADA",
+      "tipo": "ACONDICIONADOR",
+      "variante": "LISO",
+      "contenido": 400,
+      "unidad": "ML",
+      "unidades_por_envase": 1,
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "CUI-CAP-ACO",
+      "precio_costo": 149.05,
+      "moneda": "UYU",
+      "proveedor_id": "P02",
+      "codigo_proveedor": "RIV-1236"
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 16
+      },
+      "descripcion": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 16
+      },
+      "marca": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 16
+      },
+      "tipo": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 16
+      },
+      "variante": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 16
+      },
+      "contenido": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 16
+      },
+      "unidad": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 16
+      },
+      "unidades_por_envase": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 16
+      },
+      "categoria": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 16
+      },
+      "precio_costo": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 16
+      },
+      "moneda": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 16
+      },
+      "proveedor_id": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 16
+      },
+      "codigo_proveedor": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 16
+      }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "ACONDICIONADOR",
+      "explicacion": "El tipo ACONDICIONADOR va en Cabello > Acondicionadores y tratamientos."
+    }
+  },
+  "P02:RIV-1239": {
+    "item_id": "P02:RIV-1239",
+    "estado": "lista_para_alta",
+    "ficha": {
+      "gtin": "7799517845237",
+      "descripcion": "SHAMPOO EN SECO ALBORADA X 750 ML",
+      "marca": "ALBORADA",
+      "tipo": "SHAMPOO EN SECO",
+      "variante": null,
+      "contenido": 750,
+      "unidad": "ML",
+      "unidades_por_envase": 1,
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "CUI-CAP-SHA",
+      "precio_costo": 224.46,
+      "moneda": "UYU",
+      "proveedor_id": "P02",
+      "codigo_proveedor": "RIV-1239"
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 17
+      },
+      "descripcion": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 17
+      },
+      "marca": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 17
+      },
+      "tipo": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 17
+      },
+      "contenido": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 17
+      },
+      "unidad": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 17
+      },
+      "unidades_por_envase": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 17
+      },
+      "categoria": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 17
+      },
+      "precio_costo": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 17
+      },
+      "moneda": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 17
+      },
+      "proveedor_id": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 17
+      },
+      "codigo_proveedor": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 17
+      }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "SHAMPOO EN SECO",
+      "explicacion": "El tipo SHAMPOO EN SECO (SH. CAB. SECO) lleva a CUI-CAP-SHA, que incluye shampoo en seco."
+    }
+  },
+  "P02:RIV-1242": {
+    "item_id": "P02:RIV-1242",
+    "estado": "lista_para_alta",
+    "ficha": {
+      "gtin": "7790770756711",
+      "descripcion": "ACONDICIONADOR NATIVA LISO X 400 ML",
+      "marca": "NATIVA",
+      "tipo": "ACONDICIONADOR",
+      "variante": "LISO",
+      "contenido": 400,
+      "unidad": "ML",
+      "unidades_por_envase": 1,
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "CUI-CAP-ACO",
+      "precio_costo": 145.87,
+      "moneda": "UYU",
+      "proveedor_id": "P02",
+      "codigo_proveedor": "RIV-1242"
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 18
+      },
+      "descripcion": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 18
+      },
+      "marca": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 18
+      },
+      "tipo": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 18
+      },
+      "variante": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 18
+      },
+      "contenido": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 18
+      },
+      "unidad": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 18
+      },
+      "unidades_por_envase": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 18
+      },
+      "categoria": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 18
+      },
+      "precio_costo": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 18
+      },
+      "moneda": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 18
+      },
+      "proveedor_id": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 18
+      },
+      "codigo_proveedor": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 18
+      }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "ACONDICIONADOR",
+      "explicacion": "ACOND. es acondicionador; va en Acondicionadores y tratamientos (CUI-CAP-ACO)."
+    }
+  },
+  "P02:RIV-1245": {
+    "item_id": "P02:RIV-1245",
+    "estado": "lista_para_alta",
+    "ficha": {
+      "gtin": "7793315341342",
+      "descripcion": "ACONDICIONADOR BRISA RIZOS X 400 ML",
+      "marca": "BRISA",
+      "tipo": "ACONDICIONADOR",
+      "variante": "RIZOS",
+      "contenido": 400,
+      "unidad": "ML",
+      "unidades_por_envase": 1,
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "CUI-CAP-ACO",
+      "precio_costo": 140.31,
+      "moneda": "UYU",
+      "proveedor_id": "P02",
+      "codigo_proveedor": "RIV-1245"
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 19
+      },
+      "descripcion": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 19
+      },
+      "marca": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 19
+      },
+      "tipo": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 19
+      },
+      "variante": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 19
+      },
+      "contenido": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 19
+      },
+      "unidad": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 19
+      },
+      "unidades_por_envase": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 19
+      },
+      "categoria": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 19
+      },
+      "precio_costo": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 19
+      },
+      "moneda": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 19
+      },
+      "proveedor_id": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 19
+      },
+      "codigo_proveedor": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 19
+      }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "ACONDICIONADOR",
+      "explicacion": "ACOND. es acondicionador; va en Acondicionadores y tratamientos (CUI-CAP-ACO)."
+    }
+  },
+  "P02:RIV-1251": {
+    "item_id": "P02:RIV-1251",
+    "estado": "lista_para_alta",
+    "ficha": {
+      "gtin": "7795601362468",
+      "descripcion": "SHAMPOO NATIVA RIZOS X 750 ML",
+      "marca": "NATIVA",
+      "tipo": "SHAMPOO",
+      "variante": "RIZOS",
+      "contenido": 750,
+      "unidad": "ML",
+      "unidades_por_envase": 1,
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "CUI-CAP-SHA",
+      "precio_costo": 222.53,
+      "moneda": "UYU",
+      "proveedor_id": "P02",
+      "codigo_proveedor": "RIV-1251"
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 20
+      },
+      "descripcion": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 20
+      },
+      "marca": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 20
+      },
+      "tipo": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 20
+      },
+      "variante": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 20
+      },
+      "contenido": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 20
+      },
+      "unidad": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 20
+      },
+      "unidades_por_envase": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 20
+      },
+      "categoria": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 20
+      },
+      "precio_costo": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 20
+      },
+      "moneda": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 20
+      },
+      "proveedor_id": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 20
+      },
+      "codigo_proveedor": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 20
+      }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "SHAMPOO",
+      "explicacion": "SH. es shampoo; va en Cabello > Shampoo (CUI-CAP-SHA)."
+    }
+  },
+  "P02:RIV-1254": {
+    "item_id": "P02:RIV-1254",
+    "estado": "lista_para_alta",
+    "ficha": {
+      "gtin": "7796999557627",
+      "descripcion": "ACONDICIONADOR NATIVA COLOR X 750 ML",
+      "marca": "NATIVA",
+      "tipo": "ACONDICIONADOR",
+      "variante": "COLOR",
+      "contenido": 750,
+      "unidad": "ML",
+      "unidades_por_envase": 1,
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "CUI-CAP-ACO",
+      "precio_costo": 260.83,
+      "moneda": "UYU",
+      "proveedor_id": "P02",
+      "codigo_proveedor": "RIV-1254"
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 21
+      },
+      "descripcion": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 21
+      },
+      "marca": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 21
+      },
+      "tipo": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 21
+      },
+      "variante": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 21
+      },
+      "contenido": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 21
+      },
+      "unidad": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 21
+      },
+      "unidades_por_envase": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 21
+      },
+      "categoria": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 21
+      },
+      "precio_costo": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 21
+      },
+      "moneda": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 21
+      },
+      "proveedor_id": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 21
+      },
+      "codigo_proveedor": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 21
+      }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "ACONDICIONADOR",
+      "explicacion": "ACOND. es acondicionador; va en Acondicionadores y tratamientos (CUI-CAP-ACO)."
+    }
+  },
+  "P02:RIV-1257": {
+    "item_id": "P02:RIV-1257",
+    "estado": "lista_para_alta",
+    "ficha": {
+      "gtin": "7794327626397",
+      "descripcion": "SHAMPOO BRISA ANTICASPA X 400 ML",
+      "marca": "BRISA",
+      "tipo": "SHAMPOO",
+      "variante": "ANTICASPA",
+      "contenido": 400,
+      "unidad": "ML",
+      "unidades_por_envase": 1,
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "CUI-CAP-SHA",
+      "precio_costo": 150.02,
+      "moneda": "UYU",
+      "proveedor_id": "P02",
+      "codigo_proveedor": "RIV-1257"
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 22
+      },
+      "descripcion": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 22
+      },
+      "marca": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 22
+      },
+      "tipo": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 22
+      },
+      "variante": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 22
+      },
+      "contenido": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 22
+      },
+      "unidad": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 22
+      },
+      "unidades_por_envase": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 22
+      },
+      "categoria": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 22
+      },
+      "precio_costo": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 22
+      },
+      "moneda": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 22
+      },
+      "proveedor_id": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 22
+      },
+      "codigo_proveedor": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 22
+      }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "SHAMPOO",
+      "explicacion": "SH. es shampoo; va en Cabello > Shampoo (CUI-CAP-SHA)."
+    }
+  },
+  "P02:RIV-1260": {
+    "item_id": "P02:RIV-1260",
+    "estado": "lista_para_alta",
+    "ficha": {
+      "gtin": "7792602887266",
+      "descripcion": "SHAMPOO ALBORADA ANTICASPA X 400 ML",
+      "marca": "ALBORADA",
+      "tipo": "SHAMPOO",
+      "variante": "ANTICASPA",
+      "contenido": 400,
+      "unidad": "ML",
+      "unidades_por_envase": 1,
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "CUI-CAP-SHA",
+      "precio_costo": 163.53,
+      "moneda": "UYU",
+      "proveedor_id": "P02",
+      "codigo_proveedor": "RIV-1260"
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 23
+      },
+      "descripcion": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 23
+      },
+      "marca": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 23
+      },
+      "tipo": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 23
+      },
+      "variante": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 23
+      },
+      "contenido": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 23
+      },
+      "unidad": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 23
+      },
+      "unidades_por_envase": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 23
+      },
+      "categoria": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 23
+      },
+      "precio_costo": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 23
+      },
+      "moneda": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 23
+      },
+      "proveedor_id": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 23
+      },
+      "codigo_proveedor": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 23
+      }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "SHAMPOO",
+      "explicacion": "SH. es shampoo; va en Cabello > Shampoo (CUI-CAP-SHA)."
+    }
+  },
+  "P02:RIV-1263": {
+    "item_id": "P02:RIV-1263",
+    "estado": "lista_para_alta",
+    "ficha": {
+      "gtin": "7790648889695",
+      "descripcion": "ACONDICIONADOR ALBORADA COLOR X 750 ML",
+      "marca": "ALBORADA",
+      "tipo": "ACONDICIONADOR",
+      "variante": "COLOR",
+      "contenido": 750,
+      "unidad": "ML",
+      "unidades_por_envase": 1,
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "CUI-CAP-ACO",
+      "precio_costo": 240.91,
+      "moneda": "UYU",
+      "proveedor_id": "P02",
+      "codigo_proveedor": "RIV-1263"
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 24
+      },
+      "descripcion": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 24
+      },
+      "marca": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 24
+      },
+      "tipo": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 24
+      },
+      "variante": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 24
+      },
+      "contenido": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 24
+      },
+      "unidad": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 24
+      },
+      "unidades_por_envase": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 24
+      },
+      "categoria": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 24
+      },
+      "precio_costo": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 24
+      },
+      "moneda": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 24
+      },
+      "proveedor_id": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 24
+      },
+      "codigo_proveedor": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 24
+      }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "ACONDICIONADOR",
+      "explicacion": "ACOND. es acondicionador; va en Acondicionadores y tratamientos (CUI-CAP-ACO)."
+    }
+  },
+  "P02:RIV-1266": {
+    "item_id": "P02:RIV-1266",
+    "estado": "lista_para_alta",
+    "ficha": {
+      "gtin": "7793662132327",
+      "descripcion": "LACA BRISA FIJACION FUERTE X 200 ML",
+      "marca": "BRISA",
+      "tipo": "LACA",
+      "variante": "FIJACION FUERTE",
+      "contenido": 200,
+      "unidad": "ML",
+      "unidades_por_envase": 1,
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "CUI-CAP-FIJ",
+      "precio_costo": 130.72,
+      "moneda": "UYU",
+      "proveedor_id": "P02",
+      "codigo_proveedor": "RIV-1266",
+      "peligro_deposito": "aerosol_inflamable",
+      "numero_onu": "1950"
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 25
+      },
+      "descripcion": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 25
+      },
+      "marca": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 25
+      },
+      "tipo": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 25
+      },
+      "variante": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 25
+      },
+      "contenido": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 25
+      },
+      "unidad": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 25
+      },
+      "unidades_por_envase": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 25
+      },
+      "categoria": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 25
+      },
+      "precio_costo": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 25
+      },
+      "moneda": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 25
+      },
+      "proveedor_id": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 25
+      },
+      "codigo_proveedor": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 25
+      },
+      "peligro_deposito": {
+        "archivo": "FDS_Brisa_laca.pdf",
+        "pagina": 1
+      },
+      "numero_onu": {
+        "archivo": "FDS_Brisa_laca.pdf",
+        "pagina": 1
+      }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "LACA",
+      "explicacion": "LACA va en Fijación (CUI-CAP-FIJ), que incluye lacas para peinar."
+    }
+  },
+  "P02:RIV-1269": {
+    "item_id": "P02:RIV-1269",
+    "estado": "lista_para_alta",
+    "ficha": {
+      "gtin": "7798168600288",
+      "descripcion": "ACONDICIONADOR NATIVA COLOR X 200 ML",
+      "marca": "NATIVA",
+      "tipo": "ACONDICIONADOR",
+      "variante": "COLOR",
+      "contenido": 200,
+      "unidad": "ML",
+      "unidades_por_envase": 1,
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "CUI-CAP-ACO",
+      "precio_costo": 102.56,
+      "moneda": "UYU",
+      "proveedor_id": "P02",
+      "codigo_proveedor": "RIV-1269"
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 26
+      },
+      "descripcion": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 26
+      },
+      "marca": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 26
+      },
+      "tipo": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 26
+      },
+      "variante": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 26
+      },
+      "contenido": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 26
+      },
+      "unidad": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 26
+      },
+      "unidades_por_envase": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 26
+      },
+      "categoria": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 26
+      },
+      "precio_costo": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 26
+      },
+      "moneda": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 26
+      },
+      "proveedor_id": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 26
+      },
+      "codigo_proveedor": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 26
+      }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "ACONDICIONADOR",
+      "explicacion": "ACOND. es acondicionador; va en Acondicionadores y tratamientos (CUI-CAP-ACO)."
+    }
+  },
+  "P02:RIV-1272": {
+    "item_id": "P02:RIV-1272",
+    "estado": "lista_para_alta",
+    "ficha": {
+      "gtin": "7799572038346",
+      "descripcion": "TRATAMIENTO CAPILAR ALBORADA REPARACION X 500 G",
+      "marca": "ALBORADA",
+      "tipo": "TRATAMIENTO CAPILAR",
+      "variante": "REPARACION",
+      "contenido": 500,
+      "unidad": "G",
+      "unidades_por_envase": 1,
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "CUI-CAP-ACO",
+      "precio_costo": 213.92,
+      "moneda": "UYU",
+      "proveedor_id": "P02",
+      "codigo_proveedor": "RIV-1272"
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 27
+      },
+      "descripcion": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 27
+      },
+      "marca": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 27
+      },
+      "tipo": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 27
+      },
+      "variante": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 27
+      },
+      "contenido": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 27
+      },
+      "unidad": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 27
+      },
+      "unidades_por_envase": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 27
+      },
+      "categoria": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 27
+      },
+      "precio_costo": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 27
+      },
+      "moneda": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 27
+      },
+      "proveedor_id": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 27
+      },
+      "codigo_proveedor": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 27
+      }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "TRATAMIENTO CAPILAR",
+      "explicacion": "Tratamiento capilar va en Cabello > Acondicionadores y tratamientos (CUI-CAP-ACO)."
+    }
+  },
+  "P02:RIV-1275": {
+    "item_id": "P02:RIV-1275",
+    "estado": "lista_para_alta",
+    "ficha": {
+      "gtin": "7798610293297",
+      "descripcion": "TRATAMIENTO CAPILAR ALBORADA NUTRICION X 500 G",
+      "marca": "ALBORADA",
+      "tipo": "TRATAMIENTO CAPILAR",
+      "variante": "NUTRICION",
+      "contenido": 500,
+      "unidad": "G",
+      "unidades_por_envase": 1,
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "CUI-CAP-ACO",
+      "precio_costo": 244.02,
+      "moneda": "UYU",
+      "proveedor_id": "P02",
+      "codigo_proveedor": "RIV-1275"
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 28
+      },
+      "descripcion": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 28
+      },
+      "marca": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 28
+      },
+      "tipo": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 28
+      },
+      "variante": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 28
+      },
+      "contenido": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 28
+      },
+      "unidad": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 28
+      },
+      "unidades_por_envase": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 28
+      },
+      "categoria": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 28
+      },
+      "precio_costo": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 28
+      },
+      "moneda": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 28
+      },
+      "proveedor_id": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 28
+      },
+      "codigo_proveedor": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 28
+      }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "TRATAMIENTO CAPILAR",
+      "explicacion": "Tratamiento capilar va en Cabello > Acondicionadores y tratamientos (CUI-CAP-ACO)."
+    }
+  },
+  "P02:RIV-1278": {
+    "item_id": "P02:RIV-1278",
+    "estado": "lista_para_alta",
+    "ficha": {
+      "gtin": "7794517445487",
+      "descripcion": "SHAMPOO NATIVA CABELLO SECO X 400 ML",
+      "marca": "NATIVA",
+      "tipo": "SHAMPOO",
+      "variante": "CABELLO SECO",
+      "contenido": 400,
+      "unidad": "ML",
+      "unidades_por_envase": 1,
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "CUI-CAP-SHA",
+      "precio_costo": 163.24,
+      "moneda": "UYU",
+      "proveedor_id": "P02",
+      "codigo_proveedor": "RIV-1278"
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 29
+      },
+      "descripcion": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 29
+      },
+      "marca": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 29
+      },
+      "tipo": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 29
+      },
+      "variante": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 29
+      },
+      "contenido": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 29
+      },
+      "unidad": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 29
+      },
+      "unidades_por_envase": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 29
+      },
+      "categoria": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 29
+      },
+      "precio_costo": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 29
+      },
+      "moneda": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 29
+      },
+      "proveedor_id": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 29
+      },
+      "codigo_proveedor": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 29
+      }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "SHAMPOO",
+      "explicacion": "Shampoo va en Cabello > Shampoo (CUI-CAP-SHA)."
+    }
+  },
+  "P02:RIV-1281": {
+    "item_id": "P02:RIV-1281",
+    "estado": "lista_para_alta",
+    "ficha": {
+      "gtin": "7792149966981",
+      "descripcion": "SHAMPOO BRISA RIZOS X 750 ML",
+      "marca": "BRISA",
+      "tipo": "SHAMPOO",
+      "variante": "RIZOS",
+      "contenido": 750,
+      "unidad": "ML",
+      "unidades_por_envase": 1,
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "CUI-CAP-SHA",
+      "precio_costo": 263.4,
+      "moneda": "UYU",
+      "proveedor_id": "P02",
+      "codigo_proveedor": "RIV-1281"
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 30
+      },
+      "descripcion": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 30
+      },
+      "marca": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 30
+      },
+      "tipo": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 30
+      },
+      "variante": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 30
+      },
+      "contenido": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 30
+      },
+      "unidad": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 30
+      },
+      "unidades_por_envase": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 30
+      },
+      "categoria": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 30
+      },
+      "precio_costo": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 30
+      },
+      "moneda": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 30
+      },
+      "proveedor_id": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 30
+      },
+      "codigo_proveedor": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 30
+      }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "SHAMPOO",
+      "explicacion": "Shampoo va en Cabello > Shampoo (CUI-CAP-SHA)."
+    }
+  },
+  "P02:RIV-1287": {
+    "item_id": "P02:RIV-1287",
+    "estado": "lista_para_alta",
+    "ficha": {
+      "gtin": "7792917530000",
+      "descripcion": "ACONDICIONADOR BRISA CABELLO SECO X 200 ML",
+      "marca": "BRISA",
+      "tipo": "ACONDICIONADOR",
+      "variante": "CABELLO SECO",
+      "contenido": 200,
+      "unidad": "ML",
+      "unidades_por_envase": 1,
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "CUI-CAP-ACO",
+      "precio_costo": 88.55,
+      "moneda": "UYU",
+      "proveedor_id": "P02",
+      "codigo_proveedor": "RIV-1287"
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 31
+      },
+      "descripcion": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 31
+      },
+      "marca": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 31
+      },
+      "tipo": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 31
+      },
+      "variante": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 31
+      },
+      "contenido": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 31
+      },
+      "unidad": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 31
+      },
+      "unidades_por_envase": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 31
+      },
+      "categoria": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 31
+      },
+      "precio_costo": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 31
+      },
+      "moneda": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 31
+      },
+      "proveedor_id": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 31
+      },
+      "codigo_proveedor": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 31
+      }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "ACONDICIONADOR",
+      "explicacion": "Acondicionador va en Cabello > Acondicionadores y tratamientos (CUI-CAP-ACO)."
+    }
+  },
+  "P02:RIV-1299": {
+    "item_id": "P02:RIV-1299",
+    "estado": "lista_para_alta",
+    "ficha": {
+      "gtin": "7799656985474",
+      "descripcion": "SHAMPOO BRISA ANTICASPA X 750 ML",
+      "marca": "BRISA",
+      "tipo": "SHAMPOO",
+      "variante": "ANTICASPA",
+      "contenido": 750,
+      "unidad": "ML",
+      "unidades_por_envase": 1,
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "CUI-CAP-SHA",
+      "precio_costo": 248.73,
+      "moneda": "UYU",
+      "proveedor_id": "P02",
+      "codigo_proveedor": "RIV-1299"
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 32
+      },
+      "descripcion": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 32
+      },
+      "marca": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 32
+      },
+      "tipo": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 32
+      },
+      "variante": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 32
+      },
+      "contenido": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 32
+      },
+      "unidad": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 32
+      },
+      "unidades_por_envase": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 32
+      },
+      "categoria": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 32
+      },
+      "precio_costo": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 32
+      },
+      "moneda": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 32
+      },
+      "proveedor_id": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 32
+      },
+      "codigo_proveedor": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 32
+      }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "SHAMPOO",
+      "explicacion": "Shampoo va en Cabello > Shampoo (CUI-CAP-SHA)."
+    }
+  },
+  "P02:RIV-1302": {
+    "item_id": "P02:RIV-1302",
+    "estado": "lista_para_alta",
+    "ficha": {
+      "gtin": "7795129694669",
+      "descripcion": "ACONDICIONADOR ALBORADA CABELLO SECO X 200 ML",
+      "marca": "ALBORADA",
+      "tipo": "ACONDICIONADOR",
+      "variante": "CABELLO SECO",
+      "contenido": 200,
+      "unidad": "ML",
+      "unidades_por_envase": 1,
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "CUI-CAP-ACO",
+      "precio_costo": 103.8,
+      "moneda": "UYU",
+      "proveedor_id": "P02",
+      "codigo_proveedor": "RIV-1302"
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 33
+      },
+      "descripcion": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 33
+      },
+      "marca": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 33
+      },
+      "tipo": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 33
+      },
+      "variante": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 33
+      },
+      "contenido": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 33
+      },
+      "unidad": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 33
+      },
+      "unidades_por_envase": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 33
+      },
+      "categoria": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 33
+      },
+      "precio_costo": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 33
+      },
+      "moneda": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 33
+      },
+      "proveedor_id": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 33
+      },
+      "codigo_proveedor": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 33
+      }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "ACONDICIONADOR",
+      "explicacion": "Acondicionador va en Cabello > Acondicionadores y tratamientos (CUI-CAP-ACO)."
+    }
+  },
+  "P02:RIV-1305": {
+    "item_id": "P02:RIV-1305",
+    "estado": "lista_para_alta",
+    "ficha": {
+      "gtin": "7796577461292",
+      "descripcion": "SHAMPOO BRISA CABELLO SECO X 200 ML",
+      "marca": "BRISA",
+      "tipo": "SHAMPOO",
+      "variante": "CABELLO SECO",
+      "contenido": 200,
+      "unidad": "ML",
+      "unidades_por_envase": 1,
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "CUI-CAP-SHA",
+      "precio_costo": 86.21,
+      "moneda": "UYU",
+      "proveedor_id": "P02",
+      "codigo_proveedor": "RIV-1305"
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 34
+      },
+      "descripcion": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 34
+      },
+      "marca": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 34
+      },
+      "tipo": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 34
+      },
+      "variante": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 34
+      },
+      "contenido": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 34
+      },
+      "unidad": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 34
+      },
+      "unidades_por_envase": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 34
+      },
+      "categoria": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 34
+      },
+      "precio_costo": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 34
+      },
+      "moneda": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 34
+      },
+      "proveedor_id": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 34
+      },
+      "codigo_proveedor": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 34
+      }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "SHAMPOO",
+      "explicacion": "Shampoo va en Cabello > Shampoo (CUI-CAP-SHA)."
+    }
+  },
+  "P02:RIV-1308": {
+    "item_id": "P02:RIV-1308",
+    "estado": "lista_para_alta",
+    "ficha": {
+      "gtin": "7795641615111",
+      "descripcion": "SHAMPOO ALBORADA ANTICASPA X 750 ML",
+      "marca": "ALBORADA",
+      "tipo": "SHAMPOO",
+      "variante": "ANTICASPA",
+      "contenido": 750,
+      "unidad": "ML",
+      "unidades_por_envase": 1,
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "CUI-CAP-SHA",
+      "precio_costo": 249,
+      "moneda": "UYU",
+      "proveedor_id": "P02",
+      "codigo_proveedor": "RIV-1308"
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 35
+      },
+      "descripcion": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 35
+      },
+      "marca": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 35
+      },
+      "tipo": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 35
+      },
+      "variante": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 35
+      },
+      "contenido": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 35
+      },
+      "unidad": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 35
+      },
+      "unidades_por_envase": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 35
+      },
+      "categoria": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 35
+      },
+      "precio_costo": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 35
+      },
+      "moneda": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 35
+      },
+      "proveedor_id": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 35
+      },
+      "codigo_proveedor": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 35
+      }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "SHAMPOO",
+      "explicacion": "Shampoo va en Cabello > Shampoo (CUI-CAP-SHA)."
+    }
+  },
+  "P02:RIV-1311": {
+    "item_id": "P02:RIV-1311",
+    "estado": "duplicado",
+    "duplicado_de": "SKU103605",
+    "ficha": {
+      "gtin": "7790939889434",
+      "descripcion": "TRATAMIENTO CAPILAR NATIVA REPARACION X 250 G",
+      "marca": "NATIVA",
+      "tipo": "TRATAMIENTO CAPILAR",
+      "variante": "REPARACION",
+      "contenido": 250,
+      "unidad": "G",
+      "unidades_por_envase": 1,
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "CUI-CAP-ACO",
+      "precio_costo": 141.6,
+      "moneda": "UYU",
+      "proveedor_id": "P02",
+      "codigo_proveedor": "RIV-1311"
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 36
+      },
+      "descripcion": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 36
+      },
+      "marca": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 36
+      },
+      "tipo": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 36
+      },
+      "variante": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 36
+      },
+      "contenido": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 36
+      },
+      "unidad": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 36
+      },
+      "unidades_por_envase": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 36
+      },
+      "categoria": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 36
+      },
+      "precio_costo": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 36
+      },
+      "moneda": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 36
+      },
+      "proveedor_id": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 36
+      },
+      "codigo_proveedor": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 36
+      }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "TRATAMIENTO CAPILAR",
+      "explicacion": "Tratamiento capilar va en Cabello > Acondicionadores y tratamientos (CUI-CAP-ACO)."
+    }
+  },
+  "P02:RIV-1314": {
+    "item_id": "P02:RIV-1314",
+    "estado": "lista_para_alta",
+    "ficha": {
+      "gtin": "7793624320243",
+      "descripcion": "SHAMPOO ALBORADA COLOR X 750 ML",
+      "marca": "ALBORADA",
+      "tipo": "SHAMPOO",
+      "variante": "COLOR",
+      "contenido": 750,
+      "unidad": "ML",
+      "unidades_por_envase": 1,
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "CUI-CAP-SHA",
+      "precio_costo": 216.61,
+      "moneda": "UYU",
+      "proveedor_id": "P02",
+      "codigo_proveedor": "RIV-1314"
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 37
+      },
+      "descripcion": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 37
+      },
+      "marca": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 37
+      },
+      "tipo": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 37
+      },
+      "variante": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 37
+      },
+      "contenido": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 37
+      },
+      "unidad": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 37
+      },
+      "unidades_por_envase": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 37
+      },
+      "categoria": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 37
+      },
+      "precio_costo": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 37
+      },
+      "moneda": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 37
+      },
+      "proveedor_id": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 37
+      },
+      "codigo_proveedor": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 37
+      }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "SHAMPOO",
+      "explicacion": "«SH.» es SHAMPOO; va en Cuidado personal > Cabello > Shampoo."
+    }
+  },
+  "P02:RIV-1317": {
+    "item_id": "P02:RIV-1317",
+    "estado": "lista_para_alta",
+    "ficha": {
+      "gtin": "7796197363891",
+      "descripcion": "SHAMPOO BRISA CABELLO GRASO X 200 ML",
+      "marca": "BRISA",
+      "tipo": "SHAMPOO",
+      "variante": "CABELLO GRASO",
+      "contenido": 200,
+      "unidad": "ML",
+      "unidades_por_envase": 1,
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "CUI-CAP-SHA",
+      "precio_costo": 90.58,
+      "moneda": "UYU",
+      "proveedor_id": "P02",
+      "codigo_proveedor": "RIV-1317"
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 38
+      },
+      "descripcion": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 38
+      },
+      "marca": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 38
+      },
+      "tipo": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 38
+      },
+      "variante": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 38
+      },
+      "contenido": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 38
+      },
+      "unidad": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 38
+      },
+      "unidades_por_envase": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 38
+      },
+      "categoria": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 38
+      },
+      "precio_costo": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 38
+      },
+      "moneda": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 38
+      },
+      "proveedor_id": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 38
+      },
+      "codigo_proveedor": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 38
+      }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "SHAMPOO",
+      "explicacion": "«SH.» es SHAMPOO; va en Cuidado personal > Cabello > Shampoo."
+    }
+  },
+  "P02:RIV-1320": {
+    "item_id": "P02:RIV-1320",
+    "estado": "lista_para_alta",
+    "ficha": {
+      "gtin": "7793988505690",
+      "descripcion": "LACA BRISA FIJACION NORMAL X 200 ML",
+      "marca": "BRISA",
+      "tipo": "LACA",
+      "variante": "FIJACION NORMAL",
+      "contenido": 200,
+      "unidad": "ML",
+      "unidades_por_envase": 1,
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "CUI-CAP-FIJ",
+      "precio_costo": 115.32,
+      "moneda": "UYU",
+      "proveedor_id": "P02",
+      "codigo_proveedor": "RIV-1320",
+      "peligro_deposito": "aerosol_inflamable",
+      "numero_onu": "1950"
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 39
+      },
+      "descripcion": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 39
+      },
+      "marca": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 39
+      },
+      "tipo": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 39
+      },
+      "variante": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 39
+      },
+      "contenido": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 39
+      },
+      "unidad": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 39
+      },
+      "unidades_por_envase": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 39
+      },
+      "categoria": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 39
+      },
+      "precio_costo": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 39
+      },
+      "moneda": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 39
+      },
+      "proveedor_id": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 39
+      },
+      "codigo_proveedor": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 39
+      },
+      "peligro_deposito": {
+        "archivo": "FDS_Brisa_laca.pdf",
+        "pagina": 1
+      },
+      "numero_onu": {
+        "archivo": "FDS_Brisa_laca.pdf",
+        "pagina": 1
+      }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "LACA",
+      "explicacion": "LACA con fijación; va en Cuidado personal > Cabello > Fijación."
+    }
+  },
+  "P02:RIV-1323": {
+    "item_id": "P02:RIV-1323",
+    "estado": "lista_para_alta",
+    "ficha": {
+      "gtin": "7796792062359",
+      "descripcion": "SHAMPOO NATIVA CABELLO GRASO X 200 ML",
+      "marca": "NATIVA",
+      "tipo": "SHAMPOO",
+      "variante": "CABELLO GRASO",
+      "contenido": 200,
+      "unidad": "ML",
+      "unidades_por_envase": 1,
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "CUI-CAP-SHA",
+      "precio_costo": 90.67,
+      "moneda": "UYU",
+      "proveedor_id": "P02",
+      "codigo_proveedor": "RIV-1323"
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 40
+      },
+      "descripcion": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 40
+      },
+      "marca": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 40
+      },
+      "tipo": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 40
+      },
+      "variante": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 40
+      },
+      "contenido": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 40
+      },
+      "unidad": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 40
+      },
+      "unidades_por_envase": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 40
+      },
+      "categoria": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 40
+      },
+      "precio_costo": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 40
+      },
+      "moneda": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 40
+      },
+      "proveedor_id": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 40
+      },
+      "codigo_proveedor": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 40
+      }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "SHAMPOO",
+      "explicacion": "«SH.» es SHAMPOO; va en Cuidado personal > Cabello > Shampoo."
+    }
+  },
+  "P02:RIV-1326": {
+    "item_id": "P02:RIV-1326",
+    "estado": "lista_para_alta",
+    "ficha": {
+      "gtin": "7795275662987",
+      "descripcion": "ACONDICIONADOR NATIVA CABELLO SECO X 750 ML",
+      "marca": "NATIVA",
+      "tipo": "ACONDICIONADOR",
+      "variante": "CABELLO SECO",
+      "contenido": 750,
+      "unidad": "ML",
+      "unidades_por_envase": 1,
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "CUI-CAP-ACO",
+      "precio_costo": 240.97,
+      "moneda": "UYU",
+      "proveedor_id": "P02",
+      "codigo_proveedor": "RIV-1326"
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 41
+      },
+      "descripcion": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 41
+      },
+      "marca": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 41
+      },
+      "tipo": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 41
+      },
+      "variante": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 41
+      },
+      "contenido": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 41
+      },
+      "unidad": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 41
+      },
+      "unidades_por_envase": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 41
+      },
+      "categoria": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 41
+      },
+      "precio_costo": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 41
+      },
+      "moneda": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 41
+      },
+      "proveedor_id": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 41
+      },
+      "codigo_proveedor": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 41
+      }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "ACONDICIONADOR",
+      "explicacion": "«ACOND.» es ACONDICIONADOR; va en Cuidado personal > Cabello > Acondicionadores y tratamientos."
+    }
+  },
+  "P02:RIV-1329": {
+    "item_id": "P02:RIV-1329",
+    "estado": "lista_para_alta",
+    "ficha": {
+      "gtin": "7794351465818",
+      "descripcion": "ACONDICIONADOR BRISA LISO X 750 ML",
+      "marca": "BRISA",
+      "tipo": "ACONDICIONADOR",
+      "variante": "LISO",
+      "contenido": 750,
+      "unidad": "ML",
+      "unidades_por_envase": 1,
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "CUI-CAP-ACO",
+      "precio_costo": 259.13,
+      "moneda": "UYU",
+      "proveedor_id": "P02",
+      "codigo_proveedor": "RIV-1329"
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 42
+      },
+      "descripcion": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 42
+      },
+      "marca": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 42
+      },
+      "tipo": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 42
+      },
+      "variante": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 42
+      },
+      "contenido": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 42
+      },
+      "unidad": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 42
+      },
+      "unidades_por_envase": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 42
+      },
+      "categoria": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 42
+      },
+      "precio_costo": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 42
+      },
+      "moneda": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 42
+      },
+      "proveedor_id": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 42
+      },
+      "codigo_proveedor": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 42
+      }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "ACONDICIONADOR",
+      "explicacion": "«ACOND.» es ACONDICIONADOR; va en Cuidado personal > Cabello > Acondicionadores y tratamientos."
+    }
+  },
+  "P02:RIV-1335": {
+    "item_id": "P02:RIV-1335",
+    "estado": "lista_para_alta",
+    "ficha": {
+      "gtin": "7798289615987",
+      "descripcion": "SHAMPOO NATIVA CABELLO SECO X 200 ML",
+      "marca": "NATIVA",
+      "tipo": "SHAMPOO",
+      "variante": "CABELLO SECO",
+      "contenido": 200,
+      "unidad": "ML",
+      "unidades_por_envase": 1,
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "CUI-CAP-SHA",
+      "precio_costo": 97.3,
+      "moneda": "UYU",
+      "proveedor_id": "P02",
+      "codigo_proveedor": "RIV-1335"
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 43
+      },
+      "descripcion": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 43
+      },
+      "marca": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 43
+      },
+      "tipo": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 43
+      },
+      "variante": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 43
+      },
+      "contenido": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 43
+      },
+      "unidad": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 43
+      },
+      "unidades_por_envase": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 43
+      },
+      "categoria": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 43
+      },
+      "precio_costo": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 43
+      },
+      "moneda": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 43
+      },
+      "proveedor_id": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 43
+      },
+      "codigo_proveedor": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 43
+      }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "SHAMPOO",
+      "explicacion": "«SH.» es SHAMPOO; va en Cuidado personal > Cabello > Shampoo."
+    }
+  },
+  "P02:RIV-1338": {
+    "item_id": "P02:RIV-1338",
+    "estado": "lista_para_alta",
+    "ficha": {
+      "gtin": "7794585652466",
+      "descripcion": "ACONDICIONADOR BRISA CABELLO SECO X 400 ML",
+      "marca": "BRISA",
+      "tipo": "ACONDICIONADOR",
+      "variante": "CABELLO SECO",
+      "contenido": 400,
+      "unidad": "ML",
+      "unidades_por_envase": 1,
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "CUI-CAP-ACO",
+      "precio_costo": 151.98,
+      "moneda": "UYU",
+      "proveedor_id": "P02",
+      "codigo_proveedor": "RIV-1338"
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 44
+      },
+      "descripcion": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 44
+      },
+      "marca": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 44
+      },
+      "tipo": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 44
+      },
+      "variante": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 44
+      },
+      "contenido": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 44
+      },
+      "unidad": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 44
+      },
+      "unidades_por_envase": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 44
+      },
+      "categoria": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 44
+      },
+      "precio_costo": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 44
+      },
+      "moneda": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 44
+      },
+      "proveedor_id": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 44
+      },
+      "codigo_proveedor": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 44
+      }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "ACONDICIONADOR",
+      "explicacion": "«ACOND.» es ACONDICIONADOR; va en Cuidado personal > Cabello > Acondicionadores y tratamientos."
+    }
+  },
+  "P02:RIV-1341": {
+    "item_id": "P02:RIV-1341",
+    "estado": "duplicado",
+    "duplicado_de": "SKU101316",
+    "ficha": {
+      "gtin": "7791886910868",
+      "descripcion": "SHAMPOO NATIVA RIZOS X 400 ML",
+      "marca": "NATIVA",
+      "tipo": "SHAMPOO",
+      "variante": "RIZOS",
+      "contenido": 400,
+      "unidad": "ML",
+      "unidades_por_envase": 1,
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "CUI-CAP-SHA",
+      "precio_costo": 146.14,
+      "moneda": "UYU",
+      "proveedor_id": "P02",
+      "codigo_proveedor": "RIV-1341"
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 45
+      },
+      "descripcion": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 45
+      },
+      "marca": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 45
+      },
+      "tipo": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 45
+      },
+      "variante": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 45
+      },
+      "contenido": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 45
+      },
+      "unidad": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 45
+      },
+      "unidades_por_envase": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 45
+      },
+      "categoria": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 45
+      },
+      "precio_costo": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 45
+      },
+      "moneda": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 45
+      },
+      "proveedor_id": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 45
+      },
+      "codigo_proveedor": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 45
+      }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "SHAMPOO",
+      "explicacion": "«SH.» es SHAMPOO; va en Cuidado personal > Cabello > Shampoo."
+    }
+  },
+  "P02:RIV-1344": {
+    "item_id": "P02:RIV-1344",
+    "estado": "lista_para_alta",
+    "ficha": {
+      "gtin": "7790055172229",
+      "descripcion": "SHAMPOO ALBORADA CABELLO GRASO X 750 ML",
+      "marca": "ALBORADA",
+      "tipo": "SHAMPOO",
+      "variante": "CABELLO GRASO",
+      "contenido": 750,
+      "unidad": "ML",
+      "unidades_por_envase": 1,
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "CUI-CAP-SHA",
+      "precio_costo": 219.47,
+      "moneda": "UYU",
+      "proveedor_id": "P02",
+      "codigo_proveedor": "RIV-1344"
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 46
+      },
+      "descripcion": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 46
+      },
+      "marca": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 46
+      },
+      "tipo": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 46
+      },
+      "variante": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 46
+      },
+      "contenido": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 46
+      },
+      "unidad": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 46
+      },
+      "unidades_por_envase": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 46
+      },
+      "categoria": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 46
+      },
+      "precio_costo": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 46
+      },
+      "moneda": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 46
+      },
+      "proveedor_id": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 46
+      },
+      "codigo_proveedor": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 46
+      }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "SHAMPOO",
+      "explicacion": "«SH.» es SHAMPOO; va en Cuidado personal > Cabello > Shampoo."
+    }
+  },
+  "P02:RIV-1350": {
+    "item_id": "P02:RIV-1350",
+    "estado": "lista_para_alta",
+    "ficha": {
+      "gtin": "7790192741357",
+      "descripcion": "ACONDICIONADOR ALBORADA RIZOS X 750 ML",
+      "marca": "ALBORADA",
+      "tipo": "ACONDICIONADOR",
+      "variante": "RIZOS",
+      "contenido": 750,
+      "unidad": "ML",
+      "unidades_por_envase": 1,
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "CUI-CAP-ACO",
+      "precio_costo": 236.17,
+      "moneda": "UYU",
+      "proveedor_id": "P02",
+      "codigo_proveedor": "RIV-1350"
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 47
+      },
+      "descripcion": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 47
+      },
+      "marca": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 47
+      },
+      "tipo": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 47
+      },
+      "variante": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 47
+      },
+      "contenido": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 47
+      },
+      "unidad": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 47
+      },
+      "unidades_por_envase": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 47
+      },
+      "categoria": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 47
+      },
+      "precio_costo": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 47
+      },
+      "moneda": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 47
+      },
+      "proveedor_id": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 47
+      },
+      "codigo_proveedor": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 47
+      }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "ACONDICIONADOR",
+      "explicacion": "Un acondicionador capilar va en Cuidado personal > Cabello > Acondicionadores y tratamientos."
+    }
+  },
+  "P02:RIV-1209": {
+    "item_id": "P02:RIV-1209",
+    "estado": "lista_para_alta",
+    "ficha": {
+      "gtin": "7796326549554",
+      "descripcion": "DESODORANTE AEROSOL BRISA SPORT X 150 ML",
+      "marca": "BRISA",
+      "tipo": "DESODORANTE AEROSOL",
+      "variante": "SPORT",
+      "contenido": 150,
+      "unidad": "ML",
+      "unidades_por_envase": 1,
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "CUI-DES-AER",
+      "precio_costo": 91.32,
+      "moneda": "UYU",
+      "proveedor_id": "P02",
+      "codigo_proveedor": "RIV-1209",
+      "peligro_deposito": "aerosol_inflamable",
+      "numero_onu": "1950"
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 49
+      },
+      "descripcion": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 49
+      },
+      "marca": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 49
+      },
+      "tipo": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 49
+      },
+      "variante": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 49
+      },
+      "contenido": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 49
+      },
+      "unidad": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 49
+      },
+      "unidades_por_envase": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 49
+      },
+      "categoria": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 49
+      },
+      "precio_costo": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 49
+      },
+      "moneda": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 49
+      },
+      "proveedor_id": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 49
+      },
+      "codigo_proveedor": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 49
+      },
+      "peligro_deposito": {
+        "archivo": "FDS_Brisa_Frescor_desaer.pdf",
+        "pagina": 1
+      },
+      "numero_onu": {
+        "archivo": "FDS_Brisa_Frescor_desaer.pdf",
+        "pagina": 1
+      }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "DESODORANTE AEROSOL",
+      "explicacion": "Un desodorante aerosol va en Cuidado personal > Desodorantes > Aerosol."
+    }
+  },
+  "P02:RIV-1212": {
+    "item_id": "P02:RIV-1212",
+    "estado": "duplicado",
+    "duplicado_de": "SKU101925",
+    "ficha": {
+      "gtin": "7797985763688",
+      "descripcion": "DESODORANTE AEROSOL BRISA HOMBRE X 150 ML",
+      "marca": "BRISA",
+      "tipo": "DESODORANTE AEROSOL",
+      "variante": "HOMBRE",
+      "contenido": 150,
+      "unidad": "ML",
+      "unidades_por_envase": 1,
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "CUI-DES-AER",
+      "precio_costo": 78.95,
+      "moneda": "UYU",
+      "proveedor_id": "P02",
+      "codigo_proveedor": "RIV-1212",
+      "peligro_deposito": "pendiente_fds",
+      "numero_onu": null
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 50
+      },
+      "descripcion": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 50
+      },
+      "marca": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 50
+      },
+      "tipo": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 50
+      },
+      "variante": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 50
+      },
+      "contenido": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 50
+      },
+      "unidad": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 50
+      },
+      "unidades_por_envase": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 50
+      },
+      "categoria": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 50
+      },
+      "precio_costo": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 50
+      },
+      "moneda": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 50
+      },
+      "proveedor_id": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 50
+      },
+      "codigo_proveedor": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 50
+      },
+      "peligro_deposito": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 50
+      }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "DESODORANTE AEROSOL",
+      "explicacion": "Desodorante aerosol: Cuidado personal > Desodorantes > Aerosol. Coincide con SKU101925."
+    }
+  },
+  "P02:RIV-1248": {
+    "item_id": "P02:RIV-1248",
+    "estado": "lista_para_alta",
+    "ficha": {
+      "gtin": "7798056682495",
+      "descripcion": "DESODORANTE AEROSOL FRESCOR SIN PERFUME X 150 ML",
+      "marca": "FRESCOR",
+      "tipo": "DESODORANTE AEROSOL",
+      "variante": "SIN PERFUME",
+      "contenido": 150,
+      "unidad": "ML",
+      "unidades_por_envase": 1,
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "CUI-DES-AER",
+      "precio_costo": 86.93,
+      "moneda": "UYU",
+      "proveedor_id": "P02",
+      "codigo_proveedor": "RIV-1248",
+      "peligro_deposito": "aerosol_inflamable",
+      "numero_onu": "1950"
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 51
+      },
+      "descripcion": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 51
+      },
+      "marca": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 51
+      },
+      "tipo": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 51
+      },
+      "variante": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 51
+      },
+      "contenido": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 51
+      },
+      "unidad": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 51
+      },
+      "unidades_por_envase": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 51
+      },
+      "categoria": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 51
+      },
+      "precio_costo": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 51
+      },
+      "moneda": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 51
+      },
+      "proveedor_id": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 51
+      },
+      "codigo_proveedor": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 51
+      },
+      "peligro_deposito": {
+        "archivo": "FDS_Brisa_Frescor_desaer.pdf",
+        "pagina": 1
+      },
+      "numero_onu": {
+        "archivo": "FDS_Brisa_Frescor_desaer.pdf",
+        "pagina": 1
+      }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "DESODORANTE AEROSOL",
+      "explicacion": "Un desodorante aerosol va en Cuidado personal > Desodorantes > Aerosol."
+    }
+  },
+  "P02:RIV-1284": {
+    "item_id": "P02:RIV-1284",
+    "estado": "lista_para_alta",
+    "ficha": {
+      "gtin": "7794649193881",
+      "descripcion": "DESODORANTE AEROSOL FRESCOR HOMBRE X 150 ML",
+      "marca": "FRESCOR",
+      "tipo": "DESODORANTE AEROSOL",
+      "variante": "HOMBRE",
+      "contenido": 150,
+      "unidad": "ML",
+      "unidades_por_envase": 1,
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "CUI-DES-AER",
+      "precio_costo": 93.12,
+      "moneda": "UYU",
+      "proveedor_id": "P02",
+      "codigo_proveedor": "RIV-1284",
+      "peligro_deposito": "aerosol_inflamable",
+      "numero_onu": "1950"
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 52
+      },
+      "descripcion": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 52
+      },
+      "marca": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 52
+      },
+      "tipo": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 52
+      },
+      "variante": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 52
+      },
+      "contenido": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 52
+      },
+      "unidad": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 52
+      },
+      "unidades_por_envase": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 52
+      },
+      "categoria": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 52
+      },
+      "precio_costo": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 52
+      },
+      "moneda": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 52
+      },
+      "proveedor_id": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 52
+      },
+      "codigo_proveedor": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 52
+      },
+      "peligro_deposito": {
+        "archivo": "FDS_Brisa_Frescor_desaer.pdf",
+        "pagina": 1
+      },
+      "numero_onu": {
+        "archivo": "FDS_Brisa_Frescor_desaer.pdf",
+        "pagina": 1
+      }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "DESODORANTE AEROSOL",
+      "explicacion": "Un desodorante aerosol va en Cuidado personal > Desodorantes > Aerosol."
+    }
+  },
+  "P02:RIV-1290": {
+    "item_id": "P02:RIV-1290",
+    "estado": "lista_para_alta",
+    "ficha": {
+      "gtin": "7798150645501",
+      "descripcion": "DESODORANTE AEROSOL BRISA SPORT X 250 ML",
+      "marca": "BRISA",
+      "tipo": "DESODORANTE AEROSOL",
+      "variante": "SPORT",
+      "contenido": 250,
+      "unidad": "ML",
+      "unidades_por_envase": 1,
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "CUI-DES-AER",
+      "precio_costo": 123.34,
+      "moneda": "UYU",
+      "proveedor_id": "P02",
+      "codigo_proveedor": "RIV-1290",
+      "peligro_deposito": "aerosol_inflamable",
+      "numero_onu": "1950"
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 53
+      },
+      "descripcion": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 53
+      },
+      "marca": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 53
+      },
+      "tipo": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 53
+      },
+      "variante": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 53
+      },
+      "contenido": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 53
+      },
+      "unidad": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 53
+      },
+      "unidades_por_envase": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 53
+      },
+      "categoria": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 53
+      },
+      "precio_costo": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 53
+      },
+      "moneda": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 53
+      },
+      "proveedor_id": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 53
+      },
+      "codigo_proveedor": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 53
+      },
+      "peligro_deposito": {
+        "archivo": "FDS_Brisa_Frescor_desaer.pdf",
+        "pagina": 1
+      },
+      "numero_onu": {
+        "archivo": "FDS_Brisa_Frescor_desaer.pdf",
+        "pagina": 1
+      }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "DESODORANTE AEROSOL",
+      "explicacion": "Un desodorante aerosol va en Cuidado personal > Desodorantes > Aerosol."
+    }
+  },
+  "P02:RIV-1293": {
+    "item_id": "P02:RIV-1293",
+    "estado": "lista_para_alta",
+    "ficha": {
+      "gtin": "7795133736485",
+      "descripcion": "DESODORANTE BARRA FRESCOR SIN PERFUME X 50 G",
+      "marca": "FRESCOR",
+      "tipo": "DESODORANTE BARRA",
+      "variante": "SIN PERFUME",
+      "contenido": 50,
+      "unidad": "G",
+      "unidades_por_envase": 1,
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "CUI-DES-BAR",
+      "precio_costo": 94.17,
+      "moneda": "UYU",
+      "proveedor_id": "P02",
+      "codigo_proveedor": "RIV-1293"
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 54
+      },
+      "descripcion": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 54
+      },
+      "marca": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 54
+      },
+      "tipo": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 54
+      },
+      "variante": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 54
+      },
+      "contenido": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 54
+      },
+      "unidad": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 54
+      },
+      "unidades_por_envase": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 54
+      },
+      "categoria": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 54
+      },
+      "precio_costo": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 54
+      },
+      "moneda": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 54
+      },
+      "proveedor_id": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 54
+      },
+      "codigo_proveedor": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 54
+      }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "DESODORANTE BARRA",
+      "explicacion": "Un desodorante en barra va en Cuidado personal > Desodorantes > Barra y roll on."
+    }
+  },
+  "P02:RIV-1296": {
+    "item_id": "P02:RIV-1296",
+    "estado": "lista_para_alta",
+    "ficha": {
+      "gtin": "7794545525540",
+      "descripcion": "DESODORANTE AEROSOL BRISA MUJER X 150 ML",
+      "marca": "BRISA",
+      "tipo": "DESODORANTE AEROSOL",
+      "variante": "MUJER",
+      "contenido": 150,
+      "unidad": "ML",
+      "unidades_por_envase": 1,
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "CUI-DES-AER",
+      "precio_costo": 76.91,
+      "moneda": "UYU",
+      "proveedor_id": "P02",
+      "codigo_proveedor": "RIV-1296",
+      "peligro_deposito": "aerosol_inflamable",
+      "numero_onu": "1950"
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 55
+      },
+      "descripcion": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 55
+      },
+      "marca": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 55
+      },
+      "tipo": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 55
+      },
+      "variante": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 55
+      },
+      "contenido": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 55
+      },
+      "unidad": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 55
+      },
+      "unidades_por_envase": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 55
+      },
+      "categoria": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 55
+      },
+      "precio_costo": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 55
+      },
+      "moneda": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 55
+      },
+      "proveedor_id": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 55
+      },
+      "codigo_proveedor": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 55
+      },
+      "peligro_deposito": {
+        "archivo": "FDS_Brisa_Frescor_desaer.pdf",
+        "pagina": 1
+      },
+      "numero_onu": {
+        "archivo": "FDS_Brisa_Frescor_desaer.pdf",
+        "pagina": 1
+      }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "DESODORANTE AEROSOL",
+      "explicacion": "Un desodorante aerosol va en Cuidado personal > Desodorantes > Aerosol."
+    }
+  },
+  "P02:RIV-1332": {
+    "item_id": "P02:RIV-1332",
+    "estado": "lista_para_alta",
+    "ficha": {
+      "gtin": "7797624528494",
+      "descripcion": "DESODORANTE AEROSOL BRISA SIN PERFUME X 250 ML",
+      "marca": "BRISA",
+      "tipo": "DESODORANTE AEROSOL",
+      "variante": "SIN PERFUME",
+      "contenido": 250,
+      "unidad": "ML",
+      "unidades_por_envase": 1,
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "CUI-DES-AER",
+      "precio_costo": 117.77,
+      "moneda": "UYU",
+      "proveedor_id": "P02",
+      "codigo_proveedor": "RIV-1332",
+      "peligro_deposito": "aerosol_inflamable",
+      "numero_onu": "1950"
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 56
+      },
+      "descripcion": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 56
+      },
+      "marca": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 56
+      },
+      "tipo": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 56
+      },
+      "variante": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 56
+      },
+      "contenido": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 56
+      },
+      "unidad": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 56
+      },
+      "unidades_por_envase": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 56
+      },
+      "categoria": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 56
+      },
+      "precio_costo": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 56
+      },
+      "moneda": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 56
+      },
+      "proveedor_id": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 56
+      },
+      "codigo_proveedor": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 56
+      },
+      "peligro_deposito": {
+        "archivo": "FDS_Brisa_Frescor_desaer.pdf",
+        "pagina": 1
+      },
+      "numero_onu": {
+        "archivo": "FDS_Brisa_Frescor_desaer.pdf",
+        "pagina": 1
+      }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "DESODORANTE AEROSOL",
+      "explicacion": "Un desodorante aerosol va en Cuidado personal > Desodorantes > Aerosol."
+    }
+  },
+  "P02:RIV-1347": {
+    "item_id": "P02:RIV-1347",
+    "estado": "lista_para_alta",
+    "ficha": {
+      "gtin": "7792991638319",
+      "descripcion": "DESODORANTE AEROSOL FRESCOR MUJER X 150 ML",
+      "marca": "FRESCOR",
+      "tipo": "DESODORANTE AEROSOL",
+      "variante": "MUJER",
+      "contenido": 150,
+      "unidad": "ML",
+      "unidades_por_envase": 1,
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "CUI-DES-AER",
+      "precio_costo": 92.57,
+      "moneda": "UYU",
+      "proveedor_id": "P02",
+      "codigo_proveedor": "RIV-1347",
+      "peligro_deposito": "aerosol_inflamable",
+      "numero_onu": "1950"
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 57
+      },
+      "descripcion": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 57
+      },
+      "marca": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 57
+      },
+      "tipo": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 57
+      },
+      "variante": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 57
+      },
+      "contenido": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 57
+      },
+      "unidad": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 57
+      },
+      "unidades_por_envase": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 57
+      },
+      "categoria": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 57
+      },
+      "precio_costo": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 57
+      },
+      "moneda": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 57
+      },
+      "proveedor_id": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 57
+      },
+      "codigo_proveedor": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 57
+      },
+      "peligro_deposito": {
+        "archivo": "FDS_Brisa_Frescor_desaer.pdf",
+        "pagina": 1
+      },
+      "numero_onu": {
+        "archivo": "FDS_Brisa_Frescor_desaer.pdf",
+        "pagina": 1
+      }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "DESODORANTE AEROSOL",
+      "explicacion": "Un desodorante aerosol va en Cuidado personal > Desodorantes > Aerosol."
+    }
+  },
+  "P04:HT40003": {
+    "item_id": "P04:HT40003",
+    "estado": "lista_para_alta",
+    "ficha": {
+      "gtin": "7796370729803",
+      "descripcion": "ESPUMA DE AFEITAR FILO MENTOL X 300 ML",
+      "marca": "FILO",
+      "tipo": "ESPUMA DE AFEITAR",
+      "variante": "MENTOL",
+      "contenido": 300,
+      "unidad": "ML",
+      "unidades_por_envase": 1,
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "CUI-AFE-ESP",
+      "precio_costo": 135.92,
+      "moneda": "UYU",
+      "proveedor_id": "P04",
+      "codigo_proveedor": "HT40003"
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 2
+      },
+      "descripcion": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 2
+      },
+      "marca": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 2
+      },
+      "tipo": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 2
+      },
+      "variante": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 2
+      },
+      "contenido": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 2
+      },
+      "unidad": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 2
+      },
+      "unidades_por_envase": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 2
+      },
+      "categoria": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 2
+      },
+      "precio_costo": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 2
+      },
+      "moneda": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 2
+      },
+      "proveedor_id": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 2
+      },
+      "codigo_proveedor": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 2
+      }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "ESPUMA DE AFEITAR",
+      "explicacion": "La espuma de afeitar va en Afeitado > Espumas y geles de afeitar (CUI-AFE-ESP)."
+    }
+  },
+  "P04:HT40006": {
+    "item_id": "P04:HT40006",
+    "estado": "duplicado",
+    "duplicado_de": "SKU100469",
+    "ficha": {
+      "gtin": "7797758531421",
+      "descripcion": "GEL DE DUCHA PUREZA HIDRATANTE X 1000 ML",
+      "marca": "PUREZA",
+      "tipo": "GEL DE DUCHA",
+      "variante": "HIDRATANTE",
+      "contenido": 1000,
+      "unidad": "ML",
+      "unidades_por_envase": 1,
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "CUI-HIG-DUC",
+      "precio_costo": 137.23,
+      "moneda": "UYU",
+      "proveedor_id": "P04",
+      "codigo_proveedor": "HT40006"
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 3
+      },
+      "descripcion": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 3
+      },
+      "marca": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 3
+      },
+      "tipo": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 3
+      },
+      "variante": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 3
+      },
+      "contenido": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 3
+      },
+      "unidad": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 3
+      },
+      "unidades_por_envase": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 3
+      },
+      "categoria": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 3
+      },
+      "precio_costo": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 3
+      },
+      "moneda": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 3
+      },
+      "proveedor_id": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 3
+      },
+      "codigo_proveedor": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 3
+      }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "GEL DE DUCHA",
+      "explicacion": "El gel de duchas va en Higiene corporal > Gel de ducha (CUI-HIG-DUC)."
+    }
+  },
+  "P04:HT40084": {
+    "item_id": "P04:HT40084",
+    "estado": "a_revision",
+    "motivos_revision": [
+      "gtin_faltante",
+      "posible_duplicado"
+    ],
+    "duplicado_de": "SKU101806",
+    "ficha": {
+      "gtin": null,
+      "descripcion": "SHAMPOO AQUAVIVA BEBE X 200 ML",
+      "marca": "AQUAVIVA",
+      "tipo": "SHAMPOO",
+      "variante": "BEBE",
+      "contenido": 200,
+      "unidad": "ML",
+      "unidades_por_envase": 1,
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "BEB-HIG-BAN",
+      "precio_costo": 94.34,
+      "moneda": "UYU",
+      "proveedor_id": "P04",
+      "codigo_proveedor": "HT40084"
+    },
+    "fuentes": {
+      "descripcion": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 4
+      },
+      "marca": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 4
+      },
+      "tipo": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 4
+      },
+      "variante": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 4
+      },
+      "contenido": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 4
+      },
+      "unidad": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 4
+      },
+      "unidades_por_envase": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 4
+      },
+      "categoria": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 4
+      },
+      "precio_costo": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 4
+      },
+      "moneda": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 4
+      },
+      "proveedor_id": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 4
+      },
+      "codigo_proveedor": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 4
+      }
+    },
+    "categoria_decidida_por": {
+      "campo": "variante",
+      "valor": "BEBE",
+      "explicacion": "Es un shampoo formulado para bebés: va en Higiene del bebé (BEB-HIG-BAN), que excluye el shampoo para bebés de Cabello."
+    }
+  },
+  "P04:HT40009": {
+    "item_id": "P04:HT40009",
+    "estado": "lista_para_alta",
+    "ficha": {
+      "gtin": "7796251060483",
+      "descripcion": "GEL DE DUCHA AQUAVIVA COCO X 1000 ML",
+      "marca": "AQUAVIVA",
+      "tipo": "GEL DE DUCHA",
+      "variante": "COCO",
+      "contenido": 1000,
+      "unidad": "ML",
+      "unidades_por_envase": 1,
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "CUI-HIG-DUC",
+      "precio_costo": 165.27,
+      "moneda": "UYU",
+      "proveedor_id": "P04",
+      "codigo_proveedor": "HT40009"
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 5
+      },
+      "descripcion": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 5
+      },
+      "marca": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 5
+      },
+      "tipo": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 5
+      },
+      "variante": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 5
+      },
+      "contenido": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 5
+      },
+      "unidad": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 5
+      },
+      "unidades_por_envase": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 5
+      },
+      "categoria": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 5
+      },
+      "precio_costo": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 5
+      },
+      "moneda": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 5
+      },
+      "proveedor_id": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 5
+      },
+      "codigo_proveedor": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 5
+      }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "GEL DE DUCHA",
+      "explicacion": "El gel de ducha va en Higiene corporal > Gel de ducha (CUI-HIG-DUC)."
+    }
+  },
+  "P04:HT40012": {
+    "item_id": "P04:HT40012",
+    "estado": "lista_para_alta",
+    "ficha": {
+      "gtin": "7790987175794",
+      "descripcion": "GEL DE DUCHA AQUAVIVA AVENA X 400 ML",
+      "marca": "AQUAVIVA",
+      "tipo": "GEL DE DUCHA",
+      "variante": "AVENA",
+      "contenido": 400,
+      "unidad": "ML",
+      "unidades_por_envase": 1,
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "CUI-HIG-DUC",
+      "precio_costo": 80.36,
+      "moneda": "UYU",
+      "proveedor_id": "P04",
+      "codigo_proveedor": "HT40012"
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 6
+      },
+      "descripcion": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 6
+      },
+      "marca": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 6
+      },
+      "tipo": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 6
+      },
+      "variante": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 6
+      },
+      "contenido": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 6
+      },
+      "unidad": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 6
+      },
+      "unidades_por_envase": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 6
+      },
+      "categoria": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 6
+      },
+      "precio_costo": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 6
+      },
+      "moneda": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 6
+      },
+      "proveedor_id": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 6
+      },
+      "codigo_proveedor": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 6
+      }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "GEL DE DUCHA",
+      "explicacion": "El gel de ducha va en Higiene corporal > Gel de ducha (CUI-HIG-DUC)."
+    }
+  },
+  "P04:HT40015": {
+    "item_id": "P04:HT40015",
+    "estado": "lista_para_alta",
+    "ficha": {
+      "gtin": "7798125295830",
+      "descripcion": "GEL DE DUCHA AQUAVIVA HIDRATANTE X 400 ML",
+      "marca": "AQUAVIVA",
+      "tipo": "GEL DE DUCHA",
+      "variante": "HIDRATANTE",
+      "contenido": 400,
+      "unidad": "ML",
+      "unidades_por_envase": 1,
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "CUI-HIG-DUC",
+      "precio_costo": 81.26,
+      "moneda": "UYU",
+      "proveedor_id": "P04",
+      "codigo_proveedor": "HT40015"
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 7
+      },
+      "descripcion": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 7
+      },
+      "marca": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 7
+      },
+      "tipo": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 7
+      },
+      "variante": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 7
+      },
+      "contenido": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 7
+      },
+      "unidad": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 7
+      },
+      "unidades_por_envase": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 7
+      },
+      "categoria": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 7
+      },
+      "precio_costo": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 7
+      },
+      "moneda": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 7
+      },
+      "proveedor_id": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 7
+      },
+      "codigo_proveedor": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 7
+      }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "GEL DE DUCHA",
+      "explicacion": "El gel de ducha va en Higiene corporal > Gel de ducha (CUI-HIG-DUC)."
+    }
+  },
+  "P04:HT40018": {
+    "item_id": "P04:HT40018",
+    "estado": "lista_para_alta",
+    "ficha": {
+      "gtin": "7790002613935",
+      "descripcion": "JABON INTIMO AQUAVIVA NEUTRO X 200 ML",
+      "marca": "AQUAVIVA",
+      "tipo": "JABON INTIMO",
+      "variante": "NEUTRO",
+      "contenido": 200,
+      "unidad": "ML",
+      "unidades_por_envase": 1,
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "CUI-HIG-INT",
+      "precio_costo": 120.21,
+      "moneda": "UYU",
+      "proveedor_id": "P04",
+      "codigo_proveedor": "HT40018"
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 8
+      },
+      "descripcion": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 8
+      },
+      "marca": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 8
+      },
+      "tipo": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 8
+      },
+      "variante": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 8
+      },
+      "contenido": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 8
+      },
+      "unidad": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 8
+      },
+      "unidades_por_envase": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 8
+      },
+      "categoria": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 8
+      },
+      "precio_costo": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 8
+      },
+      "moneda": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 8
+      },
+      "proveedor_id": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 8
+      },
+      "codigo_proveedor": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 8
+      }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "JABON INTIMO",
+      "explicacion": "El jabón íntimo va en Higiene corporal > Higiene íntima (CUI-HIG-INT)."
+    }
+  },
+  "P04:HT40021": {
+    "item_id": "P04:HT40021",
+    "estado": "lista_para_alta",
+    "ficha": {
+      "gtin": "7795697680668",
+      "descripcion": "ESPUMA DE AFEITAR FILO PIEL SENSIBLE X 300 ML",
+      "marca": "FILO",
+      "tipo": "ESPUMA DE AFEITAR",
+      "variante": "PIEL SENSIBLE",
+      "contenido": 300,
+      "unidad": "ML",
+      "unidades_por_envase": 1,
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "CUI-AFE-ESP",
+      "precio_costo": 134.36,
+      "moneda": "UYU",
+      "proveedor_id": "P04",
+      "codigo_proveedor": "HT40021"
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 9
+      },
+      "descripcion": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 9
+      },
+      "marca": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 9
+      },
+      "tipo": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 9
+      },
+      "variante": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 9
+      },
+      "contenido": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 9
+      },
+      "unidad": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 9
+      },
+      "unidades_por_envase": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 9
+      },
+      "categoria": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 9
+      },
+      "precio_costo": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 9
+      },
+      "moneda": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 9
+      },
+      "proveedor_id": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 9
+      },
+      "codigo_proveedor": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 9
+      }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "ESPUMA DE AFEITAR",
+      "explicacion": "La espuma de afeitar va en Afeitado > Espumas y geles de afeitar (CUI-AFE-ESP)."
+    }
+  },
+  "P04:HT40024": {
+    "item_id": "P04:HT40024",
+    "estado": "lista_para_alta",
+    "ficha": {
+      "gtin": "7792665528410",
+      "descripcion": "JABON INTIMO AQUAVIVA NEUTRO X 400 ML",
+      "marca": "AQUAVIVA",
+      "tipo": "JABON INTIMO",
+      "variante": "NEUTRO",
+      "contenido": 400,
+      "unidad": "ML",
+      "unidades_por_envase": 1,
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "CUI-HIG-INT",
+      "precio_costo": 187.76,
+      "moneda": "UYU",
+      "proveedor_id": "P04",
+      "codigo_proveedor": "HT40024"
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 10
+      },
+      "descripcion": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 10
+      },
+      "marca": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 10
+      },
+      "tipo": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 10
+      },
+      "variante": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 10
+      },
+      "contenido": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 10
+      },
+      "unidad": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 10
+      },
+      "unidades_por_envase": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 10
+      },
+      "categoria": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 10
+      },
+      "precio_costo": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 10
+      },
+      "moneda": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 10
+      },
+      "proveedor_id": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 10
+      },
+      "codigo_proveedor": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 10
+      }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "JABON INTIMO",
+      "explicacion": "El jabón íntimo va en Higiene corporal > Higiene íntima (CUI-HIG-INT)."
+    }
+  },
+  "P04:HT40027": {
+    "item_id": "P04:HT40027",
+    "estado": "duplicado",
+    "duplicado_de": "SKU103885",
+    "ficha": {
+      "gtin": "7799984089141",
+      "descripcion": "GEL DE DUCHA AQUAVIVA HIDRATANTE X 1000 ML",
+      "marca": "AQUAVIVA",
+      "tipo": "GEL DE DUCHA",
+      "variante": "HIDRATANTE",
+      "contenido": 1000,
+      "unidad": "ML",
+      "unidades_por_envase": 1,
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "CUI-HIG-DUC",
+      "precio_costo": 149.16,
+      "moneda": "UYU",
+      "proveedor_id": "P04",
+      "codigo_proveedor": "HT40027"
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 11
+      },
+      "descripcion": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 11
+      },
+      "marca": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 11
+      },
+      "tipo": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 11
+      },
+      "variante": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 11
+      },
+      "contenido": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 11
+      },
+      "unidad": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 11
+      },
+      "unidades_por_envase": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 11
+      },
+      "categoria": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 11
+      },
+      "precio_costo": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 11
+      },
+      "moneda": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 11
+      },
+      "proveedor_id": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 11
+      },
+      "codigo_proveedor": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 11
+      }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "GEL DE DUCHA",
+      "explicacion": "El gel de ducha va en Higiene corporal > Gel de ducha (CUI-HIG-DUC)."
+    }
+  },
+  "P04:HT40030": {
+    "item_id": "P04:HT40030",
+    "estado": "lista_para_alta",
+    "ficha": {
+      "gtin": "7794561447222",
+      "descripcion": "GEL DE DUCHA PUREZA HIDRATANTE X 400 ML",
+      "marca": "PUREZA",
+      "tipo": "GEL DE DUCHA",
+      "variante": "HIDRATANTE",
+      "contenido": 400,
+      "unidad": "ML",
+      "unidades_por_envase": 1,
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "CUI-HIG-DUC",
+      "precio_costo": 77.62,
+      "moneda": "UYU",
+      "proveedor_id": "P04",
+      "codigo_proveedor": "HT40030"
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 12
+      },
+      "descripcion": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 12
+      },
+      "marca": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 12
+      },
+      "tipo": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 12
+      },
+      "variante": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 12
+      },
+      "contenido": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 12
+      },
+      "unidad": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 12
+      },
+      "unidades_por_envase": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 12
+      },
+      "categoria": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 12
+      },
+      "precio_costo": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 12
+      },
+      "moneda": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 12
+      },
+      "proveedor_id": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 12
+      },
+      "codigo_proveedor": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 12
+      }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "GEL DE DUCHA",
+      "explicacion": "El tipo GEL DE DUCHA corresponde a la categoría Higiene corporal > Gel de ducha."
+    },
+    "motivos_revision": []
+  },
+  "P04:HT40033": {
+    "item_id": "P04:HT40033",
+    "estado": "a_revision",
+    "duplicado_de": "SKU103983",
+    "ficha": {
+      "gtin": null,
+      "descripcion": "TOALLITAS HUMEDAS AQUAVIVA ALOE X 80 UN",
+      "marca": "AQUAVIVA",
+      "tipo": "TOALLITAS HUMEDAS",
+      "variante": "ALOE",
+      "contenido": 80,
+      "unidad": "UN",
+      "unidades_por_envase": 1,
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "BEB-PAN-TOA",
+      "precio_costo": 92.36,
+      "moneda": "UYU",
+      "proveedor_id": "P04",
+      "codigo_proveedor": "HT40033"
+    },
+    "fuentes": {
+      "descripcion": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 13
+      },
+      "marca": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 13
+      },
+      "tipo": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 13
+      },
+      "variante": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 13
+      },
+      "contenido": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 13
+      },
+      "unidad": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 13
+      },
+      "unidades_por_envase": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 13
+      },
+      "categoria": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 13
+      },
+      "precio_costo": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 13
+      },
+      "moneda": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 13
+      },
+      "proveedor_id": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 13
+      },
+      "codigo_proveedor": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 13
+      }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "TOALLITAS HUMEDAS",
+      "explicacion": "Todas las toallitas húmedas van en Bebés > Pañales > Toallitas húmedas."
+    },
+    "motivos_revision": [
+      "gtin_faltante",
+      "posible_duplicado"
+    ]
+  },
+  "P04:HT40036": {
+    "item_id": "P04:HT40036",
+    "estado": "lista_para_alta",
+    "ficha": {
+      "gtin": "7790316942707",
+      "descripcion": "GEL DE DUCHA PUREZA COCO X 1000 ML",
+      "marca": "PUREZA",
+      "tipo": "GEL DE DUCHA",
+      "variante": "COCO",
+      "contenido": 1000,
+      "unidad": "ML",
+      "unidades_por_envase": 1,
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "CUI-HIG-DUC",
+      "precio_costo": 153.24,
+      "moneda": "UYU",
+      "proveedor_id": "P04",
+      "codigo_proveedor": "HT40036"
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 14
+      },
+      "descripcion": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 14
+      },
+      "marca": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 14
+      },
+      "tipo": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 14
+      },
+      "variante": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 14
+      },
+      "contenido": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 14
+      },
+      "unidad": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 14
+      },
+      "unidades_por_envase": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 14
+      },
+      "categoria": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 14
+      },
+      "precio_costo": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 14
+      },
+      "moneda": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 14
+      },
+      "proveedor_id": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 14
+      },
+      "codigo_proveedor": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 14
+      }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "GEL DE DUCHA",
+      "explicacion": "El tipo GEL DE DUCHA corresponde a la categoría Higiene corporal > Gel de ducha."
+    },
+    "motivos_revision": []
+  },
+  "P04:HT40039": {
+    "item_id": "P04:HT40039",
+    "estado": "lista_para_alta",
+    "ficha": {
+      "gtin": "7797825499241",
+      "descripcion": "SHAMPOO AQUAVIVA BEBE X 400 ML",
+      "marca": "AQUAVIVA",
+      "tipo": "SHAMPOO",
+      "variante": "BEBE",
+      "contenido": 400,
+      "unidad": "ML",
+      "unidades_por_envase": 1,
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "BEB-HIG-BAN",
+      "precio_costo": 144.64,
+      "moneda": "UYU",
+      "proveedor_id": "P04",
+      "codigo_proveedor": "HT40039"
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 15
+      },
+      "descripcion": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 15
+      },
+      "marca": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 15
+      },
+      "tipo": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 15
+      },
+      "variante": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 15
+      },
+      "contenido": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 15
+      },
+      "unidad": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 15
+      },
+      "unidades_por_envase": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 15
+      },
+      "categoria": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 15
+      },
+      "precio_costo": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 15
+      },
+      "moneda": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 15
+      },
+      "proveedor_id": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 15
+      },
+      "codigo_proveedor": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 15
+      }
+    },
+    "categoria_decidida_por": {
+      "campo": "variante",
+      "valor": "BEBE",
+      "explicacion": "Shampoo formulado para bebés: la variante BEBE lo lleva a Bebés > Higiene del bebé > Shampoo y baño, no a Cabello > Shampoo."
+    },
+    "motivos_revision": []
+  },
+  "P04:HT40042": {
+    "item_id": "P04:HT40042",
+    "estado": "lista_para_alta",
+    "ficha": {
+      "gtin": "7795817779319",
+      "descripcion": "GEL DE DUCHA PUREZA COCO X 400 ML",
+      "marca": "PUREZA",
+      "tipo": "GEL DE DUCHA",
+      "variante": "COCO",
+      "contenido": 400,
+      "unidad": "ML",
+      "unidades_por_envase": 1,
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "CUI-HIG-DUC",
+      "precio_costo": 84.1,
+      "moneda": "UYU",
+      "proveedor_id": "P04",
+      "codigo_proveedor": "HT40042"
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 16
+      },
+      "descripcion": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 16
+      },
+      "marca": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 16
+      },
+      "tipo": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 16
+      },
+      "variante": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 16
+      },
+      "contenido": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 16
+      },
+      "unidad": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 16
+      },
+      "unidades_por_envase": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 16
+      },
+      "categoria": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 16
+      },
+      "precio_costo": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 16
+      },
+      "moneda": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 16
+      },
+      "proveedor_id": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 16
+      },
+      "codigo_proveedor": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 16
+      }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "GEL DE DUCHA",
+      "explicacion": "El tipo GEL DE DUCHA corresponde a la categoría Higiene corporal > Gel de ducha."
+    },
+    "motivos_revision": []
+  },
+  "P04:HT40045": {
+    "item_id": "P04:HT40045",
+    "estado": "a_revision",
+    "duplicado_de": "SKU103087",
+    "ficha": {
+      "gtin": null,
+      "descripcion": "GEL DE DUCHA PUREZA AVENA X 750 ML",
+      "marca": "PUREZA",
+      "tipo": "GEL DE DUCHA",
+      "variante": "AVENA",
+      "contenido": 750,
+      "unidad": "ML",
+      "unidades_por_envase": 1,
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "CUI-HIG-DUC",
+      "precio_costo": 119.63,
+      "moneda": "UYU",
+      "proveedor_id": "P04",
+      "codigo_proveedor": "HT40045"
+    },
+    "fuentes": {
+      "descripcion": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 17
+      },
+      "marca": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 17
+      },
+      "tipo": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 17
+      },
+      "variante": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 17
+      },
+      "contenido": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 17
+      },
+      "unidad": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 17
+      },
+      "unidades_por_envase": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 17
+      },
+      "categoria": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 17
+      },
+      "precio_costo": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 17
+      },
+      "moneda": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 17
+      },
+      "proveedor_id": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 17
+      },
+      "codigo_proveedor": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 17
+      }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "GEL DE DUCHA",
+      "explicacion": "El tipo GEL DE DUCHA corresponde a la categoría Higiene corporal > Gel de ducha."
+    },
+    "motivos_revision": [
+      "gtin_faltante",
+      "posible_duplicado"
+    ]
+  },
+  "P04:HT40048": {
+    "item_id": "P04:HT40048",
+    "estado": "lista_para_alta",
+    "ficha": {
+      "gtin": "7795320460353",
+      "descripcion": "GEL DE DUCHA PUREZA AVENA X 1000 ML",
+      "marca": "PUREZA",
+      "tipo": "GEL DE DUCHA",
+      "variante": "AVENA",
+      "contenido": 1000,
+      "unidad": "ML",
+      "unidades_por_envase": 1,
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "CUI-HIG-DUC",
+      "precio_costo": 160.39,
+      "moneda": "UYU",
+      "proveedor_id": "P04",
+      "codigo_proveedor": "HT40048"
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 18
+      },
+      "descripcion": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 18
+      },
+      "marca": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 18
+      },
+      "tipo": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 18
+      },
+      "variante": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 18
+      },
+      "contenido": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 18
+      },
+      "unidad": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 18
+      },
+      "unidades_por_envase": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 18
+      },
+      "categoria": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 18
+      },
+      "precio_costo": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 18
+      },
+      "moneda": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 18
+      },
+      "proveedor_id": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 18
+      },
+      "codigo_proveedor": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 18
+      }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "GEL DE DUCHA",
+      "explicacion": "El tipo GEL DE DUCHA corresponde a la categoría Higiene corporal > Gel de ducha."
+    },
+    "motivos_revision": []
+  },
+  "P04:HT40051": {
+    "item_id": "P04:HT40051",
+    "estado": "lista_para_alta",
+    "ficha": {
+      "gtin": "7799485518485",
+      "descripcion": "GEL DE DUCHA PUREZA HIDRATANTE X 750 ML",
+      "marca": "PUREZA",
+      "tipo": "GEL DE DUCHA",
+      "variante": "HIDRATANTE",
+      "contenido": 750,
+      "unidad": "ML",
+      "unidades_por_envase": 1,
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "CUI-HIG-DUC",
+      "precio_costo": 116.92,
+      "moneda": "UYU",
+      "proveedor_id": "P04",
+      "codigo_proveedor": "HT40051"
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 19
+      },
+      "descripcion": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 19
+      },
+      "marca": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 19
+      },
+      "tipo": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 19
+      },
+      "variante": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 19
+      },
+      "contenido": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 19
+      },
+      "unidad": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 19
+      },
+      "unidades_por_envase": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 19
+      },
+      "categoria": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 19
+      },
+      "precio_costo": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 19
+      },
+      "moneda": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 19
+      },
+      "proveedor_id": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 19
+      },
+      "codigo_proveedor": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 19
+      }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "GEL DE DUCHA",
+      "explicacion": "El tipo GEL DE DUCHA corresponde a la categoría Higiene corporal > Gel de ducha."
+    },
+    "motivos_revision": []
+  },
+  "P04:HT40054": {
+    "item_id": "P04:HT40054",
+    "estado": "duplicado",
+    "duplicado_de": "SKU102261",
+    "ficha": {
+      "gtin": "7796018158446",
+      "descripcion": "GEL DE DUCHA AQUAVIVA COCO X 400 ML",
+      "marca": "AQUAVIVA",
+      "tipo": "GEL DE DUCHA",
+      "variante": "COCO",
+      "contenido": 400,
+      "unidad": "ML",
+      "unidades_por_envase": 1,
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "CUI-HIG-DUC",
+      "precio_costo": 84.83,
+      "moneda": "UYU",
+      "proveedor_id": "P04",
+      "codigo_proveedor": "HT40054"
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 20
+      },
+      "descripcion": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 20
+      },
+      "marca": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 20
+      },
+      "tipo": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 20
+      },
+      "variante": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 20
+      },
+      "contenido": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 20
+      },
+      "unidad": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 20
+      },
+      "unidades_por_envase": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 20
+      },
+      "categoria": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 20
+      },
+      "precio_costo": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 20
+      },
+      "moneda": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 20
+      },
+      "proveedor_id": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 20
+      },
+      "codigo_proveedor": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 20
+      }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "GEL DE DUCHA",
+      "explicacion": "El tipo GEL DE DUCHA corresponde a la categoría Higiene corporal > Gel de ducha."
+    },
+    "motivos_revision": []
+  },
+  "P04:HT40057": {
+    "item_id": "P04:HT40057",
+    "estado": "lista_para_alta",
+    "ficha": {
+      "gtin": "7790965488168",
+      "descripcion": "GEL DE DUCHA PUREZA COCO X 750 ML",
+      "marca": "PUREZA",
+      "tipo": "GEL DE DUCHA",
+      "variante": "COCO",
+      "contenido": 750,
+      "unidad": "ML",
+      "unidades_por_envase": 1,
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "CUI-HIG-DUC",
+      "precio_costo": 123.54,
+      "moneda": "UYU",
+      "proveedor_id": "P04",
+      "codigo_proveedor": "HT40057"
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 21
+      },
+      "descripcion": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 21
+      },
+      "marca": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 21
+      },
+      "tipo": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 21
+      },
+      "variante": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 21
+      },
+      "contenido": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 21
+      },
+      "unidad": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 21
+      },
+      "unidades_por_envase": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 21
+      },
+      "categoria": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 21
+      },
+      "precio_costo": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 21
+      },
+      "moneda": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 21
+      },
+      "proveedor_id": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 21
+      },
+      "codigo_proveedor": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 21
+      }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "GEL DE DUCHA",
+      "explicacion": "El tipo GEL DE DUCHA corresponde a la categoría Higiene corporal > Gel de ducha."
+    },
+    "motivos_revision": []
+  },
+  "P04:HT40060": {
+    "item_id": "P04:HT40060",
+    "estado": "lista_para_alta",
+    "ficha": {
+      "gtin": "7795788466911",
+      "descripcion": "GEL DE DUCHA AQUAVIVA AVENA X 750 ML",
+      "marca": "AQUAVIVA",
+      "tipo": "GEL DE DUCHA",
+      "variante": "AVENA",
+      "contenido": 750,
+      "unidad": "ML",
+      "unidades_por_envase": 1,
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "CUI-HIG-DUC",
+      "precio_costo": 135.61,
+      "moneda": "UYU",
+      "proveedor_id": "P04",
+      "codigo_proveedor": "HT40060"
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 22
+      },
+      "descripcion": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 22
+      },
+      "marca": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 22
+      },
+      "tipo": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 22
+      },
+      "variante": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 22
+      },
+      "contenido": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 22
+      },
+      "unidad": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 22
+      },
+      "unidades_por_envase": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 22
+      },
+      "categoria": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 22
+      },
+      "precio_costo": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 22
+      },
+      "moneda": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 22
+      },
+      "proveedor_id": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 22
+      },
+      "codigo_proveedor": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 22
+      }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "GEL DE DUCHA",
+      "explicacion": "El gel de ducha va en Higiene corporal > Gel de ducha (CUI-HIG-DUC)."
+    },
+    "motivos_revision": []
+  },
+  "P04:HT40063": {
+    "item_id": "P04:HT40063",
+    "estado": "a_revision",
+    "duplicado_de": "SKU102254",
+    "ficha": {
+      "gtin": null,
+      "descripcion": "DESODORANTE ROLL ON AQUAVIVA SIN PERFUME X 50 ML",
+      "marca": "AQUAVIVA",
+      "tipo": "DESODORANTE ROLL ON",
+      "variante": "SIN PERFUME",
+      "contenido": 50,
+      "unidad": "ML",
+      "unidades_por_envase": 1,
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "CUI-DES-BAR",
+      "precio_costo": 83.71,
+      "moneda": "UYU",
+      "proveedor_id": "P04",
+      "codigo_proveedor": "HT40063"
+    },
+    "fuentes": {
+      "descripcion": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 23
+      },
+      "marca": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 23
+      },
+      "tipo": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 23
+      },
+      "variante": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 23
+      },
+      "contenido": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 23
+      },
+      "unidad": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 23
+      },
+      "unidades_por_envase": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 23
+      },
+      "categoria": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 23
+      },
+      "precio_costo": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 23
+      },
+      "moneda": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 23
+      },
+      "proveedor_id": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 23
+      },
+      "codigo_proveedor": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 23
+      }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "DESODORANTE ROLL ON",
+      "explicacion": "El roll on va en Desodorantes > Barra y roll on (CUI-DES-BAR)."
+    },
+    "motivos_revision": [
+      "gtin_faltante",
+      "posible_duplicado"
+    ]
+  },
+  "P04:HT40066": {
+    "item_id": "P04:HT40066",
+    "estado": "lista_para_alta",
+    "ficha": {
+      "gtin": "7792609650870",
+      "descripcion": "ESPUMA DE AFEITAR FILO MENTOL X 200 ML",
+      "marca": "FILO",
+      "tipo": "ESPUMA DE AFEITAR",
+      "variante": "MENTOL",
+      "contenido": 200,
+      "unidad": "ML",
+      "unidades_por_envase": 1,
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "CUI-AFE-ESP",
+      "precio_costo": 98.58,
+      "moneda": "UYU",
+      "proveedor_id": "P04",
+      "codigo_proveedor": "HT40066"
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 24
+      },
+      "descripcion": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 24
+      },
+      "marca": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 24
+      },
+      "tipo": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 24
+      },
+      "variante": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 24
+      },
+      "contenido": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 24
+      },
+      "unidad": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 24
+      },
+      "unidades_por_envase": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 24
+      },
+      "categoria": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 24
+      },
+      "precio_costo": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 24
+      },
+      "moneda": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 24
+      },
+      "proveedor_id": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 24
+      },
+      "codigo_proveedor": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 24
+      }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "ESPUMA DE AFEITAR",
+      "explicacion": "La espuma de afeitar va en Afeitado > Espumas y geles de afeitar (CUI-AFE-ESP)."
+    },
+    "motivos_revision": []
+  },
+  "P04:HT40069": {
+    "item_id": "P04:HT40069",
+    "estado": "duplicado",
+    "duplicado_de": "SKU101267",
+    "ficha": {
+      "gtin": "7796640214909",
+      "descripcion": "SHAMPOO AQUAVIVA BEBE MANZANILLA X 200 ML",
+      "marca": "AQUAVIVA",
+      "tipo": "SHAMPOO",
+      "variante": "BEBE MANZANILLA",
+      "contenido": 200,
+      "unidad": "ML",
+      "unidades_por_envase": 1,
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "BEB-HIG-BAN",
+      "precio_costo": 98.81,
+      "moneda": "UYU",
+      "proveedor_id": "P04",
+      "codigo_proveedor": "HT40069"
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 25
+      },
+      "descripcion": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 25
+      },
+      "marca": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 25
+      },
+      "tipo": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 25
+      },
+      "variante": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 25
+      },
+      "contenido": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 25
+      },
+      "unidad": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 25
+      },
+      "unidades_por_envase": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 25
+      },
+      "categoria": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 25
+      },
+      "precio_costo": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 25
+      },
+      "moneda": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 25
+      },
+      "proveedor_id": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 25
+      },
+      "codigo_proveedor": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 25
+      }
+    },
+    "categoria_decidida_por": {
+      "campo": "variante",
+      "valor": "BEBE MANZANILLA",
+      "explicacion": "Shampoo formulado para bebés: va en Bebés > Higiene del bebé > Shampoo y baño, no en Cabello."
+    },
+    "motivos_revision": []
+  },
+  "P04:HT40072": {
+    "item_id": "P04:HT40072",
+    "estado": "lista_para_alta",
+    "ficha": {
+      "gtin": "7798403125217",
+      "descripcion": "GEL DE DUCHA AQUAVIVA AVENA X 1000 ML",
+      "marca": "AQUAVIVA",
+      "tipo": "GEL DE DUCHA",
+      "variante": "AVENA",
+      "contenido": 1000,
+      "unidad": "ML",
+      "unidades_por_envase": 1,
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "CUI-HIG-DUC",
+      "precio_costo": 158.99,
+      "moneda": "UYU",
+      "proveedor_id": "P04",
+      "codigo_proveedor": "HT40072"
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 26
+      },
+      "descripcion": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 26
+      },
+      "marca": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 26
+      },
+      "tipo": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 26
+      },
+      "variante": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 26
+      },
+      "contenido": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 26
+      },
+      "unidad": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 26
+      },
+      "unidades_por_envase": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 26
+      },
+      "categoria": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 26
+      },
+      "precio_costo": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 26
+      },
+      "moneda": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 26
+      },
+      "proveedor_id": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 26
+      },
+      "codigo_proveedor": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 26
+      }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "GEL DE DUCHA",
+      "explicacion": "El gel de ducha va en Higiene corporal > Gel de ducha (CUI-HIG-DUC)."
+    },
+    "motivos_revision": []
+  },
+  "P04:HT40075": {
+    "item_id": "P04:HT40075",
+    "estado": "lista_para_alta",
+    "ficha": {
+      "gtin": "7792719267425",
+      "descripcion": "TOALLITAS HUMEDAS AQUAVIVA SIN PERFUME X 50 UN",
+      "marca": "AQUAVIVA",
+      "tipo": "TOALLITAS HUMEDAS",
+      "variante": "SIN PERFUME",
+      "contenido": 50,
+      "unidad": "UN",
+      "unidades_por_envase": 1,
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "BEB-PAN-TOA",
+      "precio_costo": 69.36,
+      "moneda": "UYU",
+      "proveedor_id": "P04",
+      "codigo_proveedor": "HT40075"
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 28
+      },
+      "descripcion": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 28
+      },
+      "marca": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 28
+      },
+      "tipo": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 28
+      },
+      "variante": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 28
+      },
+      "contenido": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 28
+      },
+      "unidad": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 28
+      },
+      "unidades_por_envase": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 28
+      },
+      "categoria": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 28
+      },
+      "precio_costo": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 28
+      },
+      "moneda": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 28
+      },
+      "proveedor_id": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 28
+      },
+      "codigo_proveedor": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 28
+      }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "TOALLITAS HUMEDAS",
+      "explicacion": "Todas las toallitas húmedas van en Bebés > Pañales > Toallitas húmedas (BEB-PAN-TOA)."
+    },
+    "motivos_revision": []
+  },
+  "P04:HT40078": {
+    "item_id": "P04:HT40078",
+    "estado": "duplicado",
+    "duplicado_de": "SKU103710",
+    "ficha": {
+      "gtin": "7794182377663",
+      "descripcion": "GEL DE DUCHA AQUAVIVA HIDRATANTE X 750 ML",
+      "marca": "AQUAVIVA",
+      "tipo": "GEL DE DUCHA",
+      "variante": "HIDRATANTE",
+      "contenido": 750,
+      "unidad": "ML",
+      "unidades_por_envase": 1,
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "CUI-HIG-DUC",
+      "precio_costo": 115.8,
+      "moneda": "UYU",
+      "proveedor_id": "P04",
+      "codigo_proveedor": "HT40078"
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 29
+      },
+      "descripcion": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 29
+      },
+      "marca": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 29
+      },
+      "tipo": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 29
+      },
+      "variante": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 29
+      },
+      "contenido": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 29
+      },
+      "unidad": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 29
+      },
+      "unidades_por_envase": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 29
+      },
+      "categoria": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 29
+      },
+      "precio_costo": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 29
+      },
+      "moneda": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 29
+      },
+      "proveedor_id": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 29
+      },
+      "codigo_proveedor": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 29
+      }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "GEL DE DUCHA",
+      "explicacion": "El gel de ducha va en Higiene corporal > Gel de ducha (CUI-HIG-DUC)."
+    },
+    "motivos_revision": []
+  },
+  "P04:HT40081": {
+    "item_id": "P04:HT40081",
+    "estado": "a_revision",
+    "duplicado_de": "SKU101771",
+    "ficha": {
+      "gtin": null,
+      "descripcion": "DESODORANTE ROLL ON AQUAVIVA MUJER X 50 ML",
+      "marca": "AQUAVIVA",
+      "tipo": "DESODORANTE ROLL ON",
+      "variante": "MUJER",
+      "contenido": 50,
+      "unidad": "ML",
+      "unidades_por_envase": 1,
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "CUI-DES-BAR",
+      "precio_costo": 85.86,
+      "moneda": "UYU",
+      "proveedor_id": "P04",
+      "codigo_proveedor": "HT40081"
+    },
+    "fuentes": {
+      "descripcion": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 27
+      },
+      "marca": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 27
+      },
+      "tipo": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 27
+      },
+      "variante": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 27
+      },
+      "contenido": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 27
+      },
+      "unidad": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 27
+      },
+      "unidades_por_envase": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 27
+      },
+      "categoria": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 27
+      },
+      "precio_costo": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 27
+      },
+      "moneda": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 27
+      },
+      "proveedor_id": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 27
+      },
+      "codigo_proveedor": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 27
+      }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "DESODORANTE ROLL ON",
+      "explicacion": "El roll on va en Desodorantes > Barra y roll on (CUI-DES-BAR)."
+    },
+    "motivos_revision": [
+      "gtin_faltante",
+      "posible_duplicado"
+    ]
   }
 }
