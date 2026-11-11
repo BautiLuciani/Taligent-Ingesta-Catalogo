@@ -169,7 +169,7 @@ def el_pedido(proveedor_id: str, carpeta: Path = CARPETA_PEDIDOS) -> list[str]:
             actual = linea.split(" · ", 1)[0]
         elif linea.startswith("  - ") and actual:                # "  - El código de barras (EAN-13)..."
             renglones.append(f"- {actual}: {linea[4:]}")
-    return renglones + [f"- (mensaje completo, listo para mandar: `{ruta.relative_to(CARPETA_PROYECTO).as_posix()}`)"]
+    return renglones + [f"- (mensaje completo, listo para mandar: `{ruta_relativa(ruta)}`)"]
 
 
 def por_que_no_entro(registro: dict, recepcion: dict | None) -> list[str]:
@@ -185,14 +185,16 @@ def por_que_no_entro(registro: dict, recepcion: dict | None) -> list[str]:
     return renglones
 
 
-def armar_acuse(ruta: Path, registro: dict, resultados: dict, hooks: dict) -> str:
-    """El acuse entero, en Markdown. registro: lo que anotó la bandeja de este archivo (salida/bandeja.json)."""
+def armar_acuse(ruta: Path, registro: dict, resultados: dict, hooks: dict,
+                carpeta_recepcion: Path = CARPETA_RECEPCION, carpeta_pedidos: Path = CARPETA_PEDIDOS) -> str:
+    """El acuse entero, en Markdown. registro: lo que anotó la bandeja de este archivo (salida/bandeja.json).
+    Las carpetas se pueden cambiar para probar con datos congelados (probar_acuse.py)."""
     proveedor_id, estado = registro.get("proveedor_id"), registro.get("estado")
     nombre = nombres_de_proveedores().get(proveedor_id, "proveedor desconocido") if proveedor_id else "proveedor desconocido"
     renglones = [f"# Acuse de recibo — {ruta.name}", "",
                  f"Recibido {registro.get('fecha', '¿?')} · {nombre}" + (f" ({proveedor_id})" if proveedor_id else "")
                  + f" · **{COMO_TERMINO.get(estado, estado)}**", ""]
-    recepcion = resultado_de_recepcion(ruta, proveedor_id) if proveedor_id else None
+    recepcion = resultado_de_recepcion(ruta, proveedor_id, carpeta_recepcion) if proveedor_id else None
     if estado != "procesado":
         renglones += ["## Por qué no se procesó", *por_que_no_entro(registro, recepcion)]
         if recepcion and recepcion.get("receta") and ruta.exists():  # entró a la recepción y se frenó después
@@ -200,7 +202,7 @@ def armar_acuse(ruta: Path, registro: dict, resultados: dict, hooks: dict) -> st
         return "\n".join(renglones) + "\n"
     renglones += ["## Qué entendió el sistema", *lo_que_entendio(ruta, proveedor_id, recepcion), "",
                   "## Resultado", *el_resultado(proveedor_id, resultados, hooks), "",
-                  "## Pedido al proveedor", *el_pedido(proveedor_id), ""]
+                  "## Pedido al proveedor", *el_pedido(proveedor_id, carpeta_pedidos), ""]
     costo = registro.get("costo_recepcion_y_fds_usd")
     if costo is not None:
         renglones.append(f"Costo de la recepción y las FDS: US$ {costo:.4f} (las fichas se miden en la corrida del orquestador).")
