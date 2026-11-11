@@ -50,9 +50,19 @@ PRECIO_INPUT = 0.10   # USD por millón de tokens de entrada (Haiku 5.5, módulo
 PRECIO_OUTPUT = 0.50  # USD por millón de tokens de salida (el thinking se cobra como salida)
 
 
+PROMPT_CRITERIO = "criterio_de_revision"  # semana 4, paso 4: el criterio de revisión lo sirve el servidor
+
+
 async def armar_system_prompt(cliente_mcp: Client) -> str:
-    """Instrucciones de prompt_sistema.md + los 3 resources del estándar, cada uno entre etiquetas."""
+    """Instrucciones de prompt_sistema.md + el criterio de revisión (prompt MCP del servidor) + los 3 resources del
+    estándar, cada uno entre etiquetas.
+
+    El criterio se le PIDE al servidor (get_prompt): si el servidor no lo tiene, esto falla con error y el fichador no
+    arranca. No hay una copia local de respaldo: el criterio vive en un solo lugar.
+    """
     partes = [RUTA_PROMPT.read_text(encoding="utf-8")]
+    criterio = await cliente_mcp.get_prompt(PROMPT_CRITERIO)
+    partes.append(f"<{PROMPT_CRITERIO}>\n{criterio.messages[0].content.text}\n</{PROMPT_CRITERIO}>")
     for etiqueta, uri in RESOURCES_ESTANDAR.items():
         texto = (await cliente_mcp.read_resource(uri))[0].text
         partes.append(f"<{etiqueta}>\n{texto}\n</{etiqueta}>")

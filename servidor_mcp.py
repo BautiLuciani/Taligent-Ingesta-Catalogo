@@ -852,6 +852,21 @@ def registrar_ficha(
 CARPETA_ESTANDAR = CARPETA_DATA / "estandar"
 
 
+# --- Semana 4, paso 4: el criterio de revisión, servido como PROMPT MCP ---
+# Resource = datos que el código lee (el estándar, el vocabulario, la taxonomía). Prompt = instrucciones que el código
+# le pide al servidor. El criterio de revisión (cuándo un producto va a revisión y con qué motivo) son instrucciones:
+# viven acá, en un solo lugar, para todo el que las use (hoy el fichador; en la semana 6, el asistente de consultas).
+RUTA_CRITERIO = Path(__file__).parent / "criterio_de_revision.md"
+
+
+@mcp.prompt(name="criterio_de_revision",
+            description="El criterio de revisión: cuándo un producto queda lista_para_alta, duplicado o a_revision, "
+                        "y con qué motivo (sección 8 del estándar).")
+def prompt_criterio_de_revision() -> str:
+    """El criterio tal cual está en criterio_de_revision.md (se lee en cada pedido: si se edita, no hay que reiniciar)."""
+    return RUTA_CRITERIO.read_text(encoding="utf-8")
+
+
 @mcp.resource("estandar://ficha_de_producto", mime_type="text/markdown")
 def recurso_ficha_de_producto() -> str:
     """Estándar de ficha de producto: campos, normalización, precio, estados y motivos de revisión."""
