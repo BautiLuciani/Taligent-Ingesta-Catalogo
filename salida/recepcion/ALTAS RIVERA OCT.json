@@ -1,0 +1,137 @@
+{
+  "archivo": "ALTAS RIVERA OCT.xlsx",
+  "receta": {
+    "formato": "excel",
+    "archivo": "ALTAS RIVERA OCT.xlsx",
+    "hoja": "Altas",
+    "campos": {
+      "descripcion": "DESCRIPCION",
+      "ean": "EAN",
+      "precio": "P. COSTO"
+    },
+    "contenido_en": "dentro_de_la_descripcion",
+    "separador_decimal": ",",
+    "moneda": "UYU",
+    "decisiones": {
+      "evidencia_hoja": "Altas",
+      "hojas_que_no_entran": [],
+      "columnas_que_no_van": [
+        {
+          "columna": "OBS",
+          "motivo": "Observaciones libres (por ejemplo, 'PACK PROMO CON NECESER'); no es un dato del formulario."
+        }
+      ],
+      "evidencia_moneda": null,
+      "evidencia_separador": "TRAT. CAP. ALBORADA NUTRICION 0,5 KG"
+    }
+  },
+  "controles": [
+    {
+      "control": "El modelo entregó el formulario",
+      "ok": true,
+      "detalle": ""
+    },
+    {
+      "control": "El formulario vino completo y bien armado",
+      "ok": true,
+      "detalle": ""
+    },
+    {
+      "control": "La hoja elegida existe y tiene productos",
+      "ok": true,
+      "detalle": ""
+    },
+    {
+      "control": "Cada hoja quedó decidida una sola vez (entra o no entra)",
+      "ok": true,
+      "detalle": ""
+    },
+    {
+      "control": "La hoja elegida no se llama como lo que no entra (estándar, sección 7)",
+      "ok": true,
+      "detalle": ""
+    },
+    {
+      "control": "La evidencia de la hoja está en el archivo",
+      "ok": true,
+      "detalle": ""
+    },
+    {
+      "control": "Todas las columnas nombradas son de esa hoja",
+      "ok": true,
+      "detalle": ""
+    },
+    {
+      "control": "Ninguna columna se usa para dos datos (salvo el contenido con su unidad o dentro de la descripción)",
+      "ok": true,
+      "detalle": ""
+    },
+    {
+      "control": "Ninguna columna se usa y a la vez figura en 'no van'",
+      "ok": true,
+      "detalle": ""
+    },
+    {
+      "control": "Ninguna columna queda sin decidir",
+      "ok": true,
+      "detalle": ""
+    },
+    {
+      "control": "Hay una columna de descripción",
+      "ok": true,
+      "detalle": ""
+    },
+    {
+      "control": "El separador decimal sale de los datos",
+      "ok": true,
+      "detalle": "',', por 'TRAT. CAP. ALBORADA NUTRICION 0,5 KG'"
+    },
+    {
+      "control": "«EAN» tiene forma de código de barras",
+      "ok": true,
+      "detalle": "50 de 50 filas"
+    },
+    {
+      "control": "«P. COSTO» son números",
+      "ok": true,
+      "detalle": "50 de 50 filas"
+    },
+    {
+      "control": "Las columnas de contenido tienen sentido juntas",
+      "ok": true,
+      "detalle": ""
+    },
+    {
+      "control": "El contenido se puede calcular (dentro_de_la_descripcion)",
+      "ok": true,
+      "detalle": "50 de 50 filas"
+    },
+    {
+      "control": "La moneda coincide con lo que dice el archivo",
+      "ok": true,
+      "detalle": "eligió UYU; el archivo no menciona dólares"
+    }
+  ],
+  "problemas": [],
+  "avisos": [],
+  "propuesta": {
+    "hoja_productos_nuevos": "Altas",
+    "evidencia_hoja": "Altas",
+    "hojas_que_no_entran": [],
+    "columna_descripcion": "DESCRIPCION",
+    "columna_ean": "EAN",
+    "columna_precio": "P. COSTO",
+    "columna_contenido": "DESCRIPCION",
+    "columna_unidad": "DESCRIPCION",
+    "moneda": "UYU",
+    "evidencia_moneda": null,
+    "columnas_que_no_van": [
+      {
+        "columna": "OBS",
+        "motivo": "Observaciones libres (por ejemplo, 'PACK PROMO CON NECESER'); no es un dato del formulario."
+      }
+    ]
+  },
+  "costo_usd": 0.000483,
+  "stop_reason": "tool_use"
+}

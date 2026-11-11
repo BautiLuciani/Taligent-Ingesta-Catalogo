@@ -167,6 +167,26 @@ def separar_contenido(texto, separador_decimal: str = ",") -> tuple[float | None
     return cantidad, coincidencia.group(2).strip()
 
 
+def separar_contenido_del_final(texto, separador_decimal: str = ",") -> tuple[float | None, str | None, str | None]:
+    """Cuando el contenido viene escrito al FINAL de la descripción (semana 4: Rivera), lo separa del resto.
+
+    Devuelve (cantidad, unidad, resto). Ejemplos:
+      "ACOND. NATIVA LISO X 200 ML" -> (200.0, "ML", "ACOND. NATIVA LISO")
+      "SH. NATIVA COLOR 750cc" -> (750.0, "cc", "SH. NATIVA COLOR") · "TRAT. CAP. ALBORADA NUTRICION 0,5 KG" -> (0.5, "KG", ...)
+    Solo cuenta si la unidad es una de las conocidas (UNIDADES): "VITAMINA C 500 MG" no tiene contenido al final
+    (MG es una concentración) y "FPS 50" tampoco. Si no, (None, None, texto): no inventamos.
+    """
+    texto = "" if texto is None else " ".join(str(texto).split())
+    # Al final: una "X" opcional (suelta, no la de una palabra), el número y la unidad (puede ser de 2 palabras: "fl oz")
+    coincidencia = re.search(r"(?:(?<![A-Za-z0-9])[Xx]\s*)?(\d[\d.,]*)\s*([A-Za-z][A-Za-z.]*(?: [A-Za-z]{2})?)\s*$", texto)
+    if coincidencia is None:
+        return None, None, texto or None
+    cantidad, unidad = convertir_numero(coincidencia.group(1), separador_decimal), coincidencia.group(2).strip()
+    if convertir_contenido(cantidad, unidad) == (None, None):
+        return None, None, texto
+    return cantidad, unidad, texto[:coincidencia.start()].strip()
+
+
 def convertir_precio(texto, separador_decimal: str = ",") -> tuple[float | None, str | None]:
     """Separa un precio escrito con su moneda en (monto, moneda), según el estándar (sección 6).
 

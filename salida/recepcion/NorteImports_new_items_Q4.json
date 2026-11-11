@@ -1,0 +1,143 @@
+{
+  "archivo": "NorteImports_new_items_Q4.xlsx",
+  "receta": {
+    "formato": "excel",
+    "archivo": "NorteImports_new_items_Q4.xlsx",
+    "hoja": "New items",
+    "campos": {
+      "descripcion": "Description",
+      "ean": "UPC/EAN",
+      "precio": "Unit cost (USD)",
+      "contenido": "Size"
+    },
+    "contenido_en": "columna_con_unidad",
+    "separador_decimal": ".",
+    "moneda": "USD",
+    "decisiones": {
+      "evidencia_hoja": "New items",
+      "hojas_que_no_entran": [],
+      "columnas_que_no_van": [
+        {
+          "columna": "Origin",
+          "motivo": "Indica el país de origen del producto; no es un dato del formulario de alta."
+        }
+      ],
+      "evidencia_moneda": "Unit cost (USD)",
+      "evidencia_separador": "4.8 fl oz"
+    }
+  },
+  "controles": [
+    {
+      "control": "El modelo entregó el formulario",
+      "ok": true,
+      "detalle": ""
+    },
+    {
+      "control": "El formulario vino completo y bien armado",
+      "ok": true,
+      "detalle": ""
+    },
+    {
+      "control": "La hoja elegida existe y tiene productos",
+      "ok": true,
+      "detalle": ""
+    },
+    {
+      "control": "Cada hoja quedó decidida una sola vez (entra o no entra)",
+      "ok": true,
+      "detalle": ""
+    },
+    {
+      "control": "La hoja elegida no se llama como lo que no entra (estándar, sección 7)",
+      "ok": true,
+      "detalle": ""
+    },
+    {
+      "control": "La evidencia de la hoja está en el archivo",
+      "ok": true,
+      "detalle": ""
+    },
+    {
+      "control": "Todas las columnas nombradas son de esa hoja",
+      "ok": true,
+      "detalle": ""
+    },
+    {
+      "control": "Ninguna columna se usa para dos datos (salvo el contenido con su unidad o dentro de la descripción)",
+      "ok": true,
+      "detalle": ""
+    },
+    {
+      "control": "Ninguna columna se usa y a la vez figura en 'no van'",
+      "ok": true,
+      "detalle": ""
+    },
+    {
+      "control": "Ninguna columna queda sin decidir",
+      "ok": true,
+      "detalle": ""
+    },
+    {
+      "control": "Hay una columna de descripción",
+      "ok": true,
+      "detalle": ""
+    },
+    {
+      "control": "El separador decimal sale de los datos",
+      "ok": true,
+      "detalle": "'.', por '4.8 fl oz'"
+    },
+    {
+      "control": "«UPC/EAN» tiene forma de código de barras",
+      "ok": true,
+      "detalle": "14 de 14 filas"
+    },
+    {
+      "control": "«Unit cost (USD)» son números",
+      "ok": true,
+      "detalle": "14 de 14 filas"
+    },
+    {
+      "control": "Las columnas de contenido tienen sentido juntas",
+      "ok": true,
+      "detalle": ""
+    },
+    {
+      "control": "El contenido se puede calcular (columna_con_unidad)",
+      "ok": true,
+      "detalle": "14 de 14 filas"
+    },
+    {
+      "control": "La moneda coincide con lo que dice el archivo",
+      "ok": true,
+      "detalle": "eligió USD; el archivo menciona 'Unit cost (USD)'"
+    },
+    {
+      "control": "La evidencia de la moneda está en el archivo",
+      "ok": true,
+      "detalle": ""
+    }
+  ],
+  "problemas": [],
+  "avisos": [],
+  "propuesta": {
+    "hoja_productos_nuevos": "New items",
+    "evidencia_hoja": "New items",
+    "hojas_que_no_entran": [],
+    "columna_descripcion": "Description",
+    "columna_ean": "UPC/EAN",
+    "columna_precio": "Unit cost (USD)",
+    "columna_contenido": "Size",
+    "columna_unidad": "Size",
+    "moneda": "USD",
+    "evidencia_moneda": "Unit cost (USD)",
+    "columnas_que_no_van": [
+      {
+        "columna": "Origin",
+        "motivo": "Indica el país de origen del producto; no es un dato del formulario de alta."
+      }
+    ]
+  },
+  "costo_usd": 0.000452,
+  "stop_reason": "tool_use"
+}

@@ -13,6 +13,7 @@ from cuentas import (
     leer_fecha,
     normalizar_gtin,
     separar_contenido,
+    separar_contenido_del_final,
 )
 
 errores = 0
@@ -145,5 +146,21 @@ chequear("VL -> VENTA_LIBRE", convertir_condicion("VL"), "VENTA_LIBRE")
 chequear("VBR -> BAJO_RECETA", convertir_condicion(" vbr "), "BAJO_RECETA")
 chequear("Otra cosa: None (no se adivina)", convertir_condicion("Libre"), None)
 chequear("Vacío: None", convertir_condicion(None), None)
+
+print("--- separar_contenido_del_final (Rivera: el contenido al final de la descripción, semana 4) ---")
+chequear("RIV-1203 con X", separar_contenido_del_final("ACOND. NATIVA LISO X 200 ML"), (200.0, "ML", "ACOND. NATIVA LISO"))
+chequear("RIV-1215 cc pegado", separar_contenido_del_final("SH. NATIVA COLOR 750cc"), (750.0, "cc", "SH. NATIVA COLOR"))
+chequear("RIV-1218 ML pegado", separar_contenido_del_final("LACA BRISA FIJ. FUERTE 400ML"), (400.0, "ML", "LACA BRISA FIJ. FUERTE"))
+chequear("RIV-1275 coma decimal y KG", separar_contenido_del_final("TRAT. CAP. ALBORADA NUTRICION 0,5 KG"),
+         (0.5, "KG", "TRAT. CAP. ALBORADA NUTRICION"))
+chequear("Una X dentro de una palabra no se toma", separar_contenido_del_final("CREMA LUX 200 ML"), (200.0, "ML", "CREMA LUX"))
+chequear("En inglés, 2 palabras", separar_contenido_del_final("Body Lotion 16.9 fl oz", separador_decimal="."),
+         (16.9, "fl oz", "Body Lotion"))
+chequear("MG es concentración, no contenido", separar_contenido_del_final("VITAMINA C 500 MG"), (None, None, "VITAMINA C 500 MG"))
+chequear("Termina en un número sin unidad (FPS 50)", separar_contenido_del_final("PROTECTOR SOLAR FPS 50"),
+         (None, None, "PROTECTOR SOLAR FPS 50"))
+chequear("Vacío", separar_contenido_del_final(None), (None, None, None))
+chequear("Junto con convertir_contenido: 0,5 KG", convertir_contenido(*separar_contenido_del_final("TRAT. X 0,5 KG")[:2]),
+         (500, "G"))
 
 print(f"\nResultado: {'todo OK' if errores == 0 else f'{errores} con error'}")
