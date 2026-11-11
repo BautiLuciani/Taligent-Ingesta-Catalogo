@@ -107,42 +107,42 @@ PROVEEDORES_A_MANO = {
 # Dónde dejó sus resultados el recepcionista (recepcion.py). Tiene su variable de entorno: las pruebas la apuntan a
 # una copia congelada (referencias.py), porque cada recepción reescribe esta carpeta.
 CARPETA_RECEPCION = Path(os.getenv("INGESTA_CARPETA_RECEPCION", Path(__file__).parent / "salida" / "recepcion"))
-RUTA_PROVEEDORES_CSV = CARPETA_DATA / "proveedores" / "proveedores.csv"  # qué manda cada proveedor (la guía)
 APARTADOS = {"P06"}  # Bebé Feliz: apartado hasta la semana 5. Lo frena el código, no la memoria
 
 
 def proveedores_recibidos(carpeta_recepcion: Path = CARPETA_RECEPCION) -> dict[str, dict]:
-    """Los proveedores que entran SIN configuración a mano: un Excel suyo (según proveedores.csv) pasó por el
-    recepcionista y su resultado está en carpeta_recepcion/<archivo>.json.
+    """Los proveedores que entran SIN configuración a mano: los que tienen un Excel que pasó por el recepcionista.
 
-    Se arma la misma configuración que antes se escribía a mano: formato, archivo, receta, moneda y, si el proveedor
-    tiene carpeta fichas_de_seguridad, dónde van sus FDS leídas. Si la receta NO entró, el proveedor igual figura
-    (con receta None y sus problemas): así el chequeo entre etapas lo frena con el motivo, en vez de desaparecer.
-    Los de PROVEEDORES_A_MANO y los apartados no se tocan. Un Excel sin recepción todavía no cuenta.
+    Semana 4, paso 7: se arman desde los RESULTADOS de la recepción (carpeta_recepcion/<proveedor>_<archivo>.json),
+    que dicen de qué proveedor es el archivo y dónde está. Así entra también un archivo nuevo con otro nombre, en
+    Data/proveedores/ o en la bandeja entrada/ (antes se buscaba el nombre exacto en proveedores.csv).
+    Se arma la misma configuración que antes se escribía a mano: formato, archivo, receta, moneda y, si junto al
+    archivo hay una carpeta fichas_de_seguridad, dónde van sus FDS leídas. Si la receta NO entró, el proveedor igual
+    figura (con receta None y sus problemas): así el chequeo entre etapas lo frena con el motivo.
+    Los de PROVEEDORES_A_MANO y los apartados no se tocan. Las respuestas guardadas del modelo (*.receta_*.json) no
+    son resultados.
     """
     recibidos = {}
-    with open(RUTA_PROVEEDORES_CSV, encoding="utf-8-sig", newline="") as archivo:
-        for proveedor in csv.DictReader(archivo):
-            proveedor_id = proveedor["proveedor_id"]
-            if proveedor_id in PROVEEDORES_A_MANO or proveedor_id in APARTADOS:
-                continue
-            carpeta = CARPETA_DATA / "proveedores" / proveedor["carpeta"]
-            excels = [a.strip() for a in proveedor["archivos"].split("|") if a.strip().lower().endswith(".xlsx")]
-            for nombre in excels:
-                ruta_resultado = carpeta_recepcion / f"{Path(nombre).stem}.json"
-                if not ruta_resultado.exists():
-                    continue
-                resultado = json.loads(ruta_resultado.read_text(encoding="utf-8"))
-                receta = resultado["receta"]
-                config = {"formato": "excel", "archivo": carpeta / nombre, "receta": receta,
-                          "problemas_recepcion": resultado["problemas"],
-                          "moneda": receta["moneda"] if receta else None}
-                if (carpeta / "fichas_de_seguridad").is_dir():  # lo que va a dejar extractor_fds.py para esa carpeta
-                    config["fds"] = CARPETA_EXTRACCIONES / f"fds_{proveedor['carpeta']}.json"
-                if proveedor_id in recibidos:  # dos Excel del mismo proveedor: todavía no se sabe cruzarlos solos
-                    config["receta"] = None
-                    config["problemas_recepcion"] = [f"{proveedor_id} trae más de un Excel con receta: no se elige uno."]
-                recibidos[proveedor_id] = config
+    if not carpeta_recepcion.is_dir():
+        return recibidos
+    for ruta_resultado in sorted(carpeta_recepcion.glob("*.json")):
+        if ".receta_" in ruta_resultado.name:
+            continue
+        resultado = json.loads(ruta_resultado.read_text(encoding="utf-8"))
+        proveedor_id = resultado.get("proveedor_id")
+        if proveedor_id is None or proveedor_id in PROVEEDORES_A_MANO or proveedor_id in APARTADOS:
+            continue
+        archivo = Path(__file__).parent / resultado["ruta"]  # relativa al proyecto (o completa, si vino de afuera)
+        receta = resultado["receta"]
+        config = {"formato": "excel", "archivo": archivo, "receta": receta,
+                  "problemas_recepcion": resultado["problemas"], "moneda": receta["moneda"] if receta else None}
+        if (archivo.parent / "fichas_de_seguridad").is_dir():  # lo que va a dejar extractor_fds.py para esa carpeta
+            config["fds"] = CARPETA_EXTRACCIONES / f"fds_{archivo.parent.name}.json"
+        if proveedor_id in recibidos:  # dos archivos recibidos del mismo proveedor: no se sabe cruzarlos solos
+            config["receta"] = None
+            config["problemas_recepcion"] = [f"{proveedor_id} tiene más de un archivo recibido "
+                                             f"({recibidos[proveedor_id]['archivo'].name} y {archivo.name}): no se elige uno."]
+        recibidos[proveedor_id] = config
     return recibidos
 
 
@@ -587,6 +587,8 @@ def problemas_de_lectura(config: dict) -> list[str]:
     """
     problemas = []
     if config.get("formato") == "excel":  # semana 4: un proveedor que entró solo
+        if not config["archivo"].exists():
+            problemas.append(f"{config['archivo'].name}: el archivo recibido ya no está en {config['archivo'].parent}")
         if config["receta"] is None:
             problemas += [f"{config['archivo'].name}: la receta no entró en la recepción: {problema}"
                           for problema in config["problemas_recepcion"]] or [f"{config['archivo'].name}: sin receta"]

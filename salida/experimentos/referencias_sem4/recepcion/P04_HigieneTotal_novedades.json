@@ -1,29 +1,37 @@
 {
-  "archivo": "NorteImports_new_items_Q4.xlsx",
+  "proveedor_id": "P04",
+  "archivo": "HigieneTotal_novedades.xlsx",
+  "ruta": "Data/proveedores/P04_Higiene_Total/HigieneTotal_novedades.xlsx",
   "receta": {
     "formato": "excel",
-    "archivo": "NorteImports_new_items_Q4.xlsx",
-    "hoja": "New items",
+    "archivo": "HigieneTotal_novedades.xlsx",
+    "hoja": "Altas",
     "campos": {
-      "descripcion": "Description",
-      "ean": "UPC/EAN",
-      "precio": "Unit cost (USD)",
-      "contenido": "Size"
+      "descripcion": "Descripcion",
+      "ean": "EAN13",
+      "precio": "Costo",
+      "contenido": "Cont.",
+      "unidad": "UM"
     },
-    "contenido_en": "columna_con_unidad",
-    "separador_decimal": ".",
-    "moneda": "USD",
+    "contenido_en": "cantidad_y_unidad_separadas",
+    "separador_decimal": ",",
+    "moneda": "UYU",
     "decisiones": {
-      "evidencia_hoja": "New items",
-      "hojas_que_no_entran": [],
-      "columnas_que_no_van": [
+      "evidencia_hoja": "Altas",
+      "hojas_que_no_entran": [
         {
-          "columna": "Origin",
-          "motivo": "Indica el país de origen del producto; no es un dato del formulario de alta."
+          "hoja": "Discontinuados",
+          "motivo": "Productos discontinuados, dados de baja; no son productos nuevos y no se cargan."
         }
       ],
-      "evidencia_moneda": "Unit cost (USD)",
-      "evidencia_separador": "4.8 fl oz"
+      "columnas_que_no_van": [
+        {
+          "columna": "Item",
+          "motivo": "Es el código interno del proveedor (p. ej. HT40003), no es un dato del formulario. Figura como columna_codigo en el resumen."
+        }
+      ],
+      "evidencia_moneda": null,
+      "evidencia_separador": null
     }
   },
   "controles": [
@@ -85,17 +93,17 @@
     {
       "control": "El separador decimal sale de los datos",
       "ok": true,
-      "detalle": "'.', por '4.8 fl oz'"
+      "detalle": "ningún decimal escrito como texto: ',' (estándar, sección 4)"
     },
     {
-      "control": "«UPC/EAN» tiene forma de código de barras",
+      "control": "«EAN13» tiene forma de código de barras",
       "ok": true,
-      "detalle": "14 de 14 filas"
+      "detalle": "23 de 23 filas"
     },
     {
-      "control": "«Unit cost (USD)» son números",
+      "control": "«Costo» son números",
       "ok": true,
-      "detalle": "14 de 14 filas"
+      "detalle": "28 de 28 filas"
     },
     {
       "control": "Las columnas de contenido tienen sentido juntas",
@@ -103,41 +111,41 @@
       "detalle": ""
     },
     {
-      "control": "El contenido se puede calcular (columna_con_unidad)",
+      "control": "El contenido se puede calcular (cantidad_y_unidad_separadas)",
       "ok": true,
-      "detalle": "14 de 14 filas"
+      "detalle": "28 de 28 filas"
     },
     {
       "control": "La moneda coincide con lo que dice el archivo",
       "ok": true,
-      "detalle": "eligió USD; el archivo menciona 'Unit cost (USD)'"
-    },
-    {
-      "control": "La evidencia de la moneda está en el archivo",
-      "ok": true,
-      "detalle": ""
+      "detalle": "eligió UYU; el archivo no menciona dólares"
     }
   ],
   "problemas": [],
   "avisos": [],
   "propuesta": {
-    "hoja_productos_nuevos": "New items",
-    "evidencia_hoja": "New items",
-    "hojas_que_no_entran": [],
-    "columna_descripcion": "Description",
-    "columna_ean": "UPC/EAN",
-    "columna_precio": "Unit cost (USD)",
-    "columna_contenido": "Size",
-    "columna_unidad": "Size",
-    "moneda": "USD",
-    "evidencia_moneda": "Unit cost (USD)",
+    "hoja_productos_nuevos": "Altas",
+    "evidencia_hoja": "Altas",
+    "hojas_que_no_entran": [
+      {
+        "hoja": "Discontinuados",
+        "motivo": "Productos discontinuados, dados de baja; no son productos nuevos y no se cargan."
+      }
+    ],
+    "columna_descripcion": "Descripcion",
+    "columna_ean": "EAN13",
+    "columna_precio": "Costo",
+    "columna_contenido": "Cont.",
+    "columna_unidad": "UM",
+    "moneda": "UYU",
+    "evidencia_moneda": null,
     "columnas_que_no_van": [
       {
-        "columna": "Origin",
-        "motivo": "Indica el país de origen del producto; no es un dato del formulario de alta."
+        "columna": "Item",
+        "motivo": "Es el código interno del proveedor (p. ej. HT40003), no es un dato del formulario. Figura como columna_codigo en el resumen."
       }
     ]
   },
-  "costo_usd": 0.000452,
+  "costo_usd": 0.000531,
   "stop_reason": "tool_use"
 }

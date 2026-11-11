@@ -1,28 +1,31 @@
 {
-  "archivo": "ALTAS RIVERA OCT.xlsx",
+  "proveedor_id": "P08",
+  "archivo": "NorteImports_new_items_Q4.xlsx",
+  "ruta": "Data/proveedores/P08_Importadora_Norte/NorteImports_new_items_Q4.xlsx",
   "receta": {
     "formato": "excel",
-    "archivo": "ALTAS RIVERA OCT.xlsx",
-    "hoja": "Altas",
+    "archivo": "NorteImports_new_items_Q4.xlsx",
+    "hoja": "New items",
     "campos": {
-      "descripcion": "DESCRIPCION",
-      "ean": "EAN",
-      "precio": "P. COSTO"
+      "descripcion": "Description",
+      "ean": "UPC/EAN",
+      "precio": "Unit cost (USD)",
+      "contenido": "Size"
     },
-    "contenido_en": "dentro_de_la_descripcion",
-    "separador_decimal": ",",
-    "moneda": "UYU",
+    "contenido_en": "columna_con_unidad",
+    "separador_decimal": ".",
+    "moneda": "USD",
     "decisiones": {
-      "evidencia_hoja": "Altas",
+      "evidencia_hoja": "New items",
       "hojas_que_no_entran": [],
       "columnas_que_no_van": [
         {
-          "columna": "OBS",
-          "motivo": "Observaciones libres (por ejemplo, 'PACK PROMO CON NECESER'); no es un dato del formulario."
+          "columna": "Origin",
+          "motivo": "Indica el país de origen del producto; no es un dato del formulario de alta."
         }
       ],
-      "evidencia_moneda": null,
-      "evidencia_separador": "TRAT. CAP. ALBORADA NUTRICION 0,5 KG"
+      "evidencia_moneda": "Unit cost (USD)",
+      "evidencia_separador": "4.8 fl oz"
     }
   },
   "controles": [
@@ -84,17 +87,17 @@
     {
       "control": "El separador decimal sale de los datos",
       "ok": true,
-      "detalle": "',', por 'TRAT. CAP. ALBORADA NUTRICION 0,5 KG'"
+      "detalle": "'.', por '4.8 fl oz'"
     },
     {
-      "control": "«EAN» tiene forma de código de barras",
+      "control": "«UPC/EAN» tiene forma de código de barras",
       "ok": true,
-      "detalle": "50 de 50 filas"
+      "detalle": "14 de 14 filas"
     },
     {
-      "control": "«P. COSTO» son números",
+      "control": "«Unit cost (USD)» son números",
       "ok": true,
-      "detalle": "50 de 50 filas"
+      "detalle": "14 de 14 filas"
     },
     {
       "control": "Las columnas de contenido tienen sentido juntas",
@@ -102,36 +105,41 @@
       "detalle": ""
     },
     {
-      "control": "El contenido se puede calcular (dentro_de_la_descripcion)",
+      "control": "El contenido se puede calcular (columna_con_unidad)",
       "ok": true,
-      "detalle": "50 de 50 filas"
+      "detalle": "14 de 14 filas"
     },
     {
       "control": "La moneda coincide con lo que dice el archivo",
       "ok": true,
-      "detalle": "eligió UYU; el archivo no menciona dólares"
+      "detalle": "eligió USD; el archivo menciona 'Unit cost (USD)'"
+    },
+    {
+      "control": "La evidencia de la moneda está en el archivo",
+      "ok": true,
+      "detalle": ""
     }
   ],
   "problemas": [],
   "avisos": [],
   "propuesta": {
-    "hoja_productos_nuevos": "Altas",
-    "evidencia_hoja": "Altas",
+    "hoja_productos_nuevos": "New items",
+    "evidencia_hoja": "New items",
     "hojas_que_no_entran": [],
-    "columna_descripcion": "DESCRIPCION",
-    "columna_ean": "EAN",
-    "columna_precio": "P. COSTO",
-    "columna_contenido": "DESCRIPCION",
-    "columna_unidad": "DESCRIPCION",
-    "moneda": "UYU",
-    "evidencia_moneda": null,
+    "columna_descripcion": "Description",
+    "columna_ean": "UPC/EAN",
+    "columna_precio": "Unit cost (USD)",
+    "columna_contenido": "Size",
+    "columna_unidad": "Size",
+    "moneda": "USD",
+    "evidencia_moneda": "Unit cost (USD)",
     "columnas_que_no_van": [
       {
-        "columna": "OBS",
-        "motivo": "Observaciones libres (por ejemplo, 'PACK PROMO CON NECESER'); no es un dato del formulario."
+        "columna": "Origin",
+        "motivo": "Indica el país de origen del producto; no es un dato del formulario de alta."
       }
     ]
   },
-  "costo_usd": 0.000483,
+  "costo_usd": 0.000452,
   "stop_reason": "tool_use"
 }

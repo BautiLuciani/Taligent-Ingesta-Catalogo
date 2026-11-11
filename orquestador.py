@@ -65,6 +65,7 @@ from escritor import mostrar as mostrar_escritura
 from extractor_fds import extraer_fds
 from extractor_folleto import extraer_folleto
 from extractor_pdf import TOPE_LLAMADAS, extraer_pdf
+from servidor_mcp import PROVEEDORES as HABILITADOS  # ya lo carga el escritor; acá se usa para saber quién se procesa
 
 CARPETA_PROYECTO = Path(__file__).parent
 CARPETA_SALIDA = CARPETA_PROYECTO / "salida"
@@ -81,8 +82,12 @@ TRABAJOS_DE_LECTURA = [
 ]
 LECTORES = {"pdf": extraer_pdf, "fds": extraer_fds, "folleto": extraer_folleto}
 
-# Los proveedores que se procesan esta semana (P06 está apartado hasta la semana 5). P09 entra en el paso 7
-PROVEEDORES = ["P03", "P07", "P01", "P05", "P09"]
+# Los proveedores que se procesan (semana 4, paso 7): TODOS los habilitados del servidor, los escritos a mano (semanas
+# 1 a 3) y los que entraron solos por el recepcionista. Antes era una lista fija: un proveedor nuevo quedaba afuera.
+# P06 no está: el servidor no lo habilita (apartado hasta la semana 5).
+# Ojo: las FDS de un proveedor recibido las lee la bandeja ANTES (vigilar.py). Este módulo carga el servidor al
+# arrancar (vía el escritor), y si sus FDS faltaran recién se leerían acá, el servidor ya cargado no lo sabría.
+PROVEEDORES = list(HABILITADOS)
 
 # Cuántos fichadores a la vez. Lo decidió el paso 2 con los límites de la cuenta: con 4 se pasa el límite de
 # tokens de SALIDA por minuto (80.000; el thinking cuenta como salida). Más fichadores no es más rápido: es 429.
@@ -438,7 +443,8 @@ def main():
     proveedores = opciones.proveedores
     desconocidos = [proveedor_id for proveedor_id in proveedores if proveedor_id not in PROVEEDORES]
     if desconocidos:
-        sys.exit(f"ERROR: {', '.join(desconocidos)} no se procesa esta semana. Se puede: {', '.join(PROVEEDORES)}")
+        sys.exit(f"ERROR: {', '.join(desconocidos)} no está habilitado (ni escrito a mano ni recibido por el "
+                 f"recepcionista). Se puede: {', '.join(PROVEEDORES)}")
 
     load_dotenv(CARPETA_PROYECTO / ".env")
     modelo = os.getenv("MODELO")
@@ -488,7 +494,7 @@ def main():
     mostrar_escritura(informe)
     if opciones.fichas:  # la medición, una por cantidad de fichadores (para comparar en el paso 8)
         fichas["escritor"] = informe
-        sufijo = "" if proveedores == PROVEEDORES else "_" + "_".join(proveedores)  # una corrida parcial no pisa la completa
+        sufijo = "" if set(proveedores) == set(PROVEEDORES) else "_" + "_".join(proveedores)  # una parcial no pisa la completa
         sufijo += "_detector" if opciones.detector else ""
         ruta = CARPETA_SALIDA / f"medicion_fichas_{opciones.fichadores}{sufijo}.json"
         ruta.write_text(json.dumps(fichas, ensure_ascii=False, indent=2), encoding="utf-8")

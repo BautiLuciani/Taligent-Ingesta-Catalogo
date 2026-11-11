@@ -51,8 +51,8 @@ chequear("4 trabajos de 0,3 a 0,5 s: a la vez tardan lo que el más lento (~0,5 
          (etapa["segundos"] < 0.9, etapa["segundos_uno_detras_de_otro"] >= 1.6), (True, True))
 chequear("...todos empiezan juntos (carriles en paralelo)", all(l["inicio"] < 0.2 for l in etapa["lecturas"]), True)
 chequear("...el costo suma el de cada uno (número o detalle con 'total')", etapa["costo_usd"], 0.029)
-chequear("...y con las lecturas limpias, siguen los 5 proveedores", (etapa["siguen"], etapa["frenados"]),
-         (["P03", "P07", "P01", "P05", "P09"], {}))
+chequear("...y con las lecturas limpias, siguen todos (los 5 de antes + los 3 que entraron solos)",
+         (etapa["siguen"], etapa["frenados"]), (["P03", "P07", "P01", "P05", "P09", "P02", "P04", "P08"], {}))
 
 print("--- un lector que falla: se anota, no tira abajo a los demás (fan-in) ---")
 orquestador.LECTORES.update({"pdf": lector_falso(0.3, {"total": 0.01}), "fds": lector_falso(0.3, 0.005),
@@ -65,7 +65,7 @@ folleto = next(l for l in etapa["lecturas"] if l["tipo"] == "folleto")
 chequear("El error del folleto queda anotado, con su tipo", folleto["error"], "RuntimeError: no quedó ninguna fila")
 chequear("...Dermalab (P05) queda frenado con ese motivo",
          etapa["frenados"], {"P05": ["Dermalab_lanzamientos_2026.pdf: RuntimeError: no quedó ninguna fila"]})
-chequear("...y los otros 4 siguen igual", etapa["siguen"], ["P03", "P07", "P01", "P09"])
+chequear("...y los otros siguen igual", etapa["siguen"], ["P03", "P07", "P01", "P09", "P02", "P04", "P08"])
 
 print("--- Natural Vida (paso 7): un mail que lee el código ---")
 etapa = orquestador.etapa_lectura(None, "modelo", de_nuevo=False, proveedores=["P09"])
@@ -236,5 +236,10 @@ chequear("...LHS-203: no falta (la A lo propuso), pero queda sin segunda opinió
 chequear("Los que coinciden van sin marca", "inestable" in propuestas["P03:LT-3303"], False)
 chequear("Faltan solo las 8 de la tanda que se cayó en A y en B", len(con_detector["faltan"]), 8)
 shutil.rmtree(carpeta, ignore_errors=True)
+
+print("--- semana 4, paso 7: el orquestador procesa a TODOS los habilitados del servidor ---")
+chequear("Los 5 de antes + los 3 que entraron solos (recetas congeladas)", orquestador.PROVEEDORES,
+         ["P03", "P07", "P01", "P05", "P09", "P02", "P04", "P08"])
+chequear("Bebé Feliz no (el servidor no lo habilita)", "P06" in orquestador.PROVEEDORES, False)
 
 print(f"\nResultado: {'todo OK' if errores == 0 else f'{errores} con error'}")

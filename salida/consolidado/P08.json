@@ -1,0 +1,371 @@
+{
+  "proveedor_id": "P08",
+  "filas": [
+    {
+      "item_id": "P08:IN7003",
+      "fuente": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 2
+      },
+      "original": {
+        "Description": "Pure Care Original Dry Shampoo",
+        "Size": "4.8 fl oz",
+        "UPC/EAN": "229962606567",
+        "Unit cost (USD)": 5.17,
+        "Origin": "USA"
+      },
+      "calculado": {
+        "gtin": "0229962606567",
+        "motivo_gtin": null,
+        "descripcion_expandida": "PURE CARE ORIGINAL DRY SHAMPOO",
+        "contenido": 142,
+        "unidad": "ML",
+        "precio_costo": 5.17,
+        "moneda": "USD",
+        "fds": {
+          "peligro_deposito": "aerosol_inflamable",
+          "numero_onu": "1950",
+          "fuente": {
+            "archivo": "FDS_PureCare_in_sec.pdf",
+            "pagina": 1
+          },
+          "problemas": []
+        }
+      }
+    },
+    {
+      "item_id": "P08:IN7006",
+      "fuente": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 3
+      },
+      "original": {
+        "Description": "Sunguard Sport Spf 50 Sunscreen Lotion",
+        "Size": "8.0 fl oz",
+        "UPC/EAN": "856606869455",
+        "Unit cost (USD)": 7.6,
+        "Origin": "USA"
+      },
+      "calculado": {
+        "gtin": "0856606869455",
+        "motivo_gtin": null,
+        "descripcion_expandida": "SUNGUARD SPORT SPF 50 SUNSCREEN LOTION",
+        "contenido": 237,
+        "unidad": "ML",
+        "precio_costo": 7.6,
+        "moneda": "USD",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P08:IN7009",
+      "fuente": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 4
+      },
+      "original": {
+        "Description": "Pure Care Intensive Hands Hand Cream",
+        "Size": "8 oz",
+        "UPC/EAN": "921365957672",
+        "Unit cost (USD)": 5.28,
+        "Origin": "USA"
+      },
+      "calculado": {
+        "gtin": "0921365957672",
+        "motivo_gtin": null,
+        "descripcion_expandida": "PURE CARE INTENSIVE HANDS HAND CREAM",
+        "contenido": 227,
+        "unidad": "G",
+        "precio_costo": 5.28,
+        "moneda": "USD",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P08:IN7012",
+      "fuente": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 5
+      },
+      "original": {
+        "Description": "Vitalis Vitamin D3 2000 IU Softgels",
+        "Size": "120 ct",
+        "UPC/EAN": "316401081426",
+        "Unit cost (USD)": 10.66,
+        "Origin": "USA"
+      },
+      "calculado": {
+        "gtin": "0316401081426",
+        "motivo_gtin": null,
+        "descripcion_expandida": "VITALIS VITAMIN D3 2000 IU SOFTGELS",
+        "contenido": 120,
+        "unidad": "UN",
+        "precio_costo": 10.66,
+        "moneda": "USD",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P08:IN7015",
+      "fuente": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 6
+      },
+      "original": {
+        "Description": "Pure Care Sensitive Shave Gel",
+        "Size": "6.7 fl oz",
+        "UPC/EAN": "317169955172",
+        "Unit cost (USD)": 3.89,
+        "Origin": "USA"
+      },
+      "calculado": {
+        "gtin": "0317169955172",
+        "motivo_gtin": null,
+        "descripcion_expandida": "PURE CARE SENSITIVE SHAVE GEL",
+        "contenido": 198,
+        "unidad": "ML",
+        "precio_costo": 3.89,
+        "moneda": "USD",
+        "fds": {
+          "peligro_deposito": "aerosol_inflamable",
+          "numero_onu": "1950",
+          "fuente": {
+            "archivo": "FDS_PureCare_in_afe.pdf",
+            "pagina": 1
+          },
+          "problemas": []
+        }
+      }
+    },
+    {
+      "item_id": "P08:IN7018",
+      "fuente": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 7
+      },
+      "original": {
+        "Description": "Pure Care Cool Mint Mouthwash",
+        "Size": "16.9 fl oz",
+        "UPC/EAN": "013232310571",
+        "Unit cost (USD)": 4.41,
+        "Origin": "USA"
+      },
+      "calculado": {
+        "gtin": "0013232310571",
+        "motivo_gtin": null,
+        "descripcion_expandida": "PURE CARE COOL MINT MOUTHWASH",
+        "contenido": 500,
+        "unidad": "ML",
+        "precio_costo": 4.41,
+        "moneda": "USD",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P08:IN7021",
+      "fuente": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 8
+      },
+      "original": {
+        "Description": "Vitalis Multivitamin Tablets",
+        "Size": "100 ct",
+        "UPC/EAN": "366254962564",
+        "Unit cost (USD)": 9.39,
+        "Origin": "USA"
+      },
+      "calculado": {
+        "gtin": "0366254962564",
+        "motivo_gtin": null,
+        "descripcion_expandida": "VITALIS MULTIVITAMIN TABLETS",
+        "contenido": 100,
+        "unidad": "UN",
+        "precio_costo": 9.39,
+        "moneda": "USD",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P08:IN7024",
+      "fuente": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 9
+      },
+      "original": {
+        "Description": "Pure Care Shea Butter Body Lotion",
+        "Size": "10.0 fl oz",
+        "UPC/EAN": "103763096362",
+        "Unit cost (USD)": 4.18,
+        "Origin": "USA"
+      },
+      "calculado": {
+        "gtin": "0103763096362",
+        "motivo_gtin": null,
+        "descripcion_expandida": "PURE CARE SHEA BUTTER BODY LOTION",
+        "contenido": 296,
+        "unidad": "ML",
+        "precio_costo": 4.18,
+        "moneda": "USD",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P08:IN7027",
+      "fuente": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 10
+      },
+      "original": {
+        "Description": "Vitalis Vitamin D3 1000 IU Softgels",
+        "Size": "60 ct",
+        "UPC/EAN": "013573386723",
+        "Unit cost (USD)": 6.98,
+        "Origin": "USA"
+      },
+      "calculado": {
+        "gtin": "0013573386723",
+        "motivo_gtin": null,
+        "descripcion_expandida": "VITALIS VITAMIN D3 1000 IU SOFTGELS",
+        "contenido": 60,
+        "unidad": "UN",
+        "precio_costo": 6.98,
+        "moneda": "USD",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P08:IN7030",
+      "fuente": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 11
+      },
+      "original": {
+        "Description": "Vitalis Vitamin D3 2000 IU Softgels",
+        "Size": "60 ct",
+        "UPC/EAN": "185187720344",
+        "Unit cost (USD)": 6.92,
+        "Origin": "USA"
+      },
+      "calculado": {
+        "gtin": "0185187720344",
+        "motivo_gtin": null,
+        "descripcion_expandida": "VITALIS VITAMIN D3 2000 IU SOFTGELS",
+        "contenido": 60,
+        "unidad": "UN",
+        "precio_costo": 6.92,
+        "moneda": "USD",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P08:IN7033",
+      "fuente": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 12
+      },
+      "original": {
+        "Description": "Pure Care Shea Butter Body Lotion",
+        "Size": "16.9 fl oz",
+        "UPC/EAN": "363641316245",
+        "Unit cost (USD)": 7.13,
+        "Origin": "USA"
+      },
+      "calculado": {
+        "gtin": "0363641316245",
+        "motivo_gtin": null,
+        "descripcion_expandida": "PURE CARE SHEA BUTTER BODY LOTION",
+        "contenido": 500,
+        "unidad": "ML",
+        "precio_costo": 7.13,
+        "moneda": "USD",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P08:IN7036",
+      "fuente": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 13
+      },
+      "original": {
+        "Description": "Pure Care Daily Moisture Body Lotion",
+        "Size": "16.9 fl oz",
+        "UPC/EAN": "640503396233",
+        "Unit cost (USD)": 6.08,
+        "Origin": "USA"
+      },
+      "calculado": {
+        "gtin": "0640503396233",
+        "motivo_gtin": null,
+        "descripcion_expandida": "PURE CARE DAILY MOISTURE BODY LOTION",
+        "contenido": 500,
+        "unidad": "ML",
+        "precio_costo": 6.08,
+        "moneda": "USD",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P08:IN7039",
+      "fuente": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 14
+      },
+      "original": {
+        "Description": "Pure Care Daily Moisture Body Lotion",
+        "Size": "10.0 fl oz",
+        "UPC/EAN": "748618345709",
+        "Unit cost (USD)": 4.64,
+        "Origin": "USA"
+      },
+      "calculado": {
+        "gtin": "0748618345709",
+        "motivo_gtin": null,
+        "descripcion_expandida": "PURE CARE DAILY MOISTURE BODY LOTION",
+        "contenido": 296,
+        "unidad": "ML",
+        "precio_costo": 4.64,
+        "moneda": "USD",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P08:IN7042",
+      "fuente": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 15
+      },
+      "original": {
+        "Description": "Vitalis Vitamin D3 1000 IU Softgels",
+        "Size": "120 ct",
+        "UPC/EAN": "718168608562",
+        "Unit cost (USD)": 10.46,
+        "Origin": "USA"
+      },
+      "calculado": {
+        "gtin": "0718168608562",
+        "motivo_gtin": null,
+        "descripcion_expandida": "VITALIS VITAMIN D3 1000 IU SOFTGELS",
+        "contenido": 120,
+        "unidad": "UN",
+        "precio_costo": 10.46,
+        "moneda": "USD",
+        "fds": null
+      }
+    }
+  ]
+}

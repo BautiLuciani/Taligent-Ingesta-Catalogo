@@ -16,6 +16,7 @@ Partes:
 Correr: python recepcion.py "Data/proveedores/P08_Importadora_Norte/NorteImports_new_items_Q4.xlsx" [--de-nuevo]
 """
 import argparse
+import csv
 import json
 import os
 import re
@@ -461,30 +462,58 @@ def verificar_receta(resumen: dict, propuesta: dict | None, ruta_excel: Path) ->
 
 # --- 2D · Todo junto ---
 
+CARPETA_PROYECTO = Path(__file__).parent
+RUTA_PROVEEDORES_CSV = CARPETA_PROYECTO / "Data" / "proveedores" / "proveedores.csv"  # qué carpeta es de quién
 # El proveedor apartado hasta la semana 5 (la guía pide no usarlo para ajustar el sistema). Lo frena el código.
-CARPETAS_APARTADAS = ("P06_Bebe_Feliz",)
+APARTADOS = {"P06"}
+
+
+def proveedor_de_la_ruta(ruta) -> str | None:
+    """De qué proveedor es un archivo (semana 4, paso 7): por la CARPETA donde está, que tiene que ser la de un
+    proveedor de proveedores.csv (P08_Importadora_Norte, en Data/proveedores/ o en entrada/). None si no es ninguna.
+    Saber quién mandó el archivo es un dato, no criterio: no se le pregunta al modelo."""
+    with open(RUTA_PROVEEDORES_CSV, encoding="utf-8-sig", newline="") as archivo:
+        por_carpeta = {fila["carpeta"]: fila["proveedor_id"] for fila in csv.DictReader(archivo)}
+    return por_carpeta.get(Path(ruta).resolve().parent.name)
+
+
+def ruta_relativa(ruta) -> str:
+    """La ruta del archivo desde la carpeta del proyecto ("entrada/P08_.../x.xlsx"): así el resultado sirve igual en
+    la PC y en la notebook. Si el archivo está fuera del proyecto, queda la ruta completa."""
+    try:
+        return Path(ruta).resolve().relative_to(CARPETA_PROYECTO.resolve()).as_posix()
+    except ValueError:
+        return Path(ruta).resolve().as_posix()  # con "/" también en Windows: la misma forma en todas las máquinas
 
 
 def recibir(cliente, modelo: str, ruta_excel: Path, de_nuevo: bool = False, carpeta: Path = CARPETA_RECEPCION) -> dict:
     """Recibe un Excel: resumen -> propuesta del modelo -> controles del código. Guarda y devuelve el resultado.
 
-    Devuelve {"archivo", "receta" (o None si no entra), "problemas", "avisos", "controles", "propuesta", "costo_usd"}.
-    Se guarda ENTERO en <carpeta>/<archivo>.json, entre o no entre: si no entra, el motivo queda a la vista.
+    Devuelve {"proveedor_id", "archivo", "ruta", "receta" (o None si no entra), "problemas", "avisos", "controles",
+    "propuesta", "costo_usd"}. Se guarda ENTERO en <carpeta>/<proveedor>_<archivo>.json, entre o no entre: si no
+    entra, el motivo queda a la vista. El servidor arma los proveedores que entran solos desde estos resultados
+    (paso 7: no desde los nombres de proveedores.csv, así un archivo con otro nombre también entra).
     """
     ruta_excel = Path(ruta_excel)
-    if any(parte in CARPETAS_APARTADAS for parte in ruta_excel.parts):
-        raise ValueError(f"{ruta_excel.name} es del proveedor apartado hasta la semana 5: no se procesa.")
+    proveedor_id = proveedor_de_la_ruta(ruta_excel)
+    if proveedor_id is None:
+        raise ValueError(f"{ruta_excel.name}: no se sabe de qué proveedor es. Tiene que estar en la carpeta de un "
+                         "proveedor (la que dice proveedores.csv, ej. entrada/P08_Importadora_Norte/).")
+    if proveedor_id in APARTADOS:
+        raise ValueError(f"{ruta_excel.name} es de {proveedor_id}, el proveedor apartado hasta la semana 5: no se procesa.")
     resumen, respuesta, propuesta = receta_propuesta(cliente, modelo, ruta_excel, de_nuevo, carpeta)
     verificacion = verificar_receta(resumen, propuesta, ruta_excel)
-    resultado = {"archivo": ruta_excel.name, **verificacion, "propuesta": propuesta,
+    resultado = {"proveedor_id": proveedor_id, "archivo": ruta_excel.name, "ruta": ruta_relativa(ruta_excel),
+                 **verificacion, "propuesta": propuesta,
                  "costo_usd": round(costo_usd(respuesta), 6), "stop_reason": respuesta["stop_reason"]}
-    (carpeta / f"{ruta_excel.stem}.json").write_text(json.dumps(resultado, ensure_ascii=False, indent=2), encoding="utf-8")
+    ruta_resultado = carpeta / f"{proveedor_id}_{ruta_excel.stem}.json"
+    ruta_resultado.write_text(json.dumps(resultado, ensure_ascii=False, indent=2), encoding="utf-8")
     return resultado
 
 
 def mostrar(resultado: dict) -> None:
     """Imprime lo que decidió el modelo y lo que controló el código."""
-    print(f"\n=== {resultado['archivo']} — {'ENTRA ✅' if resultado['receta'] else 'NO ENTRA ⛔'}"
+    print(f"\n=== {resultado['proveedor_id']} · {resultado['archivo']} — {'ENTRA ✅' if resultado['receta'] else 'NO ENTRA ⛔'}"
           f"  (US$ {resultado['costo_usd']:.4f}, {resultado['stop_reason']})")
     propuesta = resultado["propuesta"] or {}
     if propuesta:  # .get: si vino mal armado, igual se muestra lo que haya (el motivo está en los controles)

@@ -146,8 +146,8 @@ chequear("Higiene Total no tiene FDS: ninguno con ficha", sum(1 for f in servido
                                                              if f["calculado"]["fds"]), 0)
 
 carpeta = Path(tempfile.mkdtemp())
-resultado = json.loads((servidor_mcp.CARPETA_RECEPCION / "HigieneTotal_novedades.json").read_text(encoding="utf-8"))
-(carpeta / "HigieneTotal_novedades.json").write_text(json.dumps(
+resultado = json.loads((servidor_mcp.CARPETA_RECEPCION / "P04_HigieneTotal_novedades.json").read_text(encoding="utf-8"))
+(carpeta / "P04_HigieneTotal_novedades.json").write_text(json.dumps(
     {**resultado, "receta": None, "problemas": ["La moneda coincide con lo que dice el archivo"]}), encoding="utf-8")
 recibidos = servidor_mcp.proveedores_recibidos(carpeta)
 chequear("Una receta que NO entró: el proveedor figura igual (no desaparece en silencio)", list(recibidos), ["P04"])
@@ -155,6 +155,38 @@ chequear("...y el chequeo lo frena con el motivo de la recepción",
          "la receta no entró" in servidor_mcp.problemas_de_lectura(recibidos["P04"])[0], True)
 chequear("...y no da filas", servidor_mcp.leer_filas("P04", recibidos["P04"]), [])
 chequear("Sin recepciones, nadie entra solo", servidor_mcp.proveedores_recibidos(Path(tempfile.mkdtemp())), {})
+shutil.rmtree(carpeta, ignore_errors=True)
+
+print("--- 7A · los proveedores salen de los RESULTADOS de la recepción (archivo nuevo, con otro nombre, en la bandeja) ---")
+carpeta = Path(tempfile.mkdtemp())
+bandeja = carpeta / "entrada" / "P08_Importadora_Norte"
+bandeja.mkdir(parents=True)
+nuevo = bandeja / "Norte_altas_Q1_2027.xlsx"  # otro nombre: no figura en proveedores.csv
+shutil.copyfile(ARCHIVOS["P08"][0], nuevo)
+recepcion_bandeja = carpeta / "recepcion"
+recepcion_bandeja.mkdir()
+resultado = json.loads((servidor_mcp.CARPETA_RECEPCION / "P08_NorteImports_new_items_Q4.json").read_text(encoding="utf-8"))
+(recepcion_bandeja / "P08_Norte_altas_Q1_2027.json").write_text(json.dumps(
+    {**resultado, "archivo": nuevo.name, "ruta": str(nuevo)}), encoding="utf-8")
+recibidos = servidor_mcp.proveedores_recibidos(recepcion_bandeja)
+chequear("Un archivo con otro nombre, en la bandeja: P08 entra igual", (list(recibidos), recibidos["P08"]["archivo"]),
+         (["P08"], nuevo))
+filas_bandeja = servidor_mcp.leer_filas("P08", recibidos["P08"])
+chequear("...y el servidor lo lee desde ahí (14 filas, con ese archivo como fuente)",
+         (len(filas_bandeja), filas_bandeja[0]["fuente"]["archivo"]), (14, "Norte_altas_Q1_2027.xlsx"))
+chequear("Sin carpeta fichas_de_seguridad al lado, no se le buscan FDS", "fds" in recibidos["P08"], False)
+(recepcion_bandeja / "P08_NorteImports_new_items_Q4.json").write_text(json.dumps(resultado), encoding="utf-8")
+dos = servidor_mcp.proveedores_recibidos(recepcion_bandeja)["P08"]
+chequear("Dos archivos recibidos del mismo proveedor: no se elige uno (lo frena el chequeo)",
+         (dos["receta"], any("más de un archivo recibido" in p for p in servidor_mcp.problemas_de_lectura(dos))), (None, True))
+(recepcion_bandeja / "P08_NorteImports_new_items_Q4.json").unlink()
+nuevo.unlink()
+chequear("Si el archivo recibido ya no está: lo frena el chequeo, con el motivo",
+         any("ya no está" in p for p in servidor_mcp.problemas_de_lectura(servidor_mcp.proveedores_recibidos(recepcion_bandeja)["P08"])),
+         True)
+(recepcion_bandeja / "viejo_sin_proveedor.json").write_text(json.dumps({"archivo": "x.xlsx", "receta": None}), encoding="utf-8")
+chequear("Un resultado de antes del paso 7 (sin proveedor) se ignora", sorted(servidor_mcp.proveedores_recibidos(recepcion_bandeja)),
+         ["P08"])
 shutil.rmtree(carpeta, ignore_errors=True)
 
 print("--- 3B · de punta a punta: la tool leer_archivo_proveedor, como la usa el fichador ---")

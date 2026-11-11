@@ -1,35 +1,30 @@
 {
-  "archivo": "HigieneTotal_novedades.xlsx",
+  "proveedor_id": "P02",
+  "archivo": "ALTAS RIVERA OCT.xlsx",
+  "ruta": "Data/proveedores/P02_Cosmetica_Rivera/ALTAS RIVERA OCT.xlsx",
   "receta": {
     "formato": "excel",
-    "archivo": "HigieneTotal_novedades.xlsx",
+    "archivo": "ALTAS RIVERA OCT.xlsx",
     "hoja": "Altas",
     "campos": {
-      "descripcion": "Descripcion",
-      "ean": "EAN13",
-      "precio": "Costo",
-      "contenido": "Cont.",
-      "unidad": "UM"
+      "descripcion": "DESCRIPCION",
+      "ean": "EAN",
+      "precio": "P. COSTO"
     },
-    "contenido_en": "cantidad_y_unidad_separadas",
+    "contenido_en": "dentro_de_la_descripcion",
     "separador_decimal": ",",
     "moneda": "UYU",
     "decisiones": {
       "evidencia_hoja": "Altas",
-      "hojas_que_no_entran": [
-        {
-          "hoja": "Discontinuados",
-          "motivo": "Productos discontinuados, dados de baja; no son productos nuevos y no se cargan."
-        }
-      ],
+      "hojas_que_no_entran": [],
       "columnas_que_no_van": [
         {
-          "columna": "Item",
-          "motivo": "Es el código interno del proveedor (p. ej. HT40003), no es un dato del formulario. Figura como columna_codigo en el resumen."
+          "columna": "OBS",
+          "motivo": "Observaciones libres (por ejemplo, 'PACK PROMO CON NECESER'); no es un dato del formulario."
         }
       ],
       "evidencia_moneda": null,
-      "evidencia_separador": null
+      "evidencia_separador": "TRAT. CAP. ALBORADA NUTRICION 0,5 KG"
     }
   },
   "controles": [
@@ -91,17 +86,17 @@
     {
       "control": "El separador decimal sale de los datos",
       "ok": true,
-      "detalle": "ningún decimal escrito como texto: ',' (estándar, sección 4)"
+      "detalle": "',', por 'TRAT. CAP. ALBORADA NUTRICION 0,5 KG'"
     },
     {
-      "control": "«EAN13» tiene forma de código de barras",
+      "control": "«EAN» tiene forma de código de barras",
       "ok": true,
-      "detalle": "23 de 23 filas"
+      "detalle": "50 de 50 filas"
     },
     {
-      "control": "«Costo» son números",
+      "control": "«P. COSTO» son números",
       "ok": true,
-      "detalle": "28 de 28 filas"
+      "detalle": "50 de 50 filas"
     },
     {
       "control": "Las columnas de contenido tienen sentido juntas",
@@ -109,9 +104,9 @@
       "detalle": ""
     },
     {
-      "control": "El contenido se puede calcular (cantidad_y_unidad_separadas)",
+      "control": "El contenido se puede calcular (dentro_de_la_descripcion)",
       "ok": true,
-      "detalle": "28 de 28 filas"
+      "detalle": "50 de 50 filas"
     },
     {
       "control": "La moneda coincide con lo que dice el archivo",
@@ -124,26 +119,21 @@
   "propuesta": {
     "hoja_productos_nuevos": "Altas",
     "evidencia_hoja": "Altas",
-    "hojas_que_no_entran": [
-      {
-        "hoja": "Discontinuados",
-        "motivo": "Productos discontinuados, dados de baja; no son productos nuevos y no se cargan."
-      }
-    ],
-    "columna_descripcion": "Descripcion",
-    "columna_ean": "EAN13",
-    "columna_precio": "Costo",
-    "columna_contenido": "Cont.",
-    "columna_unidad": "UM",
+    "hojas_que_no_entran": [],
+    "columna_descripcion": "DESCRIPCION",
+    "columna_ean": "EAN",
+    "columna_precio": "P. COSTO",
+    "columna_contenido": "DESCRIPCION",
+    "columna_unidad": "DESCRIPCION",
     "moneda": "UYU",
     "evidencia_moneda": null,
     "columnas_que_no_van": [
       {
-        "columna": "Item",
-        "motivo": "Es el código interno del proveedor (p. ej. HT40003), no es un dato del formulario. Figura como columna_codigo en el resumen."
+        "columna": "OBS",
+        "motivo": "Observaciones libres (por ejemplo, 'PACK PROMO CON NECESER'); no es un dato del formulario."
       }
     ]
   },
-  "costo_usd": 0.000531,
+  "costo_usd": 0.000483,
   "stop_reason": "tool_use"
 }

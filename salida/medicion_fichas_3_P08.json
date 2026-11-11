@@ -1,0 +1,64 @@
+{
+  "fecha": "2026-11-11 16:23",
+  "fichadores": 3,
+  "detector": false,
+  "tanda": 10,
+  "segundos": 75.8,
+  "segundos_uno_detras_de_otro": 106.3,
+  "costo_usd": 0.028321,
+  "productos": 14,
+  "propuestas": 14,
+  "faltan": [],
+  "inestables": [],
+  "tandas_con_problemas": [],
+  "fuera_de_su_tanda": [],
+  "trazas": "paralelo_20261111_162202_3",
+  "frenos": [],
+  "tandas": [
+    {
+      "proveedor_id": "P08",
+      "desde": 0,
+      "cantidad": 10,
+      "version": "",
+      "fichador": 1,
+      "inicio": 0.0,
+      "fin": 75.8,
+      "segundos": 75.8,
+      "como_termino": "end_turn",
+      "registrados": 10,
+      "faltan": [],
+      "vueltas": 4,
+      "input_tokens": 86857,
+      "output_tokens": 20127,
+      "costo_usd": 0.018749,
+      "error": null
+    },
+    {
+      "proveedor_id": "P08",
+      "desde": 10,
+      "cantidad": 4,
+      "version": "",
+      "fichador": 2,
+      "inicio": 0.0,
+      "fin": 30.5,
+      "segundos": 30.5,
+      "como_termino": "end_turn",
+      "registrados": 4,
+      "faltan": [],
+      "vueltas": 4,
+      "input_tokens": 61977,
+      "output_tokens": 6748,
+      "costo_usd": 0.009572,
+      "error": null
+    }
+  ],
+  "escritor": {
+    "escritos": {
+      "P08": 14
+    },
+    "frenados": {},
+    "ignoradas": [],
+    "inestables": [],
+    "total_en_archivo": 147
+  }
+}

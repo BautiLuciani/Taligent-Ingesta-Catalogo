@@ -7,8 +7,9 @@ from pathlib import Path
 from types import SimpleNamespace
 
 import recepcion
-from recepcion import (elegir_ejemplos, forma_del_contenido, pedir_receta, propuesta_de_la_respuesta, recibir,
-                       resumen_del_excel, ruta_de_la_llamada, separador_de_los_datos, tool_receta, verificar_receta)
+from recepcion import (elegir_ejemplos, forma_del_contenido, pedir_receta, propuesta_de_la_respuesta, proveedor_de_la_ruta,
+                       recibir, resumen_del_excel, ruta_de_la_llamada, separador_de_los_datos, tool_receta,
+                       verificar_receta)
 
 PROVEEDORES = Path(__file__).parent / "Data" / "proveedores"
 RIVERA = PROVEEDORES / "P02_Cosmetica_Rivera" / "ALTAS RIVERA OCT.xlsx"
@@ -320,8 +321,11 @@ falso = ClienteConReceta(BUENAS["Norte"][2])
 resultado = recibir(falso, "modelo-x", NORTE, carpeta=carpeta)
 chequear("Entra: hay receta y ningún problema", (resultado["receta"] is not None, resultado["problemas"]), (True, []))
 chequear("El costo sale de usage: 3.000 in x 0,10 + 400 out x 0,50 por millón", resultado["costo_usd"], 0.0005)
-chequear("Guarda el resultado entero en <archivo>.json", json.loads((carpeta / "NorteImports_new_items_Q4.json")
-         .read_text(encoding="utf-8"))["receta"]["moneda"], "USD")
+guardado = json.loads((carpeta / "P08_NorteImports_new_items_Q4.json").read_text(encoding="utf-8"))
+chequear("Guarda el resultado entero en <proveedor>_<archivo>.json", guardado["receta"]["moneda"], "USD")
+chequear("Paso 7: el resultado dice de qué proveedor es y dónde está el archivo (relativo al proyecto)",
+         (guardado["proveedor_id"], guardado["ruta"]),
+         ("P08", "Data/proveedores/P08_Importadora_Norte/NorteImports_new_items_Q4.xlsx"))
 recibir(falso, "modelo-x", NORTE, carpeta=carpeta)
 chequear("La segunda vez reusa la respuesta guardada (no paga de nuevo)", falso.llamadas, 1)
 recibir(falso, "modelo-x", NORTE, de_nuevo=True, carpeta=carpeta)
@@ -336,6 +340,24 @@ try:
 except ValueError as error:
     chequear("Bebé Feliz (apartado) se frena antes de leer nada, con su motivo", "apartado" in str(error), True)
 chequear("Con el apartado no se llamó a la API", falso.llamadas, 2)
+afuera = carpeta / "una_carpeta_cualquiera" / "lista.xlsx"
+afuera.parent.mkdir()
+shutil.copyfile(NORTE, afuera)
+try:
+    recibir(falso, "modelo-x", afuera, carpeta=carpeta)
+    chequear("Un archivo fuera de la carpeta de un proveedor se frena", "no frenó", "frenó")
+except ValueError as error:
+    chequear("Un archivo fuera de la carpeta de un proveedor se frena (no se adivina de quién es)",
+             "no se sabe de qué proveedor es" in str(error), True)
+chequear("...sin llamar a la API", falso.llamadas, 2)
 shutil.rmtree(carpeta, ignore_errors=True)
+
+print("--- 7A · proveedor_de_la_ruta: de quién es un archivo, por la carpeta donde está ---")
+chequear("En Data/proveedores/P08_Importadora_Norte/ -> P08", proveedor_de_la_ruta(NORTE), "P08")
+chequear("En la bandeja entrada/P02_Cosmetica_Rivera/ (con otro nombre de archivo) -> P02",
+         proveedor_de_la_ruta(Path("entrada") / "P02_Cosmetica_Rivera" / "ALTAS RIVERA NOV.xlsx"), "P02")
+chequear("En una carpeta que no es de ningún proveedor -> None", proveedor_de_la_ruta(Path("entrada") / "Varios" / "x.xlsx"), None)
+chequear("Bebé Feliz se reconoce (y después recibir lo frena por apartado)",
+         proveedor_de_la_ruta(PROVEEDORES / "P06_Bebe_Feliz" / "BebeFeliz_altas.xlsx"), "P06")
 
 print(f"\nResultado: {'todo OK' if errores == 0 else f'{errores} con error'}")
