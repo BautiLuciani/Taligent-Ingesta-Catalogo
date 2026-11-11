@@ -12,6 +12,7 @@ from fastmcp.client.transports import PythonStdioTransport
 
 from pathlib import Path
 
+from referencias import ENTORNO_PRUEBAS  # semana 4, paso 0: extracciones congeladas (antes que servidor_mcp)
 from agente import CARPETA_SALIDA, RUTA_SERVIDOR, ejecutar_tool, fichar_tanda, preparar_resultados
 
 errores = 0
@@ -115,7 +116,7 @@ def probar_fichar_tanda(carpeta: Path):
 
 async def main():
     carpeta_temporal = tempfile.mkdtemp()  # registrar_ficha escribe acá, no en salida/
-    transporte = PythonStdioTransport(RUTA_SERVIDOR, env={"INGESTA_CARPETA_SALIDA": carpeta_temporal})
+    transporte = PythonStdioTransport(RUTA_SERVIDOR, env={**ENTORNO_PRUEBAS, "INGESTA_CARPETA_SALIDA": carpeta_temporal})
     async with Client(transporte) as cliente:
         print("--- pedidos que salen bien ---")
         r = await ejecutar_tool(cliente, pedido_falso("buscar_por_gtin", {"gtin": "7798096023746"}, "toolu_01"))

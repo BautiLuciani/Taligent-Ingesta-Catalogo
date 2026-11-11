@@ -8,6 +8,8 @@ from pathlib import Path
 from fastmcp import Client
 from fastmcp.client.transports import PythonStdioTransport
 
+from referencias import ENTORNO_PRUEBAS  # semana 4, paso 0: extracciones congeladas (antes que servidor_mcp)
+
 RUTA_SERVIDOR = Path(__file__).parent / "servidor_mcp.py"
 CARPETA_ESTANDAR = Path(__file__).parent / "Data" / "estandar"
 
@@ -55,7 +57,8 @@ async def leer_todas(cliente, proveedor_id):
 async def main():
     # El servidor escribe en una carpeta temporal: las pruebas nunca pisan los resultados reales
     carpeta_temporal = tempfile.mkdtemp()
-    transporte = PythonStdioTransport(RUTA_SERVIDOR, env={"INGESTA_CARPETA_SALIDA": carpeta_temporal})
+    entorno = {**ENTORNO_PRUEBAS, "INGESTA_CARPETA_SALIDA": carpeta_temporal}
+    transporte = PythonStdioTransport(RUTA_SERVIDOR, env=entorno)
     async with Client(transporte) as cliente:
         print("--- tools disponibles ---")
         for tool in await cliente.list_tools():
@@ -387,8 +390,8 @@ async def main():
 
     print("\n--- registrar_ficha en modo propuesta (semana 3, paso 5): valida igual, pero NO escribe ---")
     carpeta_propuesta = tempfile.mkdtemp()
-    transporte = PythonStdioTransport(RUTA_SERVIDOR, env={"INGESTA_CARPETA_SALIDA": carpeta_propuesta,
-                                                          "INGESTA_MODO_PROPUESTA": "1"})
+    entorno = {**ENTORNO_PRUEBAS, "INGESTA_CARPETA_SALIDA": carpeta_propuesta, "INGESTA_MODO_PROPUESTA": "1"}
+    transporte = PythonStdioTransport(RUTA_SERVIDOR, env=entorno)
     async with Client(transporte) as cliente:
         resultado = await cliente.call_tool("registrar_ficha", {**base, "item_id": "P03:LT-3303",
                                                                 "estado": "lista_para_alta"}, raise_on_error=False)

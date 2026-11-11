@@ -8,8 +8,10 @@ import time
 from pathlib import Path
 
 from fastmcp import Client
+from fastmcp.client.transports import PythonStdioTransport
 
-import orquestador
+from referencias import ENTORNO_PRUEBAS  # semana 4, paso 0: extracciones congeladas (va antes que orquestador)
+import orquestador  # noqa: E402
 
 errores = 0
 
@@ -92,7 +94,9 @@ chequear("Dermalab: 14 completados por la lista", resumen["P05"]["con_datos_de_o
 async def filas_de_la_tool(proveedor_id: str) -> list[dict]:
     """Todas las filas de un proveedor tal como las recibe un fichador (la tool del servidor, de a tandas)."""
     filas, desde = [], 0
-    async with Client(Path(__file__).parent / "servidor_mcp.py") as cliente:
+    # El servidor es otro proceso con un entorno limpio: la carpeta congelada se le pasa explícita
+    transporte = PythonStdioTransport(Path(__file__).parent / "servidor_mcp.py", env=ENTORNO_PRUEBAS)
+    async with Client(transporte) as cliente:
         while desde is not None:
             datos = (await cliente.call_tool("leer_archivo_proveedor",
                                              {"proveedor_id": proveedor_id, "desde": desde, "cantidad": 25})).data

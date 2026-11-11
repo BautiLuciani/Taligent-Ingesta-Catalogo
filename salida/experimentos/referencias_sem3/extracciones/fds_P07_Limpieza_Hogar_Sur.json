@@ -1,0 +1,113 @@
+{
+  "proveedor": "P07_Limpieza_Hogar_Sur",
+  "modelo": "claude-haiku-5-5",
+  "fichas": [
+    {
+      "archivo": "FDS_Clarita_alcgel.pdf",
+      "codigos": [
+        "LHS-212",
+        "LHS-227",
+        "LHS-239",
+        "LHS-257"
+      ],
+      "peligro_deposito": "liquido_inflamable",
+      "numero_onu": "1170",
+      "fuente": {
+        "archivo": "FDS_Clarita_alcgel.pdf",
+        "pagina": 1
+      },
+      "problemas": []
+    },
+    {
+      "archivo": "FDS_Clarita_alcohol.pdf",
+      "codigos": [
+        "LHS-209",
+        "LHS-230",
+        "LHS-275",
+        "LHS-242",
+        "LHS-251"
+      ],
+      "peligro_deposito": "liquido_inflamable",
+      "numero_onu": "1170",
+      "fuente": {
+        "archivo": "FDS_Clarita_alcohol.pdf",
+        "pagina": 1
+      },
+      "problemas": []
+    },
+    {
+      "archivo": "FDS_Clarita_lavandina.pdf",
+      "codigos": [
+        "LHS-206",
+        "LHS-218",
+        "LHS-263",
+        "LHS-269"
+      ],
+      "peligro_deposito": "corrosivo",
+      "numero_onu": "1791",
+      "fuente": {
+        "archivo": "FDS_Clarita_lavandina.pdf",
+        "pagina": 1
+      },
+      "problemas": []
+    },
+    {
+      "archivo": "FDS_Clarita_multiuso.pdf",
+      "codigos": [
+        "LHS-203",
+        "LHS-215",
+        "LHS-236",
+        "LHS-245"
+      ],
+      "peligro_deposito": "no_peligroso",
+      "numero_onu": null,
+      "fuente": {
+        "archivo": "FDS_Clarita_multiuso.pdf",
+        "pagina": 1
+      },
+      "problemas": []
+    },
+    {
+      "archivo": "FDS_Fulmin_insect.pdf",
+      "codigos": [
+        "LHS-260"
+      ],
+      "peligro_deposito": "aerosol_inflamable",
+      "numero_onu": "1950",
+      "fuente": {
+        "archivo": "FDS_Fulmin_insect.pdf",
+        "pagina": 1
+      },
+      "problemas": []
+    },
+    {
+      "archivo": "FDS_Fulmin_repaer.pdf",
+      "codigos": [
+        "LHS-233"
+      ],
+      "peligro_deposito": "aerosol_inflamable",
+      "numero_onu": "1950",
+      "fuente": {
+        "archivo": "FDS_Fulmin_repaer.pdf",
+        "pagina": 1
+      },
+      "problemas": []
+    },
+    {
+      "archivo": "FDS_Fulmin_repcre.pdf",
+      "codigos": [
+        "LHS-224",
+        "LHS-254",
+        "LHS-272"
+      ],
+      "peligro_deposito": "no_peligroso",
+      "numero_onu": null,
+      "fuente": {
+        "archivo": "FDS_Fulmin_repcre.pdf",
+        "pagina": 1
+      },
+      "problemas": []
+    }
+  ],
+  "costo_usd": 0.005418
+}

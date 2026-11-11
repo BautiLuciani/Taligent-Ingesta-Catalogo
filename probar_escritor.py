@@ -5,6 +5,7 @@ import shutil
 import tempfile
 from pathlib import Path
 
+import referencias  # noqa: F401 (semana 4, paso 0: extracciones congeladas; va antes que escritor)
 from escritor import escribir, revisar_propuesta
 
 errores = 0

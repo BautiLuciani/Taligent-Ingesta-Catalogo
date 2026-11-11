@@ -34,9 +34,12 @@ RUTA_RESULTADOS = CARPETA_SALIDA / "resultados.json"
 MODO_PROPUESTA = os.getenv("INGESTA_MODO_PROPUESTA") == "1"
 PROPUESTAS: dict[str, dict] = {}  # en modo propuesta: lo aceptado por ESTE proceso (solo en memoria, para contar)
 
-# Lo que sacó extractor_pdf.py de cada PDF (semana 2). Es una ENTRADA, no una salida de las pruebas:
-# por eso no depende de INGESTA_CARPETA_SALIDA.
-CARPETA_EXTRACCIONES = Path(__file__).parent / "salida" / "extracciones"
+# Lo que sacaron los extractores de cada PDF (semana 2). Es una ENTRADA, no una salida de las pruebas:
+# por eso no depende de INGESTA_CARPETA_SALIDA. Tiene su propia variable de entorno (semana 4, paso 0): las
+# pruebas la apuntan a una copia CONGELADA (ver referencias.py), porque el sistema reescribe esta carpeta en
+# cada lectura y una prueba no puede depender de un archivo que el sistema reescribe.
+CARPETA_EXTRACCIONES = Path(os.getenv("INGESTA_CARPETA_EXTRACCIONES",
+                                      Path(__file__).parent / "salida" / "extracciones"))
 
 # Cómo leer el archivo de cada proveedor habilitado.
 # P06 (Bebé Feliz) NO está: es el proveedor apartado hasta la semana 5.

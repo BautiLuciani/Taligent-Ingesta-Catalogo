@@ -1,12 +1,13 @@
-"""Pruebas de pedido_proveedor.py con los resultados REALES del paso 8. Correr: python probar_pedido_proveedor.py"""
+"""Pruebas de pedido_proveedor.py con resultados reales, congelados. Correr: python probar_pedido_proveedor.py"""
 import copy
 import json
-from pathlib import Path
 
-import servidor_mcp
+from referencias import RUTA_RESULTADOS_REFERENCIA  # semana 4, paso 0: va antes que servidor_mcp
+import servidor_mcp  # noqa: E402
 from pedido_proveedor import armar_mensaje, fuente_texto, pendientes_del_item
 
-RESULTADOS = json.loads((Path(__file__).parent / "salida" / "resultados.json").read_text(encoding="utf-8"))
+# Resultados congelados de la semana 3 (antes: salida/resultados.json, que cada corrida reescribe)
+RESULTADOS = json.loads(RUTA_RESULTADOS_REFERENCIA.read_text(encoding="utf-8"))
 CATALOGO_POR_SKU = {producto["sku"]: producto for producto in servidor_mcp.CATALOGO}
 FILAS = {fila["item_id"]: fila for proveedor_id, config in servidor_mcp.PROVEEDORES.items()
          for fila in servidor_mcp.leer_filas(proveedor_id, config)}
