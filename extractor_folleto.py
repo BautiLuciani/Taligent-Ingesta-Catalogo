@@ -179,7 +179,7 @@ def campos_del_bloque(producto: dict) -> tuple[dict, dict, list[str]]:
     renglones = producto["renglones"]
     if len(renglones) < 2:
         return {}, {}, ["el bloque no trae nombre y descripción (la cita pudo empezar a mitad del producto)"]
-    (nombre, pagina_nombre), (primero, pagina_texto) = renglones[0], renglones[1]
+    (nombre, pagina_nombre), (_, pagina_texto) = renglones[0], renglones[1]
     if nombre.endswith("."):
         return {}, {}, [f"el primer renglón no parece un nombre ({nombre!r}): la cita pudo empezar a mitad del producto"]
     texto = " ".join(renglon for renglon, _ in renglones[1:])

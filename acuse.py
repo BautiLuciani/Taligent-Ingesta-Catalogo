@@ -16,14 +16,13 @@ Correr: python acuse.py "entrada/P02_Cosmetica_Rivera/ALTAS RIVERA OCT.xlsx"   (
 """
 import argparse
 import json
-import sys
 from pathlib import Path
 
 import openpyxl
 
 from lector_excel import leer_tabla_excel
 from pedido_proveedor import nombres_de_proveedores
-from recepcion import CARPETA_PROYECTO, CARPETA_RECEPCION, contenido_de_la_fila, proveedor_de_la_ruta, ruta_relativa
+from recepcion import CARPETA_PROYECTO, CARPETA_RECEPCION, contenido_de_la_fila, ruta_relativa
 
 RUTA_RESULTADOS = CARPETA_PROYECTO / "salida" / "resultados.json"
 RUTA_HOOKS = CARPETA_PROYECTO / "salida" / "hooks.json"
