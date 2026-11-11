@@ -3,6 +3,9 @@
 La idea del paso: MISMO contenido, OTRO lugar. Las reglas 4, 5, 6 y 15 pasan de prompt_sistema.md al servidor, textuales
 y con su número. Se compara contra prompt_sistema.md tal como estaba al cierre de la semana 3 (congelado en
 salida/experimentos/referencias_sem4/prompt_sistema_sem3.md).
+
+Semana 4, paso 8: las reglas 3, 13 y 14 cambian A PROPÓSITO (abreviaturas que el vocabulario no tiene; suplementos:
+el componente declarado es el principio activo; tipos de varias palabras). Esas dos se comparan aparte: lo que decían antes sigue estando, solo se agregó.
 """
 import asyncio
 import re
@@ -19,6 +22,7 @@ PROMPT_ANTES = (CARPETA / "salida" / "experimentos" / "referencias_sem4" / "prom
 PROMPT_AHORA = (CARPETA / "prompt_sistema.md").read_text(encoding="utf-8")
 CRITERIO = (CARPETA / "criterio_de_revision.md").read_text(encoding="utf-8")
 DEL_CRITERIO = (4, 5, 6, 15)
+CAMBIADAS_PASO_8 = (3, 13, 14)  # semana 4, paso 8: se agregó texto, no se quitó nada
 
 errores = 0
 
@@ -51,7 +55,13 @@ chequear("Antes había 15 reglas", sorted(antes), list(range(1, 16)))
 chequear("El criterio trae las reglas 4, 5, 6 y 15", sorted(criterio), list(DEL_CRITERIO))
 chequear("...textuales, letra por letra", all(criterio[n] == antes[n] for n in DEL_CRITERIO), True)
 chequear("prompt_sistema.md ya no las tiene", sorted(ahora), [n for n in range(1, 16) if n not in DEL_CRITERIO])
-chequear("...y las otras 11 quedaron letra por letra", all(ahora[n] == antes[n] for n in ahora), True)
+chequear("...y las otras 8 quedaron letra por letra",
+         all(ahora[n] == antes[n] for n in ahora if n not in CAMBIADAS_PASO_8), True)
+chequear("Paso 8: la regla 3 dice lo mismo que antes y suma al final", ahora[3].startswith(antes[3]) and ahora[3] != antes[3], True)
+chequear("Paso 8: la regla 13 dice lo mismo que antes y suma al final", ahora[13].startswith(antes[13]) and ahora[13] != antes[13], True)
+chequear("Paso 8: la regla 14 conserva todos sus renglones (solo pasa de 'Dos casos' a 'Tres casos') y suma uno",
+         [r for r in antes[14].replace("Dos casos:", "Tres casos:").split("\n") if r not in ahora[14].split("\n")], [])
+chequear("...exactamente un renglón más", len(ahora[14].split("\n")) - len(antes[14].split("\n")), 1)
 chequear("prompt_sistema.md avisa dónde están (en <criterio_de_revision>)", "<criterio_de_revision>" in PROMPT_AHORA, True)
 
 
@@ -71,12 +81,13 @@ chequear("Llega idéntico al archivo", servido.messages[0].content.text, CRITERI
 
 print("--- el system prompt del fichador ---")
 chequear("Lleva el criterio entre etiquetas", f"<criterio_de_revision>\n{CRITERIO}\n</criterio_de_revision>" in system, True)
+vigentes = {n: criterio[n] if n in DEL_CRITERIO else ahora[n] for n in range(1, 16)}  # cada regla como está hoy
 for n in range(1, 16):
-    regla = antes[n]
+    regla = vigentes[n]
     if system.count(regla) != 1:
         chequear(f"La regla {n} aparece una sola vez", system.count(regla), 1)
 chequear("Las 15 reglas aparecen una sola vez cada una (ni duplicadas ni perdidas)",
-         [system.count(antes[n]) for n in range(1, 16)], [1] * 15)
+         [system.count(vigentes[n]) for n in range(1, 16)], [1] * 15)
 chequear("Sigue trayendo el estándar, el vocabulario y la taxonomía (los resources)",
          [f"<{e}>" in system for e in ("estandar_ficha_de_producto", "vocabulario", "taxonomia")], [True, True, True])
 

@@ -79,7 +79,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "PASTA DENTAL",
-      "explicacion": "La pasta dental va en Higiene bucal > Pastas dentales (CUI-BUC-PAS)."
+      "explicacion": "La pasta dental va en Higiene bucal > Pastas dentales."
     }
   },
   "P03:LT-3306": {
@@ -162,7 +162,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "JABON",
-      "explicacion": "El jabón antibacterial va en Higiene corporal > Jabones (CUI-HIG-JAB)."
+      "explicacion": "El jabón antibacterial va en Higiene corporal > Jabones."
     }
   },
   "P03:LT-3309": {
@@ -245,7 +245,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "PASTA DENTAL",
-      "explicacion": "La pasta dental va en Higiene bucal > Pastas dentales (CUI-BUC-PAS)."
+      "explicacion": "La pasta dental va en Higiene bucal > Pastas dentales."
     }
   },
   "P03:LT-3312": {
@@ -328,7 +328,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "JABON LIQUIDO",
-      "explicacion": "El jabón líquido de manos va en Higiene corporal > Jabones (CUI-HIG-JAB)."
+      "explicacion": "El jabón líquido de manos va en Higiene corporal > Jabones."
     }
   },
   "P03:LT-3315": {
@@ -411,7 +411,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "PASTA DENTAL",
-      "explicacion": "La pasta dental va en Higiene bucal > Pastas dentales (CUI-BUC-PAS)."
+      "explicacion": "La pasta dental va en Higiene bucal > Pastas dentales."
     }
   },
   "P03:LT-3318": {
@@ -494,7 +494,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "ALGODON",
-      "explicacion": "El algodón va en Higiene corporal > Algodones e hisopos (CUI-HIG-ALG)."
+      "explicacion": "El algodón va en Higiene corporal > Algodones e hisopos."
     }
   },
   "P03:LT-3321": {
@@ -577,7 +577,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "PASTA DENTAL",
-      "explicacion": "La pasta dental va en Higiene bucal > Pastas dentales (CUI-BUC-PAS)."
+      "explicacion": "La pasta dental va en Higiene bucal > Pastas dentales."
     }
   },
   "P03:LT-3324": {
@@ -660,7 +660,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "JABON LIQUIDO",
-      "explicacion": "El jabón líquido de manos va en Higiene corporal > Jabones (CUI-HIG-JAB)."
+      "explicacion": "El jabón líquido de manos va en Higiene corporal > Jabones."
     }
   },
   "P03:LT-3327": {
@@ -743,7 +743,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "CEPILLO DENTAL",
-      "explicacion": "El cepillo dental va en Higiene bucal > Cepillos (CUI-BUC-CEP)."
+      "explicacion": "El cepillo dental va en Higiene bucal > Cepillos."
     }
   },
   "P03:LT-3330": {
@@ -826,7 +826,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "PASTA DENTAL",
-      "explicacion": "La pasta dental va en Higiene bucal > Pastas dentales (CUI-BUC-PAS)."
+      "explicacion": "La pasta dental va en Higiene bucal > Pastas dentales."
     }
   },
   "P03:LT-3333": {
@@ -909,7 +909,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "PASTA DENTAL",
-      "explicacion": "La pasta dental va en Higiene bucal > Pastas dentales (CUI-BUC-PAS)."
+      "explicacion": "La pasta dental va en Higiene bucal > Pastas dentales."
     }
   },
   "P03:LT-3336": {
@@ -992,7 +992,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "ENJUAGUE BUCAL",
-      "explicacion": "El enjuague bucal va en Higiene bucal > Enjuagues (CUI-BUC-ENJ)."
+      "explicacion": "El enjuague bucal va en Higiene bucal > Enjuagues."
     }
   },
   "P03:LT-3339": {
@@ -1075,7 +1075,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "PASTA DENTAL",
-      "explicacion": "La pasta dental va en Higiene bucal > Pastas dentales (CUI-BUC-PAS)."
+      "explicacion": "La pasta dental va en Higiene bucal > Pastas dentales."
     }
   },
   "P03:LT-3342": {
@@ -1158,7 +1158,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "ALGODON",
-      "explicacion": "El algodón va en Higiene corporal > Algodones e hisopos (CUI-HIG-ALG)."
+      "explicacion": "El algodón va en Cuidado personal > Higiene corporal > Algodones e hisopos."
     }
   },
   "P03:LT-3345": {
@@ -1241,7 +1241,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "JABON LIQUIDO",
-      "explicacion": "El jabón líquido va en Higiene corporal > Jabones (CUI-HIG-JAB)."
+      "explicacion": "El jabón líquido de manos va en Higiene corporal > Jabones."
     }
   },
   "P03:LT-3348": {
@@ -1324,7 +1324,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "PASTA DENTAL",
-      "explicacion": "La pasta dental va en Higiene bucal > Pastas dentales (CUI-BUC-PAS)."
+      "explicacion": "La pasta dental va en Higiene bucal > Pastas dentales."
     }
   },
   "P03:LT-3351": {
@@ -1407,7 +1407,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "JABON LIQUIDO",
-      "explicacion": "El jabón líquido va en Higiene corporal > Jabones (CUI-HIG-JAB)."
+      "explicacion": "El jabón líquido de manos va en Higiene corporal > Jabones."
     }
   },
   "P03:LT-3354": {
@@ -1490,7 +1490,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "PASTA DENTAL",
-      "explicacion": "La pasta dental va en Higiene bucal > Pastas dentales (CUI-BUC-PAS)."
+      "explicacion": "La pasta dental va en Higiene bucal > Pastas dentales."
     }
   },
   "P03:LT-3357": {
@@ -1572,7 +1572,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "JABON",
-      "explicacion": "El jabón va en Higiene corporal > Jabones (CUI-HIG-JAB)."
+      "explicacion": "El jabón en barra va en Higiene corporal > Jabones; el candidato SKU102275 tiene el mismo tipo, marca, variante y contenido."
     }
   },
   "P03:LT-3360": {
@@ -1655,7 +1655,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "JABON",
-      "explicacion": "El jabón va en Higiene corporal > Jabones (CUI-HIG-JAB)."
+      "explicacion": "El jabón en barra va en Higiene corporal > Jabones."
     }
   },
   "P03:LT-3363": {
@@ -1738,7 +1738,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "CEPILLO DENTAL",
-      "explicacion": "El tipo CEPILLO DENTAL va en Higiene bucal > Cepillos."
+      "explicacion": "El tipo CEPILLO DENTAL ubica el producto en Higiene bucal > Cepillos."
     }
   },
   "P03:LT-3366": {
@@ -1817,7 +1817,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "HISOPOS",
-      "explicacion": "El tipo HISOPOS va en Higiene corporal > Algodones e hisopos."
+      "explicacion": "El tipo HISOPOS ubica el producto en Cuidado personal > Higiene corporal > Algodones e hisopos."
     }
   },
   "P03:LT-3369": {
@@ -1900,7 +1900,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "CEPILLO DENTAL",
-      "explicacion": "El tipo CEPILLO DENTAL va en Higiene bucal > Cepillos."
+      "explicacion": "El tipo CEPILLO DENTAL ubica el producto en Higiene bucal > Cepillos."
     }
   },
   "P03:LT-3372": {
@@ -1983,7 +1983,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "CEPILLO DENTAL",
-      "explicacion": "El tipo CEPILLO DENTAL va en Higiene bucal > Cepillos."
+      "explicacion": "El tipo CEPILLO DENTAL ubica el producto en Higiene bucal > Cepillos."
     }
   },
   "P03:LT-3375": {
@@ -2066,7 +2066,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "JABON",
-      "explicacion": "El tipo JABON va en Higiene corporal > Jabones."
+      "explicacion": "El tipo JABON (barra, glicerina) ubica el producto en Higiene corporal > Jabones."
     }
   },
   "P03:LT-3378": {
@@ -2232,7 +2232,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "JABON LIQUIDO",
-      "explicacion": "El tipo JABON LIQUIDO va en Higiene corporal > Jabones (jabón líquido de manos)."
+      "explicacion": "El tipo JABON LIQUIDO ubica el producto en Higiene corporal > Jabones (jabón líquido de manos)."
     }
   },
   "P03:LT-3384": {
@@ -2315,7 +2315,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "JABON",
-      "explicacion": "El tipo JABON va en Higiene corporal > Jabones."
+      "explicacion": "El tipo JABON (barra) ubica el producto en Higiene corporal > Jabones."
     }
   },
   "P03:LT-3387": {
@@ -2481,7 +2481,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "JABON",
-      "explicacion": "El tipo JABON va en Higiene corporal > Jabones."
+      "explicacion": "El tipo JABON (barra) ubica el producto en Higiene corporal > Jabones."
     }
   },
   "P03:LT-3393": {
@@ -3306,7 +3306,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "HISOPOS",
-      "explicacion": "Los hisopos van en Higiene corporal > Algodones e hisopos (CUI-HIG-ALG)."
+      "explicacion": "Los hisopos van en Cuidado personal > Higiene corporal > Algodones e hisopos (CUI-HIG-ALG)."
     }
   },
   "P03:LT-3420": {
@@ -3389,7 +3389,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "ALGODON",
-      "explicacion": "El tipo ALGODON va en Cuidado personal > Algodones e hisopos (CUI-HIG-ALG)."
+      "explicacion": "El tipo ALGODON va en Cuidado personal > Algodones e hisopos."
     }
   },
   "P03:LT-3423": {
@@ -3472,7 +3472,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "ALGODON",
-      "explicacion": "El tipo ALGODON va en Cuidado personal > Algodones e hisopos (CUI-HIG-ALG)."
+      "explicacion": "El tipo ALGODON va en Cuidado personal > Algodones e hisopos."
     }
   },
   "P03:LT-3426": {
@@ -3555,7 +3555,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "CEPILLO DENTAL",
-      "explicacion": "El tipo CEPILLO DENTAL va en Higiene bucal > Cepillos (CUI-BUC-CEP)."
+      "explicacion": "El tipo CEPILLO DENTAL va en Higiene bucal > Cepillos."
     }
   },
   "P03:LT-3429": {
@@ -3638,7 +3638,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "CEPILLO DENTAL",
-      "explicacion": "El tipo CEPILLO DENTAL va en Higiene bucal > Cepillos (CUI-BUC-CEP)."
+      "explicacion": "El tipo CEPILLO DENTAL va en Higiene bucal > Cepillos."
     }
   },
   "P03:LT-3447": {
@@ -3720,7 +3720,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "JABON",
-      "explicacion": "El tipo JABON va en Higiene corporal > Jabones (CUI-HIG-JAB)."
+      "explicacion": "El tipo JABON va en Higiene corporal > Jabones."
     }
   },
   "P03:LT-3432": {
@@ -3803,7 +3803,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "PASTA DENTAL",
-      "explicacion": "El tipo PASTA DENTAL va en Higiene bucal > Pastas dentales (CUI-BUC-PAS)."
+      "explicacion": "El tipo PASTA DENTAL va en Higiene bucal > Pastas dentales."
     }
   },
   "P03:LT-3435": {
@@ -3886,7 +3886,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "CEPILLO DENTAL",
-      "explicacion": "El tipo CEPILLO DENTAL va en Higiene bucal > Cepillos (CUI-BUC-CEP)."
+      "explicacion": "El tipo CEPILLO DENTAL va en Higiene bucal > Cepillos."
     }
   },
   "P03:LT-3438": {
@@ -3969,7 +3969,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "PASTA DENTAL",
-      "explicacion": "El tipo PASTA DENTAL va en Higiene bucal > Pastas dentales (CUI-BUC-PAS)."
+      "explicacion": "El tipo PASTA DENTAL va en Higiene bucal > Pastas dentales."
     }
   },
   "P03:LT-3441": {
@@ -4052,7 +4052,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "PASTA DENTAL",
-      "explicacion": "El tipo PASTA DENTAL va en Higiene bucal > Pastas dentales (CUI-BUC-PAS)."
+      "explicacion": "El tipo PASTA DENTAL va en Higiene bucal > Pastas dentales."
     }
   },
   "P03:LT-3444": {
@@ -4135,7 +4135,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "PASTA DENTAL",
-      "explicacion": "El tipo PASTA DENTAL va en Higiene bucal > Pastas dentales (CUI-BUC-PAS)."
+      "explicacion": "El tipo PASTA DENTAL va en Higiene bucal > Pastas dentales."
     }
   },
   "P07:LHS-203": {
@@ -4224,7 +4224,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "LIMPIADOR",
-      "explicacion": "Tipo LIMPIADOR (multiuso) cae en Limpiadores de baño y cocina, única categoría de limpiadores generales."
+      "explicacion": "El tipo LIMPIADOR va en Hogar y limpieza > Limpiadores de baño y cocina (multiuso)."
     }
   },
   "P07:LHS-206": {
@@ -4317,7 +4317,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "LAVANDINA",
-      "explicacion": "La lavandina va en Desinfectantes y lavandinas."
+      "explicacion": "La lavandina va en Hogar y limpieza > Desinfectantes y lavandinas."
     }
   },
   "P07:LHS-209": {
@@ -4410,7 +4410,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "ALCOHOL",
-      "explicacion": "El alcohol va en Alcohol y alcohol en gel."
+      "explicacion": "El alcohol va en Hogar y limpieza > Alcohol y alcohol en gel."
     }
   },
   "P07:LHS-212": {
@@ -4499,7 +4499,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "ALCOHOL EN GEL",
-      "explicacion": "El alcohol en gel va en Alcohol y alcohol en gel."
+      "explicacion": "El alcohol en gel va en Hogar y limpieza > Alcohol y alcohol en gel."
     }
   },
   "P07:LHS-215": {
@@ -4588,7 +4588,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "LIMPIADOR",
-      "explicacion": "Tipo LIMPIADOR (multiuso) cae en Limpiadores de baño y cocina."
+      "explicacion": "El tipo LIMPIADOR va en Hogar y limpieza > Limpiadores de baño y cocina (multiuso)."
     }
   },
   "P07:LHS-218": {
@@ -4681,7 +4681,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "LAVANDINA",
-      "explicacion": "La lavandina va en Desinfectantes y lavandinas."
+      "explicacion": "La lavandina va en Hogar y limpieza > Desinfectantes y lavandinas."
     }
   },
   "P07:LHS-221": {
@@ -4770,7 +4770,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "ALCOHOL EN GEL",
-      "explicacion": "Alcohol en gel va en Alcohol y alcohol en gel; el GTIN coincide con SKU102464 (ALCOHOL EN GEL CLARITA ALOE X 250 ML)."
+      "explicacion": "El alcohol en gel va en Hogar y limpieza > Alcohol y alcohol en gel; ya existe en catálogo como SKU102464 (mismo GTIN, misma variante ALOE y 250 ML)."
     }
   },
   "P07:LHS-224": {
@@ -4859,7 +4859,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "REPELENTE",
-      "explicacion": "El repelente corporal va en Repelentes corporales."
+      "explicacion": "El repelente va en Hogar y limpieza > Insecticidas y repelentes > Repelentes corporales."
     }
   },
   "P07:LHS-227": {
@@ -4952,7 +4952,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "ALCOHOL EN GEL",
-      "explicacion": "El alcohol en gel va en Alcohol y alcohol en gel."
+      "explicacion": "El alcohol en gel va en Hogar y limpieza > Alcohol y alcohol en gel."
     }
   },
   "P07:LHS-230": {
@@ -5045,7 +5045,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "ALCOHOL",
-      "explicacion": "El alcohol va en Alcohol y alcohol en gel."
+      "explicacion": "El alcohol va en Hogar y limpieza > Alcohol y alcohol en gel."
     }
   },
   "P07:LHS-233": {
@@ -5138,7 +5138,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "REPELENTE",
-      "explicacion": "El tipo REPELENTE va en Insecticidas y repelentes > Repelentes corporales."
+      "explicacion": "El tipo REPELENTE corresponde a Repelentes corporales (HOG-INS-REP)."
     }
   },
   "P07:LHS-275": {
@@ -5230,7 +5230,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "ALCOHOL",
-      "explicacion": "El tipo ALCOHOL va en Hogar y limpieza > Limpieza > Alcohol y alcohol en gel."
+      "explicacion": "El tipo ALCOHOL corresponde a Alcohol y alcohol en gel (HOG-LIM-ALC)."
     }
   },
   "P07:LHS-236": {
@@ -5319,7 +5319,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "LIMPIADOR",
-      "explicacion": "El tipo LIMPIADOR va en Limpieza > Limpiadores de baño y cocina, y la variante es multiuso cocina."
+      "explicacion": "El tipo LIMPIADOR (multiuso de cocina) corresponde a Limpiadores de baño y cocina (HOG-LIM-BAN)."
     }
   },
   "P07:LHS-239": {
@@ -5408,7 +5408,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "ALCOHOL EN GEL",
-      "explicacion": "El tipo ALCOHOL EN GEL va en Hogar y limpieza > Limpieza > Alcohol y alcohol en gel."
+      "explicacion": "El tipo ALCOHOL EN GEL corresponde a Alcohol y alcohol en gel (HOG-LIM-ALC)."
     }
   },
   "P07:LHS-242": {
@@ -5501,7 +5501,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "ALCOHOL",
-      "explicacion": "El tipo ALCOHOL va en Hogar y limpieza > Limpieza > Alcohol y alcohol en gel."
+      "explicacion": "El tipo ALCOHOL corresponde a Alcohol y alcohol en gel (HOG-LIM-ALC)."
     }
   },
   "P07:LHS-245": {
@@ -5590,7 +5590,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "LIMPIADOR",
-      "explicacion": "El tipo LIMPIADOR va en Limpieza > Limpiadores de baño y cocina, y la variante es multiuso cocina."
+      "explicacion": "El tipo LIMPIADOR (multiuso de cocina) corresponde a Limpiadores de baño y cocina (HOG-LIM-BAN)."
     }
   },
   "P07:LHS-248": {
@@ -5679,7 +5679,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "ALCOHOL",
-      "explicacion": "El tipo ALCOHOL va en Hogar y limpieza > Limpieza > Alcohol y alcohol en gel."
+      "explicacion": "El tipo ALCOHOL corresponde a Alcohol y alcohol en gel (HOG-LIM-ALC)."
     }
   },
   "P07:LHS-251": {
@@ -5772,7 +5772,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "ALCOHOL",
-      "explicacion": "El tipo ALCOHOL va en Hogar y limpieza > Limpieza > Alcohol y alcohol en gel."
+      "explicacion": "El tipo ALCOHOL corresponde a Alcohol y alcohol en gel (HOG-LIM-ALC)."
     }
   },
   "P07:LHS-254": {
@@ -5861,7 +5861,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "REPELENTE",
-      "explicacion": "El tipo REPELENTE va en Insecticidas y repelentes > Repelentes corporales; la crema y el público infantil van en variante."
+      "explicacion": "El tipo REPELENTE corresponde a Repelentes corporales (HOG-INS-REP)."
     }
   },
   "P07:LHS-257": {
@@ -5950,7 +5950,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "ALCOHOL EN GEL",
-      "explicacion": "El tipo ALCOHOL EN GEL va en Hogar y limpieza > Limpieza > Alcohol y alcohol en gel."
+      "explicacion": "El tipo ALCOHOL EN GEL corresponde a Alcohol y alcohol en gel (HOG-LIM-ALC)."
     }
   },
   "P07:LHS-272": {
@@ -6038,7 +6038,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "REPELENTE",
-      "explicacion": "El tipo REPELENTE, sin ser repelente de insectos de ambiente, va en Insecticidas y repelentes > Repelentes corporales."
+      "explicacion": "El tipo REPELENTE del vocabulario de hogar ubica el producto en Insecticidas y repelentes, Repelentes corporales."
     }
   },
   "P07:LHS-260": {
@@ -6131,7 +6131,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "INSECTICIDA",
-      "explicacion": "El tipo INSECTICIDA para cucarachas en ambiente va en Insecticidas y repelentes > Insecticidas de ambiente."
+      "explicacion": "El tipo INSECTICIDA es de insecticidas; como es de ambiente (cucarachas), va en Insecticidas de ambiente."
     }
   },
   "P07:LHS-263": {
@@ -6224,7 +6224,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "LAVANDINA",
-      "explicacion": "El tipo LAVANDINA va en Hogar y limpieza > Limpieza > Desinfectantes y lavandinas."
+      "explicacion": "El tipo LAVANDINA va en Hogar y limpieza, Desinfectantes y lavandinas."
     }
   },
   "P07:LHS-266": {
@@ -6313,7 +6313,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "REPELENTE",
-      "explicacion": "El tipo REPELENTE va en Insecticidas y repelentes > Repelentes corporales; el GTIN ya existe en el catálogo."
+      "explicacion": "El tipo REPELENTE va en Insecticidas y repelentes, Repelentes corporales; el GTIN ya existe en el catálogo."
     }
   },
   "P07:LHS-269": {
@@ -6406,7 +6406,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "LAVANDINA",
-      "explicacion": "El tipo LAVANDINA va en Hogar y limpieza > Limpieza > Desinfectantes y lavandinas."
+      "explicacion": "El tipo LAVANDINA va en Hogar y limpieza, Desinfectantes y lavandinas."
     }
   },
   "P01:AN-1103": {
@@ -6491,7 +6491,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "COMPRIMIDOS",
-      "explicacion": "La fila no declara principio activo; sin él la categoría queda en null (regla 13)."
+      "explicacion": "Sin principio activo declarado no se puede fijar la clase terapéutica; categoría queda null."
     }
   },
   "P01:AN-1106": {
@@ -6576,7 +6576,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "SUSPENSION",
-      "explicacion": "La fila no declara principio activo; sin él la categoría queda en null (regla 13)."
+      "explicacion": "Sin principio activo declarado no se puede fijar la clase terapéutica; categoría queda null."
     }
   },
   "P01:AN-1109": {
@@ -6667,7 +6667,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "COMPRIMIDOS",
-      "explicacion": "Principio activo PARACETAMOL (analgésico oral) ubica la categoría MED-DOL-ANA; el tipo es comprimidos."
+      "explicacion": "El principio activo PARACETAMOL (analgésico y antifebril) ubica el producto en Dolor y fiebre, Analgésicos orales."
     }
   },
   "P01:AN-1112": {
@@ -6758,7 +6758,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "COMPRIMIDOS",
-      "explicacion": "Principio activo METFORMINA (diabetes, bajo receta) ubica la categoría MED-CRO-MET; el tipo es comprimidos."
+      "explicacion": "El principio activo METFORMINA (diabetes, bajo receta) ubica el producto en Uso crónico, Metabolismo."
     }
   },
   "P01:AN-1115": {
@@ -6849,7 +6849,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "CAPSULAS",
-      "explicacion": "Principio activo OMEPRAZOL (protector gástrico) ubica la categoría MED-DIG-ACI; el tipo es cápsulas."
+      "explicacion": "El principio activo OMEPRAZOL (protector gástrico) ubica el producto en Digestivo, Antiácidos y protectores gástricos."
     }
   },
   "P01:AN-1118": {
@@ -6940,7 +6940,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "CAPSULAS",
-      "explicacion": "Principio activo OMEPRAZOL (protector gástrico) ubica la categoría MED-DIG-ACI; el tipo es cápsulas."
+      "explicacion": "El principio activo OMEPRAZOL (protector gástrico) ubica el producto en Digestivo, Antiácidos y protectores gástricos."
     }
   },
   "P01:AN-1121": {
@@ -7031,7 +7031,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "COMPRIMIDOS",
-      "explicacion": "Principio activo LOPERAMIDA (antidiarreico) ubica la categoría MED-DIG-ANT; el tipo es comprimidos."
+      "explicacion": "El principio activo LOPERAMIDA (antidiarreico) ubica el producto en Digestivo, Antidiarreicos."
     }
   },
   "P01:AN-1124": {
@@ -7124,7 +7124,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "CREMA",
-      "explicacion": "Principio activo HIDROCORTISONA (corticoide tópico) ubica la categoría MED-DER-COR; el tipo es crema."
+      "explicacion": "La hidrocortisona (corticoide tópico) ubica el producto en Dermatológicos, Corticoides tópicos."
     }
   },
   "P01:AN-1127": {
@@ -7215,7 +7215,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "COMPRIMIDOS",
-      "explicacion": "Principio activo LORATADINA (antihistamínico oral) ubica la categoría MED-RES-ALE; el tipo es comprimidos."
+      "explicacion": "El principio activo LORATADINA (antihistamínico oral) ubica el producto en Respiratorio, Antialérgicos."
     }
   },
   "P01:AN-1130": {
@@ -7306,7 +7306,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "CREMA",
-      "explicacion": "Principio activo HIDROCORTISONA (corticoide tópico) ubica la categoría MED-DER-COR; el tipo es crema."
+      "explicacion": "La hidrocortisona (corticoide tópico) ubica el producto en Dermatológicos, Corticoides tópicos."
     }
   },
   "P01:AN-1133": {
@@ -7393,7 +7393,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "CREMA",
-      "explicacion": "Crema con clotrimazol (antimicótico): la categoría Antimicóticos tópicos sale del principio activo, con tipo CREMA."
+      "explicacion": "Crema antimicótica con clotrimazol: va en Antimicóticos tópicos (MED-DER-ANF)."
     }
   },
   "P01:AN-1136": {
@@ -7480,7 +7480,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "COMPRIMIDOS",
-      "explicacion": "Analgésico y antifebril oral de paracetamol: categoría Analgésicos y antifebriles orales, por el principio activo."
+      "explicacion": "Comprimidos de paracetamol (analgésico y antifebril oral): va en Analgésicos y antifebriles orales (MED-DOL-ANA)."
     }
   },
   "P01:AN-1139": {
@@ -7573,7 +7573,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "COMPRIMIDOS",
-      "explicacion": "Comprimidos de enalapril (antihipertensivo): categoría Cardiovascular, por el principio activo."
+      "explicacion": "Principio activo ENALAPRIL (antihipertensivo) lleva a Cardiovascular (MED-CRO-CAR); el tipo es la forma comprimido."
     }
   },
   "P01:AN-1142": {
@@ -7666,7 +7666,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "COMPRIMIDOS",
-      "explicacion": "Comprimidos de paracetamol + clorfeniramina + fenilefrina: categoría Combinaciones para gripe, por el principio activo."
+      "explicacion": "Combinación paracetamol + clorfeniramina + fenilefrina para la gripe: va en Antigripales (MED-RES-GRI)."
     }
   },
   "P01:AN-1145": {
@@ -7757,7 +7757,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "SOBRES",
-      "explicacion": "Sobres de paracetamol + clorfeniramina + fenilefrina: categoría Combinaciones para gripe, por el principio activo."
+      "explicacion": "Sobres de combinación antigripal (paracetamol + clorfeniramina + fenilefrina): va en Antigripales (MED-RES-GRI)."
     }
   },
   "P01:AN-1148": {
@@ -7850,7 +7850,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "SOBRES",
-      "explicacion": "Sobres de paracetamol + clorfeniramina + fenilefrina: categoría Combinaciones para gripe, por el principio activo."
+      "explicacion": "Sobres de combinación antigripal (paracetamol + clorfeniramina + fenilefrina): va en Antigripales (MED-RES-GRI)."
     }
   },
   "P01:AN-1151": {
@@ -7943,7 +7943,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "GEL",
-      "explicacion": "Gel tópico con diclofenac (antiinflamatorio): categoría Antiinflamatorios tópicos, por el principio activo."
+      "explicacion": "Gel tópico de diclofenac (antiinflamatorio): va en Antiinflamatorios tópicos (MED-DOL-TOP)."
     }
   },
   "P01:AN-1154": {
@@ -8036,7 +8036,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "COMPRIMIDOS",
-      "explicacion": "Comprimidos de ibuprofeno: categoría Analgésicos y antifebriles orales, por el principio activo."
+      "explicacion": "Comprimidos de ibuprofeno (analgésico oral): va en Analgésicos y antifebriles orales (MED-DOL-ANA)."
     }
   },
   "P01:AN-1157": {
@@ -8129,7 +8129,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "COMPRIMIDOS",
-      "explicacion": "Comprimidos de levotiroxina (tiroides): categoría Metabolismo, por el principio activo."
+      "explicacion": "Comprimidos de levotiroxina (tiroides, bajo receta): va en Diabetes y tiroides (MED-CRO-MET)."
     }
   },
   "P01:AN-1160": {
@@ -8220,7 +8220,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "COMPRIMIDOS",
-      "explicacion": "Comprimidos de levotiroxina (tiroides): categoría Metabolismo, por el principio activo."
+      "explicacion": "Comprimidos de levotiroxina (tiroides, bajo receta): va en Diabetes y tiroides (MED-CRO-MET)."
     }
   },
   "P01:AN-1163": {
@@ -8313,7 +8313,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "COMPRIMIDOS",
-      "explicacion": "Forma farmacéutica; la categoría la decide el principio activo LOPERAMIDA (antidiarreico), no el nombre comercial DIACORT."
+      "explicacion": "La categoría la decide el principio activo LOPERAMIDA (antidiarreico), no la forma; va a MED-DIG-ANT."
     }
   },
   "P01:AN-1166": {
@@ -8406,7 +8406,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "COMPRIMIDOS",
-      "explicacion": "Forma farmacéutica; la categoría la decide el principio activo BISACODILO (laxante), no el nombre comercial LAXOFIB."
+      "explicacion": "La categoría la decide el principio activo BISACODILO (laxante), no la forma; va a MED-DIG-LAX."
     }
   },
   "P01:AN-1169": {
@@ -8499,7 +8499,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "COMPRIMIDOS",
-      "explicacion": "Forma farmacéutica; la categoría la decide el principio activo ENALAPRIL (antihipertensivo), no el nombre comercial CARDIOPRES."
+      "explicacion": "La categoría la decide el principio activo ENALAPRIL (antihipertensivo), no la forma; va a MED-CRO-CAR."
     }
   },
   "P01:AN-1172": {
@@ -8590,7 +8590,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "JARABE",
-      "explicacion": "Forma farmacéutica; la categoría la decide el principio activo DEXTROMETORFANO (antitusivo), no el nombre comercial TOSIL."
+      "explicacion": "La categoría la decide el principio activo DEXTROMETORFANO (para la tos), no la forma; va a MED-RES-TOS."
     }
   },
   "P01:AN-1175": {
@@ -8681,7 +8681,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "JARABE",
-      "explicacion": "Forma farmacéutica; la categoría la decide el principio activo PARACETAMOL (analgésico y antifebril), no el nombre comercial FEBRIL."
+      "explicacion": "La categoría la decide el principio activo PARACETAMOL (analgésico y antifebril), no la forma; va a MED-DOL-ANA."
     }
   },
   "P01:AN-1178": {
@@ -8772,7 +8772,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "COMPRIMIDOS",
-      "explicacion": "Forma farmacéutica; la categoría la decide el principio activo PARACETAMOL (analgésico y antifebril), no el nombre comercial FEBRIL."
+      "explicacion": "La categoría la decide el principio activo PARACETAMOL (analgésico y antifebril), no la forma; va a MED-DOL-ANA."
     }
   },
   "P05:DL-151": {
@@ -8847,7 +8847,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "CREMA",
-      "explicacion": "Crema de hidratación facial de uso diario según el texto descriptivo: va en Hidratación facial."
+      "explicacion": "Crema con 'hidratación facial de uso diario' va en Hidratación facial (DER-FAC-HID)."
     }
   },
   "P05:DL-103": {
@@ -8921,7 +8921,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "GEL LIMPIADOR",
-      "explicacion": "Gel limpiador facial: va en Limpieza facial."
+      "explicacion": "Gel limpiador va en Limpieza facial (DER-FAC-LIM)."
     }
   },
   "P05:DL-106": {
@@ -8995,7 +8995,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "PROTECTOR SOLAR",
-      "explicacion": "Protector solar sin indicación infantil: va en Protectores para adultos."
+      "explicacion": "Protector solar sin indicación infantil va en Protectores para adultos (DER-SOL-ADU)."
     }
   },
   "P05:DL-109": {
@@ -9079,9 +9079,9 @@
       }
     },
     "categoria_decidida_por": {
-      "campo": "tipo",
-      "valor": "CREMA",
-      "explicacion": "Crema de cuerpo con urea para piel muy seca (texto descriptivo): va en Hidratación corporal."
+      "campo": "variante",
+      "valor": "UREA 10 %",
+      "explicacion": "Las cremas de urea van en Hidratación corporal (DER-COR-HID), según la nota de la taxonomía."
     }
   },
   "P05:DL-112": {
@@ -9167,7 +9167,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "SERUM",
-      "explicacion": "Sérum que reduce arrugas visibles (texto descriptivo): va en Antiedad facial."
+      "explicacion": "Sérum cuyo beneficio es reducir arrugas visibles va en Antiedad (DER-FAC-ANT)."
     }
   },
   "P05:DL-115": {
@@ -9253,7 +9253,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "CREMA",
-      "explicacion": "Crema de hidratación facial de uso diario (texto descriptivo): va en Hidratación facial."
+      "explicacion": "Crema con 'hidratación facial de uso diario' va en Hidratación facial (DER-FAC-HID)."
     }
   },
   "P05:DL-118": {
@@ -9339,7 +9339,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "GEL LIMPIADOR",
-      "explicacion": "Gel limpiador facial: va en Limpieza facial."
+      "explicacion": "Gel limpiador va en Limpieza facial (DER-FAC-LIM)."
     }
   },
   "P05:DL-121": {
@@ -9425,7 +9425,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "PROTECTOR SOLAR",
-      "explicacion": "Protector solar sin indicación infantil: va en Protectores para adultos."
+      "explicacion": "Protector solar sin indicación infantil va en Protectores para adultos (DER-SOL-ADU)."
     }
   },
   "P05:DL-124": {
@@ -9511,7 +9511,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "SERUM",
-      "explicacion": "Sérum que reduce arrugas visibles (texto descriptivo): va en Antiedad facial."
+      "explicacion": "Sérum cuyo beneficio es reducir arrugas visibles va en Antiedad (DER-FAC-ANT)."
     }
   },
   "P05:DL-127": {
@@ -9597,7 +9597,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "PROTECTOR SOLAR",
-      "explicacion": "Protector solar sin indicación infantil: va en Protectores para adultos."
+      "explicacion": "Protector solar sin indicación infantil va en Protectores para adultos (DER-SOL-ADU)."
     }
   },
   "P05:DL-154": {
@@ -9606,8 +9606,8 @@
     "duplicado_de": "SKU101785",
     "motivos_revision": [
       "gtin_faltante",
-      "posible_duplicado",
-      "dato_obligatorio_faltante"
+      "dato_obligatorio_faltante",
+      "posible_duplicado"
     ],
     "ficha": {
       "gtin": null,
@@ -9672,7 +9672,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "AGUA MICELAR",
-      "explicacion": "El agua micelar desmaquilla y limpia: va en Limpieza facial."
+      "explicacion": "El agua micelar va en Limpieza facial (DER-FAC-LIM)."
     }
   },
   "P05:DL-130": {
@@ -9758,7 +9758,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "CREMA",
-      "explicacion": "Crema para piel con tendencia acneica (texto descriptivo de la fila) va en Piel acneica."
+      "explicacion": "Crema facial para piel con tendencia acneica: el texto descriptivo ubica la categoría Piel acneica (DER-FAC-ACN)."
     }
   },
   "P05:DL-133": {
@@ -9844,7 +9844,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "PROTECTOR SOLAR",
-      "explicacion": "Protector solar sin mención infantil va en Protectores para adultos."
+      "explicacion": "Protector solar sin mención infantil: va en Protectores para adultos (DER-SOL-ADU)."
     }
   },
   "P05:DL-136": {
@@ -9906,7 +9906,7 @@
       },
       "categoria": {
         "archivo": "Dermalab_lanzamientos_2026.pdf",
-        "pagina": 2
+        "pagina": 1
       },
       "precio_costo": {
         "archivo": "Dermalab_lista_precios.xlsx",
@@ -9930,7 +9930,7 @@
     "categoria_decidida_por": {
       "campo": "variante",
       "valor": "SUN KIDS FPS 50+",
-      "explicacion": "La línea Kids, formulada para la piel de los niños, lleva a Protectores infantiles."
+      "explicacion": "La línea Kids indica protector infantil: Protectores infantiles (DER-SOL-INF)."
     }
   },
   "P05:DL-139": {
@@ -10016,7 +10016,7 @@
     "categoria_decidida_por": {
       "campo": "variante",
       "valor": "SUN AFTER SUN",
-      "explicacion": "La variante After Sun, para calmar la piel después del sol, lleva a Post solar."
+      "explicacion": "After sun para después de la exposición al sol: Post solar (DER-SOL-POS)."
     }
   },
   "P05:DL-142": {
@@ -10102,7 +10102,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "PROTECTOR SOLAR",
-      "explicacion": "Protector solar sin mención infantil va en Protectores para adultos."
+      "explicacion": "Protector solar sin mención infantil: va en Protectores para adultos (DER-SOL-ADU)."
     }
   },
   "P05:DL-145": {
@@ -10188,7 +10188,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "AGUA MICELAR",
-      "explicacion": "El agua micelar desmaquilla y limpia: va en Limpieza facial."
+      "explicacion": "El agua micelar va en Limpieza facial (DER-FAC-LIM)."
     }
   },
   "P05:DL-148": {
@@ -10274,7 +10274,7 @@
     "categoria_decidida_por": {
       "campo": "variante",
       "valor": "UREA 10 %",
-      "explicacion": "Las cremas de urea para el cuerpo van en Hidratación corporal."
+      "explicacion": "Crema de urea para el cuerpo: Hidratación corporal (DER-COR-HID)."
     }
   },
   "P09:NV-203": {
@@ -10359,7 +10359,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "CAPSULAS",
-      "explicacion": "Suplemento de valeriana (principio activo VALERIANA), que va en Sueño y relajación; el tipo CAPSULAS define la forma, la categoría sale del principio activo."
+      "explicacion": "Suplemento en cápsulas; la categoría Sueño y relajación la define el principio activo VALERIANA."
     }
   },
   "P09:NV-206": {
@@ -10444,7 +10444,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "COMPRIMIDOS",
-      "explicacion": "Suplemento de hierro (principio activo HIERRO), que va en Minerales; la categoría sale del principio activo."
+      "explicacion": "Suplemento en comprimidos; la categoría Minerales la define el principio activo HIERRO."
     }
   },
   "P09:NV-209": {
@@ -10529,7 +10529,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "CAPSULAS",
-      "explicacion": "Suplemento herbal de cúrcuma (principio activo CURCUMA), que va en Naturales y herbales; la categoría sale del principio activo."
+      "explicacion": "Suplemento en cápsulas; la categoría Naturales y herbales la define el extracto CURCUMA."
     }
   },
   "P09:NV-212": {
@@ -10616,7 +10616,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "COMPRIMIDOS EFERVESCENTES",
-      "explicacion": "Suplemento de vitamina C individual (principio activo VITAMINA C), que va en Vitaminas individuales; la categoría sale del principio activo."
+      "explicacion": "Suplemento efervescente de vitamina C individual; va en Vitaminas individuales."
     }
   },
   "P09:NV-215": {
@@ -10703,7 +10703,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "COMPRIMIDOS",
-      "explicacion": "Suplemento de melatonina (principio activo MELATONINA), que va en Sueño y relajación; la categoría sale del principio activo."
+      "explicacion": "Suplemento en comprimidos; la categoría Sueño y relajación la define el principio activo MELATONINA."
     }
   },
   "P09:NV-218": {
@@ -10790,7 +10790,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "CAPSULAS",
-      "explicacion": "Suplemento de citrato de magnesio (principio activo CITRATO DE MAGNESIO), que va en Minerales; la categoría sale del principio activo."
+      "explicacion": "Suplemento en cápsulas; la categoría Minerales la define el principio activo CITRATO DE MAGNESIO."
     }
   },
   "P09:NV-221": {
@@ -10877,7 +10877,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "COMPRIMIDOS",
-      "explicacion": "Suplemento de melatonina (principio activo MELATONINA), que va en Sueño y relajación; la categoría sale del principio activo."
+      "explicacion": "Suplemento en comprimidos; la categoría Sueño y relajación la define el principio activo MELATONINA."
     }
   },
   "P09:NV-224": {
@@ -10964,7 +10964,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "COMPRIMIDOS",
-      "explicacion": "Suplemento de zinc (principio activo ZINC), que va en Minerales; la categoría sale del principio activo."
+      "explicacion": "Suplemento en comprimidos; la categoría Minerales la define el principio activo ZINC."
     }
   },
   "P09:NV-227": {
@@ -11051,7 +11051,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "COMPRIMIDOS",
-      "explicacion": "Suplemento de melatonina (principio activo MELATONINA), que va en Sueño y relajación; la categoría sale del principio activo."
+      "explicacion": "Suplemento en comprimidos; la categoría Sueño y relajación la define el principio activo MELATONINA."
     }
   },
   "P09:NV-230": {
@@ -11138,7 +11138,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "COMPRIMIDOS EFERVESCENTES",
-      "explicacion": "Suplemento de vitamina C individual (principio activo VITAMINA C), que va en Vitaminas individuales; la categoría sale del principio activo."
+      "explicacion": "Suplemento efervescente de vitamina C individual; va en Vitaminas individuales."
     }
   },
   "P09:NV-233": {
@@ -11225,7 +11225,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "COMPRIMIDOS",
-      "explicacion": "El principio activo ZINC (mineral) ubica el suplemento en Minerales; el tipo COMPRIMIDOS define la forma."
+      "explicacion": "El principio activo ZINC (suplemento mineral) ubica el producto en Minerales; el tipo COMPRIMIDOS es la forma."
     }
   },
   "P09:NV-236": {
@@ -11312,7 +11312,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "COMPRIMIDOS",
-      "explicacion": "El principio activo MELATONINA es un suplemento para dormir: va en Sueño y relajación; el tipo COMPRIMIDOS define la forma."
+      "explicacion": "El principio activo MELATONINA ubica el producto en Sueño y relajación; el tipo COMPRIMIDOS es la forma."
     }
   },
   "P09:NV-239": {
@@ -11395,7 +11395,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "POLVO",
-      "explicacion": "El principio activo COLAGENO HIDROLIZADO ubica el producto en Colágeno y articulaciones; el tipo POLVO define la forma."
+      "explicacion": "El principio activo COLAGENO HIDROLIZADO ubica el producto en Colágeno y articulaciones; el tipo POLVO es la forma."
     }
   },
   "P09:NV-242": {
@@ -11482,1391 +11482,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "CAPSULAS",
-      "explicacion": "El principio activo CITRATO DE MAGNESIO (mineral) ubica el suplemento en Minerales; el tipo CAPSULAS define la forma."
-    }
-  },
-  "P08:IN7003": {
-    "item_id": "P08:IN7003",
-    "estado": "lista_para_alta",
-    "duplicado_de": null,
-    "motivos_revision": [],
-    "ficha": {
-      "gtin": "0229962606567",
-      "descripcion": "SHAMPOO EN SECO PURE CARE ORIGINAL X 142 ML",
-      "marca": "PURE CARE",
-      "tipo": "SHAMPOO EN SECO",
-      "variante": "ORIGINAL",
-      "contenido": 142,
-      "unidad": "ML",
-      "unidades_por_envase": 1,
-      "principio_activo": null,
-      "concentracion": null,
-      "condicion_venta": null,
-      "categoria": "CUI-CAP-SHA",
-      "precio_costo": 5.17,
-      "moneda": "USD",
-      "proveedor_id": "P08",
-      "codigo_proveedor": "IN7003",
-      "peligro_deposito": "aerosol_inflamable",
-      "numero_onu": "1950"
-    },
-    "fuentes": {
-      "gtin": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 2
-      },
-      "descripcion": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 2
-      },
-      "marca": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 2
-      },
-      "tipo": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 2
-      },
-      "variante": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 2
-      },
-      "contenido": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 2
-      },
-      "unidad": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 2
-      },
-      "unidades_por_envase": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 2
-      },
-      "categoria": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 2
-      },
-      "precio_costo": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 2
-      },
-      "moneda": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 2
-      },
-      "proveedor_id": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 2
-      },
-      "codigo_proveedor": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 2
-      },
-      "peligro_deposito": {
-        "archivo": "FDS_PureCare_in_sec.pdf",
-        "pagina": 1
-      },
-      "numero_onu": {
-        "archivo": "FDS_PureCare_in_sec.pdf",
-        "pagina": 1
-      }
-    },
-    "categoria_decidida_por": {
-      "campo": "tipo",
-      "valor": "SHAMPOO EN SECO",
-      "explicacion": "El shampoo en seco va en Cabello > Shampoo (CUI-CAP-SHA)."
-    }
-  },
-  "P08:IN7006": {
-    "item_id": "P08:IN7006",
-    "estado": "lista_para_alta",
-    "duplicado_de": null,
-    "motivos_revision": [],
-    "ficha": {
-      "gtin": "0856606869455",
-      "descripcion": "PROTECTOR SOLAR SUNGUARD SPORT FPS 50 X 237 ML",
-      "marca": "SUNGUARD",
-      "tipo": "PROTECTOR SOLAR",
-      "variante": "SPORT FPS 50",
-      "contenido": 237,
-      "unidad": "ML",
-      "unidades_por_envase": 1,
-      "principio_activo": null,
-      "concentracion": null,
-      "condicion_venta": null,
-      "categoria": "DER-SOL-ADU",
-      "precio_costo": 7.6,
-      "moneda": "USD",
-      "proveedor_id": "P08",
-      "codigo_proveedor": "IN7006"
-    },
-    "fuentes": {
-      "gtin": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 3
-      },
-      "descripcion": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 3
-      },
-      "marca": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 3
-      },
-      "tipo": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 3
-      },
-      "variante": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 3
-      },
-      "contenido": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 3
-      },
-      "unidad": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 3
-      },
-      "unidades_por_envase": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 3
-      },
-      "categoria": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 3
-      },
-      "precio_costo": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 3
-      },
-      "moneda": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 3
-      },
-      "proveedor_id": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 3
-      },
-      "codigo_proveedor": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 3
-      }
-    },
-    "categoria_decidida_por": {
-      "campo": "tipo",
-      "valor": "PROTECTOR SOLAR",
-      "explicacion": "El protector solar para adultos va en Protección solar > Protectores para adultos (DER-SOL-ADU)."
-    }
-  },
-  "P08:IN7009": {
-    "item_id": "P08:IN7009",
-    "estado": "lista_para_alta",
-    "duplicado_de": null,
-    "motivos_revision": [],
-    "ficha": {
-      "gtin": "0921365957672",
-      "descripcion": "CREMA PURE CARE INTENSIVE HANDS X 227 G",
-      "marca": "PURE CARE",
-      "tipo": "CREMA",
-      "variante": "INTENSIVE HANDS",
-      "contenido": 227,
-      "unidad": "G",
-      "unidades_por_envase": 1,
-      "principio_activo": null,
-      "concentracion": null,
-      "condicion_venta": null,
-      "categoria": "DER-COR-MAN",
-      "precio_costo": 5.28,
-      "moneda": "USD",
-      "proveedor_id": "P08",
-      "codigo_proveedor": "IN7009"
-    },
-    "fuentes": {
-      "gtin": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 4
-      },
-      "descripcion": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 4
-      },
-      "marca": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 4
-      },
-      "tipo": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 4
-      },
-      "variante": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 4
-      },
-      "contenido": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 4
-      },
-      "unidad": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 4
-      },
-      "unidades_por_envase": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 4
-      },
-      "categoria": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 4
-      },
-      "precio_costo": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 4
-      },
-      "moneda": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 4
-      },
-      "proveedor_id": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 4
-      },
-      "codigo_proveedor": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 4
-      }
-    },
-    "categoria_decidida_por": {
-      "campo": "variante",
-      "valor": "INTENSIVE HANDS",
-      "explicacion": "Crema para manos: la variante indica el uso en manos, va en Corporal > Manos y pies (DER-COR-MAN)."
-    }
-  },
-  "P08:IN7012": {
-    "item_id": "P08:IN7012",
-    "estado": "lista_para_alta",
-    "duplicado_de": null,
-    "motivos_revision": [],
-    "ficha": {
-      "gtin": "0316401081426",
-      "descripcion": "VITALIS VITAMINA D3 2000 UI CAPSULAS X 120 UN",
-      "marca": "VITALIS",
-      "tipo": "CAPSULAS",
-      "variante": null,
-      "contenido": 120,
-      "unidad": "UN",
-      "unidades_por_envase": 1,
-      "principio_activo": "VITAMINA D3",
-      "concentracion": "2000 UI",
-      "condicion_venta": null,
-      "categoria": "NUT-VIT-VIT",
-      "precio_costo": 10.66,
-      "moneda": "USD",
-      "proveedor_id": "P08",
-      "codigo_proveedor": "IN7012"
-    },
-    "fuentes": {
-      "gtin": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 5
-      },
-      "descripcion": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 5
-      },
-      "marca": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 5
-      },
-      "tipo": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 5
-      },
-      "principio_activo": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 5
-      },
-      "concentracion": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 5
-      },
-      "contenido": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 5
-      },
-      "unidad": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 5
-      },
-      "unidades_por_envase": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 5
-      },
-      "categoria": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 5
-      },
-      "precio_costo": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 5
-      },
-      "moneda": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 5
-      },
-      "proveedor_id": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 5
-      },
-      "codigo_proveedor": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 5
-      }
-    },
-    "categoria_decidida_por": {
-      "campo": "tipo",
-      "valor": "CAPSULAS",
-      "explicacion": "Suplemento de vitamina D3 de un solo componente (principio activo VITAMINA D3) va en Vitaminas individuales (NUT-VIT-VIT)."
-    }
-  },
-  "P08:IN7015": {
-    "item_id": "P08:IN7015",
-    "estado": "lista_para_alta",
-    "duplicado_de": null,
-    "motivos_revision": [],
-    "ficha": {
-      "gtin": "0317169955172",
-      "descripcion": "GEL DE AFEITAR PURE CARE SENSITIVE X 198 ML",
-      "marca": "PURE CARE",
-      "tipo": "GEL DE AFEITAR",
-      "variante": "SENSITIVE",
-      "contenido": 198,
-      "unidad": "ML",
-      "unidades_por_envase": 1,
-      "principio_activo": null,
-      "concentracion": null,
-      "condicion_venta": null,
-      "categoria": "CUI-AFE-ESP",
-      "precio_costo": 3.89,
-      "moneda": "USD",
-      "proveedor_id": "P08",
-      "codigo_proveedor": "IN7015",
-      "peligro_deposito": "aerosol_inflamable",
-      "numero_onu": "1950"
-    },
-    "fuentes": {
-      "gtin": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 6
-      },
-      "descripcion": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 6
-      },
-      "marca": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 6
-      },
-      "tipo": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 6
-      },
-      "variante": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 6
-      },
-      "contenido": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 6
-      },
-      "unidad": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 6
-      },
-      "unidades_por_envase": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 6
-      },
-      "categoria": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 6
-      },
-      "precio_costo": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 6
-      },
-      "moneda": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 6
-      },
-      "proveedor_id": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 6
-      },
-      "codigo_proveedor": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 6
-      },
-      "peligro_deposito": {
-        "archivo": "FDS_PureCare_in_afe.pdf",
-        "pagina": 1
-      },
-      "numero_onu": {
-        "archivo": "FDS_PureCare_in_afe.pdf",
-        "pagina": 1
-      }
-    },
-    "categoria_decidida_por": {
-      "campo": "tipo",
-      "valor": "GEL DE AFEITAR",
-      "explicacion": "El gel de afeitar va en Afeitado > Espumas y geles de afeitar (CUI-AFE-ESP)."
-    }
-  },
-  "P08:IN7018": {
-    "item_id": "P08:IN7018",
-    "estado": "lista_para_alta",
-    "duplicado_de": null,
-    "motivos_revision": [],
-    "ficha": {
-      "gtin": "0013232310571",
-      "descripcion": "ENJUAGUE BUCAL PURE CARE COOL MINT X 500 ML",
-      "marca": "PURE CARE",
-      "tipo": "ENJUAGUE BUCAL",
-      "variante": "COOL MINT",
-      "contenido": 500,
-      "unidad": "ML",
-      "unidades_por_envase": 1,
-      "principio_activo": null,
-      "concentracion": null,
-      "condicion_venta": null,
-      "categoria": "CUI-BUC-ENJ",
-      "precio_costo": 4.41,
-      "moneda": "USD",
-      "proveedor_id": "P08",
-      "codigo_proveedor": "IN7018"
-    },
-    "fuentes": {
-      "gtin": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 7
-      },
-      "descripcion": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 7
-      },
-      "marca": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 7
-      },
-      "tipo": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 7
-      },
-      "variante": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 7
-      },
-      "contenido": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 7
-      },
-      "unidad": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 7
-      },
-      "unidades_por_envase": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 7
-      },
-      "categoria": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 7
-      },
-      "precio_costo": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 7
-      },
-      "moneda": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 7
-      },
-      "proveedor_id": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 7
-      },
-      "codigo_proveedor": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 7
-      }
-    },
-    "categoria_decidida_por": {
-      "campo": "tipo",
-      "valor": "ENJUAGUE BUCAL",
-      "explicacion": "El enjuague bucal va en Higiene bucal > Enjuagues (CUI-BUC-ENJ)."
-    }
-  },
-  "P08:IN7021": {
-    "item_id": "P08:IN7021",
-    "estado": "lista_para_alta",
-    "duplicado_de": null,
-    "motivos_revision": [],
-    "ficha": {
-      "gtin": "0366254962564",
-      "descripcion": "VITALIS COMPRIMIDOS MULTIVITAMIN X 100 UN",
-      "marca": "VITALIS",
-      "tipo": "COMPRIMIDOS",
-      "variante": "MULTIVITAMIN",
-      "contenido": 100,
-      "unidad": "UN",
-      "unidades_por_envase": 1,
-      "principio_activo": null,
-      "concentracion": null,
-      "condicion_venta": null,
-      "categoria": "NUT-VIT-MUL",
-      "precio_costo": 9.39,
-      "moneda": "USD",
-      "proveedor_id": "P08",
-      "codigo_proveedor": "IN7021"
-    },
-    "fuentes": {
-      "gtin": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 8
-      },
-      "descripcion": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 8
-      },
-      "marca": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 8
-      },
-      "tipo": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 8
-      },
-      "variante": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 8
-      },
-      "contenido": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 8
-      },
-      "unidad": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 8
-      },
-      "unidades_por_envase": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 8
-      },
-      "categoria": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 8
-      },
-      "precio_costo": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 8
-      },
-      "moneda": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 8
-      },
-      "proveedor_id": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 8
-      },
-      "codigo_proveedor": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 8
-      }
-    },
-    "categoria_decidida_por": {
-      "campo": "variante",
-      "valor": "MULTIVITAMIN",
-      "explicacion": "Multivitamínico (no un solo componente) va en Vitaminas y minerales > Multivitamínicos (NUT-VIT-MUL)."
-    }
-  },
-  "P08:IN7024": {
-    "item_id": "P08:IN7024",
-    "estado": "lista_para_alta",
-    "duplicado_de": null,
-    "motivos_revision": [],
-    "ficha": {
-      "gtin": "0103763096362",
-      "descripcion": "LOCION PURE CARE SHEA BUTTER X 296 ML",
-      "marca": "PURE CARE",
-      "tipo": "LOCION",
-      "variante": "SHEA BUTTER",
-      "contenido": 296,
-      "unidad": "ML",
-      "unidades_por_envase": 1,
-      "principio_activo": null,
-      "concentracion": null,
-      "condicion_venta": null,
-      "categoria": "DER-COR-HID",
-      "precio_costo": 4.18,
-      "moneda": "USD",
-      "proveedor_id": "P08",
-      "codigo_proveedor": "IN7024"
-    },
-    "fuentes": {
-      "gtin": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 9
-      },
-      "descripcion": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 9
-      },
-      "marca": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 9
-      },
-      "tipo": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 9
-      },
-      "variante": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 9
-      },
-      "contenido": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 9
-      },
-      "unidad": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 9
-      },
-      "unidades_por_envase": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 9
-      },
-      "categoria": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 9
-      },
-      "precio_costo": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 9
-      },
-      "moneda": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 9
-      },
-      "proveedor_id": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 9
-      },
-      "codigo_proveedor": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 9
-      }
-    },
-    "categoria_decidida_por": {
-      "campo": "tipo",
-      "valor": "LOCION",
-      "explicacion": "La loción corporal va en Dermocosmética > Corporal > Hidratación corporal (DER-COR-HID)."
-    }
-  },
-  "P08:IN7027": {
-    "item_id": "P08:IN7027",
-    "estado": "lista_para_alta",
-    "duplicado_de": null,
-    "motivos_revision": [],
-    "ficha": {
-      "gtin": "0013573386723",
-      "descripcion": "VITALIS VITAMINA D3 1000 UI CAPSULAS X 60 UN",
-      "marca": "VITALIS",
-      "tipo": "CAPSULAS",
-      "variante": null,
-      "contenido": 60,
-      "unidad": "UN",
-      "unidades_por_envase": 1,
-      "principio_activo": "VITAMINA D3",
-      "concentracion": "1000 UI",
-      "condicion_venta": null,
-      "categoria": "NUT-VIT-VIT",
-      "precio_costo": 6.98,
-      "moneda": "USD",
-      "proveedor_id": "P08",
-      "codigo_proveedor": "IN7027"
-    },
-    "fuentes": {
-      "gtin": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 10
-      },
-      "descripcion": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 10
-      },
-      "marca": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 10
-      },
-      "tipo": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 10
-      },
-      "principio_activo": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 10
-      },
-      "concentracion": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 10
-      },
-      "contenido": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 10
-      },
-      "unidad": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 10
-      },
-      "unidades_por_envase": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 10
-      },
-      "categoria": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 10
-      },
-      "precio_costo": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 10
-      },
-      "moneda": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 10
-      },
-      "proveedor_id": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 10
-      },
-      "codigo_proveedor": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 10
-      }
-    },
-    "categoria_decidida_por": {
-      "campo": "tipo",
-      "valor": "CAPSULAS",
-      "explicacion": "Suplemento de vitamina D3 de un solo componente (principio activo VITAMINA D3) va en Vitaminas individuales (NUT-VIT-VIT)."
-    }
-  },
-  "P08:IN7030": {
-    "item_id": "P08:IN7030",
-    "estado": "lista_para_alta",
-    "duplicado_de": null,
-    "motivos_revision": [],
-    "ficha": {
-      "gtin": "0185187720344",
-      "descripcion": "VITALIS VITAMINA D3 2000 UI CAPSULAS X 60 UN",
-      "marca": "VITALIS",
-      "tipo": "CAPSULAS",
-      "variante": null,
-      "contenido": 60,
-      "unidad": "UN",
-      "unidades_por_envase": 1,
-      "principio_activo": "VITAMINA D3",
-      "concentracion": "2000 UI",
-      "condicion_venta": null,
-      "categoria": "NUT-VIT-VIT",
-      "precio_costo": 6.92,
-      "moneda": "USD",
-      "proveedor_id": "P08",
-      "codigo_proveedor": "IN7030"
-    },
-    "fuentes": {
-      "gtin": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 11
-      },
-      "descripcion": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 11
-      },
-      "marca": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 11
-      },
-      "tipo": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 11
-      },
-      "principio_activo": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 11
-      },
-      "concentracion": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 11
-      },
-      "contenido": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 11
-      },
-      "unidad": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 11
-      },
-      "unidades_por_envase": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 11
-      },
-      "categoria": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 11
-      },
-      "precio_costo": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 11
-      },
-      "moneda": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 11
-      },
-      "proveedor_id": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 11
-      },
-      "codigo_proveedor": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 11
-      }
-    },
-    "categoria_decidida_por": {
-      "campo": "tipo",
-      "valor": "CAPSULAS",
-      "explicacion": "Suplemento de vitamina D3 de un solo componente (principio activo VITAMINA D3) va en Vitaminas individuales (NUT-VIT-VIT)."
-    }
-  },
-  "P08:IN7033": {
-    "item_id": "P08:IN7033",
-    "estado": "lista_para_alta",
-    "duplicado_de": null,
-    "motivos_revision": [],
-    "ficha": {
-      "gtin": "0363641316245",
-      "descripcion": "LOCION PURE CARE SHEA BUTTER X 500 ML",
-      "marca": "PURE CARE",
-      "tipo": "LOCION",
-      "variante": "SHEA BUTTER",
-      "contenido": 500,
-      "unidad": "ML",
-      "unidades_por_envase": 1,
-      "principio_activo": null,
-      "concentracion": null,
-      "condicion_venta": null,
-      "categoria": "DER-COR-HID",
-      "precio_costo": 7.13,
-      "moneda": "USD",
-      "proveedor_id": "P08",
-      "codigo_proveedor": "IN7033"
-    },
-    "fuentes": {
-      "gtin": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 12
-      },
-      "descripcion": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 12
-      },
-      "marca": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 12
-      },
-      "tipo": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 12
-      },
-      "variante": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 12
-      },
-      "contenido": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 12
-      },
-      "unidad": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 12
-      },
-      "unidades_por_envase": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 12
-      },
-      "categoria": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 12
-      },
-      "precio_costo": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 12
-      },
-      "moneda": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 12
-      },
-      "proveedor_id": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 12
-      },
-      "codigo_proveedor": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 12
-      }
-    },
-    "categoria_decidida_por": {
-      "campo": "tipo",
-      "valor": "LOCION",
-      "explicacion": "Body lotion es loción corporal: va en Dermocosmética > Hidratación corporal (DER-COR-HID)."
-    }
-  },
-  "P08:IN7036": {
-    "item_id": "P08:IN7036",
-    "estado": "lista_para_alta",
-    "duplicado_de": null,
-    "motivos_revision": [],
-    "ficha": {
-      "gtin": "0640503396233",
-      "descripcion": "LOCION PURE CARE DAILY MOISTURE X 500 ML",
-      "marca": "PURE CARE",
-      "tipo": "LOCION",
-      "variante": "DAILY MOISTURE",
-      "contenido": 500,
-      "unidad": "ML",
-      "unidades_por_envase": 1,
-      "principio_activo": null,
-      "concentracion": null,
-      "condicion_venta": null,
-      "categoria": "DER-COR-HID",
-      "precio_costo": 6.08,
-      "moneda": "USD",
-      "proveedor_id": "P08",
-      "codigo_proveedor": "IN7036"
-    },
-    "fuentes": {
-      "gtin": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 13
-      },
-      "descripcion": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 13
-      },
-      "marca": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 13
-      },
-      "tipo": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 13
-      },
-      "variante": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 13
-      },
-      "contenido": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 13
-      },
-      "unidad": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 13
-      },
-      "unidades_por_envase": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 13
-      },
-      "categoria": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 13
-      },
-      "precio_costo": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 13
-      },
-      "moneda": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 13
-      },
-      "proveedor_id": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 13
-      },
-      "codigo_proveedor": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 13
-      }
-    },
-    "categoria_decidida_por": {
-      "campo": "tipo",
-      "valor": "LOCION",
-      "explicacion": "Body lotion es loción corporal: va en Dermocosmética > Hidratación corporal (DER-COR-HID)."
-    }
-  },
-  "P08:IN7039": {
-    "item_id": "P08:IN7039",
-    "estado": "lista_para_alta",
-    "duplicado_de": null,
-    "motivos_revision": [],
-    "ficha": {
-      "gtin": "0748618345709",
-      "descripcion": "LOCION PURE CARE DAILY MOISTURE X 296 ML",
-      "marca": "PURE CARE",
-      "tipo": "LOCION",
-      "variante": "DAILY MOISTURE",
-      "contenido": 296,
-      "unidad": "ML",
-      "unidades_por_envase": 1,
-      "principio_activo": null,
-      "concentracion": null,
-      "condicion_venta": null,
-      "categoria": "DER-COR-HID",
-      "precio_costo": 4.64,
-      "moneda": "USD",
-      "proveedor_id": "P08",
-      "codigo_proveedor": "IN7039"
-    },
-    "fuentes": {
-      "gtin": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 14
-      },
-      "descripcion": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 14
-      },
-      "marca": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 14
-      },
-      "tipo": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 14
-      },
-      "variante": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 14
-      },
-      "contenido": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 14
-      },
-      "unidad": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 14
-      },
-      "unidades_por_envase": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 14
-      },
-      "categoria": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 14
-      },
-      "precio_costo": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 14
-      },
-      "moneda": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 14
-      },
-      "proveedor_id": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 14
-      },
-      "codigo_proveedor": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 14
-      }
-    },
-    "categoria_decidida_por": {
-      "campo": "tipo",
-      "valor": "LOCION",
-      "explicacion": "Body lotion es loción corporal: va en Dermocosmética > Hidratación corporal (DER-COR-HID)."
-    }
-  },
-  "P08:IN7042": {
-    "item_id": "P08:IN7042",
-    "estado": "lista_para_alta",
-    "duplicado_de": null,
-    "motivos_revision": [],
-    "ficha": {
-      "gtin": "0718168608562",
-      "descripcion": "VITALIS VITAMINA D3 1000 UI CAPSULAS X 120 UN",
-      "marca": "VITALIS",
-      "tipo": "CAPSULAS",
-      "variante": null,
-      "contenido": 120,
-      "unidad": "UN",
-      "unidades_por_envase": 1,
-      "principio_activo": "VITAMINA D3",
-      "concentracion": "1000 UI",
-      "condicion_venta": null,
-      "categoria": "NUT-VIT-VIT",
-      "precio_costo": 10.46,
-      "moneda": "USD",
-      "proveedor_id": "P08",
-      "codigo_proveedor": "IN7042"
-    },
-    "fuentes": {
-      "gtin": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 15
-      },
-      "descripcion": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 15
-      },
-      "marca": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 15
-      },
-      "tipo": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 15
-      },
-      "contenido": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 15
-      },
-      "unidad": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 15
-      },
-      "unidades_por_envase": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 15
-      },
-      "principio_activo": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 15
-      },
-      "concentracion": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 15
-      },
-      "categoria": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 15
-      },
-      "precio_costo": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 15
-      },
-      "moneda": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 15
-      },
-      "proveedor_id": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 15
-      },
-      "codigo_proveedor": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 15
-      }
-    },
-    "categoria_decidida_por": {
-      "campo": "tipo",
-      "valor": "CAPSULAS",
-      "explicacion": "Vitamina D3 en softgels (cápsulas blandas) como suplemento: va en Nutrición > Vitaminas individuales (NUT-VIT-VIT)."
+      "explicacion": "El principio activo CITRATO DE MAGNESIO (suplemento mineral) ubica el producto en Minerales; el tipo CAPSULAS es la forma."
     }
   },
   "P02:RIV-1203": {
@@ -12959,7 +11575,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "ACONDICIONADOR",
-      "explicacion": "El tipo ACONDICIONADOR va en Cabello > Acondicionadores y tratamientos."
+      "explicacion": "El acondicionador va en Cuidado personal > Cabello > Acondicionadores y tratamientos."
     }
   },
   "P02:RIV-1206": {
@@ -13055,7 +11671,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "ACONDICIONADOR",
-      "explicacion": "El tipo ACONDICIONADOR va en Cabello > Acondicionadores y tratamientos."
+      "explicacion": "El acondicionador va en Cuidado personal > Cabello > Acondicionadores y tratamientos."
     }
   },
   "P02:RIV-1215": {
@@ -13151,7 +11767,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "SHAMPOO",
-      "explicacion": "El tipo SHAMPOO va en Cabello > Shampoo."
+      "explicacion": "El shampoo va en Cuidado personal > Cabello > Shampoo."
     }
   },
   "P02:RIV-1218": {
@@ -13257,7 +11873,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "LACA",
-      "explicacion": "La laca para peinar va en Cabello > Fijación."
+      "explicacion": "La laca para peinar va en Cuidado personal > Cabello > Fijación."
     }
   },
   "P02:RIV-1221": {
@@ -13353,7 +11969,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "ACONDICIONADOR",
-      "explicacion": "El tipo ACONDICIONADOR va en Cabello > Acondicionadores y tratamientos."
+      "explicacion": "El acondicionador va en Cuidado personal > Cabello > Acondicionadores y tratamientos."
     }
   },
   "P02:RIV-1224": {
@@ -13449,7 +12065,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "ACONDICIONADOR",
-      "explicacion": "El tipo ACONDICIONADOR va en Cabello > Acondicionadores y tratamientos."
+      "explicacion": "El acondicionador va en Cuidado personal > Cabello > Acondicionadores y tratamientos."
     }
   },
   "P02:RIV-1227": {
@@ -13545,7 +12161,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "SHAMPOO",
-      "explicacion": "El tipo SHAMPOO va en Cabello > Shampoo."
+      "explicacion": "El shampoo va en Cuidado personal > Cabello > Shampoo."
     }
   },
   "P02:RIV-1230": {
@@ -13641,7 +12257,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "ACONDICIONADOR",
-      "explicacion": "El tipo ACONDICIONADOR va en Cabello > Acondicionadores y tratamientos."
+      "explicacion": "El acondicionador va en Cuidado personal > Cabello > Acondicionadores y tratamientos; CABELLO SECO es variante, no tipo SHAMPOO EN SECO."
     }
   },
   "P02:RIV-1233": {
@@ -13737,7 +12353,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "TRATAMIENTO CAPILAR",
-      "explicacion": "El tratamiento capilar va en Cabello > Acondicionadores y tratamientos."
+      "explicacion": "El tratamiento capilar va en Cuidado personal > Cabello > Acondicionadores y tratamientos."
     }
   },
   "P02:RIV-1236": {
@@ -13833,7 +12449,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "ACONDICIONADOR",
-      "explicacion": "El tipo ACONDICIONADOR va en Cabello > Acondicionadores y tratamientos."
+      "explicacion": "El acondicionador va en Cuidado personal > Cabello > Acondicionadores y tratamientos."
     }
   },
   "P02:RIV-1239": {
@@ -13843,10 +12459,10 @@
     "motivos_revision": [],
     "ficha": {
       "gtin": "7799517845237",
-      "descripcion": "SHAMPOO EN SECO ALBORADA X 750 ML",
+      "descripcion": "SHAMPOO ALBORADA CABELLO SECO X 750 ML",
       "marca": "ALBORADA",
-      "tipo": "SHAMPOO EN SECO",
-      "variante": null,
+      "tipo": "SHAMPOO",
+      "variante": "CABELLO SECO",
       "contenido": 750,
       "unidad": "ML",
       "unidades_por_envase": 1,
@@ -13876,6 +12492,11 @@
         "fila": 17
       },
       "tipo": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 17
+      },
+      "variante": {
         "archivo": "ALTAS RIVERA OCT.xlsx",
         "hoja": "Altas",
         "fila": 17
@@ -13923,8 +12544,8 @@
     },
     "categoria_decidida_por": {
       "campo": "tipo",
-      "valor": "SHAMPOO EN SECO",
-      "explicacion": "El tipo SHAMPOO EN SECO (SH. CAB. SECO) lleva a CUI-CAP-SHA, que incluye shampoo en seco."
+      "valor": "SHAMPOO",
+      "explicacion": "«SH.» es SHAMPOO; cabello seco es variante, no SHAMPOO EN SECO. Va en Cabello > Shampoo."
     }
   },
   "P02:RIV-1242": {
@@ -14020,7 +12641,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "ACONDICIONADOR",
-      "explicacion": "ACOND. es acondicionador; va en Acondicionadores y tratamientos (CUI-CAP-ACO)."
+      "explicacion": "«ACOND.» es ACONDICIONADOR. Va en Cabello > Acondicionadores y tratamientos."
     }
   },
   "P02:RIV-1245": {
@@ -14116,7 +12737,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "ACONDICIONADOR",
-      "explicacion": "ACOND. es acondicionador; va en Acondicionadores y tratamientos (CUI-CAP-ACO)."
+      "explicacion": "«ACOND.» es ACONDICIONADOR. Va en Cabello > Acondicionadores y tratamientos."
     }
   },
   "P02:RIV-1251": {
@@ -14212,7 +12833,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "SHAMPOO",
-      "explicacion": "SH. es shampoo; va en Cabello > Shampoo (CUI-CAP-SHA)."
+      "explicacion": "«SH.» es SHAMPOO. Va en Cabello > Shampoo."
     }
   },
   "P02:RIV-1254": {
@@ -14308,7 +12929,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "ACONDICIONADOR",
-      "explicacion": "ACOND. es acondicionador; va en Acondicionadores y tratamientos (CUI-CAP-ACO)."
+      "explicacion": "«ACOND.» es ACONDICIONADOR. Va en Cabello > Acondicionadores y tratamientos."
     }
   },
   "P02:RIV-1257": {
@@ -14404,7 +13025,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "SHAMPOO",
-      "explicacion": "SH. es shampoo; va en Cabello > Shampoo (CUI-CAP-SHA)."
+      "explicacion": "«SH.» es SHAMPOO. Va en Cabello > Shampoo."
     }
   },
   "P02:RIV-1260": {
@@ -14500,7 +13121,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "SHAMPOO",
-      "explicacion": "SH. es shampoo; va en Cabello > Shampoo (CUI-CAP-SHA)."
+      "explicacion": "«SH.» es SHAMPOO. Va en Cabello > Shampoo."
     }
   },
   "P02:RIV-1263": {
@@ -14596,7 +13217,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "ACONDICIONADOR",
-      "explicacion": "ACOND. es acondicionador; va en Acondicionadores y tratamientos (CUI-CAP-ACO)."
+      "explicacion": "«ACOND.» es ACONDICIONADOR. Va en Cabello > Acondicionadores y tratamientos."
     }
   },
   "P02:RIV-1266": {
@@ -14702,7 +13323,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "LACA",
-      "explicacion": "LACA va en Fijación (CUI-CAP-FIJ), que incluye lacas para peinar."
+      "explicacion": "LACA va en Cabello > Fijación (geles, lacas y espumas para peinar)."
     }
   },
   "P02:RIV-1269": {
@@ -14798,7 +13419,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "ACONDICIONADOR",
-      "explicacion": "ACOND. es acondicionador; va en Acondicionadores y tratamientos (CUI-CAP-ACO)."
+      "explicacion": "«ACOND.» es ACONDICIONADOR. Va en Cabello > Acondicionadores y tratamientos."
     }
   },
   "P02:RIV-1272": {
@@ -14894,7 +13515,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "TRATAMIENTO CAPILAR",
-      "explicacion": "Tratamiento capilar va en Cabello > Acondicionadores y tratamientos (CUI-CAP-ACO)."
+      "explicacion": "Tratamiento capilar va en Cabello > Acondicionadores y tratamientos."
     }
   },
   "P02:RIV-1275": {
@@ -14990,7 +13611,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "TRATAMIENTO CAPILAR",
-      "explicacion": "Tratamiento capilar va en Cabello > Acondicionadores y tratamientos (CUI-CAP-ACO)."
+      "explicacion": "Tratamiento capilar va en Cabello > Acondicionadores y tratamientos."
     }
   },
   "P02:RIV-1278": {
@@ -15086,7 +13707,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "SHAMPOO",
-      "explicacion": "Shampoo va en Cabello > Shampoo (CUI-CAP-SHA)."
+      "explicacion": "Shampoo va en Cabello > Shampoo; CABELLO SECO es variante, no SHAMPOO EN SECO."
     }
   },
   "P02:RIV-1281": {
@@ -15182,7 +13803,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "SHAMPOO",
-      "explicacion": "Shampoo va en Cabello > Shampoo (CUI-CAP-SHA)."
+      "explicacion": "Shampoo va en Cabello > Shampoo."
     }
   },
   "P02:RIV-1287": {
@@ -15278,7 +13899,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "ACONDICIONADOR",
-      "explicacion": "Acondicionador va en Cabello > Acondicionadores y tratamientos (CUI-CAP-ACO)."
+      "explicacion": "Acondicionador va en Cabello > Acondicionadores y tratamientos."
     }
   },
   "P02:RIV-1299": {
@@ -15374,7 +13995,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "SHAMPOO",
-      "explicacion": "Shampoo va en Cabello > Shampoo (CUI-CAP-SHA)."
+      "explicacion": "Shampoo va en Cabello > Shampoo."
     }
   },
   "P02:RIV-1302": {
@@ -15470,7 +14091,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "ACONDICIONADOR",
-      "explicacion": "Acondicionador va en Cabello > Acondicionadores y tratamientos (CUI-CAP-ACO)."
+      "explicacion": "Acondicionador va en Cabello > Acondicionadores y tratamientos."
     }
   },
   "P02:RIV-1305": {
@@ -15566,7 +14187,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "SHAMPOO",
-      "explicacion": "Shampoo va en Cabello > Shampoo (CUI-CAP-SHA)."
+      "explicacion": "Shampoo va en Cabello > Shampoo; CABELLO SECO es variante."
     }
   },
   "P02:RIV-1308": {
@@ -15662,7 +14283,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "SHAMPOO",
-      "explicacion": "Shampoo va en Cabello > Shampoo (CUI-CAP-SHA)."
+      "explicacion": "Shampoo va en Cabello > Shampoo."
     }
   },
   "P02:RIV-1311": {
@@ -15758,7 +14379,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "TRATAMIENTO CAPILAR",
-      "explicacion": "Tratamiento capilar va en Cabello > Acondicionadores y tratamientos (CUI-CAP-ACO)."
+      "explicacion": "Tratamiento capilar va en Cabello > Acondicionadores y tratamientos; ya existe SKU103605 con igual marca, variante y contenido."
     }
   },
   "P02:RIV-1314": {
@@ -16056,7 +14677,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "LACA",
-      "explicacion": "LACA con fijación; va en Cuidado personal > Cabello > Fijación."
+      "explicacion": "La laca para peinar va en Cuidado personal > Cabello > Fijación."
     }
   },
   "P02:RIV-1323": {
@@ -16632,7 +15253,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "SHAMPOO",
-      "explicacion": "«SH.» es SHAMPOO; va en Cuidado personal > Cabello > Shampoo."
+      "explicacion": "«SH.» es SHAMPOO; el GTIN ya existe en el catálogo como SKU101316."
     }
   },
   "P02:RIV-1344": {
@@ -16824,7 +15445,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "ACONDICIONADOR",
-      "explicacion": "Un acondicionador capilar va en Cuidado personal > Cabello > Acondicionadores y tratamientos."
+      "explicacion": "El tipo ACONDICIONADOR va en Cabello > Acondicionadores y tratamientos."
     }
   },
   "P02:RIV-1209": {
@@ -16930,7 +15551,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "DESODORANTE AEROSOL",
-      "explicacion": "Un desodorante aerosol va en Cuidado personal > Desodorantes > Aerosol."
+      "explicacion": "El tipo DESODORANTE AEROSOL va en Desodorantes > Aerosol."
     }
   },
   "P02:RIV-1212": {
@@ -17033,7 +15654,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "DESODORANTE AEROSOL",
-      "explicacion": "Desodorante aerosol: Cuidado personal > Desodorantes > Aerosol. Coincide con SKU101925."
+      "explicacion": "El tipo DESODORANTE AEROSOL va en Desodorantes > Aerosol."
     }
   },
   "P02:RIV-1248": {
@@ -17139,7 +15760,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "DESODORANTE AEROSOL",
-      "explicacion": "Un desodorante aerosol va en Cuidado personal > Desodorantes > Aerosol."
+      "explicacion": "El tipo DESODORANTE AEROSOL va en Desodorantes > Aerosol."
     }
   },
   "P02:RIV-1284": {
@@ -17245,7 +15866,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "DESODORANTE AEROSOL",
-      "explicacion": "Un desodorante aerosol va en Cuidado personal > Desodorantes > Aerosol."
+      "explicacion": "El tipo DESODORANTE AEROSOL va en Desodorantes > Aerosol."
     }
   },
   "P02:RIV-1290": {
@@ -17351,7 +15972,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "DESODORANTE AEROSOL",
-      "explicacion": "Un desodorante aerosol va en Cuidado personal > Desodorantes > Aerosol."
+      "explicacion": "El tipo DESODORANTE AEROSOL va en Desodorantes > Aerosol."
     }
   },
   "P02:RIV-1293": {
@@ -17375,7 +15996,9 @@
       "precio_costo": 94.17,
       "moneda": "UYU",
       "proveedor_id": "P02",
-      "codigo_proveedor": "RIV-1293"
+      "codigo_proveedor": "RIV-1293",
+      "peligro_deposito": null,
+      "numero_onu": null
     },
     "fuentes": {
       "gtin": {
@@ -17447,7 +16070,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "DESODORANTE BARRA",
-      "explicacion": "Un desodorante en barra va en Cuidado personal > Desodorantes > Barra y roll on."
+      "explicacion": "El tipo DESODORANTE BARRA va en Desodorantes > Barra y roll on."
     }
   },
   "P02:RIV-1296": {
@@ -17553,7 +16176,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "DESODORANTE AEROSOL",
-      "explicacion": "Un desodorante aerosol va en Cuidado personal > Desodorantes > Aerosol."
+      "explicacion": "El tipo DESODORANTE AEROSOL va en Desodorantes > Aerosol."
     }
   },
   "P02:RIV-1332": {
@@ -17659,7 +16282,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "DESODORANTE AEROSOL",
-      "explicacion": "Un desodorante aerosol va en Cuidado personal > Desodorantes > Aerosol."
+      "explicacion": "El tipo DESODORANTE AEROSOL va en Desodorantes > Aerosol."
     }
   },
   "P02:RIV-1347": {
@@ -17765,7 +16388,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "DESODORANTE AEROSOL",
-      "explicacion": "Un desodorante aerosol va en Cuidado personal > Desodorantes > Aerosol."
+      "explicacion": "El tipo DESODORANTE AEROSOL va en Desodorantes > Aerosol."
     }
   },
   "P04:HT40003": {
@@ -17861,7 +16484,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "ESPUMA DE AFEITAR",
-      "explicacion": "La espuma de afeitar va en Afeitado > Espumas y geles de afeitar (CUI-AFE-ESP)."
+      "explicacion": "La espuma de afeitar va en Afeitado > Espumas y geles de afeitar."
     }
   },
   "P04:HT40006": {
@@ -17957,7 +16580,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "GEL DE DUCHA",
-      "explicacion": "El gel de duchas va en Higiene corporal > Gel de ducha (CUI-HIG-DUC)."
+      "explicacion": "El gel de ducha va en Higiene corporal > Gel de ducha."
     }
   },
   "P04:HT40084": {
@@ -18051,7 +16674,7 @@
     "categoria_decidida_por": {
       "campo": "variante",
       "valor": "BEBE",
-      "explicacion": "Es un shampoo formulado para bebés: va en Higiene del bebé (BEB-HIG-BAN), que excluye el shampoo para bebés de Cabello."
+      "explicacion": "El shampoo para bebés va en Bebés > Higiene del bebé (shampoo formulado para bebés)."
     }
   },
   "P04:HT40009": {
@@ -18147,7 +16770,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "GEL DE DUCHA",
-      "explicacion": "El gel de ducha va en Higiene corporal > Gel de ducha (CUI-HIG-DUC)."
+      "explicacion": "El gel de ducha va en Higiene corporal > Gel de ducha."
     }
   },
   "P04:HT40012": {
@@ -18243,7 +16866,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "GEL DE DUCHA",
-      "explicacion": "El gel de ducha va en Higiene corporal > Gel de ducha (CUI-HIG-DUC)."
+      "explicacion": "El gel de ducha va en Higiene corporal > Gel de ducha."
     }
   },
   "P04:HT40015": {
@@ -18339,7 +16962,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "GEL DE DUCHA",
-      "explicacion": "El gel de ducha va en Higiene corporal > Gel de ducha (CUI-HIG-DUC)."
+      "explicacion": "El gel de ducha va en Higiene corporal > Gel de ducha."
     }
   },
   "P04:HT40018": {
@@ -18435,7 +17058,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "JABON INTIMO",
-      "explicacion": "El jabón íntimo va en Higiene corporal > Higiene íntima (CUI-HIG-INT)."
+      "explicacion": "El jabón íntimo va en Higiene corporal > Higiene íntima."
     }
   },
   "P04:HT40021": {
@@ -18531,7 +17154,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "ESPUMA DE AFEITAR",
-      "explicacion": "La espuma de afeitar va en Afeitado > Espumas y geles de afeitar (CUI-AFE-ESP)."
+      "explicacion": "La espuma de afeitar va en Afeitado > Espumas y geles de afeitar."
     }
   },
   "P04:HT40024": {
@@ -18627,7 +17250,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "JABON INTIMO",
-      "explicacion": "El jabón íntimo va en Higiene corporal > Higiene íntima (CUI-HIG-INT)."
+      "explicacion": "El jabón íntimo va en Higiene corporal > Higiene íntima."
     }
   },
   "P04:HT40027": {
@@ -18723,7 +17346,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "GEL DE DUCHA",
-      "explicacion": "El gel de ducha va en Higiene corporal > Gel de ducha (CUI-HIG-DUC)."
+      "explicacion": "El gel de ducha va en Higiene corporal > Gel de ducha."
     }
   },
   "P04:HT40030": {
@@ -19105,7 +17728,7 @@
     "categoria_decidida_por": {
       "campo": "variante",
       "valor": "BEBE",
-      "explicacion": "Shampoo formulado para bebés: la variante BEBE lo lleva a Bebés > Higiene del bebé > Shampoo y baño, no a Cabello > Shampoo."
+      "explicacion": "Shampoo formulado para bebés: va en Higiene del bebé > Shampoo y baño, no en Cabello > Shampoo."
     }
   },
   "P04:HT40042": {
@@ -19775,7 +18398,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "GEL DE DUCHA",
-      "explicacion": "El gel de ducha va en Higiene corporal > Gel de ducha (CUI-HIG-DUC)."
+      "explicacion": "El tipo GEL DE DUCHA va en Higiene corporal > Gel de ducha."
     }
   },
   "P04:HT40063": {
@@ -19869,7 +18492,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "DESODORANTE ROLL ON",
-      "explicacion": "El roll on va en Desodorantes > Barra y roll on (CUI-DES-BAR)."
+      "explicacion": "El tipo DESODORANTE ROLL ON va en Desodorantes > Barra y roll on."
     }
   },
   "P04:HT40066": {
@@ -19965,7 +18588,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "ESPUMA DE AFEITAR",
-      "explicacion": "La espuma de afeitar va en Afeitado > Espumas y geles de afeitar (CUI-AFE-ESP)."
+      "explicacion": "El tipo ESPUMA DE AFEITAR va en Afeitado > Espumas y geles de afeitar."
     }
   },
   "P04:HT40069": {
@@ -20061,7 +18684,7 @@
     "categoria_decidida_por": {
       "campo": "variante",
       "valor": "BEBE MANZANILLA",
-      "explicacion": "Shampoo formulado para bebés: va en Bebés > Higiene del bebé > Shampoo y baño, no en Cabello."
+      "explicacion": "Con tipo SHAMPOO, la variante BEBE indica shampoo para bebés: Higiene del bebé > Shampoo y baño."
     }
   },
   "P04:HT40072": {
@@ -20157,7 +18780,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "GEL DE DUCHA",
-      "explicacion": "El gel de ducha va en Higiene corporal > Gel de ducha (CUI-HIG-DUC)."
+      "explicacion": "El tipo GEL DE DUCHA va en Higiene corporal > Gel de ducha."
     }
   },
   "P04:HT40081": {
@@ -20251,7 +18874,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "DESODORANTE ROLL ON",
-      "explicacion": "El roll on va en Desodorantes > Barra y roll on (CUI-DES-BAR)."
+      "explicacion": "El tipo DESODORANTE ROLL ON va en Desodorantes > Barra y roll on."
     }
   },
   "P04:HT40075": {
@@ -20347,7 +18970,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "TOALLITAS HUMEDAS",
-      "explicacion": "Todas las toallitas húmedas van en Bebés > Pañales > Toallitas húmedas (BEB-PAN-TOA)."
+      "explicacion": "Todas las toallitas húmedas van en Bebés > Pañales > Toallitas húmedas."
     }
   },
   "P04:HT40078": {
@@ -20443,7 +19066,1507 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "GEL DE DUCHA",
-      "explicacion": "El gel de ducha va en Higiene corporal > Gel de ducha (CUI-HIG-DUC)."
+      "explicacion": "El tipo GEL DE DUCHA va en Higiene corporal > Gel de ducha."
+    }
+  },
+  "P08:IN7003": {
+    "item_id": "P08:IN7003",
+    "estado": "lista_para_alta",
+    "duplicado_de": null,
+    "motivos_revision": [],
+    "ficha": {
+      "gtin": "0229962606567",
+      "descripcion": "SHAMPOO EN SECO PURE CARE ORIGINAL X 142 ML",
+      "marca": "PURE CARE",
+      "tipo": "SHAMPOO EN SECO",
+      "variante": "ORIGINAL",
+      "contenido": 142,
+      "unidad": "ML",
+      "unidades_por_envase": 1,
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "CUI-CAP-SHA",
+      "precio_costo": 5.17,
+      "moneda": "USD",
+      "proveedor_id": "P08",
+      "codigo_proveedor": "IN7003",
+      "peligro_deposito": "aerosol_inflamable",
+      "numero_onu": "1950"
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 2
+      },
+      "descripcion": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 2
+      },
+      "marca": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 2
+      },
+      "tipo": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 2
+      },
+      "variante": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 2
+      },
+      "contenido": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 2
+      },
+      "unidad": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 2
+      },
+      "unidades_por_envase": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 2
+      },
+      "categoria": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 2
+      },
+      "precio_costo": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 2
+      },
+      "moneda": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 2
+      },
+      "proveedor_id": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 2
+      },
+      "codigo_proveedor": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 2
+      },
+      "peligro_deposito": {
+        "archivo": "FDS_PureCare_in_sec.pdf",
+        "pagina": 1
+      },
+      "numero_onu": {
+        "archivo": "FDS_PureCare_in_sec.pdf",
+        "pagina": 1
+      }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "SHAMPOO EN SECO",
+      "explicacion": "Dry Shampoo es shampoo en seco, que la taxonomía ubica en Cabello > Shampoo."
+    }
+  },
+  "P08:IN7006": {
+    "item_id": "P08:IN7006",
+    "estado": "lista_para_alta",
+    "duplicado_de": null,
+    "motivos_revision": [],
+    "ficha": {
+      "gtin": "0856606869455",
+      "descripcion": "PROTECTOR SOLAR SUNGUARD SPORT LOTION FPS 50 X 237 ML",
+      "marca": "SUNGUARD",
+      "tipo": "PROTECTOR SOLAR",
+      "variante": "SPORT LOTION FPS 50",
+      "contenido": 237,
+      "unidad": "ML",
+      "unidades_por_envase": 1,
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "DER-SOL-ADU",
+      "precio_costo": 7.6,
+      "moneda": "USD",
+      "proveedor_id": "P08",
+      "codigo_proveedor": "IN7006",
+      "peligro_deposito": null,
+      "numero_onu": null
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 3
+      },
+      "descripcion": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 3
+      },
+      "marca": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 3
+      },
+      "tipo": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 3
+      },
+      "variante": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 3
+      },
+      "contenido": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 3
+      },
+      "unidad": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 3
+      },
+      "unidades_por_envase": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 3
+      },
+      "categoria": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 3
+      },
+      "precio_costo": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 3
+      },
+      "moneda": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 3
+      },
+      "proveedor_id": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 3
+      },
+      "codigo_proveedor": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 3
+      }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "PROTECTOR SOLAR",
+      "explicacion": "Sunscreen Lotion es un protector solar para adultos (sin indicación infantil): Dermocosmética > Protección solar > Adultos."
+    },
+    "inestable": {
+      "campos": [
+        "ficha.descripcion",
+        "ficha.variante"
+      ],
+      "otra_version": {
+        "item_id": "P08:IN7006",
+        "estado": "lista_para_alta",
+        "ficha": {
+          "gtin": "0856606869455",
+          "descripcion": "PROTECTOR SOLAR SUNGUARD SPORT FPS 50 X 237 ML",
+          "marca": "SUNGUARD",
+          "tipo": "PROTECTOR SOLAR",
+          "variante": "SPORT FPS 50",
+          "contenido": 237,
+          "unidad": "ML",
+          "unidades_por_envase": 1,
+          "principio_activo": null,
+          "concentracion": null,
+          "condicion_venta": null,
+          "categoria": "DER-SOL-ADU",
+          "precio_costo": 7.6,
+          "moneda": "USD",
+          "proveedor_id": "P08",
+          "codigo_proveedor": "IN7006"
+        },
+        "fuentes": {
+          "gtin": {
+            "archivo": "NorteImports_new_items_Q4.xlsx",
+            "hoja": "New items",
+            "fila": 3
+          },
+          "descripcion": {
+            "archivo": "NorteImports_new_items_Q4.xlsx",
+            "hoja": "New items",
+            "fila": 3
+          },
+          "marca": {
+            "archivo": "NorteImports_new_items_Q4.xlsx",
+            "hoja": "New items",
+            "fila": 3
+          },
+          "tipo": {
+            "archivo": "NorteImports_new_items_Q4.xlsx",
+            "hoja": "New items",
+            "fila": 3
+          },
+          "variante": {
+            "archivo": "NorteImports_new_items_Q4.xlsx",
+            "hoja": "New items",
+            "fila": 3
+          },
+          "contenido": {
+            "archivo": "NorteImports_new_items_Q4.xlsx",
+            "hoja": "New items",
+            "fila": 3
+          },
+          "unidad": {
+            "archivo": "NorteImports_new_items_Q4.xlsx",
+            "hoja": "New items",
+            "fila": 3
+          },
+          "unidades_por_envase": {
+            "archivo": "NorteImports_new_items_Q4.xlsx",
+            "hoja": "New items",
+            "fila": 3
+          },
+          "categoria": {
+            "archivo": "NorteImports_new_items_Q4.xlsx",
+            "hoja": "New items",
+            "fila": 3
+          },
+          "precio_costo": {
+            "archivo": "NorteImports_new_items_Q4.xlsx",
+            "hoja": "New items",
+            "fila": 3
+          },
+          "moneda": {
+            "archivo": "NorteImports_new_items_Q4.xlsx",
+            "hoja": "New items",
+            "fila": 3
+          },
+          "proveedor_id": {
+            "archivo": "NorteImports_new_items_Q4.xlsx",
+            "hoja": "New items",
+            "fila": 3
+          },
+          "codigo_proveedor": {
+            "archivo": "NorteImports_new_items_Q4.xlsx",
+            "hoja": "New items",
+            "fila": 3
+          }
+        },
+        "categoria_decidida_por": {
+          "campo": "tipo",
+          "valor": "PROTECTOR SOLAR",
+          "explicacion": "Protector solar sin mención infantil va en Protección solar > Protectores para adultos."
+        }
+      }
+    }
+  },
+  "P08:IN7009": {
+    "item_id": "P08:IN7009",
+    "estado": "lista_para_alta",
+    "duplicado_de": null,
+    "motivos_revision": [],
+    "ficha": {
+      "gtin": "0921365957672",
+      "descripcion": "CREMA PURE CARE INTENSIVE HANDS X 227 G",
+      "marca": "PURE CARE",
+      "tipo": "CREMA",
+      "variante": "INTENSIVE HANDS",
+      "contenido": 227,
+      "unidad": "G",
+      "unidades_por_envase": 1,
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "DER-COR-MAN",
+      "precio_costo": 5.28,
+      "moneda": "USD",
+      "proveedor_id": "P08",
+      "codigo_proveedor": "IN7009",
+      "peligro_deposito": null,
+      "numero_onu": null
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 4
+      },
+      "descripcion": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 4
+      },
+      "marca": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 4
+      },
+      "tipo": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 4
+      },
+      "variante": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 4
+      },
+      "contenido": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 4
+      },
+      "unidad": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 4
+      },
+      "unidades_por_envase": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 4
+      },
+      "categoria": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 4
+      },
+      "precio_costo": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 4
+      },
+      "moneda": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 4
+      },
+      "proveedor_id": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 4
+      },
+      "codigo_proveedor": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 4
+      }
+    },
+    "categoria_decidida_por": {
+      "campo": "variante",
+      "valor": "INTENSIVE HANDS",
+      "explicacion": "Crema de manos (Intensive Hands) va en Dermocosmética > Corporal > Manos y pies."
+    }
+  },
+  "P08:IN7012": {
+    "item_id": "P08:IN7012",
+    "estado": "lista_para_alta",
+    "duplicado_de": null,
+    "motivos_revision": [],
+    "ficha": {
+      "gtin": "0316401081426",
+      "descripcion": "VITALIS VITAMINA D3 2000 UI CAPSULAS X 120 UN",
+      "marca": "VITALIS",
+      "tipo": "CAPSULAS",
+      "variante": null,
+      "contenido": 120,
+      "unidad": "UN",
+      "unidades_por_envase": 1,
+      "principio_activo": "VITAMINA D3",
+      "concentracion": "2000 UI",
+      "condicion_venta": null,
+      "categoria": "NUT-VIT-VIT",
+      "precio_costo": 10.66,
+      "moneda": "USD",
+      "proveedor_id": "P08",
+      "codigo_proveedor": "IN7012",
+      "peligro_deposito": null,
+      "numero_onu": null
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 5
+      },
+      "descripcion": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 5
+      },
+      "marca": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 5
+      },
+      "tipo": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 5
+      },
+      "contenido": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 5
+      },
+      "unidad": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 5
+      },
+      "unidades_por_envase": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 5
+      },
+      "principio_activo": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 5
+      },
+      "concentracion": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 5
+      },
+      "categoria": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 5
+      },
+      "precio_costo": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 5
+      },
+      "moneda": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 5
+      },
+      "proveedor_id": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 5
+      },
+      "codigo_proveedor": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 5
+      }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "CAPSULAS",
+      "explicacion": "Suplemento de vitamina D3 (principio activo de vitamina individual) en softgels: Nutrición > Vitaminas individuales."
+    }
+  },
+  "P08:IN7015": {
+    "item_id": "P08:IN7015",
+    "estado": "lista_para_alta",
+    "duplicado_de": null,
+    "motivos_revision": [],
+    "ficha": {
+      "gtin": "0317169955172",
+      "descripcion": "GEL DE AFEITAR PURE CARE SENSITIVE X 198 ML",
+      "marca": "PURE CARE",
+      "tipo": "GEL DE AFEITAR",
+      "variante": "SENSITIVE",
+      "contenido": 198,
+      "unidad": "ML",
+      "unidades_por_envase": 1,
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "CUI-AFE-ESP",
+      "precio_costo": 3.89,
+      "moneda": "USD",
+      "proveedor_id": "P08",
+      "codigo_proveedor": "IN7015",
+      "peligro_deposito": "aerosol_inflamable",
+      "numero_onu": "1950"
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 6
+      },
+      "descripcion": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 6
+      },
+      "marca": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 6
+      },
+      "tipo": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 6
+      },
+      "variante": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 6
+      },
+      "contenido": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 6
+      },
+      "unidad": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 6
+      },
+      "unidades_por_envase": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 6
+      },
+      "categoria": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 6
+      },
+      "precio_costo": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 6
+      },
+      "moneda": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 6
+      },
+      "proveedor_id": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 6
+      },
+      "codigo_proveedor": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 6
+      },
+      "peligro_deposito": {
+        "archivo": "FDS_PureCare_in_afe.pdf",
+        "pagina": 1
+      },
+      "numero_onu": {
+        "archivo": "FDS_PureCare_in_afe.pdf",
+        "pagina": 1
+      }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "GEL DE AFEITAR",
+      "explicacion": "Shave Gel es gel de afeitar: Cuidado personal > Afeitado > Espumas y geles de afeitar."
+    }
+  },
+  "P08:IN7018": {
+    "item_id": "P08:IN7018",
+    "estado": "lista_para_alta",
+    "duplicado_de": null,
+    "motivos_revision": [],
+    "ficha": {
+      "gtin": "0013232310571",
+      "descripcion": "ENJUAGUE BUCAL PURE CARE COOL MINT X 500 ML",
+      "marca": "PURE CARE",
+      "tipo": "ENJUAGUE BUCAL",
+      "variante": "COOL MINT",
+      "contenido": 500,
+      "unidad": "ML",
+      "unidades_por_envase": 1,
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "CUI-BUC-ENJ",
+      "precio_costo": 4.41,
+      "moneda": "USD",
+      "proveedor_id": "P08",
+      "codigo_proveedor": "IN7018",
+      "peligro_deposito": null,
+      "numero_onu": null
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 7
+      },
+      "descripcion": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 7
+      },
+      "marca": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 7
+      },
+      "tipo": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 7
+      },
+      "variante": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 7
+      },
+      "contenido": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 7
+      },
+      "unidad": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 7
+      },
+      "unidades_por_envase": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 7
+      },
+      "categoria": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 7
+      },
+      "precio_costo": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 7
+      },
+      "moneda": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 7
+      },
+      "proveedor_id": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 7
+      },
+      "codigo_proveedor": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 7
+      }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "ENJUAGUE BUCAL",
+      "explicacion": "Mouthwash es enjuague bucal: Cuidado personal > Higiene bucal > Enjuagues."
+    }
+  },
+  "P08:IN7021": {
+    "item_id": "P08:IN7021",
+    "estado": "lista_para_alta",
+    "duplicado_de": null,
+    "motivos_revision": [],
+    "ficha": {
+      "gtin": "0366254962564",
+      "descripcion": "VITALIS MULTIVITAMINICO COMPRIMIDOS X 100 UN",
+      "marca": "VITALIS",
+      "tipo": "COMPRIMIDOS",
+      "variante": null,
+      "contenido": 100,
+      "unidad": "UN",
+      "unidades_por_envase": 1,
+      "principio_activo": "MULTIVITAMINICO",
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "NUT-VIT-MUL",
+      "precio_costo": 9.39,
+      "moneda": "USD",
+      "proveedor_id": "P08",
+      "codigo_proveedor": "IN7021",
+      "peligro_deposito": null,
+      "numero_onu": null
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 8
+      },
+      "descripcion": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 8
+      },
+      "marca": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 8
+      },
+      "tipo": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 8
+      },
+      "contenido": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 8
+      },
+      "unidad": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 8
+      },
+      "unidades_por_envase": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 8
+      },
+      "principio_activo": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 8
+      },
+      "categoria": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 8
+      },
+      "precio_costo": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 8
+      },
+      "moneda": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 8
+      },
+      "proveedor_id": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 8
+      },
+      "codigo_proveedor": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 8
+      }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "COMPRIMIDOS",
+      "explicacion": "Multivitamínico en tablets (comprimidos): el principio activo multivitamínico lleva a Nutrición > Vitaminas y minerales > Multivitamínicos."
+    }
+  },
+  "P08:IN7024": {
+    "item_id": "P08:IN7024",
+    "estado": "lista_para_alta",
+    "duplicado_de": null,
+    "motivos_revision": [],
+    "ficha": {
+      "gtin": "0103763096362",
+      "descripcion": "LOCION PURE CARE SHEA BUTTER X 296 ML",
+      "marca": "PURE CARE",
+      "tipo": "LOCION",
+      "variante": "SHEA BUTTER",
+      "contenido": 296,
+      "unidad": "ML",
+      "unidades_por_envase": 1,
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "DER-COR-HID",
+      "precio_costo": 4.18,
+      "moneda": "USD",
+      "proveedor_id": "P08",
+      "codigo_proveedor": "IN7024",
+      "peligro_deposito": null,
+      "numero_onu": null
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 9
+      },
+      "descripcion": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 9
+      },
+      "marca": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 9
+      },
+      "tipo": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 9
+      },
+      "variante": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 9
+      },
+      "contenido": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 9
+      },
+      "unidad": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 9
+      },
+      "unidades_por_envase": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 9
+      },
+      "categoria": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 9
+      },
+      "precio_costo": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 9
+      },
+      "moneda": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 9
+      },
+      "proveedor_id": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 9
+      },
+      "codigo_proveedor": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 9
+      }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "LOCION",
+      "explicacion": "Body Lotion es loción de cuerpo: Dermocosmética > Corporal > Hidratación corporal."
+    }
+  },
+  "P08:IN7027": {
+    "item_id": "P08:IN7027",
+    "estado": "lista_para_alta",
+    "duplicado_de": null,
+    "motivos_revision": [],
+    "ficha": {
+      "gtin": "0013573386723",
+      "descripcion": "VITALIS VITAMINA D3 1000 UI CAPSULAS X 60 UN",
+      "marca": "VITALIS",
+      "tipo": "CAPSULAS",
+      "variante": null,
+      "contenido": 60,
+      "unidad": "UN",
+      "unidades_por_envase": 1,
+      "principio_activo": "VITAMINA D3",
+      "concentracion": "1000 UI",
+      "condicion_venta": null,
+      "categoria": "NUT-VIT-VIT",
+      "precio_costo": 6.98,
+      "moneda": "USD",
+      "proveedor_id": "P08",
+      "codigo_proveedor": "IN7027",
+      "peligro_deposito": null,
+      "numero_onu": null
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 10
+      },
+      "descripcion": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 10
+      },
+      "marca": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 10
+      },
+      "tipo": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 10
+      },
+      "contenido": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 10
+      },
+      "unidad": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 10
+      },
+      "unidades_por_envase": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 10
+      },
+      "principio_activo": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 10
+      },
+      "concentracion": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 10
+      },
+      "categoria": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 10
+      },
+      "precio_costo": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 10
+      },
+      "moneda": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 10
+      },
+      "proveedor_id": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 10
+      },
+      "codigo_proveedor": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 10
+      }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "CAPSULAS",
+      "explicacion": "Suplemento de vitamina D3 (principio activo de vitamina individual) en softgels: Nutrición > Vitaminas individuales."
+    }
+  },
+  "P08:IN7030": {
+    "item_id": "P08:IN7030",
+    "estado": "lista_para_alta",
+    "duplicado_de": null,
+    "motivos_revision": [],
+    "ficha": {
+      "gtin": "0185187720344",
+      "descripcion": "VITALIS VITAMINA D3 2000 UI CAPSULAS X 60 UN",
+      "marca": "VITALIS",
+      "tipo": "CAPSULAS",
+      "variante": null,
+      "contenido": 60,
+      "unidad": "UN",
+      "unidades_por_envase": 1,
+      "principio_activo": "VITAMINA D3",
+      "concentracion": "2000 UI",
+      "condicion_venta": null,
+      "categoria": "NUT-VIT-VIT",
+      "precio_costo": 6.92,
+      "moneda": "USD",
+      "proveedor_id": "P08",
+      "codigo_proveedor": "IN7030",
+      "peligro_deposito": null,
+      "numero_onu": null
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 11
+      },
+      "descripcion": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 11
+      },
+      "marca": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 11
+      },
+      "tipo": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 11
+      },
+      "contenido": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 11
+      },
+      "unidad": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 11
+      },
+      "unidades_por_envase": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 11
+      },
+      "principio_activo": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 11
+      },
+      "concentracion": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 11
+      },
+      "categoria": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 11
+      },
+      "precio_costo": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 11
+      },
+      "moneda": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 11
+      },
+      "proveedor_id": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 11
+      },
+      "codigo_proveedor": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 11
+      }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "CAPSULAS",
+      "explicacion": "Suplemento de vitamina D3 (principio activo de vitamina individual) en softgels: Nutrición > Vitaminas individuales."
+    }
+  },
+  "P08:IN7033": {
+    "item_id": "P08:IN7033",
+    "estado": "lista_para_alta",
+    "duplicado_de": null,
+    "motivos_revision": [],
+    "ficha": {
+      "gtin": "0363641316245",
+      "descripcion": "LOCION PURE CARE SHEA BUTTER X 500 ML",
+      "marca": "PURE CARE",
+      "tipo": "LOCION",
+      "variante": "SHEA BUTTER",
+      "contenido": 500,
+      "unidad": "ML",
+      "unidades_por_envase": 1,
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "DER-COR-HID",
+      "precio_costo": 7.13,
+      "moneda": "USD",
+      "proveedor_id": "P08",
+      "codigo_proveedor": "IN7033"
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 12
+      },
+      "descripcion": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 12
+      },
+      "marca": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 12
+      },
+      "tipo": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 12
+      },
+      "variante": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 12
+      },
+      "contenido": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 12
+      },
+      "unidad": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 12
+      },
+      "unidades_por_envase": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 12
+      },
+      "categoria": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 12
+      },
+      "precio_costo": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 12
+      },
+      "moneda": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 12
+      },
+      "proveedor_id": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 12
+      },
+      "codigo_proveedor": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 12
+      }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "LOCION",
+      "explicacion": "Loción corporal (body lotion): tipo LOCION de dermocosmética, categoría de hidratación corporal."
+    }
+  },
+  "P08:IN7036": {
+    "item_id": "P08:IN7036",
+    "estado": "lista_para_alta",
+    "duplicado_de": null,
+    "motivos_revision": [],
+    "ficha": {
+      "gtin": "0640503396233",
+      "descripcion": "LOCION PURE CARE DAILY MOISTURE X 500 ML",
+      "marca": "PURE CARE",
+      "tipo": "LOCION",
+      "variante": "DAILY MOISTURE",
+      "contenido": 500,
+      "unidad": "ML",
+      "unidades_por_envase": 1,
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "DER-COR-HID",
+      "precio_costo": 6.08,
+      "moneda": "USD",
+      "proveedor_id": "P08",
+      "codigo_proveedor": "IN7036"
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 13
+      },
+      "descripcion": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 13
+      },
+      "marca": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 13
+      },
+      "tipo": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 13
+      },
+      "variante": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 13
+      },
+      "contenido": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 13
+      },
+      "unidad": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 13
+      },
+      "unidades_por_envase": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 13
+      },
+      "categoria": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 13
+      },
+      "precio_costo": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 13
+      },
+      "moneda": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 13
+      },
+      "proveedor_id": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 13
+      },
+      "codigo_proveedor": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 13
+      }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "LOCION",
+      "explicacion": "Loción corporal (body lotion): tipo LOCION de dermocosmética, categoría de hidratación corporal."
+    }
+  },
+  "P08:IN7039": {
+    "item_id": "P08:IN7039",
+    "estado": "lista_para_alta",
+    "duplicado_de": null,
+    "motivos_revision": [],
+    "ficha": {
+      "gtin": "0748618345709",
+      "descripcion": "LOCION PURE CARE DAILY MOISTURE X 296 ML",
+      "marca": "PURE CARE",
+      "tipo": "LOCION",
+      "variante": "DAILY MOISTURE",
+      "contenido": 296,
+      "unidad": "ML",
+      "unidades_por_envase": 1,
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "DER-COR-HID",
+      "precio_costo": 4.64,
+      "moneda": "USD",
+      "proveedor_id": "P08",
+      "codigo_proveedor": "IN7039"
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 14
+      },
+      "descripcion": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 14
+      },
+      "marca": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 14
+      },
+      "tipo": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 14
+      },
+      "variante": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 14
+      },
+      "contenido": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 14
+      },
+      "unidad": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 14
+      },
+      "unidades_por_envase": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 14
+      },
+      "categoria": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 14
+      },
+      "precio_costo": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 14
+      },
+      "moneda": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 14
+      },
+      "proveedor_id": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 14
+      },
+      "codigo_proveedor": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 14
+      }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "LOCION",
+      "explicacion": "Loción corporal (body lotion): tipo LOCION de dermocosmética, categoría de hidratación corporal."
+    }
+  },
+  "P08:IN7042": {
+    "item_id": "P08:IN7042",
+    "estado": "lista_para_alta",
+    "duplicado_de": null,
+    "motivos_revision": [],
+    "ficha": {
+      "gtin": "0718168608562",
+      "descripcion": "VITALIS VITAMINA D3 1000 UI CAPSULAS X 120 UN",
+      "marca": "VITALIS",
+      "tipo": "CAPSULAS",
+      "variante": null,
+      "contenido": 120,
+      "unidad": "UN",
+      "unidades_por_envase": 1,
+      "principio_activo": "VITAMINA D3",
+      "concentracion": "1000 UI",
+      "condicion_venta": null,
+      "categoria": "NUT-VIT-VIT",
+      "precio_costo": 10.46,
+      "moneda": "USD",
+      "proveedor_id": "P08",
+      "codigo_proveedor": "IN7042"
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 15
+      },
+      "descripcion": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 15
+      },
+      "marca": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 15
+      },
+      "tipo": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 15
+      },
+      "contenido": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 15
+      },
+      "unidad": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 15
+      },
+      "unidades_por_envase": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 15
+      },
+      "principio_activo": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 15
+      },
+      "concentracion": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 15
+      },
+      "categoria": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 15
+      },
+      "precio_costo": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 15
+      },
+      "moneda": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 15
+      },
+      "proveedor_id": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 15
+      },
+      "codigo_proveedor": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 15
+      }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "CAPSULAS",
+      "explicacion": "Suplemento de un solo componente (vitamina D3) en cápsulas blandas (softgels): vitaminas individuales."
     }
   }
 }

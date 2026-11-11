@@ -1,1 +1,199 @@
-[]
+[
+  {
+    "item_id": "P08:IN7006",
+    "campos": [
+      "ficha.descripcion",
+      "ficha.variante"
+    ],
+    "version_a": {
+      "item_id": "P08:IN7006",
+      "estado": "lista_para_alta",
+      "ficha": {
+        "gtin": "0856606869455",
+        "descripcion": "PROTECTOR SOLAR SUNGUARD SPORT LOTION FPS 50 X 237 ML",
+        "marca": "SUNGUARD",
+        "tipo": "PROTECTOR SOLAR",
+        "variante": "SPORT LOTION FPS 50",
+        "contenido": 237,
+        "unidad": "ML",
+        "unidades_por_envase": 1,
+        "principio_activo": null,
+        "concentracion": null,
+        "condicion_venta": null,
+        "categoria": "DER-SOL-ADU",
+        "precio_costo": 7.6,
+        "moneda": "USD",
+        "proveedor_id": "P08",
+        "codigo_proveedor": "IN7006",
+        "peligro_deposito": null,
+        "numero_onu": null
+      },
+      "fuentes": {
+        "gtin": {
+          "archivo": "NorteImports_new_items_Q4.xlsx",
+          "hoja": "New items",
+          "fila": 3
+        },
+        "descripcion": {
+          "archivo": "NorteImports_new_items_Q4.xlsx",
+          "hoja": "New items",
+          "fila": 3
+        },
+        "marca": {
+          "archivo": "NorteImports_new_items_Q4.xlsx",
+          "hoja": "New items",
+          "fila": 3
+        },
+        "tipo": {
+          "archivo": "NorteImports_new_items_Q4.xlsx",
+          "hoja": "New items",
+          "fila": 3
+        },
+        "variante": {
+          "archivo": "NorteImports_new_items_Q4.xlsx",
+          "hoja": "New items",
+          "fila": 3
+        },
+        "contenido": {
+          "archivo": "NorteImports_new_items_Q4.xlsx",
+          "hoja": "New items",
+          "fila": 3
+        },
+        "unidad": {
+          "archivo": "NorteImports_new_items_Q4.xlsx",
+          "hoja": "New items",
+          "fila": 3
+        },
+        "unidades_por_envase": {
+          "archivo": "NorteImports_new_items_Q4.xlsx",
+          "hoja": "New items",
+          "fila": 3
+        },
+        "categoria": {
+          "archivo": "NorteImports_new_items_Q4.xlsx",
+          "hoja": "New items",
+          "fila": 3
+        },
+        "precio_costo": {
+          "archivo": "NorteImports_new_items_Q4.xlsx",
+          "hoja": "New items",
+          "fila": 3
+        },
+        "moneda": {
+          "archivo": "NorteImports_new_items_Q4.xlsx",
+          "hoja": "New items",
+          "fila": 3
+        },
+        "proveedor_id": {
+          "archivo": "NorteImports_new_items_Q4.xlsx",
+          "hoja": "New items",
+          "fila": 3
+        },
+        "codigo_proveedor": {
+          "archivo": "NorteImports_new_items_Q4.xlsx",
+          "hoja": "New items",
+          "fila": 3
+        }
+      },
+      "categoria_decidida_por": {
+        "campo": "tipo",
+        "valor": "PROTECTOR SOLAR",
+        "explicacion": "Sunscreen Lotion es un protector solar para adultos (sin indicación infantil): Dermocosmética > Protección solar > Adultos."
+      }
+    },
+    "version_b": {
+      "item_id": "P08:IN7006",
+      "estado": "lista_para_alta",
+      "ficha": {
+        "gtin": "0856606869455",
+        "descripcion": "PROTECTOR SOLAR SUNGUARD SPORT FPS 50 X 237 ML",
+        "marca": "SUNGUARD",
+        "tipo": "PROTECTOR SOLAR",
+        "variante": "SPORT FPS 50",
+        "contenido": 237,
+        "unidad": "ML",
+        "unidades_por_envase": 1,
+        "principio_activo": null,
+        "concentracion": null,
+        "condicion_venta": null,
+        "categoria": "DER-SOL-ADU",
+        "precio_costo": 7.6,
+        "moneda": "USD",
+        "proveedor_id": "P08",
+        "codigo_proveedor": "IN7006"
+      },
+      "fuentes": {
+        "gtin": {
+          "archivo": "NorteImports_new_items_Q4.xlsx",
+          "hoja": "New items",
+          "fila": 3
+        },
+        "descripcion": {
+          "archivo": "NorteImports_new_items_Q4.xlsx",
+          "hoja": "New items",
+          "fila": 3
+        },
+        "marca": {
+          "archivo": "NorteImports_new_items_Q4.xlsx",
+          "hoja": "New items",
+          "fila": 3
+        },
+        "tipo": {
+          "archivo": "NorteImports_new_items_Q4.xlsx",
+          "hoja": "New items",
+          "fila": 3
+        },
+        "variante": {
+          "archivo": "NorteImports_new_items_Q4.xlsx",
+          "hoja": "New items",
+          "fila": 3
+        },
+        "contenido": {
+          "archivo": "NorteImports_new_items_Q4.xlsx",
+          "hoja": "New items",
+          "fila": 3
+        },
+        "unidad": {
+          "archivo": "NorteImports_new_items_Q4.xlsx",
+          "hoja": "New items",
+          "fila": 3
+        },
+        "unidades_por_envase": {
+          "archivo": "NorteImports_new_items_Q4.xlsx",
+          "hoja": "New items",
+          "fila": 3
+        },
+        "categoria": {
+          "archivo": "NorteImports_new_items_Q4.xlsx",
+          "hoja": "New items",
+          "fila": 3
+        },
+        "precio_costo": {
+          "archivo": "NorteImports_new_items_Q4.xlsx",
+          "hoja": "New items",
+          "fila": 3
+        },
+        "moneda": {
+          "archivo": "NorteImports_new_items_Q4.xlsx",
+          "hoja": "New items",
+          "fila": 3
+        },
+        "proveedor_id": {
+          "archivo": "NorteImports_new_items_Q4.xlsx",
+          "hoja": "New items",
+          "fila": 3
+        },
+        "codigo_proveedor": {
+          "archivo": "NorteImports_new_items_Q4.xlsx",
+          "hoja": "New items",
+          "fila": 3
+        }
+      },
+      "categoria_decidida_por": {
+        "campo": "tipo",
+        "valor": "PROTECTOR SOLAR",
+        "explicacion": "Protector solar sin mención infantil va en Protección solar > Protectores para adultos."
+      }
+    }
+  }
+]
