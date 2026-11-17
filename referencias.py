@@ -18,6 +18,11 @@ RUTA_RESULTADOS_REFERENCIA = CARPETA_REFERENCIAS / "resultados.json"
 CARPETA_REFERENCIAS_SEM4 = Path(__file__).parent / "salida" / "experimentos" / "referencias_sem4"
 CARPETA_RECEPCION_REFERENCIA = CARPETA_REFERENCIAS_SEM4 / "recepcion"
 
+# Semana 5, paso 2A: las 225 fichas del cierre de la semana 4 (commit bcb0b9b, evaluador 100/101), congeladas aparte
+# en referencias_sem5/. Son la vara para la ficha estructurada: ninguna puede quedar rechazada por el formulario nuevo.
+CARPETA_REFERENCIAS_SEM5 = Path(__file__).parent / "salida" / "experimentos" / "referencias_sem5"
+RUTA_RESULTADOS_SEM4 = CARPETA_REFERENCIAS_SEM5 / "resultados_sem4.json"
+
 # Para ESTE proceso: los imports de servidor_mcp que hagan las pruebas leen las copias congeladas.
 os.environ["INGESTA_CARPETA_EXTRACCIONES"] = str(CARPETA_REFERENCIAS_SEM4 / "extracciones")
 os.environ["INGESTA_CARPETA_RECEPCION"] = str(CARPETA_RECEPCION_REFERENCIA)
