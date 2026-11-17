@@ -51,6 +51,10 @@ TIMEOUT_TOOL = 30               # segundos: si una tool se cuelga, el agente no 
 
 PRECIO_INPUT = 0.10   # USD por millón de tokens de entrada (Haiku 5.5, módulo 6)
 PRECIO_OUTPUT = 0.50  # USD por millón de tokens de salida (el thinking se cobra como salida)
+# Semana 5, paso 4 (M6 §3.4): con caché la entrada se cobra en 3 tarifas
+PRECIO_ESCRITURA_CACHE = 0.125  # 1,25x: guardar en el caché (TTL de 5 minutos, el default)
+PRECIO_LECTURA_CACHE = 0.01     # 0,1x: leer del caché
+CACHE = {"type": "ephemeral"}   # la marca de cache_control (5 minutos: las vueltas de una tanda van seguidas)
 
 
 PROMPT_CRITERIO = "criterio_de_revision"  # semana 4, paso 4: el criterio de revisión lo sirve el servidor
@@ -62,6 +66,60 @@ PROMPT_CRITERIO = "criterio_de_revision"  # semana 4, paso 4: el criterio de rev
 # modelos del servidor. Los argumentos de las otras 3 los sigue validando el servidor (pydantic) y el error vuelve al
 # modelo como is_error, como siempre.
 TOOLS_CON_STRICT = {"registrar_ficha"}
+
+
+# --- Semana 5, paso 4: prompt caching (M6 §3) ---
+# Cada vuelta del loop reenvía TODO: las tools, el system (~13.000 tokens con el estándar, el vocabulario y la taxonomía)
+# y el historial. Medido en el paso 1 (probar_cache.py): la segunda llamada con el mismo prefijo leyó 12.915 tokens del
+# caché y costó 89 % menos; con la hora agregada al principio, leyó 0 y no avisó. Por eso: dos marcas y un control.
+
+def system_con_cache(system: str) -> list[dict]:
+    """El system como bloque con la marca al final. La API arma el prompt tools -> system -> messages: esta marca cachea
+    las tools y el system juntos (lo fijo, igual en TODAS las tandas y vueltas). Nada dinámico va acá (M6 §3.3)."""
+    return [{"type": "text", "text": system, "cache_control": CACHE}]
+
+
+def mensajes_con_cache(mensajes: list) -> list:
+    """Una COPIA del historial con la marca en el último bloque del último mensaje: cachea la conversación hasta acá, así
+    la vuelta siguiente lee del caché todo lo que ya se mandó y solo paga lo nuevo.
+
+    Es una copia a propósito: si la marca quedara en el historial, cada vuelta agregaría otra y la API acepta como mucho
+    4 por pedido. Así hay siempre 2: la del system y esta. El historial (con el thinking adentro) no se toca (M2).
+    """
+    copia = list(mensajes)
+    ultimo = copia[-1]
+    contenido = ultimo["content"]
+    if isinstance(contenido, str):  # el pedido de la tanda o el motivo de un hook al terminar
+        bloques = [{"type": "text", "text": contenido, "cache_control": CACHE}]
+    else:  # los tool_result de la vuelta anterior (siempre diccionarios: los arma el código)
+        bloques = [*contenido[:-1], {**contenido[-1], "cache_control": CACHE}]
+    copia[-1] = {**ultimo, "content": bloques}
+    return copia
+
+
+def tokens_de(usage) -> dict:
+    """Los 4 contadores del usage (M6 §6.3: usage es la fuente de verdad). Con caché, input_tokens es SOLO lo que no se
+    leyó ni se escribió en el caché: el tamaño real del pedido es la suma de los tres."""
+    return {"sin_cache": usage.input_tokens, "escritos": getattr(usage, "cache_creation_input_tokens", 0) or 0,
+            "leidos": getattr(usage, "cache_read_input_tokens", 0) or 0, "output": usage.output_tokens}
+
+
+def costo_usd(tokens: dict) -> float:
+    """Lo que se paga, con las 4 tarifas."""
+    return (tokens["sin_cache"] * PRECIO_INPUT + tokens["escritos"] * PRECIO_ESCRITURA_CACHE
+            + tokens["leidos"] * PRECIO_LECTURA_CACHE + tokens["output"] * PRECIO_OUTPUT) / 1_000_000
+
+
+def costo_sin_cache_usd(tokens: dict) -> float:
+    """Lo que habría costado lo mismo sin caché: toda la entrada a la tarifa normal (para comparar)."""
+    entrada = tokens["sin_cache"] + tokens["escritos"] + tokens["leidos"]
+    return (entrada * PRECIO_INPUT + tokens["output"] * PRECIO_OUTPUT) / 1_000_000
+
+
+def cache_sin_leer(vuelta_de_la_conversacion: int, tokens: dict) -> bool:
+    """El control de la trampa del paso 1: desde la 2ª vuelta de una conversación el prefijo ya se mandó, así que el
+    caché TIENE que leerse. Si da 0, algo del prefijo cambió (o expiró): la API no avisa, avisa el código."""
+    return vuelta_de_la_conversacion >= 2 and tokens["leidos"] == 0
 
 
 async def armar_system_prompt(cliente_mcp: Client) -> str:
@@ -162,28 +220,41 @@ async def correr_loop(cliente_claude, cliente_mcp: Client, modelo: str, system: 
         uso["vueltas"] += 1
 
         # Streaming (M1): con salidas largas el SDK lo exige. get_final_message() devuelve la respuesta completa
+        # Semana 5, paso 4: el system y el historial van con su marca de caché (effort y thinking fijos: si cambiaran
+        # entre vueltas, invalidarían el caché de los mensajes, M6 §3.3)
         with cliente_claude.messages.stream(
             model=modelo,
             max_tokens=MAX_TOKENS,
-            system=system,
+            system=system_con_cache(system),
             tools=tools,
-            messages=mensajes,
+            messages=mensajes_con_cache(mensajes),
             output_config={"effort": EFFORT},
             thinking=THINKING,
         ) as stream:
             respuesta = stream.get_final_message()
 
-        uso["input_tokens"] += respuesta.usage.input_tokens
-        uso["output_tokens"] += respuesta.usage.output_tokens
+        tokens = tokens_de(respuesta.usage)
+        entrada_total = tokens["sin_cache"] + tokens["escritos"] + tokens["leidos"]  # el tamaño real del pedido
+        uso["input_tokens"] += entrada_total
+        uso["output_tokens"] += tokens["output"]
+        uso["cache_escritos"] = uso.get("cache_escritos", 0) + tokens["escritos"]
+        uso["cache_leidos"] = uso.get("cache_leidos", 0) + tokens["leidos"]
+        uso["costo_usd"] = uso.get("costo_usd", 0.0) + costo_usd(tokens)
+        uso["costo_sin_cache_usd"] = uso.get("costo_sin_cache_usd", 0.0) + costo_sin_cache_usd(tokens)
         pedidos = [bloque for bloque in respuesta.content if bloque.type == "tool_use"]
         print(f"   {uso.get('etiqueta', '')}vuelta {uso['vueltas']:>2} · {respuesta.stop_reason:<9} · "
-              f"{respuesta.usage.input_tokens:>6} in / {respuesta.usage.output_tokens:>5} out · "
+              f"{entrada_total:>6} in ({tokens['leidos']} del caché) / {tokens['output']:>5} out · "
               f"pidió: {', '.join(p.name for p in pedidos) or '-'}")
         anotar(ruta_traza, {
             "evento": "respuesta", "vuelta": uso["vueltas"], "stop_reason": respuesta.stop_reason,
-            "input_tokens": respuesta.usage.input_tokens, "output_tokens": respuesta.usage.output_tokens,
+            "input_tokens": entrada_total, "output_tokens": tokens["output"],
+            "cache_escritos": tokens["escritos"], "cache_leidos": tokens["leidos"],
             "bloques": resumir_bloques(respuesta.content),
         })
+        if cache_sin_leer(uso["vueltas"], tokens):  # uso es de UNA conversación (una tanda)
+            uso["vueltas_sin_cache"] = uso.get("vueltas_sin_cache", 0) + 1
+            print(f"   {uso.get('etiqueta', '')}⚠ el caché no se leyó en la vuelta {uso['vueltas']}: algo del prefijo cambió")
+            anotar(ruta_traza, {"evento": "cache_sin_leer", "vuelta": uso["vueltas"]})
 
         # La respuesta va ENTERA al historial, con el thinking adentro, sin editar ni reordenar (M2)
         mensajes.append({"role": "assistant", "content": respuesta.content})
@@ -196,7 +267,7 @@ async def correr_loop(cliente_claude, cliente_mcp: Client, modelo: str, system: 
             # max_tokens, refusal, model_context_window_exceeded...: no seguimos a ciegas
             return respuesta.stop_reason, texto_final
 
-        if respuesta.usage.input_tokens >= TOPE_TOKENS_ENTRADA:
+        if entrada_total >= TOPE_TOKENS_ENTRADA:  # semana 5: con caché, input_tokens solo no es el tamaño del pedido
             return "tope_de_tokens", texto_final
 
         # Haiku puede pedir varias tools juntas: las ejecutamos DE A UNA, en orden (un solo escritor)
@@ -240,7 +311,8 @@ async def procesar_tanda(cliente_claude, cliente_mcp: Client, modelo: str, syste
     """
     esperados, _ = await items_de_la_tanda(cliente_mcp, proveedor_id, desde, cantidad)
     mensajes = [{"role": "user", "content": mensaje_de_tanda(proveedor_id, desde, cantidad)}]
-    uso = {"vueltas": 0, "input_tokens": 0, "output_tokens": 0, "etiqueta": etiqueta}
+    uso = {"vueltas": 0, "input_tokens": 0, "output_tokens": 0, "etiqueta": etiqueta,
+           "cache_escritos": 0, "cache_leidos": 0, "vueltas_sin_cache": 0, "costo_usd": 0.0, "costo_sin_cache_usd": 0.0}
     # Candado 2 de los permisos (paso 6): el hook frena cualquier tool que no sea de las que el modelo recibió
     hooks = HooksDeLaTanda(esperados, permitidas={tool["name"] for tool in tools})
     anotar(ruta_traza, {"evento": "inicio_tanda", "proveedor_id": proveedor_id, "desde": desde, "esperados": esperados})
@@ -258,10 +330,14 @@ async def procesar_tanda(cliente_claude, cliente_mcp: Client, modelo: str, syste
         )
     faltan = [item for item in esperados if item not in hooks.aceptadas]
 
-    costo = (uso["input_tokens"] * PRECIO_INPUT + uso["output_tokens"] * PRECIO_OUTPUT) / 1_000_000
     resultado = {
         "como_termino": como_termino, "texto_final": texto_final, "vueltas": uso["vueltas"],
-        "input_tokens": uso["input_tokens"], "output_tokens": uso["output_tokens"], "costo_usd": round(costo, 6),
+        "input_tokens": uso["input_tokens"], "output_tokens": uso["output_tokens"],
+        "costo_usd": round(uso.get("costo_usd", 0.0), 6),
+        # Semana 5, paso 4: el caché, y lo que habría costado sin él (para comparar)
+        "cache_escritos": uso.get("cache_escritos", 0), "cache_leidos": uso.get("cache_leidos", 0),
+        "vueltas_sin_cache": uso.get("vueltas_sin_cache", 0),
+        "costo_sin_cache_usd": round(uso.get("costo_sin_cache_usd", 0.0), 6),
         "esperados": len(esperados), "registrados": len(esperados) - len(faltan), "faltan": faltan,
         "propuestas": hooks.aceptadas,
         "frenos": hooks.resumen_de_frenos(),
@@ -389,6 +465,11 @@ async def main():
         "vueltas": sum(t["vueltas"] for t in tandas),
         "input_tokens": sum(t["input_tokens"] for t in tandas),
         "output_tokens": sum(t["output_tokens"] for t in tandas),
+        # Semana 5, paso 4: el caché y lo que habría costado sin él
+        "cache_leidos": sum(t["cache_leidos"] for t in tandas),
+        "cache_escritos": sum(t["cache_escritos"] for t in tandas),
+        "vueltas_sin_cache": sum(t["vueltas_sin_cache"] for t in tandas),
+        "costo_sin_cache_usd": round(sum(t["costo_sin_cache_usd"] for t in tandas), 4),
         "costo_total_usd": round(costo_total, 4),
         "costo_por_ficha_usd": round(costo_total / max(registrados, 1), 5),
         "traza": ruta_traza.name,
@@ -407,4 +488,4 @@ async def main():
         print(f"⚠ Tandas que no terminaron bien: {reporte['tandas_con_problemas']}")
 
 if __name__ == "__main__":
-    asyncio.run(main())
+    asyncio.run(main())

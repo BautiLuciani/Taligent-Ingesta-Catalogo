@@ -220,6 +220,10 @@ def fichar(tanda: tuple, cliente, modelo: str, reloj: float, carpeta_trazas: Pat
             "faltan": resultado.get("faltan", items_de_la_tanda(proveedor_id, desde, cantidad) if error else []),
             "vueltas": resultado.get("vueltas", 0), "input_tokens": resultado.get("input_tokens", 0),
             "output_tokens": resultado.get("output_tokens", 0), "costo_usd": resultado.get("costo_usd", 0.0),
+            # semana 5, paso 4: el caché de esa tanda y lo que habría costado sin él
+            "cache_leidos": resultado.get("cache_leidos", 0), "cache_escritos": resultado.get("cache_escritos", 0),
+            "vueltas_sin_cache": resultado.get("vueltas_sin_cache", 0),
+            "costo_sin_cache_usd": resultado.get("costo_sin_cache_usd", 0.0),
             "error": error, "propuestas": resultado.get("propuestas", {}),
             "frenos": resultado.get("frenos", [])}  # semana 4, paso 5: lo que frenaron los hooks en esa tanda
 
@@ -314,6 +318,12 @@ def etapa_fichas(cliente, modelo: str, consolidado: dict[str, dict], fichadores:
         "segundos": round(segundos, 1),
         "segundos_uno_detras_de_otro": round(sum(f["segundos"] for f in fichas), 1),
         "costo_usd": round(sum(f["costo_usd"] for f in fichas), 6),
+        # Semana 5, paso 4: el caché de toda la etapa
+        "costo_sin_cache_usd": round(sum(f["costo_sin_cache_usd"] for f in fichas), 6),
+        "cache_leidos": sum(f["cache_leidos"] for f in fichas),
+        "cache_escritos": sum(f["cache_escritos"] for f in fichas),
+        "input_tokens": sum(f["input_tokens"] for f in fichas),
+        "vueltas_sin_cache": sum(f["vueltas_sin_cache"] for f in fichas),
         "productos": sum(tanda[2] for tanda in tandas),
         "propuestas": len(propuestas),
         "faltan": faltan,
@@ -343,6 +353,10 @@ def mostrar_fichas(etapa: dict) -> None:
               f"{f['segundos']:>6.1f}{str(f['registrados']) + '/' + str(f['cantidad']):>8}{f['costo_usd']:>9.4f}{estado}")
     print(f"\nA la vez: {etapa['segundos']:.1f} s · una detrás de otra serían {etapa['segundos_uno_detras_de_otro']:.1f} s"
           f" · US$ {etapa['costo_usd']:.4f}")
+    if etapa.get("input_tokens"):  # semana 5, paso 4: cuánto se leyó del caché y cuánto se ahorró
+        print(f"Caché: {etapa['cache_leidos']:,} de {etapa['input_tokens']:,} tokens de entrada leídos del caché "
+              f"({etapa['cache_leidos'] / etapa['input_tokens']:.0%}) · sin caché habría costado "
+              f"US$ {etapa['costo_sin_cache_usd']:.4f} · vueltas sin leer el caché: {etapa['vueltas_sin_cache']}")
     print(f"Propuestas: {etapa['propuestas']}/{etapa['productos']} productos · trazas en salida/trazas/{etapa['trazas']}/")
     if etapa["faltan"]:
         print(f"⚠ Sin propuesta: {etapa['faltan']}")
@@ -502,4 +516,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    main()

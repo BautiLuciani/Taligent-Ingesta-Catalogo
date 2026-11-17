@@ -13,7 +13,8 @@ from fastmcp.client.transports import PythonStdioTransport
 from pathlib import Path
 
 from referencias import ENTORNO_PRUEBAS  # semana 4, paso 0: extracciones congeladas (antes que servidor_mcp)
-from agente import CARPETA_SALIDA, RUTA_SERVIDOR, ejecutar_tool, fichar_tanda, preparar_resultados
+from agente import (CARPETA_SALIDA, RUTA_SERVIDOR, cache_sin_leer, costo_sin_cache_usd, costo_usd, ejecutar_tool,
+                    fichar_tanda, mensajes_con_cache, preparar_resultados, system_con_cache, tokens_de)
 from ficha_estructurada import formulario_de  # semana 5: registrar_ficha recibe el formulario nuevo
 
 errores = 0
@@ -164,8 +165,37 @@ async def main():
 
 asyncio.run(main())
 
+print("\n--- semana 5, paso 4: prompt caching (funciones puras, sin gastar) ---")
+chequear("El system va como un bloque con la marca de caché al final",
+         system_con_cache("reglas"), [{"type": "text", "text": "reglas", "cache_control": {"type": "ephemeral"}}])
+historial = [{"role": "user", "content": "Procesá P03"},
+             {"role": "assistant", "content": [SimpleNamespace(type="tool_use", id="t1")]},
+             {"role": "user", "content": [{"type": "tool_result", "tool_use_id": "t1", "content": "a"},
+                                          {"type": "tool_result", "tool_use_id": "t2", "content": "b"}]}]
+copia_original = json.dumps(historial, default=str)
+con_marca = mensajes_con_cache(historial)
+chequear("Marca en el último bloque del último mensaje (el último tool_result)", con_marca[-1]["content"][-1]["cache_control"],
+         {"type": "ephemeral"})
+chequear("...y en ningún otro bloque (la API acepta como mucho 4 marcas por pedido)",
+         [b.get("cache_control") for b in con_marca[-1]["content"][:-1]], [None])
+chequear("El historial NO se toca (la marca va en una copia: si no, se acumularían vuelta a vuelta)",
+         json.dumps(historial, default=str), copia_original)
+chequear("Si el último mensaje es texto (el pedido o el motivo de un hook), pasa a bloque con la marca",
+         mensajes_con_cache([{"role": "user", "content": "Te faltó LT-3303"}])[-1]["content"],
+         [{"type": "text", "text": "Te faltó LT-3303", "cache_control": {"type": "ephemeral"}}])
+# La llamada 2 del experimento del paso 1: 105 sin caché, 12.915 leídos, 4 de salida = US$ 0,00014 (0,00130 sin caché)
+segunda = tokens_de(SimpleNamespace(input_tokens=105, cache_creation_input_tokens=0, cache_read_input_tokens=12915,
+                                    output_tokens=4))
+chequear("Costo con las 4 tarifas = el del experimento del paso 1 (US$ 0,00014)", round(costo_usd(segunda), 5), 0.00014)
+chequear("Sin caché habría costado US$ 0,00130", round(costo_sin_cache_usd(segunda), 5), 0.0013)
+chequear("Un usage sin los campos del caché (los Claude falsos de las pruebas) cuenta 0",
+         tokens_de(SimpleNamespace(input_tokens=100, output_tokens=10)), {"sin_cache": 100, "escritos": 0, "leidos": 0, "output": 10})
+chequear("Vuelta 1 sin leer el caché: normal (todavía no se mandó nada)", cache_sin_leer(1, segunda | {"leidos": 0}), False)
+chequear("Vuelta 2 sin leer el caché: aviso (algo del prefijo cambió y la API no avisa)", cache_sin_leer(2, segunda | {"leidos": 0}), True)
+chequear("Vuelta 2 leyendo el caché: nada que avisar", cache_sin_leer(2, segunda), False)
+
 # fichar_tanda hace su propio asyncio.run (como en el orquestador, dentro de un hilo): por eso va afuera de main()
 carpeta_trazas = Path(tempfile.mkdtemp())
 probar_fichar_tanda(carpeta_trazas)
 shutil.rmtree(carpeta_trazas, ignore_errors=True)
-print(f"\nResultado final: {'todo OK' if errores == 0 else f'{errores} con error'}")
+print(f"\nResultado final: {'todo OK' if errores == 0 else f'{errores} con error'}")

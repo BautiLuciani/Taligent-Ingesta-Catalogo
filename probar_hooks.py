@@ -179,7 +179,9 @@ def textos_de_usuario(mensajes: list) -> list[str]:
         if isinstance(contenido, str):
             salida.append(contenido)
         else:
-            salida += [f"{'ERROR ' if b['is_error'] else ''}{b['content']}" for b in contenido]
+            # semana 5, paso 4: el último mensaje llega como bloque de texto con la marca de caché
+            salida += [b["text"] if b.get("type") == "text" else f"{'ERROR ' if b['is_error'] else ''}{b['content']}"
+                       for b in contenido]
     return salida
 
 
