@@ -127,6 +127,36 @@ def fuentes_de_la_guia(fuentes: list[dict], ficha: dict) -> tuple[dict, list[str
     return convertidas, problemas
 
 
+def casilleros_de_las_fuentes(fuentes: dict) -> list[dict]:
+    """La inversa de fuentes_de_la_guia: de la forma de la guía a los casilleros fijos (para armar ejemplos y pruebas)."""
+    casilleros = []
+    for campo, fuente in fuentes.items():
+        if "pagina" in fuente:
+            tipo, numero, hoja = "pagina", fuente["pagina"], ""
+        elif "linea" in fuente:
+            tipo, numero, hoja = "linea", fuente["linea"], ""
+        else:
+            tipo, numero, hoja = "hoja_fila", fuente["fila"], fuente["hoja"]
+        casilleros.append({"campo": campo, "archivo": fuente["archivo"], "tipo_ubicacion": tipo, "numero": numero,
+                           "hoja": hoja})
+    return casilleros
+
+
+def formulario_de(registro: dict) -> dict:
+    """Un registro con la forma de resultados.json -> los argumentos de registrar_ficha con el formulario nuevo.
+
+    Completa los 18 campos (los que no estaban, en null), pasa las fuentes a casilleros y completa motivos_revision y
+    duplicado_de (ahora obligatorios). Sirve para las pruebas que arman registros a mano (como antes de la semana 5).
+    """
+    ficha = registro.get("ficha")
+    fuentes = registro.get("fuentes")
+    return {**registro,
+            "ficha": {campo: ficha.get(campo) for campo in CAMPOS_FICHA} if isinstance(ficha, dict) else ficha,
+            "fuentes": casilleros_de_las_fuentes(fuentes) if isinstance(fuentes, dict) else fuentes,
+            "motivos_revision": registro.get("motivos_revision", []),
+            "duplicado_de": registro.get("duplicado_de")}
+
+
 def registro_interno(argumentos: dict) -> dict:
     """Lo que registró el modelo, con las fuentes ya en la forma de la guía (la forma de resultados.json).
 
@@ -137,4 +167,4 @@ def registro_interno(argumentos: dict) -> dict:
     fuentes = argumentos.get("fuentes")
     if isinstance(fuentes, list):
         fuentes, _ = fuentes_de_la_guia(fuentes, ficha)
-    return {**argumentos, "fuentes": fuentes}
+    return {**argumentos, "fuentes": fuentes}

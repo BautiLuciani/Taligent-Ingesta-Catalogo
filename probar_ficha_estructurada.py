@@ -5,8 +5,9 @@ import json
 from pydantic import ValidationError
 
 from referencias import RUTA_RESULTADOS_SEM4  # carpetas congeladas: va antes que cualquier import del servidor
-from ficha_estructurada import (CAMPOS_FICHA, CATEGORIAS, TIPOS, Ficha, FuenteDeCampo, fuente_de_la_guia,  # noqa: E402
-                                fuentes_de_la_guia, registro_interno)
+from ficha_estructurada import (CAMPOS_FICHA, CATEGORIAS, TIPOS, Ficha, FuenteDeCampo,  # noqa: E402
+                                casilleros_de_las_fuentes, formulario_de, fuente_de_la_guia, fuentes_de_la_guia,
+                                registro_interno)
 
 # Las 225 fichas del cierre de la semana 4 (evaluador 100/101), congeladas: el formulario nuevo no puede rechazar ninguna
 RESULTADOS = json.loads(RUTA_RESULTADOS_SEM4.read_text(encoding="utf-8"))
@@ -32,22 +33,6 @@ def ficha_completa(ficha: dict) -> dict:
     return {campo: ficha.get(campo) for campo in CAMPOS_FICHA}
 
 
-def a_casilleros(fuentes: dict) -> list[dict]:
-    """La inversa de fuentes_de_la_guia (solo para las pruebas): de la forma de la guía a los casilleros fijos."""
-    casilleros = []
-    for campo, fuente in fuentes.items():
-        if "pagina" in fuente:
-            casilleros.append({"campo": campo, "archivo": fuente["archivo"], "tipo_ubicacion": "pagina",
-                               "numero": fuente["pagina"], "hoja": ""})
-        elif "linea" in fuente:
-            casilleros.append({"campo": campo, "archivo": fuente["archivo"], "tipo_ubicacion": "linea",
-                               "numero": fuente["linea"], "hoja": ""})
-        else:
-            casilleros.append({"campo": campo, "archivo": fuente["archivo"], "tipo_ubicacion": "hoja_fila",
-                               "numero": fuente["fila"], "hoja": fuente["hoja"]})
-    return casilleros
-
-
 def rechaza(ficha: dict) -> bool:
     try:
         Ficha.model_validate(ficha)
@@ -62,7 +47,7 @@ chequear("Ninguna rechazada por el modelo Ficha (0 rechazos falsos)",
          [k for k, r in RESULTADOS.items() if rechaza(ficha_completa(r["ficha"]))], [])
 chequear("Ninguna fuente de las 225 queda fuera de los casilleros (ida y vuelta idéntica)",
          [k for k, r in RESULTADOS.items()
-          if fuentes_de_la_guia(a_casilleros(r["fuentes"]), r["ficha"]) != (r["fuentes"], [])], [])
+          if fuentes_de_la_guia(casilleros_de_las_fuentes(r["fuentes"]), r["ficha"]) != (r["fuentes"], [])], [])
 chequear("Las 3 formas de la guía aparecen (CSV/mail, PDF, Excel)",
          sorted({tuple(sorted(f)) for r in RESULTADOS.values() for f in r["fuentes"].values()}),
          [("archivo", "fila", "hoja"), ("archivo", "linea"), ("archivo", "pagina")])
@@ -100,7 +85,7 @@ chequear("Excel: hoja y fila", fuente_de_la_guia({"campo": "marca", "archivo": "
          {"archivo": "a.xlsx", "hoja": "Altas", "fila": 12})
 
 print("--- fuentes_de_la_guia: lo que el formulario no puede atajar ---")
-base = a_casilleros(JABON["fuentes"])
+base = casilleros_de_las_fuentes(JABON["fuentes"])
 marca = next(f for f in base if f["campo"] == "marca")
 chequear("Sin problemas: la del jabón tal cual", fuentes_de_la_guia(base, JABON["ficha"]), (JABON["fuentes"], []))
 _, problemas = fuentes_de_la_guia(base + [{**marca, "numero": 21}], JABON["ficha"])
@@ -120,7 +105,7 @@ chequear("Hoja escrita en una línea de CSV: problema", problemas,
 print("--- registro_interno: lo que guardan el servidor y los hooks (la forma de resultados.json) ---")
 for nombre, r in (("CSV (LT-3357)", JABON), ("PDF + FDS (LHS-206)", LAVANDINA), ("Excel (RIV-1206)", RIVERA)):
     entrada = {"item_id": r["item_id"], "estado": r["estado"], "ficha": ficha_completa(r["ficha"]),
-               "fuentes": a_casilleros(r["fuentes"]), "motivos_revision": r["motivos_revision"],
+               "fuentes": casilleros_de_las_fuentes(r["fuentes"]), "motivos_revision": r["motivos_revision"],
                "duplicado_de": r["duplicado_de"], "categoria_decidida_por": r["categoria_decidida_por"]}
     interno = registro_interno(copy.deepcopy(entrada))
     chequear(f"{nombre}: las fuentes vuelven a la forma de la guía", interno["fuentes"], r["fuentes"])
@@ -129,4 +114,16 @@ for nombre, r in (("CSV (LT-3357)", JABON), ("PDF + FDS (LHS-206)", LAVANDINA), 
 chequear("Fuentes que ya estaban en la forma de la guía: no se tocan",
          registro_interno({"ficha": JABON["ficha"], "fuentes": JABON["fuentes"]})["fuentes"], JABON["fuentes"])
 
-print(f"\nResultado: {'todo OK' if errores == 0 else f'{errores} con error'}")
+print("--- formulario_de: un registro armado a mano (como antes) -> argumentos del formulario nuevo ---")
+parcial = {"item_id": "P03:LT-3303", "estado": "lista_para_alta", "ficha": {"marca": "SONRISA", "contenido": 90},
+           "fuentes": {"marca": {"archivo": "a.csv", "linea": 2}}}
+nuevo = formulario_de(parcial)
+chequear("Completa los 18 campos (los que faltaban, en null)", (list(nuevo["ficha"]), nuevo["ficha"]["gtin"]),
+         (list(CAMPOS_FICHA), None))
+chequear("Pasa las fuentes a casilleros", nuevo["fuentes"],
+         [{"campo": "marca", "archivo": "a.csv", "tipo_ubicacion": "linea", "numero": 2, "hoja": ""}])
+chequear("Completa motivos_revision y duplicado_de (ahora obligatorios)",
+         (nuevo["motivos_revision"], nuevo["duplicado_de"]), ([], None))
+chequear("Una ficha que no es diccionario queda igual (la rechaza el servidor)", formulario_de({"ficha": None})["ficha"], None)
+
+print(f"\nResultado: {'todo OK' if errores == 0 else f'{errores} con error'}")

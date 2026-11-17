@@ -9,6 +9,7 @@ from fastmcp import Client
 from fastmcp.client.transports import PythonStdioTransport
 
 from referencias import ENTORNO_PRUEBAS  # semana 4, paso 0: extracciones congeladas (antes que servidor_mcp)
+from ficha_estructurada import formulario_de  # noqa: E402  (semana 5: el formulario nuevo de registrar_ficha)
 
 RUTA_SERVIDOR = Path(__file__).parent / "servidor_mcp.py"
 CARPETA_ESTANDAR = Path(__file__).parent / "Data" / "estandar"
@@ -276,7 +277,10 @@ async def main():
 
         print("\n--- registrar_ficha: resultados coherentes (se guardan) ---")
         fuente_3303 = por_id["P03:LT-3303"]["fuente"]
-        ficha_ejemplo = {"gtin": "7793469616846", "marca": "SONRISA", "tipo": "PASTA DENTAL", "contenido": 90, "unidad": "G"}
+        # Semana 5: la ficha lleva los 4 campos que nunca quedan vacíos; formulario_de completa los demás en null
+        ficha_ejemplo = {"gtin": "7793469616846", "descripcion": "PASTA DENTAL SONRISA X 90 G", "marca": "SONRISA",
+                         "tipo": "PASTA DENTAL", "contenido": 90, "unidad": "G", "unidades_por_envase": 1,
+                         "proveedor_id": "P03", "codigo_proveedor": "LT-3303"}
         fuentes_ejemplo = {campo: fuente_3303 for campo in ficha_ejemplo}
         categoria_ejemplo = {"campo": "tipo", "valor": "PASTA DENTAL", "explicacion": "Pasta dental va en cuidado bucal."}
         base = {"ficha": ficha_ejemplo, "fuentes": fuentes_ejemplo, "categoria_decidida_por": categoria_ejemplo}
@@ -290,7 +294,7 @@ async def main():
         ]
         for nombre, argumentos in casos_ok:
             resultado = await cliente.call_tool(
-                "registrar_ficha", {**base, **argumentos}, raise_on_error=False)
+                "registrar_ficha", formulario_de({**base, **argumentos}), raise_on_error=False)
             chequear(nombre, resultado.is_error, False)
         chequear("Quedaron 3 ítems guardados (no 4)", resultado.data["total_registrados"], 3)
 
@@ -319,7 +323,7 @@ async def main():
         ]
         for nombre, argumentos in casos_error:
             resultado = await cliente.call_tool(
-                "registrar_ficha", {**base, **argumentos}, raise_on_error=False)
+                "registrar_ficha", formulario_de({**base, **argumentos}), raise_on_error=False)
             chequear(nombre, resultado.is_error, True)
             if nombre in ("duplicado sin SKU", "categoría explicada con un dato inventado",
                           "sin EAN como lista_para_alta (lo que pide la PD de Natural Vida)"):
@@ -328,27 +332,60 @@ async def main():
         guardado = json.loads((Path(carpeta_temporal) / "resultados.json").read_text(encoding="utf-8"))
         chequear("En el archivo están solo los 3 coherentes", sorted(guardado), ["P03:LT-3303", "P03:LT-3333", "P03:LT-3447"])
 
+        print("\n--- registrar_ficha: el formulario estructurado (semana 5, paso 2B) ---")
+        fila_1206 = next(f for f in await leer_todas(cliente, "P02") if f["item_id"] == "P02:RIV-1206")
+        excel = {"ficha": {**ficha_ejemplo, "proveedor_id": "P02", "codigo_proveedor": "RIV-1206"},
+                 "fuentes": {campo: fila_1206["fuente"] for campo in ficha_ejemplo},
+                 "categoria_decidida_por": categoria_ejemplo, "item_id": "P02:RIV-1206", "estado": "duplicado",
+                 "duplicado_de": "SKU100714"}
+        resultado = await cliente.call_tool("registrar_ficha", formulario_de(excel), raise_on_error=False)
+        guardado = json.loads((Path(carpeta_temporal) / "resultados.json").read_text(encoding="utf-8"))["P02:RIV-1206"]
+        chequear("Un ítem de Excel se acepta y su fuente se guarda en la forma de la guía {archivo, hoja, fila}",
+                 (resultado.is_error, guardado["fuentes"]["marca"]), (False, fila_1206["fuente"]))
+        chequear("...con la ficha completa: los 18 campos (peligro y ONU en null)",
+                 (len(guardado["ficha"]), guardado["ficha"]["peligro_deposito"]), (18, None))
+        casilleros = formulario_de(excel)["fuentes"]
+        marca_1206 = next(f for f in casilleros if f["campo"] == "marca")
+        resultado = await cliente.call_tool("registrar_ficha", {**formulario_de(excel),
+                                            "fuentes": casilleros + [{**marca_1206, "numero": 99}]}, raise_on_error=False)
+        chequear("Un campo con dos fuentes: NO se guarda", resultado.is_error, True)
+        print(f"      lo que recibe el modelo: {resultado.content[0].text}")
+        resultado = await cliente.call_tool("registrar_ficha", {**formulario_de(excel),
+                                            "fuentes": casilleros + [{**marca_1206, "campo": "variante"}]},
+                                            raise_on_error=False)
+        chequear("Fuente de un campo en null (variante): NO se guarda", resultado.is_error, True)
+        sin_marca = formulario_de(excel)
+        del sin_marca["ficha"]["marca"]
+        resultado = await cliente.call_tool("registrar_ficha", sin_marca, raise_on_error=False)
+        chequear("Ficha con un campo de menos (en vez de null): NO se guarda (van todos)", resultado.is_error, True)
+        resultado = await cliente.call_tool("registrar_ficha", formulario_de({**excel, "ficha": {
+            **excel["ficha"], "tipo": "PASTA DENTAL BLANQUEADORA"}}), raise_on_error=False)
+        chequear("Un tipo fuera del vocabulario: lo rechaza el formulario (antes lo frenaba el hook)", resultado.is_error, True)
+        resultado = await cliente.call_tool("registrar_ficha", {**formulario_de(excel), "fuentes": excel["fuentes"]},
+                                            raise_on_error=False)
+        chequear("Fuentes con la forma vieja ({campo: fuente}): NO se guarda", resultado.is_error, True)
+
         print("\n--- registrar_ficha: un ítem del PDF ---")
         fuente_206 = lhs["P07:LHS-206"]["fuente"]
-        resultado = await cliente.call_tool("registrar_ficha", {
+        resultado = await cliente.call_tool("registrar_ficha", formulario_de({
             **base, "item_id": "P07:LHS-206", "estado": "lista_para_alta",
-            "fuentes": {campo: fuente_206 for campo in ficha_ejemplo}}, raise_on_error=False)
+            "fuentes": {campo: fuente_206 for campo in ficha_ejemplo}}), raise_on_error=False)
         chequear("Se registra un ítem de P07 con fuente {archivo, pagina}", resultado.is_error, False)
 
         print("\n--- registrar_ficha: conflictos entre archivos (paso 6E, decisión 1) ---")
         fuente_andes = andes["P01:AN-1136"]["fuente"]
         base_andes = {**base, "fuentes": {campo: fuente_andes for campo in ficha_ejemplo}}
-        resultado = await cliente.call_tool("registrar_ficha", {
+        resultado = await cliente.call_tool("registrar_ficha", formulario_de({
             **base_andes, "item_id": "P01:AN-1136", "estado": "a_revision",
-            "motivos_revision": ["conflicto_entre_fuentes"]}, raise_on_error=False)
+            "motivos_revision": ["conflicto_entre_fuentes"]}), raise_on_error=False)
         chequear("AN-1136 (el código encontró el conflicto) a revisión con su motivo: se guarda", resultado.is_error, False)
-        resultado = await cliente.call_tool("registrar_ficha", {
+        resultado = await cliente.call_tool("registrar_ficha", formulario_de({
             **base_andes, "item_id": "P01:AN-1124", "estado": "a_revision",
-            "motivos_revision": ["conflicto_entre_fuentes"]}, raise_on_error=False)
+            "motivos_revision": ["conflicto_entre_fuentes"]}), raise_on_error=False)
         chequear("AN-1124 (sin conflicto) marcado con conflicto: NO se guarda", resultado.is_error, True)
         print(f"      lo que recibe el modelo: {resultado.content[0].text}")
-        resultado = await cliente.call_tool("registrar_ficha", {
-            **base_andes, "item_id": "P01:AN-1133", "estado": "lista_para_alta"}, raise_on_error=False)
+        resultado = await cliente.call_tool("registrar_ficha", formulario_de({
+            **base_andes, "item_id": "P01:AN-1133", "estado": "lista_para_alta"}), raise_on_error=False)
         chequear("AN-1133 (con conflicto) como lista_para_alta: NO se guarda", resultado.is_error, True)
 
         print("\n--- leer_archivo_proveedor: el mail de Natural Vida (semana 3, paso 7) ---")
@@ -372,9 +409,9 @@ async def main():
                  ("NATURAL VIDA", 4))
         chequear("La PD no llega a los fichadores (no está en ninguna fila)",
                  any("sistema de carga" in json.dumps(fila, ensure_ascii=False) for fila in nv.values()), False)
-        resultado = await cliente.call_tool("registrar_ficha", {
+        resultado = await cliente.call_tool("registrar_ficha", formulario_de({
             **base, "item_id": "P09:NV-203", "estado": "lista_para_alta",
-            "fuentes": {campo: nv["P09:NV-203"]["fuente"] for campo in ficha_ejemplo}}, raise_on_error=False)
+            "fuentes": {campo: nv["P09:NV-203"]["fuente"] for campo in ficha_ejemplo}}), raise_on_error=False)
         chequear("NV-203 como lista_para_alta (lo que pide la PD): NO se guarda", resultado.is_error, True)
 
         print("\n--- resources: el estándar ---")
@@ -393,13 +430,13 @@ async def main():
     entorno = {**ENTORNO_PRUEBAS, "INGESTA_CARPETA_SALIDA": carpeta_propuesta, "INGESTA_MODO_PROPUESTA": "1"}
     transporte = PythonStdioTransport(RUTA_SERVIDOR, env=entorno)
     async with Client(transporte) as cliente:
-        resultado = await cliente.call_tool("registrar_ficha", {**base, "item_id": "P03:LT-3303",
-                                                                "estado": "lista_para_alta"}, raise_on_error=False)
+        resultado = await cliente.call_tool("registrar_ficha", formulario_de({**base, "item_id": "P03:LT-3303",
+                                                                "estado": "lista_para_alta"}), raise_on_error=False)
         chequear("Coherente: se acepta, igual que siempre", resultado.is_error, False)
         chequear("...con la misma respuesta que ve el agente", (resultado.data["registrado"], resultado.data["estado"]),
                  ("P03:LT-3303", "lista_para_alta"))
-        resultado = await cliente.call_tool("registrar_ficha", {**base, "item_id": "P03:LT-3306",
-                                                                "estado": "duplicado"}, raise_on_error=False)
+        resultado = await cliente.call_tool("registrar_ficha", formulario_de({**base, "item_id": "P03:LT-3306",
+                                                                "estado": "duplicado"}), raise_on_error=False)
         chequear("Incoherente (duplicado sin SKU): se rechaza igual que siempre", resultado.is_error, True)
     chequear("No escribió resultados.json", (Path(carpeta_propuesta) / "resultados.json").exists(), False)
     shutil.rmtree(carpeta_propuesta, ignore_errors=True)
@@ -537,4 +574,4 @@ async def main():
     print(f"\nResultado: {'todo OK' if errores == 0 else f'{errores} con error'}")
 
 
-asyncio.run(main())
+asyncio.run(main())

@@ -14,6 +14,7 @@ from pathlib import Path
 
 from referencias import ENTORNO_PRUEBAS  # semana 4, paso 0: extracciones congeladas (antes que servidor_mcp)
 from agente import CARPETA_SALIDA, RUTA_SERVIDOR, ejecutar_tool, fichar_tanda, preparar_resultados
+from ficha_estructurada import formulario_de  # semana 5: registrar_ficha recibe el formulario nuevo
 
 errores = 0
 
@@ -44,14 +45,16 @@ class ClaudeFalso:
     ESPERA = 2.0
 
     def __init__(self, item_id: str):
-        ficha = {"gtin": "7793469616846", "marca": "SONRISA", "tipo": "PASTA DENTAL", "contenido": 90, "unidad": "G"}
+        ficha = {"gtin": "7793469616846", "descripcion": "PASTA DENTAL SONRISA X 90 G", "marca": "SONRISA",
+                 "tipo": "PASTA DENTAL", "contenido": 90, "unidad": "G", "unidades_por_envase": 1,
+                 "proveedor_id": "P03", "codigo_proveedor": item_id.split(":")[1]}
         fuente = {"archivo": "litoral_altas_102026.csv", "linea": 2}
         base = {"item_id": item_id, "ficha": ficha, "fuentes": {campo: fuente for campo in ficha},  # con fuentes: pasa los hooks
                 "categoria_decidida_por": {"campo": "tipo", "valor": "PASTA DENTAL", "explicacion": "Cuidado bucal."}}
         # 1ª respuesta: registra el ítem bien y después lo registra MAL (duplicado sin SKU). 2ª: termina.
         self.respuestas = [
-            self.respuesta("tool_use", [pedido_falso("registrar_ficha", {**base, "estado": "lista_para_alta"}, "t1"),
-                                        pedido_falso("registrar_ficha", {**base, "estado": "duplicado"}, "t2")]),
+            self.respuesta("tool_use", [pedido_falso("registrar_ficha", formulario_de({**base, "estado": "lista_para_alta"}), "t1"),
+                                        pedido_falso("registrar_ficha", formulario_de({**base, "estado": "duplicado"}), "t2")]),
             self.respuesta("end_turn", [SimpleNamespace(type="text", text="Listo.")]),
         ]
         self.messages = self  # para que ande cliente.messages.stream(...)
@@ -165,4 +168,4 @@ asyncio.run(main())
 carpeta_trazas = Path(tempfile.mkdtemp())
 probar_fichar_tanda(carpeta_trazas)
 shutil.rmtree(carpeta_trazas, ignore_errors=True)
-print(f"\nResultado final: {'todo OK' if errores == 0 else f'{errores} con error'}")
+print(f"\nResultado final: {'todo OK' if errores == 0 else f'{errores} con error'}")

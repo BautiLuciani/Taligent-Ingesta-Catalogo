@@ -8,12 +8,13 @@ import os
 import re
 import unicodedata
 from pathlib import Path
-from typing import Annotated, Any, Literal
+from typing import Annotated, Literal
 
 from fastmcp import FastMCP
 from fastmcp.exceptions import ToolError
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, ConfigDict, Field
 
+from ficha_estructurada import Ficha, FuenteDeCampo, fuentes_de_la_guia
 from cuentas import (cargar_abreviaturas, cargar_vocabulario, contenido_de_presentacion, convertir_condicion,
                      convertir_contenido, convertir_numero, convertir_precio, expandir_abreviaturas, normalizar_gtin,
                      separar_contenido)
@@ -721,7 +722,10 @@ Motivo = Literal[tuple(VOCABULARIO["motivos_revision"])]   # gtin_faltante | gti
 
 
 class CategoriaDecididaPor(BaseModel):
-    """El extra de la semana 1: qué dato de la ficha decidió la categoría (le ahorra a Compras revisar a ciegas)."""
+    """Qué dato de la ficha decidió la categoría."""
+    # El extra de la semana 1 (le ahorra a Compras revisar a ciegas). Semana 5: sin claves libres (strict lo exige).
+    # Ojo: el docstring y las description viajan al modelo (son parte del formulario).
+    model_config = ConfigDict(extra="forbid")
     campo: Literal["tipo", "variante", "marca"] = Field(description="El campo de la ficha que decidió la categoría.")
     valor: str = Field(description="El valor de ese campo, tal como quedó en la ficha.")
     explicacion: str = Field(max_length=200, description="Una frase corta: por qué ese dato lleva a esa categoría.")
@@ -821,11 +825,11 @@ def armar_resultado(item_id: str, estado: str, ficha: dict, fuentes: dict, categ
 def registrar_ficha(
     item_id: Annotated[str, Field(description="Identificador del ítem, tal como vino en la fila (ej. P03:LT-3303).")],
     estado: Annotated[Estado, Field(description="Estado del ítem según el estándar.")],
-    ficha: Annotated[dict[str, Any], Field(description="Los campos de la ficha (estándar, sección 1). Un campo que no se pudo determinar va en null.")],
-    fuentes: Annotated[dict[str, dict], Field(description="Para cada campo completado de la ficha, de dónde salió: la fuente de su fila ({archivo, linea} o {archivo, pagina}).")],
+    ficha: Annotated[Ficha, Field(description="Los campos de la ficha (estándar, sección 1). Van todos; un campo que no se pudo determinar va en null.")],
+    fuentes: Annotated[list[FuenteDeCampo], Field(description="Una fuente por CADA campo completado de la ficha (los campos en null no llevan fuente): el campo, el archivo y dónde está. En un CSV o un mail, tipo_ubicacion linea y numero = la línea; en un PDF, pagina y numero = la página; en un Excel, hoja_fila, hoja = el nombre de la hoja y numero = la fila. hoja va vacía si no es un Excel.")],
     categoria_decidida_por: Annotated[CategoriaDecididaPor, Field(description="Qué dato de la ficha decidió la categoría elegida.")],
-    motivos_revision: Annotated[list[Motivo], Field(default_factory=list, description="Motivos de revisión. Vacío si no va a revisión.")],
-    duplicado_de: Annotated[str | None, Field(description="SKU del catálogo: si es duplicado, o el candidato si es posible_duplicado.")] = None,
+    motivos_revision: Annotated[list[Motivo], Field(description="Motivos de revisión. Lista vacía si no va a revisión.")],
+    duplicado_de: Annotated[str | None, Field(description="SKU del catálogo: si es duplicado, o el candidato si es posible_duplicado. null en los demás casos.")],
 ) -> dict:
     """Registra el resultado de un ítem. Es la ÚNICA forma de guardar una ficha.
 
@@ -837,7 +841,12 @@ def registrar_ficha(
     En categoria_decidida_por indicá qué campo de la ficha (tipo, variante o marca) decidió la
     categoría, con su valor exacto y una frase corta de por qué.
     """
+    # Semana 5, paso 2B: la ficha y las fuentes llegan con la forma del formulario (ficha_estructurada.py, strict).
+    # Se guardan con la forma de siempre: la ficha como diccionario y las fuentes en la forma de la guía.
+    ficha = ficha.model_dump()
+    fuentes, problemas_fuentes = fuentes_de_la_guia([fuente.model_dump() for fuente in fuentes], ficha)
     problemas = problemas_del_registro(item_id, estado, ficha, categoria_decidida_por, motivos_revision, duplicado_de)
+    problemas += problemas_fuentes
     if problemas:
         raise ToolError("No se guardó. Corregí esto y volvé a registrar: " + " | ".join(problemas))
 
@@ -888,4 +897,4 @@ def recurso_taxonomia() -> str:
 
 
 if __name__ == "__main__":
-    mcp.run(show_banner=False)
+    mcp.run(show_banner=False)

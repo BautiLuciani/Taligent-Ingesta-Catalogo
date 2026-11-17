@@ -8,6 +8,7 @@ from types import SimpleNamespace
 
 from referencias import RUTA_RESULTADOS_REFERENCIA  # carpetas congeladas: va antes que agente/servidor
 from agente import fichar_tanda  # noqa: E402
+from ficha_estructurada import formulario_de  # noqa: E402
 from hooks import (TOPE_FRENOS_AL_TERMINAR, HooksDeLaTanda, campos_sin_fuente, problema_del_gtin,
                    problemas_de_la_ficha)
 
@@ -145,7 +146,8 @@ class ClaudeGuionado:
 
     @staticmethod
     def registrar(argumentos, id_):
-        return SimpleNamespace(type="tool_use", id=id_, name="registrar_ficha", input=argumentos)
+        # Semana 5: el modelo manda el formulario nuevo (fuentes como casilleros); los registros se arman como antes
+        return SimpleNamespace(type="tool_use", id=id_, name="registrar_ficha", input=formulario_de(argumentos))
 
 
 class _Stream:

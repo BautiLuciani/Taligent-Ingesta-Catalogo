@@ -13,11 +13,13 @@ from fastmcp.client.transports import PythonStdioTransport
 from referencias import ENTORNO_PRUEBAS, RUTA_RESULTADOS_REFERENCIA  # carpetas congeladas: va antes que agente
 import permisos  # noqa: E402
 from agente import RUTA_SERVIDOR, armar_system_prompt, obtener_tools, procesar_tanda  # noqa: E402
+from ficha_estructurada import formulario_de  # noqa: E402
 
 RESULTADOS = json.loads(RUTA_RESULTADOS_REFERENCIA.read_text(encoding="utf-8"))
 LITORAL = RESULTADOS["P03:LT-3303"]
-REGISTRO = {clave: LITORAL[clave] for clave in ("item_id", "estado", "ficha", "fuentes", "categoria_decidida_por",
-                                                 "motivos_revision", "duplicado_de")}
+# Semana 5: con el formulario nuevo (todos los campos, fuentes como casilleros)
+REGISTRO = formulario_de({clave: LITORAL[clave] for clave in ("item_id", "estado", "ficha", "fuentes",
+                                                              "categoria_decidida_por", "motivos_revision", "duplicado_de")})
 
 errores = 0
 

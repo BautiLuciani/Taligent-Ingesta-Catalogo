@@ -16,6 +16,7 @@ import json
 from pathlib import Path
 
 from cuentas import calcular_digito_verificador, cargar_vocabulario
+from ficha_estructurada import registro_interno
 
 VOCABULARIO = cargar_vocabulario()
 RUTA_TAXONOMIA = Path(__file__).parent / "Data" / "estandar" / "taxonomia.csv"
@@ -116,10 +117,14 @@ class HooksDeLaTanda:
         return motivo
 
     def despues_de_tool(self, nombre: str, argumentos: dict, resultado: dict) -> None:
-        """Después de cada tool: anota la ficha que el servidor aceptó (la última de cada ítem reemplaza a la anterior)."""
+        """Después de cada tool: anota la ficha que el servidor aceptó (la última de cada ítem reemplaza a la anterior).
+
+        Semana 5, paso 2B: se anota ya convertida a la forma de resultados.json (fuentes en la forma de la guía), con la
+        MISMA conversión que usa el servidor: así al_terminar, las propuestas y el escritor no cambian.
+        """
         if nombre == "registrar_ficha" and not resultado["is_error"]:
             item_id = json.loads(resultado["content"])["registrado"]
-            self.aceptadas[item_id] = argumentos
+            self.aceptadas[item_id] = registro_interno(argumentos)
 
     def al_terminar(self) -> str | None:
         """Cuando el modelo dice que terminó. Devuelve el motivo si no lo deja terminar, o None si pasa.
