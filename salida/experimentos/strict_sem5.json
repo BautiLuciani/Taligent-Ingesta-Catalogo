@@ -1,0 +1,21 @@
+{
+  "fecha": "2026-11-17 15:31",
+  "modelo": "claude-haiku-5-5",
+  "item": "P03:LT-3357",
+  "resultados": [
+    {
+      "variante": "A (tal cual hoy)",
+      "uniones": 33,
+      "opcionales": 18,
+      "aceptada": false,
+      "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': \"tools.0.custom: Invalid schema: Enum value 'ACONDICIONADOR' does not match declared type '['string', 'null']'\"}, 'request_id': 'req_011Ch8yHRooqDjXCtRTF2qtg'}"
+    },
+    {
+      "variante": "B (compacta)",
+      "uniones": 0,
+      "opcionales": 19,
+      "aceptada": false,
+      "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Grammar compilation timed out'}, 'request_id': 'req_011Ch8yHTo7nWkWZCdb4YWtW'}"
+    }
+  ]
+}

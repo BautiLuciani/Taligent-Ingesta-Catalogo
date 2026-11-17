@@ -1,0 +1,35 @@
+{
+  "fecha": "2026-11-17 15:20",
+  "modelo": "claude-haiku-5-5",
+  "tokens_medidos": 13020,
+  "llamadas": [
+    {
+      "llamada": "1. primera vez",
+      "stop_reason": "end_turn",
+      "sin_cache": 105,
+      "escritos_en_cache": 12915,
+      "leidos_de_cache": 0,
+      "output": 4,
+      "costo_usd": 0.001627
+    },
+    {
+      "llamada": "2. mismo prefijo",
+      "stop_reason": "end_turn",
+      "sin_cache": 105,
+      "escritos_en_cache": 0,
+      "leidos_de_cache": 12915,
+      "output": 4,
+      "costo_usd": 0.000142
+    },
+    {
+      "llamada": "3. con la hora adelante",
+      "stop_reason": "end_turn",
+      "sin_cache": 105,
+      "escritos_en_cache": 12937,
+      "leidos_de_cache": 0,
+      "output": 4,
+      "costo_usd": 0.00163
+    }
+  ],
+  "llamada_2_sin_cache_usd": 0.001304
+}

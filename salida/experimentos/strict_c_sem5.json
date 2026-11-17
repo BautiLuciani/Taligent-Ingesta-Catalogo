@@ -1,0 +1,134 @@
+{
+  "fecha": "2026-11-17 15:46",
+  "modelo": "claude-haiku-5-5",
+  "item": "P03:LT-3357",
+  "resultado": {
+    "uniones": 15,
+    "opcionales": 0,
+    "aceptada": true,
+    "stop_reason": "tool_use",
+    "input": {
+      "item_id": "P03:LT-3357",
+      "estado": "a_revision",
+      "motivos_revision": [
+        "gtin_faltante",
+        "posible_duplicado"
+      ],
+      "categoria_decidida_por": {
+        "campo": "tipo",
+        "valor": "JABON",
+        "explicacion": "El producto es un JABON (jabón antibacterial en barra). Va en Cuidado personal > Higiene corporal > Jabones (CUI-HIG-JAB)."
+      },
+      "ficha": {
+        "gtin": null,
+        "descripcion": "JABON PUREZA ANTIBACTERIAL X 125 G",
+        "marca": "PUREZA",
+        "tipo": "JABON",
+        "variante": "ANTIBACTERIAL",
+        "contenido": 125,
+        "unidad": "G",
+        "unidades_por_envase": 1,
+        "principio_activo": null,
+        "concentracion": null,
+        "condicion_venta": null,
+        "categoria": "CUI-HIG-JAB",
+        "precio_costo": 48.42,
+        "moneda": "UYU",
+        "proveedor_id": "P03",
+        "codigo_proveedor": "LT-3357",
+        "peligro_deposito": null,
+        "numero_onu": null
+      },
+      "fuentes": [
+        {
+          "campo": "descripcion",
+          "archivo": "litoral_altas_102026.csv",
+          "tipo_ubicacion": "linea",
+          "numero": 20,
+          "hoja": ""
+        },
+        {
+          "campo": "marca",
+          "archivo": "litoral_altas_102026.csv",
+          "tipo_ubicacion": "linea",
+          "numero": 20,
+          "hoja": ""
+        },
+        {
+          "campo": "tipo",
+          "archivo": "litoral_altas_102026.csv",
+          "tipo_ubicacion": "linea",
+          "numero": 20,
+          "hoja": ""
+        },
+        {
+          "campo": "variante",
+          "archivo": "litoral_altas_102026.csv",
+          "tipo_ubicacion": "linea",
+          "numero": 20,
+          "hoja": ""
+        },
+        {
+          "campo": "contenido",
+          "archivo": "litoral_altas_102026.csv",
+          "tipo_ubicacion": "linea",
+          "numero": 20,
+          "hoja": ""
+        },
+        {
+          "campo": "unidad",
+          "archivo": "litoral_altas_102026.csv",
+          "tipo_ubicacion": "linea",
+          "numero": 20,
+          "hoja": ""
+        },
+        {
+          "campo": "unidades_por_envase",
+          "archivo": "litoral_altas_102026.csv",
+          "tipo_ubicacion": "linea",
+          "numero": 20,
+          "hoja": ""
+        },
+        {
+          "campo": "categoria",
+          "archivo": "litoral_altas_102026.csv",
+          "tipo_ubicacion": "linea",
+          "numero": 20,
+          "hoja": ""
+        },
+        {
+          "campo": "precio_costo",
+          "archivo": "litoral_altas_102026.csv",
+          "tipo_ubicacion": "linea",
+          "numero": 20,
+          "hoja": ""
+        },
+        {
+          "campo": "moneda",
+          "archivo": "litoral_altas_102026.csv",
+          "tipo_ubicacion": "linea",
+          "numero": 20,
+          "hoja": ""
+        },
+        {
+          "campo": "proveedor_id",
+          "archivo": "litoral_altas_102026.csv",
+          "tipo_ubicacion": "linea",
+          "numero": 20,
+          "hoja": ""
+        },
+        {
+          "campo": "codigo_proveedor",
+          "archivo": "litoral_altas_102026.csv",
+          "tipo_ubicacion": "linea",
+          "numero": 20,
+          "hoja": ""
+        }
+      ],
+      "duplicado_de": "SKU102275"
+    },
+    "costo_usd": 0.003571,
+    "diferencias_con_semana_4": [],
+    "campos_sin_fuente": []
+  }
+}

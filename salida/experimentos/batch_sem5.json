@@ -1,0 +1,67 @@
+{
+  "fecha": "2026-11-17 15:55",
+  "modelo": "claude-haiku-5-5",
+  "batch_id": "msgbatch_01595qZTmi54PYn3SnLYbM5L",
+  "segundos_de_espera": 409,
+  "pedido_roto": "el pedido roto entró al batch (se valida adentro)",
+  "resultados": [
+    {
+      "custom_id": "pedido-1",
+      "tipo": "succeeded",
+      "texto": "1",
+      "sin_cache": 94,
+      "escritos": 12915,
+      "leidos": 0,
+      "output": 3,
+      "costo_usd": 0.001297
+    },
+    {
+      "custom_id": "pedido-4",
+      "tipo": "succeeded",
+      "texto": "4",
+      "sin_cache": 94,
+      "escritos": 0,
+      "leidos": 12915,
+      "output": 62,
+      "costo_usd": 8.5e-05
+    },
+    {
+      "custom_id": "pedido-5",
+      "tipo": "succeeded",
+      "texto": "5",
+      "sin_cache": 94,
+      "escritos": 0,
+      "leidos": 12915,
+      "output": 58,
+      "costo_usd": 8.4e-05
+    },
+    {
+      "custom_id": "pedido-roto",
+      "tipo": "errored",
+      "error": "invalid_request_error: max_tokens: 999999 > 128000, which is the maximum allowed number of output tokens for claude-haiku-5-5"
+    },
+    {
+      "custom_id": "pedido-3",
+      "tipo": "succeeded",
+      "texto": "3",
+      "sin_cache": 94,
+      "escritos": 0,
+      "leidos": 12915,
+      "output": 62,
+      "costo_usd": 8.5e-05
+    },
+    {
+      "custom_id": "pedido-2",
+      "tipo": "succeeded",
+      "texto": "2",
+      "sin_cache": 94,
+      "escritos": 0,
+      "leidos": 12915,
+      "output": 77,
+      "costo_usd": 8.9e-05
+    }
+  ],
+  "mismo_orden": false,
+  "leyeron_cache": 4,
+  "costo_usd": 0.00164
+}

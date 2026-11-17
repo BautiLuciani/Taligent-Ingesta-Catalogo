@@ -1,0 +1,126 @@
+{
+  "fecha": "2026-11-17 15:43",
+  "modelo": "claude-haiku-5-5",
+  "resultados": [
+    {
+      "formulario": "1. ficha 14 opcionales, sin enums",
+      "uniones": 0,
+      "opcionales": 14,
+      "segundos": 180.7,
+      "compilo": false,
+      "error": "400 de la API: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Grammar compilation timed out'}, 'request_id': 'req_011Ch8zLxBsPY2CrQKrfrBXq'}"
+    },
+    {
+      "formulario": "2. ficha 14 opcionales, con enums",
+      "uniones": 0,
+      "opcionales": 14,
+      "segundos": 180.7,
+      "compilo": false,
+      "error": "400 de la API: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Schema is too complex.'}, 'request_id': 'req_011Ch8zLwtW7totYDsng3YCZ'}"
+    },
+    {
+      "formulario": "3. ficha obligatoria con anyOf null",
+      "uniones": 14,
+      "opcionales": 0,
+      "segundos": 2.8,
+      "compilo": true,
+      "stop_reason": "tool_use",
+      "input": {
+        "ficha": {
+          "gtin": "7790000000012",
+          "descripcion": "Producto de prueba - Shampoo de ejemplo 400 ML",
+          "marca": "MarcaEjemplo",
+          "tipo": "SHAMPOO",
+          "variante": "Uso diario",
+          "contenido": 400,
+          "unidad": "ML",
+          "unidades_por_envase": 1,
+          "principio_activo": null,
+          "concentracion": null,
+          "condicion_venta": "VENTA_LIBRE",
+          "categoria": "CUI-CAP-SHA",
+          "precio_costo": 150.0,
+          "moneda": "UYU",
+          "proveedor_id": "PROV-PRUEBA-001",
+          "codigo_proveedor": "SHP-EJ-400",
+          "peligro_deposito": "no_peligroso",
+          "numero_onu": null
+        }
+      }
+    },
+    {
+      "formulario": "4. fuentes lista 4 opcionales",
+      "uniones": 0,
+      "opcionales": 4,
+      "segundos": 2.0,
+      "compilo": true,
+      "stop_reason": "tool_use",
+      "input": {
+        "fuentes": [
+          {
+            "campo": "descripcion",
+            "archivo": "prueba_ejemplo.xlsx",
+            "hoja": "Productos",
+            "fila": 2
+          },
+          {
+            "campo": "marca",
+            "archivo": "prueba_ejemplo.xlsx",
+            "hoja": "Productos",
+            "fila": 2
+          }
+        ]
+      }
+    },
+    {
+      "formulario": "5. C completa",
+      "uniones": 15,
+      "opcionales": 0,
+      "segundos": 3.7,
+      "compilo": true,
+      "stop_reason": "tool_use",
+      "input": {
+        "item_id": "PRUEBA-001",
+        "estado": "a_revision",
+        "motivos_revision": [
+          "gtin_faltante"
+        ],
+        "categoria_decidida_por": {
+          "campo": "tipo",
+          "valor": "SHAMPOO",
+          "explicacion": "Producto de ejemplo para prueba de la herramienta."
+        },
+        "ficha": {
+          "gtin": null,
+          "descripcion": "Shampoo de ejemplo (prueba)",
+          "marca": "Marca Ejemplo",
+          "tipo": "SHAMPOO",
+          "variante": null,
+          "contenido": 400,
+          "unidad": "ML",
+          "unidades_por_envase": 1,
+          "principio_activo": null,
+          "concentracion": null,
+          "condicion_venta": "VENTA_LIBRE",
+          "categoria": "DER-COR-HID",
+          "precio_costo": 150.0,
+          "moneda": "UYU",
+          "proveedor_id": "PROV-PRUEBA",
+          "codigo_proveedor": "PRUEBA-SHAMPOO-400",
+          "peligro_deposito": "no_peligroso",
+          "numero_onu": null
+        },
+        "fuentes": [
+          {
+            "campo": "descripcion",
+            "archivo": "prueba_manual",
+            "tipo_ubicacion": "linea",
+            "numero": 1,
+            "hoja": ""
+          }
+        ],
+        "duplicado_de": null
+      }
+    }
+  ]
+}
