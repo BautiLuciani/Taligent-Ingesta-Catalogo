@@ -15,6 +15,7 @@ from pathlib import Path
 from referencias import ENTORNO_PRUEBAS  # semana 4, paso 0: extracciones congeladas (antes que servidor_mcp)
 from agente import (CARPETA_SALIDA, RUTA_SERVIDOR, cache_sin_leer, costo_sin_cache_usd, costo_usd, ejecutar_tool,
                     fichar_tanda, mensajes_con_cache, preparar_resultados, system_con_cache, tokens_de)
+from cliente_batch import TARIFAS_BATCH  # semana 5, paso 6: el loop cobra con las tarifas del cliente
 from ficha_estructurada import formulario_de  # semana 5: registrar_ficha recibe el formulario nuevo
 
 errores = 0
@@ -106,6 +107,15 @@ def probar_fichar_tanda(carpeta: Path):
     despues = ruta_resultados.stat().st_mtime if ruta_resultados.exists() else None
     chequear("No tocó salida/resultados.json", despues, antes)
 
+    print("\n--- fichar_tanda con las tarifas del cliente (semana 5, paso 6: el de batch trae las suyas) ---")
+    class ClaudeFalsoBatch(ClaudeFalso):
+        tarifas = TARIFAS_BATCH
+    por_batch = fichar_tanda(ClaudeFalsoBatch(items[0]), "falso", "P03", 0, 1, carpeta / "batch_0.jsonl")
+    chequear("Mismo resultado que en tiempo real", (por_batch["como_termino"], list(por_batch["propuestas"])),
+             ("end_turn", [items[0]]))
+    chequear("...a la mitad del costo (el loop no sabe si va por batch: usa cliente.tarifas)",
+             round(por_batch["costo_usd"], 9), round(r["costo_usd"] / 2, 9))
+
     print("\n--- fichar_tanda: 3 tandas a la vez, cada una en su hilo ---")
     inicio = time.perf_counter()
     with ThreadPoolExecutor(max_workers=3) as hilos:
@@ -188,6 +198,9 @@ segunda = tokens_de(SimpleNamespace(input_tokens=105, cache_creation_input_token
                                     output_tokens=4))
 chequear("Costo con las 4 tarifas = el del experimento del paso 1 (US$ 0,00014)", round(costo_usd(segunda), 5), 0.00014)
 chequear("Sin caché habría costado US$ 0,00130", round(costo_sin_cache_usd(segunda), 5), 0.0013)
+chequear("Con las tarifas de batch, todo a la mitad (US$ 0,00007)",
+         (round(costo_usd(segunda, TARIFAS_BATCH), 9), round(costo_sin_cache_usd(segunda, TARIFAS_BATCH), 9)),
+         (round(costo_usd(segunda) / 2, 9), round(costo_sin_cache_usd(segunda) / 2, 9)))
 chequear("Un usage sin los campos del caché (los Claude falsos de las pruebas) cuenta 0",
          tokens_de(SimpleNamespace(input_tokens=100, output_tokens=10)), {"sin_cache": 100, "escritos": 0, "leidos": 0, "output": 10})
 chequear("Vuelta 1 sin leer el caché: normal (todavía no se mandó nada)", cache_sin_leer(1, segunda | {"leidos": 0}), False)

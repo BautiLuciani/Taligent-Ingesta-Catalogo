@@ -32,6 +32,12 @@ ficha sigue normal; si no, el modelo duda: se escribe la versión A marcada como
 difieren y la otra versión, para que la mire una persona (salida/inestables.json). Cuesta el doble: no es el modo
 por defecto, es para controlar (sobre todo donde no hay casos verificados, como un proveedor nuevo).
 
+Semana 5, paso 6 (--batch, M6 §7): las fichas por la Batch API, a mitad de precio. Todas las tandas arrancan a la vez y
+el fichador usa cliente_batch.ClienteBatch en vez del cliente de Anthropic: cada vuelta de TODAS las tandas viaja en un
+solo batch (la ventanilla junta los pedidos, espera el resultado y le da a cada tanda el suyo por custom_id). El agente,
+los hooks, el servidor y el escritor no cambian. La lectura sigue en tiempo real (es corta y con varias rondas).
+Ctrl + C cancela el batch en curso y no guarda nada.
+
 Qué puede hacer cada pieza (blast radius, M4 §7.2):
   - Lectores (extractores): leen un archivo y escriben SU extracción en salida/extracciones/. Nada más.
   - Fichadores: leen los datos y PROPONEN fichas, solo de los productos de SU tanda. No escriben resultados.
@@ -45,6 +51,7 @@ Correr: python orquestador.py                    (reusa las lecturas guardadas: 
         python orquestador.py --escribir         (solo escribe, con el salida/propuestas.json que ya está: gratis)
         python orquestador.py --fichas --proveedores P09   (solo esos proveedores: las fichas de los demás no se tocan)
         python orquestador.py --fichas --detector          (cada tanda dos veces: marca las fichas inestables; el doble)
+        python orquestador.py --fichas --batch             (las fichas por la Batch API: la mitad, pero tarda más)
 """
 import argparse
 import json
@@ -52,7 +59,8 @@ import os
 import sys
 import threading
 import time
-from concurrent.futures import ThreadPoolExecutor
+from concurrent.futures import FIRST_EXCEPTION, ThreadPoolExecutor, wait
+from contextlib import nullcontext
 from datetime import datetime
 from pathlib import Path
 
@@ -60,6 +68,7 @@ import anthropic
 from dotenv import load_dotenv
 
 from agente import CARPETA_TRAZAS, TANDA, fichar_tanda
+from cliente_batch import ClienteBatch
 from escritor import escribir
 from escritor import mostrar as mostrar_escritura
 from extractor_fds import extraer_fds
@@ -207,9 +216,13 @@ def fichar(tanda: tuple, cliente, modelo: str, reloj: float, carpeta_trazas: Pat
     fichador = int(nombre_hilo.rsplit("_", 1)[1]) + 1 if nombre_hilo.startswith("fichador_") else 1
     inicio = time.perf_counter() - reloj
     error, resultado = None, {}
+    # Semana 5, paso 6: con el cliente de batch, la tanda es una "conversación" de la ventanilla (espera su pedido antes
+    # de mandar el batch de la vuelta). El cliente de Anthropic no tiene conversaciones: no cambia nada.
+    conversacion = getattr(cliente, "conversacion", None)
     try:
-        resultado = FICHADOR(cliente, modelo, proveedor_id, desde, cantidad,
-                             carpeta_trazas / f"{proveedor_id}_desde_{desde:03d}{'_' + version if version else ''}.jsonl")
+        with conversacion() if conversacion else nullcontext():
+            resultado = FICHADOR(cliente, modelo, proveedor_id, desde, cantidad,
+                                 carpeta_trazas / f"{proveedor_id}_desde_{desde:03d}{'_' + version if version else ''}.jsonl")
     except Exception as excepcion:
         error = f"{type(excepcion).__name__}: {excepcion}"
     fin = time.perf_counter() - reloj
@@ -289,16 +302,34 @@ def etapa_fichas(cliente, modelo: str, consolidado: dict[str, dict], fichadores:
 
     El ThreadPoolExecutor ES la fila: con max_workers=3 corre 3 tandas, y cuando una termina arranca la siguiente.
     Con detector=True (paso 9), cada tanda entra dos veces a la fila (A y B) y se combinan con combinar_versiones.
+    fichadores=0 (semana 5, paso 6, con --batch): todas las tandas a la vez (cada vuelta de todas va en un batch).
     Devuelve (la medición, las propuestas por ítem).
     """
     tandas = armar_tandas(consolidado)
     trabajos = [(tanda, version) for tanda in tandas for version in (("A", "B") if detector else ("",))]
-    carpeta_trazas = CARPETA_TRAZAS / f"paralelo_{datetime.now():%Y%m%d_%H%M%S}_{fichadores}{'_detector' if detector else ''}"
+    fichadores = fichadores or len(trabajos)
+    batch = getattr(cliente, "ruta_registro", None)  # el cliente de batch anota cada batch en su registro
+    carpeta_trazas = CARPETA_TRAZAS / (f"paralelo_{datetime.now():%Y%m%d_%H%M%S}_{fichadores}"
+                                       f"{'_detector' if detector else ''}{'_batch' if batch else ''}")
     carpeta_trazas.mkdir(parents=True, exist_ok=True)
+    planificar = getattr(cliente, "planificar", None)
+    if planificar:  # la ventanilla sabe cuántas tandas vienen y cuántas a la vez: así junta a todas en cada batch
+        planificar(conversaciones=len(trabajos), a_la_vez=fichadores)
     reloj = time.perf_counter()
     with ThreadPoolExecutor(max_workers=fichadores, thread_name_prefix="fichador") as hilos:
-        fichas = list(hilos.map(lambda trabajo: fichar(trabajo[0], cliente, modelo, reloj, carpeta_trazas, trabajo[1]),
-                                trabajos))
+        futuros = [hilos.submit(fichar, tanda, cliente, modelo, reloj, carpeta_trazas, version)
+                   for tanda, version in trabajos]
+        try:
+            # Se espera de a 1 segundo (no de una) para que Ctrl + C se atienda enseguida, también en Windows
+            while wait(futuros, timeout=1, return_when=FIRST_EXCEPTION).not_done:
+                pass
+        except KeyboardInterrupt:  # paso 6: un batch puede tardar mucho; Ctrl + C lo cancela en Anthropic
+            cancelar = getattr(cliente, "cancelar", None)
+            if cancelar:
+                cancelar()
+            hilos.shutdown(wait=False, cancel_futures=True)  # las tandas que no arrancaron, no arrancan
+            raise
+        fichas = [futuro.result() for futuro in futuros]  # en el orden de las tandas, como antes
     segundos = time.perf_counter() - reloj
     inestables = []
     if detector:
@@ -314,6 +345,7 @@ def etapa_fichas(cliente, modelo: str, consolidado: dict[str, dict], fichadores:
         "fecha": f"{datetime.now():%Y-%m-%d %H:%M}",
         "fichadores": fichadores,
         "detector": detector,
+        "batch": batch.name if batch else None,  # semana 5, paso 6: el registro de los batches de la corrida
         "tanda": TANDA,
         "segundos": round(segundos, 1),
         "segundos_uno_detras_de_otro": round(sum(f["segundos"] for f in fichas), 1),
@@ -344,6 +376,7 @@ def etapa_fichas(cliente, modelo: str, consolidado: dict[str, dict], fichadores:
 def mostrar_fichas(etapa: dict) -> None:
     """Imprime cada tanda con su carril de tiempo y el resumen de la etapa 2."""
     detector = " · detector: cada tanda dos veces (A y B)" if etapa.get("detector") else ""
+    detector += f" · por Batch API (registro en salida/batches/{etapa['batch']})" if etapa.get("batch") else ""
     print(f"\n=== Etapa 2: fichas con {etapa['fichadores']} fichador(es) a la vez (tandas de {etapa['tanda']}){detector}")
     print(f"{'tanda':<18}{'empieza':>8}{'termina':>8}{'seg':>6}{'fichas':>8}{'US$':>9}")
     for f in etapa["tandas"]:
@@ -445,14 +478,18 @@ def main():
     argumentos = argparse.ArgumentParser(description="Lee en paralelo los archivos de los proveedores y arma las fichas.")
     argumentos.add_argument("--de-nuevo", action="store_true", help="Lee todo desde cero (paga las llamadas).")
     argumentos.add_argument("--fichas", action="store_true", help="Corre también la etapa 2, las fichas (paga).")
-    argumentos.add_argument("--fichadores", type=int, default=FICHADORES, help=f"Fichadores a la vez (default {FICHADORES}).")
+    argumentos.add_argument("--fichadores", type=int,
+                            help=f"Fichadores a la vez (default {FICHADORES}; con --batch, todas las tandas).")
     argumentos.add_argument("--proveedores", nargs="+", default=PROVEEDORES, metavar="Pxx",
                             help="Solo estos proveedores (default: todos). Las fichas de los demás no se tocan.")
     argumentos.add_argument("--detector", action="store_true",
                             help="Con --fichas: cada tanda la arman dos fichadores y se marcan las fichas que no coinciden (el doble).")
     argumentos.add_argument("--escribir", action="store_true",
                             help="Solo escribe resultados.json con el salida/propuestas.json que ya está (gratis).")
+    argumentos.add_argument("--batch", action="store_true",
+                            help="Con --fichas: las fichas van por la Batch API (mitad de precio, tarda más). Ctrl + C cancela.")
     opciones = argumentos.parse_args()
+    fichadores = opciones.fichadores or (0 if opciones.batch else FICHADORES)  # 0 = todas las tandas a la vez
     de_nuevo = opciones.de_nuevo
     proveedores = opciones.proveedores
     desconocidos = [proveedor_id for proveedor_id in proveedores if proveedor_id not in PROVEEDORES]
@@ -476,7 +513,13 @@ def main():
     ruta_propuestas = CARPETA_SALIDA / "propuestas.json"
     guardadas = json.loads(ruta_propuestas.read_text(encoding="utf-8")) if ruta_propuestas.exists() else {}
     if opciones.fichas:
-        fichas, nuevas = etapa_fichas(cliente, modelo, etapa["consolidado"], opciones.fichadores, opciones.detector)
+        # Semana 5, paso 6: la lectura va en tiempo real (es corta); las fichas, por la ventanilla de batches
+        cliente_fichas = ClienteBatch(cliente, CARPETA_SALIDA / "batches") if opciones.batch else cliente
+        try:
+            fichas, nuevas = etapa_fichas(cliente_fichas, modelo, etapa["consolidado"], fichadores, opciones.detector)
+        except KeyboardInterrupt:
+            sys.exit("\n✖ Corrida cancelada (Ctrl + C): no se guardó ninguna propuesta ni ficha"
+                     + (" (los batches cancelados quedaron anotados en salida/batches/)." if opciones.batch else "."))
         mostrar_fichas(fichas)
         # propuestas.json guarda la última propuesta de cada producto: las de los proveedores de esta corrida se
         # reemplazan y las de los demás quedan. Se guarda ANTES de escribir: si algo falla después, lo pagado no se pierde
@@ -510,10 +553,11 @@ def main():
         fichas["escritor"] = informe
         sufijo = "" if set(proveedores) == set(PROVEEDORES) else "_" + "_".join(proveedores)  # una parcial no pisa la completa
         sufijo += "_detector" if opciones.detector else ""
-        ruta = CARPETA_SALIDA / f"medicion_fichas_{opciones.fichadores}{sufijo}.json"
+        sufijo += "_batch" if opciones.batch else ""
+        ruta = CARPETA_SALIDA / f"medicion_fichas_{fichas['fichadores']}{sufijo}.json"
         ruta.write_text(json.dumps(fichas, ensure_ascii=False, indent=2), encoding="utf-8")
         print(f"Guardado en salida/{ruta_propuestas.name} y salida/{ruta.name}")
 
 
 if __name__ == "__main__":
-    main()
+    main()

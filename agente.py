@@ -49,11 +49,15 @@ MAX_VUELTAS = 30                # vueltas del loop por conversación
 TOPE_TOKENS_ENTRADA = 80_000    # si un pedido llega a esto, frenamos: lejos de los 100.000 (tarifa x5)
 TIMEOUT_TOOL = 30               # segundos: si una tool se cuelga, el agente no queda trabado para siempre (M2)
 
-PRECIO_INPUT = 0.10   # USD por millón de tokens de entrada (Haiku 5.5, módulo 6)
-PRECIO_OUTPUT = 0.50  # USD por millón de tokens de salida (el thinking se cobra como salida)
-# Semana 5, paso 4 (M6 §3.4): con caché la entrada se cobra en 3 tarifas
-PRECIO_ESCRITURA_CACHE = 0.125  # 1,25x: guardar en el caché (TTL de 5 minutos, el default)
-PRECIO_LECTURA_CACHE = 0.01     # 0,1x: leer del caché
+# USD por millón de tokens (Haiku 5.5, módulo 6). Semana 5, paso 4 (M6 §3.4): con caché la entrada se cobra en 3
+# tarifas. Paso 6: las tarifas van juntas en un diccionario porque el batch tiene otras (cliente_batch.TARIFAS_BATCH):
+# el loop usa las del cliente que le toque, sin saber si va en tiempo real o en batch.
+TARIFAS_TIEMPO_REAL = {
+    "input": 0.10,             # entrada normal
+    "escritura_cache": 0.125,  # 1,25x: guardar en el caché (TTL de 5 minutos, el default)
+    "lectura_cache": 0.01,     # 0,1x: leer del caché
+    "output": 0.50,            # salida (el thinking se cobra como salida)
+}
 CACHE = {"type": "ephemeral"}   # la marca de cache_control (5 minutos: las vueltas de una tanda van seguidas)
 
 
@@ -104,16 +108,16 @@ def tokens_de(usage) -> dict:
             "leidos": getattr(usage, "cache_read_input_tokens", 0) or 0, "output": usage.output_tokens}
 
 
-def costo_usd(tokens: dict) -> float:
-    """Lo que se paga, con las 4 tarifas."""
-    return (tokens["sin_cache"] * PRECIO_INPUT + tokens["escritos"] * PRECIO_ESCRITURA_CACHE
-            + tokens["leidos"] * PRECIO_LECTURA_CACHE + tokens["output"] * PRECIO_OUTPUT) / 1_000_000
+def costo_usd(tokens: dict, tarifas: dict = TARIFAS_TIEMPO_REAL) -> float:
+    """Lo que se paga, con las 4 tarifas (las de tiempo real, o las de batch si se las pasan)."""
+    return (tokens["sin_cache"] * tarifas["input"] + tokens["escritos"] * tarifas["escritura_cache"]
+            + tokens["leidos"] * tarifas["lectura_cache"] + tokens["output"] * tarifas["output"]) / 1_000_000
 
 
-def costo_sin_cache_usd(tokens: dict) -> float:
+def costo_sin_cache_usd(tokens: dict, tarifas: dict = TARIFAS_TIEMPO_REAL) -> float:
     """Lo que habría costado lo mismo sin caché: toda la entrada a la tarifa normal (para comparar)."""
     entrada = tokens["sin_cache"] + tokens["escritos"] + tokens["leidos"]
-    return (entrada * PRECIO_INPUT + tokens["output"] * PRECIO_OUTPUT) / 1_000_000
+    return (entrada * tarifas["input"] + tokens["output"] * tarifas["output"]) / 1_000_000
 
 
 def cache_sin_leer(vuelta_de_la_conversacion: int, tokens: dict) -> bool:
@@ -215,7 +219,10 @@ async def correr_loop(cliente_claude, cliente_mcp: Client, modelo: str, system: 
     el motivo como error) y después, hooks.despues_de_tool (la memoria: qué fichas aceptó el servidor).
     Modifica `mensajes` (el historial) y `uso` (vueltas y tokens).
     Devuelve (como_termino, texto_final). como_termino es "end_turn" si terminó bien.
+    Semana 5, paso 6: el costo sale con las tarifas del cliente (el de batch trae las suyas; el de Anthropic no trae
+    ninguna -> las de tiempo real). El loop no sabe si va por batch.
     """
+    tarifas = getattr(cliente_claude, "tarifas", TARIFAS_TIEMPO_REAL)
     for _ in range(MAX_VUELTAS):
         uso["vueltas"] += 1
 
@@ -239,8 +246,8 @@ async def correr_loop(cliente_claude, cliente_mcp: Client, modelo: str, system: 
         uso["output_tokens"] += tokens["output"]
         uso["cache_escritos"] = uso.get("cache_escritos", 0) + tokens["escritos"]
         uso["cache_leidos"] = uso.get("cache_leidos", 0) + tokens["leidos"]
-        uso["costo_usd"] = uso.get("costo_usd", 0.0) + costo_usd(tokens)
-        uso["costo_sin_cache_usd"] = uso.get("costo_sin_cache_usd", 0.0) + costo_sin_cache_usd(tokens)
+        uso["costo_usd"] = uso.get("costo_usd", 0.0) + costo_usd(tokens, tarifas)
+        uso["costo_sin_cache_usd"] = uso.get("costo_sin_cache_usd", 0.0) + costo_sin_cache_usd(tokens, tarifas)
         pedidos = [bloque for bloque in respuesta.content if bloque.type == "tool_use"]
         print(f"   {uso.get('etiqueta', '')}vuelta {uso['vueltas']:>2} · {respuesta.stop_reason:<9} · "
               f"{entrada_total:>6} in ({tokens['leidos']} del caché) / {tokens['output']:>5} out · "

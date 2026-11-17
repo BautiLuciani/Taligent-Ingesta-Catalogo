@@ -6,12 +6,14 @@ import tempfile
 import threading
 import time
 from pathlib import Path
+from types import SimpleNamespace
 
 from fastmcp import Client
 from fastmcp.client.transports import PythonStdioTransport
 
 from referencias import ENTORNO_PRUEBAS  # semana 4, paso 0: extracciones congeladas (va antes que orquestador)
 import orquestador  # noqa: E402
+from cliente_batch import ClienteBatch  # noqa: E402  (semana 5, paso 6)
 
 errores = 0
 
@@ -235,6 +237,69 @@ chequear("...LHS-203: no falta (la A lo propuso), pero queda sin segunda opinió
          ("P07:LHS-203" in con_detector["faltan"], propuestas["P07:LHS-203"]["inestable"]["otra_version"]), (False, None))
 chequear("Los que coinciden van sin marca", "inestable" in propuestas["P03:LT-3303"], False)
 chequear("Faltan solo las 8 de la tanda que se cayó en A y en B", len(con_detector["faltan"]), 8)
+
+print("--- semana 5, paso 6: etapa_fichas por la Batch API (cada vuelta de todas las tandas, un batch) ---")
+
+
+class BatchesFalsos:
+    """Imita api.messages.batches: termina a la segunda consulta y responde al revés (desordenado)."""
+
+    def __init__(self):
+        self.creados = []
+
+    def create(self, requests):
+        json.dumps(requests)  # viaja como JSON
+        self.creados.append(requests)
+        return SimpleNamespace(id=f"msgbatch_{len(self.creados)}")
+
+    def retrieve(self, batch_id):
+        return SimpleNamespace(processing_status="ended", request_counts=SimpleNamespace(processing=0))
+
+    def results(self, batch_id):
+        pedidos = self.creados[int(batch_id.split("_")[1]) - 1]
+        return [SimpleNamespace(custom_id=p["custom_id"],
+                                result=SimpleNamespace(type="succeeded", message=p["params"]["messages"][0]["content"]))
+                for p in reversed(pedidos)]
+
+    def cancel(self, batch_id):
+        pass
+
+
+class FichadorPorBatch(FichadorFalso):
+    """Como el falso de arriba, pero antes pregunta 2 vueltas por el cliente (el de batch) y revisa SU respuesta."""
+
+    def __call__(self, cliente, modelo, proveedor_id, desde, cantidad, ruta_traza):
+        for vuelta in (1, 2):
+            pregunta = f"{proveedor_id} desde {desde}, vuelta {vuelta}"
+            with cliente.messages.stream(model=modelo, messages=[{"role": "user", "content": pregunta}]) as stream:
+                if stream.get_final_message() != pregunta:
+                    raise RuntimeError("recibió la respuesta de otra tanda")
+        return super().__call__(cliente, modelo, proveedor_id, desde, cantidad, ruta_traza)
+
+
+batches = BatchesFalsos()
+cliente_batch = ClienteBatch(SimpleNamespace(messages=SimpleNamespace(batches=batches)), carpeta / "batches",
+                             espera_consulta=0.01, espera_juntar=10, avisar=lambda texto: None)
+orquestador.CARPETA_CONSOLIDADO = carpeta
+orquestador.CARPETA_TRAZAS = carpeta / "trazas"
+orquestador.FICHADOR = por_batch = FichadorPorBatch(0)
+try:
+    con_batch, propuestas = orquestador.etapa_fichas(cliente_batch, "modelo", consolidado, 0)  # 0 = todas a la vez
+finally:
+    orquestador.FICHADOR, orquestador.CARPETA_TRAZAS = originales
+    orquestador.CARPETA_CONSOLIDADO = original
+chequear("fichadores=0: las 13 tandas a la vez", (con_batch["fichadores"], por_batch.maximo <= 13), (13, True))
+chequear("2 vueltas de 13 tandas = 2 batches de 13 pedidos (planificar junta a todas)",
+         [len(lote) for lote in batches.creados], [13, 13])
+chequear("Cada tanda recibió SU respuesta (vuelven al revés): ninguna falló por eso",
+         [t for t in con_batch["tandas_con_problemas"] if "otra tanda" in t], [])
+chequear("Mismo resultado que en tiempo real (la que se cae a propósito, igual)",
+         (con_batch["propuestas"], con_batch["tandas_con_problemas"]),
+         (119 - 8, ["P05 desde 10: RuntimeError: se cayó el servidor"]))
+chequear("La medición dice cuál es el registro de los batches",
+         con_batch["batch"], cliente_batch.ruta_registro.name)
+chequear("...y el registro tiene los 2 batches", len(json.loads(cliente_batch.ruta_registro.read_text(encoding="utf-8"))), 2)
+chequear("Las trazas de la corrida por batch van en su carpeta (_batch)", con_batch["trazas"].endswith("_13_batch"), True)
 shutil.rmtree(carpeta, ignore_errors=True)
 
 print("--- semana 4, paso 7: el orquestador procesa a TODOS los habilitados del servidor ---")
