@@ -131,7 +131,7 @@ Armá la receta para leerlo y entregala con entregar_receta, en una sola llamada
 como discontinuados, dados de baja o fuera de surtido no se cargan.
 - Moneda (estándar, sección 6): un precio en $ o sin moneda indicada es en pesos uruguayos (UYU). Una lista en dólares \
 lo dice (por ejemplo, «USD»).
-- Cada dato sale de una sola columna. Una columna que no es ninguno de los datos del formulario va en columnas_que_no_van.
+- Cada dato sale de una sola columna.
 - Si un dato no está en ninguna columna, va en null.
 - Cada evidencia es UN solo texto del resumen, copiado tal como está escrito (un nombre de hoja o de columna, un valor, \
 un texto). No juntes varios.
@@ -141,17 +141,24 @@ un texto). No juntes varios.
 def tool_receta(resumen: dict) -> dict:
     """La tool entregar_receta para ESTE archivo: los nombres de hojas y columnas van como enum (M2).
 
-    Primera corrida real: sin strict (semana 5), la API NO obliga el enum ni la forma del formulario (el modelo
-    nombró "Item", que no estaba en el enum, y una vez entregó las columnas sueltas, fuera de su objeto). El enum
-    y el schema GUÍAN mucho; la garantía la da el código (verificar_receta). Por eso el formulario es plano: un
-    casillero por dato, todos al mismo nivel, que es más difícil de armar mal.
+    Semana 4, primera corrida real: sin strict, la API NO obligaba el enum ni la forma del formulario (el modelo
+    nombró "Item", que no estaba en el enum, y una vez entregó las columnas sueltas, fuera de su objeto).
+    Semana 5, paso 3A: con strict (M6 §2.2) la API SÍ garantiza la forma y los enum. Para eso: sin claves libres
+    (additionalProperties false en cada objeto), todo obligatorio y "columna o null" escrito como anyOf (el tipo como
+    lista junto con un enum lo rechaza la API: paso 1). La garantía de que la columna elegida sea la CORRECTA la sigue
+    dando el código (verificar_receta): strict garantiza valores válidos, no correctos.
     """
+    # Semana 5, paso 3D: ya no se pregunta "columnas_que_no_van". Con strict, Higiene Total no entró 3 de 5 veces: el
+    # modelo anotaba en "no van" una columna que SÍ usaba ("Costo: se usa como columna_precio, no va en
+    # columnas_que_no_van"). Era el mismo dato preguntado dos veces (las que no van son las que no se eligieron), como
+    # contenido_en en la semana 4: ahora lo calcula el código (verificar_receta) y no hay nada que contradecir.
     hojas = [h["hoja"] for h in resumen["hojas"]]
     columnas = list(dict.fromkeys(c for h in resumen["hojas"] for c in h["columnas"]))  # sin repetir, en orden
-    una_columna = {"type": ["string", "null"], "enum": columnas + [None]}
+    una_columna = {"anyOf": [{"type": "string", "enum": columnas}, {"type": "null"}]}
     tool = {
         "name": "entregar_receta",
         "description": "Entrega la receta para leer el Excel del proveedor. Llamala una sola vez.",
+        "strict": True,  # semana 5, paso 3A
         "input_schema": {
             "type": "object",
             "properties": {
@@ -165,25 +172,19 @@ def tool_receta(resumen: dict) -> dict:
                     "description": "Las demás hojas, cada una con el motivo por el que no entra. Vacía si hay una sola.",
                     "items": {"type": "object",
                               "properties": {"hoja": {"type": "string", "enum": hojas}, "motivo": {"type": "string"}},
-                              "required": ["hoja", "motivo"]},
+                              "required": ["hoja", "motivo"], "additionalProperties": False},
                 },
                 # Un casillero por dato: qué columna de esa hoja es (null si el dato no está en ninguna)
                 **{f"columna_{campo}": {**una_columna, "description": texto} for campo, texto in CAMPOS_DE_LA_RECETA.items()},
                 "moneda": {"type": "string", "enum": ["UYU", "USD"]},
-                "evidencia_moneda": {"type": ["string", "null"],
+                "evidencia_moneda": {"anyOf": [{"type": "string"}, {"type": "null"}],
                                      "description": "UN texto del resumen que dice la moneda, copiado tal cual. "
                                                     "null si no la dice."},
-                "columnas_que_no_van": {
-                    "type": "array",
-                    "description": "Las columnas que no son ningún dato del formulario, con el motivo.",
-                    "items": {"type": "object",
-                              "properties": {"columna": {"type": "string", "enum": columnas}, "motivo": {"type": "string"}},
-                              "required": ["columna", "motivo"]},
-                },
             },
         },
     }
     tool["input_schema"]["required"] = list(tool["input_schema"]["properties"])  # todo es obligatorio
+    tool["input_schema"]["additionalProperties"] = False  # sin claves libres (strict lo exige)
     return tool
 
 
@@ -230,6 +231,9 @@ def receta_propuesta(cliente, modelo: str, ruta_excel: Path, de_nuevo: bool = Fa
 
 
 # --- 2C · Los controles del código ---
+
+# Semana 5, paso 3D: el motivo de una columna que no se eligió para ningún dato (lo calcula el código, no el modelo)
+MOTIVO_NO_VA = "no se eligió para ningún dato del formulario"
 
 MAYORIA = 0.5  # "más de la mitad": alcanza para detectar una columna equivocada sin frenar por un par de celdas raras
 
@@ -345,11 +349,11 @@ def verificar_receta(resumen: dict, propuesta: dict | None, ruta_excel: Path) ->
 
     if not anotar("El modelo entregó el formulario", propuesta is not None, "no vino exactamente un entregar_receta"):
         return resultado()
-    # Sin strict, la API no obliga la forma: se controla ANTES de usar nada (si no, un formulario mal armado tira el programa)
+    # Se controla la forma ANTES de usar nada (si no, un formulario mal armado tira el programa). Desde la semana 5 la
+    # garantiza strict; este control queda como defensa en profundidad (y para las respuestas guardadas de antes)
     faltan = [casillero for casillero in tool_receta(resumen)["input_schema"]["required"] if casillero not in propuesta]
-    listas_bien = all(isinstance(propuesta.get(lista), list) and all(isinstance(x, dict) and clave in x
-                                                                     for x in propuesta[lista])
-                      for lista, clave in (("hojas_que_no_entran", "hoja"), ("columnas_que_no_van", "columna")))
+    listas_bien = isinstance(propuesta.get("hojas_que_no_entran"), list) and all(
+        isinstance(x, dict) and "hoja" in x for x in propuesta["hojas_que_no_entran"])
     if not anotar("El formulario vino completo y bien armado", not faltan and listas_bien,
                   f"faltan: {faltan}" if faltan else "una lista vino mal armada"):
         return resultado()
@@ -372,9 +376,9 @@ def verificar_receta(resumen: dict, propuesta: dict | None, ruta_excel: Path) ->
     hoja = hojas[elegida]
     columnas = {campo: propuesta[f"columna_{campo}"] for campo in CAMPOS_DE_LA_RECETA}
     usadas = {campo: columna for campo, columna in columnas.items() if columna}
-    no_van = [c["columna"] for c in propuesta["columnas_que_no_van"]]
-    de_la_hoja = [*hoja["columnas"], hoja["columna_codigo"]]  # la del código también es de la hoja (puede ir en "no van")
-    ajenas = [c for c in [*usadas.values(), *no_van] if c not in de_la_hoja]
+    # Semana 5: las que no van son las que no se eligieron para ningún dato (la del código ya la resolvió el código)
+    no_van = [c for c in hoja["columnas"] if c not in usadas.values()]
+    ajenas = [c for c in usadas.values() if c not in hoja["columnas"]]
     anotar("Todas las columnas nombradas son de esa hoja", not ajenas, f"no están en {elegida!r}: {ajenas}")
     # Lo único que puede compartir columna: el contenido con la descripción (Rivera) y la unidad con su contenido (Norte)
     juntos = {"contenido": usadas.get("descripcion"), "unidad": usadas.get("contenido")}
@@ -382,10 +386,6 @@ def verificar_receta(resumen: dict, propuesta: dict | None, ruta_excel: Path) ->
     repetidas = sorted({c for c in otras if otras.count(c) > 1})
     anotar("Ninguna columna se usa para dos datos (salvo el contenido con su unidad o dentro de la descripción)",
            not repetidas, f"repetidas: {repetidas}")
-    usada_y_no_va = sorted(set(usadas.values()) & set(no_van))  # quinta corrida: "Descripcion" en los dos lados
-    anotar("Ninguna columna se usa y a la vez figura en 'no van'", not usada_y_no_va, f"en los dos: {usada_y_no_va}")
-    sin_decidir = [c for c in hoja["columnas"] if c not in usadas.values() and c not in no_van]
-    anotar("Ninguna columna queda sin decidir", not sin_decidir, f"sin decidir: {sin_decidir}")
     anotar("Hay una columna de descripción", "descripcion" in usadas)
     if ajenas or "descripcion" not in usadas:
         return resultado()
@@ -454,9 +454,10 @@ def verificar_receta(resumen: dict, propuesta: dict | None, ruta_excel: Path) ->
         "separador_decimal": separador,
         "moneda": propuesta["moneda"],
         # Lo que el modelo decidió y con qué evidencia: no lo usa el servidor, es para el acuse de recibo (paso 9)
-        "decisiones": {**{clave: propuesta[clave] for clave in ("evidencia_hoja", "hojas_que_no_entran",
-                                                                 "columnas_que_no_van", "evidencia_moneda")},
-                       "evidencia_separador": evidencia_separador},  # esta la calculó el código
+        "decisiones": {**{clave: propuesta[clave] for clave in ("evidencia_hoja", "hojas_que_no_entran", "evidencia_moneda")},
+                       # estas dos las calculó el código (semana 5: las que no van ya no se le preguntan al modelo)
+                       "columnas_que_no_van": [{"columna": c, "motivo": MOTIVO_NO_VA} for c in no_van],
+                       "evidencia_separador": evidencia_separador},
     })
 
 
@@ -521,8 +522,9 @@ def mostrar(resultado: dict) -> None:
         for hoja in propuesta.get("hojas_que_no_entran") or []:
             print(f"  no entra: {hoja.get('hoja')!r} — {hoja.get('motivo')}" if isinstance(hoja, dict) else f"  no entra: {hoja}")
         print(f"  columnas: { {campo: propuesta.get(f'columna_{campo}') for campo in CAMPOS_DE_LA_RECETA} }")
-        for columna in propuesta.get("columnas_que_no_van") or []:
-            print(f"  no va: {columna.get('columna')!r} — {columna.get('motivo')}" if isinstance(columna, dict) else f"  no va: {columna}")
+        if resultado["receta"]:  # semana 5: las que no van las calcula el código
+            no_van = [c["columna"] for c in resultado["receta"]["decisiones"]["columnas_que_no_van"]]
+            print(f"  no van (lo calcula el código): {no_van or 'ninguna'}")
         columnas = {campo: propuesta.get(f"columna_{campo}") for campo in CAMPOS_DE_LA_RECETA}
         print(f"  contenido (lo deduce el código): {forma_del_contenido(columnas)} · moneda {propuesta.get('moneda')} "
               f"(evidencia: {propuesta.get('evidencia_moneda')!r})")

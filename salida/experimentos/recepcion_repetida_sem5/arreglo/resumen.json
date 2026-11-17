@@ -1,0 +1,97 @@
+{
+  "fecha": "2026-11-17 17:39",
+  "modelo": "claude-haiku-5-5",
+  "veces": [
+    {
+      "archivo": "HigieneTotal_novedades.xlsx",
+      "vez": 1,
+      "entra": true,
+      "problemas": [],
+      "igual_a_la_semana_4": true,
+      "no_van": [],
+      "costo_usd": 0.000479
+    },
+    {
+      "archivo": "HigieneTotal_novedades.xlsx",
+      "vez": 2,
+      "entra": true,
+      "problemas": [],
+      "igual_a_la_semana_4": true,
+      "no_van": [],
+      "costo_usd": 0.000479
+    },
+    {
+      "archivo": "HigieneTotal_novedades.xlsx",
+      "vez": 3,
+      "entra": true,
+      "problemas": [],
+      "igual_a_la_semana_4": true,
+      "no_van": [],
+      "costo_usd": 0.00048
+    },
+    {
+      "archivo": "HigieneTotal_novedades.xlsx",
+      "vez": 4,
+      "entra": true,
+      "problemas": [],
+      "igual_a_la_semana_4": true,
+      "no_van": [],
+      "costo_usd": 0.000479
+    },
+    {
+      "archivo": "HigieneTotal_novedades.xlsx",
+      "vez": 5,
+      "entra": true,
+      "problemas": [],
+      "igual_a_la_semana_4": true,
+      "no_van": [],
+      "costo_usd": 0.00048
+    },
+    {
+      "archivo": "ALTAS RIVERA OCT.xlsx",
+      "vez": 1,
+      "entra": true,
+      "problemas": [],
+      "igual_a_la_semana_4": true,
+      "no_van": [
+        "OBS"
+      ],
+      "costo_usd": 0.00043
+    },
+    {
+      "archivo": "ALTAS RIVERA OCT.xlsx",
+      "vez": 2,
+      "entra": true,
+      "problemas": [],
+      "igual_a_la_semana_4": true,
+      "no_van": [
+        "OBS"
+      ],
+      "costo_usd": 0.00043
+    },
+    {
+      "archivo": "NorteImports_new_items_Q4.xlsx",
+      "vez": 1,
+      "entra": true,
+      "problemas": [],
+      "igual_a_la_semana_4": true,
+      "no_van": [
+        "Origin"
+      ],
+      "costo_usd": 0.000406
+    },
+    {
+      "archivo": "NorteImports_new_items_Q4.xlsx",
+      "vez": 2,
+      "entra": true,
+      "problemas": [],
+      "igual_a_la_semana_4": true,
+      "no_van": [
+        "Origin"
+      ],
+      "costo_usd": 0.000406
+    }
+  ],
+  "bien": 9,
+  "costo_usd": 0.004069
+}

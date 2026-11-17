@@ -381,12 +381,19 @@ def pedir_filas_citadas(cliente, modelo: str, ruta_pdf: Path, codigos: list[str]
 # La tool de la llamada 2: un "formulario" con forma fija. Nunca se ejecuta: lo que importa es su input.
 # Se arma con las columnas de cada PDF. Cada valor se pide TAL COMO ESTÁ: las cuentas las hace el código después.
 def tool_campos(columnas: list[tuple[str, str]]) -> dict:
-    """La tool entregar_campos para una tabla con esas columnas (+ el código y el texto ajeno)."""
+    """La tool entregar_campos para una tabla con esas columnas (+ el código y el texto ajeno).
+
+    Semana 5, paso 3B: con strict (M6 §2.2) la API garantiza la forma del formulario. Para eso: sin claves libres
+    (additionalProperties false) y "texto o null" escrito como anyOf (la forma que compiló en el paso 1). Lo que strict
+    no puede garantizar (que cada campo esté en SU fila y que las partes formen la fila) lo siguen verificando los
+    controles del código (verificar_campos).
+    """
+    texto_o_null = [{"type": "string"}, {"type": "null"}]
     propiedades = {"codigo": {"type": "string", "description": "El código con el que empieza la fila."}}
     for nombre, descripcion in columnas:
-        propiedades[nombre] = {"type": ["string", "null"], "description": f"{descripcion} null si la fila no lo trae."}
+        propiedades[nombre] = {"anyOf": texto_o_null, "description": f"{descripcion} null si la fila no lo trae."}
     propiedades["texto_ajeno"] = {
-        "type": ["string", "null"],
+        "anyOf": texto_o_null,
         "description": ("Texto pegado al final de la fila que no es de este producto (por ejemplo, un pie de página), "
                         "tal como está. null si no hay."),
     }
@@ -394,13 +401,16 @@ def tool_campos(columnas: list[tuple[str, str]]) -> dict:
         "name": "entregar_campos",
         "description": ("Entrega los campos de cada fila de producto, copiados tal como están escritos en la fila. "
                         "Llamala una sola vez, con todas las filas."),
+        "strict": True,  # semana 5, paso 3B
         "input_schema": {
             "type": "object",
             "properties": {
                 "productos": {"type": "array", "items": {
-                    "type": "object", "properties": propiedades, "required": list(propiedades)}},
+                    "type": "object", "properties": propiedades, "required": list(propiedades),
+                    "additionalProperties": False}},
             },
             "required": ["productos"],
+            "additionalProperties": False,
         },
     }
 
@@ -679,4 +689,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    main()

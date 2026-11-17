@@ -200,6 +200,11 @@ chequear("La tool de Andes tiene sus columnas + código + texto ajeno", list(pro
          ["codigo", "producto", "monodroga", "presentacion", "condicion", "ean", "precio", "texto_ajeno"])
 chequear("...y todas son obligatorias (se pueden mandar en null, no omitir)",
          herramienta["input_schema"]["properties"]["productos"]["items"]["required"], list(propiedades))
+chequear("Semana 5, paso 3B: va con strict, sin claves libres y el null como anyOf",
+         (herramienta["strict"], herramienta["input_schema"]["additionalProperties"],
+          herramienta["input_schema"]["properties"]["productos"]["items"]["additionalProperties"],
+          propiedades["ean"]["anyOf"], "anyOf" in propiedades["codigo"]),
+         (True, False, False, [{"type": "string"}, {"type": "null"}], False))
 FILA_1106 = filas_a["AN-1106"]["fila"]
 BIEN_1106 = {"producto": "Antiacid 400 mg + 400 mg/5 ml", "monodroga": None, "presentacion": "Susp. x 200 ml",
              "condicion": "VL", "ean": "7799252522035", "precio": "$ 156,16"}
@@ -385,4 +390,4 @@ chequear("...y lo dejó guardado en la carpeta de extracciones", (carpeta / "Lis
          True)
 shutil.rmtree(carpeta, ignore_errors=True)
 
-print(f"\nResultado: {'todo OK' if errores == 0 else f'{errores} con error'}")
+print(f"\nResultado: {'todo OK' if errores == 0 else f'{errores} con error'}")

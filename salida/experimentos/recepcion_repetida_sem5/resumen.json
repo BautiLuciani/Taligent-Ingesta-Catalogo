@@ -1,0 +1,65 @@
+{
+  "fecha": "2026-11-17 17:27",
+  "modelo": "claude-haiku-5-5",
+  "veces": [
+    {
+      "vez": 1,
+      "entra": true,
+      "problemas": [],
+      "columna_contenido": "Cont.",
+      "columna_unidad": "UM",
+      "no_van": [],
+      "costo_usd": 0.000508
+    },
+    {
+      "vez": 2,
+      "entra": false,
+      "problemas": [
+        "Ninguna columna se usa y a la vez figura en 'no van': en los dos: ['Costo']"
+      ],
+      "columna_contenido": "Cont.",
+      "columna_unidad": "UM",
+      "no_van": [
+        "Costo"
+      ],
+      "costo_usd": 0.000532
+    },
+    {
+      "vez": 3,
+      "entra": true,
+      "problemas": [],
+      "columna_contenido": "Cont.",
+      "columna_unidad": "UM",
+      "no_van": [],
+      "costo_usd": 0.00051
+    },
+    {
+      "vez": 4,
+      "entra": false,
+      "problemas": [
+        "Ninguna columna se usa y a la vez figura en 'no van': en los dos: ['Costo']"
+      ],
+      "columna_contenido": "Cont.",
+      "columna_unidad": "UM",
+      "no_van": [
+        "Costo"
+      ],
+      "costo_usd": 0.000535
+    },
+    {
+      "vez": 5,
+      "entra": false,
+      "problemas": [
+        "Ninguna columna se usa y a la vez figura en 'no van': en los dos: ['Cont.']"
+      ],
+      "columna_contenido": "Cont.",
+      "columna_unidad": "UM",
+      "no_van": [
+        "Cont."
+      ],
+      "costo_usd": 0.000538
+    }
+  ],
+  "fallas": 3,
+  "costo_usd": 0.002623
+}

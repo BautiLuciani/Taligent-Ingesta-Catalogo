@@ -1,0 +1,53 @@
+{
+  "fecha": "2026-11-17 17:23",
+  "modelo": "claude-haiku-5-5",
+  "recepcion": [
+    {
+      "archivo": "ALTAS RIVERA OCT.xlsx",
+      "entra": true,
+      "problemas": [],
+      "igual_a_la_semana_4": true,
+      "costo_usd": 0.000503
+    },
+    {
+      "archivo": "HigieneTotal_novedades.xlsx",
+      "entra": false,
+      "problemas": [
+        "Ninguna columna se usa y a la vez figura en 'no van': en los dos: ['Cont.']"
+      ],
+      "igual_a_la_semana_4": false,
+      "costo_usd": 0.000533
+    },
+    {
+      "archivo": "NorteImports_new_items_Q4.xlsx",
+      "entra": true,
+      "problemas": [],
+      "igual_a_la_semana_4": true,
+      "costo_usd": 0.00046
+    }
+  ],
+  "extractor": [
+    {
+      "archivo": "LHS_catalogo_nuevos_productos",
+      "productos": 25,
+      "distintos": [],
+      "con_problemas": [],
+      "costo_usd": 0.001235
+    },
+    {
+      "archivo": "Lista_de_precios_octubre_2026",
+      "productos": 26,
+      "distintos": [],
+      "con_problemas": [],
+      "costo_usd": 0.001642
+    }
+  ],
+  "catalogo": {
+    "productos": 25,
+    "validas": 25,
+    "sin_propuesta": {},
+    "distintas_a_la_semana_3": [],
+    "costo_usd": 0.001883
+  },
+  "costo_usd": 0.006256
+}

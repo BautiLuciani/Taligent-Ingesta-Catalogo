@@ -7,7 +7,7 @@ from pathlib import Path
 from types import SimpleNamespace
 
 from catalogo_viejo import (RUTA_CATALOGO, clasificar, descripcion_estandar, duplicados_internos, etapa_ia, guardar,
-                            inconsistencias, leer_catalogo, normalizar, validar_variante)
+                            inconsistencias, leer_catalogo, leer_respuesta, normalizar, validar_variante)
 
 errores = 0
 
@@ -101,14 +101,21 @@ chequear("En un medicamento la variante va vacía", validar_variante(medicamento
 class ClaudeFalso:
     """Imita messages.create sin IA: contesta según una regla, y anota qué SKU le pidieron en cada llamada."""
 
-    def __init__(self, responder):
-        self.responder, self.pedidos, self.messages = responder, [], self
+    def __init__(self, responder, stop_reason="end_turn"):
+        self.responder, self.pedidos, self.messages, self.formatos = responder, [], self, []
+        self.stop_reason = stop_reason
 
     def create(self, **opciones):
         skus = [json.loads(linea)["sku"] for linea in opciones["messages"][0]["content"].splitlines()[1:]]
         self.pedidos.append(skus)
+        self.formatos.append(opciones["output_config"].get("format"))  # semana 5: el schema que se pidió
         return SimpleNamespace(content=[SimpleNamespace(type="text", text=self.responder(skus, len(self.pedidos)))],
-                               usage=SimpleNamespace(input_tokens=1000, output_tokens=100))
+                               stop_reason=self.stop_reason, usage=SimpleNamespace(input_tokens=1000, output_tokens=100))
+
+
+def estructurada(variantes: list[dict]) -> str:
+    """Lo que devuelve la API con output_config.format: el JSON del schema, sin nada alrededor."""
+    return json.dumps({"variantes": [{"por_que": "x", **v} for v in variantes]})
 
 
 print("--- etapa_ia con un Claude falso (sin gastar) ---")
@@ -117,7 +124,7 @@ de_prueba = [clasificar(catalogo[sku]) for sku in ("SKU100007", "SKU100049", "SK
 
 def responde_bien(skus, _):
     variantes = {"SKU100007": "COLOR", "SKU100049": "AVENA", "SKU101386": "96 %"}
-    return "Listo:\n" + json.dumps([{"sku": s, "variante": variantes[s], "por_que": "x"} for s in skus])
+    return estructurada([{"sku": s, "variante": variantes[s]} for s in skus])
 
 
 carpeta = Path(tempfile.mkdtemp())
@@ -135,12 +142,24 @@ chequear("SKU101386: 'ALCOHOL CLARITA 96 % X 500 ML'",
 chequear("Los cambios de la IA dicen que son de la IA", {c["origen"] for c in de_prueba[0]["cambios"] if c["campo"] != "unidad"},
          {"ia"})
 chequear("La respuesta cruda queda guardada (la evidencia)", len(list((carpeta / "llamadas").glob("*.json"))), 1)
+formato = falso.formatos[0]
+chequear("Semana 5, paso 3C: pide la respuesta con output_config.format (json_schema)", formato["type"], "json_schema")
+chequear("...y el sku solo puede ser uno de ESTA tanda (enum)",
+         sorted(formato["schema"]["properties"]["variantes"]["items"]["properties"]["sku"]["enum"]),
+         ["SKU100007", "SKU100049", "SKU101386"])
+chequear("...sin claves libres y todo obligatorio",
+         (formato["schema"]["additionalProperties"],
+          formato["schema"]["properties"]["variantes"]["items"]["additionalProperties"],
+          formato["schema"]["properties"]["variantes"]["items"]["required"]),
+         (False, False, ["sku", "variante", "por_que"]))
+chequear("La respuesta ya no se busca entre corchetes: un texto alrededor del JSON no se lee",
+         leer_respuesta("Listo:\n" + estructurada([{"sku": "SKU100007", "variante": "COLOR"}])), None)
 
 
 def inventa_y_se_olvida(skus, llamada):
     if llamada == 1:  # 1ª: inventa una variante para uno y se olvida de otro
-        return json.dumps([{"sku": "SKU100007", "variante": "COLORACION"}, {"sku": "SKU100049", "variante": "AVENA"}])
-    return json.dumps([{"sku": s, "variante": "COLOR" if s == "SKU100007" else "OTRA"} for s in skus])
+        return estructurada([{"sku": "SKU100007", "variante": "COLORACION"}, {"sku": "SKU100049", "variante": "AVENA"}])
+    return estructurada([{"sku": s, "variante": "COLOR" if s == "SKU100007" else "OTRA"} for s in skus])
 
 
 de_prueba = [clasificar(catalogo[sku]) for sku in ("SKU100007", "SKU100049", "SKU101386")]
@@ -155,6 +174,12 @@ de_prueba = [clasificar(catalogo["SKU100007"])]
 resumen = etapa_ia(ClaudeFalso(lambda skus, n: "No sé."), "falso", de_prueba, carpeta)
 chequear("Una respuesta sin JSON: sin propuesta, con el motivo",
          (de_prueba[0]["estado"], de_prueba[0]["problemas"]), ("sin_propuesta", ["la respuesta no trae un JSON que se pueda leer"]))
+de_prueba = [clasificar(catalogo["SKU100007"])]
+resumen = etapa_ia(ClaudeFalso(lambda skus, n: '{"variantes": [{"sku": "SKU100', stop_reason="max_tokens"), "falso",
+                   de_prueba, carpeta)
+chequear("Semana 5: una respuesta cortada (max_tokens) no se lee a medias: sin propuesta, con el motivo",
+         (de_prueba[0]["estado"], de_prueba[0]["problemas"]),
+         ("sin_propuesta", ["la respuesta terminó con stop_reason 'max_tokens': no se lee"]))
 
 print("--- inconsistencias: la misma palabra decidida distinto en productos del mismo tipo ---")
 repelentes = [clasificar(catalogo[sku]) for sku in ("SKU100539", "SKU100567", "SKU102282")]

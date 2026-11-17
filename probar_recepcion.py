@@ -7,7 +7,7 @@ from pathlib import Path
 from types import SimpleNamespace
 
 import recepcion
-from recepcion import (elegir_ejemplos, forma_del_contenido, pedir_receta, propuesta_de_la_respuesta, proveedor_de_la_ruta,
+from recepcion import (MOTIVO_NO_VA, elegir_ejemplos, forma_del_contenido, pedir_receta, propuesta_de_la_respuesta, proveedor_de_la_ruta,
                        recibir, resumen_del_excel, ruta_de_la_llamada, separador_de_los_datos, tool_receta,
                        verificar_receta)
 
@@ -72,21 +72,43 @@ tool = tool_receta(higiene)
 propiedades = tool["input_schema"]["properties"]
 chequear("Higiene Total: solo puede elegir entre sus 2 hojas", propiedades["hoja_productos_nuevos"]["enum"],
          ["Altas", "Discontinuados"])
-chequear("Cada dato: una de sus columnas o null (el menú; sin strict guía, la garantía es el código)",
-         propiedades["columna_ean"]["enum"], ["Descripcion", "Cont.", "UM", "EAN13", "Costo", None])
-chequear("La columna del código no se ofrece (la resolvió el código)", "Item" in propiedades["columna_ean"]["enum"], False)
+chequear("Cada dato: una de sus columnas o null (semana 5: anyOf, como lo acepta strict)",
+         propiedades["columna_ean"]["anyOf"], [{"type": "string", "enum": ["Descripcion", "Cont.", "UM", "EAN13", "Costo"]},
+                                               {"type": "null"}])
+chequear("La columna del código no se ofrece (la resolvió el código)",
+         "Item" in propiedades["columna_ean"]["anyOf"][0]["enum"], False)
 chequear("Formulario plano: un casillero por dato, al mismo nivel",
          [c for c in propiedades if c.startswith("columna_")],
          ["columna_descripcion", "columna_ean", "columna_precio", "columna_contenido", "columna_unidad"])
 chequear("El separador decimal ya no se le pregunta al modelo (lo calcula el código)",
          [c for c in propiedades if "separador" in c], [])
 chequear("Dónde está el contenido tampoco (lo deduce el código de columna_contenido)", "contenido_en" in propiedades, False)
-chequear("Norte: las columnas en inglés, tal cual", tool_receta(norte)["input_schema"]["properties"]["columna_precio"]["enum"],
-         ["Description", "Size", "UPC/EAN", "Unit cost (USD)", "Origin", None])
+chequear("Norte: las columnas en inglés, tal cual",
+         tool_receta(norte)["input_schema"]["properties"]["columna_precio"]["anyOf"][0]["enum"],
+         ["Description", "Size", "UPC/EAN", "Unit cost (USD)", "Origin"])
 chequear("Rivera: una sola hoja para elegir", tool_receta(rivera)["input_schema"]["properties"]["hoja_productos_nuevos"]["enum"],
          ["Altas"])
 chequear("Moneda: lista cerrada", propiedades["moneda"]["enum"], ["UYU", "USD"])
 chequear("Todo el formulario es obligatorio", len(tool["input_schema"]["required"]), len(propiedades))
+print("--- semana 5, paso 3A · el formulario va con strict ---")
+chequear("strict: true (la API garantiza la forma y los enum)", tool["strict"], True)
+chequear("Paso 3D: el formulario ya no pregunta 'columnas_que_no_van' (las calcula el código)",
+         "columnas_que_no_van" in propiedades, False)
+
+
+def objetos_sin_cerrar(nodo) -> list:
+    """Los objetos del schema que admiten claves libres (strict exige additionalProperties: false en todos)."""
+    if isinstance(nodo, dict):
+        propios = [nodo.get("description", "?")] if nodo.get("type") == "object" and nodo.get("additionalProperties") is not False else []
+        return propios + [x for valor in nodo.values() for x in objetos_sin_cerrar(valor)]
+    if isinstance(nodo, list):
+        return [x for valor in nodo for x in objetos_sin_cerrar(valor)]
+    return []
+
+
+chequear("Todos los objetos sin claves libres (additionalProperties false)", objetos_sin_cerrar(tool["input_schema"]), [])
+chequear("Ningún tipo como lista junto con enum (la API lo rechaza: paso 1)",
+         [c for c, p in propiedades.items() if isinstance(p.get("type"), list)], [])
 
 print("--- 2B · pedir_receta con un cliente falso (no gasta) ---")
 
@@ -135,20 +157,23 @@ BUENAS = {
         "hoja_productos_nuevos": "Altas", "evidencia_hoja": "Planilla de altas - Octubre 2026", "hojas_que_no_entran": [],
         "columna_descripcion": "DESCRIPCION", "columna_ean": "EAN", "columna_precio": "P. COSTO",
         "columna_contenido": "DESCRIPCION", "columna_unidad": None,
-        "moneda": "UYU", "evidencia_moneda": None, "columnas_que_no_van": [{"columna": "OBS", "motivo": "observaciones"}]}),
+        "moneda": "UYU", "evidencia_moneda": None}),
     "Higiene Total": (HIGIENE, higiene, {
         "hoja_productos_nuevos": "Altas", "evidencia_hoja": "Discontinuados",
         "hojas_que_no_entran": [{"hoja": "Discontinuados", "motivo": "productos discontinuados"}],
         "columna_descripcion": "Descripcion", "columna_ean": "EAN13", "columna_precio": "Costo", "columna_contenido": "Cont.", "columna_unidad": "UM",
-        "moneda": "UYU", "evidencia_moneda": None, "columnas_que_no_van": []}),
+        "moneda": "UYU", "evidencia_moneda": None}),
     "Norte": (NORTE, norte, {
         "hoja_productos_nuevos": "New items", "evidencia_hoja": "New items", "hojas_que_no_entran": [],
         "columna_descripcion": "Description", "columna_ean": "UPC/EAN", "columna_precio": "Unit cost (USD)", "columna_contenido": "Size", "columna_unidad": None,
-        "moneda": "USD", "evidencia_moneda": "Unit cost (USD)", "columnas_que_no_van": [{"columna": "Origin", "motivo": "país"}]}),
+        "moneda": "USD", "evidencia_moneda": "Unit cost (USD)"}),
 }
 for nombre, (ruta, resumen, propuesta) in BUENAS.items():
     v = verificar_receta(resumen, propuesta, ruta)
     chequear(f"{nombre}: todos los controles pasan y hay receta", (v["problemas"], v["receta"] is not None), ([], True))
+chequear("Norte: las que no van las calcula el código (Origin)",
+         verificar_receta(norte, BUENAS["Norte"][2], NORTE)["receta"]["decisiones"]["columnas_que_no_van"],
+         [{"columna": "Origin", "motivo": MOTIVO_NO_VA}])
 receta = verificar_receta(norte, BUENAS["Norte"][2], NORTE)["receta"]
 chequear("Norte: la receta tiene la forma de PROVEEDORES (campos, moneda, separador calculado)",
          (receta["formato"], receta["hoja"], receta["campos"]["precio"], receta["moneda"], receta["separador_decimal"]),
@@ -220,34 +245,32 @@ frena("Higiene Total: eligió Discontinuados", mala("Higiene Total", {
     "no se llama como lo que no entra")
 frena("Higiene Total: se olvidó de decidir una hoja", mala("Higiene Total", {"hojas_que_no_entran": []}),
       "Cada hoja quedó decidida")
-frena("Rivera: el precio como EAN (no tiene forma de código)", mala("Rivera", {"columnas.ean": "P. COSTO",
-      "columnas_que_no_van": [{"columna": "OBS", "motivo": "x"}, {"columna": "EAN", "motivo": "x"}]}), "forma de código")
+frena("Rivera: el precio como EAN (no tiene forma de código)", mala("Rivera", {"columnas.ean": "P. COSTO"}), "forma de código")
 frena("Rivera: la misma columna para dos datos", mala("Rivera", {"columnas.precio": "EAN"}), "dos datos")
-frena("Higiene Total: 'Descripcion' usada y a la vez en 'no van' (se contradice)", mala("Higiene Total", {
-    "columnas_que_no_van": [{"columna": "Descripcion", "motivo": "x"}]}), "a la vez")
+v = mala("Higiene Total", {"columnas_que_no_van": [{"columna": "Descripcion", "motivo": "x"}]})
+chequear("Semana 5: si una respuesta vieja trae la lista 'no van', no se usa (las calcula el código): entra, sin 'no van'",
+         (v["problemas"], v["receta"]["decisiones"]["columnas_que_no_van"]), ([], []))
 frena("Rivera: dice que el contenido no figura, pero las 50 descripciones lo traen", mala("Rivera", {"columnas.contenido": None}),
       "no lo traen")
 v = mala("Norte", {"columnas.unidad": "Size"})
 chequear("Norte con unidad = Size (como en la 4ª corrida): entra, y la receta no repite Size",
          (v["problemas"], v["receta"]["contenido_en"], "unidad" in v["receta"]["campos"]), ([], "columna_con_unidad", False))
-frena("Rivera: se olvidó de OBS (ninguna columna desaparece en silencio)", mala("Rivera", {"columnas_que_no_van": []}),
-      "sin decidir")
+v = mala("Rivera", {})
+chequear("Semana 5: OBS no se eligió para nada -> el código la anota como 'no va' (ninguna columna desaparece en silencio)",
+         v["receta"]["decisiones"]["columnas_que_no_van"], [{"columna": "OBS", "motivo": MOTIVO_NO_VA}])
 frena("Rivera: OBS como descripción (no se puede calcular el contenido)", mala("Rivera", {
-    "columnas.descripcion": "OBS", "columnas_que_no_van": [{"columna": "DESCRIPCION", "motivo": "x"}]}), "contenido")
+    "columnas.descripcion": "OBS"}), "contenido")
 frena("Higiene Total: 'Cont.' como si trajera la unidad (no la trae)", mala("Higiene Total", {
-    "columnas.unidad": None, "columnas_que_no_van": [{"columna": "UM", "motivo": "x"}]}), "El contenido se puede calcular")
+    "columnas.unidad": None}), "El contenido se puede calcular")
 frena("Higiene Total: una unidad sin contenido no tiene sentido", mala("Higiene Total", {
-    "columnas.contenido": None, "columnas_que_no_van": [{"columna": "Cont.", "motivo": "x"}]}), "tienen sentido juntas")
+    "columnas.contenido": None}), "tienen sentido juntas")
 frena("Norte: UYU aunque la columna dice USD", mala("Norte", {"moneda": "UYU"}), "moneda coincide")
 frena("Rivera: USD sin que el archivo lo diga", mala("Rivera", {"moneda": "USD", "evidencia_moneda": "USD"}), "moneda")
 frena("Norte: evidencia inventada", mala("Norte", {"evidencia_moneda": "Prices in US dollars"}), "evidencia de la moneda")
-v = mala("Rivera", {"columnas.ean": None, "columnas_que_no_van": [{"columna": "OBS", "motivo": "x"},
-                                                                  {"columna": "EAN", "motivo": "x"}]})
+v = mala("Rivera", {"columnas.ean": None})
 chequear("Sin columna de EAN: no frena, pero avisa (irán a revisión con gtin_faltante)",
          (v["receta"] is not None, "gtin_faltante" in " ".join(v["avisos"])), (True, True))
 
-v = mala("Higiene Total", {"columnas_que_no_van": [{"columna": "Item", "motivo": "es el código del proveedor"}]})
-chequear("La columna del código en 'no van' no es un error (es de la hoja)", (v["problemas"], v["receta"] is not None), ([], True))
 frena("Rivera: evidencia con dos textos pegados (no existe así en el archivo)",
       mala("Rivera", {"evidencia_hoja": "COSMÉTICA RIVERA S.A. / Planilla de altas - Octubre 2026"}), "evidencia de la hoja")
 
@@ -287,8 +310,8 @@ for nombre, prefijo, forma in (("Rivera", "ALTAS RIVERA", "dentro_de_la_descripc
         chequear(f"{nombre} {corrida[-2:]} (sus columnas tal cual): entra con la forma deducida",
                  (v["problemas"], v["receta"]["contenido_en"] if v["receta"] else None), ([], forma))
 v = verificar_receta(higiene, respuesta_real("recepcion_v5", "HigieneTotal"), HIGIENE)
-chequear("Higiene Total v5 ('Descripcion' usada y en 'no van'): no entra, se contradice",
-         (v["receta"], any("a la vez" in p for p in v["problemas"])), (None, True))
+chequear("Higiene Total v5 ('Descripcion' usada y en 'no van'): semana 5, la lista ya no se usa -> entra, sin contradicción",
+         (v["problemas"], v["receta"]["decisiones"]["columnas_que_no_van"]), ([], []))
 for nombre, prefijo in (("Rivera", "ALTAS RIVERA"), ("Norte", "NorteImports")):
     ruta, resumen, _ = BUENAS[nombre]
     chequear(f"{nombre}: v5 y v6 (dos corridas seguidas) dan la MISMA receta",
