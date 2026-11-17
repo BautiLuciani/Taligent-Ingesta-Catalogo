@@ -55,6 +55,14 @@ PRECIO_OUTPUT = 0.50  # USD por millón de tokens de salida (el thinking se cobr
 
 PROMPT_CRITERIO = "criterio_de_revision"  # semana 4, paso 4: el criterio de revisión lo sirve el servidor
 
+# Semana 5, paso 2C (M6 §2.2): las tools que van con strict: true. La API garantiza que el modelo llene su formulario
+# (la ficha estructurada: los 18 campos, los enums del vocabulario y la taxonomía, las fuentes en casilleros).
+# Medido con probar_strict_tools.py: las 4 tools juntas NO compilan ("For 'integer' type, property 'minimum' is not
+# supported": el minimum/maximum de leer_archivo_proveedor); solo registrar_ficha compila y lo que devuelve entra en los
+# modelos del servidor. Los argumentos de las otras 3 los sigue validando el servidor (pydantic) y el error vuelve al
+# modelo como is_error, como siempre.
+TOOLS_CON_STRICT = {"registrar_ficha"}
+
 
 async def armar_system_prompt(cliente_mcp: Client) -> str:
     """Instrucciones de prompt_sistema.md + el criterio de revisión (prompt MCP del servidor) + los 3 resources del
@@ -84,7 +92,8 @@ async def obtener_tools(cliente_mcp: Client, rol: str = "fichador") -> list[dict
     if faltan:
         raise ValueError(f"Los permisos del {rol} nombran tools que el servidor no tiene: {', '.join(faltan)}")
     return [
-        {"name": tool.name, "description": tool.description, "input_schema": tool.input_schema}
+        {"name": tool.name, "description": tool.description, "input_schema": tool.input_schema,
+         **({"strict": True} if nombre in TOOLS_CON_STRICT else {})}  # semana 5, paso 2C
         for nombre, tool in del_servidor.items() if nombre in permitidas
     ]
 
@@ -398,4 +407,4 @@ async def main():
         print(f"⚠ Tandas que no terminaron bien: {reporte['tandas_con_problemas']}")
 
 if __name__ == "__main__":
-    asyncio.run(main())
+    asyncio.run(main())

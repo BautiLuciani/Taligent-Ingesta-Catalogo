@@ -1,0 +1,65 @@
+{
+  "fecha": "2026-11-17 16:48",
+  "modelo": "claude-haiku-5-5",
+  "resultados": [
+    {
+      "variante": "A. las 4 en strict",
+      "strict_en": [
+        "buscar_parecidos",
+        "buscar_por_gtin",
+        "leer_archivo_proveedor",
+        "registrar_ficha"
+      ],
+      "uniones": 15,
+      "opcionales": 2,
+      "segundos": 0.7,
+      "compilo": false,
+      "error": "400 de la API: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': \"tools.0.custom: For 'integer' type, property 'minimum' is not supported\"}, 'request_id': 'req_011Ch95WjDsJQvmxbxNbh18x'}"
+    },
+    {
+      "variante": "B. solo registrar_ficha",
+      "strict_en": [
+        "registrar_ficha"
+      ],
+      "uniones": 15,
+      "opcionales": 0,
+      "segundos": 8.0,
+      "compilo": true,
+      "input": {
+        "item_id": "PRUEBA:ITEM-0001",
+        "estado": "a_revision",
+        "ficha": {
+          "gtin": null,
+          "descripcion": "Producto de prueba",
+          "marca": "MARCA PRUEBA",
+          "tipo": null,
+          "variante": null,
+          "contenido": null,
+          "unidad": null,
+          "unidades_por_envase": 1,
+          "principio_activo": null,
+          "concentracion": null,
+          "condicion_venta": null,
+          "categoria": null,
+          "precio_costo": null,
+          "moneda": null,
+          "proveedor_id": "P01",
+          "codigo_proveedor": "PRUEBA-0001",
+          "peligro_deposito": null,
+          "numero_onu": null
+        },
+        "fuentes": [],
+        "categoria_decidida_por": {
+          "campo": "marca",
+          "valor": "MARCA PRUEBA",
+          "explicacion": "Registro de prueba sin datos reales; no define categoría."
+        },
+        "motivos_revision": [
+          "dato_obligatorio_faltante"
+        ],
+        "duplicado_de": null
+      },
+      "problemas_con_los_modelos": []
+    }
+  ]
+}

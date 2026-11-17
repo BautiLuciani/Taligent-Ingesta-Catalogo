@@ -93,7 +93,9 @@ permisos.PERMISOS["mal_configurado"] = {"tools": {"leer_archivo_proveedor", "bor
 
 
 async def candado_1(cliente):
-    fichador = [t["name"] for t in await obtener_tools(cliente)]
+    tools_fichador = await obtener_tools(cliente)
+    fichador = [t["name"] for t in tools_fichador]
+    con_strict.extend(t["name"] for t in tools_fichador if t.get("strict"))  # semana 5, paso 2C
     lector = [t["name"] for t in await obtener_tools(cliente, "lector_de_prueba")]
     try:
         await obtener_tools(cliente, "mal_configurado")
@@ -103,7 +105,10 @@ async def candado_1(cliente):
     return fichador, lector, error
 
 
+con_strict = []
 fichador, lector, error = asyncio.run(con_el_servidor(candado_1))
+chequear("Semana 5: solo registrar_ficha va con strict (las 4 juntas no compilan: el minimum de leer_archivo_proveedor)",
+         con_strict, ["registrar_ficha"])
 chequear("El fichador recibe sus 4 tools", sorted(fichador), sorted(permisos.tools_permitidas("fichador")))
 chequear("El de solo lectura recibe solo las 2 de lectura (registrar_ficha ni la ve)", sorted(lector),
          ["buscar_por_gtin", "leer_archivo_proveedor"])
