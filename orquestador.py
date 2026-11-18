@@ -38,6 +38,9 @@ solo batch (la ventanilla junta los pedidos, espera el resultado y le da a cada 
 los hooks, el servidor y el escritor no cambian. La lectura sigue en tiempo real (es corta y con varias rondas).
 Ctrl + C cancela el batch en curso y no guarda nada.
 
+Semana 5, paso 8A: después del escritor, familias.py revisa que los productos que el archivo escribe igual (salvo
+contenido, EAN y precio) digan lo mismo en la ficha (salida/familias.json). Informa; no cambia ninguna ficha.
+
 Qué puede hacer cada pieza (blast radius, M4 §7.2):
   - Lectores (extractores): leen un archivo y escriben SU extracción en salida/extracciones/. Nada más.
   - Fichadores: leen los datos y PROPONEN fichas, solo de los productos de SU tanda. No escriben resultados.
@@ -70,6 +73,7 @@ from dotenv import load_dotenv
 from agente import CARPETA_TRAZAS, TANDA, fichar_tanda
 from cliente_batch import ClienteBatch
 from escritor import escribir
+from familias import mostrar as mostrar_familias, revisar as revisar_familias
 from escritor import mostrar as mostrar_escritura
 from extractor_fds import extraer_fds
 from extractor_folleto import extraer_folleto
@@ -549,6 +553,9 @@ def main():
     propuestas = {item_id: p for item_id, p in guardadas.items() if item_id.split(":")[0] in proveedores}
     informe = etapa_escritura(propuestas, etapa["siguen"])
     mostrar_escritura(informe)
+    # Semana 5, paso 8A: lo que el archivo escribe igual, ¿la ficha lo dice igual? (código, gratis; no cambia nada)
+    from servidor_mcp import RUTA_RESULTADOS
+    mostrar_familias(revisar_familias(CARPETA_CONSOLIDADO, RUTA_RESULTADOS, CARPETA_SALIDA / "familias.json"))
     if opciones.fichas:  # la medición, una por cantidad de fichadores (para comparar en el paso 8)
         fichas["escritor"] = informe
         sufijo = "" if set(proveedores) == set(PROVEEDORES) else "_" + "_".join(proveedores)  # una parcial no pisa la completa
