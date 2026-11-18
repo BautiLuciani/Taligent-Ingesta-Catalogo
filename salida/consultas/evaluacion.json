@@ -1,9 +1,10 @@
 {
-  "bien": 28,
+  "bien": 29,
   "total": 29,
-  "costo_usd": 0.028,
-  "costo_por_consulta_usd": 0.00097,
-  "segundos": 162.5,
+  "con_problemas_de_redaccion": 0,
+  "costo_usd": 0.0292,
+  "costo_por_consulta_usd": 0.00101,
+  "segundos": 178.4,
   "detalle": [
     {
       "id": "Q01",
@@ -16,8 +17,9 @@
         "fuentes": true
       },
       "fallan": [],
-      "costo_usd": 0.000788,
-      "segundos": 6.1
+      "redaccion": [],
+      "costo_usd": 0.002123,
+      "segundos": 5.9
     },
     {
       "id": "Q02",
@@ -30,8 +32,9 @@
         "fuentes": true
       },
       "fallan": [],
-      "costo_usd": 0.00067,
-      "segundos": 3.5
+      "redaccion": [],
+      "costo_usd": 0.000661,
+      "segundos": 5.1
     },
     {
       "id": "Q03",
@@ -45,8 +48,9 @@
         "menciona 4.8 fl oz": true
       },
       "fallan": [],
-      "costo_usd": 0.000809,
-      "segundos": 4.5
+      "redaccion": [],
+      "costo_usd": 0.000842,
+      "segundos": 6.2
     },
     {
       "id": "Q04",
@@ -59,8 +63,9 @@
         "fuentes": true
       },
       "fallan": [],
-      "costo_usd": 0.000591,
-      "segundos": 3.5
+      "redaccion": [],
+      "costo_usd": 0.000569,
+      "segundos": 4.2
     },
     {
       "id": "Q05",
@@ -73,8 +78,9 @@
         "fuentes": true
       },
       "fallan": [],
-      "costo_usd": 0.000596,
-      "segundos": 2.9
+      "redaccion": [],
+      "costo_usd": 0.000832,
+      "segundos": 6.6
     },
     {
       "id": "Q06",
@@ -87,26 +93,26 @@
         "fuentes": true
       },
       "fallan": [],
-      "costo_usd": 0.000851,
-      "segundos": 3.7
+      "redaccion": [],
+      "costo_usd": 0.000548,
+      "segundos": 4.1
     },
     {
       "id": "Q07",
       "pregunta": "¿Por qué LT-3447 quedó a revisión? ¿Con qué producto del catálogo podría ser el mismo?",
-      "ok": false,
+      "ok": true,
       "chequeos": {
         "esta_en_lo_generado": true,
         "productos": true,
         "valor": true,
         "fuentes": true,
-        "menciona sin ean": false,
+        "menciona sin ean": true,
         "menciona posible duplicado": true
       },
-      "fallan": [
-        "menciona sin ean"
-      ],
-      "costo_usd": 0.000975,
-      "segundos": 6.8
+      "fallan": [],
+      "redaccion": [],
+      "costo_usd": 0.001176,
+      "segundos": 9.1
     },
     {
       "id": "Q08",
@@ -119,8 +125,9 @@
         "fuentes": true
       },
       "fallan": [],
-      "costo_usd": 0.000848,
-      "segundos": 5.6
+      "redaccion": [],
+      "costo_usd": 0.000902,
+      "segundos": 7.0
     },
     {
       "id": "Q09",
@@ -133,8 +140,9 @@
         "fuentes": true
       },
       "fallan": [],
-      "costo_usd": 0.001014,
-      "segundos": 8.0
+      "redaccion": [],
+      "costo_usd": 0.001081,
+      "segundos": 9.2
     },
     {
       "id": "Q10",
@@ -148,8 +156,9 @@
         "menciona duplicado": true
       },
       "fallan": [],
-      "costo_usd": 0.000752,
-      "segundos": 4.8
+      "redaccion": [],
+      "costo_usd": 0.000879,
+      "segundos": 6.9
     },
     {
       "id": "Q11",
@@ -162,8 +171,9 @@
         "fuentes": true
       },
       "fallan": [],
-      "costo_usd": 0.000775,
-      "segundos": 3.7
+      "redaccion": [],
+      "costo_usd": 0.000802,
+      "segundos": 5.4
     },
     {
       "id": "Q12",
@@ -176,8 +186,9 @@
         "fuentes": true
       },
       "fallan": [],
-      "costo_usd": 0.000735,
-      "segundos": 4.7
+      "redaccion": [],
+      "costo_usd": 0.000806,
+      "segundos": 6.9
     },
     {
       "id": "Q13",
@@ -191,8 +202,9 @@
         "menciona principio activo": true
       },
       "fallan": [],
-      "costo_usd": 0.00095,
-      "segundos": 6.5
+      "redaccion": [],
+      "costo_usd": 0.000757,
+      "segundos": 5.1
     },
     {
       "id": "Q14",
@@ -205,8 +217,9 @@
         "fuentes": true
       },
       "fallan": [],
-      "costo_usd": 0.000913,
-      "segundos": 4.9
+      "redaccion": [],
+      "costo_usd": 0.000844,
+      "segundos": 5.1
     },
     {
       "id": "Q15",
@@ -219,8 +232,9 @@
         "fuentes": true
       },
       "fallan": [],
-      "costo_usd": 0.000923,
-      "segundos": 5.5
+      "redaccion": [],
+      "costo_usd": 0.000879,
+      "segundos": 5.3
     },
     {
       "id": "Q16",
@@ -235,8 +249,9 @@
         "menciona SKU101785": true
       },
       "fallan": [],
-      "costo_usd": 0.003026,
-      "segundos": 15.3
+      "redaccion": [],
+      "costo_usd": 0.002561,
+      "segundos": 12.9
     },
     {
       "id": "Q17",
@@ -249,8 +264,9 @@
         "fuentes": true
       },
       "fallan": [],
-      "costo_usd": 0.000744,
-      "segundos": 4.7
+      "redaccion": [],
+      "costo_usd": 0.000773,
+      "segundos": 5.0
     },
     {
       "id": "Q18",
@@ -263,8 +279,9 @@
         "fuentes": true
       },
       "fallan": [],
-      "costo_usd": 0.000428,
-      "segundos": 2.8
+      "redaccion": [],
+      "costo_usd": 0.000416,
+      "segundos": 3.2
     },
     {
       "id": "Q19",
@@ -278,8 +295,9 @@
         "menciona precio": true
       },
       "fallan": [],
-      "costo_usd": 0.000986,
-      "segundos": 7.0
+      "redaccion": [],
+      "costo_usd": 0.001011,
+      "segundos": 7.9
     },
     {
       "id": "Q20",
@@ -292,8 +310,9 @@
         "fuentes": true
       },
       "fallan": [],
-      "costo_usd": 0.000779,
-      "segundos": 5.1
+      "redaccion": [],
+      "costo_usd": 0.000952,
+      "segundos": 6.7
     },
     {
       "id": "Q21",
@@ -307,8 +326,9 @@
         "menciona SKU102632": true
       },
       "fallan": [],
-      "costo_usd": 0.001192,
-      "segundos": 8.5
+      "redaccion": [],
+      "costo_usd": 0.001075,
+      "segundos": 7.7
     },
     {
       "id": "Q22",
@@ -319,8 +339,9 @@
         "no_inventa_valor": true
       },
       "fallan": [],
-      "costo_usd": 0.000316,
-      "segundos": 3.0
+      "redaccion": [],
+      "costo_usd": 0.00033,
+      "segundos": 2.5
     },
     {
       "id": "Q23",
@@ -331,8 +352,9 @@
         "no_inventa_valor": true
       },
       "fallan": [],
-      "costo_usd": 0.000771,
-      "segundos": 4.6
+      "redaccion": [],
+      "costo_usd": 0.000724,
+      "segundos": 3.9
     },
     {
       "id": "V01.1",
@@ -345,8 +367,9 @@
         "fuentes": true
       },
       "fallan": [],
-      "costo_usd": 0.002082,
-      "segundos": 10.3
+      "redaccion": [],
+      "costo_usd": 0.001851,
+      "segundos": 8.5
     },
     {
       "id": "V01.2",
@@ -359,8 +382,9 @@
         "fuentes": true
       },
       "fallan": [],
-      "costo_usd": 0.001054,
-      "segundos": 3.6
+      "redaccion": [],
+      "costo_usd": 0.000932,
+      "segundos": 3.9
     },
     {
       "id": "V01.3",
@@ -373,8 +397,9 @@
         "fuentes": true
       },
       "fallan": [],
-      "costo_usd": 0.000874,
-      "segundos": 4.1
+      "redaccion": [],
+      "costo_usd": 0.000779,
+      "segundos": 3.3
     },
     {
       "id": "V02.1",
@@ -387,8 +412,9 @@
         "fuentes": true
       },
       "fallan": [],
-      "costo_usd": 0.001268,
-      "segundos": 8.3
+      "redaccion": [],
+      "costo_usd": 0.00251,
+      "segundos": 12.6
     },
     {
       "id": "V02.2",
@@ -401,8 +427,9 @@
         "fuentes": true
       },
       "fallan": [],
-      "costo_usd": 0.001521,
-      "segundos": 6.7
+      "redaccion": [],
+      "costo_usd": 0.000826,
+      "segundos": 4.3
     },
     {
       "id": "V02.3",
@@ -417,8 +444,9 @@
         "menciona 30": true
       },
       "fallan": [],
+      "redaccion": [],
       "costo_usd": 0.000757,
-      "segundos": 3.8
+      "segundos": 3.9
     }
   ]
 }
