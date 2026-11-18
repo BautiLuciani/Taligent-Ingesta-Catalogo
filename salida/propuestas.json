@@ -20918,7 +20918,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "LECHE INFANTIL",
-      "explicacion": "La leche infantil va en Bebés > Alimentación > Leches infantiles."
+      "explicacion": "Leche de etapa 1 para bebés: va en Leches infantiles."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -21016,7 +21016,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "PAÑALES",
-      "explicacion": "Los pañales infantiles van en Bebés > Pañales > Pañales infantiles."
+      "explicacion": "Pañal infantil: va en Pañales infantiles."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -21114,7 +21114,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "PAÑALES",
-      "explicacion": "Los pañales infantiles van en Bebés > Pañales > Pañales infantiles."
+      "explicacion": "Pañal infantil: va en Pañales infantiles."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -21212,7 +21212,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "LECHE INFANTIL",
-      "explicacion": "La leche infantil va en Bebés > Alimentación > Leches infantiles."
+      "explicacion": "Leche de etapa 2 para bebés: va en Leches infantiles."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -21310,7 +21310,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "TOALLITAS HUMEDAS",
-      "explicacion": "Todas las toallitas húmedas van en Bebés > Pañales > Toallitas húmedas."
+      "explicacion": "Toallitas húmedas: van en Pañales y toallitas húmedas, aunque no digan bebé."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -21408,7 +21408,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "PAÑALES",
-      "explicacion": "Los pañales infantiles van en Bebés > Pañales > Pañales infantiles."
+      "explicacion": "Pañal infantil: va en Pañales infantiles."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -21506,7 +21506,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "PAÑALES",
-      "explicacion": "Los pañales infantiles van en Bebés > Pañales > Pañales infantiles."
+      "explicacion": "Pañal infantil: va en Pañales infantiles."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -21604,106 +21604,10 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "PAÑALES",
-      "explicacion": "Los pañales infantiles van en Bebés > Pañales > Pañales infantiles."
+      "explicacion": "Pañal infantil: va en Pañales infantiles."
     },
     "motivos_revision": [],
     "duplicado_de": null
-  },
-  "P06:BF-593": {
-    "item_id": "P06:BF-593",
-    "estado": "a_revision",
-    "ficha": {
-      "gtin": null,
-      "descripcion": "TOALLITAS HUMEDAS PEQUEÑOS PASOS SIN PERFUME X 80 UN",
-      "marca": "PEQUEÑOS PASOS",
-      "tipo": "TOALLITAS HUMEDAS",
-      "variante": "SIN PERFUME",
-      "contenido": 80,
-      "unidad": "UN",
-      "unidades_por_envase": 1,
-      "principio_activo": null,
-      "concentracion": null,
-      "condicion_venta": null,
-      "categoria": "BEB-PAN-TOA",
-      "precio_costo": 95.67,
-      "moneda": "UYU",
-      "proveedor_id": "P06",
-      "codigo_proveedor": "BF-593",
-      "peligro_deposito": null,
-      "numero_onu": null
-    },
-    "fuentes": {
-      "descripcion": {
-        "archivo": "BebeFeliz_altas.xlsx",
-        "hoja": "Altas",
-        "fila": 11
-      },
-      "marca": {
-        "archivo": "BebeFeliz_altas.xlsx",
-        "hoja": "Altas",
-        "fila": 11
-      },
-      "tipo": {
-        "archivo": "BebeFeliz_altas.xlsx",
-        "hoja": "Altas",
-        "fila": 11
-      },
-      "variante": {
-        "archivo": "BebeFeliz_altas.xlsx",
-        "hoja": "Altas",
-        "fila": 11
-      },
-      "contenido": {
-        "archivo": "BebeFeliz_altas.xlsx",
-        "hoja": "Altas",
-        "fila": 11
-      },
-      "unidad": {
-        "archivo": "BebeFeliz_altas.xlsx",
-        "hoja": "Altas",
-        "fila": 11
-      },
-      "unidades_por_envase": {
-        "archivo": "BebeFeliz_altas.xlsx",
-        "hoja": "Altas",
-        "fila": 11
-      },
-      "categoria": {
-        "archivo": "BebeFeliz_altas.xlsx",
-        "hoja": "Altas",
-        "fila": 11
-      },
-      "precio_costo": {
-        "archivo": "BebeFeliz_altas.xlsx",
-        "hoja": "Altas",
-        "fila": 11
-      },
-      "moneda": {
-        "archivo": "BebeFeliz_altas.xlsx",
-        "hoja": "Altas",
-        "fila": 11
-      },
-      "proveedor_id": {
-        "archivo": "BebeFeliz_altas.xlsx",
-        "hoja": "Altas",
-        "fila": 11
-      },
-      "codigo_proveedor": {
-        "archivo": "BebeFeliz_altas.xlsx",
-        "hoja": "Altas",
-        "fila": 11
-      }
-    },
-    "categoria_decidida_por": {
-      "campo": "tipo",
-      "valor": "TOALLITAS HUMEDAS",
-      "explicacion": "Todas las toallitas húmedas van en Bebés > Pañales > Toallitas húmedas."
-    },
-    "motivos_revision": [
-      "gtin_faltante",
-      "posible_duplicado"
-    ],
-    "duplicado_de": "SKU102653"
   },
   "P06:BF-527": {
     "item_id": "P06:BF-527",
@@ -21798,10 +21702,106 @@
     "categoria_decidida_por": {
       "campo": "variante",
       "valor": "DE CAMBIO OXIDO DE ZINC",
-      "explicacion": "Crema de cambio para la zona del pañal: va en Bebés > Higiene del bebé > Cremas de cambio."
+      "explicacion": "Crema para el cambio de pañal (zona del pañal, óxido de zinc): va en Cremas de cambio."
     },
     "motivos_revision": [],
     "duplicado_de": null
+  },
+  "P06:BF-593": {
+    "item_id": "P06:BF-593",
+    "estado": "a_revision",
+    "ficha": {
+      "gtin": null,
+      "descripcion": "TOALLITAS HUMEDAS PEQUEÑOS PASOS SIN PERFUME X 80 UN",
+      "marca": "PEQUEÑOS PASOS",
+      "tipo": "TOALLITAS HUMEDAS",
+      "variante": "SIN PERFUME",
+      "contenido": 80,
+      "unidad": "UN",
+      "unidades_por_envase": 1,
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "BEB-PAN-TOA",
+      "precio_costo": 95.67,
+      "moneda": "UYU",
+      "proveedor_id": "P06",
+      "codigo_proveedor": "BF-593",
+      "peligro_deposito": null,
+      "numero_onu": null
+    },
+    "fuentes": {
+      "descripcion": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 11
+      },
+      "marca": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 11
+      },
+      "tipo": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 11
+      },
+      "variante": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 11
+      },
+      "contenido": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 11
+      },
+      "unidad": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 11
+      },
+      "unidades_por_envase": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 11
+      },
+      "categoria": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 11
+      },
+      "precio_costo": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 11
+      },
+      "moneda": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 11
+      },
+      "proveedor_id": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 11
+      },
+      "codigo_proveedor": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 11
+      }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "TOALLITAS HUMEDAS",
+      "explicacion": "Toallitas húmedas: van en Pañales y toallitas húmedas, aunque no digan bebé."
+    },
+    "motivos_revision": [
+      "gtin_faltante",
+      "posible_duplicado"
+    ],
+    "duplicado_de": "SKU102653"
   },
   "P06:BF-530": {
     "item_id": "P06:BF-530",
@@ -21896,7 +21896,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "TOALLITAS HUMEDAS",
-      "explicacion": "Las toallitas húmedas van en Bebés > Pañales > Toallitas húmedas, aunque no digan bebé."
+      "explicacion": "Las toallitas húmedas van en Bebés > Pañales > Toallitas húmedas."
     },
     "motivos_revision": [],
     "duplicado_de": "SKU103304"
@@ -22190,7 +22190,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "TOALLITAS HUMEDAS",
-      "explicacion": "Las toallitas húmedas van en Bebés > Pañales > Toallitas húmedas, aunque no digan bebé."
+      "explicacion": "Las toallitas húmedas van en Bebés > Pañales > Toallitas húmedas."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -22288,7 +22288,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "TOALLITAS HUMEDAS",
-      "explicacion": "Las toallitas húmedas van en Bebés > Pañales > Toallitas húmedas, aunque no digan bebé."
+      "explicacion": "Las toallitas húmedas van en Bebés > Pañales > Toallitas húmedas."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -22876,7 +22876,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "CREMA",
-      "explicacion": "Crema de cambio para la zona del pañal: corresponde a BEB-HIG-CRE (Cremas de cambio)."
+      "explicacion": "Es una crema de cambio (zona del pañal), va en Bebés > Higiene del bebé > Cremas de cambio."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -22974,7 +22974,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "PAÑALES",
-      "explicacion": "Pañal infantil: corresponde a BEB-PAN-INF (Pañales infantiles)."
+      "explicacion": "Pañal infantil, va en Bebés > Pañales > Pañales infantiles."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -23072,7 +23072,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "TOALLITAS HUMEDAS",
-      "explicacion": "Toallitas húmedas, aunque no digan bebé: corresponde a BEB-PAN-TOA."
+      "explicacion": "Toallitas húmedas, van en Bebés > Pañales > Toallitas húmedas."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -23170,7 +23170,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "TOALLITAS HUMEDAS",
-      "explicacion": "Toallitas húmedas, aunque no digan bebé: corresponde a BEB-PAN-TOA."
+      "explicacion": "Toallitas húmedas, van en Bebés > Pañales > Toallitas húmedas."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -23268,301 +23268,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "TOALLITAS HUMEDAS",
-      "explicacion": "Toallitas húmedas, aunque no digan bebé: corresponde a BEB-PAN-TOA."
-    },
-    "motivos_revision": [],
-    "duplicado_de": null
-  },
-  "P06:BF-578": {
-    "item_id": "P06:BF-578",
-    "estado": "lista_para_alta",
-    "ficha": {
-      "gtin": "7795033505631",
-      "descripcion": "PAÑALES PEQUEÑOS PASOS XG X 30 UN",
-      "marca": "PEQUEÑOS PASOS",
-      "tipo": "PAÑALES",
-      "variante": "XG",
-      "contenido": 30,
-      "unidad": "UN",
-      "unidades_por_envase": 1,
-      "principio_activo": null,
-      "concentracion": null,
-      "condicion_venta": null,
-      "categoria": "BEB-PAN-INF",
-      "precio_costo": 387.78,
-      "moneda": "UYU",
-      "proveedor_id": "P06",
-      "codigo_proveedor": "BF-578",
-      "peligro_deposito": null,
-      "numero_onu": null
-    },
-    "fuentes": {
-      "gtin": {
-        "archivo": "BebeFeliz_altas.xlsx",
-        "hoja": "Altas",
-        "fila": 30
-      },
-      "descripcion": {
-        "archivo": "BebeFeliz_altas.xlsx",
-        "hoja": "Altas",
-        "fila": 30
-      },
-      "marca": {
-        "archivo": "BebeFeliz_altas.xlsx",
-        "hoja": "Altas",
-        "fila": 30
-      },
-      "tipo": {
-        "archivo": "BebeFeliz_altas.xlsx",
-        "hoja": "Altas",
-        "fila": 30
-      },
-      "variante": {
-        "archivo": "BebeFeliz_altas.xlsx",
-        "hoja": "Altas",
-        "fila": 30
-      },
-      "contenido": {
-        "archivo": "BebeFeliz_altas.xlsx",
-        "hoja": "Altas",
-        "fila": 30
-      },
-      "unidad": {
-        "archivo": "BebeFeliz_altas.xlsx",
-        "hoja": "Altas",
-        "fila": 30
-      },
-      "unidades_por_envase": {
-        "archivo": "BebeFeliz_altas.xlsx",
-        "hoja": "Altas",
-        "fila": 30
-      },
-      "categoria": {
-        "archivo": "BebeFeliz_altas.xlsx",
-        "hoja": "Altas",
-        "fila": 30
-      },
-      "precio_costo": {
-        "archivo": "BebeFeliz_altas.xlsx",
-        "hoja": "Altas",
-        "fila": 30
-      },
-      "moneda": {
-        "archivo": "BebeFeliz_altas.xlsx",
-        "hoja": "Altas",
-        "fila": 30
-      },
-      "proveedor_id": {
-        "archivo": "BebeFeliz_altas.xlsx",
-        "hoja": "Altas",
-        "fila": 30
-      },
-      "codigo_proveedor": {
-        "archivo": "BebeFeliz_altas.xlsx",
-        "hoja": "Altas",
-        "fila": 30
-      }
-    },
-    "categoria_decidida_por": {
-      "campo": "tipo",
-      "valor": "PAÑALES",
-      "explicacion": "Pañal infantil: corresponde a BEB-PAN-INF (Pañales infantiles)."
-    },
-    "motivos_revision": [],
-    "duplicado_de": null
-  },
-  "P06:BF-581": {
-    "item_id": "P06:BF-581",
-    "estado": "lista_para_alta",
-    "ficha": {
-      "gtin": "7795958112549",
-      "descripcion": "LECHE INFANTIL CRECER ETAPA 3 X 800 G",
-      "marca": "CRECER",
-      "tipo": "LECHE INFANTIL",
-      "variante": "ETAPA 3",
-      "contenido": 800,
-      "unidad": "G",
-      "unidades_por_envase": 1,
-      "principio_activo": null,
-      "concentracion": null,
-      "condicion_venta": null,
-      "categoria": "BEB-ALI-LEC",
-      "precio_costo": 1230.97,
-      "moneda": "UYU",
-      "proveedor_id": "P06",
-      "codigo_proveedor": "BF-581",
-      "peligro_deposito": null,
-      "numero_onu": null
-    },
-    "fuentes": {
-      "gtin": {
-        "archivo": "BebeFeliz_altas.xlsx",
-        "hoja": "Altas",
-        "fila": 31
-      },
-      "descripcion": {
-        "archivo": "BebeFeliz_altas.xlsx",
-        "hoja": "Altas",
-        "fila": 31
-      },
-      "marca": {
-        "archivo": "BebeFeliz_altas.xlsx",
-        "hoja": "Altas",
-        "fila": 31
-      },
-      "tipo": {
-        "archivo": "BebeFeliz_altas.xlsx",
-        "hoja": "Altas",
-        "fila": 31
-      },
-      "variante": {
-        "archivo": "BebeFeliz_altas.xlsx",
-        "hoja": "Altas",
-        "fila": 31
-      },
-      "contenido": {
-        "archivo": "BebeFeliz_altas.xlsx",
-        "hoja": "Altas",
-        "fila": 31
-      },
-      "unidad": {
-        "archivo": "BebeFeliz_altas.xlsx",
-        "hoja": "Altas",
-        "fila": 31
-      },
-      "unidades_por_envase": {
-        "archivo": "BebeFeliz_altas.xlsx",
-        "hoja": "Altas",
-        "fila": 31
-      },
-      "categoria": {
-        "archivo": "BebeFeliz_altas.xlsx",
-        "hoja": "Altas",
-        "fila": 31
-      },
-      "precio_costo": {
-        "archivo": "BebeFeliz_altas.xlsx",
-        "hoja": "Altas",
-        "fila": 31
-      },
-      "moneda": {
-        "archivo": "BebeFeliz_altas.xlsx",
-        "hoja": "Altas",
-        "fila": 31
-      },
-      "proveedor_id": {
-        "archivo": "BebeFeliz_altas.xlsx",
-        "hoja": "Altas",
-        "fila": 31
-      },
-      "codigo_proveedor": {
-        "archivo": "BebeFeliz_altas.xlsx",
-        "hoja": "Altas",
-        "fila": 31
-      }
-    },
-    "categoria_decidida_por": {
-      "campo": "tipo",
-      "valor": "LECHE INFANTIL",
-      "explicacion": "Leche infantil de etapa 3: corresponde a BEB-ALI-LEC (Leches infantiles)."
-    },
-    "motivos_revision": [],
-    "duplicado_de": null
-  },
-  "P06:BF-584": {
-    "item_id": "P06:BF-584",
-    "estado": "lista_para_alta",
-    "ficha": {
-      "gtin": "7796875264953",
-      "descripcion": "PAÑALES PEQUEÑOS PASOS M X 60 UN",
-      "marca": "PEQUEÑOS PASOS",
-      "tipo": "PAÑALES",
-      "variante": "M",
-      "contenido": 60,
-      "unidad": "UN",
-      "unidades_por_envase": 1,
-      "principio_activo": null,
-      "concentracion": null,
-      "condicion_venta": null,
-      "categoria": "BEB-PAN-INF",
-      "precio_costo": 584.01,
-      "moneda": "UYU",
-      "proveedor_id": "P06",
-      "codigo_proveedor": "BF-584",
-      "peligro_deposito": null,
-      "numero_onu": null
-    },
-    "fuentes": {
-      "gtin": {
-        "archivo": "BebeFeliz_altas.xlsx",
-        "hoja": "Altas",
-        "fila": 32
-      },
-      "descripcion": {
-        "archivo": "BebeFeliz_altas.xlsx",
-        "hoja": "Altas",
-        "fila": 32
-      },
-      "marca": {
-        "archivo": "BebeFeliz_altas.xlsx",
-        "hoja": "Altas",
-        "fila": 32
-      },
-      "tipo": {
-        "archivo": "BebeFeliz_altas.xlsx",
-        "hoja": "Altas",
-        "fila": 32
-      },
-      "variante": {
-        "archivo": "BebeFeliz_altas.xlsx",
-        "hoja": "Altas",
-        "fila": 32
-      },
-      "contenido": {
-        "archivo": "BebeFeliz_altas.xlsx",
-        "hoja": "Altas",
-        "fila": 32
-      },
-      "unidad": {
-        "archivo": "BebeFeliz_altas.xlsx",
-        "hoja": "Altas",
-        "fila": 32
-      },
-      "unidades_por_envase": {
-        "archivo": "BebeFeliz_altas.xlsx",
-        "hoja": "Altas",
-        "fila": 32
-      },
-      "categoria": {
-        "archivo": "BebeFeliz_altas.xlsx",
-        "hoja": "Altas",
-        "fila": 32
-      },
-      "precio_costo": {
-        "archivo": "BebeFeliz_altas.xlsx",
-        "hoja": "Altas",
-        "fila": 32
-      },
-      "moneda": {
-        "archivo": "BebeFeliz_altas.xlsx",
-        "hoja": "Altas",
-        "fila": 32
-      },
-      "proveedor_id": {
-        "archivo": "BebeFeliz_altas.xlsx",
-        "hoja": "Altas",
-        "fila": 32
-      },
-      "codigo_proveedor": {
-        "archivo": "BebeFeliz_altas.xlsx",
-        "hoja": "Altas",
-        "fila": 32
-      }
-    },
-    "categoria_decidida_por": {
-      "campo": "tipo",
-      "valor": "PAÑALES",
-      "explicacion": "Pañal infantil: corresponde a BEB-PAN-INF (Pañales infantiles)."
+      "explicacion": "Toallitas húmedas, van en Bebés > Pañales > Toallitas húmedas."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -23655,7 +23361,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "TOALLITAS HUMEDAS",
-      "explicacion": "Toallitas húmedas, aunque no digan bebé: corresponde a BEB-PAN-TOA."
+      "explicacion": "Toallitas húmedas, van en Bebés > Pañales > Toallitas húmedas."
     },
     "motivos_revision": [
       "gtin_faltante",
@@ -23756,10 +23462,304 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "LECHE INFANTIL",
-      "explicacion": "Leche infantil de etapa 1: corresponde a BEB-ALI-LEC (Leches infantiles)."
+      "explicacion": "Leche de etapa para bebés, va en Bebés > Alimentación > Leches infantiles."
     },
     "motivos_revision": [],
     "duplicado_de": "SKU103794"
+  },
+  "P06:BF-578": {
+    "item_id": "P06:BF-578",
+    "estado": "lista_para_alta",
+    "ficha": {
+      "gtin": "7795033505631",
+      "descripcion": "PAÑALES PEQUEÑOS PASOS XG X 30 UN",
+      "marca": "PEQUEÑOS PASOS",
+      "tipo": "PAÑALES",
+      "variante": "XG",
+      "contenido": 30,
+      "unidad": "UN",
+      "unidades_por_envase": 1,
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "BEB-PAN-INF",
+      "precio_costo": 387.78,
+      "moneda": "UYU",
+      "proveedor_id": "P06",
+      "codigo_proveedor": "BF-578",
+      "peligro_deposito": null,
+      "numero_onu": null
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 30
+      },
+      "descripcion": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 30
+      },
+      "marca": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 30
+      },
+      "tipo": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 30
+      },
+      "variante": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 30
+      },
+      "contenido": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 30
+      },
+      "unidad": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 30
+      },
+      "unidades_por_envase": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 30
+      },
+      "categoria": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 30
+      },
+      "precio_costo": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 30
+      },
+      "moneda": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 30
+      },
+      "proveedor_id": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 30
+      },
+      "codigo_proveedor": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 30
+      }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "PAÑALES",
+      "explicacion": "Pañal infantil, va en Bebés > Pañales > Pañales infantiles."
+    },
+    "motivos_revision": [],
+    "duplicado_de": null
+  },
+  "P06:BF-581": {
+    "item_id": "P06:BF-581",
+    "estado": "lista_para_alta",
+    "ficha": {
+      "gtin": "7795958112549",
+      "descripcion": "LECHE INFANTIL CRECER ETAPA 3 X 800 G",
+      "marca": "CRECER",
+      "tipo": "LECHE INFANTIL",
+      "variante": "ETAPA 3",
+      "contenido": 800,
+      "unidad": "G",
+      "unidades_por_envase": 1,
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "BEB-ALI-LEC",
+      "precio_costo": 1230.97,
+      "moneda": "UYU",
+      "proveedor_id": "P06",
+      "codigo_proveedor": "BF-581",
+      "peligro_deposito": null,
+      "numero_onu": null
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 31
+      },
+      "descripcion": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 31
+      },
+      "marca": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 31
+      },
+      "tipo": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 31
+      },
+      "variante": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 31
+      },
+      "contenido": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 31
+      },
+      "unidad": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 31
+      },
+      "unidades_por_envase": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 31
+      },
+      "categoria": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 31
+      },
+      "precio_costo": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 31
+      },
+      "moneda": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 31
+      },
+      "proveedor_id": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 31
+      },
+      "codigo_proveedor": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 31
+      }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "LECHE INFANTIL",
+      "explicacion": "Leche de etapa para bebés, va en Bebés > Alimentación > Leches infantiles."
+    },
+    "motivos_revision": [],
+    "duplicado_de": null
+  },
+  "P06:BF-584": {
+    "item_id": "P06:BF-584",
+    "estado": "lista_para_alta",
+    "ficha": {
+      "gtin": "7796875264953",
+      "descripcion": "PAÑALES PEQUEÑOS PASOS M X 60 UN",
+      "marca": "PEQUEÑOS PASOS",
+      "tipo": "PAÑALES",
+      "variante": "M",
+      "contenido": 60,
+      "unidad": "UN",
+      "unidades_por_envase": 1,
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "BEB-PAN-INF",
+      "precio_costo": 584.01,
+      "moneda": "UYU",
+      "proveedor_id": "P06",
+      "codigo_proveedor": "BF-584",
+      "peligro_deposito": null,
+      "numero_onu": null
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 32
+      },
+      "descripcion": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 32
+      },
+      "marca": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 32
+      },
+      "tipo": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 32
+      },
+      "variante": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 32
+      },
+      "contenido": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 32
+      },
+      "unidad": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 32
+      },
+      "unidades_por_envase": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 32
+      },
+      "categoria": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 32
+      },
+      "precio_costo": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 32
+      },
+      "moneda": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 32
+      },
+      "proveedor_id": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 32
+      },
+      "codigo_proveedor": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 32
+      }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "PAÑALES",
+      "explicacion": "Pañal infantil, va en Bebés > Pañales > Pañales infantiles."
+    },
+    "motivos_revision": [],
+    "duplicado_de": null
   },
   "P06:BF-587": {
     "item_id": "P06:BF-587",
@@ -23952,7 +23952,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "PAÑALES",
-      "explicacion": "Los pañales van en Bebés > Pañales > Pañales infantiles."
+      "explicacion": "El pañal infantil va en Bebés > Pañales > Pañales infantiles."
     },
     "motivos_revision": [],
     "duplicado_de": null

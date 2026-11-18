@@ -20920,7 +20920,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "LECHE INFANTIL",
-      "explicacion": "La leche infantil va en Bebés > Alimentación > Leches infantiles."
+      "explicacion": "Leche de etapa 1 para bebés: va en Leches infantiles."
     }
   },
   "P06:BF-506": {
@@ -21018,7 +21018,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "PAÑALES",
-      "explicacion": "Los pañales infantiles van en Bebés > Pañales > Pañales infantiles."
+      "explicacion": "Pañal infantil: va en Pañales infantiles."
     }
   },
   "P06:BF-509": {
@@ -21116,7 +21116,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "PAÑALES",
-      "explicacion": "Los pañales infantiles van en Bebés > Pañales > Pañales infantiles."
+      "explicacion": "Pañal infantil: va en Pañales infantiles."
     }
   },
   "P06:BF-512": {
@@ -21214,7 +21214,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "LECHE INFANTIL",
-      "explicacion": "La leche infantil va en Bebés > Alimentación > Leches infantiles."
+      "explicacion": "Leche de etapa 2 para bebés: va en Leches infantiles."
     }
   },
   "P06:BF-515": {
@@ -21312,7 +21312,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "TOALLITAS HUMEDAS",
-      "explicacion": "Todas las toallitas húmedas van en Bebés > Pañales > Toallitas húmedas."
+      "explicacion": "Toallitas húmedas: van en Pañales y toallitas húmedas, aunque no digan bebé."
     }
   },
   "P06:BF-518": {
@@ -21410,7 +21410,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "PAÑALES",
-      "explicacion": "Los pañales infantiles van en Bebés > Pañales > Pañales infantiles."
+      "explicacion": "Pañal infantil: va en Pañales infantiles."
     }
   },
   "P06:BF-521": {
@@ -21508,7 +21508,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "PAÑALES",
-      "explicacion": "Los pañales infantiles van en Bebés > Pañales > Pañales infantiles."
+      "explicacion": "Pañal infantil: va en Pañales infantiles."
     }
   },
   "P06:BF-524": {
@@ -21606,7 +21606,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "PAÑALES",
-      "explicacion": "Los pañales infantiles van en Bebés > Pañales > Pañales infantiles."
+      "explicacion": "Pañal infantil: va en Pañales infantiles."
     }
   },
   "P06:BF-593": {
@@ -21702,7 +21702,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "TOALLITAS HUMEDAS",
-      "explicacion": "Todas las toallitas húmedas van en Bebés > Pañales > Toallitas húmedas."
+      "explicacion": "Toallitas húmedas: van en Pañales y toallitas húmedas, aunque no digan bebé."
     }
   },
   "P06:BF-527": {
@@ -21800,7 +21800,7 @@
     "categoria_decidida_por": {
       "campo": "variante",
       "valor": "DE CAMBIO OXIDO DE ZINC",
-      "explicacion": "Crema de cambio para la zona del pañal: va en Bebés > Higiene del bebé > Cremas de cambio."
+      "explicacion": "Crema para el cambio de pañal (zona del pañal, óxido de zinc): va en Cremas de cambio."
     }
   },
   "P06:BF-530": {
@@ -21898,7 +21898,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "TOALLITAS HUMEDAS",
-      "explicacion": "Las toallitas húmedas van en Bebés > Pañales > Toallitas húmedas, aunque no digan bebé."
+      "explicacion": "Las toallitas húmedas van en Bebés > Pañales > Toallitas húmedas."
     }
   },
   "P06:BF-533": {
@@ -22192,7 +22192,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "TOALLITAS HUMEDAS",
-      "explicacion": "Las toallitas húmedas van en Bebés > Pañales > Toallitas húmedas, aunque no digan bebé."
+      "explicacion": "Las toallitas húmedas van en Bebés > Pañales > Toallitas húmedas."
     }
   },
   "P06:BF-542": {
@@ -22290,7 +22290,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "TOALLITAS HUMEDAS",
-      "explicacion": "Las toallitas húmedas van en Bebés > Pañales > Toallitas húmedas, aunque no digan bebé."
+      "explicacion": "Las toallitas húmedas van en Bebés > Pañales > Toallitas húmedas."
     }
   },
   "P06:BF-545": {
@@ -22878,7 +22878,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "CREMA",
-      "explicacion": "Crema de cambio para la zona del pañal: corresponde a BEB-HIG-CRE (Cremas de cambio)."
+      "explicacion": "Es una crema de cambio (zona del pañal), va en Bebés > Higiene del bebé > Cremas de cambio."
     }
   },
   "P06:BF-563": {
@@ -22976,7 +22976,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "PAÑALES",
-      "explicacion": "Pañal infantil: corresponde a BEB-PAN-INF (Pañales infantiles)."
+      "explicacion": "Pañal infantil, va en Bebés > Pañales > Pañales infantiles."
     }
   },
   "P06:BF-566": {
@@ -23074,7 +23074,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "TOALLITAS HUMEDAS",
-      "explicacion": "Toallitas húmedas, aunque no digan bebé: corresponde a BEB-PAN-TOA."
+      "explicacion": "Toallitas húmedas, van en Bebés > Pañales > Toallitas húmedas."
     }
   },
   "P06:BF-569": {
@@ -23172,7 +23172,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "TOALLITAS HUMEDAS",
-      "explicacion": "Toallitas húmedas, aunque no digan bebé: corresponde a BEB-PAN-TOA."
+      "explicacion": "Toallitas húmedas, van en Bebés > Pañales > Toallitas húmedas."
     }
   },
   "P06:BF-572": {
@@ -23270,7 +23270,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "TOALLITAS HUMEDAS",
-      "explicacion": "Toallitas húmedas, aunque no digan bebé: corresponde a BEB-PAN-TOA."
+      "explicacion": "Toallitas húmedas, van en Bebés > Pañales > Toallitas húmedas."
     }
   },
   "P06:BF-596": {
@@ -23366,7 +23366,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "TOALLITAS HUMEDAS",
-      "explicacion": "Toallitas húmedas, aunque no digan bebé: corresponde a BEB-PAN-TOA."
+      "explicacion": "Toallitas húmedas, van en Bebés > Pañales > Toallitas húmedas."
     }
   },
   "P06:BF-575": {
@@ -23464,7 +23464,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "LECHE INFANTIL",
-      "explicacion": "Leche infantil de etapa 1: corresponde a BEB-ALI-LEC (Leches infantiles)."
+      "explicacion": "Leche de etapa para bebés, va en Bebés > Alimentación > Leches infantiles."
     }
   },
   "P06:BF-578": {
@@ -23562,7 +23562,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "PAÑALES",
-      "explicacion": "Pañal infantil: corresponde a BEB-PAN-INF (Pañales infantiles)."
+      "explicacion": "Pañal infantil, va en Bebés > Pañales > Pañales infantiles."
     }
   },
   "P06:BF-581": {
@@ -23660,7 +23660,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "LECHE INFANTIL",
-      "explicacion": "Leche infantil de etapa 3: corresponde a BEB-ALI-LEC (Leches infantiles)."
+      "explicacion": "Leche de etapa para bebés, va en Bebés > Alimentación > Leches infantiles."
     }
   },
   "P06:BF-584": {
@@ -23758,7 +23758,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "PAÑALES",
-      "explicacion": "Pañal infantil: corresponde a BEB-PAN-INF (Pañales infantiles)."
+      "explicacion": "Pañal infantil, va en Bebés > Pañales > Pañales infantiles."
     }
   },
   "P06:BF-587": {
@@ -23954,7 +23954,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "PAÑALES",
-      "explicacion": "Los pañales van en Bebés > Pañales > Pañales infantiles."
+      "explicacion": "El pañal infantil va en Bebés > Pañales > Pañales infantiles."
     }
   }
 }
