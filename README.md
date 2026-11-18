@@ -22,31 +22,36 @@ Cada dato de la ficha dice **de dónde salió**: archivo y línea en un CSV o un
 
 ---
 
-## ✅ Estado: semana 4 (módulo 5)
+## ✅ Estado: semana 5 (módulo 6)
 
-**8 proveedores, 225 fichas.** Los 3 nuevos de esta semana (Rivera, Higiene Total y Norte) **entraron solos**: se deja el Excel en `entrada/` y sale todo, **sin tocar código ni configuración**.
+**9 proveedores, 257 fichas, evaluador 116/116 en ficha y en fuente.** La ficha sale **estructurada** (la API garantiza su forma y los valores del vocabulario), el estándar va **cacheado**, las corridas completas van por la **Batch API**, y se abrió el proveedor apartado, **Bebé Feliz**, una sola vez y con el sistema tal cual.
 
-| Proveedor | Formato | Fichas | Evaluador (ficha / fuente) | Costo | Alta · Dup. · Rev. |
+| Proveedor | Formato | Fichas | Evaluador (ficha / fuente) | Costo (batch + caché) | Alta · Dup. · Rev. |
 |---|---|---|---|---|---|
-| P03 Distribuidora Litoral | CSV | 50 | 13/13 · 13/13 | US$ 0,072 | 40 · 7 · 3 |
-| P07 Limpieza Hogar Sur | PDF (tabla) + 7 FDS | 25 | 12/12 · 12/12 | US$ 0,055 | 20 · 3 · 2 |
-| P01 Laboratorio Andes | PDF + Excel posterior | 26 | 12/12 · 12/12 | US$ 0,048 | 22 · 0 · 4 |
-| P05 Dermalab | Folleto en prosa (PDF) + lista Excel | 18 | 12/12 · **11/12** | US$ 0,034 | 14 · 0 · 4 |
-| P09 Natural Vida | Mail en texto | 14 | 14/14 · 14/14 | US$ 0,026 | 11 · 0 · 3 |
-| P02 Cosmética Rivera | **Excel nuevo** + 2 FDS | 50 | 12/12 · 12/12 | US$ 0,079 | 44 · 5 · 1 |
-| P04 Higiene Total | **Excel nuevo** (2 hojas) | 28 | 12/12 · 12/12 | US$ 0,046 | 18 · 5 · 5 |
-| P08 Importadora Norte | **Excel nuevo** (en inglés, USD) + 2 FDS | 14 | **13/14** · 14/14 | US$ 0,036 | 14 · 0 · 0 |
-| **Total** | | **225** | **100/101 · 100/101** | **US$ 0,39** | 183 · 20 · 22 |
+| P03 Distribuidora Litoral | CSV | 50 | 13/13 · 13/13 | US$ 0,036 | 40 · 7 · 3 |
+| P07 Limpieza Hogar Sur | PDF (tabla) + 7 FDS | 25 | 12/12 · 12/12 | US$ 0,024 | 20 · 3 · 2 |
+| P01 Laboratorio Andes | PDF + Excel posterior | 26 | 12/12 · 12/12 | US$ 0,023 | 22 · 0 · 4 |
+| P05 Dermalab | Folleto en prosa (PDF) + lista Excel | 18 | 12/12 · 12/12 | US$ 0,017 | 14 · 0 · 4 |
+| P09 Natural Vida | Mail en texto | 14 | 14/14 · 14/14 | US$ 0,011 | 11 · 0 · 3 |
+| P02 Cosmética Rivera | Excel + 2 FDS | 50 | 12/12 · 12/12 | US$ 0,039 | 44 · 5 · 1 |
+| P04 Higiene Total | Excel (2 hojas) | 28 | 12/12 · 12/12 | US$ 0,026 | 18 · 5 · 5 |
+| P08 Importadora Norte | Excel (en inglés, USD) + 2 FDS | 14 | 14/14 · 14/14 | US$ 0,012 | 14 · 0 · 0 |
+| **P06 Bebé Feliz** (el apartado) | **Excel con encabezado en 2 niveles** | 32 | 15/15 · 15/15 | US$ 0,026 | 26 · 4 · 2 |
+| **Total** | | **257** | **116/116 · 116/116** | **US$ 0,21** | 209 · 24 · 24 |
 
-- **Un archivo nuevo entra solo:** el **recepcionista** (Haiku con una tool forzada) propone la "receta" del Excel (qué hoja, qué columna es cada dato, moneda) y **el código la verifica con todas las filas**. Recibir los 3 Excel costó **US$ 0,0015**. La **bandeja** (`vigilar.py`) hace el resto: fichas de seguridad, fichas, escritor y pedido al proveedor.
-- **El criterio de revisión es un prompt MCP:** el servidor lo sirve y el fichador lo pide. Mismo contenido, otro lugar: **63/63 y 0 diferencias** al moverlo.
-- **Hooks en nuestro loop:** antes de cada tool (GTIN inválido, valores fuera del vocabulario), después (lo que aceptó el servidor) y al terminar (campos sin fuente, productos sin registrar). **0 falsos positivos** sobre las 133 fichas buenas. En la regresión final frenaron **10 fichas reales y Haiku corrigió las 10**.
-- **Permisos por agente en el código:** cada agente ve solo sus tools, y si pide otra, el hook la frena antes del servidor.
-- **El detector de inestables** marcó **1 de 225** (IN7006) para que la mire una persona. Los 2 casos que fallan en el evaluador se explican en *"Semana 4: corregir con reglas medidas"*.
-- **El extra: el acuse de recibo.** Por cada archivo que entra, un informe legible de lo que el sistema entendió y decidió, armado por el código (gratis y sin inventar).
-- **919 controles sin IA** en 18 archivos de pruebas, que corren también en una máquina limpia.
+- **Ficha estructurada con `strict`:** `registrar_ficha` recibe una ficha tipada (`ficha_estructurada.py`) con los 18 campos, el tipo, la unidad, la moneda y la categoría como listas cerradas leídas del vocabulario y la taxonomía. **Un valor fuera del vocabulario ya no se puede generar: lo impide la API, no el prompt.** El recepcionista y el extractor de PDF también llenan formularios con `strict`, y el catálogo viejo usa `output_config.format`.
+- **Caché:** el estándar, el vocabulario, la taxonomía y las tools se leen del caché el **78 %** del tiempo, verificado con `cache_read_input_tokens` en cada vuelta (y con un aviso si una vuelta no lo lee).
+- **Batch API:** `cliente_batch.py` es una "ventanilla" que junta la vuelta de todas las tandas en un solo batch. El agente no se entera: mismas tools, mismos hooks, **0 diferencias** con las fichas en tiempo real.
+- **Costo por ficha:** **US$ 0,00220** en tiempo real sin caché → **US$ 0,00148** con caché (−33 %) → **US$ 0,00082** en batch con caché (−63 %). El precio del ahorro es el tiempo: 11 minutos contra 33.
+- **Bebé Feliz, una sola vez y sin tocar nada: 14/15 en ficha, 15/15 en fuente.** Qué falló y por qué, capa por capa, en *"Semana 5: Bebé Feliz"*.
+- **El extra: el detector de familias + la segunda opinión.** El código encuentra productos que el archivo escribe igual y la ficha dice distinto, y el modelo con más effort da su opinión. **Pensar más no arregló la duda, pero señaló la regla del prompt que estaba mal escrita.**
+- **1095 controles sin IA** en 23 archivos de pruebas.
 
-**Proveedor apartado:** *Bebé Feliz* (P06), hasta la semana 5. Está **bloqueado por código**: el servidor no lo lee y la bandeja lo rechaza con su motivo.
+<details>
+<summary>Semana 4 (módulo 5)</summary>
+
+8 proveedores, 225 fichas, evaluador 100/101. Los 3 Excel nuevos (Rivera, Higiene Total, Norte) **entraron solos** por la bandeja: el recepcionista propone la receta y el código la verifica con todas las filas. Criterio de revisión como prompt MCP, hooks en el loop (10 frenos reales, los 10 corregidos por el modelo) y permisos por agente en el código. Extra: el acuse de recibo.
+</details>
 
 <details>
 <summary>Semana 3 (módulo 4)</summary>
@@ -69,6 +74,21 @@ Litoral (CSV) con el servidor MCP propio: 50/50 estados correctos, evaluador 13/
 ---
 
 ## 🏗️ Cómo funciona
+
+### Semana 5: estructurado, cacheado y por batch
+
+```
+el fichador (Haiku) ──▶ registrar_ficha con strict: la API garantiza la forma de la ficha (18 campos, listas cerradas)
+      │                 el servidor y los hooks validan lo que un schema no puede (dígito verificador, fuentes, FDS)
+      │
+cada vuelta: [tools + system: prompt + criterio + estándar + vocabulario + taxonomía] ◀── caché (se lee, no se paga entero)
+      │
+--batch: cliente_batch.py, la ventanilla ──▶ junta la vuelta de TODAS las tandas en un batch ──▶ espera ──▶ le da a cada
+      │  tanda SU respuesta por custom_id (vuelven desordenadas); un pedido que falla se reencola solo, con tope
+      │
+después del escritor: familias.py ──▶ salida/familias.json (lo que el archivo escribe igual, ¿la ficha lo dice igual?)
+                      segunda_opinion.py (a pedido) ──▶ salida/segunda_opinion.json (más effort solo para las dudas)
+```
 
 ### Semana 4: un archivo nuevo entra solo
 
@@ -98,7 +118,7 @@ ETAPA 1 · LECTURA (fan-out: todos los archivos a la vez)
       ▼
 CONSOLIDADO POR CÓDIGO (fan-in) ──▶ salida/consolidado/Pxx.json   (el contrato entre la etapa 1 y la 2)
       ▼
-ETAPA 2 · FICHAS (15 tandas de 10 en una sola fila, 3 fichadores a la vez)
+ETAPA 2 · FICHAS (tandas de 10 en una sola fila, 3 fichadores a la vez; con --batch, todas a la vez)
   cada fichador = su hilo + su asyncio.run + su servidor MCP en "modo propuesta" + su traza
   registrar_ficha valida igual que siempre, pero NO escribe ──▶ salida/propuestas.json
       ▼
@@ -141,6 +161,11 @@ El restaurante de las semanas anteriores, ahora con más gente:
 | `acuse.py` | **Extra de la semana 4.** El acuse de recibo de cada archivo, sin IA |
 | `criterio_de_revision.md` | **Semana 4.** Las reglas de estado y motivos (4, 5, 6 y 15), que el servidor sirve como prompt MCP |
 | `CLAUDE.md` | **Semana 4.** Comandos, convenciones y el porqué de las decisiones, para quien abra el repo (o Claude Code) |
+| `ficha_estructurada.py` | **Semana 5.** La ficha tipada que recibe `registrar_ficha` con `strict`: 18 campos, listas cerradas del vocabulario y la taxonomía, y las fuentes en casilleros fijos que el código pasa a la forma de la guía |
+| `cliente_batch.py` | **Semana 5.** La ventanilla de la Batch API: para el agente es un cliente más; por dentro junta, espera, reparte por `custom_id` y reencola lo que falla |
+| `familias.py` | **Extra de la semana 5.** Detector de familias: productos que el archivo escribe igual (salvo contenido, EAN y precio) tienen que decir lo mismo en la ficha |
+| `segunda_opinion.py` | **Extra de la semana 5.** Una pregunta enfocada por cada duda de los detectores, con effort high y max, para medir si más esfuerzo la estabiliza. No cambia fichas |
+| `costo_por_ficha.py` | **Semana 5.** El costo por ficha por proveedor en los tres escenarios (tiempo real sin y con caché, batch con caché), con lo medido |
 | `servidor_mcp.py` | El servidor MCP (FastMCP, stdio): 4 tools, 3 resources y 1 prompt. Lee CSV, PDF extraídos, mails y **cualquier Excel con su receta**; cruza los archivos de cada proveedor por código y tiene el **modo propuesta** |
 | `prompt_sistema.md` | Las instrucciones del agente (rol, tarea, reglas, señal de fin), menos el criterio de revisión |
 | `agente.py` | El agente: el loop del módulo 2 conectado al servidor. `fichar_tanda` corre una tanda sola, en su hilo y en modo propuesta |
@@ -152,8 +177,8 @@ El restaurante de las semanas anteriores, ahora con más gente:
 | `medir_secuencial.py` · `medir_paralelo.py` · `carriles.py` | **Semana 3.** La medición: la versión secuencial, 1 vs 3 fichadores y el gráfico de carriles |
 | `ver_limites_api.py` | **Semana 3.** Lee los límites de la cuenta y calcula cuántos fichadores entran a la vez |
 | `comparar_corridas.py` · `referencias.py` | **Semana 4.** Qué fichas cambiaron entre dos escrituras (gratis), y las carpetas congeladas que usan las pruebas |
-| `evaluacion/casos_*.json` | Los casos con la ficha correcta, armados desde el estándar y los archivos y verificados a mano: Litoral 13, LHS 12, Andes 12, Dermalab 12, Natural Vida 14, Rivera 12, Higiene Total 12, Norte 14 (**101**) |
-| `probar_*.py` | Pruebas sin IA (gratis), una por archivo. `probar_citas*.py`, `probar_prompt_injection.py`, `probar_detector.py`, `probar_hook_en_vivo.py` y `prueba_de_fuego_lectura.py` son experimentos con la API (cuestan centavos) |
+| `evaluacion/casos_*.json` | Los casos con la ficha correcta, armados desde el estándar y los archivos y verificados a mano: Litoral 13, LHS 12, Andes 12, Dermalab 12, Natural Vida 14, Rivera 12, Higiene Total 12, Norte 14, Bebé Feliz 15 (**116**) |
+| `probar_*.py` | Pruebas sin IA (gratis), una por archivo. `probar_citas*.py`, `probar_prompt_injection.py`, `probar_detector.py`, `probar_hook_en_vivo.py`, `prueba_de_fuego_lectura.py` y, de la semana 5, `probar_cache.py`, `probar_strict*.py`, `probar_batch.py` y `probar_recepcion_repetida.py` son experimentos con la API (cuestan centavos) |
 | `verificar_entorno.py` | Chequea Python, `.env`, datos y API antes de empezar |
 | `salida/resultados.json` | Las fichas de la última corrida (las escribe solo el escritor) |
 | `salida/propuestas.json` | La última propuesta de cada producto (lo que juntaron los fichadores) |
@@ -166,6 +191,9 @@ El restaurante de las semanas anteriores, ahora con más gente:
 | `entrada/` | **Semana 4.** La bandeja: una carpeta por proveedor, con el mismo nombre que en `Data/proveedores/` |
 | `salida/recepcion/` · `salida/bandeja.json` · `salida/acuses/` | **Semana 4.** La receta de cada Excel (con sus controles), lo que anotó la bandeja de cada archivo y los acuses de recibo |
 | `salida/hooks.json` | **Semana 4.** Los frenos de los hooks en la última corrida, con su motivo y si el modelo corrigió |
+| `salida/batches/` | **Semana 5.** El registro de cada corrida por batch: id de cada batch, tiempos y estados (los resultados quedan ~29 días en Anthropic) |
+| `salida/familias.json` · `salida/segunda_opinion.json` | **Extra de la semana 5.** Las familias que no coinciden y las segundas opiniones, con sus porqués |
+| `salida/costo_por_ficha.json` · `salida/experimentos/costos_sem5/` | **Semana 5.** El costo por ficha y las 4 mediciones congeladas de donde sale |
 | `Data/` | Proveedores, catálogo actual, estándar y consultas (solo lectura) |
 
 ### Las 4 tools, los 3 resources y el prompt del servidor
@@ -175,7 +203,7 @@ El restaurante de las semanas anteriores, ahora con más gente:
 | `leer_archivo_proveedor` | Devuelve las filas de a tandas, cada una con su fuente, el valor `original` y el `calculado` por el código: cuentas, el cruce con los otros archivos del proveedor (precio por vigencia, conflictos, fuentes aparte) y su FDS. Si la lectura de ese proveedor quedó con problemas, responde con error | No |
 | `buscar_por_gtin` | ¿Este GTIN ya está en el catálogo? Búsqueda exacta | No |
 | `buscar_parecidos` | Para productos **sin** GTIN: trae candidatos con la misma marca, contenido y unidad. El modelo decide si es el mismo producto | No |
-| `registrar_ficha` | **Antes valida** que el resultado sea coherente y, si no lo es, no lo acepta y le explica al modelo qué corregir. En **modo propuesta** (los fichadores en paralelo) valida igual pero **no escribe**: el que escribe es el escritor | **Solo fuera del modo propuesta** |
+| `registrar_ficha` | **Semana 5: con `strict`**, la ficha llega con su forma garantizada. **Antes valida** que el resultado sea coherente (y que el peligro sea el de la FDS que encontró el código) y, si no lo es, no lo acepta y le explica al modelo qué corregir. En **modo propuesta** (los fichadores en paralelo) valida igual pero **no escribe**: el que escribe es el escritor | **Solo fuera del modo propuesta** |
 
 | Resource | Archivo |
 |---|---|
@@ -206,24 +234,25 @@ pip install -r requirements.txt
 # 3. Verificar que todo esté listo
 python verificar_entorno.py
 
-# 4. Pruebas sin IA (gratis): las 18 tienen que dar "todo OK"
+# 4. Pruebas sin IA (gratis): las 23 tienen que dar "todo OK"
 $env:PYTHONUTF8=1   # sin esto, Windows no puede imprimir algunos caracteres por un caño
-"agente","catalogo_viejo","cuentas","escritor","extractor","extractor_fds","extractor_folleto","lector_excel","orquestador","pedido_proveedor","servidor","recepcion","servidor_excel","criterio","hooks","permisos","vigilar","acuse" | ForEach-Object { Write-Host "== probar_$_.py" -ForegroundColor Cyan; python "probar_$_.py" 2>&1 | Select-Object -Last 1 }
+"agente","catalogo_viejo","cuentas","escritor","extractor","extractor_fds","extractor_folleto","lector_excel","orquestador","pedido_proveedor","servidor","recepcion","servidor_excel","criterio","hooks","permisos","vigilar","acuse","ficha_estructurada","cliente_batch","familias","segunda_opinion","costo_por_ficha" | ForEach-Object { Write-Host "== probar_$_.py" -ForegroundColor Cyan; python "probar_$_.py" 2>&1 | Select-Object -Last 1 }
 
 # 5. Un archivo nuevo entra solo (semana 4): copiarlo a entrada/<carpeta del proveedor>/ y
 python vigilar.py --una-vez                         # procesa lo nuevo y termina (sin --una-vez, queda mirando)
 python acuse.py "entrada/P08_Importadora_Norte/NorteImports_new_items_Q4.xlsx"   # regenera un acuse (gratis)
 
-# 6. Todo el sistema: lectura, fichas con 3 fichadores y escritura (~US$ 0,40, ~8 minutos)
+# 6. Todo el sistema: lectura, fichas con 3 fichadores y escritura (~US$ 0,38, ~11 minutos)
 python orquestador.py --fichas
+python orquestador.py --fichas --batch              # semana 5: las fichas por la Batch API (~US$ 0,21, ~35 min; Ctrl+C cancela)
 python orquestador.py --fichas --proveedores P09    # solo esos proveedores: las fichas de los demás no se tocan
 python orquestador.py --fichas --detector           # cada tanda dos veces: marca las fichas inestables (el doble)
 python orquestador.py --escribir                    # solo escribe, con las propuestas guardadas (gratis)
 python orquestador.py --de-nuevo                    # vuelve a leer los PDF con IA y mide la lectura (~US$ 0,05)
 python comparar_corridas.py                         # qué fichas cambiaron contra la escritura anterior (gratis)
 
-# 7. Evaluar (gratis): los 101 casos
-"litoral","lhs","andes","dermalab","naturalvida","rivera","higiene","norte" | ForEach-Object { python evaluar.py "evaluacion\casos_$_.json" 2>&1 | Select-Object -Last 3 }
+# 7. Evaluar (gratis): los 116 casos
+"litoral","lhs","andes","dermalab","naturalvida","rivera","higiene","norte","bebefeliz" | ForEach-Object { python evaluar.py "evaluacion\casos_$_.json" 2>&1 | Select-Object -Last 3 }
 
 # 8. La medición de la semana 3 (~US$ 0,45, ~17 minutos) y su gráfico (gratis)
 python medir_paralelo.py
@@ -232,6 +261,11 @@ python carriles.py                                     # salida/carriles.svg
 # 9. Los extras (gratis, salvo la parte con IA del catálogo viejo: ~US$ 0,03)
 python pedido_proveedor.py
 python catalogo_viejo.py                               # --sin-ia: solo la parte del código
+
+# 10. Semana 5
+python familias.py                                     # las familias que no coinciden (gratis; también corre solo después del escritor)
+python segunda_opinion.py                              # más effort solo para las dudas (PAGA ~US$ 0,20 con max)
+python costo_por_ficha.py                              # el costo por ficha por proveedor y escenario (gratis)
 ```
 
 > Las extracciones ya están en `salida/extracciones/`: `orquestador.py` las reusa (gratis e instantáneo) salvo que le pidas `--de-nuevo`.
@@ -239,6 +273,36 @@ python catalogo_viejo.py                               # --sin-ia: solo la parte
 ---
 
 ## 🧠 Decisiones y su porqué
+
+### Semana 5: la ficha estructurada
+- **Antes, la ficha era un diccionario libre** y la forma la controlaban después los hooks. Con `strict`, la API la garantiza: los 18 campos siempre presentes (null si no se pudo determinar) y tipo, unidad, moneda, condición, peligro y categoría solo de las listas del vocabulario y la taxonomía, leídas de los archivos (una sola fuente de verdad).
+- **El diseño salió de un experimento, no de la intuición.** Con 14 campos opcionales la API no compila la gramática ("Grammar compilation timed out"); con todos presentes y `null` permitido, sí, y dio 0 diferencias con la semana 4. Las fuentes van en casilleros fijos (`campo`, `archivo`, `tipo_ubicacion`, `numero`, `hoja`) y el código las pasa a las 3 formas de la guía.
+- **Solo `registrar_ficha` lleva `strict`:** las 4 tools juntas no compilan (un `minimum` en un entero no está soportado). Las otras 3 las valida el servidor, como siempre.
+- **`strict` garantiza valores válidos, no correctos.** El dígito verificador, las fuentes y el peligro de la FDS los sigue revisando el código.
+- **Cada formulario con la técnica que le toca:** tool forzada con `strict` donde la tarea es mecánica (recepcionista, extractor de PDF), `output_config.format` donde hace falta pensar (catálogo viejo, segunda opinión) y tool con `strict` en el fichador, que conversa.
+- **El recepcionista falló 3 de 5 veces con `strict`** (listaba columnas usadas como "no van"): el formulario preguntaba lo mismo dos veces. Ahora esa lista la calcula el código: 9/9.
+
+### Semana 5: el caché
+- **Dos marcas:** al final del system (cachea tools + system) y en el último mensaje (el historial de la tanda). Se aplican sobre una copia: el historial original no se toca.
+- **Se verifica, no se supone:** cada vuelta anota los tokens leídos y escritos, y si una vuelta 2 o posterior no lee el caché, avisa. En el experimento, la hora agregada al principio del prompt hizo que leyera 0 sin ningún error.
+- **La ficha estructurada hizo los pedidos un 24 % más grandes, y el caché lo compensó con creces:** el paso 5 costó un 17 % menos que la semana 4, con 101/101.
+
+### Semana 5: la Batch API
+- **Opción A: cada vuelta de todas las tandas va en un batch.** Las tools y los hooks siguen corriendo en local entre batch y batch, así que las fichas son comparables una a una con las de tiempo real. Se descartó armar un solo pedido por tanda: dejaba de ser un agente con tools y perdía los hooks.
+- **La ventanilla (`cliente_batch.py`)** junta los pedidos de todas las tandas activas (y espera a las que van a arrancar, con `planificar`), consulta hasta que termina y entrega cada respuesta por `custom_id`: vuelven desordenadas. Un pedido con error del servidor o vencido se reencola solo, como mucho 2 veces; un pedido mal armado no se reintenta. Ctrl + C cancela el batch en Anthropic.
+- **TTL de 1 hora en el caché:** entre vuelta y vuelta pasan minutos.
+- **El historial viaja como lo manda el SDK en tiempo real** (los mismos campos, el thinking con su firma), probado con un mensaje real del SDK.
+- **Cuándo usar cada uno:** batch para corridas completas sin apuro (regresiones, reprocesos); tiempo real para un archivo nuevo de la bandeja, donde alguien espera el acuse.
+
+### Semana 5: abrir Bebé Feliz
+- **Los casos antes que la corrida:** 15 casos armados desde el archivo y el estándar, verificados por una persona, con las dos dudas de criterio decididas antes de correr.
+- **Salir del apartado no es cambiar el sistema:** la lista de apartados queda vacía (el mecanismo sigue, probado) y el archivo entra por la bandeja, como cualquier archivo nuevo, una sola vez.
+- **Lo que falló se arregló en su capa, sin tocar el caso:** el código, con sus pruebas (ver *"Semana 5: Bebé Feliz"*).
+
+### Semana 5: el extra, familias y segunda opinión
+- **El detector A/B no veía la contradicción entre tandas:** corre cada tanda dos veces y cada tanda era coherente consigo misma. El detector de familias es código: compara los productos que el archivo escribe igual salvo el contenido, el EAN y el precio. Sobre 257 fichas encontró 52 familias y **1 sola contradicción**, sin falsos positivos.
+- **La segunda opinión es una pregunta enfocada,** no rehacer la tanda: el mismo system que el fichador, las filas como dato, las versiones en disputa y una respuesta con forma garantizada (una versión o NINGUNA, y el porqué).
+- **Informa, no cambia fichas:** el estándar no tiene un motivo de revisión para "inconsistente", y si pisara la ficha un caso podría dar verde por el mecanismo y no porque el criterio quedó claro.
 
 ### Semana 4: el recepcionista
 - **El problema de fondo, leído en el código:** hasta la semana 3, cada proveedor se configuraba a mano (qué columna es cada dato). Mientras eso hiciera falta, un archivo nuevo no podía entrar solo.
@@ -385,6 +449,37 @@ python catalogo_viejo.py                               # --sin-ia: solo la parte
 
 ---
 
+## 🔬 Semana 5: Bebé Feliz, qué falló y por qué
+
+Se corrió **una sola vez, con el sistema tal cual**, por la bandeja: **14/15 en ficha, 15/15 en fuente**, US$ 0,0016 por ficha. Los packs (Q17), los 4 duplicados, la trampa del Aloe de 80 y el precio de lista salieron bien.
+
+| Capa | Qué pasó | Por qué | Qué se hizo |
+|---|---|---|---|
+| Recepción | ✅ Entró a la primera | El encabezado en 2 niveles, el "Precio lista" (y no el con descuento) y la moneda los resolvió el recepcionista y los verificó el código | Nada |
+| Código | ⚠️ **12 de 32 contenidos los calculó el modelo** ("x 50", "2 x 60 un"). Salieron bien, y el evaluador no lo vio | `cuentas.py` no conocía esas dos formas, y la recepción aceptó "20 de 32 filas" sin avisar | El código las calcula (32/32) y la recepción avisa las filas sin contenido. Re-corrida: **0 diferencias** |
+| Criterio | ❌ BF-527 "DE CAMBIO OXIDO DE ZINC"; **BF-560, la misma crema en otra tanda, "OXIDO DE ZINC"** | La regla 14 del prompt tenía dos frases que se contradecían (ver abajo) | El caso no se tocó. Se arregló la regla en el paso 8 |
+
+## 🔬 Semana 5: más effort no arregla un criterio ambiguo
+
+1. **El detector de familias** encontró la crema: dos productos que el archivo escribe igual, con variantes distintas.
+2. **La segunda opinión** preguntó 3 veces con effort high y 3 con max. High eligió una frase de la regla u otra según la vez (IN7006: 3 respuestas distintas). Con max, **4 de 6 respuestas se cortaron a los 64.000 tokens** pensando, a unas 15 veces el costo.
+3. **Pero los 12 porqués citaban la misma regla 14,** con dos frases contradictorias: *"no se descarta nada, aunque parezca repetir el tipo"* y *"las palabras del nombre del tipo no se repiten en la variante"*. El modelo no podía conciliarlas, ni pensando 64.000 tokens.
+4. **Se aclaró cuál manda** (el nombre del tipo no se repite; una línea o un nombre de fantasía sí va), sin ejemplos de productos. Un primer intento con el ejemplo «crema para manos» le **sopló la respuesta** a "Intensive Hands Hand Cream" (Norte), y la regresión lo atrapó.
+5. **La misma regresión destapó un hueco viejo:** el modelo dejó un gel de afeitar sin peligro aunque tenía su FDS de aerosol ("un gel de afeitar no es de las familias que llevan FDS"). Ahora, si el código encontró la FDS del producto, `registrar_ficha` exige su peligro: el documento manda.
+6. **Resultado: 116/116, familias 0.** Pensar más sirvió como diagnóstico, no como remedio.
+
+## 🔬 Semana 5: el costo por ficha
+
+| Escenario | US$ por ficha | Tiempo de las fichas |
+|---|---|---|
+| Tiempo real sin caché (los mismos tokens, sin el descuento) | 0,00220 | |
+| Tiempo real con caché | 0,00148 (−33 %) | 11 min |
+| **Batch + caché** | **0,00082 (−63 %)** | 33 min |
+
+La lectura con IA (PDF, FDS, folleto, recepción de los Excel) cuesta US$ 0,05 en total y se paga **una vez por archivo**: con ella, la primera vez en batch sale US$ 0,00102 por ficha. El detalle por proveedor sale de `python costo_por_ficha.py`.
+
+---
+
 ## 🔬 Semana 4: corregir con reglas medidas
 
 Los casos nuevos de Rivera, Higiene Total y Norte se armaron desde el estándar y los archivos (no copiando la salida) y los verificó una persona. Contra lo que había producido el sistema dieron **Rivera 11/12, Higiene Total 12/12 y Norte 13/14**.
@@ -481,6 +576,6 @@ Y en una de esas corridas, Haiku mandó un SKU mal escrito. `registrar_ficha` lo
 | 2 · M3 ✅ | PDFs con la página de cada dato, datos que cruzan archivos y el peligro para el depósito (FDS) |
 | 3 · M4 ✅ | Lectura y fichas en paralelo, un solo escritor, prompt injection en capas y la medición contra la versión secuencial |
 | 4 · M5 ✅ | Un archivo nuevo se procesa sin intervención: recepcionista, bandeja, criterio como prompt MCP, hooks y permisos por agente. Extra: el acuse de recibo |
-| 5 · M6 | Salida estructurada, caché y Batch API. Se abre el proveedor apartado |
+| 5 · M6 ✅ | Ficha estructurada con `strict`, caché, Batch API y Bebé Feliz abierto una vez. Extra: detector de familias y segunda opinión |
 | 6 | Todo con un comando, y el asistente de consultas |
 | 7 | Demo Day |
