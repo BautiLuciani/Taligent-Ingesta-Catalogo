@@ -40,6 +40,12 @@ for proveedor_id, items in ESPERADOS.items():
         json.dumps({"filas": [{"item_id": item} for item in items]}), encoding="utf-8")
 ruta = carpeta / "resultados.json"
 completas = {item: propuesta(item) for items in ESPERADOS.values() for item in items}
+# Semana 5, paso 8D: LHS-206 tiene FDS (lavandina: corrosivo, ONU 1791): su ficha lleva lo que dice la FDS
+fds_206 = {"archivo": "FDS_Clarita_lavandina.pdf", "pagina": 1}
+completas["P07:LHS-206"] = propuesta("P07:LHS-206", ficha={**completas["P07:LHS-206"]["ficha"],
+                                     "peligro_deposito": "corrosivo", "numero_onu": "1791"},
+                                     fuentes={**completas["P07:LHS-206"]["fuentes"], "peligro_deposito": fds_206,
+                                              "numero_onu": fds_206})
 
 print("--- revisar_propuesta: la misma regla del servidor ---")
 chequear("Una propuesta válida no tiene problemas", revisar_propuesta("P03:LT-3303", completas["P03:LT-3303"]), [])

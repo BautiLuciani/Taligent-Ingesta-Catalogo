@@ -714,6 +714,11 @@ CONFLICTOS_POR_ITEM = {item_id: [conflicto["campo"] for conflicto in fila["calcu
 # "sin GTIN válido va a revisión" estaba solo en el prompt (capa probabilística, M4 §7.3). Ahora la cumple el código:
 # ni un mail que pida "dalos de alta sin revisión" ni un modelo que le haga caso pueden saltearla.
 MOTIVO_GTIN_POR_ITEM = {item_id: fila["calculado"].get("motivo_gtin") for item_id, fila in FILAS_POR_ITEM.items()}
+# item_id -> la FDS que el CÓDIGO encontró para ese producto (semana 2, paso 4C), o None. Semana 5, paso 8D: en una
+# regresión el modelo dejó IN7015 (gel de afeitar con FDS de aerosol) sin peligro, porque "un gel de afeitar no es de
+# las familias que llevan FDS". Si el proveedor mandó una FDS que nombra al producto, el documento manda: lo garantiza
+# el código, no el prompt.
+FDS_POR_ITEM = {item_id: fila["calculado"].get("fds") for item_id, fila in FILAS_POR_ITEM.items()}
 ITEMS_VALIDOS = set(CONFLICTOS_POR_ITEM)
 SKUS_CATALOGO = {producto["sku"] for producto in CATALOGO}
 
@@ -800,6 +805,11 @@ def problemas_del_registro(item_id: str, estado: str, ficha: dict, categoria_dec
     y el escritor del paso 6, que vuelve a revisar cada propuesta antes de guardarla.
     """
     problemas = validar_coherencia(item_id, estado, motivos_revision, duplicado_de)
+    fds = FDS_POR_ITEM.get(item_id)
+    if fds and (ficha.get("peligro_deposito"), ficha.get("numero_onu")) != (fds["peligro_deposito"], fds.get("numero_onu")):
+        problemas.append(f"El código encontró la FDS de este producto ({fds['fuente']['archivo']}): peligro_deposito "
+                         f"{fds['peligro_deposito']!r} y numero_onu {fds.get('numero_onu')!r}, con la fuente de esa FDS. "
+                         "Si el proveedor mandó una FDS que nombra al producto, va lo que dice la FDS.")
     if ficha.get(categoria_decidida_por.campo) != categoria_decidida_por.valor:
         problemas.append(f"categoria_decidida_por cita {categoria_decidida_por.campo}={categoria_decidida_por.valor!r}, "
                         f"pero en la ficha ese campo vale {ficha.get(categoria_decidida_por.campo)!r}. "

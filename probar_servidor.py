@@ -367,10 +367,22 @@ async def main():
 
         print("\n--- registrar_ficha: un ítem del PDF ---")
         fuente_206 = lhs["P07:LHS-206"]["fuente"]
-        resultado = await cliente.call_tool("registrar_ficha", formulario_de({
-            **base, "item_id": "P07:LHS-206", "estado": "lista_para_alta",
-            "fuentes": {campo: fuente_206 for campo in ficha_ejemplo}}), raise_on_error=False)
-        chequear("Se registra un ítem de P07 con fuente {archivo, pagina}", resultado.is_error, False)
+        fds_206 = lhs["P07:LHS-206"]["calculado"]["fds"]
+        con_fds = {**base, "item_id": "P07:LHS-206", "estado": "lista_para_alta",
+                   "ficha": {**base["ficha"], "peligro_deposito": fds_206["peligro_deposito"], "numero_onu": fds_206["numero_onu"]},
+                   "fuentes": {**{campo: fuente_206 for campo in ficha_ejemplo},
+                               "peligro_deposito": fds_206["fuente"], "numero_onu": fds_206["fuente"]}}
+        resultado = await cliente.call_tool("registrar_ficha", formulario_de(con_fds), raise_on_error=False)
+        chequear("Se registra un ítem de P07 con fuente {archivo, pagina} (y el peligro de su FDS)", resultado.is_error, False)
+        print("\n--- registrar_ficha: si el código encontró la FDS, va lo que dice la FDS (semana 5, paso 8D) ---")
+        sin_peligro = {**con_fds, "ficha": {**con_fds["ficha"], "peligro_deposito": None, "numero_onu": None},
+                       "fuentes": {c: f for c, f in con_fds["fuentes"].items() if c not in ("peligro_deposito", "numero_onu")}}
+        resultado = await cliente.call_tool("registrar_ficha", formulario_de(sin_peligro), raise_on_error=False)
+        chequear("LHS-206 tiene FDS (corrosivo, ONU 1791) y llega sin peligro: NO se guarda, con el motivo",
+                 (resultado.is_error, "FDS_Clarita_lavandina" in str(resultado.content)), (True, True))
+        otro_peligro = {**con_fds, "ficha": {**con_fds["ficha"], "peligro_deposito": "no_peligroso", "numero_onu": None}}
+        resultado = await cliente.call_tool("registrar_ficha", formulario_de(otro_peligro), raise_on_error=False)
+        chequear("...ni con otro peligro que el de la FDS", resultado.is_error, True)
 
         print("\n--- registrar_ficha: conflictos entre archivos (paso 6E, decisión 1) ---")
         fuente_andes = andes["P01:AN-1136"]["fuente"]

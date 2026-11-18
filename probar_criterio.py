@@ -30,13 +30,16 @@ CAMBIADAS_PASO_8 = (3, 13, 14)  # semana 4, paso 8: se agregó texto, no se quit
 CAMBIADAS_SEM5 = (7, 8, 14)      # semana 5: 7 y 8 en el paso 2D (la ficha estructurada); 14 en el paso 8C
 # Semana 5, paso 8C: la regla 14 tenía dos frases que se contradecían ("no se descarta nada" y "el nombre del tipo no se
 # repite"); la segunda opinión lo mostró (salida/segunda_opinion.json). Se aclara cuál manda, con estos dos reemplazos.
+# Paso 8D: sin ejemplo de producto (el de «crema para manos» empujó a IN7009, "Intensive Hands Hand Cream", a perder
+# HANDS de su línea: un ejemplo que se parece a un producto real le sopla la respuesta al modelo).
 REGLA_14_SEM5 = [
     ("aunque parezca repetir el tipo (por ejemplo, la línea «Sun» de un protector solar).",
      "aunque parezca repetir el tipo (por ejemplo, la línea «Sun» de un protector solar: una línea o un nombre de "
      "fantasía es del producto, no del nombre del tipo)."),
     ("sin agregar CORPORAL ni FACIAL a la variante.",
      "sin agregar CORPORAL ni FACIAL a la variante. El nombre del tipo es cómo el archivo llama a esa clase de producto, "
-     "aunque use más palabras que el vocabulario: «crema para manos» es tipo CREMA y PARA MANOS no va a la variante. "
+     "aunque use más palabras que el vocabulario: esas palabras no van a la variante. Las de una línea o un nombre de "
+     "fantasía sí van, aunque se parezcan a las del tipo. "
      "Esto manda sobre «no se descarta nada»: lo que nombra la clase de producto es el tipo; lo que distingue al producto "
      "dentro de esa clase (línea, uso, ingrediente, talle, FPS) va en la variante."),
 ]
