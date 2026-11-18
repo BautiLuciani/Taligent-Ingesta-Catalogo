@@ -6,7 +6,6 @@
    sigue viendo las suyas.
 """
 import asyncio
-import json
 import tempfile
 from pathlib import Path
 
