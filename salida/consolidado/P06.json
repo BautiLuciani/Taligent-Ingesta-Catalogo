@@ -1,0 +1,837 @@
+{
+  "proveedor_id": "P06",
+  "filas": [
+    {
+      "item_id": "P06:BF-503",
+      "fuente": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 3
+      },
+      "original": {
+        "Producto": "Leche Crecer",
+        "Talle / etapa": "Etapa 1",
+        "Cantidad": "0,4 kg",
+        "EAN": "7798993880961",
+        "Precio lista": 707.39,
+        "Precio c/desc. 8%": 650.8
+      },
+      "calculado": {
+        "gtin": "7798993880961",
+        "motivo_gtin": null,
+        "descripcion_expandida": "LECHE CRECER",
+        "contenido": 400,
+        "unidad": "G",
+        "precio_costo": 707.39,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P06:BF-506",
+      "fuente": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 4
+      },
+      "original": {
+        "Producto": "Pañal Pequeños Pasos",
+        "Talle / etapa": "P",
+        "Cantidad": "30 un",
+        "EAN": "7790090972334",
+        "Precio lista": 387.99,
+        "Precio c/desc. 8%": 356.95
+      },
+      "calculado": {
+        "gtin": "7790090972334",
+        "motivo_gtin": null,
+        "descripcion_expandida": "PAÑAL PEQUEÑOS PASOS",
+        "contenido": 30,
+        "unidad": "UN",
+        "precio_costo": 387.99,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P06:BF-509",
+      "fuente": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 5
+      },
+      "original": {
+        "Producto": "Pañal Pequeños Pasos Pack Ahorro x2",
+        "Talle / etapa": "G",
+        "Cantidad": "2 x 60 un",
+        "EAN": "7794244558504",
+        "Precio lista": 1101.14,
+        "Precio c/desc. 8%": 1013.05
+      },
+      "calculado": {
+        "gtin": "7794244558504",
+        "motivo_gtin": null,
+        "descripcion_expandida": "PAÑAL PEQUEÑOS PASOS PACK AHORRO X2",
+        "contenido": null,
+        "unidad": null,
+        "precio_costo": 1101.14,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P06:BF-512",
+      "fuente": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 6
+      },
+      "original": {
+        "Producto": "Leche Crecer",
+        "Talle / etapa": "Etapa 2",
+        "Cantidad": "0,8 kg",
+        "EAN": "7799123291527",
+        "Precio lista": 1173.47,
+        "Precio c/desc. 8%": 1079.59
+      },
+      "calculado": {
+        "gtin": "7799123291527",
+        "motivo_gtin": null,
+        "descripcion_expandida": "LECHE CRECER",
+        "contenido": 800,
+        "unidad": "G",
+        "precio_costo": 1173.47,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P06:BF-515",
+      "fuente": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 7
+      },
+      "original": {
+        "Producto": "Toallitas Pequeños Pasos Sin Perfume",
+        "Talle / etapa": null,
+        "Cantidad": "x 50",
+        "EAN": "7796210745413",
+        "Precio lista": 64.54,
+        "Precio c/desc. 8%": 59.38
+      },
+      "calculado": {
+        "gtin": "7796210745413",
+        "motivo_gtin": null,
+        "descripcion_expandida": "TOALLITAS PEQUEÑOS PASOS SIN PERFUME",
+        "contenido": null,
+        "unidad": null,
+        "precio_costo": 64.54,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P06:BF-518",
+      "fuente": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 8
+      },
+      "original": {
+        "Producto": "Pañal Pequeños Pasos",
+        "Talle / etapa": "M",
+        "Cantidad": "30 un",
+        "EAN": "7792140788902",
+        "Precio lista": 344.36,
+        "Precio c/desc. 8%": 316.81
+      },
+      "calculado": {
+        "gtin": "7792140788902",
+        "motivo_gtin": null,
+        "descripcion_expandida": "PAÑAL PEQUEÑOS PASOS",
+        "contenido": 30,
+        "unidad": "UN",
+        "precio_costo": 344.36,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P06:BF-521",
+      "fuente": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 9
+      },
+      "original": {
+        "Producto": "Pañal Pequeños Pasos Pack Ahorro x2",
+        "Talle / etapa": "XG",
+        "Cantidad": "2 x 36 un",
+        "EAN": "7792102155315",
+        "Precio lista": 876.68,
+        "Precio c/desc. 8%": 806.55
+      },
+      "calculado": {
+        "gtin": "7792102155315",
+        "motivo_gtin": null,
+        "descripcion_expandida": "PAÑAL PEQUEÑOS PASOS PACK AHORRO X2",
+        "contenido": null,
+        "unidad": null,
+        "precio_costo": 876.68,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P06:BF-524",
+      "fuente": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 10
+      },
+      "original": {
+        "Producto": "Pañal Pequeños Pasos",
+        "Talle / etapa": "XG",
+        "Cantidad": "60 un",
+        "EAN": "7795086583884",
+        "Precio lista": 652.89,
+        "Precio c/desc. 8%": 600.66
+      },
+      "calculado": {
+        "gtin": "7795086583884",
+        "motivo_gtin": null,
+        "descripcion_expandida": "PAÑAL PEQUEÑOS PASOS",
+        "contenido": 60,
+        "unidad": "UN",
+        "precio_costo": 652.89,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P06:BF-593",
+      "fuente": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 11
+      },
+      "original": {
+        "Producto": "Toallitas Pequeños Pasos Sin Perfume",
+        "Talle / etapa": null,
+        "Cantidad": "x 80",
+        "EAN": null,
+        "Precio lista": 95.67,
+        "Precio c/desc. 8%": 88.02
+      },
+      "calculado": {
+        "gtin": null,
+        "motivo_gtin": "gtin_faltante",
+        "descripcion_expandida": "TOALLITAS PEQUEÑOS PASOS SIN PERFUME",
+        "contenido": null,
+        "unidad": null,
+        "precio_costo": 95.67,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P06:BF-527",
+      "fuente": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 12
+      },
+      "original": {
+        "Producto": "Crema de cambio Pequeños Pasos Oxido De Zinc",
+        "Talle / etapa": null,
+        "Cantidad": "120 g",
+        "EAN": "7797745670423",
+        "Precio lista": 252.88,
+        "Precio c/desc. 8%": 232.65
+      },
+      "calculado": {
+        "gtin": "7797745670423",
+        "motivo_gtin": null,
+        "descripcion_expandida": "CREMA DE CAMBIO PEQUEÑOS PASOS OXIDO DE ZINC",
+        "contenido": 120,
+        "unidad": "G",
+        "precio_costo": 252.88,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P06:BF-530",
+      "fuente": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 13
+      },
+      "original": {
+        "Producto": "Toallitas Pequeños Pasos Aloe",
+        "Talle / etapa": null,
+        "Cantidad": "x 80",
+        "EAN": "7790113299042",
+        "Precio lista": 92.34,
+        "Precio c/desc. 8%": 84.95
+      },
+      "calculado": {
+        "gtin": "7790113299042",
+        "motivo_gtin": null,
+        "descripcion_expandida": "TOALLITAS PEQUEÑOS PASOS ALOE",
+        "contenido": null,
+        "unidad": null,
+        "precio_costo": 92.34,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P06:BF-533",
+      "fuente": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 14
+      },
+      "original": {
+        "Producto": "Leche Crecer",
+        "Talle / etapa": "Etapa 3",
+        "Cantidad": "0,4 kg",
+        "EAN": "7793806669115",
+        "Precio lista": 626.29,
+        "Precio c/desc. 8%": 576.19
+      },
+      "calculado": {
+        "gtin": "7793806669115",
+        "motivo_gtin": null,
+        "descripcion_expandida": "LECHE CRECER",
+        "contenido": 400,
+        "unidad": "G",
+        "precio_costo": 626.29,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P06:BF-536",
+      "fuente": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 15
+      },
+      "original": {
+        "Producto": "Pañal Pequeños Pasos",
+        "Talle / etapa": "P",
+        "Cantidad": "48 un",
+        "EAN": "7798512624519",
+        "Precio lista": 490.45,
+        "Precio c/desc. 8%": 451.21
+      },
+      "calculado": {
+        "gtin": "7798512624519",
+        "motivo_gtin": null,
+        "descripcion_expandida": "PAÑAL PEQUEÑOS PASOS",
+        "contenido": 48,
+        "unidad": "UN",
+        "precio_costo": 490.45,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P06:BF-539",
+      "fuente": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 16
+      },
+      "original": {
+        "Producto": "Toallitas Pequeños Pasos Aloe",
+        "Talle / etapa": null,
+        "Cantidad": "x 100",
+        "EAN": "7791115123588",
+        "Precio lista": 107.3,
+        "Precio c/desc. 8%": 98.72
+      },
+      "calculado": {
+        "gtin": "7791115123588",
+        "motivo_gtin": null,
+        "descripcion_expandida": "TOALLITAS PEQUEÑOS PASOS ALOE",
+        "contenido": null,
+        "unidad": null,
+        "precio_costo": 107.3,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P06:BF-542",
+      "fuente": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 17
+      },
+      "original": {
+        "Producto": "Toallitas Pequeños Pasos Recien Nacido",
+        "Talle / etapa": null,
+        "Cantidad": "x 100",
+        "EAN": "7793633072348",
+        "Precio lista": 120.75,
+        "Precio c/desc. 8%": 111.09
+      },
+      "calculado": {
+        "gtin": "7793633072348",
+        "motivo_gtin": null,
+        "descripcion_expandida": "TOALLITAS PEQUEÑOS PASOS RECIEN NACIDO",
+        "contenido": null,
+        "unidad": null,
+        "precio_costo": 120.75,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P06:BF-545",
+      "fuente": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 18
+      },
+      "original": {
+        "Producto": "Pañal Pequeños Pasos",
+        "Talle / etapa": "XG",
+        "Cantidad": "48 un",
+        "EAN": "7799705856731",
+        "Precio lista": 490.74,
+        "Precio c/desc. 8%": 451.48
+      },
+      "calculado": {
+        "gtin": "7799705856731",
+        "motivo_gtin": null,
+        "descripcion_expandida": "PAÑAL PEQUEÑOS PASOS",
+        "contenido": 48,
+        "unidad": "UN",
+        "precio_costo": 490.74,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P06:BF-548",
+      "fuente": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 19
+      },
+      "original": {
+        "Producto": "Pañal Pequeños Pasos Pack Ahorro x2",
+        "Talle / etapa": "G",
+        "Cantidad": "2 x 36 un",
+        "EAN": "7797400605036",
+        "Precio lista": 802.64,
+        "Precio c/desc. 8%": 738.43
+      },
+      "calculado": {
+        "gtin": "7797400605036",
+        "motivo_gtin": null,
+        "descripcion_expandida": "PAÑAL PEQUEÑOS PASOS PACK AHORRO X2",
+        "contenido": null,
+        "unidad": null,
+        "precio_costo": 802.64,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P06:BF-551",
+      "fuente": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 20
+      },
+      "original": {
+        "Producto": "Pañal Pequeños Pasos",
+        "Talle / etapa": "P",
+        "Cantidad": "60 un",
+        "EAN": "7799065860171",
+        "Precio lista": 572.95,
+        "Precio c/desc. 8%": 527.11
+      },
+      "calculado": {
+        "gtin": "7799065860171",
+        "motivo_gtin": null,
+        "descripcion_expandida": "PAÑAL PEQUEÑOS PASOS",
+        "contenido": 60,
+        "unidad": "UN",
+        "precio_costo": 572.95,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P06:BF-554",
+      "fuente": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 21
+      },
+      "original": {
+        "Producto": "Pañal Pequeños Pasos",
+        "Talle / etapa": "G",
+        "Cantidad": "48 un",
+        "EAN": "7793445721922",
+        "Precio lista": 493.39,
+        "Precio c/desc. 8%": 453.92
+      },
+      "calculado": {
+        "gtin": "7793445721922",
+        "motivo_gtin": null,
+        "descripcion_expandida": "PAÑAL PEQUEÑOS PASOS",
+        "contenido": 48,
+        "unidad": "UN",
+        "precio_costo": 493.39,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P06:BF-557",
+      "fuente": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 22
+      },
+      "original": {
+        "Producto": "Pañal Pequeños Pasos",
+        "Talle / etapa": "P",
+        "Cantidad": "36 un",
+        "EAN": "7792454135881",
+        "Precio lista": 461.65,
+        "Precio c/desc. 8%": 424.72
+      },
+      "calculado": {
+        "gtin": "7792454135881",
+        "motivo_gtin": null,
+        "descripcion_expandida": "PAÑAL PEQUEÑOS PASOS",
+        "contenido": 36,
+        "unidad": "UN",
+        "precio_costo": 461.65,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P06:BF-560",
+      "fuente": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 23
+      },
+      "original": {
+        "Producto": "Crema de cambio Pequeños Pasos Oxido De Zinc",
+        "Talle / etapa": null,
+        "Cantidad": "60 g",
+        "EAN": "7793767735416",
+        "Precio lista": 142.23,
+        "Precio c/desc. 8%": 130.85
+      },
+      "calculado": {
+        "gtin": "7793767735416",
+        "motivo_gtin": null,
+        "descripcion_expandida": "CREMA DE CAMBIO PEQUEÑOS PASOS OXIDO DE ZINC",
+        "contenido": 60,
+        "unidad": "G",
+        "precio_costo": 142.23,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P06:BF-563",
+      "fuente": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 24
+      },
+      "original": {
+        "Producto": "Pañal Pequeños Pasos",
+        "Talle / etapa": "XXG",
+        "Cantidad": "36 un",
+        "EAN": "7792103310119",
+        "Precio lista": 418.2,
+        "Precio c/desc. 8%": 384.74
+      },
+      "calculado": {
+        "gtin": "7792103310119",
+        "motivo_gtin": null,
+        "descripcion_expandida": "PAÑAL PEQUEÑOS PASOS",
+        "contenido": 36,
+        "unidad": "UN",
+        "precio_costo": 418.2,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P06:BF-566",
+      "fuente": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 25
+      },
+      "original": {
+        "Producto": "Toallitas Pequeños Pasos Recien Nacido",
+        "Talle / etapa": null,
+        "Cantidad": "x 50",
+        "EAN": "7792950681844",
+        "Precio lista": 68.08,
+        "Precio c/desc. 8%": 62.63
+      },
+      "calculado": {
+        "gtin": "7792950681844",
+        "motivo_gtin": null,
+        "descripcion_expandida": "TOALLITAS PEQUEÑOS PASOS RECIEN NACIDO",
+        "contenido": null,
+        "unidad": null,
+        "precio_costo": 68.08,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P06:BF-569",
+      "fuente": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 26
+      },
+      "original": {
+        "Producto": "Toallitas Pequeños Pasos Sin Perfume",
+        "Talle / etapa": null,
+        "Cantidad": "x 100",
+        "EAN": "7795940032626",
+        "Precio lista": 122.3,
+        "Precio c/desc. 8%": 112.52
+      },
+      "calculado": {
+        "gtin": "7795940032626",
+        "motivo_gtin": null,
+        "descripcion_expandida": "TOALLITAS PEQUEÑOS PASOS SIN PERFUME",
+        "contenido": null,
+        "unidad": null,
+        "precio_costo": 122.3,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P06:BF-572",
+      "fuente": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 27
+      },
+      "original": {
+        "Producto": "Toallitas Pequeños Pasos Recien Nacido",
+        "Talle / etapa": null,
+        "Cantidad": "x 80",
+        "EAN": "7795238192599",
+        "Precio lista": 106.88,
+        "Precio c/desc. 8%": 98.33
+      },
+      "calculado": {
+        "gtin": "7795238192599",
+        "motivo_gtin": null,
+        "descripcion_expandida": "TOALLITAS PEQUEÑOS PASOS RECIEN NACIDO",
+        "contenido": null,
+        "unidad": null,
+        "precio_costo": 106.88,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P06:BF-596",
+      "fuente": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 28
+      },
+      "original": {
+        "Producto": "Toallitas Pequeños Pasos Aloe",
+        "Talle / etapa": null,
+        "Cantidad": "x 50",
+        "EAN": null,
+        "Precio lista": 68.16,
+        "Precio c/desc. 8%": 62.71
+      },
+      "calculado": {
+        "gtin": null,
+        "motivo_gtin": "gtin_faltante",
+        "descripcion_expandida": "TOALLITAS PEQUEÑOS PASOS ALOE",
+        "contenido": null,
+        "unidad": null,
+        "precio_costo": 68.16,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P06:BF-575",
+      "fuente": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 29
+      },
+      "original": {
+        "Producto": "Leche Crecer",
+        "Talle / etapa": "Etapa 1",
+        "Cantidad": "0,8 kg",
+        "EAN": "7796618742595",
+        "Precio lista": 1202.01,
+        "Precio c/desc. 8%": 1105.85
+      },
+      "calculado": {
+        "gtin": "7796618742595",
+        "motivo_gtin": null,
+        "descripcion_expandida": "LECHE CRECER",
+        "contenido": 800,
+        "unidad": "G",
+        "precio_costo": 1202.01,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P06:BF-578",
+      "fuente": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 30
+      },
+      "original": {
+        "Producto": "Pañal Pequeños Pasos",
+        "Talle / etapa": "XG",
+        "Cantidad": "30 un",
+        "EAN": "7795033505631",
+        "Precio lista": 387.78,
+        "Precio c/desc. 8%": 356.76
+      },
+      "calculado": {
+        "gtin": "7795033505631",
+        "motivo_gtin": null,
+        "descripcion_expandida": "PAÑAL PEQUEÑOS PASOS",
+        "contenido": 30,
+        "unidad": "UN",
+        "precio_costo": 387.78,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P06:BF-581",
+      "fuente": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 31
+      },
+      "original": {
+        "Producto": "Leche Crecer",
+        "Talle / etapa": "Etapa 3",
+        "Cantidad": "800 g",
+        "EAN": "7795958112549",
+        "Precio lista": 1230.97,
+        "Precio c/desc. 8%": 1132.49
+      },
+      "calculado": {
+        "gtin": "7795958112549",
+        "motivo_gtin": null,
+        "descripcion_expandida": "LECHE CRECER",
+        "contenido": 800,
+        "unidad": "G",
+        "precio_costo": 1230.97,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P06:BF-584",
+      "fuente": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 32
+      },
+      "original": {
+        "Producto": "Pañal Pequeños Pasos",
+        "Talle / etapa": "M",
+        "Cantidad": "60 un",
+        "EAN": "7796875264953",
+        "Precio lista": 584.01,
+        "Precio c/desc. 8%": 537.29
+      },
+      "calculado": {
+        "gtin": "7796875264953",
+        "motivo_gtin": null,
+        "descripcion_expandida": "PAÑAL PEQUEÑOS PASOS",
+        "contenido": 60,
+        "unidad": "UN",
+        "precio_costo": 584.01,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P06:BF-587",
+      "fuente": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 33
+      },
+      "original": {
+        "Producto": "Leche Crecer",
+        "Talle / etapa": "Etapa 2",
+        "Cantidad": "0,4 kg",
+        "EAN": "7799616137905",
+        "Precio lista": 647.77,
+        "Precio c/desc. 8%": 595.95
+      },
+      "calculado": {
+        "gtin": "7799616137905",
+        "motivo_gtin": null,
+        "descripcion_expandida": "LECHE CRECER",
+        "contenido": 400,
+        "unidad": "G",
+        "precio_costo": 647.77,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P06:BF-590",
+      "fuente": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 34
+      },
+      "original": {
+        "Producto": "Pañal Pequeños Pasos",
+        "Talle / etapa": "M",
+        "Cantidad": "48 un",
+        "EAN": "7791123452588",
+        "Precio lista": 544.37,
+        "Precio c/desc. 8%": 500.82
+      },
+      "calculado": {
+        "gtin": "7791123452588",
+        "motivo_gtin": null,
+        "descripcion_expandida": "PAÑAL PEQUEÑOS PASOS",
+        "contenido": 48,
+        "unidad": "UN",
+        "precio_costo": 544.37,
+        "moneda": "UYU",
+        "fds": null
+      }
+    }
+  ]
+}

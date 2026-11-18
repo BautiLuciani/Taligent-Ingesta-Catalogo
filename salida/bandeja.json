@@ -22,5 +22,13 @@
     "proveedor_id": "P04",
     "fichas": 28,
     "costo_recepcion_y_fds_usd": 0.000531
+  },
+  "entrada/P06_Bebe_Feliz/BebeFeliz_altas.xlsx": {
+    "huella": "27d617c91154",
+    "fecha": "2026-11-17 22:13:42",
+    "estado": "procesado",
+    "proveedor_id": "P06",
+    "fichas": 32,
+    "costo_recepcion_y_fds_usd": 0.000419
   }
 }
