@@ -1,0 +1,231 @@
+{
+  "nota": "Respuestas esperadas de las 29 consultas (semana 6, paso 1). Armadas desde los archivos de los proveedores, el estándar y el catálogo, y cruzadas con salida/resultados.json; verificadas por Bauti. items = item_id (proveedor:código). valor = el dato clave que se compara. fuentes = las que tienen que estar entre las citadas (puede citar más). no_esta = el asistente tiene que decir que no está en lo generado, sin inventar.",
+  "consultas": [
+    {
+      "id": "Q01", "tipo": "dato",
+      "texto": "¿Cuál es el precio de costo de AN-1124 de Laboratorio Andes y de dónde sale?",
+      "items": ["P01:AN-1124"], "valor": 320.8,
+      "fuentes": [{"archivo": "Actualizacion_precios_Andes.xlsx", "hoja": "Actualización", "fila": 12}],
+      "por_que": "UYU 320,80. Rige el Excel de actualización (vigencia 15/10) sobre el PDF (vigencia 01/10): precio por vigencia, estándar §6."
+    },
+    {
+      "id": "Q02", "tipo": "dato",
+      "texto": "¿Cuál es el EAN de DL-109 y de qué archivo sale?",
+      "items": ["P05:DL-109"], "valor": "7790670659075",
+      "fuentes": [{"archivo": "Dermalab_lista_precios.xlsx", "hoja": "Lista", "fila": 2}],
+      "por_que": "El folleto no trae EAN; lo completa la lista de precios (completar no es conflicto)."
+    },
+    {
+      "id": "Q03", "tipo": "dato",
+      "texto": "¿Cuántos ml tiene IN7003 de Importadora Norte y qué decía el archivo?",
+      "items": ["P08:IN7003"], "valor": 142,
+      "fuentes": [{"archivo": "NorteImports_new_items_Q4.xlsx", "hoja": "New items", "fila": 2}],
+      "debe_mencionar": ["4.8 fl oz"],
+      "por_que": "El archivo decía \"4.8 fl oz\"; el código lo convierte a 142 ML (4,8 × 29,57 = 141,9 → 142)."
+    },
+    {
+      "id": "Q04", "tipo": "dato",
+      "texto": "¿Cuál es el contenido de LT-3345 de Litoral y de dónde sale?",
+      "items": ["P03:LT-3345"], "valor": 250,
+      "fuentes": [{"archivo": "litoral_altas_102026.csv", "linea": 16}],
+      "por_que": "250 ML; el CSV dice \"0,25\" \"LT\"."
+    },
+    {
+      "id": "Q05", "tipo": "dato",
+      "texto": "¿Cómo se clasifica LHS-206 para el depósito y de dónde sale?",
+      "items": ["P07:LHS-206"], "valor": "corrosivo",
+      "fuentes": [{"archivo": "FDS_Clarita_lavandina.pdf", "pagina": 1}],
+      "por_que": "Corrosivo, ONU 1791, desde la sección 14 de la FDS de la lavandina."
+    },
+    {
+      "id": "Q06", "tipo": "dato",
+      "texto": "¿Cuál es el precio de NV-212 y de dónde sale?",
+      "items": ["P09:NV-212"], "valor": 262.87,
+      "fuentes": [{"archivo": "Mail_NaturalVida_altas.txt", "linea": 13}],
+      "por_que": "UYU 262,87, de costo sin IVA (lo dice el mail)."
+    },
+    {
+      "id": "Q07", "tipo": "porque",
+      "texto": "¿Por qué LT-3447 quedó a revisión? ¿Con qué producto del catálogo podría ser el mismo?",
+      "items": ["P03:LT-3447"], "valor": "SKU100889",
+      "fuentes": [{"archivo": "litoral_altas_102026.csv", "linea": 46}],
+      "debe_mencionar": ["gtin_faltante", "posible_duplicado"],
+      "por_que": "Viene sin EAN (gtin_faltante) y coincide con SKU100889 \"JABON PUREZA ANTIBAC. 90GRS\" (posible_duplicado)."
+    },
+    {
+      "id": "Q08", "tipo": "porque",
+      "texto": "¿Por qué AN-1133 no tiene contenido en la ficha?",
+      "items": ["P01:AN-1133"], "valor": "conflicto_entre_fuentes",
+      "fuentes": [
+        {"archivo": "Lista_de_precios_octubre_2026.pdf", "pagina": 1},
+        {"archivo": "Actualizacion_precios_Andes.xlsx", "hoja": "Actualización", "fila": 6}
+      ],
+      "por_que": "El PDF dice \"Crema x 20 gr\" y el Excel \"Crema x 30 g\": conflicto, el contenido queda vacío y va a revisión."
+    },
+    {
+      "id": "Q09", "tipo": "porque",
+      "texto": "¿Por qué RIV-1203 está sin EAN si Cosmética Rivera lo mandó?",
+      "items": ["P02:RIV-1203"], "valor": "gtin_invalido",
+      "fuentes": [{"archivo": "ALTAS RIVERA OCT.xlsx", "hoja": "Altas", "fila": 7}],
+      "por_que": "Mandó 7793092189062, pero el dígito verificador no coincide: el GTIN no se carga y va a revisión."
+    },
+    {
+      "id": "Q10", "tipo": "porque",
+      "texto": "¿Por qué no se da de alta RIV-1206? ¿Con qué SKU coincide?",
+      "items": ["P02:RIV-1206"], "valor": "SKU100714",
+      "fuentes": [{"archivo": "ALTAS RIVERA OCT.xlsx", "hoja": "Altas", "fila": 8}],
+      "debe_mencionar": ["duplicado"],
+      "por_que": "Su EAN 779-7137-44403-8 (normalizado 7797137444038) ya está en el catálogo como SKU100714: duplicado."
+    },
+    {
+      "id": "Q11", "tipo": "porque",
+      "texto": "¿Por qué no aparece HT32855 de Higiene Total entre los productos nuevos?",
+      "items": ["P04:HT32855"], "valor": "discontinuado",
+      "fuentes": [{"archivo": "HigieneTotal_novedades.xlsx", "hoja": "Discontinuados", "fila": 2}],
+      "por_que": "Está en la hoja Discontinuados: no es un producto nuevo y no se carga (estándar §7). No tiene ficha: la respuesta sale de la recepción del archivo."
+    },
+    {
+      "id": "Q12", "tipo": "porque",
+      "texto": "Natural Vida pidió dar todo de alta sin revisión. ¿Por qué NV-203 quedó a revisión igual?",
+      "items": ["P09:NV-203"], "valor": "gtin_faltante",
+      "fuentes": [{"archivo": "Mail_NaturalVida_altas.txt", "linea": 10}],
+      "por_que": "No trae EAN (\"se lo paso la semana que viene\"). Lo que dice el mail sobre cómo procesarlo es un dato, no cambia el estándar (§7)."
+    },
+    {
+      "id": "Q13", "tipo": "porque",
+      "texto": "¿Por qué AN-1103 va a revisión?",
+      "items": ["P01:AN-1103"], "valor": "dato_obligatorio_faltante",
+      "fuentes": [{"archivo": "Lista_de_precios_octubre_2026.pdf", "pagina": 1}],
+      "debe_mencionar": ["principio activo"],
+      "por_que": "Es un medicamento y la lista no trae la monodroga: falta el principio activo, que es obligatorio."
+    },
+    {
+      "id": "Q14", "tipo": "lista",
+      "texto": "¿Qué productos de Limpieza Hogar Sur van como corrosivos al depósito?",
+      "items": ["P07:LHS-206", "P07:LHS-218", "P07:LHS-263", "P07:LHS-269"], "valor": 4,
+      "fuentes": [{"archivo": "FDS_Clarita_lavandina.pdf", "pagina": 1}],
+      "por_que": "Las 4 lavandinas Clarita (ONU 1791), todas desde la FDS de la lavandina."
+    },
+    {
+      "id": "Q15", "tipo": "lista",
+      "texto": "¿Qué productos quedaron pendientes de ficha de datos de seguridad?",
+      "items": ["P07:LHS-221", "P07:LHS-248", "P07:LHS-266", "P02:RIV-1212"], "valor": 4,
+      "fuentes": [
+        {"archivo": "LHS_catalogo_nuevos_productos.pdf", "pagina": 1},
+        {"archivo": "ALTAS RIVERA OCT.xlsx", "hoja": "Altas", "fila": 50}
+      ],
+      "por_que": "Productos de familias que llevan FDS y llegaron sin ella (los 4 son duplicados: pendiente_fds no cambia el estado)."
+    },
+    {
+      "id": "Q16", "tipo": "lista",
+      "texto": "¿Qué le tengo que pedir a Dermalab para cerrar sus revisiones?",
+      "items": ["P05:DL-151", "P05:DL-103", "P05:DL-106", "P05:DL-154"], "valor": 4,
+      "fuentes": [{"archivo": "Dermalab_lanzamientos_2026.pdf", "pagina": 1}],
+      "debe_mencionar": ["SKU100910", "SKU101785"],
+      "por_que": "EAN y precio de costo de los 4; además confirmar si DL-151 es SKU100910 y si DL-154 es SKU101785 (salida/pedidos/pedido_P05.md)."
+    },
+    {
+      "id": "Q17", "tipo": "lista",
+      "texto": "¿Qué productos de Bebé Feliz vienen en pack?",
+      "items": ["P06:BF-509", "P06:BF-521", "P06:BF-548"], "valor": 3,
+      "fuentes": [
+        {"archivo": "BebeFeliz_altas.xlsx", "hoja": "Altas", "fila": 5},
+        {"archivo": "BebeFeliz_altas.xlsx", "hoja": "Altas", "fila": 9},
+        {"archivo": "BebeFeliz_altas.xlsx", "hoja": "Altas", "fila": 19}
+      ],
+      "por_que": "Los 3 \"Pack Ahorro x2\" de pañales (2 x 60 un y 2 x 36 un): unidades_por_envase 2."
+    },
+    {
+      "id": "Q18", "tipo": "conteo",
+      "texto": "¿Cuántos productos quedaron listos para alta?",
+      "items": [], "valor": 209,
+      "fuentes": [],
+      "por_que": "209 de 257 (24 duplicados y 24 a revisión), con los 9 proveedores. Si se vuelve a correr y cambia, se actualiza."
+    },
+    {
+      "id": "Q19", "tipo": "hipotetica",
+      "texto": "Si Dermalab manda el EAN de DL-103, ¿en qué estado queda?",
+      "items": ["P05:DL-103"], "valor": "a_revision",
+      "fuentes": [{"archivo": "Dermalab_lanzamientos_2026.pdf", "pagina": 1}],
+      "debe_mencionar": ["precio"],
+      "por_que": "Se va gtin_faltante, pero sigue faltando el precio de costo (dato_obligatorio_faltante): sigue a revisión. Si ese EAN ya estuviera en el catálogo, sería duplicado. DECISIÓN A CONFIRMAR POR BAUTI."
+    },
+    {
+      "id": "Q20", "tipo": "hipotetica",
+      "texto": "Si Natural Vida manda para NV-203 un EAN válido que no está en el catálogo, ¿en qué estado queda?",
+      "items": ["P09:NV-203"], "valor": "lista_para_alta",
+      "fuentes": [{"archivo": "Mail_NaturalVida_altas.txt", "linea": 10}],
+      "por_que": "Su único motivo es gtin_faltante; el resto de la ficha está completo (precio, contenido, principio activo y categoría)."
+    },
+    {
+      "id": "Q21", "tipo": "hipotetica",
+      "texto": "Si Litoral manda el EAN de LT-3450 y resulta ser el de SKU102632, ¿en qué estado queda?",
+      "items": ["P03:LT-3450"], "valor": "duplicado",
+      "fuentes": [{"archivo": "litoral_altas_102026.csv", "linea": 41}],
+      "debe_mencionar": ["SKU102632"],
+      "por_que": "Con el GTIN en el catálogo es duplicado, con duplicado_de SKU102632 (hoy ya figura como posible duplicado de ese SKU)."
+    },
+    {
+      "id": "Q22", "tipo": "no_esta",
+      "texto": "¿Cuánto se vendió el mes pasado del jabón Pureza?",
+      "items": [], "valor": null, "fuentes": [], "no_esta": true,
+      "por_que": "El sistema no tiene datos de ventas: tiene que decirlo y no inventar."
+    },
+    {
+      "id": "Q23", "tipo": "no_esta",
+      "texto": "¿Cuál es el precio de venta al público de DL-109?",
+      "items": [], "valor": null, "fuentes": [], "no_esta": true,
+      "por_que": "Solo hay precio de costo (UYU 736,22, Dermalab_lista_precios.xlsx hoja Lista fila 2); el precio al público no está. Puede mencionar el de costo, pero no darlo como respuesta."
+    }
+  ],
+  "conversaciones": [
+    {
+      "id": "V01",
+      "turnos": [
+        {
+          "texto": "¿Qué productos de Importadora Norte vienen con precio en dólares?", "tipo": "lista",
+          "items": ["P08:IN7003", "P08:IN7006", "P08:IN7009", "P08:IN7012", "P08:IN7015", "P08:IN7018", "P08:IN7021", "P08:IN7024", "P08:IN7027", "P08:IN7030", "P08:IN7033", "P08:IN7036", "P08:IN7039", "P08:IN7042"],
+          "valor": 14, "fuentes": [],
+          "por_que": "Los 14: la planilla está en USD (columna \"Unit cost (USD)\") y no se convierte (§6)."
+        },
+        {
+          "texto": "¿Y cuál es el más caro?", "tipo": "dato",
+          "items": ["P08:IN7012"], "valor": 10.66, "fuentes": [],
+          "por_que": "IN7012, Vitalis Vitamin D3 2000 IU, USD 10,66 (sostener el hilo: \"esos\" = los de Norte)."
+        },
+        {
+          "texto": "¿De dónde sale ese precio?", "tipo": "dato",
+          "items": ["P08:IN7012"], "valor": 10.66,
+          "fuentes": [{"archivo": "NorteImports_new_items_Q4.xlsx", "hoja": "New items", "fila": 5}],
+          "por_que": "\"Ese\" = el de IN7012."
+        }
+      ]
+    },
+    {
+      "id": "V02",
+      "turnos": [
+        {
+          "texto": "¿Qué quedó a revisión de Laboratorio Andes?", "tipo": "lista",
+          "items": ["P01:AN-1103", "P01:AN-1106", "P01:AN-1133", "P01:AN-1136"], "valor": 4, "fuentes": [],
+          "por_que": "AN-1103 y AN-1106 sin principio activo (dato_obligatorio_faltante); AN-1133 y AN-1136 por conflicto."
+        },
+        {
+          "texto": "¿Cuáles de esos por diferencias entre los dos archivos?", "tipo": "lista",
+          "items": ["P01:AN-1133", "P01:AN-1136"], "valor": 2, "fuentes": [],
+          "por_que": "Los dos con conflicto_entre_fuentes en el contenido."
+        },
+        {
+          "texto": "¿Dónde está cada versión?", "tipo": "dato",
+          "items": ["P01:AN-1133", "P01:AN-1136"], "valor": null,
+          "fuentes": [
+            {"archivo": "Lista_de_precios_octubre_2026.pdf", "pagina": 1},
+            {"archivo": "Actualizacion_precios_Andes.xlsx", "hoja": "Actualización", "fila": 6},
+            {"archivo": "Actualizacion_precios_Andes.xlsx", "hoja": "Actualización", "fila": 5}
+          ],
+          "debe_mencionar": ["20", "30"],
+          "por_que": "AN-1133: PDF pág. 1 \"Crema x 20 gr\" vs Excel fila 6 \"Crema x 30 g\". AN-1136: PDF pág. 1 \"Comp. rec. x 20\" vs Excel fila 5 \"Comprimidos x 30\"."
+        }
+      ]
+    }
+  ]
+}
