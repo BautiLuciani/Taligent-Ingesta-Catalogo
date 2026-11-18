@@ -100,6 +100,21 @@ def clave_fuente(fuente: dict) -> tuple:
     return (fuente["archivo"], "hoja", fuente.get("hoja"), "fila", int(fuente["fila"]))
 
 
+# Diagnóstico de redacción (no cuenta para el acierto): lo que la regla 8 del prompt pide evitar en el texto.
+NOMBRES_INTERNOS = re.compile(r"\b(?:lista_para_alta|a_revision|gtin_faltante|gtin_invalido|dato_obligatorio_faltante|"
+                              r"conflicto_entre_fuentes|posible_duplicado|pendiente_fds|duplicado_de)\b")
+SKU_MAL_USADO = re.compile(r"SKU[\s:]*(?!SKU)(?:[A-Z]{1,3}-?\d{3,5})\b")  # "SKU IN7012": un código del proveedor
+
+
+def problemas_de_redaccion(texto: str) -> list[str]:
+    problemas = []
+    if NOMBRES_INTERNOS.search(texto or ""):
+        problemas.append("nombre interno")
+    if SKU_MAL_USADO.search(texto or ""):
+        problemas.append("código del proveedor llamado SKU")
+    return problemas
+
+
 def calificar(esperada: dict, respuesta: dict) -> dict:
     """Los chequeos de una consulta. 'ok' = todos bien (el acierto de consultas de la guía)."""
     chequeos = {}
@@ -145,9 +160,11 @@ def informe(esperadas: dict, respuestas: dict, solo: set[str] | None) -> dict:
             bien += nota["ok"]
             detalle.append({"id": id_turno, "pregunta": esperada["texto"], **nota,
                             "fallan": [k for k, v in nota["chequeos"].items() if not v],
+                            "redaccion": problemas_de_redaccion(respuesta.get("texto")),
                             "costo_usd": respuesta.get("costo_usd", 0), "segundos": respuesta.get("segundos", 0)})
     costo = sum(d["costo_usd"] for d in detalle)
-    return {"bien": bien, "total": total, "costo_usd": round(costo, 4),
+    return {"bien": bien, "total": total, "con_problemas_de_redaccion": sum(1 for d in detalle if d["redaccion"]),
+            "costo_usd": round(costo, 4),
             "costo_por_consulta_usd": round(costo / total, 5) if total else 0,
             "segundos": round(sum(d["segundos"] for d in detalle), 1), "detalle": detalle}
 
@@ -156,9 +173,13 @@ def mostrar_informe(datos: dict) -> None:
     for d in datos["detalle"]:
         marca = "OK " if d["ok"] else "MAL"
         extra = "" if d["ok"] else f"  <- falla: {', '.join(d['fallan'])}"
+        if d["redaccion"]:
+            extra += f"  (redacción: {', '.join(d['redaccion'])})"
         print(f"[{marca}] {d['id']:<6} {d['pregunta'][:70]}{extra}")
     print(f"\nAcierto de consultas: {datos['bien']}/{datos['total']}"
           f" = {100 * datos['bien'] / datos['total']:.0f}%" if datos["total"] else "\nNada para calificar")
+    print(f"Redacción (diagnóstico, no cuenta): {datos['con_problemas_de_redaccion']} respuestas con nombres internos "
+          "o un código del proveedor llamado SKU")
     print(f"Costo: US$ {datos['costo_usd']:.4f} (US$ {datos['costo_por_consulta_usd']:.5f} por consulta) · "
           f"{datos['segundos']} s de respuestas")
 

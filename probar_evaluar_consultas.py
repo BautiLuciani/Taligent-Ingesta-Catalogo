@@ -80,6 +80,14 @@ chequear("Q23 dice que no está y nombra el costo como dato relacionado -> bien"
          calificar(POR_ID["Q23"], respuesta("No hay precio al público; el de costo es 736,22.", None, ["P05:DL-109"],
                                             [{"archivo": "Dermalab_lista_precios.xlsx", "hoja": "Lista", "fila": 2}], esta=False))["ok"], True)
 
+print("== diagnóstico de redacción")
+from evaluar_consultas import problemas_de_redaccion  # noqa: E402
+chequear("'(SKU IN7012)' es un código del proveedor llamado SKU", problemas_de_redaccion("es VITALIS (SKU IN7012)"),
+         ["código del proveedor llamado SKU"])
+chequear("'SKU100889' está bien", problemas_de_redaccion("coincide con SKU100889"), [])
+chequear("'quedó lista_para_alta' es un nombre interno", problemas_de_redaccion("quedó lista_para_alta"), ["nombre interno"])
+chequear("'quedó lista para alta' está bien", problemas_de_redaccion("quedó lista para alta"), [])
+
 print("== el informe")
 datos = informe(ESPERADAS, {"Q01": {**q01, "costo_usd": 0.0021, "segundos": 8.7},
                             "Q22": {**respuesta("No está.", None, esta=False), "costo_usd": 0.001, "segundos": 3}}, None)
