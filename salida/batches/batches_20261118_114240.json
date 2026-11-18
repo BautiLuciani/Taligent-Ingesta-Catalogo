@@ -1,0 +1,52 @@
+[
+  {
+    "batch_id": "msgbatch_019GkEtXrNGUg4tUPZ1HipWz",
+    "creado": "2026-11-18 11:43:48",
+    "pedidos": 29,
+    "segundos": 355.1,
+    "estados": {
+      "succeeded": 29
+    },
+    "reencolados": 0
+  },
+  {
+    "batch_id": "msgbatch_01PsMkzCPV7ndarKSumpzM4t",
+    "creado": "2026-11-18 11:49:47",
+    "pedidos": 29,
+    "segundos": 355.0,
+    "estados": {
+      "succeeded": 29
+    },
+    "reencolados": 0
+  },
+  {
+    "batch_id": "msgbatch_01XViFybhXg7JAMfjRWPEwpn",
+    "creado": "2026-11-18 11:55:47",
+    "pedidos": 29,
+    "segundos": 432.7,
+    "estados": {
+      "succeeded": 29
+    },
+    "reencolados": 0
+  },
+  {
+    "batch_id": "msgbatch_01VtYKCSQyMzP6Td6atBPwXV",
+    "creado": "2026-11-18 12:03:06",
+    "pedidos": 29,
+    "segundos": 401.8,
+    "estados": {
+      "succeeded": 29
+    },
+    "reencolados": 0
+  },
+  {
+    "batch_id": "msgbatch_016haUUPU6hBG1wraQKGZR6m",
+    "creado": "2026-11-18 12:09:52",
+    "pedidos": 8,
+    "segundos": 324.2,
+    "estados": {
+      "succeeded": 8
+    },
+    "reencolados": 0
+  }
+]

@@ -504,7 +504,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "JABON LIQUIDO",
-      "explicacion": "El jabón líquido de manos va en Higiene corporal > Jabones."
+      "explicacion": "El jabón líquido va en Higiene corporal > Jabones (jabón líquido de manos)."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -674,7 +674,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "JABON",
-      "explicacion": "El jabón en barra va en Higiene corporal > Jabones."
+      "explicacion": "El jabón va en Higiene corporal > Jabones."
     },
     "motivos_revision": [],
     "duplicado_de": "SKU102786"
@@ -759,7 +759,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "JABON LIQUIDO",
-      "explicacion": "El jabón líquido de manos va en Higiene corporal > Jabones."
+      "explicacion": "El jabón líquido va en Higiene corporal > Jabones (jabón líquido de manos)."
     },
     "motivos_revision": [],
     "duplicado_de": "SKU104011"
@@ -1605,7 +1605,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "JABON",
-      "explicacion": "El jabón en barra va en Higiene corporal > Jabones."
+      "explicacion": "El jabón en barra antibacterial va en Higiene corporal > Jabones."
     },
     "motivos_revision": [
       "gtin_faltante",
@@ -1778,7 +1778,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "CEPILLO DENTAL",
-      "explicacion": "El cepillo dental va en Higiene bucal > Cepillos."
+      "explicacion": "El tipo CEPILLO DENTAL va en Higiene bucal > Cepillos."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -1859,7 +1859,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "HISOPOS",
-      "explicacion": "Los hisopos van en Cuidado personal > Higiene corporal > Algodones e hisopos."
+      "explicacion": "Los hisopos van en Algodones e hisopos."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -1944,7 +1944,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "CEPILLO DENTAL",
-      "explicacion": "El cepillo dental va en Higiene bucal > Cepillos."
+      "explicacion": "El tipo CEPILLO DENTAL va en Higiene bucal > Cepillos."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -2029,7 +2029,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "CEPILLO DENTAL",
-      "explicacion": "El cepillo dental va en Higiene bucal > Cepillos."
+      "explicacion": "El tipo CEPILLO DENTAL va en Higiene bucal > Cepillos."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -2114,7 +2114,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "JABON",
-      "explicacion": "El jabón en barra va en Higiene corporal > Jabones."
+      "explicacion": "El jabón (barra) va en Higiene corporal > Jabones."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -2709,7 +2709,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "JABON",
-      "explicacion": "El jabón en barra va en Higiene corporal > Jabones."
+      "explicacion": "El jabón va en Higiene corporal > Jabones."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -2794,7 +2794,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "JABON",
-      "explicacion": "El jabón en barra va en Higiene corporal > Jabones."
+      "explicacion": "El jabón va en Higiene corporal > Jabones."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -2879,7 +2879,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "JABON",
-      "explicacion": "El jabón en barra va en Higiene corporal > Jabones."
+      "explicacion": "El jabón va en Higiene corporal > Jabones."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -2964,7 +2964,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "JABON",
-      "explicacion": "El jabón en barra va en Higiene corporal > Jabones."
+      "explicacion": "El jabón va en Higiene corporal > Jabones."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -3381,7 +3381,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "HISOPOS",
-      "explicacion": "Los hisopos van en Cuidado personal > Higiene corporal > Algodones e hisopos."
+      "explicacion": "Los hisopos van en Higiene corporal > Algodones e hisopos."
     },
     "motivos_revision": [
       "gtin_faltante",
@@ -3469,7 +3469,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "ALGODON",
-      "explicacion": "El tipo ALGODON ubica el producto en Algodones e hisopos (CUI-HIG-ALG)."
+      "explicacion": "El algodón hidrófilo va en Algodones e hisopos."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -3554,7 +3554,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "ALGODON",
-      "explicacion": "El tipo ALGODON ubica el producto en Algodones e hisopos (CUI-HIG-ALG)."
+      "explicacion": "El algodón hidrófilo va en Algodones e hisopos."
     },
     "motivos_revision": [],
     "duplicado_de": "SKU102541"
@@ -3639,7 +3639,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "CEPILLO DENTAL",
-      "explicacion": "El tipo CEPILLO DENTAL ubica el producto en Higiene bucal > Cepillos (CUI-BUC-CEP)."
+      "explicacion": "Los cepillos dentales van en Higiene bucal > Cepillos."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -3724,7 +3724,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "CEPILLO DENTAL",
-      "explicacion": "El tipo CEPILLO DENTAL ubica el producto en Higiene bucal > Cepillos (CUI-BUC-CEP)."
+      "explicacion": "Los cepillos dentales van en Higiene bucal > Cepillos."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -3805,7 +3805,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "JABON",
-      "explicacion": "El tipo JABON ubica el producto en Higiene corporal > Jabones (CUI-HIG-JAB)."
+      "explicacion": "El jabón antibacterial va en Higiene corporal > Jabones."
     },
     "motivos_revision": [
       "gtin_faltante",
@@ -3893,7 +3893,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "PASTA DENTAL",
-      "explicacion": "El tipo PASTA DENTAL ubica el producto en Higiene bucal > Pastas dentales (CUI-BUC-PAS)."
+      "explicacion": "La pasta dental va en Higiene bucal > Pastas dentales."
     },
     "motivos_revision": [],
     "duplicado_de": "SKU104004"
@@ -3978,7 +3978,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "CEPILLO DENTAL",
-      "explicacion": "El tipo CEPILLO DENTAL ubica el producto en Higiene bucal > Cepillos (CUI-BUC-CEP)."
+      "explicacion": "Los cepillos dentales van en Higiene bucal > Cepillos."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -4063,7 +4063,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "PASTA DENTAL",
-      "explicacion": "El tipo PASTA DENTAL ubica el producto en Higiene bucal > Pastas dentales (CUI-BUC-PAS)."
+      "explicacion": "La pasta dental va en Higiene bucal > Pastas dentales."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -4148,7 +4148,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "PASTA DENTAL",
-      "explicacion": "El tipo PASTA DENTAL ubica el producto en Higiene bucal > Pastas dentales (CUI-BUC-PAS)."
+      "explicacion": "La pasta dental va en Higiene bucal > Pastas dentales."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -4233,7 +4233,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "PASTA DENTAL",
-      "explicacion": "El tipo PASTA DENTAL ubica el producto en Higiene bucal > Pastas dentales (CUI-BUC-PAS)."
+      "explicacion": "La pasta dental va en Higiene bucal > Pastas dentales."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -4322,7 +4322,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "LIMPIADOR",
-      "explicacion": "Limpiador multiuso: va en Limpieza, limpiadores de baño y cocina."
+      "explicacion": "Limpiador multiuso: va en Limpieza, Limpiadores de baño y cocina (el tipo LIMPIADOR)."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -4415,7 +4415,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "LAVANDINA",
-      "explicacion": "La lavandina va en Limpieza, desinfectantes y lavandinas."
+      "explicacion": "La lavandina va en Limpieza, Desinfectantes y lavandinas."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -4508,7 +4508,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "ALCOHOL",
-      "explicacion": "Alcohol va en Limpieza, alcohol y alcohol en gel."
+      "explicacion": "Alcohol 70 %: va en Limpieza, Alcohol y alcohol en gel."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -4597,7 +4597,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "ALCOHOL EN GEL",
-      "explicacion": "Alcohol en gel va en Limpieza, alcohol y alcohol en gel."
+      "explicacion": "Alcohol en gel para manos: va en Limpieza, Alcohol y alcohol en gel."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -4686,7 +4686,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "LIMPIADOR",
-      "explicacion": "Limpiador multiuso: va en Limpieza, limpiadores de baño y cocina."
+      "explicacion": "Limpiador multiuso: va en Limpieza, Limpiadores de baño y cocina."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -4779,7 +4779,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "LAVANDINA",
-      "explicacion": "La lavandina va en Limpieza, desinfectantes y lavandinas."
+      "explicacion": "La lavandina va en Limpieza, Desinfectantes y lavandinas."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -4868,7 +4868,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "REPELENTE",
-      "explicacion": "Repelente corporal en crema va en Insecticidas y repelentes, repelentes corporales."
+      "explicacion": "Repelente corporal en crema: va en Insecticidas y repelentes, Repelentes corporales."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -4961,7 +4961,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "ALCOHOL EN GEL",
-      "explicacion": "Alcohol en gel va en Limpieza, alcohol y alcohol en gel."
+      "explicacion": "Alcohol en gel para manos: va en Limpieza, Alcohol y alcohol en gel."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -5054,7 +5054,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "ALCOHOL",
-      "explicacion": "Alcohol va en Limpieza, alcohol y alcohol en gel."
+      "explicacion": "Alcohol 70 %: va en Limpieza, Alcohol y alcohol en gel."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -5143,7 +5143,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "ALCOHOL EN GEL",
-      "explicacion": "Alcohol en gel va en Limpieza, alcohol y alcohol en gel."
+      "explicacion": "Alcohol en gel: va en Limpieza, Alcohol y alcohol en gel."
     },
     "motivos_revision": [],
     "duplicado_de": "SKU102464"
@@ -5236,7 +5236,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "REPELENTE",
-      "explicacion": "Repelente de insectos: HOG-INS-REP (repelentes corporales)."
+      "explicacion": "Un repelente va en Insecticidas y repelentes > Repelentes corporales."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -5325,7 +5325,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "LIMPIADOR",
-      "explicacion": "Limpiador multiuso de cocina: HOG-LIM-BAN (limpiadores de baño y cocina)."
+      "explicacion": "Un limpiador de cocina va en Limpieza > Limpiadores de baño y cocina."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -5414,7 +5414,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "ALCOHOL EN GEL",
-      "explicacion": "Alcohol en gel: HOG-LIM-ALC (incluye el alcohol en gel para manos)."
+      "explicacion": "El alcohol en gel va en Limpieza > Alcohol y alcohol en gel."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -5507,7 +5507,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "ALCOHOL",
-      "explicacion": "Alcohol de 96 %: HOG-LIM-ALC (alcohol y alcohol en gel)."
+      "explicacion": "El alcohol va en Limpieza > Alcohol y alcohol en gel."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -5596,7 +5596,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "LIMPIADOR",
-      "explicacion": "Limpiador multiuso de cocina: HOG-LIM-BAN (limpiadores de baño y cocina)."
+      "explicacion": "Un limpiador de cocina va en Limpieza > Limpiadores de baño y cocina."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -5689,7 +5689,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "ALCOHOL",
-      "explicacion": "Alcohol de 96 %: HOG-LIM-ALC (alcohol y alcohol en gel)."
+      "explicacion": "El alcohol va en Limpieza > Alcohol y alcohol en gel."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -5778,7 +5778,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "REPELENTE",
-      "explicacion": "Repelente en crema para niños: HOG-INS-REP (repelentes corporales)."
+      "explicacion": "Un repelente va en Insecticidas y repelentes > Repelentes corporales."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -5867,102 +5867,10 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "ALCOHOL EN GEL",
-      "explicacion": "Alcohol en gel: HOG-LIM-ALC (incluye el alcohol en gel para manos)."
+      "explicacion": "El alcohol en gel va en Limpieza > Alcohol y alcohol en gel."
     },
     "motivos_revision": [],
     "duplicado_de": null
-  },
-  "P07:LHS-275": {
-    "item_id": "P07:LHS-275",
-    "estado": "a_revision",
-    "ficha": {
-      "gtin": null,
-      "descripcion": "ALCOHOL CLARITA 96 % X 500 ML",
-      "marca": "CLARITA",
-      "tipo": "ALCOHOL",
-      "variante": "96 %",
-      "contenido": 500,
-      "unidad": "ML",
-      "unidades_por_envase": 1,
-      "principio_activo": null,
-      "concentracion": null,
-      "condicion_venta": null,
-      "categoria": "HOG-LIM-ALC",
-      "precio_costo": 117.34,
-      "moneda": "UYU",
-      "proveedor_id": "P07",
-      "codigo_proveedor": "LHS-275",
-      "peligro_deposito": "liquido_inflamable",
-      "numero_onu": "1170"
-    },
-    "fuentes": {
-      "descripcion": {
-        "archivo": "LHS_catalogo_nuevos_productos.pdf",
-        "pagina": 1
-      },
-      "marca": {
-        "archivo": "LHS_catalogo_nuevos_productos.pdf",
-        "pagina": 1
-      },
-      "tipo": {
-        "archivo": "LHS_catalogo_nuevos_productos.pdf",
-        "pagina": 1
-      },
-      "variante": {
-        "archivo": "LHS_catalogo_nuevos_productos.pdf",
-        "pagina": 1
-      },
-      "contenido": {
-        "archivo": "LHS_catalogo_nuevos_productos.pdf",
-        "pagina": 1
-      },
-      "unidad": {
-        "archivo": "LHS_catalogo_nuevos_productos.pdf",
-        "pagina": 1
-      },
-      "unidades_por_envase": {
-        "archivo": "LHS_catalogo_nuevos_productos.pdf",
-        "pagina": 1
-      },
-      "categoria": {
-        "archivo": "LHS_catalogo_nuevos_productos.pdf",
-        "pagina": 1
-      },
-      "precio_costo": {
-        "archivo": "LHS_catalogo_nuevos_productos.pdf",
-        "pagina": 1
-      },
-      "moneda": {
-        "archivo": "LHS_catalogo_nuevos_productos.pdf",
-        "pagina": 1
-      },
-      "proveedor_id": {
-        "archivo": "LHS_catalogo_nuevos_productos.pdf",
-        "pagina": 1
-      },
-      "codigo_proveedor": {
-        "archivo": "LHS_catalogo_nuevos_productos.pdf",
-        "pagina": 1
-      },
-      "peligro_deposito": {
-        "archivo": "FDS_Clarita_alcohol.pdf",
-        "pagina": 1
-      },
-      "numero_onu": {
-        "archivo": "FDS_Clarita_alcohol.pdf",
-        "pagina": 1
-      }
-    },
-    "categoria_decidida_por": {
-      "campo": "tipo",
-      "valor": "ALCOHOL",
-      "explicacion": "Alcohol de 96 %: HOG-LIM-ALC (alcohol y alcohol en gel)."
-    },
-    "motivos_revision": [
-      "gtin_faltante",
-      "posible_duplicado"
-    ],
-    "duplicado_de": "SKU101386"
   },
   "P07:LHS-248": {
     "item_id": "P07:LHS-248",
@@ -6048,10 +5956,102 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "ALCOHOL",
-      "explicacion": "Alcohol de 70 %: HOG-LIM-ALC (alcohol y alcohol en gel)."
+      "explicacion": "El alcohol va en Limpieza > Alcohol y alcohol en gel."
     },
     "motivos_revision": [],
     "duplicado_de": "SKU101505"
+  },
+  "P07:LHS-275": {
+    "item_id": "P07:LHS-275",
+    "estado": "a_revision",
+    "ficha": {
+      "gtin": null,
+      "descripcion": "ALCOHOL CLARITA 96 % X 500 ML",
+      "marca": "CLARITA",
+      "tipo": "ALCOHOL",
+      "variante": "96 %",
+      "contenido": 500,
+      "unidad": "ML",
+      "unidades_por_envase": 1,
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "HOG-LIM-ALC",
+      "precio_costo": 117.34,
+      "moneda": "UYU",
+      "proveedor_id": "P07",
+      "codigo_proveedor": "LHS-275",
+      "peligro_deposito": "liquido_inflamable",
+      "numero_onu": "1170"
+    },
+    "fuentes": {
+      "descripcion": {
+        "archivo": "LHS_catalogo_nuevos_productos.pdf",
+        "pagina": 1
+      },
+      "marca": {
+        "archivo": "LHS_catalogo_nuevos_productos.pdf",
+        "pagina": 1
+      },
+      "tipo": {
+        "archivo": "LHS_catalogo_nuevos_productos.pdf",
+        "pagina": 1
+      },
+      "variante": {
+        "archivo": "LHS_catalogo_nuevos_productos.pdf",
+        "pagina": 1
+      },
+      "contenido": {
+        "archivo": "LHS_catalogo_nuevos_productos.pdf",
+        "pagina": 1
+      },
+      "unidad": {
+        "archivo": "LHS_catalogo_nuevos_productos.pdf",
+        "pagina": 1
+      },
+      "unidades_por_envase": {
+        "archivo": "LHS_catalogo_nuevos_productos.pdf",
+        "pagina": 1
+      },
+      "categoria": {
+        "archivo": "LHS_catalogo_nuevos_productos.pdf",
+        "pagina": 1
+      },
+      "precio_costo": {
+        "archivo": "LHS_catalogo_nuevos_productos.pdf",
+        "pagina": 1
+      },
+      "moneda": {
+        "archivo": "LHS_catalogo_nuevos_productos.pdf",
+        "pagina": 1
+      },
+      "proveedor_id": {
+        "archivo": "LHS_catalogo_nuevos_productos.pdf",
+        "pagina": 1
+      },
+      "codigo_proveedor": {
+        "archivo": "LHS_catalogo_nuevos_productos.pdf",
+        "pagina": 1
+      },
+      "peligro_deposito": {
+        "archivo": "FDS_Clarita_alcohol.pdf",
+        "pagina": 1
+      },
+      "numero_onu": {
+        "archivo": "FDS_Clarita_alcohol.pdf",
+        "pagina": 1
+      }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "ALCOHOL",
+      "explicacion": "El alcohol va en Limpieza > Alcohol y alcohol en gel."
+    },
+    "motivos_revision": [
+      "gtin_faltante",
+      "posible_duplicado"
+    ],
+    "duplicado_de": "SKU101386"
   },
   "P07:LHS-272": {
     "item_id": "P07:LHS-272",
@@ -6133,7 +6133,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "REPELENTE",
-      "explicacion": "Repelente de uso corporal (crema), va en Insecticidas y repelentes > Repelentes corporales."
+      "explicacion": "El repelente en crema va en Insecticidas y repelentes > Repelentes corporales (HOG-INS-REP)."
     },
     "motivos_revision": [
       "gtin_faltante",
@@ -6229,7 +6229,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "INSECTICIDA",
-      "explicacion": "Insecticida de ambiente, va en Insecticidas y repelentes > Insecticidas de ambiente."
+      "explicacion": "Insecticida de ambiente en aerosol para cucarachas va en Insecticidas de ambiente (HOG-INS-AMB)."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -6322,7 +6322,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "LAVANDINA",
-      "explicacion": "Lavandina va en Hogar y limpieza > Desinfectantes y lavandinas."
+      "explicacion": "La lavandina va en Limpieza > Desinfectantes y lavandinas (HOG-LIM-DES)."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -6411,7 +6411,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "REPELENTE",
-      "explicacion": "Repelente de uso corporal (crema infantil), va en Insecticidas y repelentes > Repelentes corporales."
+      "explicacion": "El repelente en crema para niños va en Insecticidas y repelentes > Repelentes corporales (HOG-INS-REP)."
     },
     "motivos_revision": [],
     "duplicado_de": "SKU101834"
@@ -6504,7 +6504,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "LAVANDINA",
-      "explicacion": "Lavandina va en Hogar y limpieza > Desinfectantes y lavandinas."
+      "explicacion": "La lavandina va en Limpieza > Desinfectantes y lavandinas (HOG-LIM-DES)."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -6589,7 +6589,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "COMPRIMIDOS",
-      "explicacion": "Sin principio activo declarado no se puede asignar la clase terapéutica; categoría queda null."
+      "explicacion": "Sin principio activo en el archivo, la categoría no se puede determinar y queda en null."
     },
     "motivos_revision": [
       "dato_obligatorio_faltante"
@@ -6676,7 +6676,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "SUSPENSION",
-      "explicacion": "Sin principio activo declarado no se puede asignar la clase terapéutica; categoría queda null."
+      "explicacion": "Sin principio activo en el archivo, la categoría no se puede determinar y queda en null."
     },
     "motivos_revision": [
       "dato_obligatorio_faltante"
@@ -6771,7 +6771,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "COMPRIMIDOS",
-      "explicacion": "La categoría sale del principio activo PARACETAMOL (analgésico y antifebril oral), no del tipo COMPRIMIDOS."
+      "explicacion": "Analgésico y antifebril oral por principio activo PARACETAMOL: va en Analgésicos y antifebriles orales."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -6864,7 +6864,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "COMPRIMIDOS",
-      "explicacion": "La categoría sale del principio activo METFORMINA (diabetes, bajo receta), no del tipo COMPRIMIDOS."
+      "explicacion": "Antidiabético por principio activo METFORMINA (diabetes, bajo receta): va en Metabolismo."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -6957,7 +6957,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "CAPSULAS",
-      "explicacion": "La categoría sale del principio activo OMEPRAZOL (protector gástrico), no del tipo CAPSULAS."
+      "explicacion": "Antiácido y protector gástrico por principio activo OMEPRAZOL: va en Antiácidos y protectores gástricos."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -7050,7 +7050,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "CAPSULAS",
-      "explicacion": "La categoría sale del principio activo OMEPRAZOL (protector gástrico), no del tipo CAPSULAS."
+      "explicacion": "Antiácido y protector gástrico por principio activo OMEPRAZOL: va en Antiácidos y protectores gástricos."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -7143,7 +7143,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "COMPRIMIDOS",
-      "explicacion": "La categoría sale del principio activo LOPERAMIDA (antidiarreico), no del tipo COMPRIMIDOS."
+      "explicacion": "Antidiarreico oral por principio activo LOPERAMIDA: va en Antidiarreicos."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -7238,7 +7238,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "CREMA",
-      "explicacion": "La categoría sale del principio activo HIDROCORTISONA (corticoide tópico), no del tipo CREMA."
+      "explicacion": "Corticoide tópico por principio activo HIDROCORTISONA: va en Corticoides tópicos."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -7331,7 +7331,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "COMPRIMIDOS",
-      "explicacion": "La categoría sale del principio activo LORATADINA (antihistamínico oral), no del tipo COMPRIMIDOS."
+      "explicacion": "Antihistamínico oral por principio activo LORATADINA: va en Antialérgicos."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -7424,7 +7424,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "CREMA",
-      "explicacion": "La categoría sale del principio activo HIDROCORTISONA (corticoide tópico), no del tipo CREMA."
+      "explicacion": "Corticoide tópico por principio activo HIDROCORTISONA: va en Corticoides tópicos."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -7511,7 +7511,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "CREMA",
-      "explicacion": "El principio activo clotrimazol (antimicótico tópico) ubica la crema en Antimicóticos tópicos."
+      "explicacion": "Crema con clotrimazol, antimicótico tópico: va en Antimicóticos tópicos."
     },
     "motivos_revision": [
       "conflicto_entre_fuentes"
@@ -7600,7 +7600,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "COMPRIMIDOS",
-      "explicacion": "El principio activo paracetamol (analgésico oral) ubica el producto en Analgésicos y antifebriles orales."
+      "explicacion": "Comprimidos de paracetamol, analgésico y antifebril oral: Analgésicos y antifebriles orales."
     },
     "motivos_revision": [
       "conflicto_entre_fuentes"
@@ -7697,7 +7697,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "COMPRIMIDOS",
-      "explicacion": "El principio activo enalapril (antihipertensivo) ubica el producto en Cardiovascular."
+      "explicacion": "Comprimidos de enalapril, antihipertensivo: va en Cardiovascular."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -7792,7 +7792,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "COMPRIMIDOS",
-      "explicacion": "El principio activo paracetamol + clorfeniramina + fenilefrina es antigripal: Antigripales."
+      "explicacion": "Combinación paracetamol + clorfeniramina + fenilefrina para gripe y resfrío: Antigripales."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -7885,7 +7885,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "SOBRES",
-      "explicacion": "El principio activo paracetamol + clorfeniramina + fenilefrina es antigripal: Antigripales."
+      "explicacion": "Sobres de la combinación paracetamol + clorfeniramina + fenilefrina para gripe: Antigripales."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -7980,7 +7980,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "SOBRES",
-      "explicacion": "El principio activo paracetamol + clorfeniramina + fenilefrina es antigripal: Antigripales."
+      "explicacion": "Sobres de la combinación paracetamol + clorfeniramina + fenilefrina para gripe: Antigripales."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -8075,7 +8075,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "GEL",
-      "explicacion": "El principio activo diclofenac en gel tópico ubica el producto en Antiinflamatorios tópicos."
+      "explicacion": "Gel tópico de diclofenac, antiinflamatorio tópico: Antiinflamatorios tópicos."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -8170,7 +8170,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "COMPRIMIDOS",
-      "explicacion": "El principio activo ibuprofeno (analgésico oral) ubica el producto en Analgésicos y antifebriles orales."
+      "explicacion": "Comprimidos de ibuprofeno, analgésico y antifebril oral: Analgésicos y antifebriles orales."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -8265,7 +8265,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "COMPRIMIDOS",
-      "explicacion": "El principio activo levotiroxina (hormona tiroidea) ubica el producto en Diabetes y tiroides."
+      "explicacion": "Comprimidos de levotiroxina para la tiroides: Diabetes y tiroides (Metabolismo)."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -8358,7 +8358,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "COMPRIMIDOS",
-      "explicacion": "El principio activo levotiroxina (hormona tiroidea) ubica el producto en Diabetes y tiroides."
+      "explicacion": "Comprimidos de levotiroxina para la tiroides: Diabetes y tiroides (Metabolismo)."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -8453,7 +8453,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "COMPRIMIDOS",
-      "explicacion": "El principio activo loperamida es un antidiarreico: MED-DIG-ANT (la clase sale del principio activo)."
+      "explicacion": "La categoría sale del principio activo LOPERAMIDA (antidiarreico); el tipo solo fija la forma farmacéutica."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -8548,7 +8548,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "COMPRIMIDOS",
-      "explicacion": "El principio activo bisacodilo es un laxante: MED-DIG-LAX (la clase sale del principio activo)."
+      "explicacion": "La categoría sale del principio activo BISACODILO (laxante); el tipo solo fija la forma farmacéutica."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -8643,7 +8643,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "COMPRIMIDOS",
-      "explicacion": "El principio activo enalapril es antihipertensivo: MED-CRO-CAR (la clase sale del principio activo)."
+      "explicacion": "La categoría sale del principio activo ENALAPRIL (antihipertensivo); el tipo solo fija la forma farmacéutica."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -8736,7 +8736,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "JARABE",
-      "explicacion": "El principio activo dextrometorfano es antitusivo: MED-RES-TOS (la clase sale del principio activo)."
+      "explicacion": "La categoría sale del principio activo DEXTROMETORFANO (jarabe para la tos); el tipo solo fija la forma farmacéutica."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -8829,7 +8829,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "JARABE",
-      "explicacion": "El principio activo paracetamol es un analgésico y antifebril: MED-DOL-ANA (la clase sale del principio activo)."
+      "explicacion": "La categoría sale del principio activo PARACETAMOL (analgésico y antifebril); el tipo solo fija la forma farmacéutica."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -8922,7 +8922,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "COMPRIMIDOS",
-      "explicacion": "El principio activo paracetamol es un analgésico y antifebril: MED-DOL-ANA (la clase sale del principio activo)."
+      "explicacion": "La categoría sale del principio activo PARACETAMOL (analgésico y antifebril); el tipo solo fija la forma farmacéutica."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -8995,7 +8995,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "CREMA",
-      "explicacion": "Crema de hidratación facial de uso diario: DER-FAC-HID."
+      "explicacion": "Crema de uso diario para hidratación facial: DER-FAC-HID."
     },
     "motivos_revision": [
       "gtin_faltante",
@@ -9072,7 +9072,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "GEL LIMPIADOR",
-      "explicacion": "Gel limpiador para piel mixta a grasa: Limpieza facial (DER-FAC-LIM)."
+      "explicacion": "Gel limpiador facial para piel mixta a grasa: DER-FAC-LIM."
     },
     "motivos_revision": [
       "gtin_faltante",
@@ -9148,7 +9148,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "PROTECTOR SOLAR",
-      "explicacion": "Protector solar sin mención infantil: Protectores para adultos (DER-SOL-ADU)."
+      "explicacion": "Protector solar de amplio espectro sin indicación infantil: DER-SOL-ADU."
     },
     "motivos_revision": [
       "gtin_faltante",
@@ -9237,9 +9237,9 @@
       }
     },
     "categoria_decidida_por": {
-      "campo": "variante",
-      "valor": "UREA 10 %",
-      "explicacion": "Crema de urea para el cuerpo: la taxonomía ubica las cremas de urea en Hidratación corporal (DER-COR-HID)."
+      "campo": "tipo",
+      "valor": "CREMA",
+      "explicacion": "Crema corporal con urea para piel muy seca del cuerpo: DER-COR-HID."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -9327,7 +9327,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "SERUM",
-      "explicacion": "Sérum con beneficio antiarrugas (reduce arrugas visibles): Antiedad (DER-FAC-ANT)."
+      "explicacion": "Sérum cuyo beneficio principal es reducir arrugas: DER-FAC-ANT."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -9415,7 +9415,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "CREMA",
-      "explicacion": "Crema de hidratación facial de uso diario: DER-FAC-HID."
+      "explicacion": "Crema de uso diario para hidratación facial; el FPS 30 queda en la variante: DER-FAC-HID."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -9503,7 +9503,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "GEL LIMPIADOR",
-      "explicacion": "Gel limpiador para piel mixta a grasa: Limpieza facial (DER-FAC-LIM)."
+      "explicacion": "Gel limpiador facial para piel mixta a grasa: DER-FAC-LIM."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -9591,7 +9591,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "PROTECTOR SOLAR",
-      "explicacion": "Protector solar sin mención infantil: Protectores para adultos (DER-SOL-ADU)."
+      "explicacion": "Protector solar de amplio espectro sin indicación infantil: DER-SOL-ADU."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -9679,7 +9679,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "SERUM",
-      "explicacion": "Sérum con beneficio antiarrugas (reduce arrugas visibles): Antiedad (DER-FAC-ANT)."
+      "explicacion": "Sérum cuyo beneficio principal es reducir arrugas: DER-FAC-ANT."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -9767,7 +9767,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "PROTECTOR SOLAR",
-      "explicacion": "Protector solar sin mención infantil: Protectores para adultos (DER-SOL-ADU)."
+      "explicacion": "Protector solar de amplio espectro sin indicación infantil: DER-SOL-ADU."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -9840,7 +9840,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "AGUA MICELAR",
-      "explicacion": "El agua micelar va en Limpieza facial (DER-FAC-LIM), según la taxonomía."
+      "explicacion": "El agua micelar desmaquilla y limpia la piel: categoría de limpieza facial."
     },
     "motivos_revision": [
       "gtin_faltante",
@@ -9932,7 +9932,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "CREMA",
-      "explicacion": "Crema facial para piel con tendencia acneica (texto descriptivo): va en Piel acneica (DER-FAC-ACN)."
+      "explicacion": "La crema para piel con tendencia acneica va en Piel acneica; el texto del producto decide la subcategoría."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -10020,7 +10020,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "PROTECTOR SOLAR",
-      "explicacion": "Protector solar sin indicación infantil: va en Protectores para adultos (DER-SOL-ADU)."
+      "explicacion": "Protector solar sin mención infantil: categoría de protectores para adultos."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -10108,7 +10108,7 @@
     "categoria_decidida_por": {
       "campo": "variante",
       "valor": "SUN KIDS FPS 50+",
-      "explicacion": "La línea Kids indica protector formulado para niños: va en Protectores infantiles (DER-SOL-INF)."
+      "explicacion": "La línea Kids y el texto 'formulado para la piel de los niños' llevan a protectores infantiles."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -10196,7 +10196,7 @@
     "categoria_decidida_por": {
       "campo": "variante",
       "valor": "SUN AFTER SUN",
-      "explicacion": "La línea After Sun es un gel para después de la exposición al sol: va en Post solar (DER-SOL-POS)."
+      "explicacion": "After sun es el calmante posterior a la exposición al sol: categoría de post solar."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -10284,7 +10284,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "PROTECTOR SOLAR",
-      "explicacion": "Protector solar sin indicación infantil: va en Protectores para adultos (DER-SOL-ADU)."
+      "explicacion": "Protector solar sin mención infantil: categoría de protectores para adultos."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -10372,7 +10372,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "AGUA MICELAR",
-      "explicacion": "El agua micelar va en Limpieza facial (DER-FAC-LIM), según la taxonomía."
+      "explicacion": "El agua micelar desmaquilla y limpia la piel: categoría de limpieza facial."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -10460,7 +10460,7 @@
     "categoria_decidida_por": {
       "campo": "variante",
       "valor": "UREA 10 %",
-      "explicacion": "Las cremas de urea van en Hidratación corporal (DER-COR-HID), según la taxonomía."
+      "explicacion": "Crema de urea para el cuerpo (piel muy seca): categoría de hidratación corporal."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -10545,7 +10545,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "CAPSULAS",
-      "explicacion": "Suplemento: la categoría sale del principio activo VALERIANA (sueño y relajación), no de la forma CAPSULAS."
+      "explicacion": "La categoría sale del principio activo VALERIANA (sueño), no del tipo CAPSULAS."
     },
     "motivos_revision": [
       "gtin_faltante"
@@ -10632,7 +10632,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "COMPRIMIDOS",
-      "explicacion": "Suplemento: la categoría sale del principio activo HIERRO (minerales), no de la forma COMPRIMIDOS."
+      "explicacion": "La categoría sale del principio activo HIERRO (mineral), no del tipo COMPRIMIDOS."
     },
     "motivos_revision": [
       "gtin_faltante"
@@ -10719,7 +10719,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "CAPSULAS",
-      "explicacion": "Suplemento: la categoría sale del principio activo CURCUMA (extracto vegetal), no de la forma CAPSULAS."
+      "explicacion": "La categoría sale del principio activo CURCUMA (extracto vegetal), no del tipo CAPSULAS."
     },
     "motivos_revision": [
       "gtin_invalido"
@@ -10810,7 +10810,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "COMPRIMIDOS EFERVESCENTES",
-      "explicacion": "Suplemento: la categoría sale del principio activo VITAMINA C (vitamina individual), no de la forma."
+      "explicacion": "La categoría sale del principio activo VITAMINA C (vitamina individual), no del tipo."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -10899,7 +10899,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "COMPRIMIDOS",
-      "explicacion": "Suplemento: la categoría sale del principio activo MELATONINA (sueño y relajación), no de la forma."
+      "explicacion": "La categoría sale del principio activo MELATONINA (sueño), no del tipo COMPRIMIDOS."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -10988,7 +10988,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "CAPSULAS",
-      "explicacion": "Suplemento: la categoría sale del principio activo CITRATO DE MAGNESIO (minerales), no de la forma CAPSULAS."
+      "explicacion": "La categoría sale del principio activo CITRATO DE MAGNESIO (mineral), no del tipo CAPSULAS."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -11077,7 +11077,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "COMPRIMIDOS",
-      "explicacion": "Suplemento: la categoría sale del principio activo MELATONINA (sueño y relajación), no de la forma."
+      "explicacion": "La categoría sale del principio activo MELATONINA (sueño), no del tipo COMPRIMIDOS."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -11166,7 +11166,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "COMPRIMIDOS",
-      "explicacion": "Suplemento: la categoría sale del principio activo ZINC (minerales), no de la forma."
+      "explicacion": "La categoría sale del principio activo ZINC (mineral), no del tipo COMPRIMIDOS."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -11255,7 +11255,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "COMPRIMIDOS",
-      "explicacion": "Suplemento: la categoría sale del principio activo MELATONINA (sueño y relajación), no de la forma."
+      "explicacion": "La categoría sale del principio activo MELATONINA (sueño), no del tipo COMPRIMIDOS."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -11344,7 +11344,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "COMPRIMIDOS EFERVESCENTES",
-      "explicacion": "Suplemento: la categoría sale del principio activo VITAMINA C (vitamina individual), no de la forma."
+      "explicacion": "La categoría sale del principio activo VITAMINA C (vitamina individual), no del tipo."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -11389,14 +11389,6 @@
         "archivo": "Mail_NaturalVida_altas.txt",
         "linea": 20
       },
-      "principio_activo": {
-        "archivo": "Mail_NaturalVida_altas.txt",
-        "linea": 20
-      },
-      "concentracion": {
-        "archivo": "Mail_NaturalVida_altas.txt",
-        "linea": 20
-      },
       "contenido": {
         "archivo": "Mail_NaturalVida_altas.txt",
         "linea": 20
@@ -11406,6 +11398,14 @@
         "linea": 20
       },
       "unidades_por_envase": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 20
+      },
+      "principio_activo": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 20
+      },
+      "concentracion": {
         "archivo": "Mail_NaturalVida_altas.txt",
         "linea": 20
       },
@@ -11433,7 +11433,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "COMPRIMIDOS",
-      "explicacion": "Tipo COMPRIMIDOS; la categoría sale del principio activo ZINC, un mineral (Vitaminas y minerales > Minerales)."
+      "explicacion": "Suplemento en comprimidos de zinc (mineral), va en Vitaminas y minerales > Minerales."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -11478,14 +11478,6 @@
         "archivo": "Mail_NaturalVida_altas.txt",
         "linea": 21
       },
-      "principio_activo": {
-        "archivo": "Mail_NaturalVida_altas.txt",
-        "linea": 21
-      },
-      "concentracion": {
-        "archivo": "Mail_NaturalVida_altas.txt",
-        "linea": 21
-      },
       "contenido": {
         "archivo": "Mail_NaturalVida_altas.txt",
         "linea": 21
@@ -11495,6 +11487,14 @@
         "linea": 21
       },
       "unidades_por_envase": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 21
+      },
+      "principio_activo": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 21
+      },
+      "concentracion": {
         "archivo": "Mail_NaturalVida_altas.txt",
         "linea": 21
       },
@@ -11522,7 +11522,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "COMPRIMIDOS",
-      "explicacion": "Tipo COMPRIMIDOS; la categoría sale del principio activo MELATONINA, para dormir (Suplementos > Sueño y relajación)."
+      "explicacion": "Suplemento en comprimidos de melatonina, un producto para dormir: va en Suplementos > Sueño y relajación."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -11567,10 +11567,6 @@
         "archivo": "Mail_NaturalVida_altas.txt",
         "linea": 22
       },
-      "principio_activo": {
-        "archivo": "Mail_NaturalVida_altas.txt",
-        "linea": 22
-      },
       "contenido": {
         "archivo": "Mail_NaturalVida_altas.txt",
         "linea": 22
@@ -11580,6 +11576,10 @@
         "linea": 22
       },
       "unidades_por_envase": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 22
+      },
+      "principio_activo": {
         "archivo": "Mail_NaturalVida_altas.txt",
         "linea": 22
       },
@@ -11607,7 +11607,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "POLVO",
-      "explicacion": "Tipo POLVO; la categoría sale del principio activo COLAGENO HIDROLIZADO (Suplementos > Colágeno y articulaciones)."
+      "explicacion": "Suplemento en polvo de colágeno hidrolizado: va en Nutrición y suplementos > Suplementos > Colágeno y articulaciones."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -11652,14 +11652,6 @@
         "archivo": "Mail_NaturalVida_altas.txt",
         "linea": 23
       },
-      "principio_activo": {
-        "archivo": "Mail_NaturalVida_altas.txt",
-        "linea": 23
-      },
-      "concentracion": {
-        "archivo": "Mail_NaturalVida_altas.txt",
-        "linea": 23
-      },
       "contenido": {
         "archivo": "Mail_NaturalVida_altas.txt",
         "linea": 23
@@ -11669,6 +11661,14 @@
         "linea": 23
       },
       "unidades_por_envase": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 23
+      },
+      "principio_activo": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 23
+      },
+      "concentracion": {
         "archivo": "Mail_NaturalVida_altas.txt",
         "linea": 23
       },
@@ -11696,7 +11696,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "CAPSULAS",
-      "explicacion": "Tipo CAPSULAS; la categoría sale del principio activo CITRATO DE MAGNESIO, un mineral (Vitaminas y minerales > Minerales)."
+      "explicacion": "Suplemento en cápsulas de citrato de magnesio (mineral): va en Vitaminas y minerales > Minerales."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -11789,7 +11789,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "ACONDICIONADOR",
-      "explicacion": "El acondicionador va en Cabello > Acondicionadores y tratamientos."
+      "explicacion": "Acondicionador va en Cabello > Acondicionadores y tratamientos."
     },
     "motivos_revision": [
       "gtin_invalido"
@@ -11889,7 +11889,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "ACONDICIONADOR",
-      "explicacion": "El acondicionador va en Cabello > Acondicionadores y tratamientos."
+      "explicacion": "Acondicionador va en Cabello > Acondicionadores y tratamientos."
     },
     "motivos_revision": [],
     "duplicado_de": "SKU100714"
@@ -11987,7 +11987,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "SHAMPOO",
-      "explicacion": "El shampoo va en Cabello > Shampoo."
+      "explicacion": "Shampoo va en Cabello > Shampoo."
     },
     "motivos_revision": [],
     "duplicado_de": "SKU102128"
@@ -12093,7 +12093,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "LACA",
-      "explicacion": "La laca para peinar va en Cabello > Fijación."
+      "explicacion": "Laca para peinar va en Cabello > Fijación."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -12191,7 +12191,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "ACONDICIONADOR",
-      "explicacion": "El acondicionador va en Cabello > Acondicionadores y tratamientos."
+      "explicacion": "Acondicionador va en Cabello > Acondicionadores y tratamientos."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -12289,7 +12289,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "ACONDICIONADOR",
-      "explicacion": "El acondicionador va en Cabello > Acondicionadores y tratamientos."
+      "explicacion": "Acondicionador va en Cabello > Acondicionadores y tratamientos."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -12387,7 +12387,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "SHAMPOO",
-      "explicacion": "El shampoo va en Cabello > Shampoo."
+      "explicacion": "Shampoo va en Cabello > Shampoo."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -12485,7 +12485,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "ACONDICIONADOR",
-      "explicacion": "El acondicionador va en Cabello > Acondicionadores y tratamientos."
+      "explicacion": "Acondicionador va en Cabello > Acondicionadores y tratamientos; CABELLO SECO es variante, no el tipo SHAMPOO EN SECO."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -12583,7 +12583,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "TRATAMIENTO CAPILAR",
-      "explicacion": "El tratamiento capilar va en Cabello > Acondicionadores y tratamientos."
+      "explicacion": "Tratamiento capilar va en Cabello > Acondicionadores y tratamientos."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -12681,7 +12681,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "ACONDICIONADOR",
-      "explicacion": "El acondicionador va en Cabello > Acondicionadores y tratamientos."
+      "explicacion": "Acondicionador va en Cabello > Acondicionadores y tratamientos."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -12779,7 +12779,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "SHAMPOO",
-      "explicacion": "«SH.» es shampoo; CAB. SECO describe para qué cabello es, no el tipo SHAMPOO EN SECO."
+      "explicacion": "SH. es SHAMPOO; el cabello seco es variante, no el tipo SHAMPOO EN SECO. Va en Cabello > Shampoo."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -12877,7 +12877,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "ACONDICIONADOR",
-      "explicacion": "«ACOND.» es acondicionador: va en Cabello > Acondicionadores y tratamientos."
+      "explicacion": "ACOND. es ACONDICIONADOR; va en Cabello > Acondicionadores y tratamientos."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -12975,7 +12975,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "ACONDICIONADOR",
-      "explicacion": "«ACOND.» es acondicionador: va en Cabello > Acondicionadores y tratamientos."
+      "explicacion": "ACOND. es ACONDICIONADOR; va en Cabello > Acondicionadores y tratamientos."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -13073,7 +13073,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "SHAMPOO",
-      "explicacion": "«SH.» es shampoo: va en Cabello > Shampoo."
+      "explicacion": "SH. es SHAMPOO; va en Cabello > Shampoo."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -13171,7 +13171,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "ACONDICIONADOR",
-      "explicacion": "«ACOND.» es acondicionador: va en Cabello > Acondicionadores y tratamientos."
+      "explicacion": "ACOND. es ACONDICIONADOR; va en Cabello > Acondicionadores y tratamientos."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -13269,7 +13269,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "SHAMPOO",
-      "explicacion": "«SH.» es shampoo: va en Cabello > Shampoo."
+      "explicacion": "SH. es SHAMPOO; va en Cabello > Shampoo."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -13367,7 +13367,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "SHAMPOO",
-      "explicacion": "«SH.» es shampoo: va en Cabello > Shampoo."
+      "explicacion": "SH. es SHAMPOO; va en Cabello > Shampoo."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -13465,7 +13465,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "ACONDICIONADOR",
-      "explicacion": "«ACOND.» es acondicionador: va en Cabello > Acondicionadores y tratamientos."
+      "explicacion": "ACOND. es ACONDICIONADOR; va en Cabello > Acondicionadores y tratamientos."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -13669,7 +13669,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "ACONDICIONADOR",
-      "explicacion": "«ACOND.» es acondicionador: va en Cabello > Acondicionadores y tratamientos."
+      "explicacion": "ACOND. es ACONDICIONADOR; va en Cabello > Acondicionadores y tratamientos."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -13767,7 +13767,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "TRATAMIENTO CAPILAR",
-      "explicacion": "Los tratamientos capilares van en Cabello > Acondicionadores y tratamientos."
+      "explicacion": "Los tratamientos capilares van en Cuidado personal > Cabello > Acondicionadores y tratamientos."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -13865,7 +13865,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "TRATAMIENTO CAPILAR",
-      "explicacion": "Los tratamientos capilares van en Cabello > Acondicionadores y tratamientos."
+      "explicacion": "Los tratamientos capilares van en Cuidado personal > Cabello > Acondicionadores y tratamientos."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -13963,7 +13963,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "SHAMPOO",
-      "explicacion": "CABELLO SECO describe para qué cabello es el shampoo, no es el tipo SHAMPOO EN SECO; va en Cabello > Shampoo."
+      "explicacion": "Shampoo para cabello seco: el tipo es SHAMPOO y CABELLO SECO es variante; va en Cuidado personal > Cabello > Shampoo."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -14061,7 +14061,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "SHAMPOO",
-      "explicacion": "El shampoo va en Cabello > Shampoo."
+      "explicacion": "El shampoo va en Cuidado personal > Cabello > Shampoo."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -14159,7 +14159,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "ACONDICIONADOR",
-      "explicacion": "El acondicionador va en Cabello > Acondicionadores y tratamientos."
+      "explicacion": "El acondicionador va en Cuidado personal > Cabello > Acondicionadores y tratamientos."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -14257,7 +14257,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "SHAMPOO",
-      "explicacion": "El shampoo va en Cabello > Shampoo."
+      "explicacion": "El shampoo va en Cuidado personal > Cabello > Shampoo."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -14355,7 +14355,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "ACONDICIONADOR",
-      "explicacion": "El acondicionador va en Cabello > Acondicionadores y tratamientos."
+      "explicacion": "El acondicionador va en Cuidado personal > Cabello > Acondicionadores y tratamientos."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -14453,7 +14453,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "SHAMPOO",
-      "explicacion": "CABELLO SECO describe para qué cabello es el shampoo; va en Cabello > Shampoo."
+      "explicacion": "El shampoo va en Cuidado personal > Cabello > Shampoo."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -14474,7 +14474,7 @@
       "concentracion": null,
       "condicion_venta": null,
       "categoria": "CUI-CAP-SHA",
-      "precio_costo": 249.0,
+      "precio_costo": 249,
       "moneda": "UYU",
       "proveedor_id": "P02",
       "codigo_proveedor": "RIV-1308",
@@ -14551,7 +14551,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "SHAMPOO",
-      "explicacion": "El shampoo va en Cabello > Shampoo."
+      "explicacion": "El shampoo va en Cuidado personal > Cabello > Shampoo."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -14649,7 +14649,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "TRATAMIENTO CAPILAR",
-      "explicacion": "Los tratamientos capilares van en Cabello > Acondicionadores y tratamientos."
+      "explicacion": "Los tratamientos capilares van en Cuidado personal > Cabello > Acondicionadores y tratamientos."
     },
     "motivos_revision": [],
     "duplicado_de": "SKU103605"
@@ -14747,7 +14747,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "SHAMPOO",
-      "explicacion": "El tipo SHAMPOO (abreviado SH.) va en Cabello > Shampoo."
+      "explicacion": "El tipo SHAMPOO va en Cuidado personal > Cabello > Shampoo."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -14845,7 +14845,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "SHAMPOO",
-      "explicacion": "El tipo SHAMPOO (abreviado SH.) va en Cabello > Shampoo."
+      "explicacion": "El tipo SHAMPOO va en Cuidado personal > Cabello > Shampoo."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -14951,7 +14951,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "LACA",
-      "explicacion": "La laca va en Cabello > Fijación (geles, lacas y espumas para peinar)."
+      "explicacion": "La laca va en Cuidado personal > Cabello > Fijación (geles, lacas y espumas para peinar)."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -15049,7 +15049,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "SHAMPOO",
-      "explicacion": "El tipo SHAMPOO (abreviado SH.) va en Cabello > Shampoo."
+      "explicacion": "El tipo SHAMPOO va en Cuidado personal > Cabello > Shampoo."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -15147,7 +15147,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "ACONDICIONADOR",
-      "explicacion": "El acondicionador va en Cabello > Acondicionadores y tratamientos."
+      "explicacion": "El acondicionador va en Cuidado personal > Cabello > Acondicionadores y tratamientos."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -15245,7 +15245,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "ACONDICIONADOR",
-      "explicacion": "El acondicionador va en Cabello > Acondicionadores y tratamientos."
+      "explicacion": "El acondicionador va en Cuidado personal > Cabello > Acondicionadores y tratamientos."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -15343,7 +15343,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "SHAMPOO",
-      "explicacion": "SH. es SHAMPOO; CAB. SECO es la variante (cabello seco), no el shampoo en seco."
+      "explicacion": "El tipo SHAMPOO va en Cuidado personal > Cabello > Shampoo; CABELLO SECO es variante, no el tipo SHAMPOO EN SECO."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -15441,7 +15441,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "ACONDICIONADOR",
-      "explicacion": "El acondicionador va en Cabello > Acondicionadores y tratamientos."
+      "explicacion": "El acondicionador va en Cuidado personal > Cabello > Acondicionadores y tratamientos."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -15539,7 +15539,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "SHAMPOO",
-      "explicacion": "El tipo SHAMPOO (abreviado SH.) va en Cabello > Shampoo."
+      "explicacion": "El tipo SHAMPOO va en Cuidado personal > Cabello > Shampoo."
     },
     "motivos_revision": [],
     "duplicado_de": "SKU101316"
@@ -15637,7 +15637,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "SHAMPOO",
-      "explicacion": "El tipo SHAMPOO (abreviado SH.) va en Cabello > Shampoo."
+      "explicacion": "El tipo SHAMPOO va en Cuidado personal > Cabello > Shampoo."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -15735,7 +15735,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "ACONDICIONADOR",
-      "explicacion": "El acondicionador va en Cabello > Acondicionadores y tratamientos (CUI-CAP-ACO)."
+      "explicacion": "El acondicionador va en Cuidado personal > Cabello > Acondicionadores y tratamientos."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -15841,7 +15841,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "DESODORANTE AEROSOL",
-      "explicacion": "El desodorante aerosol va en Desodorantes > Aerosol (CUI-DES-AER)."
+      "explicacion": "Desodorante aerosol va en Cuidado personal > Desodorantes > Aerosol."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -15944,7 +15944,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "DESODORANTE AEROSOL",
-      "explicacion": "El desodorante aerosol va en Desodorantes > Aerosol (CUI-DES-AER)."
+      "explicacion": "Desodorante aerosol va en Cuidado personal > Desodorantes > Aerosol."
     },
     "motivos_revision": [],
     "duplicado_de": "SKU101925"
@@ -16050,7 +16050,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "DESODORANTE AEROSOL",
-      "explicacion": "El desodorante aerosol va en Desodorantes > Aerosol (CUI-DES-AER)."
+      "explicacion": "Desodorante aerosol va en Cuidado personal > Desodorantes > Aerosol."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -16156,7 +16156,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "DESODORANTE AEROSOL",
-      "explicacion": "El desodorante aerosol va en Desodorantes > Aerosol (CUI-DES-AER)."
+      "explicacion": "Desodorante aerosol va en Cuidado personal > Desodorantes > Aerosol."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -16262,7 +16262,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "DESODORANTE AEROSOL",
-      "explicacion": "El desodorante aerosol va en Desodorantes > Aerosol (CUI-DES-AER)."
+      "explicacion": "Desodorante aerosol va en Cuidado personal > Desodorantes > Aerosol."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -16360,7 +16360,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "DESODORANTE BARRA",
-      "explicacion": "El desodorante barra va en Desodorantes > Barra y roll on (CUI-DES-BAR)."
+      "explicacion": "Desodorante en barra va en Cuidado personal > Desodorantes > Barra y roll on."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -16466,7 +16466,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "DESODORANTE AEROSOL",
-      "explicacion": "El desodorante aerosol va en Desodorantes > Aerosol (CUI-DES-AER)."
+      "explicacion": "Desodorante aerosol va en Cuidado personal > Desodorantes > Aerosol."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -16572,7 +16572,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "DESODORANTE AEROSOL",
-      "explicacion": "El desodorante aerosol va en Desodorantes > Aerosol (CUI-DES-AER)."
+      "explicacion": "Desodorante aerosol va en Cuidado personal > Desodorantes > Aerosol."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -16678,7 +16678,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "DESODORANTE AEROSOL",
-      "explicacion": "El desodorante aerosol va en Desodorantes > Aerosol (CUI-DES-AER)."
+      "explicacion": "Desodorante aerosol va en Cuidado personal > Desodorantes > Aerosol."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -16776,7 +16776,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "ESPUMA DE AFEITAR",
-      "explicacion": "Las espumas de afeitar van en Cuidado personal > Afeitado."
+      "explicacion": "La espuma de afeitar va en Cuidado personal > Afeitado (CUI-AFE-ESP)."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -16874,7 +16874,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "GEL DE DUCHA",
-      "explicacion": "El gel de ducha va en Cuidado personal > Higiene corporal."
+      "explicacion": "El gel de ducha va en Cuidado personal > Higiene corporal (CUI-HIG-DUC)."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -16972,7 +16972,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "GEL DE DUCHA",
-      "explicacion": "El gel de ducha va en Cuidado personal > Higiene corporal."
+      "explicacion": "El gel de ducha va en Cuidado personal > Higiene corporal (CUI-HIG-DUC)."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -17070,7 +17070,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "GEL DE DUCHA",
-      "explicacion": "El gel de ducha va en Cuidado personal > Higiene corporal."
+      "explicacion": "El gel de ducha va en Cuidado personal > Higiene corporal (CUI-HIG-DUC)."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -17168,7 +17168,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "JABON INTIMO",
-      "explicacion": "El jabón íntimo va en Cuidado personal > Higiene corporal > Higiene íntima."
+      "explicacion": "El jabón íntimo va en Cuidado personal > Higiene corporal > Higiene íntima (CUI-HIG-INT)."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -17266,7 +17266,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "ESPUMA DE AFEITAR",
-      "explicacion": "Las espumas de afeitar van en Cuidado personal > Afeitado."
+      "explicacion": "La espuma de afeitar va en Cuidado personal > Afeitado (CUI-AFE-ESP)."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -17364,7 +17364,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "JABON INTIMO",
-      "explicacion": "El jabón íntimo va en Cuidado personal > Higiene corporal > Higiene íntima."
+      "explicacion": "El jabón íntimo va en Cuidado personal > Higiene corporal > Higiene íntima (CUI-HIG-INT)."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -17462,7 +17462,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "GEL DE DUCHA",
-      "explicacion": "El gel de ducha va en Cuidado personal > Higiene corporal."
+      "explicacion": "El gel de ducha va en Cuidado personal > Higiene corporal (CUI-HIG-DUC)."
     },
     "motivos_revision": [],
     "duplicado_de": "SKU100469"
@@ -17555,7 +17555,7 @@
     "categoria_decidida_por": {
       "campo": "variante",
       "valor": "BEBE",
-      "explicacion": "Un shampoo formulado para bebés va en Higiene del bebé, no en Shampoo de cabello general."
+      "explicacion": "Shampoo formulado para bebés: la categoría de Higiene del bebé (BEB-HIG-BAN) va por la variante BEBE; el shampoo común no incluye bebés."
     },
     "motivos_revision": [
       "gtin_faltante",
@@ -17656,7 +17656,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "GEL DE DUCHA",
-      "explicacion": "El gel de ducha va en Cuidado personal > Higiene corporal."
+      "explicacion": "El gel de ducha va en Cuidado personal > Higiene corporal (CUI-HIG-DUC)."
     },
     "motivos_revision": [],
     "duplicado_de": "SKU103885"
@@ -17754,7 +17754,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "GEL DE DUCHA",
-      "explicacion": "El gel de ducha va en Higiene corporal > Gel de ducha (CUI-HIG-DUC)."
+      "explicacion": "El gel de ducha va en Higiene corporal > Gel de ducha."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -17847,7 +17847,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "TOALLITAS HUMEDAS",
-      "explicacion": "Todas las toallitas húmedas van en Bebés > Pañales > Toallitas húmedas (BEB-PAN-TOA)."
+      "explicacion": "Todas las toallitas húmedas van en Bebés > Toallitas húmedas, aunque no digan bebé."
     },
     "motivos_revision": [
       "gtin_faltante",
@@ -17948,7 +17948,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "GEL DE DUCHA",
-      "explicacion": "El gel de ducha va en Higiene corporal > Gel de ducha (CUI-HIG-DUC)."
+      "explicacion": "El gel de ducha va en Higiene corporal > Gel de ducha."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -18046,7 +18046,7 @@
     "categoria_decidida_por": {
       "campo": "variante",
       "valor": "BEBE",
-      "explicacion": "El shampoo para bebés va en Bebés > Higiene del bebé > Shampoo y baño; CUI-CAP-SHA excluye el shampoo para bebés."
+      "explicacion": "El shampoo para bebés va en Higiene del bebé > Shampoo y baño; el shampoo sin esa variante va en Cabello."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -18144,7 +18144,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "GEL DE DUCHA",
-      "explicacion": "El gel de ducha va en Higiene corporal > Gel de ducha (CUI-HIG-DUC)."
+      "explicacion": "El gel de ducha va en Higiene corporal > Gel de ducha."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -18237,7 +18237,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "GEL DE DUCHA",
-      "explicacion": "El gel de ducha va en Higiene corporal > Gel de ducha (CUI-HIG-DUC)."
+      "explicacion": "El gel de ducha va en Higiene corporal > Gel de ducha."
     },
     "motivos_revision": [
       "gtin_faltante",
@@ -18338,7 +18338,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "GEL DE DUCHA",
-      "explicacion": "El gel de ducha va en Higiene corporal > Gel de ducha (CUI-HIG-DUC)."
+      "explicacion": "El gel de ducha va en Higiene corporal > Gel de ducha."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -18436,7 +18436,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "GEL DE DUCHA",
-      "explicacion": "El gel de ducha va en Higiene corporal > Gel de ducha (CUI-HIG-DUC)."
+      "explicacion": "El gel de ducha va en Higiene corporal > Gel de ducha."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -18534,7 +18534,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "GEL DE DUCHA",
-      "explicacion": "El gel de ducha va en Higiene corporal > Gel de ducha (CUI-HIG-DUC)."
+      "explicacion": "El gel de ducha va en Higiene corporal > Gel de ducha."
     },
     "motivos_revision": [],
     "duplicado_de": "SKU102261"
@@ -18632,7 +18632,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "GEL DE DUCHA",
-      "explicacion": "El gel de ducha va en Higiene corporal > Gel de ducha (CUI-HIG-DUC)."
+      "explicacion": "El gel de ducha va en Higiene corporal > Gel de ducha."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -18735,102 +18735,6 @@
     "motivos_revision": [],
     "duplicado_de": null
   },
-  "P04:HT40063": {
-    "item_id": "P04:HT40063",
-    "estado": "a_revision",
-    "ficha": {
-      "gtin": null,
-      "descripcion": "DESODORANTE ROLL ON AQUAVIVA SIN PERFUME X 50 ML",
-      "marca": "AQUAVIVA",
-      "tipo": "DESODORANTE ROLL ON",
-      "variante": "SIN PERFUME",
-      "contenido": 50,
-      "unidad": "ML",
-      "unidades_por_envase": 1,
-      "principio_activo": null,
-      "concentracion": null,
-      "condicion_venta": null,
-      "categoria": "CUI-DES-BAR",
-      "precio_costo": 83.71,
-      "moneda": "UYU",
-      "proveedor_id": "P04",
-      "codigo_proveedor": "HT40063",
-      "peligro_deposito": null,
-      "numero_onu": null
-    },
-    "fuentes": {
-      "descripcion": {
-        "archivo": "HigieneTotal_novedades.xlsx",
-        "hoja": "Altas",
-        "fila": 23
-      },
-      "marca": {
-        "archivo": "HigieneTotal_novedades.xlsx",
-        "hoja": "Altas",
-        "fila": 23
-      },
-      "tipo": {
-        "archivo": "HigieneTotal_novedades.xlsx",
-        "hoja": "Altas",
-        "fila": 23
-      },
-      "variante": {
-        "archivo": "HigieneTotal_novedades.xlsx",
-        "hoja": "Altas",
-        "fila": 23
-      },
-      "contenido": {
-        "archivo": "HigieneTotal_novedades.xlsx",
-        "hoja": "Altas",
-        "fila": 23
-      },
-      "unidad": {
-        "archivo": "HigieneTotal_novedades.xlsx",
-        "hoja": "Altas",
-        "fila": 23
-      },
-      "unidades_por_envase": {
-        "archivo": "HigieneTotal_novedades.xlsx",
-        "hoja": "Altas",
-        "fila": 23
-      },
-      "categoria": {
-        "archivo": "HigieneTotal_novedades.xlsx",
-        "hoja": "Altas",
-        "fila": 23
-      },
-      "precio_costo": {
-        "archivo": "HigieneTotal_novedades.xlsx",
-        "hoja": "Altas",
-        "fila": 23
-      },
-      "moneda": {
-        "archivo": "HigieneTotal_novedades.xlsx",
-        "hoja": "Altas",
-        "fila": 23
-      },
-      "proveedor_id": {
-        "archivo": "HigieneTotal_novedades.xlsx",
-        "hoja": "Altas",
-        "fila": 23
-      },
-      "codigo_proveedor": {
-        "archivo": "HigieneTotal_novedades.xlsx",
-        "hoja": "Altas",
-        "fila": 23
-      }
-    },
-    "categoria_decidida_por": {
-      "campo": "tipo",
-      "valor": "DESODORANTE ROLL ON",
-      "explicacion": "El desodorante roll on va en Desodorantes > Barra y roll on (CUI-DES-BAR)."
-    },
-    "motivos_revision": [
-      "gtin_faltante",
-      "posible_duplicado"
-    ],
-    "duplicado_de": "SKU102254"
-  },
   "P04:HT40066": {
     "item_id": "P04:HT40066",
     "estado": "lista_para_alta",
@@ -18924,108 +18828,10 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "ESPUMA DE AFEITAR",
-      "explicacion": "La espuma de afeitar va en Afeitado > Espumas y geles de afeitar (CUI-AFE-ESP)."
+      "explicacion": "La espuma de afeitar va en Cuidado personal > Afeitado (CUI-AFE-ESP)."
     },
     "motivos_revision": [],
     "duplicado_de": null
-  },
-  "P04:HT40069": {
-    "item_id": "P04:HT40069",
-    "estado": "duplicado",
-    "ficha": {
-      "gtin": "7796640214909",
-      "descripcion": "SHAMPOO AQUAVIVA BEBE MANZANILLA X 200 ML",
-      "marca": "AQUAVIVA",
-      "tipo": "SHAMPOO",
-      "variante": "BEBE MANZANILLA",
-      "contenido": 200,
-      "unidad": "ML",
-      "unidades_por_envase": 1,
-      "principio_activo": null,
-      "concentracion": null,
-      "condicion_venta": null,
-      "categoria": "BEB-HIG-BAN",
-      "precio_costo": 98.81,
-      "moneda": "UYU",
-      "proveedor_id": "P04",
-      "codigo_proveedor": "HT40069",
-      "peligro_deposito": null,
-      "numero_onu": null
-    },
-    "fuentes": {
-      "gtin": {
-        "archivo": "HigieneTotal_novedades.xlsx",
-        "hoja": "Altas",
-        "fila": 25
-      },
-      "descripcion": {
-        "archivo": "HigieneTotal_novedades.xlsx",
-        "hoja": "Altas",
-        "fila": 25
-      },
-      "marca": {
-        "archivo": "HigieneTotal_novedades.xlsx",
-        "hoja": "Altas",
-        "fila": 25
-      },
-      "tipo": {
-        "archivo": "HigieneTotal_novedades.xlsx",
-        "hoja": "Altas",
-        "fila": 25
-      },
-      "variante": {
-        "archivo": "HigieneTotal_novedades.xlsx",
-        "hoja": "Altas",
-        "fila": 25
-      },
-      "contenido": {
-        "archivo": "HigieneTotal_novedades.xlsx",
-        "hoja": "Altas",
-        "fila": 25
-      },
-      "unidad": {
-        "archivo": "HigieneTotal_novedades.xlsx",
-        "hoja": "Altas",
-        "fila": 25
-      },
-      "unidades_por_envase": {
-        "archivo": "HigieneTotal_novedades.xlsx",
-        "hoja": "Altas",
-        "fila": 25
-      },
-      "categoria": {
-        "archivo": "HigieneTotal_novedades.xlsx",
-        "hoja": "Altas",
-        "fila": 25
-      },
-      "precio_costo": {
-        "archivo": "HigieneTotal_novedades.xlsx",
-        "hoja": "Altas",
-        "fila": 25
-      },
-      "moneda": {
-        "archivo": "HigieneTotal_novedades.xlsx",
-        "hoja": "Altas",
-        "fila": 25
-      },
-      "proveedor_id": {
-        "archivo": "HigieneTotal_novedades.xlsx",
-        "hoja": "Altas",
-        "fila": 25
-      },
-      "codigo_proveedor": {
-        "archivo": "HigieneTotal_novedades.xlsx",
-        "hoja": "Altas",
-        "fila": 25
-      }
-    },
-    "categoria_decidida_por": {
-      "campo": "variante",
-      "valor": "BEBE MANZANILLA",
-      "explicacion": "Shampoo formulado para bebés: va en Higiene del bebé > Shampoo y baño, no en Shampoo de cabello."
-    },
-    "motivos_revision": [],
-    "duplicado_de": "SKU101267"
   },
   "P04:HT40072": {
     "item_id": "P04:HT40072",
@@ -19223,6 +19029,200 @@
     "motivos_revision": [],
     "duplicado_de": null
   },
+  "P04:HT40063": {
+    "item_id": "P04:HT40063",
+    "estado": "a_revision",
+    "ficha": {
+      "gtin": null,
+      "descripcion": "DESODORANTE ROLL ON AQUAVIVA SIN PERFUME X 50 ML",
+      "marca": "AQUAVIVA",
+      "tipo": "DESODORANTE ROLL ON",
+      "variante": "SIN PERFUME",
+      "contenido": 50,
+      "unidad": "ML",
+      "unidades_por_envase": 1,
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "CUI-DES-BAR",
+      "precio_costo": 83.71,
+      "moneda": "UYU",
+      "proveedor_id": "P04",
+      "codigo_proveedor": "HT40063",
+      "peligro_deposito": null,
+      "numero_onu": null
+    },
+    "fuentes": {
+      "descripcion": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 23
+      },
+      "marca": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 23
+      },
+      "tipo": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 23
+      },
+      "variante": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 23
+      },
+      "contenido": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 23
+      },
+      "unidad": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 23
+      },
+      "unidades_por_envase": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 23
+      },
+      "categoria": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 23
+      },
+      "precio_costo": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 23
+      },
+      "moneda": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 23
+      },
+      "proveedor_id": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 23
+      },
+      "codigo_proveedor": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 23
+      }
+    },
+    "categoria_decidida_por": {
+      "campo": "tipo",
+      "valor": "DESODORANTE ROLL ON",
+      "explicacion": "El roll on va en Desodorantes > Barra y roll on (CUI-DES-BAR)."
+    },
+    "motivos_revision": [
+      "gtin_faltante",
+      "posible_duplicado"
+    ],
+    "duplicado_de": "SKU102254"
+  },
+  "P04:HT40069": {
+    "item_id": "P04:HT40069",
+    "estado": "duplicado",
+    "ficha": {
+      "gtin": "7796640214909",
+      "descripcion": "SHAMPOO AQUAVIVA BEBE MANZANILLA X 200 ML",
+      "marca": "AQUAVIVA",
+      "tipo": "SHAMPOO",
+      "variante": "BEBE MANZANILLA",
+      "contenido": 200,
+      "unidad": "ML",
+      "unidades_por_envase": 1,
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "BEB-HIG-BAN",
+      "precio_costo": 98.81,
+      "moneda": "UYU",
+      "proveedor_id": "P04",
+      "codigo_proveedor": "HT40069",
+      "peligro_deposito": null,
+      "numero_onu": null
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 25
+      },
+      "descripcion": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 25
+      },
+      "marca": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 25
+      },
+      "tipo": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 25
+      },
+      "variante": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 25
+      },
+      "contenido": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 25
+      },
+      "unidad": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 25
+      },
+      "unidades_por_envase": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 25
+      },
+      "categoria": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 25
+      },
+      "precio_costo": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 25
+      },
+      "moneda": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 25
+      },
+      "proveedor_id": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 25
+      },
+      "codigo_proveedor": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 25
+      }
+    },
+    "categoria_decidida_por": {
+      "campo": "variante",
+      "valor": "BEBE MANZANILLA",
+      "explicacion": "Un shampoo para bebés va en Higiene del bebé > Shampoo y baño (BEB-HIG-BAN), no en Cabello > Shampoo."
+    },
+    "motivos_revision": [],
+    "duplicado_de": "SKU101267"
+  },
   "P04:HT40078": {
     "item_id": "P04:HT40078",
     "estado": "duplicado",
@@ -19409,7 +19409,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "DESODORANTE ROLL ON",
-      "explicacion": "El desodorante roll on va en Desodorantes > Barra y roll on (CUI-DES-BAR)."
+      "explicacion": "El roll on va en Desodorantes > Barra y roll on (CUI-DES-BAR)."
     },
     "motivos_revision": [
       "gtin_faltante",
@@ -19510,7 +19510,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "LECHE INFANTIL",
-      "explicacion": "La leche infantil va en Alimentación (Leches infantiles)."
+      "explicacion": "Leche para bebé de etapa 1: Leches infantiles (BEB-ALI-LEC)."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -19608,7 +19608,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "PAÑALES",
-      "explicacion": "Los pañales infantiles van en Pañales (BEB-PAN-INF)."
+      "explicacion": "Pañal infantil: Pañales infantiles (BEB-PAN-INF)."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -19706,7 +19706,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "PAÑALES",
-      "explicacion": "Los pañales infantiles van en Pañales (BEB-PAN-INF)."
+      "explicacion": "Pañal infantil: Pañales infantiles (BEB-PAN-INF)."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -19804,7 +19804,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "LECHE INFANTIL",
-      "explicacion": "La leche infantil va en Alimentación (Leches infantiles)."
+      "explicacion": "Leche para bebé de etapa 2: Leches infantiles (BEB-ALI-LEC)."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -19902,7 +19902,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "TOALLITAS HUMEDAS",
-      "explicacion": "Todas las toallitas húmedas van en Pañales > Toallitas húmedas."
+      "explicacion": "Todas las toallitas húmedas van en Toallitas húmedas (BEB-PAN-TOA)."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -20000,7 +20000,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "PAÑALES",
-      "explicacion": "Los pañales infantiles van en Pañales (BEB-PAN-INF)."
+      "explicacion": "Pañal infantil: Pañales infantiles (BEB-PAN-INF)."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -20098,7 +20098,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "PAÑALES",
-      "explicacion": "Los pañales infantiles van en Pañales (BEB-PAN-INF)."
+      "explicacion": "Pañal infantil: Pañales infantiles (BEB-PAN-INF)."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -20196,7 +20196,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "PAÑALES",
-      "explicacion": "Los pañales infantiles van en Pañales (BEB-PAN-INF)."
+      "explicacion": "Pañal infantil: Pañales infantiles (BEB-PAN-INF)."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -20289,7 +20289,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "TOALLITAS HUMEDAS",
-      "explicacion": "Todas las toallitas húmedas van en Pañales > Toallitas húmedas."
+      "explicacion": "Todas las toallitas húmedas van en Toallitas húmedas (BEB-PAN-TOA)."
     },
     "motivos_revision": [
       "gtin_faltante",
@@ -20390,7 +20390,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "CREMA",
-      "explicacion": "La crema de cambio (zona del pañal) va en Higiene del bebé > Cremas de cambio; «de cambio» nombra la clase, no va a la variante."
+      "explicacion": "Crema de cambio para la zona del pañal: Cremas de cambio (BEB-HIG-CRE)."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -20488,7 +20488,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "TOALLITAS HUMEDAS",
-      "explicacion": "Las toallitas húmedas van en Bebés > Pañales > Toallitas húmedas."
+      "explicacion": "Toallitas húmedas van en Bebés > Pañales > Toallitas húmedas."
     },
     "motivos_revision": [],
     "duplicado_de": "SKU103304"
@@ -20684,7 +20684,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "PAÑALES",
-      "explicacion": "Los pañales infantiles van en Bebés > Pañales > Pañales infantiles."
+      "explicacion": "Pañales infantiles van en Bebés > Pañales > Pañales infantiles."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -20782,7 +20782,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "TOALLITAS HUMEDAS",
-      "explicacion": "Las toallitas húmedas van en Bebés > Pañales > Toallitas húmedas."
+      "explicacion": "Toallitas húmedas van en Bebés > Pañales > Toallitas húmedas."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -20880,7 +20880,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "TOALLITAS HUMEDAS",
-      "explicacion": "Las toallitas húmedas van en Bebés > Pañales > Toallitas húmedas."
+      "explicacion": "Toallitas húmedas van en Bebés > Pañales > Toallitas húmedas."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -20978,7 +20978,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "PAÑALES",
-      "explicacion": "Los pañales infantiles van en Bebés > Pañales > Pañales infantiles."
+      "explicacion": "Pañales infantiles van en Bebés > Pañales > Pañales infantiles."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -21076,7 +21076,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "PAÑALES",
-      "explicacion": "Los pañales infantiles van en Bebés > Pañales > Pañales infantiles."
+      "explicacion": "Pañales infantiles van en Bebés > Pañales > Pañales infantiles."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -21174,7 +21174,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "PAÑALES",
-      "explicacion": "Los pañales infantiles van en Bebés > Pañales > Pañales infantiles."
+      "explicacion": "Pañales infantiles van en Bebés > Pañales > Pañales infantiles."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -21272,7 +21272,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "PAÑALES",
-      "explicacion": "Los pañales infantiles van en Bebés > Pañales > Pañales infantiles."
+      "explicacion": "Pañales infantiles van en Bebés > Pañales > Pañales infantiles."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -21370,7 +21370,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "PAÑALES",
-      "explicacion": "Los pañales infantiles van en Bebés > Pañales > Pañales infantiles."
+      "explicacion": "Pañales infantiles van en Bebés > Pañales > Pañales infantiles."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -21468,7 +21468,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "CREMA",
-      "explicacion": "El producto es 'Crema de cambio' para la zona del pañal: va en Higiene del bebé > Cremas de cambio."
+      "explicacion": "Crema de cambio con óxido de zinc para la zona del pañal: va en Cremas de cambio (BEB-HIG-CRE), no en dermocosmética."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -21566,7 +21566,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "PAÑALES",
-      "explicacion": "Los pañales infantiles van en Bebés > Pañales > Pañales infantiles."
+      "explicacion": "Pañal infantil del tipo PAÑALES: va en Pañales infantiles (BEB-PAN-INF)."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -21664,7 +21664,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "TOALLITAS HUMEDAS",
-      "explicacion": "Todas las toallitas húmedas van en Bebés > Pañales > Toallitas húmedas."
+      "explicacion": "Toallitas húmedas: van en Pañales y toallitas (BEB-PAN-TOA), aunque no digan bebé."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -21762,7 +21762,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "TOALLITAS HUMEDAS",
-      "explicacion": "Todas las toallitas húmedas van en Bebés > Pañales > Toallitas húmedas."
+      "explicacion": "Toallitas húmedas: van en Pañales y toallitas (BEB-PAN-TOA)."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -21860,7 +21860,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "TOALLITAS HUMEDAS",
-      "explicacion": "Todas las toallitas húmedas van en Bebés > Pañales > Toallitas húmedas."
+      "explicacion": "Toallitas húmedas: van en Pañales y toallitas (BEB-PAN-TOA)."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -21958,7 +21958,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "PAÑALES",
-      "explicacion": "Los pañales infantiles van en Bebés > Pañales > Pañales infantiles."
+      "explicacion": "Pañal infantil del tipo PAÑALES: va en Pañales infantiles (BEB-PAN-INF)."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -22056,7 +22056,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "LECHE INFANTIL",
-      "explicacion": "Las leches infantiles van en Bebés > Alimentación > Leches infantiles."
+      "explicacion": "Leche de etapa 3 para bebés: va en Leches infantiles (BEB-ALI-LEC)."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -22154,7 +22154,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "PAÑALES",
-      "explicacion": "Los pañales infantiles van en Bebés > Pañales > Pañales infantiles."
+      "explicacion": "Pañal infantil del tipo PAÑALES: va en Pañales infantiles (BEB-PAN-INF)."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -22247,7 +22247,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "TOALLITAS HUMEDAS",
-      "explicacion": "Todas las toallitas húmedas van en Bebés > Pañales > Toallitas húmedas."
+      "explicacion": "Toallitas húmedas: van en Pañales y toallitas (BEB-PAN-TOA)."
     },
     "motivos_revision": [
       "gtin_faltante",
@@ -22348,7 +22348,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "LECHE INFANTIL",
-      "explicacion": "Las leches infantiles van en Bebés > Alimentación > Leches infantiles."
+      "explicacion": "Leche de etapa 1 para bebés: va en Leches infantiles (BEB-ALI-LEC)."
     },
     "motivos_revision": [],
     "duplicado_de": "SKU103794"
@@ -22446,7 +22446,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "LECHE INFANTIL",
-      "explicacion": "La leche infantil va en Bebés > Alimentación > Leches infantiles."
+      "explicacion": "La leche infantil va en Bebés > Alimentación > Leches infantiles (BEB-ALI-LEC)."
     },
     "motivos_revision": [],
     "duplicado_de": "SKU100777"
@@ -22544,7 +22544,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "PAÑALES",
-      "explicacion": "Los pañales infantiles van en Bebés > Pañales > Pañales infantiles."
+      "explicacion": "Los pañales infantiles van en Bebés > Pañales > Pañales infantiles (BEB-PAN-INF)."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -22650,7 +22650,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "SHAMPOO EN SECO",
-      "explicacion": "Shampoo en seco va en Cabello > Shampoo (CUI-CAP-SHA)."
+      "explicacion": "El shampoo en seco va en Cabello > Shampoo (CUI-CAP-SHA)."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -22748,7 +22748,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "PROTECTOR SOLAR",
-      "explicacion": "Protector solar para adultos (sport, FPS 50) va en Protección solar > Protectores para adultos."
+      "explicacion": "Protector solar sin indicación infantil: Dermocosmética > Protección solar > adultos (DER-SOL-ADU)."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -22758,10 +22758,10 @@
     "estado": "lista_para_alta",
     "ficha": {
       "gtin": "0921365957672",
-      "descripcion": "CREMA PURE CARE INTENSIVE X 227 G",
+      "descripcion": "CREMA PURE CARE INTENSIVE HANDS X 227 G",
       "marca": "PURE CARE",
       "tipo": "CREMA",
-      "variante": "INTENSIVE",
+      "variante": "INTENSIVE HANDS",
       "contenido": 227,
       "unidad": "G",
       "unidades_por_envase": 1,
@@ -22844,9 +22844,9 @@
       }
     },
     "categoria_decidida_por": {
-      "campo": "tipo",
-      "valor": "CREMA",
-      "explicacion": "Crema de manos (CREMA, manos) va en Dermocosmética > Manos y pies; HANDS forma parte del tipo y no de la variante."
+      "campo": "variante",
+      "valor": "INTENSIVE HANDS",
+      "explicacion": "Crema para manos (Hand Cream): la variante indica cuidado de manos, va en Manos y pies (DER-COR-MAN)."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -22895,6 +22895,16 @@
         "hoja": "New items",
         "fila": 5
       },
+      "principio_activo": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 5
+      },
+      "concentracion": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 5
+      },
       "contenido": {
         "archivo": "NorteImports_new_items_Q4.xlsx",
         "hoja": "New items",
@@ -22906,16 +22916,6 @@
         "fila": 5
       },
       "unidades_por_envase": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 5
-      },
-      "principio_activo": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 5
-      },
-      "concentracion": {
         "archivo": "NorteImports_new_items_Q4.xlsx",
         "hoja": "New items",
         "fila": 5
@@ -22949,7 +22949,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "CAPSULAS",
-      "explicacion": "Suplemento de vitamina D3 (vitamina individual, principio_activo) va en Vitaminas individuales; el tipo CAPSULAS no decide la categoría por sí solo."
+      "explicacion": "Vitamina individual (VITAMINA D3, no multivitamínico): va en Vitaminas y minerales > Vitaminas individuales (NUT-VIT-VIT)."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -22974,8 +22974,8 @@
       "moneda": "USD",
       "proveedor_id": "P08",
       "codigo_proveedor": "IN7015",
-      "peligro_deposito": null,
-      "numero_onu": null
+      "peligro_deposito": "aerosol_inflamable",
+      "numero_onu": "1950"
     },
     "fuentes": {
       "gtin": {
@@ -23042,12 +23042,20 @@
         "archivo": "NorteImports_new_items_Q4.xlsx",
         "hoja": "New items",
         "fila": 6
+      },
+      "peligro_deposito": {
+        "archivo": "FDS_PureCare_in_afe.pdf",
+        "pagina": 1
+      },
+      "numero_onu": {
+        "archivo": "FDS_PureCare_in_afe.pdf",
+        "pagina": 1
       }
     },
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "GEL DE AFEITAR",
-      "explicacion": "Gel de afeitar va en Afeitado > Espumas y geles de afeitar."
+      "explicacion": "El gel de afeitar va en Afeitado > Espumas y geles de afeitar (CUI-AFE-ESP)."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -23145,7 +23153,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "ENJUAGUE BUCAL",
-      "explicacion": "Enjuague bucal va en Higiene bucal > Enjuagues."
+      "explicacion": "El enjuague bucal (Mouthwash) va en Higiene bucal > Enjuagues (CUI-BUC-ENJ)."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -23243,7 +23251,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "COMPRIMIDOS",
-      "explicacion": "Multivitamínico en comprimidos va en Vitaminas y minerales > Multivitamínicos (decidido por el principio activo MULTIVITAMINICO)."
+      "explicacion": "Multivitamínico declarado en el nombre (Multivitamin Tablets): va en Vitaminas y minerales > Multivitamínicos (NUT-VIT-MUL)."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -23341,7 +23349,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "LOCION",
-      "explicacion": "Body lotion va en Dermocosmética > Hidratación corporal."
+      "explicacion": "Body Lotion es una loción corporal: Dermocosmética > Corporal > Hidratación corporal (DER-COR-HID)."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -23444,7 +23452,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "CAPSULAS",
-      "explicacion": "Suplemento de vitamina D3 (vitamina individual, principio_activo) va en Vitaminas individuales; el tipo CAPSULAS no decide la categoría por sí solo."
+      "explicacion": "Vitamina individual (VITAMINA D3, no multivitamínico): va en Vitaminas y minerales > Vitaminas individuales (NUT-VIT-VIT)."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -23547,7 +23555,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "CAPSULAS",
-      "explicacion": "Suplemento de vitamina D3 (vitamina individual, principio_activo) va en Vitaminas individuales; el tipo CAPSULAS no decide la categoría por sí solo."
+      "explicacion": "Vitamina individual (VITAMINA D3, no multivitamínico): va en Vitaminas y minerales > Vitaminas individuales (NUT-VIT-VIT)."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -23645,7 +23653,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "LOCION",
-      "explicacion": "Body Lotion es loción corporal de hidratación: DER-COR-HID."
+      "explicacion": "Body Lotion es una loción corporal; va en Dermocosmética > Corporal > Hidratación corporal."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -23743,7 +23751,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "LOCION",
-      "explicacion": "Body Lotion es loción corporal de hidratación: DER-COR-HID."
+      "explicacion": "Body Lotion es una loción corporal; va en Dermocosmética > Corporal > Hidratación corporal."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -23841,7 +23849,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "LOCION",
-      "explicacion": "Body Lotion es loción corporal de hidratación: DER-COR-HID."
+      "explicacion": "Body Lotion es una loción corporal; va en Dermocosmética > Corporal > Hidratación corporal."
     },
     "motivos_revision": [],
     "duplicado_de": null
@@ -23890,6 +23898,16 @@
         "hoja": "New items",
         "fila": 15
       },
+      "principio_activo": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 15
+      },
+      "concentracion": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 15
+      },
       "contenido": {
         "archivo": "NorteImports_new_items_Q4.xlsx",
         "hoja": "New items",
@@ -23901,16 +23919,6 @@
         "fila": 15
       },
       "unidades_por_envase": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 15
-      },
-      "principio_activo": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 15
-      },
-      "concentracion": {
         "archivo": "NorteImports_new_items_Q4.xlsx",
         "hoja": "New items",
         "fila": 15
@@ -23944,7 +23952,7 @@
     "categoria_decidida_por": {
       "campo": "tipo",
       "valor": "CAPSULAS",
-      "explicacion": "Vitamina D3 sola en cápsulas blandas: vitamina individual, NUT-VIT-VIT."
+      "explicacion": "Vitamina D3 en softgels es un suplemento de un solo componente; va en Nutrición > Vitaminas individuales."
     },
     "motivos_revision": [],
     "duplicado_de": null
