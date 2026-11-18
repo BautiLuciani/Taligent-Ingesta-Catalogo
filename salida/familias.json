@@ -1,33 +1,6 @@
 {
-  "fecha": "2026-11-18 10:14",
+  "fecha": "2026-11-18 11:23",
   "familias": 52,
   "productos_en_familias": 115,
-  "inconsistentes": [
-    {
-      "proveedor_id": "P06",
-      "en_el_archivo": [
-        "CREMA DE CAMBIO PEQUEÑOS PASOS OXIDO DE ZINC"
-      ],
-      "items": [
-        "P06:BF-527",
-        "P06:BF-560"
-      ],
-      "campos": {
-        "variante": [
-          {
-            "valor": "DE CAMBIO OXIDO DE ZINC",
-            "items": [
-              "P06:BF-527"
-            ]
-          },
-          {
-            "valor": "OXIDO DE ZINC",
-            "items": [
-              "P06:BF-560"
-            ]
-          }
-        ]
-      }
-    }
-  ]
+  "inconsistentes": []
 }
