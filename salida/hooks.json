@@ -1,9 +1,26 @@
 {
-  "fecha": "2026-11-17 19:22",
+  "fecha": "2026-11-17 20:01",
   "proveedores": [
-    "P09"
+    "P03",
+    "P07",
+    "P01",
+    "P05",
+    "P09",
+    "P02",
+    "P04",
+    "P08"
   ],
-  "frenos": [],
-  "total": 0,
-  "corregidos": 0
+  "frenos": [
+    {
+      "proveedor_id": "P07",
+      "desde": 0,
+      "version": "",
+      "hook": "al_terminar",
+      "item_id": "P07:LHS-221",
+      "motivo": "campos sin fuente: peligro_deposito",
+      "corregido": true
+    }
+  ],
+  "total": 1,
+  "corregidos": 1
 }

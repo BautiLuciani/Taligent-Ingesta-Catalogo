@@ -1,0 +1,82 @@
+[
+  {
+    "batch_id": "msgbatch_01R21wJm7fegZwGThjTHDg7b",
+    "creado": "2026-11-17 19:26:11",
+    "pedidos": 25,
+    "segundos": 355.0,
+    "estados": {
+      "succeeded": 25
+    },
+    "reencolados": 0
+  },
+  {
+    "batch_id": "msgbatch_01RfcV5MXEt7JxenptjaKcd8",
+    "creado": "2026-11-17 19:32:10",
+    "pedidos": 25,
+    "segundos": 324.1,
+    "estados": {
+      "succeeded": 25
+    },
+    "reencolados": 0
+  },
+  {
+    "batch_id": "msgbatch_01K1Hmbitr2iUXzj7kRDJnaM",
+    "creado": "2026-11-17 19:37:37",
+    "pedidos": 25,
+    "segundos": 416.5,
+    "estados": {
+      "succeeded": 25
+    },
+    "reencolados": 0
+  },
+  {
+    "batch_id": "msgbatch_01RCWTQ44vAAEhMVZYpcsnvK",
+    "creado": "2026-11-17 19:44:37",
+    "pedidos": 25,
+    "segundos": 339.9,
+    "estados": {
+      "succeeded": 25
+    },
+    "reencolados": 0
+  },
+  {
+    "batch_id": "msgbatch_01EDHZN5TJPpXFjjabzHhatM",
+    "creado": "2026-11-17 19:50:22",
+    "pedidos": 10,
+    "segundos": 339.7,
+    "estados": {
+      "succeeded": 10
+    },
+    "reencolados": 0
+  },
+  {
+    "batch_id": "msgbatch_01Gomt7B8iZv7c84bgn9USej",
+    "creado": "2026-11-17 19:56:06",
+    "pedidos": 1,
+    "segundos": 124.4,
+    "estados": {
+      "succeeded": 1
+    },
+    "reencolados": 0
+  },
+  {
+    "batch_id": "msgbatch_01JJtmrn1Hy5i2ay8DS3Q5i6",
+    "creado": "2026-11-17 19:58:12",
+    "pedidos": 1,
+    "segundos": 123.9,
+    "estados": {
+      "succeeded": 1
+    },
+    "reencolados": 0
+  },
+  {
+    "batch_id": "msgbatch_01VzjBeCFJYkssMGHQjfzxHs",
+    "creado": "2026-11-17 20:00:18",
+    "pedidos": 1,
+    "segundos": 61.9,
+    "estados": {
+      "succeeded": 1
+    },
+    "reencolados": 0
+  }
+]
