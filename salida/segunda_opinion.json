@@ -1,0 +1,252 @@
+{
+  "fecha": "2026-11-18 10:35",
+  "modelo": "claude-haiku-5-5",
+  "veces": 3,
+  "dudas": [
+    {
+      "origen": "familias",
+      "proveedor_id": "P06",
+      "items": [
+        "P06:BF-527",
+        "P06:BF-560"
+      ],
+      "campo": "variante",
+      "versiones": [
+        "DE CAMBIO OXIDO DE ZINC",
+        "OXIDO DE ZINC"
+      ],
+      "quien_dijo_que": {
+        "\"DE CAMBIO OXIDO DE ZINC\"": [
+          "P06:BF-527"
+        ],
+        "\"OXIDO DE ZINC\"": [
+          "P06:BF-560"
+        ]
+      },
+      "respuestas": [
+        {
+          "effort": "high",
+          "stop_reason": "end_turn",
+          "tokens": {
+            "sin_cache": 675,
+            "escritos": 10555,
+            "leidos": 0,
+            "output": 1196
+          },
+          "costo_usd": 0.001985,
+          "segundos": 6.9,
+          "eleccion": "DE CAMBIO OXIDO DE ZINC",
+          "por_que": "El tipo es CREMA y la marca es Pequeños Pasos, así que la variante es todo lo demás que dice el nombre, en su orden (regla 14): DE CAMBIO describe el uso, como PARA CABELLO SECO en un shampoo, y OXIDO DE ZINC no se descarta porque en un producto que no es medicamento no va a principio_activo (regla 13)."
+        },
+        {
+          "effort": "high",
+          "stop_reason": "end_turn",
+          "tokens": {
+            "sin_cache": 675,
+            "escritos": 10555,
+            "leidos": 0,
+            "output": 1805
+          },
+          "costo_usd": 0.002289,
+          "segundos": 9.7,
+          "eleccion": "DE CAMBIO OXIDO DE ZINC",
+          "por_que": "La regla 14 dice que la variante lleva todo lo que el archivo dice del producto y no es su tipo, marca ni contenido, en el orden en que viene, sin descartar nada. El tipo es CREMA, así que DE CAMBIO OXIDO DE ZINC queda como variante; OXIDO DE ZINC no es principio activo porque el producto no es un medicamento ni un suplemento."
+        },
+        {
+          "effort": "high",
+          "stop_reason": "end_turn",
+          "tokens": {
+            "sin_cache": 675,
+            "escritos": 10555,
+            "leidos": 0,
+            "output": 1799
+          },
+          "costo_usd": 0.002286,
+          "segundos": 9.2,
+          "eleccion": "DE CAMBIO OXIDO DE ZINC",
+          "por_que": "La regla 14 pide volcar en `variante` todo lo que el archivo dice del producto y no es su tipo, marca ni contenido, en el orden en que viene, sin descartar nada: «DE CAMBIO» indica el uso y «OXIDO DE ZINC» la característica, y el tipo CREMA sale de «Crema»."
+        },
+        {
+          "effort": "max",
+          "stop_reason": "max_tokens",
+          "tokens": {
+            "sin_cache": 675,
+            "escritos": 10555,
+            "leidos": 0,
+            "output": 64000
+          },
+          "costo_usd": 0.033387,
+          "segundos": 253.0,
+          "error": "stop_reason 'max_tokens': no se lee"
+        },
+        {
+          "effort": "max",
+          "stop_reason": "max_tokens",
+          "tokens": {
+            "sin_cache": 675,
+            "escritos": 0,
+            "leidos": 10555,
+            "output": 64000
+          },
+          "costo_usd": 0.032173,
+          "segundos": 253.4,
+          "error": "stop_reason 'max_tokens': no se lee"
+        },
+        {
+          "effort": "max",
+          "stop_reason": "end_turn",
+          "tokens": {
+            "sin_cache": 675,
+            "escritos": 0,
+            "leidos": 10555,
+            "output": 56133
+          },
+          "costo_usd": 0.02824,
+          "segundos": 221.7,
+          "eleccion": "OXIDO DE ZINC",
+          "por_que": "La regla 14 dice que las palabras que forman el nombre del tipo en el archivo no se repiten en la variante, como FACIAL en «Face Cream»: «Crema de cambio» es CREMA y la zona de cambio ya la lleva la categoría BEB-HIG-CRE, así que la variante queda solo con OXIDO DE ZINC para los dos formatos."
+        }
+      ],
+      "resumen": {
+        "high": {
+          "elecciones": {
+            "DE CAMBIO OXIDO DE ZINC": 3
+          },
+          "estable": true,
+          "eleccion": "DE CAMBIO OXIDO DE ZINC"
+        },
+        "max": {
+          "elecciones": {
+            "ERROR: stop_reason 'max_tokens': no se lee": 2,
+            "OXIDO DE ZINC": 1
+          },
+          "estable": false,
+          "eleccion": null
+        }
+      }
+    },
+    {
+      "origen": "detector",
+      "proveedor_id": "P08",
+      "items": [
+        "P08:IN7006"
+      ],
+      "campo": "variante",
+      "versiones": [
+        "SPORT LOTION FPS 50",
+        "SPORT FPS 50"
+      ],
+      "quien_dijo_que": {
+        "\"SPORT LOTION FPS 50\"": [
+          "corrida A"
+        ],
+        "\"SPORT FPS 50\"": [
+          "corrida B"
+        ]
+      },
+      "respuestas": [
+        {
+          "effort": "high",
+          "stop_reason": "end_turn",
+          "tokens": {
+            "sin_cache": 392,
+            "escritos": 10547,
+            "leidos": 0,
+            "output": 1945
+          },
+          "costo_usd": 0.00233,
+          "segundos": 9.8,
+          "eleccion": "NINGUNA",
+          "por_que": "La regla 14 pide que la variante conserve todo lo que el archivo dice del producto y no es tipo, marca ni contenido, en el orden en que viene, sin descartar nada. «SPORT FPS 50» descarta «LOTION», y «SPORT LOTION FPS 50» reordena los términos (el archivo dice «Sport Spf 50 Sunscreen Lotion»), así que ninguna de las dos versiones cumple."
+        },
+        {
+          "effort": "high",
+          "stop_reason": "end_turn",
+          "tokens": {
+            "sin_cache": 392,
+            "escritos": 0,
+            "leidos": 10547,
+            "output": 1114
+          },
+          "costo_usd": 0.000702,
+          "segundos": 5.8,
+          "eleccion": "SPORT LOTION FPS 50",
+          "por_que": "La regla 14 exige conservar todo lo que el archivo dice del producto que no es tipo, marca ni contenido, en su orden, sin descartar nada por parecer repetido: «Sunscreen» forma el tipo PROTECTOR SOLAR, pero «Lotion» no es parte del nombre del tipo, así que va en la variante junto con SPORT y FPS 50 (SPF se escribe FPS)."
+        },
+        {
+          "effort": "high",
+          "stop_reason": "end_turn",
+          "tokens": {
+            "sin_cache": 392,
+            "escritos": 0,
+            "leidos": 10547,
+            "output": 2765
+          },
+          "costo_usd": 0.001527,
+          "segundos": 12.5,
+          "eleccion": "SPORT FPS 50",
+          "por_que": "La regla 14 dice que las palabras que forman el nombre del tipo no se repiten en la variante, y «Sunscreen Lotion» nombra el tipo (LOCION, con categoría de protector solar), así que LOTION no entra; la variante queda SPORT FPS 50 en el orden del archivo."
+        },
+        {
+          "effort": "max",
+          "stop_reason": "max_tokens",
+          "tokens": {
+            "sin_cache": 392,
+            "escritos": 0,
+            "leidos": 10547,
+            "output": 64000
+          },
+          "costo_usd": 0.032145,
+          "segundos": 256.6,
+          "error": "stop_reason 'max_tokens': no se lee"
+        },
+        {
+          "effort": "max",
+          "stop_reason": "end_turn",
+          "tokens": {
+            "sin_cache": 392,
+            "escritos": 0,
+            "leidos": 10547,
+            "output": 52279
+          },
+          "costo_usd": 0.026284,
+          "segundos": 206.3,
+          "eleccion": "SPORT FPS 50",
+          "por_que": "La regla 14 dice que las palabras que forman el nombre del tipo en el archivo son el tipo y no se repiten en la variante, como «Face Cream» es CREMA sin FACIAL; «Sunscreen Lotion» es el nombre del tipo, así que LOTION no va, y la variante queda SPORT FPS 50 (Spf 50 se escribe FPS, en el orden del archivo)."
+        },
+        {
+          "effort": "max",
+          "stop_reason": "max_tokens",
+          "tokens": {
+            "sin_cache": 392,
+            "escritos": 0,
+            "leidos": 10547,
+            "output": 64000
+          },
+          "costo_usd": 0.032145,
+          "segundos": 253.7,
+          "error": "stop_reason 'max_tokens': no se lee"
+        }
+      ],
+      "resumen": {
+        "high": {
+          "elecciones": {
+            "NINGUNA": 1,
+            "SPORT LOTION FPS 50": 1,
+            "SPORT FPS 50": 1
+          },
+          "estable": false,
+          "eleccion": null
+        },
+        "max": {
+          "elecciones": {
+            "ERROR: stop_reason 'max_tokens': no se lee": 2,
+            "SPORT FPS 50": 1
+          },
+          "estable": false,
+          "eleccion": null
+        }
+      }
+    }
+  ]
+}
