@@ -8,8 +8,8 @@ Agentes que convierten las listas de los proveedores en fichas estándar (`lista
 .\.venv\Scripts\Activate.ps1                 # siempre antes de correr algo
 $env:PYTHONUTF8=1                            # sin esto, un caño (| Select-Object) rompe con "ﬁ" o "→" (cp1252)
 
-# Pruebas sin IA (gratis): tienen que dar "todo OK" las 25 antes de cada commit
-"agente","catalogo_viejo","cuentas","escritor","extractor","extractor_fds","extractor_folleto","lector_excel","orquestador","pedido_proveedor","servidor","recepcion","servidor_excel","criterio","hooks","permisos","vigilar","acuse","ficha_estructurada","cliente_batch","familias","segunda_opinion","costo_por_ficha","verificar_entorno","consultas" | ForEach-Object { Write-Host "== probar_$_.py" -ForegroundColor Cyan; python "probar_$_.py" 2>&1 | Select-Object -Last 1 }
+# Pruebas sin IA (gratis): tienen que dar "todo OK" las 26 antes de cada commit
+"agente","catalogo_viejo","cuentas","escritor","extractor","extractor_fds","extractor_folleto","lector_excel","orquestador","pedido_proveedor","servidor","recepcion","servidor_excel","criterio","hooks","permisos","vigilar","acuse","ficha_estructurada","cliente_batch","familias","segunda_opinion","costo_por_ficha","verificar_entorno","consultas","asistente" | ForEach-Object { Write-Host "== probar_$_.py" -ForegroundColor Cyan; python "probar_$_.py" 2>&1 | Select-Object -Last 1 }
 
 # Evaluador (gratis): 116 casos verificados por una persona
 "litoral","lhs","andes","dermalab","naturalvida","rivera","higiene","norte","bebefeliz" | ForEach-Object { python evaluar.py "evaluacion\casos_$_.json" 2>&1 | Select-Object -Last 3 }

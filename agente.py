@@ -126,14 +126,14 @@ def cache_sin_leer(vuelta_de_la_conversacion: int, tokens: dict) -> bool:
     return vuelta_de_la_conversacion >= 2 and tokens["leidos"] == 0
 
 
-async def armar_system_prompt(cliente_mcp: Client) -> str:
-    """Instrucciones de prompt_sistema.md + el criterio de revisión (prompt MCP del servidor) + los 3 resources del
+async def armar_system_prompt(cliente_mcp: Client, ruta_prompt: Path = RUTA_PROMPT) -> str:
+    """Instrucciones de prompt_sistema.md (o del archivo que se pase: el asistente usa prompt_asistente.md) + el criterio de revisión (prompt MCP del servidor) + los 3 resources del
     estándar, cada uno entre etiquetas.
 
     El criterio se le PIDE al servidor (get_prompt): si el servidor no lo tiene, esto falla con error y el fichador no
     arranca. No hay una copia local de respaldo: el criterio vive en un solo lugar.
     """
-    partes = [RUTA_PROMPT.read_text(encoding="utf-8")]
+    partes = [ruta_prompt.read_text(encoding="utf-8")]
     criterio = await cliente_mcp.get_prompt(PROMPT_CRITERIO)
     partes.append(f"<{PROMPT_CRITERIO}>\n{criterio.messages[0].content.text}\n</{PROMPT_CRITERIO}>")
     for etiqueta, uri in RESOURCES_ESTANDAR.items():
@@ -212,7 +212,8 @@ def resumir_bloques(contenido) -> list[dict]:
 
 
 async def correr_loop(cliente_claude, cliente_mcp: Client, modelo: str, system: str, tools: list[dict],
-                      mensajes: list, uso: dict, ruta_traza: Path, hooks: HooksDeLaTanda) -> tuple[str, str]:
+                      mensajes: list, uso: dict, ruta_traza: Path, hooks: HooksDeLaTanda,
+                      formato: dict | None = None) -> tuple[str, str]:
     """El loop del M2: pedirle a Claude, ejecutar las tools que pida, devolverle los resultados... hasta que termine.
 
     Semana 4, paso 5: antes de cada tool corre hooks.antes_de_tool (si frena, la tool NO se ejecuta y el modelo recibe
@@ -223,6 +224,9 @@ async def correr_loop(cliente_claude, cliente_mcp: Client, modelo: str, system: 
     ninguna -> las de tiempo real). El loop no sabe si va por batch.
     """
     tarifas = getattr(cliente_claude, "tarifas", TARIFAS_TIEMPO_REAL)
+    # Semana 6: el asistente pide su respuesta final con forma fija (output_config.format, M6 §2.1); el fichador no
+    # pasa formato y su pedido queda exactamente igual que antes.
+    output_config = {"effort": EFFORT, **({"format": formato} if formato else {})}
     for _ in range(MAX_VUELTAS):
         uso["vueltas"] += 1
 
@@ -235,7 +239,7 @@ async def correr_loop(cliente_claude, cliente_mcp: Client, modelo: str, system: 
             system=system_con_cache(system),
             tools=tools,
             messages=mensajes_con_cache(mensajes),
-            output_config={"effort": EFFORT},
+            output_config=output_config,
             thinking=THINKING,
         ) as stream:
             respuesta = stream.get_final_message()
