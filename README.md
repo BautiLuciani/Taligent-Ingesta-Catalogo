@@ -234,9 +234,9 @@ pip install -r requirements.txt
 # 3. Verificar que todo esté listo
 python verificar_entorno.py
 
-# 4. Pruebas sin IA (gratis): las 26 tienen que dar "todo OK"
+# 4. Pruebas sin IA (gratis): las 27 tienen que dar "todo OK"
 $env:PYTHONUTF8=1   # sin esto, Windows no puede imprimir algunos caracteres por un caño
-"agente","catalogo_viejo","cuentas","escritor","extractor","extractor_fds","extractor_folleto","lector_excel","orquestador","pedido_proveedor","servidor","recepcion","servidor_excel","criterio","hooks","permisos","vigilar","acuse","ficha_estructurada","cliente_batch","familias","segunda_opinion","costo_por_ficha","verificar_entorno","consultas","asistente" | ForEach-Object { Write-Host "== probar_$_.py" -ForegroundColor Cyan; python "probar_$_.py" 2>&1 | Select-Object -Last 1 }
+"agente","catalogo_viejo","cuentas","escritor","extractor","extractor_fds","extractor_folleto","lector_excel","orquestador","pedido_proveedor","servidor","recepcion","servidor_excel","criterio","hooks","permisos","vigilar","acuse","ficha_estructurada","cliente_batch","familias","segunda_opinion","costo_por_ficha","verificar_entorno","consultas","asistente","evaluar_consultas" | ForEach-Object { Write-Host "== probar_$_.py" -ForegroundColor Cyan; python "probar_$_.py" 2>&1 | Select-Object -Last 1 }
 
 # 5. Un archivo nuevo entra solo (semana 4): copiarlo a entrada/<carpeta del proveedor>/ y
 python vigilar.py --una-vez                         # procesa lo nuevo y termina (sin --una-vez, queda mirando)
