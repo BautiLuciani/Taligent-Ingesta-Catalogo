@@ -130,7 +130,11 @@
           "gtin faltante",
           "sin gtin",
           "falta el ean",
-          "falta el codigo"
+          "falta el codigo",
+          "no trae codigo de barras",
+          "no tiene codigo de barras",
+          "ean vacio",
+          "el ean vacio"
         ],
         [
           "posible duplicado",
