@@ -432,6 +432,14 @@ def verificar_receta(resumen: dict, propuesta: dict | None, ruta_excel: Path) ->
         else:
             la_mayoria(f"El contenido se puede calcular ({forma})",
                        lambda f: contenido_de_la_fila(f, forma, columnas, separador)[0] is not None, filas)
+            # Semana 5, paso 7C: con la mayoría alcanza para que la receta entre, pero las filas que quedan sin contenido
+            # llegaban al agente vacías y en silencio (Bebé Feliz: 12 de 32, y el modelo hizo la cuenta). Ahora se avisa.
+            sin_contenido = [f for f in filas if contenido_de_la_fila(f, forma, columnas, separador)[0] is None]
+            if sin_contenido:
+                ejemplos = sorted({str(f.get(columnas["contenido"])) for f in sin_contenido})[:3]
+                avisos.append(f"{len(sin_contenido)} de {len(filas)} filas sin contenido calculado (ej. "
+                              f"{', '.join(repr(e) for e in ejemplos)}): esos productos llegan al agente con el contenido "
+                              "vacío y, si no se puede determinar, van a revisión.")
 
     # 5) Moneda (estándar, sección 6): si el archivo menciona dólares, es USD; si no, UYU
     menciones = [texto for texto in textos_del_resumen(resumen) if menciona_dolar(texto)]

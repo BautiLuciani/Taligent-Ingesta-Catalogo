@@ -171,6 +171,24 @@ BUENAS = {
 for nombre, (ruta, resumen, propuesta) in BUENAS.items():
     v = verificar_receta(resumen, propuesta, ruta)
     chequear(f"{nombre}: todos los controles pasan y hay receta", (v["problemas"], v["receta"] is not None), ([], True))
+BEBE = PROVEEDORES / "P06_Bebe_Feliz" / "BebeFeliz_altas.xlsx"  # semana 5, paso 7C: la receta que propuso el modelo
+receta_bebe = {"hoja_productos_nuevos": "Altas", "evidencia_hoja": "Altas", "hojas_que_no_entran": [],
+               "columna_descripcion": "Producto", "columna_ean": "EAN", "columna_precio": "Precio lista",
+               "columna_contenido": "Cantidad", "columna_unidad": "Cantidad", "moneda": "UYU", "evidencia_moneda": None}
+v = verificar_receta(resumen_del_excel(BEBE), receta_bebe, BEBE)
+chequear("Bebé Feliz: entra y ahora el contenido sale en las 32 filas (antes 20: 'x 50' y '2 x 60 un')",
+         (v["problemas"], {c["control"]: c["detalle"] for c in v["controles"]}["El contenido se puede calcular (columna_con_unidad)"]),
+         ([], "32 de 32 filas"))
+chequear("...y sin filas sin contenido, no hay aviso", v["avisos"], [])
+v = verificar_receta(resumen_del_excel(BEBE), {**receta_bebe, "columna_contenido": "Talle / etapa", "columna_unidad": "Talle / etapa"}, BEBE)
+chequear("Una columna de contenido mala: no entra (la mayoría no se calcula)", v["receta"], None)
+import recepcion as modulo_recepcion  # noqa: E402
+original_separar = modulo_recepcion.contenido_de_la_fila
+modulo_recepcion.contenido_de_la_fila = lambda f, *a: (None, None) if f.get("Cantidad") == "x 50" else original_separar(f, *a)
+v = verificar_receta(resumen_del_excel(BEBE), receta_bebe, BEBE)
+modulo_recepcion.contenido_de_la_fila = original_separar
+chequear("Si algunas filas no dan contenido, entra igual pero AVISA cuántas y cuáles (antes era en silencio)",
+         (v["receta"] is not None, v["avisos"][0].startswith("3 de 32 filas sin contenido calculado (ej. 'x 50')")), (True, True))
 chequear("Norte: las que no van las calcula el código (Origin)",
          verificar_receta(norte, BUENAS["Norte"][2], NORTE)["receta"]["decisiones"]["columnas_que_no_van"],
          [{"columna": "Origin", "motivo": MOTIVO_NO_VA}])

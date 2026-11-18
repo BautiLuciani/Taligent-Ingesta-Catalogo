@@ -153,13 +153,27 @@ def separar_contenido(texto, separador_decimal: str = ",") -> tuple[float | None
 
     Ejemplos: "X 500 ML" -> (500.0, "ML") · "250ML" -> (250.0, "ML") · "60g" -> (60.0, "g")
               "0,5 KG" -> (0.5, "KG") · "4.8 fl oz" (inglés) -> (4.8, "fl oz")
-    La unidad sale tal cual: la normaliza después convertir_contenido.
-    Si no tiene la forma "número + unidad", devuelve (None, None): no inventamos.
+    Semana 5, paso 7C (Bebé Feliz, que el código no sabía leer y le dejaba la cuenta al modelo):
+              "x 50" -> (50.0, "UN"): una "x" con un número y sin unidad cuenta unidades, como en las presentaciones
+                       de los medicamentos ("Comp. rec. x 20"); el estándar (sección 4) cuenta en UN las toallitas,
+                       los pañales, los comprimidos...
+              "2 x 60 un" -> (60.0, "un"): "N x M" es un envase con N unidades de M; el contenido es el de UNA unidad
+                       (estándar, sección 5). Si es un pack lo decide el agente con lo que dice el archivo (regla 10).
+    Un número solo, sin "x" ni unidad ("50"), no se adivina. La unidad sale tal cual: la normaliza después
+    convertir_contenido. Si no tiene ninguna de esas formas, devuelve (None, None): no inventamos.
     """
     texto = "" if texto is None else " ".join(str(texto).split())
     # Una "X" opcional adelante, el número (con coma o punto) y la unidad (letras, puede tener espacio: "fl oz")
     coincidencia = re.fullmatch(r"(?:[Xx]\s*)?(\d[\d.,]*)\s*([A-Za-z][A-Za-z. ]*)", texto)
     if coincidencia is None:
+        varias = re.fullmatch(r"\d+\s*[Xx]\s*(\d[\d.,]*)\s*([A-Za-z][A-Za-z. ]*)?", texto)  # "2 x 60 un"
+        sin_unidad = re.fullmatch(r"[Xx]\s*(\d[\d.,]*)", texto)                                  # "x 50"
+        if varias:
+            cantidad = convertir_numero(varias.group(1), separador_decimal)
+            return (cantidad, (varias.group(2) or "UN").strip()) if cantidad is not None else (None, None)
+        if sin_unidad:
+            cantidad = convertir_numero(sin_unidad.group(1), separador_decimal)
+            return (cantidad, "UN") if cantidad is not None else (None, None)
         return None, None
     cantidad = convertir_numero(coincidencia.group(1), separador_decimal)
     if cantidad is None:
