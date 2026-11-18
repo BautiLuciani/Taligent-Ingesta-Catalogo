@@ -148,7 +148,7 @@
       "items": ["P05:DL-103"], "valor": "a_revision",
       "fuentes": [{"archivo": "Dermalab_lanzamientos_2026.pdf", "pagina": 1}],
       "debe_mencionar": ["precio"],
-      "por_que": "Se va gtin_faltante, pero sigue faltando el precio de costo (dato_obligatorio_faltante): sigue a revisión. Si ese EAN ya estuviera en el catálogo, sería duplicado. DECISIÓN A CONFIRMAR POR BAUTI."
+      "por_que": "Se va gtin_faltante, pero sigue faltando el precio de costo (dato_obligatorio_faltante): sigue a revisión. Si ese EAN ya estuviera en el catálogo, sería duplicado. Decidido con Bauti (18/11): responde a_revision y menciona el caso del duplicado como aclaración."
     },
     {
       "id": "Q20", "tipo": "hipotetica",

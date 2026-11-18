@@ -38,6 +38,13 @@ PERMISOS = {
         "como": "sin_tools",
         "por_que": "Una llamada con citas por FDS; el código lee el texto citado de las secciones 1 y 14.",
     },
+    "asistente": {
+        "tools": {"ver_ficha", "buscar_fichas", "ver_pedido_al_proveedor", "ver_lo_que_no_entro"},
+        "como": "servidor",
+        "por_que": "Semana 6: contesta preguntas sobre lo que el sistema YA generó. Solo lectura: no ve registrar_ficha "
+                   "(no puede cambiar una ficha aunque se lo pidan en el chat) ni las tools de los fichadores (no lee "
+                   "los archivos de los proveedores: consulta la salida, con sus fuentes).",
+    },
     "catalogo_viejo": {
         "tools": set(),
         "como": "sin_tools",

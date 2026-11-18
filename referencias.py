@@ -23,6 +23,13 @@ CARPETA_RECEPCION_REFERENCIA = CARPETA_REFERENCIAS_SEM4 / "recepcion"
 CARPETA_REFERENCIAS_SEM5 = Path(__file__).parent / "salida" / "experimentos" / "referencias_sem5"
 RUTA_RESULTADOS_SEM4 = CARPETA_REFERENCIAS_SEM5 / "resultados_sem4.json"
 
+# Semana 6, paso 2: las 257 fichas del cierre de la semana 5 (commit 6ba619b, evaluador 116/116) y los pedidos al
+# proveedor de ese commit, congelados en referencias_sem6/. Son lo que consulta el asistente en las pruebas
+# (las respuestas esperadas de las 29 consultas se verificaron contra estas fichas).
+CARPETA_REFERENCIAS_SEM6 = Path(__file__).parent / "salida" / "experimentos" / "referencias_sem6"
+RUTA_RESULTADOS_SEM5 = CARPETA_REFERENCIAS_SEM6 / "resultados.json"
+CARPETA_PEDIDOS_SEM5 = CARPETA_REFERENCIAS_SEM6 / "pedidos"
+
 # Para ESTE proceso: los imports de servidor_mcp que hagan las pruebas leen las copias congeladas.
 os.environ["INGESTA_CARPETA_EXTRACCIONES"] = str(CARPETA_REFERENCIAS_SEM4 / "extracciones")
 os.environ["INGESTA_CARPETA_RECEPCION"] = str(CARPETA_RECEPCION_REFERENCIA)

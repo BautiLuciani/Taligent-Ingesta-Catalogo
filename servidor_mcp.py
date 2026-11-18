@@ -19,6 +19,7 @@ from cuentas import (cargar_abreviaturas, cargar_vocabulario, contenido_de_prese
                      convertir_contenido, convertir_numero, convertir_precio, expandir_abreviaturas, normalizar_gtin,
                      separar_contenido)
 from lector_excel import leer_tabla_excel
+import consultas
 from recepcion import contenido_de_la_fila
 
 CARPETA_DATA = Path(__file__).parent / "Data"
@@ -867,6 +868,85 @@ def registrar_ficha(
     else:
         total = guardar_resultado(resultado)
     return {"registrado": item_id, "estado": estado, "total_registrados": total}
+
+
+# --- Semana 6, paso 2: las tools del ASISTENTE de consultas (solo lectura) ---
+# Consultan la SALIDA del sistema (resultados.json, las filas consolidadas, la recepción y los pedidos), no los
+# archivos de los proveedores. La lógica está en consultas.py (probada sin levantar el servidor); acá solo se
+# registran. Quién ve cada tool lo decide permisos.py: el fichador no ve estas y el asistente no ve registrar_ficha.
+CATALOGO_POR_SKU = {producto["sku"]: producto for producto in CATALOGO}
+NO_ENTRARON = consultas.lo_que_no_entro(PROVEEDORES)
+CARPETA_PEDIDOS = CARPETA_SALIDA / "pedidos"
+NOMBRES_PROVEEDORES = {fila["proveedor_id"]: fila["nombre"] for fila in csv.DictReader(
+    (CARPETA_DATA / "proveedores" / "proveedores.csv").open(encoding="utf-8-sig"))}
+LISTA_PROVEEDORES = ", ".join(f"{pid} {nombre}" for pid, nombre in sorted(NOMBRES_PROVEEDORES.items()))
+Peligro = Literal[tuple(VOCABULARIO["peligro_deposito"])]
+MonedaLista = Literal[tuple(VOCABULARIO["monedas"])]
+
+
+@mcp.tool(annotations={"readOnlyHint": True})
+def ver_ficha(
+    codigo: Annotated[str, Field(min_length=2, max_length=40,
+                                 description="Código del producto, con o sin proveedor: 'P01:AN-1124' o 'AN-1124'.")],
+) -> dict:
+    """Todo lo que el sistema generó sobre UN producto, con la fuente de cada dato.
+
+    Usala para preguntas sobre un producto puntual: un dato y de dónde sale, por qué quedó en su estado, con qué SKU
+    coincide, qué decía el archivo. Devuelve estado, motivos_revision, duplicado_de (y la descripción de ese SKU en el
+    catálogo), la ficha, fuentes (campo -> {archivo, linea} / {archivo, pagina} / {archivo, hoja, fila}), qué dato
+    decidió la categoría, archivo_original (la fila tal como vino, con su fuente), los conflictos entre dos archivos
+    con cada versión y su fuente, la FDS que lo nombra y motivo_gtin (por qué su GTIN no sirve).
+    Si encontrado=false con no_entro, el producto está en un archivo pero no se cargó (con el motivo y su fuente).
+    Si encontrado=false sin no_entro, ese código no está en lo generado.
+    """
+    return consultas.ver_ficha(codigo, consultas.cargar_resultados(RUTA_RESULTADOS), FILAS_POR_ITEM,
+                               CATALOGO_POR_SKU, NO_ENTRARON)
+
+
+@mcp.tool(annotations={"readOnlyHint": True})
+def buscar_fichas(
+    proveedor_id: Annotated[ProveedorHabilitado | None, Field(description=f"Solo de este proveedor ({LISTA_PROVEEDORES}).")] = None,
+    estado: Annotated[Estado | None, Field(description="Solo los que quedaron en este estado.")] = None,
+    motivo: Annotated[Motivo | None, Field(description="Solo los que tienen este motivo de revisión.")] = None,
+    peligro_deposito: Annotated[Peligro | None, Field(description="Solo los que tienen esta clasificación para el depósito (pendiente_fds = les falta la ficha de datos de seguridad).")] = None,
+    moneda: Annotated[MonedaLista | None, Field(description="Solo los que tienen el precio en esta moneda.")] = None,
+    en_pack: Annotated[bool | None, Field(description="true: solo los que vienen en pack (unidades_por_envase mayor a 1).")] = None,
+    texto: Annotated[str | None, Field(max_length=60, description="Solo los que tienen este texto en la descripción (sin importar mayúsculas ni acentos).")] = None,
+    ordenar_por: Annotated[Literal["precio_costo_desc", "precio_costo_asc"] | None, Field(description="Ordenar por precio de costo (desc = el más caro primero).")] = None,
+    desde: Annotated[int, Field(ge=0, description="Posición del primer ítem (para pedir la página siguiente).")] = 0,
+    cantidad: Annotated[int, Field(ge=1, le=50, description="Cuántos ítems devolver (máximo 50).")] = 25,
+) -> dict:
+    """Busca y cuenta fichas generadas que cumplen TODOS los filtros que le pases (los que no pasás no filtran).
+
+    Usala para listas y conteos: qué productos de un proveedor quedaron a revisión, cuáles van como corrosivos,
+    cuáles están en dólares o en pack, cuántos quedaron listos para alta, cuál es el más caro. Devuelve total (todos
+    los que cumplen, aunque la página traiga menos), conteo_por_estado y los ítems con descripción, estado, motivos,
+    precio, moneda, peligro, unidades por envase y las fuentes de esos datos. Si 'siguiente' no es null, hay más:
+    volvé a llamarla con desde=siguiente. Para el detalle de un producto, ver_ficha.
+    """
+    return consultas.buscar_fichas(consultas.cargar_resultados(RUTA_RESULTADOS), proveedor_id, estado, motivo,
+                                   peligro_deposito, moneda, en_pack, texto, ordenar_por, desde, cantidad)
+
+
+@mcp.tool(annotations={"readOnlyHint": True})
+def ver_pedido_al_proveedor(
+    proveedor_id: Annotated[ProveedorHabilitado, Field(description=f"El proveedor ({LISTA_PROVEEDORES}).")],
+) -> dict:
+    """El mensaje listo para mandarle al proveedor con lo que falta para cerrar sus revisiones (EAN, precio, FDS,
+    conflictos con sus dos fuentes, confirmar un posible duplicado). Usala cuando pregunten qué hay que pedirle a un
+    proveedor. hay_pedido=false: no hay nada que pedirle."""
+    return consultas.pedido_del_proveedor(proveedor_id, CARPETA_PEDIDOS)
+
+
+@mcp.tool(annotations={"readOnlyHint": True})
+def ver_lo_que_no_entro(
+    proveedor_id: Annotated[ProveedorHabilitado | None, Field(description=f"Solo de este proveedor ({LISTA_PROVEEDORES}).")] = None,
+) -> dict:
+    """Los productos que están en un archivo de un proveedor pero NO se cargaron (por ejemplo, la hoja de
+    discontinuados de un Excel), cada uno con su fuente y el motivo. Usala cuando pregunten por qué un producto no
+    aparece o qué quedó afuera."""
+    productos = [p for p in NO_ENTRARON if proveedor_id is None or p["proveedor_id"] == proveedor_id]
+    return {"total": len(productos), "productos": productos}
 
 
 # --- Resources: el estándar, para que el agente lo ponga en su system prompt ---
