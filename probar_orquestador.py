@@ -305,6 +305,6 @@ shutil.rmtree(carpeta, ignore_errors=True)
 print("--- semana 4, paso 7: el orquestador procesa a TODOS los habilitados del servidor ---")
 chequear("Los 5 de antes + los 3 que entraron solos (recetas congeladas)", orquestador.PROVEEDORES,
          ["P03", "P07", "P01", "P05", "P09", "P02", "P04", "P08"])
-chequear("Bebé Feliz no (el servidor no lo habilita)", "P06" in orquestador.PROVEEDORES, False)
+chequear("Bebé Feliz no (en la recepción congelada de las pruebas no está)", "P06" in orquestador.PROVEEDORES, False)
 
 print(f"\nResultado: {'todo OK' if errores == 0 else f'{errores} con error'}")

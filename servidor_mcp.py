@@ -45,7 +45,7 @@ CARPETA_EXTRACCIONES = Path(os.getenv("INGESTA_CARPETA_EXTRACCIONES",
 
 # Cómo leer el archivo de cada proveedor de las semanas 1 a 3: escrito A MANO (queda así: no se rompe lo que anda).
 # Los de la semana 4 en adelante entran SOLOS (proveedores_recibidos, abajo).
-# P06 (Bebé Feliz) NO está: es el proveedor apartado hasta la semana 5.
+# P06 (Bebé Feliz) no está acá: estuvo apartado hasta la semana 5 y entra solo, por la recepción (paso 7).
 PROVEEDORES_A_MANO = {
     "P03": {
         "formato": "csv",
@@ -108,7 +108,7 @@ PROVEEDORES_A_MANO = {
 # Dónde dejó sus resultados el recepcionista (recepcion.py). Tiene su variable de entorno: las pruebas la apuntan a
 # una copia congelada (referencias.py), porque cada recepción reescribe esta carpeta.
 CARPETA_RECEPCION = Path(os.getenv("INGESTA_CARPETA_RECEPCION", Path(__file__).parent / "salida" / "recepcion"))
-APARTADOS = {"P06"}  # Bebé Feliz: apartado hasta la semana 5. Lo frena el código, no la memoria
+APARTADOS: set[str] = set()  # semana 5, paso 7: Bebé Feliz (P06) salió del apartado; el mecanismo queda, vacío
 
 
 def proveedores_recibidos(carpeta_recepcion: Path = CARPETA_RECEPCION) -> dict[str, dict]:
@@ -519,7 +519,7 @@ def leer_filas_mail(proveedor_id: str, config: dict) -> list[dict]:
 
 LECTORES = {"csv": leer_filas_csv, "pdf": leer_filas_pdf, "mail": leer_filas_mail, "excel": leer_filas_excel}
 # Los proveedores que se pueden leer: salen de PROVEEDORES (antes era una lista fija en la tool y un proveedor nuevo
-# quedaba afuera sin avisar). P06 no está en PROVEEDORES: sigue apartado.
+# quedaba afuera sin avisar). P06 no está en PROVEEDORES: desde la semana 5 entra solo, por la recepción.
 ProveedorHabilitado = Literal[tuple(PROVEEDORES)]
 
 

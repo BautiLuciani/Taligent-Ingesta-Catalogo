@@ -357,11 +357,15 @@ malo = ClienteConReceta({**BUENAS["Norte"][2], "moneda": "UYU"})
 resultado = recibir(malo, "modelo-x", NORTE, de_nuevo=True, carpeta=carpeta)
 chequear("Una receta mala no entra, y el motivo queda guardado", (resultado["receta"], len(resultado["problemas"]) > 0),
          (None, True))
+chequear("Semana 5, paso 7: ya no hay proveedores apartados (Bebé Feliz salió)", recepcion.APARTADOS, set())
+recepcion.APARTADOS = {"P06"}  # el mecanismo sigue: se prueba apartando a P06 solo para esta prueba
 try:
     recibir(falso, "modelo-x", PROVEEDORES / "P06_Bebe_Feliz" / "BebeFeliz_altas.xlsx", carpeta=carpeta)
-    chequear("Bebé Feliz (apartado) se frena", "no frenó", "frenó")
+    chequear("Un proveedor apartado se frena", "no frenó", "frenó")
 except ValueError as error:
-    chequear("Bebé Feliz (apartado) se frena antes de leer nada, con su motivo", "apartado" in str(error), True)
+    chequear("Un proveedor apartado se frena antes de leer nada, con su motivo", "apartado" in str(error), True)
+finally:
+    recepcion.APARTADOS = set()
 chequear("Con el apartado no se llamó a la API", falso.llamadas, 2)
 afuera = carpeta / "una_carpeta_cualquiera" / "lista.xlsx"
 afuera.parent.mkdir()
@@ -380,7 +384,7 @@ chequear("En Data/proveedores/P08_Importadora_Norte/ -> P08", proveedor_de_la_ru
 chequear("En la bandeja entrada/P02_Cosmetica_Rivera/ (con otro nombre de archivo) -> P02",
          proveedor_de_la_ruta(Path("entrada") / "P02_Cosmetica_Rivera" / "ALTAS RIVERA NOV.xlsx"), "P02")
 chequear("En una carpeta que no es de ningún proveedor -> None", proveedor_de_la_ruta(Path("entrada") / "Varios" / "x.xlsx"), None)
-chequear("Bebé Feliz se reconoce (y después recibir lo frena por apartado)",
+chequear("Bebé Feliz se reconoce por su carpeta",
          proveedor_de_la_ruta(PROVEEDORES / "P06_Bebe_Feliz" / "BebeFeliz_altas.xlsx"), "P06")
 
 print(f"\nResultado: {'todo OK' if errores == 0 else f'{errores} con error'}")

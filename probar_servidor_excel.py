@@ -102,7 +102,7 @@ chequear("P02, P04 y P08 quedan habilitados sin configuración a mano",
          sorted(p for p in habilitados if p not in servidor_mcp.PROVEEDORES_A_MANO), ["P02", "P04", "P08"])
 chequear("Los de las semanas 1 a 3 siguen igual (los escritos a mano)",
          all(habilitados[p] is servidor_mcp.PROVEEDORES_A_MANO[p] for p in servidor_mcp.PROVEEDORES_A_MANO), True)
-chequear("Bebé Feliz (P06) nunca: está apartado", "P06" in habilitados, False)
+chequear("Bebé Feliz (P06) no: en la recepción congelada no está (entra en la semana 5, paso 7)", "P06" in habilitados, False)
 chequear("P04: Excel con su receta, sin FDS (no tiene esa carpeta)",
          (habilitados["P04"]["formato"], habilitados["P04"]["receta"]["hoja"], "fds" in habilitados["P04"]), ("excel", "Altas", False))
 chequear("P02 y P08: van a buscar sus FDS donde las deja extractor_fds.py",

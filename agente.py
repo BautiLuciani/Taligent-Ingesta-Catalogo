@@ -388,7 +388,7 @@ async def revisar_lectura(proveedor_id: str) -> None:
     """Chequeo entre etapas (semana 3, paso 1b, M4 §1.1): ¿se puede procesar este proveedor?
 
     Le pregunta al servidor desde el CÓDIGO (sin IA). Si la lectura de sus archivos quedó con problemas, o el
-    proveedor no se permite (P06), el servidor contesta con un error y se frena acá, ANTES de preparar_resultados:
+    proveedor no se permite (uno que no pasó por la recepción), el servidor contesta con un error y se frena acá, ANTES de preparar_resultados:
     así una lectura mala nunca borra las fichas buenas de una corrida anterior, ni se gasta en fichas.
     Levanta el servidor un momento solo para esto (un par de segundos), para no tocar el orden del resto.
     """

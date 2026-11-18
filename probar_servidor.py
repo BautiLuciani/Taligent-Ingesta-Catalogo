@@ -74,7 +74,7 @@ async def main():
                  (por_id["P03:LT-3345"]["calculado"]["contenido"], por_id["P03:LT-3345"]["calculado"]["unidad"]), (250, "ML"))
         chequear("LT-3357 sin EAN", por_id["P03:LT-3357"]["calculado"]["motivo_gtin"], "gtin_faltante")
         resultado = await cliente.call_tool("leer_archivo_proveedor", {"proveedor_id": "P06"}, raise_on_error=False)
-        chequear("P06 (apartado) bloqueado", resultado.is_error, True)
+        chequear("P06 sin recepción (no está habilitado) bloqueado", resultado.is_error, True)
 
         print("\n--- leer_archivo_proveedor: el PDF de Limpieza Hogar Sur (semana 2) ---")
         filas_lhs = await leer_todas(cliente, "P07")

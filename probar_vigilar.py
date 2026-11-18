@@ -107,6 +107,8 @@ chequear("...y en la siguiente mirada se procesa de nuevo (otra huella)",
 shutil.rmtree(entrada.parent, ignore_errors=True)
 
 print("--- 7C · procesar: lo que no se procesa, con su motivo ---")
+chequear("Semana 5, paso 7: ya no hay proveedores apartados (Bebé Feliz salió)", vigilar.APARTADOS, set())
+vigilar.APARTADOS = {"P06"}  # el mecanismo sigue: se prueba apartando a P06 solo en estas pruebas
 entrada, registro = bandeja_con(("Varios", "lista.xlsx", NORTE), ("P06_Bebe_Feliz", "BebeFeliz_altas.xlsx", NORTE),
                                 ("P07_Limpieza_Hogar_Sur", "nuevos.pdf", NORTE), ("P04_Higiene_Total", "novedades.xlsx", NORTE))
 pasos = PasosFalsos()
@@ -114,7 +116,7 @@ r = procesar(entrada / "Varios" / "lista.xlsx", pasos)
 chequear("Carpeta que no es de ningún proveedor: rechazado (no se adivina de quién es)",
          (r["estado"], "no es de ningún proveedor" in r["motivo"]), ("rechazado", True))
 r = procesar(entrada / "P06_Bebe_Feliz" / "BebeFeliz_altas.xlsx", pasos)
-chequear("Bebé Feliz: rechazado, está apartado", (r["estado"], r["proveedor_id"], "apartado" in r["motivo"]),
+chequear("Un proveedor apartado: rechazado, con su motivo", (r["estado"], r["proveedor_id"], "apartado" in r["motivo"]),
          ("rechazado", "P06", True))
 r = procesar(entrada / "P07_Limpieza_Hogar_Sur" / "nuevos.pdf", pasos)
 chequear("Un PDF: formato todavía no soportado por la bandeja (no se procesa a ciegas)", r["estado"], "formato_no_soportado")
@@ -151,6 +153,7 @@ chequear("9B · los 4 tienen acuse, también los rechazados y el que explotó",
          sorted((carpeta, estado) for carpeta, estado, _ in pasos.acuses),
          [("P04_Higiene_Total", "error"), ("P06_Bebe_Feliz", "rechazado"), ("P07_Limpieza_Hogar_Sur", "formato_no_soportado"),
           ("Varios", "rechazado")])
+vigilar.APARTADOS = set()
 shutil.rmtree(entrada.parent, ignore_errors=True)
 
 print("--- 9B · si el acuse falla, lo procesado queda igual y la bandeja sigue ---")

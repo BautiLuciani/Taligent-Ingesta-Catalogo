@@ -93,7 +93,7 @@ LECTORES = {"pdf": extraer_pdf, "fds": extraer_fds, "folleto": extraer_folleto}
 
 # Los proveedores que se procesan (semana 4, paso 7): TODOS los habilitados del servidor, los escritos a mano (semanas
 # 1 a 3) y los que entraron solos por el recepcionista. Antes era una lista fija: un proveedor nuevo quedaba afuera.
-# P06 no está: el servidor no lo habilita (apartado hasta la semana 5).
+# P06 entra como los demás cuando pasa por la recepción (estuvo apartado hasta la semana 5, paso 7).
 # Ojo: las FDS de un proveedor recibido las lee la bandeja ANTES (vigilar.py). Este módulo carga el servidor al
 # arrancar (vía el escritor), y si sus FDS faltaran recién se leerían acá, el servidor ya cargado no lo sabría.
 PROVEEDORES = list(HABILITADOS)

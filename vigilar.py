@@ -113,7 +113,7 @@ def procesar(ruta: Path, pasos) -> dict:
                 "motivo": f"la carpeta {ruta.parent.name!r} no es de ningún proveedor de proveedores.csv"}
     if proveedor_id in APARTADOS:
         return {"estado": "rechazado", "proveedor_id": proveedor_id,
-                "motivo": f"{proveedor_id} es el proveedor apartado hasta la semana 5"}
+                "motivo": f"{proveedor_id} es un proveedor apartado"}
 
     recepcion = pasos.recibir(ruta)
     if recepcion["receta"] is None:

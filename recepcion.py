@@ -465,8 +465,10 @@ def verificar_receta(resumen: dict, propuesta: dict | None, ruta_excel: Path) ->
 
 CARPETA_PROYECTO = Path(__file__).parent
 RUTA_PROVEEDORES_CSV = CARPETA_PROYECTO / "Data" / "proveedores" / "proveedores.csv"  # qué carpeta es de quién
-# El proveedor apartado hasta la semana 5 (la guía pide no usarlo para ajustar el sistema). Lo frena el código.
-APARTADOS = {"P06"}
+# Proveedores apartados: la guía pidió apartar a Bebé Feliz (P06) hasta la semana 5 para no ajustar el sistema con él.
+# Semana 5, paso 7: sale del apartado y entra como cualquier archivo nuevo, con el sistema tal cual. El mecanismo queda
+# (un proveedor apartado no se procesa, lo frena el código), vacío.
+APARTADOS: set[str] = set()
 
 
 def proveedor_de_la_ruta(ruta) -> str | None:
@@ -501,7 +503,7 @@ def recibir(cliente, modelo: str, ruta_excel: Path, de_nuevo: bool = False, carp
         raise ValueError(f"{ruta_excel.name}: no se sabe de qué proveedor es. Tiene que estar en la carpeta de un "
                          "proveedor (la que dice proveedores.csv, ej. entrada/P08_Importadora_Norte/).")
     if proveedor_id in APARTADOS:
-        raise ValueError(f"{ruta_excel.name} es de {proveedor_id}, el proveedor apartado hasta la semana 5: no se procesa.")
+        raise ValueError(f"{ruta_excel.name} es de {proveedor_id}, un proveedor apartado: no se procesa.")
     resumen, respuesta, propuesta = receta_propuesta(cliente, modelo, ruta_excel, de_nuevo, carpeta)
     verificacion = verificar_receta(resumen, propuesta, ruta_excel)
     resultado = {"proveedor_id": proveedor_id, "archivo": ruta_excel.name, "ruta": ruta_relativa(ruta_excel),
