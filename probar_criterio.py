@@ -27,7 +27,19 @@ PROMPT_AHORA = (CARPETA / "prompt_sistema.md").read_text(encoding="utf-8")
 CRITERIO = (CARPETA / "criterio_de_revision.md").read_text(encoding="utf-8")
 DEL_CRITERIO = (4, 5, 6, 15)
 CAMBIADAS_PASO_8 = (3, 13, 14)  # semana 4, paso 8: se agregó texto, no se quitó nada
-CAMBIADAS_SEM5 = (7, 8)          # semana 5, paso 2D: la ficha estructurada
+CAMBIADAS_SEM5 = (7, 8, 14)      # semana 5: 7 y 8 en el paso 2D (la ficha estructurada); 14 en el paso 8C
+# Semana 5, paso 8C: la regla 14 tenía dos frases que se contradecían ("no se descarta nada" y "el nombre del tipo no se
+# repite"); la segunda opinión lo mostró (salida/segunda_opinion.json). Se aclara cuál manda, con estos dos reemplazos.
+REGLA_14_SEM5 = [
+    ("aunque parezca repetir el tipo (por ejemplo, la línea «Sun» de un protector solar).",
+     "aunque parezca repetir el tipo (por ejemplo, la línea «Sun» de un protector solar: una línea o un nombre de "
+     "fantasía es del producto, no del nombre del tipo)."),
+    ("sin agregar CORPORAL ni FACIAL a la variante.",
+     "sin agregar CORPORAL ni FACIAL a la variante. El nombre del tipo es cómo el archivo llama a esa clase de producto, "
+     "aunque use más palabras que el vocabulario: «crema para manos» es tipo CREMA y PARA MANOS no va a la variante. "
+     "Esto manda sobre «no se descarta nada»: lo que nombra la clase de producto es el tipo; lo que distingue al producto "
+     "dentro de esa clase (línea, uso, ingrediente, talle, FPS) va en la variante."),
+]
 
 errores = 0
 
@@ -64,9 +76,13 @@ chequear("...y las otras 8 quedaron letra por letra",
          all(ahora[n] == antes[n] for n in ahora if n not in CAMBIADAS_PASO_8 + CAMBIADAS_SEM5), True)
 chequear("Paso 8: la regla 3 dice lo mismo que antes y suma al final", ahora[3].startswith(antes[3]) and ahora[3] != antes[3], True)
 chequear("Paso 8: la regla 13 dice lo mismo que antes y suma al final", ahora[13].startswith(antes[13]) and ahora[13] != antes[13], True)
+regla_14_sem4 = ahora[14]  # la regla 14 como estaba antes del paso 8C: deshaciendo los dos reemplazos
+for viejo, nuevo in REGLA_14_SEM5:
+    chequear(f"Semana 5, paso 8C: la regla 14 tiene el texto nuevo («{nuevo[-40:]}»)", ahora[14].count(nuevo), 1)
+    regla_14_sem4 = regla_14_sem4.replace(nuevo, viejo)
 chequear("Paso 8: la regla 14 conserva todos sus renglones (solo pasa de 'Dos casos' a 'Tres casos') y suma uno",
-         [r for r in antes[14].replace("Dos casos:", "Tres casos:").split("\n") if r not in ahora[14].split("\n")], [])
-chequear("...exactamente un renglón más", len(ahora[14].split("\n")) - len(antes[14].split("\n")), 1)
+         [r for r in antes[14].replace("Dos casos:", "Tres casos:").split("\n") if r not in regla_14_sem4.split("\n")], [])
+chequear("...exactamente un renglón más", len(regla_14_sem4.split("\n")) - len(antes[14].split("\n")), 1)
 chequear("Semana 5: la regla 7 dice lo mismo que antes y suma que peligro y ONU van en null sin FDS",
          ahora[7], antes[7] + " En los demás productos, esos dos campos van en null.")
 chequear("Semana 5: la regla 8 solo cambia el paréntesis de las fuentes (suma el mail y el Excel)",
