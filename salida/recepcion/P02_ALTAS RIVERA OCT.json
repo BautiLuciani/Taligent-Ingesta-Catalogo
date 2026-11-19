@@ -17,13 +17,13 @@
     "decisiones": {
       "evidencia_hoja": "Altas",
       "hojas_que_no_entran": [],
+      "evidencia_moneda": null,
       "columnas_que_no_van": [
         {
           "columna": "OBS",
-          "motivo": "Observaciones libres (por ejemplo, 'PACK PROMO CON NECESER'); no es un dato del formulario."
+          "motivo": "no se eligió para ningún dato del formulario"
         }
       ],
-      "evidencia_moneda": null,
       "evidencia_separador": "TRAT. CAP. ALBORADA NUTRICION 0,5 KG"
     }
   },
@@ -65,16 +65,6 @@
     },
     {
       "control": "Ninguna columna se usa para dos datos (salvo el contenido con su unidad o dentro de la descripción)",
-      "ok": true,
-      "detalle": ""
-    },
-    {
-      "control": "Ninguna columna se usa y a la vez figura en 'no van'",
-      "ok": true,
-      "detalle": ""
-    },
-    {
-      "control": "Ninguna columna queda sin decidir",
       "ok": true,
       "detalle": ""
     },
@@ -126,14 +116,8 @@
     "columna_contenido": "DESCRIPCION",
     "columna_unidad": "DESCRIPCION",
     "moneda": "UYU",
-    "evidencia_moneda": null,
-    "columnas_que_no_van": [
-      {
-        "columna": "OBS",
-        "motivo": "Observaciones libres (por ejemplo, 'PACK PROMO CON NECESER'); no es un dato del formulario."
-      }
-    ]
+    "evidencia_moneda": null
   },
-  "costo_usd": 0.000483,
+  "costo_usd": 0.00043,
   "stop_reason": "tool_use"
 }

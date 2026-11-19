@@ -18,13 +18,13 @@
     "decisiones": {
       "evidencia_hoja": "New items",
       "hojas_que_no_entran": [],
+      "evidencia_moneda": "Unit cost (USD)",
       "columnas_que_no_van": [
         {
           "columna": "Origin",
-          "motivo": "Indica el país de origen del producto; no es un dato del formulario de alta."
+          "motivo": "no se eligió para ningún dato del formulario"
         }
       ],
-      "evidencia_moneda": "Unit cost (USD)",
       "evidencia_separador": "4.8 fl oz"
     }
   },
@@ -66,16 +66,6 @@
     },
     {
       "control": "Ninguna columna se usa para dos datos (salvo el contenido con su unidad o dentro de la descripción)",
-      "ok": true,
-      "detalle": ""
-    },
-    {
-      "control": "Ninguna columna se usa y a la vez figura en 'no van'",
-      "ok": true,
-      "detalle": ""
-    },
-    {
-      "control": "Ninguna columna queda sin decidir",
       "ok": true,
       "detalle": ""
     },
@@ -132,14 +122,8 @@
     "columna_contenido": "Size",
     "columna_unidad": "Size",
     "moneda": "USD",
-    "evidencia_moneda": "Unit cost (USD)",
-    "columnas_que_no_van": [
-      {
-        "columna": "Origin",
-        "motivo": "Indica el país de origen del producto; no es un dato del formulario de alta."
-      }
-    ]
+    "evidencia_moneda": "Unit cost (USD)"
   },
-  "costo_usd": 0.000452,
+  "costo_usd": 0.000406,
   "stop_reason": "tool_use"
 }

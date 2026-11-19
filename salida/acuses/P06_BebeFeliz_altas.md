@@ -26,7 +26,7 @@ Recibido 2026-11-17 22:13:42 · Bebé Feliz S.A. (P06) · **PROCESADO ✅**
   - BF-593 a revisión: sin código de barras, posible duplicado (candidato: SKU102653).
   - BF-596 a revisión: sin código de barras, posible duplicado (candidato: SKU102121).
 - **Inestables:** ninguna marcada.
-- **Frenos de los hooks** (corrida del 2026-11-17 22:13): 0.
+- **Frenos de los hooks** (corrida del 2026-11-18 20:51): 0.
 
 ## Pedido al proveedor
 - BF-593: El código de barras (EAN-13).

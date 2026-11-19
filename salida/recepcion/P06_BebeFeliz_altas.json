@@ -101,7 +101,7 @@
     {
       "control": "El contenido se puede calcular (columna_con_unidad)",
       "ok": true,
-      "detalle": "20 de 32 filas"
+      "detalle": "32 de 32 filas"
     },
     {
       "control": "La moneda coincide con lo que dice el archivo",

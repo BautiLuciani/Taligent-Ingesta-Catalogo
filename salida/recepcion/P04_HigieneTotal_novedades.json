@@ -21,16 +21,11 @@
       "hojas_que_no_entran": [
         {
           "hoja": "Discontinuados",
-          "motivo": "Productos discontinuados, dados de baja; no son productos nuevos y no se cargan."
-        }
-      ],
-      "columnas_que_no_van": [
-        {
-          "columna": "Item",
-          "motivo": "Es el código interno del proveedor (p. ej. HT40003), no es un dato del formulario. Figura como columna_codigo en el resumen."
+          "motivo": "Contiene productos discontinuados, dados de baja; el proveedor no los presenta como nuevos, así que no se cargan."
         }
       ],
       "evidencia_moneda": null,
+      "columnas_que_no_van": [],
       "evidencia_separador": null
     }
   },
@@ -72,16 +67,6 @@
     },
     {
       "control": "Ninguna columna se usa para dos datos (salvo el contenido con su unidad o dentro de la descripción)",
-      "ok": true,
-      "detalle": ""
-    },
-    {
-      "control": "Ninguna columna se usa y a la vez figura en 'no van'",
-      "ok": true,
-      "detalle": ""
-    },
-    {
-      "control": "Ninguna columna queda sin decidir",
       "ok": true,
       "detalle": ""
     },
@@ -129,7 +114,7 @@
     "hojas_que_no_entran": [
       {
         "hoja": "Discontinuados",
-        "motivo": "Productos discontinuados, dados de baja; no son productos nuevos y no se cargan."
+        "motivo": "Contiene productos discontinuados, dados de baja; el proveedor no los presenta como nuevos, así que no se cargan."
       }
     ],
     "columna_descripcion": "Descripcion",
@@ -138,14 +123,8 @@
     "columna_contenido": "Cont.",
     "columna_unidad": "UM",
     "moneda": "UYU",
-    "evidencia_moneda": null,
-    "columnas_que_no_van": [
-      {
-        "columna": "Item",
-        "motivo": "Es el código interno del proveedor (p. ej. HT40003), no es un dato del formulario. Figura como columna_codigo en el resumen."
-      }
-    ]
+    "evidencia_moneda": null
   },
-  "costo_usd": 0.000531,
+  "costo_usd": 0.000481,
   "stop_reason": "tool_use"
 }

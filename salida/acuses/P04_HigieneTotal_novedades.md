@@ -5,7 +5,7 @@ Recibido 2026-11-11 16:38:38 · Higiene Total S.A. (P04) · **PROCESADO ✅**
 ## Qué entendió el sistema
 - **Proveedor:** P04, por la carpeta donde llegó (`P04_Higiene_Total`).
 - **Hoja con los productos nuevos:** "Altas" (2 hojas en el archivo).
-  - "Discontinuados": **NO ENTRA** — Productos discontinuados, dados de baja; no son productos nuevos y no se cargan.
+  - "Discontinuados": **NO ENTRA** — Contiene productos discontinuados, dados de baja; el proveedor no los presenta como nuevos, así que no se cargan.
 - **Columnas** (encabezado en la fila 1; 28 productos):
   - `Item` → código del proveedor · ej. HT40003
   - `Descripcion` → descripción · ej. "ESPUMA DE AFEITAR FILO MENTOL"
@@ -30,7 +30,7 @@ Recibido 2026-11-11 16:38:38 · Higiene Total S.A. (P04) · **PROCESADO ✅**
   - HT40063 a revisión: sin código de barras, posible duplicado (candidato: SKU102254).
   - HT40081 a revisión: sin código de barras, posible duplicado (candidato: SKU101771).
 - **Inestables:** ninguna marcada.
-- **Frenos de los hooks** (corrida del 2026-11-11 18:20): 0.
+- **Frenos de los hooks** (corrida del 2026-11-18 20:51): 0.
 
 ## Pedido al proveedor
 - HT40084: El código de barras (EAN-13).
