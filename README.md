@@ -1,4 +1,4 @@
-# Ingesta de Catálogo — Agentes con MCP: un archivo nuevo entra solo
+# Ingesta de Catálogo — Agentes con MCP: de las listas de los proveedores a fichas citadas, con un comando y un asistente
 
 Proyecto final del **Taligent AI Spring Camp** (Curso de Agentes V2). Caso asignado: **Ingesta de Catálogo** para *Farmacias Ceibo*, una cadena ficticia.
 
@@ -22,7 +22,35 @@ Cada dato de la ficha dice **de dónde salió**: archivo y línea en un CSV o un
 
 ---
 
-## ✅ Estado: semana 5 (módulo 6)
+## ✅ Estado: semana 6 — todo con un comando y el asistente de consultas
+
+**Los 9 proveedores con un comando** (`python correr_todo.py`): **257 fichas en 11 minutos, US$ 0,38 (US$ 0,00149 por ficha)**, evaluador **115/116 ficha entera y 116/116 fuente**. Sobre esa salida, **el asistente de consultas** contesta las 29 preguntas de la guía citando la fuente de cada dato: **29/29**, a **US$ 0,001 por consulta**.
+
+| Lo que pide la guía (semana 6) | Cómo quedó |
+|---|---|
+| Los nueve proveedores con un comando, con su costo y su tiempo | `correr_todo.py`: recepción → lectura → fichas → escritor → pedidos y acuses → evaluador, con un reporte de tiempo y costo **por etapa y por proveedor** |
+| Un agente conversacional que contesta las consultas citando la fuente | `asistente.py`: **29/29** (23 sueltas + 2 conversaciones de 3 turnos), con un evaluador propio (`evaluar_consultas.py`) |
+| Sostiene el hilo en las conversaciones | Memoria in-context: "¿y cuál es el más caro?" y "¿de dónde sale ese precio?" se contestan con lo hablado antes |
+| Dice cuando algo no está en lo generado | Ventas (Q22) y precio al público (Q23): lo dice y no inventa un valor |
+| Cada vuelta reenvía la conversación entera: mirá el costo | Caché del system, las tools y el historial (94–99 % leído desde la 2ª vuelta) y el costo de cada pregunta a la vista |
+
+**La corrida completa** (`salida/corrida_completa.json`, 18/11):
+
+| Etapa | Tiempo | Costo |
+|---|---|---|
+| Recepción de los 4 Excel y sus FDS | 17 s | US$ 0,0013 |
+| Lectura en paralelo (PDF, FDS, folleto; reusada) | 0 s | US$ 0 |
+| Fichas (3 fichadores) + escritor | 10 min 39 s | US$ 0,3814 |
+| Pedidos a proveedores + acuses | 4 s | US$ 0 |
+| **Total** | **11 min 01 s** | **US$ 0,3827** |
+
+- La lectura se paga **una vez por archivo**: con la lectura de cada archivo por primera vez, US$ 0,43 = **US$ 0,00168 por ficha**. Por la Batch API (`--batch`) las fichas cuestan casi la mitad y tardan unas 3 veces más.
+- **El asistente solo puede citar lo que vio:** el código verifica que cada fuente y cada producto de la respuesta hayan salido de una tool en esa conversación. Si no, se la devuelve una vez; si insiste, lo que no se pudo verificar se saca y se avisa.
+- **No puede tocar una ficha:** tiene 4 tools de solo lectura (permisos en el código); `registrar_ficha` ni la ve.
+- **1224 controles sin IA** en 28 archivos de pruebas.
+
+<details>
+<summary>Semana 5 (módulo 6)</summary>
 
 **9 proveedores, 257 fichas, evaluador 116/116 en ficha y en fuente.** La ficha sale **estructurada** (la API garantiza su forma y los valores del vocabulario), el estándar va **cacheado**, las corridas completas van por la **Batch API**, y se abrió el proveedor apartado, **Bebé Feliz**, una sola vez y con el sistema tal cual.
 
@@ -46,6 +74,7 @@ Cada dato de la ficha dice **de dónde salió**: archivo y línea en un CSV o un
 - **Bebé Feliz, una sola vez y sin tocar nada: 14/15 en ficha, 15/15 en fuente.** Qué falló y por qué, capa por capa, en *"Semana 5: Bebé Feliz"*.
 - **El extra: el detector de familias + la segunda opinión.** El código encuentra productos que el archivo escribe igual y la ficha dice distinto, y el modelo con más effort da su opinión. **Pensar más no arregló la duda, pero señaló la regla del prompt que estaba mal escrita.**
 - **1095 controles sin IA** en 23 archivos de pruebas.
+</details>
 
 <details>
 <summary>Semana 4 (módulo 5)</summary>
@@ -74,6 +103,25 @@ Litoral (CSV) con el servidor MCP propio: 50/50 estados correctos, evaluador 13/
 ---
 
 ## 🏗️ Cómo funciona
+
+### Semana 6: un comando y el asistente
+
+```
+python correr_todo.py
+  1. recepción: cada Excel de entrada/ ──▶ recepcion.py (receta) + extractor_fds.py     (si no entra: afuera, con su motivo)
+  2. orquestador.py: lectura en paralelo ──▶ consolidado ──▶ fichas (3 fichadores o --batch) ──▶ escritor
+  3. pedido_proveedor.py + acuse.py                                                        (código, gratis)
+  4. los 116 casos del evaluador                                                           (código, gratis)
+  5. reporte: tiempo y costo por etapa y por proveedor ──▶ salida/corrida_completa.json
+
+python asistente.py                     (lee la SALIDA del sistema, nunca escribe)
+  pregunta ──▶ Haiku + 4 tools de solo lectura: ver_ficha · buscar_fichas · ver_pedido_al_proveedor · ver_lo_que_no_entro
+           ──▶ respuesta con forma fija {texto, valor, items, fuentes}              (output_config.format)
+           ──▶ hook al terminar: ¿cada fuente y cada producto salió de una tool en ESTA conversación?
+                 sí ──▶ a la persona          no ──▶ se le devuelve el motivo (una vez); si insiste, se saca y se avisa
+  system = prompt_asistente.md + el MISMO criterio de revisión (prompt MCP) + el estándar ── con caché
+  memoria: el historial de la conversación (también cacheado) ──▶ "¿y cuál es el más caro?"
+```
 
 ### Semana 5: estructurado, cacheado y por batch
 
@@ -166,7 +214,11 @@ El restaurante de las semanas anteriores, ahora con más gente:
 | `familias.py` | **Extra de la semana 5.** Detector de familias: productos que el archivo escribe igual (salvo contenido, EAN y precio) tienen que decir lo mismo en la ficha |
 | `segunda_opinion.py` | **Extra de la semana 5.** Una pregunta enfocada por cada duda de los detectores, con effort high y max, para medir si más esfuerzo la estabiliza. No cambia fichas |
 | `costo_por_ficha.py` | **Semana 5.** El costo por ficha por proveedor en los tres escenarios (tiempo real sin y con caché, batch con caché), con lo medido |
-| `servidor_mcp.py` | El servidor MCP (FastMCP, stdio): 4 tools, 3 resources y 1 prompt. Lee CSV, PDF extraídos, mails y **cualquier Excel con su receta**; cruza los archivos de cada proveedor por código y tiene el **modo propuesta** |
+| `correr_todo.py` | **Semana 6.** Los 9 proveedores con un comando: encadena recepción, orquestador, pedidos, acuses y evaluador, y arma el reporte de tiempo y costo (cuenta solo lo pagado de verdad: lo reusado no suma) |
+| `asistente.py` · `prompt_asistente.md` | **Semana 6.** El asistente de consultas: loop conversacional con memoria y caché, respuesta con forma fija y el hook que verifica cada fuente citada |
+| `consultas.py` | **Semana 6.** Lo que consulta el asistente, en Python puro: ver una ficha (con la fila original, conflictos y FDS), buscar y contar, el pedido al proveedor y lo que no entró |
+| `evaluar_consultas.py` · `evaluacion/consultas_esperadas.json` | **Semana 6.** El evaluador del asistente: las 29 consultas con su respuesta esperada (verificada a mano), calificadas sin IA, más un diagnóstico de redacción |
+| `servidor_mcp.py` | El servidor MCP (FastMCP, stdio): 8 tools (4 del fichador y 4 de solo lectura del asistente), 3 resources y 1 prompt. Lee CSV, PDF extraídos, mails y **cualquier Excel con su receta**; cruza los archivos de cada proveedor por código y tiene el **modo propuesta** |
 | `prompt_sistema.md` | Las instrucciones del agente (rol, tarea, reglas, señal de fin), menos el criterio de revisión |
 | `agente.py` | El agente: el loop del módulo 2 conectado al servidor. `fichar_tanda` corre una tanda sola, en su hilo y en modo propuesta |
 | `orquestador.py` | **Semana 3.** Las 3 etapas: lectura en paralelo, consolidado, fichas en paralelo (con `--detector`) y escritura |
@@ -194,6 +246,8 @@ El restaurante de las semanas anteriores, ahora con más gente:
 | `salida/batches/` | **Semana 5.** El registro de cada corrida por batch: id de cada batch, tiempos y estados (los resultados quedan ~29 días en Anthropic) |
 | `salida/familias.json` · `salida/segunda_opinion.json` | **Extra de la semana 5.** Las familias que no coinciden y las segundas opiniones, con sus porqués |
 | `salida/costo_por_ficha.json` · `salida/experimentos/costos_sem5/` | **Semana 5.** El costo por ficha y las 4 mediciones congeladas de donde sale |
+| `salida/corrida_completa.json` | **Semana 6.** El reporte de la última corrida con un comando |
+| `salida/consultas/` | **Semana 6.** Las respuestas del asistente a las 29 consultas y su calificación |
 | `Data/` | Proveedores, catálogo actual, estándar y consultas (solo lectura) |
 
 ### Las 4 tools, los 3 resources y el prompt del servidor
@@ -262,7 +316,14 @@ python carriles.py                                     # salida/carriles.svg
 python pedido_proveedor.py
 python catalogo_viejo.py                               # --sin-ia: solo la parte del código
 
-# 10. Semana 5
+# 10. Semana 6: todo con un comando y el asistente
+python correr_todo.py                                  # los 9 proveedores de punta a punta (PAGA ~US$ 0,38, ~11 min)
+python correr_todo.py --batch                          # las fichas por la Batch API (PAGA ~US$ 0,21, ~35 min)
+python asistente.py                                    # conversación con el asistente (Enter vacío sale, /nueva reinicia)
+python asistente.py "¿Por qué AN-1103 va a revisión?"  # una sola pregunta (~US$ 0,002)
+python evaluar_consultas.py                            # las 29 consultas (PAGA ~US$ 0,03, ~3 min); --guardadas recalifica gratis
+
+# 11. Semana 5
 python familias.py                                     # las familias que no coinciden (gratis; también corre solo después del escritor)
 python segunda_opinion.py                              # más effort solo para las dudas (PAGA ~US$ 0,20 con max)
 python costo_por_ficha.py                              # el costo por ficha por proveedor y escenario (gratis)
@@ -273,6 +334,20 @@ python costo_por_ficha.py                              # el costo por ficha por 
 ---
 
 ## 🧠 Decisiones y su porqué
+
+### Semana 6: el asistente de consultas
+- **Consulta la salida, no los archivos.** Sus tools leen `resultados.json`, las filas ya cruzadas por el código, la recepción y los pedidos. Si el pipeline no hubiera guardado bien de dónde salió cada dato, se notaría acá (lo avisa la guía).
+- **4 tools de solo lectura, una por tarea (M2):** un producto (`ver_ficha`), listas y conteos (`buscar_fichas`, con los filtros como `enum` del vocabulario y el total aunque pagine), el pedido al proveedor y lo que no entró (la hoja de discontinuados). La lógica está en `consultas.py`, probada sin levantar el servidor.
+- **Permisos en el código:** el asistente ve solo esas 4; el fichador sigue viendo las suyas. Pedirle en el chat que dé algo de alta no sirve: `registrar_ficha` no existe para él (y si la pidiera, el hook la frena).
+- **Reusa, no duplica:** el mismo loop del fichador (con un parámetro opcional para la respuesta con forma fija), el mismo criterio de revisión servido como prompt MCP (ahora con dos consumidores, que es cuando un prompt MCP paga, M2) y el mismo estándar en el system. Las preguntas hipotéticas ("si manda el EAN…") se contestan aplicando ese criterio.
+- **Respuesta con forma fija (`output_config.format`, M6):** `{texto, valor, items, fuentes}`, la forma que sugiere la guía, con las fuentes en casilleros como en la ficha estructurada. Se puede usar junto con tools en el mismo pedido (doc oficial) y deja pensar.
+- **El hook al terminar del asistente es más estricto que comparar contra `resultados.json`:** una fuente o un producto citado tiene que haber salido de una tool **en esa conversación**. Así atrapa lo inventado y también lo "recordado". Una vez se le explica; si insiste, se saca y queda el aviso.
+- **Memoria in-context y caché:** cada pregunta se suma al historial y el historial se cachea. Cada respuesta muestra vueltas, segundos y costo, de la pregunta y de la conversación.
+- **El evaluador primero guarda y después califica (código puro):** un cambio en el evaluador se recalifica gratis con `--guardadas`.
+
+### Semana 6: todo con un comando
+- **`correr_todo.py` no agrega lógica:** encadena las piezas de las semanas 1 a 5, cada una con su chequeo. Un Excel cuya receta no entra queda afuera de esa corrida, con su motivo.
+- **El costo es lo pagado de verdad.** La recepción y los extractores devuelven lo que costó una lectura la primera vez aunque ahora se reuse: sumar eso habría dicho que se gastó lo que no se gastó. Lo pagado sale de las respuestas del modelo guardadas en esa corrida (cada llamada paga se guarda entera, con su `usage`); el costo "primera vez" va aparte.
 
 ### Semana 5: la ficha estructurada
 - **Antes, la ficha era un diccionario libre** y la forma la controlaban después los hooks. Con `strict`, la API la garantiza: los 18 campos siempre presentes (null si no se pudo determinar) y tipo, unidad, moneda, condición, peligro y categoría solo de las listas del vocabulario y la taxonomía, leídas de los archivos (una sola fuente de verdad).
@@ -449,6 +524,20 @@ python costo_por_ficha.py                              # el costo por ficha por 
 
 ---
 
+## 🔬 Semana 6: el hook del asistente, en vivo
+
+En Q16 ("¿Qué le tengo que pedir a Dermalab?") el asistente pidió el pedido al proveedor, que es un mensaje en texto, y contestó copiando de ahí los 4 productos y la página del folleto. **El hook lo frenó:** esas fuentes estaban escritas en un texto, pero ninguna tool las había devuelto como dato. El asistente consultó entonces la ficha de los 4 productos y recién ahí contestó, con las fuentes verificadas. Es el mismo patrón que un hook frenando una ficha mal registrada (semana 4), aplicado a una respuesta.
+
+## 🔬 Semana 6: 28/29 era un error del evaluador
+
+La primera corrida de las 29 consultas dio 28/29. Revisadas una por una contra los archivos, las 29 respuestas eran correctas: la que "fallaba" (Q07) decía "el archivo no trae código de barras" y el evaluador solo aceptaba "sin código de barras". Se sumaron esas formas de decirlo (el caso esperado no cambió) y, recalificando gratis las mismas respuestas, dio 29/29. El evaluador también se evalúa.
+
+Lo que el acierto no medía sí se veía en el texto: nombres internos (`lista_para_alta`) y un código del proveedor llamado "SKU". Se sumó un **diagnóstico de redacción** (6 de 29), se cambió **una sola regla** del prompt y se midió de nuevo: **29/29 y 0 de 29**.
+
+## 🔬 Semana 6: una ficha inestable, contada tal cual
+
+En la corrida completa, IN7009 ("Intensive Hands Hand Cream") volvió a perder "HANDS" de su línea: 115/116 en ficha (116/116 en fuente) y 1 diferencia en 257 fichas contra la corrida anterior. Es el mismo caso límite de la semana 5 (la palabra de la línea se parece al nombre del tipo) y varía entre corridas: el cambio de esta semana no toca al fichador (su pedido a la API es idéntico, probado). Para eso está el detector de inestables (`--detector`), que la marca para revisión humana en vez de esconderla.
+
 ## 🔬 Semana 5: Bebé Feliz, qué falló y por qué
 
 Se corrió **una sola vez, con el sistema tal cual**, por la bandeja: **14/15 en ficha, 15/15 en fuente**, US$ 0,0016 por ficha. Los packs (Q17), los 4 duplicados, la trampa del Aloe de 80 y el precio de lista salieron bien.
@@ -577,5 +666,5 @@ Y en una de esas corridas, Haiku mandó un SKU mal escrito. `registrar_ficha` lo
 | 3 · M4 ✅ | Lectura y fichas en paralelo, un solo escritor, prompt injection en capas y la medición contra la versión secuencial |
 | 4 · M5 ✅ | Un archivo nuevo se procesa sin intervención: recepcionista, bandeja, criterio como prompt MCP, hooks y permisos por agente. Extra: el acuse de recibo |
 | 5 · M6 ✅ | Ficha estructurada con `strict`, caché, Batch API y Bebé Feliz abierto una vez. Extra: detector de familias y segunda opinión |
-| 6 | Todo con un comando, y el asistente de consultas |
+| 6 ✅ | Todo con un comando (`correr_todo.py`) y el asistente de consultas: 29/29 citando la fuente |
 | 7 | Demo Day |

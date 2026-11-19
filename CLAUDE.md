@@ -14,6 +14,9 @@ $env:PYTHONUTF8=1                            # sin esto, un caño (| Select-Obje
 # Evaluador (gratis): 116 casos verificados por una persona
 "litoral","lhs","andes","dermalab","naturalvida","rivera","higiene","norte","bebefeliz" | ForEach-Object { python evaluar.py "evaluacion\casos_$_.json" 2>&1 | Select-Object -Last 3 }
 
+python correr_todo.py                        # semana 6: los 9 proveedores con un comando + reporte de tiempo y costo (PAGA ~US$ 0,38, ~11 min; --batch ~US$ 0,21)
+python asistente.py                          # semana 6: el asistente de consultas (conversación; con una pregunta entre comillas, una sola)
+python evaluar_consultas.py                  # las 29 consultas (PAGA ~US$ 0,03); --guardadas recalifica gratis
 python vigilar.py --una-vez                  # la bandeja: procesa lo nuevo de entrada/<carpeta del proveedor>/
 python acuse.py "entrada/P08_Importadora_Norte/NorteImports_new_items_Q4.xlsx"   # regenera un acuse (gratis)
 python orquestador.py --fichas               # regresión completa, 9 proveedores (PAGA ~US$ 0,38, ~11 min)
@@ -31,6 +34,8 @@ Antes de correr un script del proyecto con `--help`, confirmá que tiene `argpar
 ## Cómo está armado
 
 `entrada/` → `vigilar.py` (bandeja) → `recepcion.py` (receta de un Excel nuevo) → `extractor_fds.py` → `orquestador.py` (fichadores en paralelo contra `servidor_mcp.py`, con `hooks.py` y `permisos.py`; con `--batch`, a través de `cliente_batch.py`) → `escritor.py` (el único que escribe `salida/resultados.json`) → `familias.py` → `pedido_proveedor.py` → `acuse.py`.
+
+`correr_todo.py` encadena todo eso para los 9 proveedores. Sobre la salida, `asistente.py` (rol `asistente`: 4 tools de solo lectura de `servidor_mcp.py`, lógica en `consultas.py`) contesta con `{texto, valor, items, fuentes}` y su hook verifica que cada fuente citada haya salido de una tool en esa conversación.
 
 `registrar_ficha` recibe la ficha tipada de `ficha_estructurada.py` con `strict` (la API garantiza la forma y las listas cerradas); el system y las tools van con caché (`agente.py`).
 
@@ -50,6 +55,8 @@ Antes de correr un script del proyecto con `--help`, confirmá que tiene `argpar
 - **El caché se verifica, no se supone**: cada vuelta anota `cache_read_input_tokens` y avisa si una vuelta 2+ no lo lee. Nada variable (fecha, hora) al principio del system.
 - **En los ejemplos del prompt, nada que se parezca a un producto real** (en ningún idioma): un ejemplo le sopla la respuesta al modelo (semana 5: «crema para manos» y "Hand Cream").
 - **Si el código encontró la FDS de un producto, su peligro y su ONU son los de la FDS** (lo exige `registrar_ficha`): el documento manda sobre la opinión del modelo.
+- **El asistente lee, nunca escribe**, y solo cita lo que una tool le mostró en esa conversación (lo verifica el código, no el prompt). Las consultas esperadas (`evaluacion/consultas_esperadas.json`) siguen la misma regla que los casos de fichas: desde los archivos, verificadas por una persona.
+- **Un costo reusado no es un costo pagado**: la recepción y los extractores devuelven lo que costó la lectura la primera vez; `correr_todo.py` suma solo las respuestas guardadas en esa corrida.
 - **fastmcp arranca el servidor con un entorno limpio**: las variables (modo propuesta, carpetas de prueba) se le pasan explícitas.
 - **El Git de Windows convierte fines de línea** (autocrlf): para comparar, `git diff --ignore-cr-at-eol`.
 
