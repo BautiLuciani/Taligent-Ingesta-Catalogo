@@ -3,3 +3,5 @@
 __pycache__/
 salida/trazas/
 salida/resultados_anterior.json
+salida/web/subidas/
+salida/web/registros/

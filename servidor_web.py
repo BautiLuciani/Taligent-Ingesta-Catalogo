@@ -28,6 +28,7 @@ from starlette.routing import Mount, Route
 from starlette.staticfiles import StaticFiles
 
 import presentacion
+import subir_lista
 
 CARPETA_PROYECTO = Path(__file__).parent
 CARPETA_WEB = CARPETA_PROYECTO / "web"
@@ -48,8 +49,20 @@ PANTALLAS = {
 
 # Lo que suma cada pantalla además de lo común: (hojas de estilo, programas)
 RECURSOS = {
+    "/": (["/web/subir.css"], ["/web/ceibo.js", "/web/subir.js"]),
     "/fichas": (["/web/fichas.css"], ["/web/ceibo.js", "/web/fichas.js"]),
 }
+TOPE_DE_SUBIDA = 30 * 1024 * 1024  # 30 MB por archivo: una lista de precios pesa mucho menos
+
+_mesa = None
+
+
+def mesa() -> subir_lista.MesaDeEntradas:
+    """La mesa de entradas de la web (guarda lo subido y corre una lista a la vez). Se arma la primera vez que se usa."""
+    global _mesa
+    if _mesa is None:
+        _mesa = subir_lista.MesaDeEntradas()
+    return _mesa
 
 ICONOS = {
     "subir": '<path d="M12 3v12"></path><path d="M7 10l5 5 5-5"></path><path d="M4 19h16"></path>',
@@ -152,6 +165,73 @@ async def api_fichas_excel(request):
                     media_type="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet")
 
 
+def proveedores_procesados(resultados: dict, proveedores: list[dict]) -> list[dict]:
+    """La tabla "Listas ya procesadas": cada proveedor con fichas, qué mandó y cómo quedaron (de resultados.json)."""
+    filas = []
+    for proveedor in proveedores:
+        suyos = [r for r in resultados.values() if r.get("item_id", "").startswith(proveedor["id"] + ":")]
+        if not suyos:
+            continue
+        estados = [r["estado"] for r in suyos]
+        filas.append({"id": proveedor["id"], "nombre": proveedor["nombre"],
+                      "formato": proveedor["mando"],
+                      "productos": len(suyos), "alta": estados.count("lista_para_alta"),
+                      "duplicado": estados.count("duplicado"), "a_revision": estados.count("a_revision")})
+    return filas
+
+
+async def api_inicio(request):
+    """Todo lo que necesita la pantalla Subir una lista además de la carga: los números, la tabla, el desplegable."""
+    resultados = leer_resultados()
+    proveedores = mesa().proveedores()
+    ejemplo = mesa().corrida_de_ejemplo()
+    en_curso = mesa().en_curso
+    return JSONResponse({
+        "numeros": resumen(resultados),
+        "procesadas": proveedores_procesados(resultados, proveedores),
+        "proveedores": [{k: p[k] for k in ("id", "nombre", "detalle", "habilitado")} for p in proveedores],
+        "ejemplo": {"fecha": ejemplo["fecha"]} if ejemplo else None,
+        "en_curso": en_curso.id if en_curso and en_curso.estado_publico()["estado"] == "corriendo" else None,
+    })
+
+
+async def api_subir_archivo(request):
+    """Un archivo que llega del navegador (el contenido va en el cuerpo, el nombre en la dirección)."""
+    nombre = request.query_params.get("nombre", "")
+    contenido = await request.body()
+    if len(contenido) > TOPE_DE_SUBIDA:
+        return JSONResponse({"error": "El archivo pesa más de 30 MB: no parece una lista de precios."}, status_code=413)
+    try:
+        return JSONResponse(mesa().recibir_archivo(nombre, contenido, request.query_params.get("subida") or None))
+    except ValueError as error:
+        return JSONResponse({"error": str(error)}, status_code=400)
+
+
+async def api_empezar(request):
+    try:
+        pedido = await request.json()
+        corrida = mesa().empezar(str(pedido.get("subida", "")), str(pedido.get("proveedor", "")))
+    except (ValueError, AttributeError) as error:
+        return JSONResponse({"error": str(error) or "Pedido mal armado."}, status_code=400)
+    except RuntimeError as error:
+        return JSONResponse({"error": str(error)}, status_code=409)
+    return JSONResponse(corrida.estado_publico())
+
+
+async def api_corrida(request):
+    corrida = mesa().corridas.get(request.path_params["id"])
+    if corrida is None:
+        return JSONResponse({"error": "No encuentro esa corrida (¿se reinició el servidor?)."}, status_code=404)
+    return JSONResponse(corrida.estado_publico())
+
+
+async def api_corrida_de_ejemplo(request):
+    ejemplo = mesa().corrida_de_ejemplo()
+    if ejemplo is None:
+        return JSONResponse({"error": "Todavía no hay ninguna corrida grabada."}, status_code=404)
+    return JSONResponse(ejemplo)
+
+
 def indice_de_archivos(carpeta: Path | None = None) -> dict[str, Path]:
     """Nombre -> ruta de cada archivo original de los proveedores. Solo se sirve lo que está en este índice: desde el
     navegador no se puede pedir ninguna otra ruta del proyecto."""
@@ -177,6 +257,11 @@ def crear_app() -> Starlette:
     rutas = [Route(direccion, pantalla) for direccion in PANTALLAS]
     rutas += [
         Route("/api/resumen", api_resumen),
+        Route("/api/inicio", api_inicio),
+        Route("/api/subidas", api_subir_archivo, methods=["POST"]),
+        Route("/api/corridas", api_empezar, methods=["POST"]),
+        Route("/api/corridas/{id:str}", api_corrida),
+        Route("/api/corrida_de_ejemplo", api_corrida_de_ejemplo),
         Route("/api/fichas", api_fichas),
         Route("/api/fichas/excel", api_fichas_excel, methods=["POST"]),
         Route("/archivos/{nombre:str}", archivo_original),

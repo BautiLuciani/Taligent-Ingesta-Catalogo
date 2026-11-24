@@ -30,6 +30,10 @@ CARPETA_REFERENCIAS_SEM6 = Path(__file__).parent / "salida" / "experimentos" / "
 RUTA_RESULTADOS_SEM5 = CARPETA_REFERENCIAS_SEM6 / "resultados.json"
 CARPETA_PEDIDOS_SEM5 = CARPETA_REFERENCIAS_SEM6 / "pedidos"
 
+# Semana 7, paso 2: el consolidado de Norte (lo que vieron los fichadores, del commit 59aaf13), congelado en
+# referencias_sem7/. Es lo que usa la tabla "Así entendimos el archivo" en las pruebas de Subir una lista.
+CARPETA_REFERENCIAS_SEM7 = Path(__file__).parent / "salida" / "experimentos" / "referencias_sem7"
+
 # Para ESTE proceso: los imports de servidor_mcp que hagan las pruebas leen las copias congeladas.
 os.environ["INGESTA_CARPETA_EXTRACCIONES"] = str(CARPETA_REFERENCIAS_SEM4 / "extracciones")
 os.environ["INGESTA_CARPETA_RECEPCION"] = str(CARPETA_RECEPCION_REFERENCIA)

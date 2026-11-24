@@ -4,4 +4,50 @@
 <p class="bajada">Soltá el archivo del proveedor y Ceibo arma la ficha de cada producto, con el lugar exacto de donde sale cada dato. Lo que no puede resolver te lo deja para revisar.</p>
 </div>
 </header>
-<div class="en-construccion">Acá va la carga de la lista (paso 2).</div>
+
+<div class="inicio-cuerpo">
+<section class="zona-carga" aria-label="Subir una lista" id="zona-carga" aria-live="polite"></section>
+
+<aside class="costado" aria-label="El catálogo hoy">
+<div class="caja-numeros">
+<h2 class="caja-titulo">Productos nuevos</h2>
+<p class="caja-total"><span class="caja-total-numero" id="numero-total">{{total}}</span> de <span id="numero-proveedores">{{proveedores}}</span> proveedores</p>
+<div class="barra" role="img" id="barra" aria-label="{{lista_para_alta}} listos para alta, {{duplicado}} ya estaban en el catálogo, {{a_revision}} para revisar">
+<div style="flex: {{lista_para_alta}}; background: #1E7F55"></div>
+<div style="flex: {{duplicado}}; background: #3D5C99"></div>
+<div style="flex: {{a_revision}}; background: #C98A1A"></div>
+</div>
+<div class="leyenda">
+<div class="leyenda-fila"><span class="leyenda-color" aria-hidden="true" style="background: #1E7F55"></span><span class="leyenda-texto">Listos para alta</span><span class="leyenda-numero" id="numero-alta">{{lista_para_alta}}</span></div>
+<div class="leyenda-fila"><span class="leyenda-color" aria-hidden="true" style="background: #3D5C99"></span><span class="leyenda-texto">Ya estaban en el catálogo</span><span class="leyenda-numero" id="numero-dup">{{duplicado}}</span></div>
+<div class="leyenda-fila"><span class="leyenda-color" aria-hidden="true" style="background: #C98A1A"></span><span class="leyenda-texto">Para revisar</span><span class="leyenda-numero" id="numero-rev">{{a_revision}}</span></div>
+</div>
+</div>
+<a href="/revision" class="aviso-revisar-link" id="aviso-revisar">
+<svg aria-hidden="true" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#9A5B00" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+<span class="aviso-revisar-textos">
+<span class="aviso-revisar-titulo"><span id="aviso-revisar-numero">{{a_revision}}</span> productos esperan que los mires</span>
+<span class="aviso-revisar-texto">Cada uno con el motivo y lo que hay que pedir</span>
+</span>
+<svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#9A5B00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"></path></svg>
+</a>
+</aside>
+</div>
+
+<section class="procesadas" aria-labelledby="ultimas">
+<h2 id="ultimas" class="procesadas-titulo">Listas ya procesadas</h2>
+<div class="tabla-procesadas-marco">
+<table class="tabla-procesadas">
+<thead>
+<tr>
+<th scope="col">Proveedor</th>
+<th scope="col">Mandó</th>
+<th scope="col" style="text-align: right">Productos</th>
+<th scope="col">Resultado</th>
+</tr>
+</thead>
+<tbody id="filas-procesadas"></tbody>
+</table>
+</div>
+</section>
+<input type="file" id="elegir-archivos" accept=".xlsx,.pdf" multiple hidden>
