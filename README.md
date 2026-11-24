@@ -34,6 +34,8 @@ Cada dato de la ficha dice **de dónde salió**: archivo y línea en un CSV o un
 | **Asistente** | El mismo `asistente.py` de la semana 6, con su verificación de fuentes: respuestas con productos, chips de fuente, tiempo y costo de cada una | ~US$ 0,001 por pregunta |
 | **Corridas y costos** | Los números de la última corrida completa (por etapa y por proveedor), el evaluador, el asistente y el costo por ficha. **Correr los 9 proveedores** pide confirmación con el tiempo y el costo y corre `correr_todo.py` | ~US$ 0,38 (o ~US$ 0,21 por lote) |
 
+**La corrida real desde la pantalla** (Correr los 9 proveedores, 24/11, `salida/corrida_completa.json`): **257 fichas en 11 min 06 s, US$ 0,40 (US$ 0,00154 por ficha)**, caché leído 78 %, evaluador **116/116 ficha entera y 116/116 fuente**. La ficha de Norte que la semana 6 marcó como inestable esta vez salió bien. Por eso se informa "115 o 116 de 116, según la corrida", no un número fijo.
+
 - **Plan B de la demo:** la última lista que se subió bien queda grabada, con su avance de a poco (`salida/web/corrida_de_ejemplo.json`). "Ver una corrida de ejemplo" la vuelve a mostrar sin conexión y sin costo.
 - **Lo que puede fallar, dicho en palabras:** un archivo que no es un Excel (o un `.xls` viejo, o uno dañado) no se recibe; sin conexión, sin crédito o con la key mal, la pantalla lo dice ("No hay conexión con Anthropic…") y aclara que no se guardó nada nuevo; el puerto ocupado se avisa antes de arrancar.
 - **Mismo diseño que el mockup:** colores, letra (Onest, guardada en `web/fuentes/`: no depende de internet) y tamaños copiados del mockup aprobado, comparados píxel a píxel.
