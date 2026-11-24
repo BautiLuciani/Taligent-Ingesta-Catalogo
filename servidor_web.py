@@ -7,7 +7,8 @@ funciones que usan los comandos). Las pantallas copian el mockup del canvas "Cei
   web/paginas/*.html   el contenido de cada pantalla
   web/estilos.css      colores, letra y tamaños del mockup (una sola fuente de verdad)
 
-Starlette y uvicorn ya vienen instalados con fastmcp: no hay dependencias nuevas.
+Starlette y uvicorn: los usa también el MCP por dentro, pero en algunas instalaciones no quedan (a Bauti le faltó
+uvicorn en Windows). Van fijados en requirements.txt para no depender de eso.
 
 Correr: python servidor_web.py              (y abrir http://localhost:8000)
         python servidor_web.py --puerto 8001
