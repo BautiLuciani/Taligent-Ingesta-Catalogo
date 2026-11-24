@@ -1,6 +1,6 @@
 # Acuse de recibo — NorteImports_new_items_Q4.xlsx
 
-Recibido 2026-11-11 16:23:23 · Importadora Norte S.A. (P08) · **PROCESADO ✅**
+Recibido 2026-11-24 15:29:19 · Importadora Norte S.A. (P08) · **PROCESADO ✅**
 
 ## Qué entendió el sistema
 - **Proveedor:** P08, por la carpeta donde llegó (`P08_Importadora_Norte`).
@@ -19,7 +19,7 @@ Recibido 2026-11-11 16:23:23 · Importadora Norte S.A. (P08) · **PROCESADO ✅*
 ## Resultado
 - **14 productos:** 14 listos para alta · 0 duplicados · 0 a revisión.
 - **Inestables:** ninguna marcada.
-- **Frenos de los hooks** (corrida del 2026-11-18 20:51): 0.
+- **Frenos de los hooks** (corrida del 2026-11-24 17:22): 0.
 
 ## Pedido al proveedor
 - Nada que pedir: todo lo que hacía falta estaba en el archivo.

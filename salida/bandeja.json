@@ -1,11 +1,11 @@
 {
   "entrada/P08_Importadora_Norte/NorteImports_new_items_Q4.xlsx": {
     "huella": "7fa6c924a1aa",
-    "fecha": "2026-11-11 16:23:23",
+    "fecha": "2026-11-24 15:29:19",
     "estado": "procesado",
     "proveedor_id": "P08",
     "fichas": 14,
-    "costo_recepcion_y_fds_usd": 0.002015
+    "costo_recepcion_y_fds_usd": 0.001969
   },
   "entrada/P02_Cosmetica_Rivera/ALTAS RIVERA OCT.xlsx": {
     "huella": "001b7c99e25c",

@@ -25,7 +25,7 @@ Recibido 2026-11-11 16:37:35 · Cosmética Rivera S.A. (P02) · **PROCESADO ✅*
   - RIV-1212 ya existe en el catálogo: **SKU101925** (DESODORANTE AEROSOL BRISA HOMBRE X 150 ML).
   - RIV-1203 a revisión: código de barras inválido.
 - **Inestables:** ninguna marcada.
-- **Frenos de los hooks** (corrida del 2026-11-18 20:51): 0.
+- **Frenos de los hooks** (corrida del 2026-11-24 17:22): 0.
 
 ## Pedido al proveedor
 - RIV-1203: El código de barras (EAN-13): el que figura en el archivo no es válido.

@@ -30,7 +30,7 @@ Recibido 2026-11-11 16:38:38 · Higiene Total S.A. (P04) · **PROCESADO ✅**
   - HT40063 a revisión: sin código de barras, posible duplicado (candidato: SKU102254).
   - HT40081 a revisión: sin código de barras, posible duplicado (candidato: SKU101771).
 - **Inestables:** ninguna marcada.
-- **Frenos de los hooks** (corrida del 2026-11-18 20:51): 0.
+- **Frenos de los hooks** (corrida del 2026-11-24 17:22): 0.
 
 ## Pedido al proveedor
 - HT40084: El código de barras (EAN-13).
