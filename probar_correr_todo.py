@@ -36,8 +36,8 @@ class PasosFalsos:
     """Imitan a los pasos que gastan. El orquestador falso deja lo que deja el real: las mediciones y, si lee algo
     nuevo, la respuesta guardada del modelo."""
 
-    def __init__(self, carpeta_salida: Path, recetas: dict):
-        self.salida, self.recetas, self.orquestado = carpeta_salida, recetas, None
+    def __init__(self, carpeta_salida: Path, recetas: dict, sin_key: bool = False):
+        self.salida, self.recetas, self.orquestado, self.sin_key = carpeta_salida, recetas, None, sin_key
 
     def recibir(self, ruta, de_nuevo):
         proveedor_id = ruta.parent.name.split("_")[0]
@@ -58,7 +58,11 @@ class PasosFalsos:
             json.dumps(respuesta_guardada(20_000, 2_000)), encoding="utf-8")
         (self.salida / "medicion_fichas_3.json").write_text(json.dumps({
             "costo_usd": 0.30, "costo_sin_cache_usd": 0.45, "cache_leidos": 750, "input_tokens": 1000, "frenos": [{}],
-            "tandas": [{"proveedor_id": "P03", "costo_usd": 0.06}, {"proveedor_id": "P03", "costo_usd": 0.01}]}),
+            "tandas": [{"proveedor_id": "P03", "costo_usd": 0.06}, {"proveedor_id": "P03", "costo_usd": 0.01}],
+            # con una key inválida el orquestador termina bien (código 0), pero ninguna tanda armó su ficha
+            **({"tandas_con_problemas": ["P08 desde 0: AuthenticationError: Error code: 401 - invalid x-api-key"],
+                "escritor": {"escritos": {}, "frenados": {"P08": ["P08:IN7003: falta su propuesta"] * 14}}}
+               if self.sin_key else {"escritor": {"escritos": {"P08": 14}, "frenados": {}}})}),
             encoding="utf-8")
         return 0
 
@@ -124,6 +128,22 @@ with tempfile.TemporaryDirectory() as temporal:
     litoral = next(p for p in reporte["proveedores"] if p["proveedor_id"] == "P03")
     chequear("Litoral: 50 fichas, costo de sus tandas y por ficha", (litoral["fichas"], litoral["costo_fichas_usd"],
                                                                    litoral["costo_por_ficha_usd"]), (50, 0.07, 0.0014))
+
+print("== el orquestador termina bien pero el escritor no escribió (semana 7: key inválida o sin conexión)")
+with tempfile.TemporaryDirectory() as temporal:
+    salida = Path(temporal)
+    (salida / "recepcion").mkdir()
+    (salida / "extracciones").mkdir()
+    _, _, frenados, _, _ = correr_todo.correr(PasosFalsos(salida, recetas={}, sin_key=True), False, False,
+                                              list(correr_todo.nombres_de_proveedores()),
+                                              correr_todo.excel_de_la_entrada(), salida)
+    chequear("el proveedor que no se escribió frena la corrida, con la causa en palabras",
+             (list(frenados), "14 problema(s)" in frenados.get("P08", ""), "La key de Anthropic no es válida" in frenados.get("P08", "")),
+             (["P08"], True, True))
+    _, _, frenados, _, _ = correr_todo.correr(PasosFalsos(salida, recetas={}), False, False,
+                                              list(correr_todo.nombres_de_proveedores()),
+                                              correr_todo.excel_de_la_entrada(), salida)
+    chequear("si el escritor escribió todo, no hay frenos", frenados, {})
 
 print("== --help no gasta")
 ayuda = subprocess.run([sys.executable, "correr_todo.py", "--help"], cwd=Path(__file__).parent,

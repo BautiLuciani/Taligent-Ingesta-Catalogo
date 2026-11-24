@@ -400,9 +400,10 @@ class PasosConAvance:
             terminar.set()
             hilo.join(timeout=5)
         self.corrida.avance(*mirar_trazas(self.carpeta_trazas, desde))
-        if codigo == 0:
-            total = self.corrida.estado_publico()["total"] or 0
-            self.corrida.paso(FICHAS, "hecho", f"Las {total} fichas, cada dato con el archivo y el lugar de donde sale.")
+        estado = self.corrida.estado_publico()
+        hechas = sum(1 for p in estado["productos"] if p["estado"] == "hecho")
+        if codigo == 0 and hechas >= (estado["total"] or 0):  # si faltó alguna, el escritor no escribe: lo dice el paso siguiente
+            self.corrida.paso(FICHAS, "hecho", linea_de_fichas(estado["total"] or 0))
             self.corrida.paso(GUARDAR, "actual")
         return codigo
 
@@ -442,6 +443,7 @@ class PasosDeLaWeb:
         return self._pasos.leer_fds(carpeta)
 
     def fichar(self, proveedor_id):
+        self._pasos.desde_fichar = time.time()  # para saber si el escritor escribió en esta corrida (vigilar.Pasos)
         return self._correr("orquestador.py", "--fichas", "--proveedores", proveedor_id)
 
     def pedir(self, proveedor_id):
@@ -452,6 +454,10 @@ class PasosDeLaWeb:
 
     def acusar(self, ruta, registro):
         return self._pasos.acusar(ruta, registro)
+
+
+def linea_de_fichas(total: int) -> str:
+    return f"Las {total} fichas, cada dato con el archivo y el lugar de donde sale."
 
 
 # --- Por qué no entró, en palabras ---
@@ -508,6 +514,13 @@ def correr_lista(corrida: Corrida, ruta_excel: Path, pasos, proveedor: dict, *, 
         pass
 
     if resultado.get("estado") != "procesado":
+        from presentacion import causa_conocida
+        ruta_log = getattr(pasos, "ruta_log", None)
+        impreso = ruta_log.read_text(encoding="utf-8", errors="replace") if ruta_log and ruta_log.exists() else ""
+        causa = causa_conocida(resultado.get("motivo")) or causa_conocida(impreso)
+        if causa:  # no es la lista: es la conexión con Anthropic (o el .env). Las fichas de antes no se tocaron
+            corrida.fallar("No se pudo hablar con Anthropic", [causa])  # el subtítulo ya dice que no se guardó nada
+            return registro
         titulo, renglones, paso = detalle_del_problema(resultado)
         corrida.fallar(titulo, [r for r in renglones if r], paso)
         return registro
@@ -523,6 +536,7 @@ def correr_lista(corrida: Corrida, ruta_excel: Path, pasos, proveedor: dict, *, 
     consolidado = json.loads(ruta_consolidado.read_text(encoding="utf-8")) if ruta_consolidado.exists() else None
     columnas, fila_ejemplo = columnas_entendidas(con_avance.recepcion, con_avance.tabla, consolidado)
     resumen = resumen_del_proveedor(proveedor["id"], proveedor["nombre"], resultados, hay_pedido)
+    corrida.paso(FICHAS, "hecho", linea_de_fichas(sum(1 for k in resultados if k.split(":")[0] == proveedor["id"])))
     corrida.paso(GUARDAR, "hecho", "Todo controlado y guardado." + (" El pedido al proveedor ya está armado." if hay_pedido else ""))
     corrida.terminar({**resumen, "columnas": columnas, "fila_ejemplo": fila_ejemplo, "segundos": round(segundos, 1),
                       "costo_usd": costo,
@@ -536,6 +550,25 @@ def correr_lista(corrida: Corrida, ruta_excel: Path, pasos, proveedor: dict, *, 
 
 
 # --- La mesa de entradas de la web: subidas y corridas ---
+
+def contenido_que_no_es(nombre: str, extension: str, contenido: bytes) -> str | None:
+    """Si lo que llegó no es lo que dice su extensión (un .xls renombrado, un archivo dañado o a medio bajar), el
+    motivo en palabras; si está bien, None. Se mira antes de guardar: un archivo roto no llega a la recepción."""
+    import io
+    import zipfile
+    if extension == "pdf":
+        return None if contenido.lstrip()[:5] == b"%PDF-" else f"{nombre} no es un PDF que se pueda abrir."
+    if contenido[:8] == b"\xd0\xcf\x11\xe0\xa1\xb1\x1a\xe1":  # el formato viejo de Excel (.xls) o un Excel con contraseña
+        return (f"{nombre} está en el formato viejo de Excel o tiene contraseña. Abrilo en Excel y guardalo como "
+                "«Libro de Excel (.xlsx)», sin contraseña.")
+    try:
+        with zipfile.ZipFile(io.BytesIO(contenido)) as libro:
+            if "xl/workbook.xml" in libro.namelist():
+                return None
+    except zipfile.BadZipFile:
+        pass
+    return f"{nombre} no es un Excel que se pueda abrir (puede estar dañado o a medio bajar)."
+
 
 class MesaDeEntradas:
     """Guarda los archivos que llegan desde el navegador y lanza una corrida a la vez (en un hilo aparte)."""
@@ -571,6 +604,9 @@ class MesaDeEntradas:
             raise ValueError("Por ahora Ceibo recibe la lista en Excel (.xlsx) y, si las trae, sus fichas de seguridad en PDF.")
         if not contenido:
             raise ValueError(f"{nombre} llegó vacío.")
+        problema = contenido_que_no_es(nombre, extension, contenido)
+        if problema:
+            raise ValueError(problema)
         if subida and not re.fullmatch(r"[0-9a-f]{12}", subida):
             raise ValueError("La subida no es válida.")
         subida = subida or uuid.uuid4().hex[:12]
@@ -631,7 +667,9 @@ class MesaDeEntradas:
             try:
                 pasos = self.fabrica_de_pasos(ruta_log)
             except BaseException as error:  # sin .env o sin MODELO: vigilar.Pasos corta con SystemExit
-                corrida.fallar("No se pudo arrancar", [str(error) or "Falta la configuración del .env (MODELO y la key)."], ENTENDER)
+                from presentacion import causa_conocida
+                corrida.fallar("No se pudo arrancar", [causa_conocida(str(error)) or str(error)
+                                                       or "Falta la configuración del .env (MODELO y la key)."], ENTENDER)
                 return
             try:
                 correr_lista(corrida, ruta_excel, pasos, proveedor, carpeta_trazas=self.carpeta_salida / "trazas",

@@ -171,4 +171,23 @@ shutil.rmtree(entrada.parent, ignore_errors=True)
 
 chequear("La bandeja real es entrada/, al lado del proyecto", vigilar.CARPETA_ENTRADA.name, "entrada")
 
+# Semana 7: las fichas que cuenta fichas_escritas tienen que ser de ESTA corrida (sin conexión con Anthropic el
+# orquestador termina bien, el escritor no escribe, y las 14 de antes siguen ahí)
+import time
+proyecto = Path(tempfile.mkdtemp())
+(proyecto / "salida" / "consolidado").mkdir(parents=True)
+(proyecto / "salida" / "consolidado" / "P08.json").write_text(
+    json.dumps({"filas": [{"item_id": f"P08:IN{i}"} for i in range(3)]}), encoding="utf-8")
+resultados = proyecto / "salida" / "resultados.json"
+resultados.write_text(json.dumps({f"P08:IN{i}": {} for i in range(3)}), encoding="utf-8")
+original, vigilar.CARPETA_PROYECTO = vigilar.CARPETA_PROYECTO, proyecto
+reales = vigilar.Pasos.__new__(vigilar.Pasos)  # sin __init__: no hace falta la API para contar
+chequear("Sin saber cuándo arrancó el orquestador, cuenta lo que hay", reales.fichas_escritas("P08"), (3, 3))
+reales.desde_fichar = time.time() + 60
+chequear("Si el escritor no tocó resultados.json en esta corrida, escribió 0", reales.fichas_escritas("P08"), (0, 3))
+reales.desde_fichar = time.time() - 60
+chequear("Si lo escribió después de arrancar, cuenta las suyas", reales.fichas_escritas("P08"), (3, 3))
+vigilar.CARPETA_PROYECTO = original
+shutil.rmtree(proyecto, ignore_errors=True)
+
 print(f"\nResultado: {'todo OK' if errores == 0 else f'{errores} con error'}")

@@ -158,11 +158,20 @@ class CorridaCompleta:
             self.estado = {**self.estado, "estado": "lista", "segundos": round(segundos, 1),
                            "texto": f"Terminó en {tiempo_en_palabras(segundos)}. Los números de abajo ya son los de esta corrida."}
         else:
-            reporte = leer(self.carpeta_salida / "corrida_completa.json") or {}
+            from presentacion import causa_conocida
+            # con frenos, correr_todo.py deja su reporte aparte (el de la última corrida buena no se pisa)
+            reporte = leer(self.carpeta_salida / "corrida_completa_con_problemas.json") or {}
             de_esta_corrida = (reporte.get("fecha") or "") >= f"{datetime.fromtimestamp(self.inicio):%Y-%m-%d %H:%M}"
             frenados = (reporte.get("frenados") or {}) if de_esta_corrida else {}
-            motivo = ("; ".join(f"{donde}: {texto}" for donde, texto in frenados.items()) if frenados
-                      else f"correr_todo.py terminó con error (código {codigo}). El detalle quedó en salida/web/registros/{ruta_log.name}.")
+            impreso = ruta_log.read_text(encoding="utf-8", errors="replace") if ruta_log.exists() else ""
+            causa = causa_conocida(" ".join(frenados.values())) or causa_conocida(impreso)
+            detalle = f"El detalle quedó en salida/web/registros/{ruta_log.name}."
+            if causa:
+                motivo = f"{causa} Los números de abajo siguen siendo los de la última corrida que salió bien."
+            elif frenados:
+                motivo = "; ".join(f"{donde}: {texto}" for donde, texto in frenados.items()) + ". " + detalle
+            else:
+                motivo = f"correr_todo.py terminó con error (código {codigo}). {detalle}"
             self.estado = {**self.estado, "estado": "problema", "segundos": round(segundos, 1), "motivo": motivo}
 
     def _mirar(self, desde: float):

@@ -66,7 +66,7 @@ probar("sin reportes: lo dice, sin romperse", c.datos_de_costos(Path(tempfile.mk
 FALSO = textwrap.dedent('''
     import json, sys, time
     from pathlib import Path
-    salida = Path(sys.argv[1]); falla = sys.argv[2] == "falla"
+    salida = Path(sys.argv[1]); modo = sys.argv[2]; falla = modo != "bien"
     carpeta = salida / "trazas" / f"paralelo_{time.strftime('%Y%m%d_%H%M%S')}_3"; carpeta.mkdir(parents=True, exist_ok=True)
     traza = carpeta / "P08_desde_000.jsonl"
     for i in range(6):
@@ -75,8 +75,15 @@ FALSO = textwrap.dedent('''
                                 "content": json.dumps({"registrado": f"P08:IN70{i:02d}"})}) + "\\n")
         print("ficha", i, "→ armada"); sys.stdout.flush(); time.sleep(0.4)
     reporte = {"fecha": time.strftime("%Y-%m-%d %H:%M"), "fichas": 6, "segundos": 3, "costo_usd": 0.01, "etapas": [],
-               "proveedores": [], "frenados": {"P02": "su receta no entró"} if falla else {}}
-    (salida / "corrida_completa.json").write_text(json.dumps(reporte), encoding="utf-8")
+               "proveedores": [], "frenados": {}}
+    if modo == "falla":
+        reporte["frenados"] = {"P02": "su receta no entró"}
+    if modo == "sin_conexion":
+        print("P08 desde 0  ✖ APIConnectionError: Connection error.")
+        reporte["frenados"] = {"P08": "sus fichas no se escribieron (14 problema(s); las anteriores quedan como estaban)"}
+    # como correr_todo.py: con frenos, el reporte va aparte y no pisa el de la última corrida buena
+    nombre = "corrida_completa_con_problemas.json" if falla else "corrida_completa.json"
+    (salida / nombre).write_text(json.dumps(reporte), encoding="utf-8")
     sys.exit(1 if falla else 0)
 ''')
 carpeta = Path(tempfile.mkdtemp())
@@ -115,6 +122,16 @@ corrida = c.CorridaCompleta(salida, comando=lambda lote: [sys.executable, str(sc
 corrida.empezar(lote=True, total_fichas=6)
 final, _ = esperar(corrida)
 probar("si se frena un proveedor: problema con el motivo del reporte", final["estado"] == "problema" and "P02: su receta no entró" in final["motivo"])
+probar("con frenos, el reporte de la última corrida buena no se pisa", not (salida / "corrida_completa.json").exists())
+
+salida = carpeta / "salida_sin_conexion"
+salida.mkdir()
+corrida = c.CorridaCompleta(salida, comando=lambda lote: [sys.executable, str(script), str(salida), "sin_conexion"])
+corrida.empezar(lote=False, total_fichas=6)
+final, _ = esperar(corrida)
+probar("sin conexión con Anthropic: lo dice en palabras y avisa que los números son los de antes",
+       final["estado"] == "problema" and final["motivo"].startswith("No hay conexión con Anthropic")
+       and "última corrida que salió bien" in final["motivo"])
 
 corrida = c.CorridaCompleta(carpeta, comando=lambda lote: [str(carpeta / "no_existe")])
 corrida.empezar(lote=False, total_fichas=1)

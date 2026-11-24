@@ -88,6 +88,12 @@ class MotorDelAsistente:
         self._conversaciones[identificador] = conversacion
         return identificador
 
+    def calentar(self):
+        """Abre de antemano la conexión con el servidor MCP (al arrancar la interfaz): la primera pregunta no la espera.
+        No llama a la API (armar el system y las tools es MCP local): no cuesta nada."""
+        with self._turno:
+            self._correr(self._abrir(self._estado))
+
     def preguntar(self, identificador: str, texto: str) -> dict:
         conversacion = self._conversaciones.get(identificador)
         if conversacion is None:
@@ -105,13 +111,11 @@ class MotorDelAsistente:
 
 def error_en_palabras(error: Exception) -> str:
     """Lo que falló, dicho para la persona que está usando la pantalla (con el paso para arreglarlo si lo hay)."""
+    from presentacion import causa_conocida
     nombre = type(error).__name__
-    if nombre == "AuthenticationError":
-        return "La key de Anthropic no es válida. Revisala con python verificar_entorno.py."
-    if nombre in ("APIConnectionError", "APITimeoutError", "ConnectError"):
-        return "No hay conexión con Anthropic. Revisá internet y probá de nuevo."
-    if nombre == "RateLimitError":
-        return "Anthropic pidió esperar un momento (límite de uso). Probá de nuevo en unos segundos."
+    causa = causa_conocida(f"{nombre}: {error}")
+    if causa:
+        return causa
     if nombre in ("TimeoutError", "CancelledError"):
         return "El asistente tardó demasiado en contestar. Probá de nuevo."
     return f"El asistente no pudo contestar: {error}" if str(error) else f"El asistente no pudo contestar ({nombre})."

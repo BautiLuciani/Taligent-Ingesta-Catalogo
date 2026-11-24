@@ -1,4 +1,4 @@
-# Ingesta de Catálogo — Agentes con MCP: de las listas de los proveedores a fichas citadas, con un comando y un asistente
+# Ingesta de Catálogo — Agentes con MCP: de las listas de los proveedores a fichas citadas, con un comando, un asistente y una interfaz
 
 Proyecto final del **Taligent AI Spring Camp** (Curso de Agentes V2). Caso asignado: **Ingesta de Catálogo** para *Farmacias Ceibo*, una cadena ficticia.
 
@@ -22,7 +22,27 @@ Cada dato de la ficha dice **de dónde salió**: archivo y línea en un CSV o un
 
 ---
 
-## ✅ Estado: semana 6 — todo con un comando y el asistente de consultas
+## ✅ Estado: semana 7 — Ceibo, la interfaz para el Demo Day
+
+`python servidor_web.py` abre **Ceibo** en el navegador: las mismas piezas de las semanas 1 a 6, para una persona de Compras que no conoce el sistema. **La interfaz no tiene lógica propia**: lee `salida/` y llama a las mismas funciones que los comandos (las fichas las sigue escribiendo solo el escritor).
+
+| Pantalla | Qué hace | ¿Paga? |
+|---|---|---|
+| **Subir una lista** | Soltás el Excel del proveedor (y sus FDS) y se ve el avance en vivo: recibir → entender cómo está armado → leer las FDS → armar las fichas (un cuadradito por producto, desde las trazas de los fichadores) → controlar y guardar. Al final, qué columnas entendió y el resumen. Es `vigilar.procesar`, la misma bandeja de la semana 4 | Las fichas, sí (Norte: 1 min 32 s, US$ 0,024). La recepción y las FDS se reusan |
+| **Fichas** | Las 257, tal cual el estándar, cada dato con un chip que dice de qué archivo y de qué lugar salió (y abre el archivo). Búsqueda, filtros y **Descargar en Excel** | No |
+| **Para revisar** | Los 24 que Ceibo no resolvió, agrupados por motivo, con la evidencia guardada (la fila del archivo, el producto parecido del catálogo, las dos fuentes que no coinciden) y el **pedido al proveedor** listo para copiar. Las decisiones van a `salida/decisiones.json`: no tocan la ficha | No |
+| **Asistente** | El mismo `asistente.py` de la semana 6, con su verificación de fuentes: respuestas con productos, chips de fuente, tiempo y costo de cada una | ~US$ 0,001 por pregunta |
+| **Corridas y costos** | Los números de la última corrida completa (por etapa y por proveedor), el evaluador, el asistente y el costo por ficha. **Correr los 9 proveedores** pide confirmación con el tiempo y el costo y corre `correr_todo.py` | ~US$ 0,38 (o ~US$ 0,21 por lote) |
+
+- **Plan B de la demo:** la última lista que se subió bien queda grabada, con su avance de a poco (`salida/web/corrida_de_ejemplo.json`). "Ver una corrida de ejemplo" la vuelve a mostrar sin conexión y sin costo.
+- **Lo que puede fallar, dicho en palabras:** un archivo que no es un Excel (o un `.xls` viejo, o uno dañado) no se recibe; sin conexión, sin crédito o con la key mal, la pantalla lo dice ("No hay conexión con Anthropic…") y aclara que no se guardó nada nuevo; el puerto ocupado se avisa antes de arrancar.
+- **Mismo diseño que el mockup:** colores, letra (Onest, guardada en `web/fuentes/`: no depende de internet) y tamaños copiados del mockup aprobado, comparados píxel a píxel.
+- **1552 controles sin IA** en 34 archivos de pruebas (6 nuevos de la interfaz).
+
+<details>
+<summary>Semana 6 (módulo 7)</summary>
+
+### Todo con un comando y el asistente de consultas
 
 **Los 9 proveedores con un comando** (`python correr_todo.py`): **257 fichas en 11 minutos, US$ 0,38 (US$ 0,00149 por ficha)**, evaluador **115/116 ficha entera y 116/116 fuente**. Sobre esa salida, **el asistente de consultas** contesta las 29 preguntas de la guía citando la fuente de cada dato: **29/29**, a **US$ 0,001 por consulta**.
 
@@ -48,6 +68,7 @@ Cada dato de la ficha dice **de dónde salió**: archivo y línea en un CSV o un
 - **El asistente solo puede citar lo que vio:** el código verifica que cada fuente y cada producto de la respuesta hayan salido de una tool en esa conversación. Si no, se la devuelve una vez; si insiste, lo que no se pudo verificar se saca y se avisa.
 - **No puede tocar una ficha:** tiene 4 tools de solo lectura (permisos en el código); `registrar_ficha` ni la ve.
 - **1224 controles sin IA** en 28 archivos de pruebas.
+</details>
 
 <details>
 <summary>Semana 5 (módulo 6)</summary>
@@ -103,6 +124,19 @@ Litoral (CSV) con el servidor MCP propio: 50/50 estados correctos, evaluador 13/
 ---
 
 ## 🏗️ Cómo funciona
+
+### Semana 7: la interfaz
+
+```
+python servidor_web.py  ──▶  http://localhost:8000   (Starlette + HTML/CSS/JS sin frameworks; se abre solo)
+  Subir una lista      ──▶ subir_lista.py ──▶ vigilar.procesar (recepción → FDS → orquestador → escritor → pedido → acuse)
+                           avance: las trazas de los fichadores (registrar_ficha aceptado) leídas cada medio segundo
+  Fichas               ──▶ presentacion.py: pone en palabras los códigos (estado, motivo, peligro); la ficha, tal cual
+  Para revisar         ──▶ para_revisar.py: la evidencia ya guardada; las decisiones ──▶ salida/decisiones.json
+  Asistente            ──▶ asistente_web.py: asistente.py en su propio hilo, con su conexión MCP (se abre al arrancar)
+  Corridas y costos    ──▶ corridas.py: los reportes tal cual; "Correr los 9" ──▶ python correr_todo.py en otro proceso
+                           (nunca a la vez que una lista que se está subiendo)
+```
 
 ### Semana 6: un comando y el asistente
 
@@ -248,6 +282,11 @@ El restaurante de las semanas anteriores, ahora con más gente:
 | `salida/costo_por_ficha.json` · `salida/experimentos/costos_sem5/` | **Semana 5.** El costo por ficha y las 4 mediciones congeladas de donde sale |
 | `salida/corrida_completa.json` | **Semana 6.** El reporte de la última corrida con un comando |
 | `salida/consultas/` | **Semana 6.** Las respuestas del asistente a las 29 consultas y su calificación |
+| `servidor_web.py` · `web/` | **Semana 7.** La interfaz: el servidor (Starlette) y las páginas, estilos y scripts de cada pantalla. Sin lógica propia |
+| `presentacion.py` | **Semana 7.** Cómo se muestra una ficha: códigos en palabras, precio con formato, contenido con su unidad, la descarga en Excel y los errores de Anthropic en palabras. No modifica la ficha |
+| `subir_lista.py` | **Semana 7.** Subir una lista desde la web: recibe y controla los archivos, corre la bandeja con el avance anotado y graba la corrida de ejemplo |
+| `para_revisar.py` · `asistente_web.py` · `corridas.py` | **Semana 7.** Lo que hay detrás de Para revisar, del Asistente y de Corridas y costos |
+| `salida/web/` · `salida/decisiones.json` | **Semana 7.** Las subidas, los registros de lo que imprimió cada corrida, la corrida de ejemplo (plan B) y las decisiones de Para revisar |
 | `Data/` | Proveedores, catálogo actual, estándar y consultas (solo lectura) |
 
 ### Las 4 tools, los 3 resources y el prompt del servidor
@@ -288,9 +327,9 @@ pip install -r requirements.txt
 # 3. Verificar que todo esté listo
 python verificar_entorno.py
 
-# 4. Pruebas sin IA (gratis): las 28 tienen que dar "todo OK"
+# 4. Pruebas sin IA (gratis): las 34 tienen que dar "todo OK"
 $env:PYTHONUTF8=1   # sin esto, Windows no puede imprimir algunos caracteres por un caño
-"agente","catalogo_viejo","cuentas","escritor","extractor","extractor_fds","extractor_folleto","lector_excel","orquestador","pedido_proveedor","servidor","recepcion","servidor_excel","criterio","hooks","permisos","vigilar","acuse","ficha_estructurada","cliente_batch","familias","segunda_opinion","costo_por_ficha","verificar_entorno","consultas","asistente","evaluar_consultas","correr_todo" | ForEach-Object { Write-Host "== probar_$_.py" -ForegroundColor Cyan; python "probar_$_.py" 2>&1 | Select-Object -Last 1 }
+"agente","catalogo_viejo","cuentas","escritor","extractor","extractor_fds","extractor_folleto","lector_excel","orquestador","pedido_proveedor","servidor","recepcion","servidor_excel","criterio","hooks","permisos","vigilar","acuse","ficha_estructurada","cliente_batch","familias","segunda_opinion","costo_por_ficha","verificar_entorno","consultas","asistente","evaluar_consultas","correr_todo","servidor_web","presentacion","subir_lista","para_revisar","asistente_web","corridas" | ForEach-Object { Write-Host "== probar_$_.py" -ForegroundColor Cyan; python "probar_$_.py" 2>&1 | Select-Object -Last 1 }
 
 # 5. Un archivo nuevo entra solo (semana 4): copiarlo a entrada/<carpeta del proveedor>/ y
 python vigilar.py --una-vez                         # procesa lo nuevo y termina (sin --una-vez, queda mirando)
@@ -323,7 +362,11 @@ python asistente.py                                    # conversación con el as
 python asistente.py "¿Por qué AN-1103 va a revisión?"  # una sola pregunta (~US$ 0,002)
 python evaluar_consultas.py                            # las 29 consultas (PAGA ~US$ 0,03, ~3 min); --guardadas recalifica gratis
 
-# 11. Semana 5
+# 11. Semana 7: la interfaz (gratis; lo que paga se avisa en pantalla antes)
+python servidor_web.py                                 # abre http://localhost:8000 en el navegador
+python servidor_web.py --puerto 8001 --sin-navegador   # otro puerto, sin abrir el navegador
+
+# 12. Semana 5
 python familias.py                                     # las familias que no coinciden (gratis; también corre solo después del escritor)
 python segunda_opinion.py                              # más effort solo para las dudas (PAGA ~US$ 0,20 con max)
 python costo_por_ficha.py                              # el costo por ficha por proveedor y escenario (gratis)
@@ -334,6 +377,13 @@ python costo_por_ficha.py                              # el costo por ficha por 
 ---
 
 ## 🧠 Decisiones y su porqué
+
+### Semana 7: la interfaz
+- **Sin lógica propia.** Cada pantalla llama a las mismas funciones que los comandos: si algo cambia en el sistema, la interfaz lo muestra sin tocarla. Las decisiones de Para revisar van a su propio archivo: un solo escritor de fichas, como siempre.
+- **Sin frameworks.** Starlette sirve el HTML; el avance se pide cada medio segundo (más simple que una conexión abierta y suficiente para una persona mirando).
+- **La ficha, tal cual el estándar** (mayúsculas) y cada fuente con el nombre real del archivo: lo que se ve es lo que se guarda.
+- **Desde la web se suben los Excel.** El resto de los formatos (PDF, CSV, mail) entra con una configuración hecha a mano para sus archivos (semanas 1 a 3); en el desplegable aparecen, apagados, con el motivo.
+- **Lo que se aprendió probando las fallas (paso 6):** con la key mal, el orquestador terminaba "bien" (código 0) aunque ninguna tanda armara su ficha; la bandeja contaba las 14 fichas de antes como si fueran nuevas y `correr_todo.py` pisaba el reporte bueno con uno de US$ 0. Ahora la bandeja solo cuenta lo que el escritor escribió en esa corrida, `correr_todo.py` frena el proveedor que no se escribió (y deja su reporte aparte, en `corrida_completa_con_problemas.json`) y la pantalla dice la causa en palabras.
 
 ### Semana 6: el asistente de consultas
 - **Consulta la salida, no los archivos.** Sus tools leen `resultados.json`, las filas ya cruzadas por el código, la recepción y los pedidos. Si el pipeline no hubiera guardado bien de dónde salió cada dato, se notaría acá (lo avisa la guía).
@@ -667,4 +717,4 @@ Y en una de esas corridas, Haiku mandó un SKU mal escrito. `registrar_ficha` lo
 | 4 · M5 ✅ | Un archivo nuevo se procesa sin intervención: recepcionista, bandeja, criterio como prompt MCP, hooks y permisos por agente. Extra: el acuse de recibo |
 | 5 · M6 ✅ | Ficha estructurada con `strict`, caché, Batch API y Bebé Feliz abierto una vez. Extra: detector de familias y segunda opinión |
 | 6 ✅ | Todo con un comando (`correr_todo.py`) y el asistente de consultas: 29/29 citando la fuente |
-| 7 | Demo Day |
+| 7 | Ceibo, la interfaz web (lista) y el Demo Day (jueves 26/11) |

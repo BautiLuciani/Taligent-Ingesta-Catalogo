@@ -82,6 +82,13 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
   gap: 28px;
 }
 
+@media (max-width: 640px) {  /* en un celular, el margen de escritorio se come la pantalla */
+  .principal { padding: 28px 16px 40px; }
+}
+@media (max-width: 899px) {  /* el menú queda arriba del contenido: ocupa todo el ancho */
+  .app > .sidebar { max-width: none; border-right: 0; border-bottom: 1px solid var(--linea); }
+}
+
 /* El menú */
 .sidebar {
   box-sizing: border-box;

@@ -42,6 +42,31 @@ SIN_DATO = "Sin dato"
 NO_CORRESPONDE = "No corresponde: no es un medicamento"
 
 
+# Semana 7, paso 6: lo que dice un error de Anthropic (o del .env), en palabras y con el paso para arreglarlo.
+# Se busca en el texto del error o en lo que imprimió un proceso: el orden importa (el primero que aparece gana).
+CAUSAS_CONOCIDAS = [
+    (("AuthenticationError", "invalid x-api-key", "authentication_error"),
+     "La key de Anthropic no es válida. Revisala con python verificar_entorno.py."),
+    (("falta ANTHROPIC_API_KEY", "falta MODELO", "Windows tiene otra ANTHROPIC_API_KEY"),
+     "Falta configurar el .env (la key o el modelo). Revisalo con python verificar_entorno.py."),
+    (("credit balance is too low",), "La cuenta de Anthropic se quedó sin crédito. Cargá crédito y probá de nuevo."),
+    (("APIConnectionError", "APITimeoutError", "ConnectError", "Connection error"),
+     "No hay conexión con Anthropic. Revisá internet y probá de nuevo."),
+    (("RateLimitError", "rate_limit_error"),
+     "Anthropic pidió esperar un momento (límite de uso). Probá de nuevo en unos minutos."),
+    (("OverloadedError", "overloaded_error"), "Anthropic está saturado en este momento. Probá de nuevo en unos minutos."),
+]
+
+
+def causa_conocida(texto: str | None) -> str | None:
+    """La causa en palabras si el texto tiene un error conocido de Anthropic o del .env; si no, None (no se adivina)."""
+    texto = texto or ""
+    for marcas, causa in CAUSAS_CONOCIDAS:
+        if any(marca in texto for marca in marcas):
+            return causa
+    return None
+
+
 def sin_acentos(texto: str) -> str:
     """Para buscar sin que importen mayúsculas ni acentos (igual que consultas.py)."""
     normalizado = unicodedata.normalize("NFKD", texto or "")

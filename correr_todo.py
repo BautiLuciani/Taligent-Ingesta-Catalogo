@@ -180,7 +180,11 @@ def mostrar_reporte(reporte: dict) -> None:
     ev = reporte["evaluador"]
     print(f"Evaluador: {ev['ficha']}/{ev['casos']} ficha entera · {ev['fuente']}/{ev['casos']} fuente · "
           f"frenos de los hooks: {reporte['frenos_de_hooks']}")
-    print(f"Reporte guardado en salida/{RUTA_REPORTE.name}")
+    if reporte.get("frenados"):
+        print(f"Con frenos: el reporte quedó en salida/corrida_completa_con_problemas.json "
+              f"(salida/{RUTA_REPORTE.name} sigue siendo el de la última corrida que salió bien)")
+    else:
+        print(f"Reporte guardado en salida/{RUTA_REPORTE.name}")
 
 
 # --- Los pasos que gastan (separados para poder probar el flujo sin IA) ---
@@ -277,6 +281,13 @@ def correr(pasos, batch: bool, de_nuevo: bool, proveedores_todos: list[str], exc
                    "segundos": round(max(segundos - segundos_lectura, 0), 1), "costo_usd": round(costo_fichas, 6)})
     if codigo != 0:
         frenados["orquestador"] = f"terminó con error (código {codigo}): ver su salida arriba"
+    # Semana 7, paso 6: el orquestador termina bien aunque el escritor no haya escrito un proveedor (por ejemplo, sin
+    # conexión con Anthropic ninguna tanda arma su ficha). Eso también frena la corrida, con la causa en palabras
+    from presentacion import causa_conocida
+    causa = causa_conocida(" ".join((fichas or {}).get("tandas_con_problemas") or []))
+    for proveedor_id, problemas in ((fichas or {}).get("escritor") or {}).get("frenados", {}).items():
+        frenados[proveedor_id] = (f"sus fichas no se escribieron ({len(problemas)} problema(s); las anteriores quedan "
+                                  "como estaban)" + (f": {causa}" if causa else ""))
 
     # 3. Después del escritor: pedidos y acuses (código, gratis)
     inicio = time.perf_counter()
@@ -313,8 +324,11 @@ def main():
     reporte = armar_reporte(etapas, resultados, fichas, lectura, evaluacion, nombres,
                             {"batch": opciones.batch, "de_nuevo": opciones.de_nuevo})
     reporte["siguieron"], reporte["frenados"] = siguen, frenados
-    RUTA_REPORTE.write_text(json.dumps(reporte, ensure_ascii=False, indent=2), encoding="utf-8")
-    mostrar_reporte(reporte)
+    # Una corrida con frenos no pisa el reporte de la última que salió bien (es el que muestra la pantalla de costos):
+    # queda aparte, en corrida_completa_con_problemas.json, con sus motivos
+    ruta = RUTA_REPORTE.with_name("corrida_completa_con_problemas.json") if frenados else RUTA_REPORTE
+    ruta.write_text(json.dumps(reporte, ensure_ascii=False, indent=2), encoding="utf-8")
+    mostrar_reporte(reporte)  # ya con sus frenos: dice dónde quedó el reporte
     for donde, motivo in frenados.items():
         print(f"⛔ {donde}: {motivo}")
     if frenados:

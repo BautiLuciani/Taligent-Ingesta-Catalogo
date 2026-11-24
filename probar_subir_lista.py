@@ -29,9 +29,11 @@ class PasosFalsos:
     """Los pasos de la bandeja sin IA. fichar() escribe trazas como los fichadores (2 tandas a la vez, una ficha
     registrada cada `pausa` segundos), deja resultados.json, el consolidado y la medición con su costo."""
 
-    def __init__(self, carpeta_salida: Path, receta_entra=True, codigo_fichar=0, pausa=0.08, rechazos=0, explota_en=None):
+    def __init__(self, carpeta_salida: Path, receta_entra=True, codigo_fichar=0, pausa=0.08, rechazos=0, explota_en=None,
+                 sin_conexion=False, ruta_log: Path | None = None):
         self.carpeta_salida, self.receta_entra, self.codigo_fichar = carpeta_salida, receta_entra, codigo_fichar
         self.pausa, self.rechazos, self.explota_en = pausa, rechazos, explota_en
+        self.sin_conexion, self.ruta_log = sin_conexion, ruta_log
         self.llamadas = []
 
     def recibir(self, ruta):
@@ -48,6 +50,10 @@ class PasosFalsos:
 
     def fichar(self, proveedor_id):
         self.llamadas.append("fichar")
+        if self.sin_conexion:  # como el orquestador real: termina con código 0, pero ninguna tanda armó su ficha
+            self.ruta_log.parent.mkdir(parents=True, exist_ok=True)
+            self.ruta_log.write_text("P08 desde 0  ✖ APIConnectionError: Connection error.\n", encoding="utf-8")
+            return 0
         filas = json.loads((referencias.CARPETA_REFERENCIAS_SEM6 / "resultados.json").read_text(encoding="utf-8"))
         items = [i for i in filas if i.startswith(proveedor_id + ":")]
         carpeta = self.carpeta_salida / "trazas" / f"paralelo_{time.strftime('%Y%m%d_%H%M%S')}_3"
@@ -83,7 +89,7 @@ class PasosFalsos:
         return self.codigo_fichar
 
     def fichas_escritas(self, proveedor_id):
-        return 14, 14
+        return (0, 14) if self.sin_conexion else (14, 14)
 
     def pedir(self, proveedor_id):
         self.llamadas.append("pedir")
@@ -183,7 +189,7 @@ if __name__ == "__main__":
         base = proyecto_temporal()
 
         def fabrica(ruta_log):
-            usados.append(PasosFalsos(base / "salida", **opciones))
+            usados.append(PasosFalsos(base / "salida", ruta_log=ruta_log, **opciones))
             return usados[-1]
         mesa = s.MesaDeEntradas(carpeta_proyecto=base, carpeta_entrada=base / "entrada", fabrica_de_pasos=fabrica, a_mano=A_MANO)
         return mesa, base
@@ -200,9 +206,17 @@ if __name__ == "__main__":
         probar("un CSV no se recibe", False)
     except ValueError as error:
         probar("un CSV no se recibe (por ahora Excel y sus FDS en PDF)", "Excel" in str(error))
-    raro = mesa.recibir_archivo("../../servidor_web.xlsx", b"x")
+    raro = mesa.recibir_archivo("../../servidor_web.xlsx", EXCEL_NORTE.read_bytes())
     probar("un nombre con ../ queda solo con el nombre, dentro de la subida",
            raro["archivos"] == ["servidor_web.xlsx"] and (mesa.carpeta_subidas / raro["subida"] / "servidor_web.xlsx").exists())
+    for nombre, contenido, se_espera in [("lista.xlsx", b"no soy un excel", "no es un Excel que se pueda abrir"),
+                                         ("vieja.xlsx", b"\xd0\xcf\x11\xe0\xa1\xb1\x1a\xe1" + b"0" * 20, "formato viejo de Excel"),
+                                         ("fds.pdf", b"hola", "no es un PDF")]:
+        try:
+            mesa.recibir_archivo(nombre, contenido)
+            probar(f"{nombre} roto no se recibe", False)
+        except ValueError as error:
+            probar(f"{nombre} roto no se recibe, con el motivo", se_espera in str(error))
     subida = mesa.recibir_archivo("NorteImports_new_items_Q4.xlsx", EXCEL_NORTE.read_bytes())
     probar("al subir el Excel de Norte, se sugiere Norte", subida["sugerido"] == "P08" and subida["excel"] == "NorteImports_new_items_Q4.xlsx")
     fds = NORTE / "fichas_de_seguridad" / "FDS_PureCare_in_sec.pdf"
@@ -275,15 +289,24 @@ if __name__ == "__main__":
 
     mesa, base = mesa_temporal(explota_en="recibir")
     final = esperar(mesa.empezar(mesa.recibir_archivo("NorteImports_new_items_Q4.xlsx", EXCEL_NORTE.read_bytes())["subida"], "P08"))
-    probar("si la API rechaza la key: problema en el paso 2, con el error a la vista",
-           final["estado"] == "problema" and final["pasos"][1]["estado"] == "error" and "invalid x-api-key" in " ".join(final["problema"]["detalle"]))
+    probar("si la API rechaza la key: problema en el paso 2, dicho en palabras",
+           final["estado"] == "problema" and final["pasos"][1]["estado"] == "error"
+           and final["problema"]["titulo"] == "No se pudo hablar con Anthropic"
+           and "La key de Anthropic no es válida" in final["problema"]["detalle"][0])
+
+    mesa, base = mesa_temporal(sin_conexion=True)
+    final = esperar(mesa.empezar(mesa.recibir_archivo("NorteImports_new_items_Q4.xlsx", EXCEL_NORTE.read_bytes())["subida"], "P08"))
+    probar("sin conexión: el orquestador termina bien pero no escribió nada; se frena en las fichas, dicho en palabras",
+           final["estado"] == "problema" and final["pasos"][3]["estado"] == "error" and final["pasos"][4]["estado"] == "pendiente"
+           and final["problema"]["detalle"] == ["No hay conexión con Anthropic. Revisá internet y probá de nuevo."])
+    probar("sin conexión: no se arma el pedido (no hay fichas nuevas)", "pedir" not in usados[-1].llamadas)
 
     def sin_env(ruta_log):
         raise SystemExit("ERROR: falta MODELO en el .env")
     base = proyecto_temporal()
     mesa = s.MesaDeEntradas(carpeta_proyecto=base, carpeta_entrada=base / "entrada", fabrica_de_pasos=sin_env, a_mano=A_MANO)
     final = esperar(mesa.empezar(mesa.recibir_archivo("NorteImports_new_items_Q4.xlsx", EXCEL_NORTE.read_bytes())["subida"], "P08"))
-    probar("sin MODELO en el .env: lo dice, sin tirar abajo el servidor", final["estado"] == "problema" and "MODELO" in final["problema"]["detalle"][0])
+    probar("sin MODELO en el .env: lo dice, sin tirar abajo el servidor", final["estado"] == "problema" and ".env" in final["problema"]["detalle"][0])
 
     # --- 6. El servidor web, de punta a punta ---
     os.environ["INGESTA_CARPETA_SALIDA"] = str(referencias.CARPETA_REFERENCIAS_SEM6)

@@ -80,6 +80,7 @@ class Pasos:
     def fichar(self, proveedor_id: str) -> int:
         """El orquestador en un proceso aparte (carga el servidor desde cero: ve la recepción y las FDS recién hechas).
         Sin capturar la salida: escribe directo en la consola (lección de la semana 3 con los caracteres en Windows)."""
+        self.desde_fichar = time.time()
         return subprocess.run([sys.executable, "orquestador.py", "--fichas", "--proveedores", proveedor_id],
                               cwd=CARPETA_PROYECTO).returncode
 
@@ -93,11 +94,18 @@ class Pasos:
         return guardar_acuse(ruta, registro, texto)
 
     def fichas_escritas(self, proveedor_id: str) -> tuple[int, int]:
-        """(cuántas fichas del proveedor quedaron en resultados.json, cuántos productos tenía que tener)."""
+        """(cuántas fichas del proveedor escribió esta corrida en resultados.json, cuántos productos tenía que tener).
+
+        Semana 7: si el escritor no tocó resultados.json después de arrancar el orquestador (por ejemplo, sin conexión
+        con Anthropic ninguna tanda armó su ficha), las fichas que hay son las de antes: esta corrida escribió 0."""
         carpeta_salida = CARPETA_PROYECTO / "salida"
         consolidado = json.loads((carpeta_salida / "consolidado" / f"{proveedor_id}.json").read_text(encoding="utf-8"))
-        resultados = json.loads((carpeta_salida / "resultados.json").read_text(encoding="utf-8"))
+        ruta_resultados = carpeta_salida / "resultados.json"
         esperados = [fila["item_id"] for fila in consolidado["filas"]]
+        desde = getattr(self, "desde_fichar", None)
+        if desde is not None and (not ruta_resultados.exists() or ruta_resultados.stat().st_mtime < desde):
+            return 0, len(esperados)
+        resultados = json.loads(ruta_resultados.read_text(encoding="utf-8"))
         return sum(1 for item in esperados if item in resultados), len(esperados)
 
 

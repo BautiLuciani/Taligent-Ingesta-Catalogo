@@ -20,6 +20,9 @@ import io
 import json
 import mimetypes
 import os
+import sys
+import threading
+import time
 from datetime import date
 from pathlib import Path
 
@@ -86,7 +89,7 @@ TOPE_DE_PREGUNTA = 1000  # caracteres: una pregunta, no un documento
 
 
 def motor() -> asistente_web.MotorDelAsistente:
-    """El asistente de la semana 6, corriendo en su hilo. Se conecta recién con la primera pregunta."""
+    """El asistente de la semana 6, corriendo en su hilo. Con python servidor_web.py se conecta al arrancar (sin costo)."""
     global _motor
     if _motor is None:
         _motor = asistente_web.MotorDelAsistente()
@@ -417,9 +420,29 @@ app = crear_app()
 def main():
     parser = argparse.ArgumentParser(description="La interfaz de Ceibo en el navegador.")
     parser.add_argument("--puerto", type=int, default=8000)
+    parser.add_argument("--sin-navegador", action="store_true", help="No abre el navegador al arrancar.")
     args = parser.parse_args()
+    import socket
+    import webbrowser
     import uvicorn
-    print(f"Ceibo está en http://localhost:{args.puerto}  (Ctrl+C para cerrar)")
+    with socket.socket() as prueba:  # antes de arrancar: si el puerto está tomado, decirlo en palabras
+        try:
+            prueba.bind(("127.0.0.1", args.puerto))
+        except OSError:
+            sys.exit(f"El puerto {args.puerto} ya está en uso: seguramente Ceibo ya está abierto en otra terminal "
+                     f"(http://localhost:{args.puerto}). Cerralo con Ctrl+C, o usá otro: python servidor_web.py --puerto {args.puerto + 1}")
+    direccion = f"http://localhost:{args.puerto}"
+    print(f"Ceibo está en {direccion}  (Ctrl+C para cerrar)")
+
+    def al_arrancar():
+        time.sleep(1.5)
+        if not args.sin_navegador:
+            webbrowser.open(direccion)
+        try:  # la conexión del asistente con su servidor MCP, abierta de antemano (no llama a la API: no cuesta nada)
+            motor().calentar()
+        except Exception:
+            pass  # si falla, se abre con la primera pregunta (y ahí se ve el error)
+    threading.Thread(target=al_arrancar, daemon=True, name="al_arrancar").start()
     uvicorn.run(app, host="127.0.0.1", port=args.puerto, log_level="warning")
 
 
