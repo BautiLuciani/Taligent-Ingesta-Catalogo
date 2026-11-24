@@ -8,12 +8,13 @@ Agentes que convierten las listas de los proveedores en fichas estándar (`lista
 .\.venv\Scripts\Activate.ps1                 # siempre antes de correr algo
 $env:PYTHONUTF8=1                            # sin esto, un caño (| Select-Object) rompe con "ﬁ" o "→" (cp1252)
 
-# Pruebas sin IA (gratis): tienen que dar "todo OK" las 28 antes de cada commit
-"agente","catalogo_viejo","cuentas","escritor","extractor","extractor_fds","extractor_folleto","lector_excel","orquestador","pedido_proveedor","servidor","recepcion","servidor_excel","criterio","hooks","permisos","vigilar","acuse","ficha_estructurada","cliente_batch","familias","segunda_opinion","costo_por_ficha","verificar_entorno","consultas","asistente","evaluar_consultas","correr_todo" | ForEach-Object { Write-Host "== probar_$_.py" -ForegroundColor Cyan; python "probar_$_.py" 2>&1 | Select-Object -Last 1 }
+# Pruebas sin IA (gratis): tienen que dar "todo OK" las 29 antes de cada commit
+"agente","catalogo_viejo","cuentas","escritor","extractor","extractor_fds","extractor_folleto","lector_excel","orquestador","pedido_proveedor","servidor","recepcion","servidor_excel","criterio","hooks","permisos","vigilar","acuse","ficha_estructurada","cliente_batch","familias","segunda_opinion","costo_por_ficha","verificar_entorno","consultas","asistente","evaluar_consultas","correr_todo","servidor_web" | ForEach-Object { Write-Host "== probar_$_.py" -ForegroundColor Cyan; python "probar_$_.py" 2>&1 | Select-Object -Last 1 }
 
 # Evaluador (gratis): 116 casos verificados por una persona
 "litoral","lhs","andes","dermalab","naturalvida","rivera","higiene","norte","bebefeliz" | ForEach-Object { python evaluar.py "evaluacion\casos_$_.json" 2>&1 | Select-Object -Last 3 }
 
+python servidor_web.py                       # semana 7: la interfaz, en http://localhost:8000 (gratis; lo que paga se avisa en pantalla)
 python correr_todo.py                        # semana 6: los 9 proveedores con un comando + reporte de tiempo y costo (PAGA ~US$ 0,38, ~11 min; --batch ~US$ 0,21)
 python asistente.py                          # semana 6: el asistente de consultas (conversación; con una pregunta entre comillas, una sola)
 python evaluar_consultas.py                  # las 29 consultas (PAGA ~US$ 0,03); --guardadas recalifica gratis
@@ -59,6 +60,8 @@ Antes de correr un script del proyecto con `--help`, confirmá que tiene `argpar
 - **Un costo reusado no es un costo pagado**: la recepción y los extractores devuelven lo que costó la lectura la primera vez; `correr_todo.py` suma solo las respuestas guardadas en esa corrida.
 - **fastmcp arranca el servidor con un entorno limpio**: las variables (modo propuesta, carpetas de prueba) se le pasan explícitas.
 - **El Git de Windows convierte fines de línea** (autocrlf): para comparar, `git diff --ignore-cr-at-eol`.
+
+- **La interfaz no tiene lógica propia** (semana 7): `servidor_web.py` lee `salida/` y llama a las mismas funciones que los comandos. Colores, letra y tamaños salen de `web/estilos.css`, copiados del mockup del canvas; una pantalla no inventa valores. La letra (Onest) va guardada en `web/fuentes/`: la demo no depende de internet para verse bien.
 
 ## Dónde mirar
 

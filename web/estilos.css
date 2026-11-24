@@ -1,0 +1,149 @@
+/* Ceibo: estilos compartidos por las 5 pantallas.
+   Los valores salen tal cual del mockup del canvas "Ceibo — Interfaz para el Demo Day" (semana 7):
+   si una pantalla necesita un color o un tamaño, lo toma de acá, no lo inventa. */
+
+/* La letra va guardada en el proyecto (licencia OFL, en fuentes/OFL.txt): sin internet se ve igual. */
+@font-face {
+  font-family: 'Onest';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100 900;
+  src: url(/web/fuentes/onest-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329,
+    U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Onest';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100 900;
+  src: url(/web/fuentes/onest-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+1D00-1DBF, U+1E00-1E9F,
+    U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+:root {
+  /* Fondo, superficies y texto */
+  --fondo: #F5F7F6;
+  --superficie: #FFFFFF;
+  --superficie-suave: #F1F3F2;
+  --tinta: #17211D;
+  --tinta-hover: #2C3833;
+  --texto-2: #3F4B46;
+  --texto-3: #55625C;
+  --texto-4: #6B7772;
+  --linea: #E3E8E6;
+  --linea-fuerte: #C9D1CD;
+  --linea-suave: #EEF1EF;
+  --hover-gris: #ECEFED;
+  /* Marca */
+  --rojo: #B4282B;
+  --rojo-oscuro: #8E1F22;
+  --rojo-tinte: #FBE9EC;
+  /* Estados de una ficha */
+  --alta-texto: #155C3D;
+  --alta-fondo: #E8F3EC;
+  --dup-texto: #2D4675;
+  --dup-fondo: #E8EEF8;
+  --rev-texto: #7A4800;
+  --rev-fondo: #FFF4E0;
+  --rev-insignia: #9A5B00;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--fondo); }
+a { color: var(--tinta); }
+a:hover { color: var(--rojo); }
+button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+  outline: 3px solid var(--rojo);
+  outline-offset: 2px;
+}
+.solo-lectores {
+  position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap;
+}
+
+/* La página: menú a la izquierda y el contenido a la derecha */
+.app {
+  font-family: 'Onest', system-ui, sans-serif;
+  color: var(--tinta);
+  background: var(--fondo);
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+.principal {
+  flex: 999 1 560px;
+  min-width: 0;
+  padding: 40px 48px 56px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+/* El menú */
+.sidebar {
+  flex: 1 1 232px;
+  max-width: 280px;
+  padding: 28px 20px 12px;
+  background: var(--superficie);
+  border-right: 1px solid var(--linea);
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+@media (min-width: 900px) {
+  .sidebar { position: sticky; top: 0; height: 100vh; align-self: flex-start; overflow-y: auto; }
+}
+.marca { display: flex; align-items: center; gap: 12px; padding: 0 8px; }
+.marca-textos { display: flex; flex-direction: column; }
+.marca-nombre { font-size: 20px; font-weight: 700; letter-spacing: -0.01em; }
+.marca-bajada { font-size: 13px; color: var(--texto-3); }
+.nav { display: flex; flex-direction: column; gap: 4px; }
+.nav-link {
+  display: flex; align-items: center; gap: 12px; min-height: 44px; padding: 0 12px; border-radius: 10px;
+  color: var(--texto-2); text-decoration: none; font-weight: 500;
+}
+.nav-link:hover { background: var(--hover-gris); color: var(--tinta); }
+.nav-activo, .nav-activo:hover { background: var(--rojo-tinte); color: var(--rojo-oscuro); }
+.nav-texto { flex: 1; white-space: nowrap; }
+.nav-contador { font-size: 13px; color: var(--texto-3); }
+.nav-insignia {
+  font-size: 13px; font-weight: 600; color: #FFFFFF; background: var(--rev-insignia); border-radius: 999px; padding: 2px 9px;
+}
+.usuario {
+  margin-top: auto; display: flex; align-items: center; gap: 12px; padding: 14px 8px 4px; border-top: 1px solid var(--linea);
+}
+.usuario-inicial {
+  width: 36px; height: 36px; border-radius: 999px; background: var(--linea);
+  display: flex; align-items: center; justify-content: center; font-weight: 600; font-size: 14px;
+}
+.usuario-textos { display: flex; flex-direction: column; }
+.usuario-nombre { font-size: 14px; font-weight: 600; }
+.usuario-empresa { font-size: 13px; color: var(--texto-3); }
+
+/* El encabezado de cada pantalla */
+.encabezado {
+  display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 16px;
+}
+.encabezado-textos { display: flex; flex-direction: column; gap: 8px; max-width: 720px; }
+.titulo { margin: 0; font-size: 36px; line-height: 1.15; font-weight: 700; letter-spacing: -0.02em; }
+.bajada { margin: 0; font-size: 17px; line-height: 1.5; color: var(--texto-3); }
+
+/* Botones */
+.boton-primario {
+  display: inline-flex; align-items: center; gap: 10px; min-height: 48px; padding: 0 20px; border: 0; border-radius: 12px;
+  background: var(--tinta); color: #FFFFFF; text-decoration: none; font: inherit; font-size: 15px; font-weight: 600; cursor: pointer;
+}
+.boton-primario:hover { background: var(--tinta-hover); color: #FFFFFF; }
+.boton-secundario {
+  display: inline-flex; align-items: center; gap: 10px; min-height: 48px; padding: 0 18px; border: 1px solid var(--linea-fuerte);
+  border-radius: 12px; background: var(--superficie); color: var(--tinta); text-decoration: none; font: inherit; font-size: 15px;
+  font-weight: 500; cursor: pointer;
+}
+.boton-secundario:hover { background: var(--hover-gris); color: var(--tinta); }
+
+/* Lugar reservado de una pantalla que todavía no está (se va reemplazando paso a paso) */
+.en-construccion {
+  border: 1px dashed var(--linea-fuerte); border-radius: 16px; padding: 28px 24px; color: var(--texto-3); font-size: 15px;
+}

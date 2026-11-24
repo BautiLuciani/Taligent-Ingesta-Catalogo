@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ceibo · {{titulo}}</title>
+<link rel="icon" href="/web/logo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/web/estilos.css">
+{{estilos_pagina}}
+</head>
+<body>
+<div class="app">
+<nav class="sidebar" aria-label="Menú principal">
+<div class="marca">
+<svg role="img" aria-label="Ceibo" width="36" height="36" viewBox="0 0 28 28"><circle cx="14" cy="7" r="5" fill="#B4282B"></circle><circle cx="20.7" cy="11.8" r="5" fill="#B4282B"></circle><circle cx="18.1" cy="19.7" r="5" fill="#B4282B"></circle><circle cx="9.9" cy="19.7" r="5" fill="#B4282B"></circle><circle cx="7.3" cy="11.8" r="5" fill="#B4282B"></circle><circle cx="14" cy="14" r="3.4" fill="#FFFFFF"></circle></svg>
+<div class="marca-textos">
+<span class="marca-nombre">Ceibo</span>
+<span class="marca-bajada">Ingesta de catálogo</span>
+</div>
+</div>
+<div class="nav">
+{{enlaces}}
+</div>
+<div class="usuario">
+<div class="usuario-inicial" aria-hidden="true">C</div>
+<div class="usuario-textos">
+<span class="usuario-nombre">Compras</span>
+<span class="usuario-empresa">Farmacias Ceibo</span>
+</div>
+</div>
+</nav>
+<main class="principal">
+{{contenido}}
+</main>
+</div>
+{{scripts_pagina}}
+</body>
+</html>
