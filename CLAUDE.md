@@ -8,8 +8,8 @@ Agentes que convierten las listas de los proveedores en fichas estándar (`lista
 .\.venv\Scripts\Activate.ps1                 # siempre antes de correr algo
 $env:PYTHONUTF8=1                            # sin esto, un caño (| Select-Object) rompe con "ﬁ" o "→" (cp1252)
 
-# Pruebas sin IA (gratis): tienen que dar "todo OK" las 29 antes de cada commit
-"agente","catalogo_viejo","cuentas","escritor","extractor","extractor_fds","extractor_folleto","lector_excel","orquestador","pedido_proveedor","servidor","recepcion","servidor_excel","criterio","hooks","permisos","vigilar","acuse","ficha_estructurada","cliente_batch","familias","segunda_opinion","costo_por_ficha","verificar_entorno","consultas","asistente","evaluar_consultas","correr_todo","servidor_web" | ForEach-Object { Write-Host "== probar_$_.py" -ForegroundColor Cyan; python "probar_$_.py" 2>&1 | Select-Object -Last 1 }
+# Pruebas sin IA (gratis): tienen que dar "todo OK" las 30 antes de cada commit
+"agente","catalogo_viejo","cuentas","escritor","extractor","extractor_fds","extractor_folleto","lector_excel","orquestador","pedido_proveedor","servidor","recepcion","servidor_excel","criterio","hooks","permisos","vigilar","acuse","ficha_estructurada","cliente_batch","familias","segunda_opinion","costo_por_ficha","verificar_entorno","consultas","asistente","evaluar_consultas","correr_todo","servidor_web","presentacion" | ForEach-Object { Write-Host "== probar_$_.py" -ForegroundColor Cyan; python "probar_$_.py" 2>&1 | Select-Object -Last 1 }
 
 # Evaluador (gratis): 116 casos verificados por una persona
 "litoral","lhs","andes","dermalab","naturalvida","rivera","higiene","norte","bebefeliz" | ForEach-Object { python evaluar.py "evaluacion\casos_$_.json" 2>&1 | Select-Object -Last 3 }
@@ -61,7 +61,7 @@ Antes de correr un script del proyecto con `--help`, confirmá que tiene `argpar
 - **fastmcp arranca el servidor con un entorno limpio**: las variables (modo propuesta, carpetas de prueba) se le pasan explícitas.
 - **El Git de Windows convierte fines de línea** (autocrlf): para comparar, `git diff --ignore-cr-at-eol`.
 
-- **La interfaz no tiene lógica propia** (semana 7): `servidor_web.py` lee `salida/` y llama a las mismas funciones que los comandos. Colores, letra y tamaños salen de `web/estilos.css`, copiados del mockup del canvas; una pantalla no inventa valores. La letra (Onest) va guardada en `web/fuentes/`: la demo no depende de internet para verse bien.
+- **La interfaz no tiene lógica propia** (semana 7): `servidor_web.py` lee `salida/` y llama a las mismas funciones que los comandos. Colores, letra y tamaños salen de `web/estilos.css`, copiados del mockup del canvas; una pantalla no inventa valores. La letra (Onest) va guardada en `web/fuentes/`: la demo no depende de internet para verse bien. Las fichas se muestran **tal cual el estándar** (mayúsculas) y cada fuente con el **nombre real del archivo** (decisión de Bauti): `presentacion.py` solo pone en palabras los códigos (estado, motivo, peligro) y da formato al precio. Sin `box-sizing` global en `web/estilos.css`: el mockup usa el del navegador y con uno global los recuadros quedan 2 px más chicos.
 
 ## Dónde mirar
 

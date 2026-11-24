@@ -1,0 +1,78 @@
+/* Pantalla Fichas: lista a la izquierda y la ficha elegida a la derecha (como un mail). Valores del mockup. */
+.barra-filtros { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+.buscador {
+  flex: 1 1 320px; display: flex; align-items: center; gap: 10px; min-height: 48px; padding: 0 14px;
+  border: 1px solid var(--linea-fuerte); border-radius: 12px; background: var(--superficie);
+}
+.buscador:focus-within { border-color: var(--tinta); }
+.buscador svg { flex: none; }
+.buscador input {
+  flex: 1; min-width: 0; border: 0; outline: 0; font: inherit; font-size: 15px; background: transparent; color: var(--tinta);
+}
+.buscador input::-webkit-search-cancel-button { cursor: pointer; }
+.selector-proveedor { flex: 0 1 280px; min-width: 220px; }
+
+.filtros-estado { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip-filtro {
+  min-height: 40px; padding: 0 14px; border-radius: 999px; border: 1px solid var(--linea-fuerte); background: var(--superficie);
+  color: var(--tinta); font: inherit; font-size: 14px; font-weight: 600; cursor: pointer; display: inline-flex;
+  align-items: center; gap: 8px;
+}
+.chip-filtro:hover { border-color: var(--tinta); }
+.chip-filtro[aria-pressed="true"] { background: var(--tinta); color: #FFFFFF; border-color: var(--tinta); }
+.chip-filtro-cantidad { font-weight: 500; opacity: .8; }
+
+.fichas-cuerpo { display: flex; flex-wrap: wrap; gap: 24px; align-items: flex-start; }
+.lista-fichas { flex: 1 1 340px; max-width: 460px; min-width: 0; display: flex; flex-direction: column; gap: 8px; }
+.item-ficha {
+  box-sizing: border-box;
+  width: 100%; padding: 14px 16px; border: 1px solid var(--linea); border-radius: 14px; background: var(--superficie);
+  font: inherit; color: var(--tinta); text-align: left; cursor: pointer; display: flex; flex-direction: column; gap: 8px;
+}
+.item-ficha:hover { border-color: var(--linea-fuerte); }
+.item-ficha[aria-pressed="true"] { background: #FBF3F4; border-color: #E3B9C0; }
+.item-nombre { font-size: 15px; font-weight: 600; line-height: 1.35; }
+.item-detalle { font-size: 13px; color: var(--texto-3); }
+.item-estado { display: flex; }
+.sin-resultados {
+  border: 1px dashed var(--linea-fuerte); border-radius: 14px; padding: 28px 20px; display: flex; flex-direction: column;
+  align-items: center; gap: 10px; text-align: center;
+}
+.sin-resultados-titulo { font-size: 15px; font-weight: 600; }
+.boton-link {
+  min-height: 44px; padding: 0 12px; border: 0; background: transparent; font: inherit; font-size: 14px; font-weight: 600;
+  color: var(--tinta); text-decoration: underline; cursor: pointer;
+}
+.cantidad-mostrada { margin: 6px 4px 0; font-size: 14px; color: var(--texto-3); }
+
+.detalle-ficha {
+  flex: 999 1 520px; min-width: 0; border: 1px solid var(--linea); border-radius: 20px; background: var(--superficie);
+  padding: 28px; display: flex; flex-direction: column; gap: 22px;
+}
+/* Con 257 fichas la lista es larga: la ficha elegida queda a la vista mientras se baja por la lista */
+@media (min-width: 900px) {
+  .detalle-ficha { position: sticky; top: 24px; max-height: calc(100vh - 48px); overflow-y: auto; }
+}
+.detalle-cabeza { display: flex; flex-direction: column; gap: 10px; }
+.detalle-nombre { margin: 0; font-size: 26px; line-height: 1.2; font-weight: 700; letter-spacing: -0.01em; }
+.detalle-proveedor { margin: 0; font-size: 14px; color: var(--texto-3); }
+.aviso { border-radius: 14px; padding: 14px 16px; display: flex; flex-direction: column; gap: 6px; }
+.aviso-titulo { font-size: 15px; font-weight: 600; }
+.aviso-texto { font-size: 14px; line-height: 1.45; }
+.aviso-revisar { background: var(--rev-fondo); color: #5C3700; }
+.aviso-revisar a { align-self: flex-start; font-size: 14px; font-weight: 600; color: #5C3700; }
+.aviso-duplicado { background: var(--dup-fondo); color: #1F3357; gap: 4px; }
+.caja-categoria { border-radius: 14px; background: var(--fondo); padding: 14px 16px; display: flex; flex-direction: column; gap: 6px; }
+.caja-categoria-etiqueta { font-size: 14px; color: var(--texto-3); }
+.caja-categoria-valor { font-size: 15px; font-weight: 600; }
+.caja-categoria-porque { font-size: 14px; line-height: 1.45; color: var(--texto-2); }
+.grupo { display: flex; flex-direction: column; }
+.grupo-titulo { margin: 0 0 4px; font-size: 14px; font-weight: 600; color: var(--texto-2); }
+.fila-campo {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; padding: 12px 0; border-top: 1px solid var(--linea-suave);
+}
+.campo-etiqueta { flex: 0 0 140px; font-size: 14px; color: var(--texto-3); }
+.campo-valor { flex: 1 1 180px; min-width: 0; font-size: 15px; font-weight: 600; color: var(--tinta); overflow-wrap: anywhere; }
+.campo-vacio { font-weight: 500; color: #7A8680; }
+.fila-campo .chip-fuente { max-width: 360px; }
+.abrir-archivo { justify-content: center; min-height: 44px; }

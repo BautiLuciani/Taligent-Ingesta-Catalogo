@@ -15,20 +15,27 @@ Correr: python servidor_web.py              (y abrir http://localhost:8000)
 """
 import argparse
 import html
+import io
 import json
+import mimetypes
 import os
+from datetime import date
 from pathlib import Path
 
 from starlette.applications import Starlette
-from starlette.responses import HTMLResponse, JSONResponse
+from starlette.responses import FileResponse, HTMLResponse, JSONResponse, PlainTextResponse, Response
 from starlette.routing import Mount, Route
 from starlette.staticfiles import StaticFiles
+
+import presentacion
 
 CARPETA_PROYECTO = Path(__file__).parent
 CARPETA_WEB = CARPETA_PROYECTO / "web"
 # La misma variable que usa servidor_mcp.py: las pruebas la apuntan a una copia congelada.
 CARPETA_SALIDA = Path(os.getenv("INGESTA_CARPETA_SALIDA", CARPETA_PROYECTO / "salida"))
 RUTA_RESULTADOS = CARPETA_SALIDA / "resultados.json"
+# Los archivos originales de los proveedores (solo lectura): se pueden abrir desde la fuente de cada dato
+CARPETA_ARCHIVOS = CARPETA_PROYECTO / "Data" / "proveedores"
 
 # Las 5 pantallas: dirección -> (archivo de web/paginas, título de la pestaña, texto del menú, ícono)
 PANTALLAS = {
@@ -37,6 +44,11 @@ PANTALLAS = {
     "/revision": ("revision.html", "Para revisar", "revisar"),
     "/asistente": ("asistente.html", "Asistente", "chat"),
     "/costos": ("costos.html", "Corridas y costos", "costos"),
+}
+
+# Lo que suma cada pantalla además de lo común: (hojas de estilo, programas)
+RECURSOS = {
+    "/fichas": (["/web/fichas.css"], ["/web/ceibo.js", "/web/fichas.js"]),
 }
 
 ICONOS = {
@@ -106,8 +118,8 @@ def armar_pantalla(direccion: str, resultados: dict) -> str:
         "titulo": html.escape(titulo),
         "enlaces": enlaces_del_menu(direccion, numeros),
         "contenido": contenido,
-        "estilos_pagina": "",
-        "scripts_pagina": "",
+        "estilos_pagina": "\n".join(f'<link rel="stylesheet" href="{ruta}">' for ruta in RECURSOS.get(direccion, ([], []))[0]),
+        "scripts_pagina": "\n".join(f'<script src="{ruta}"></script>' for ruta in RECURSOS.get(direccion, ([], []))[1]),
     })
 
 
@@ -119,10 +131,55 @@ async def api_resumen(request):
     return JSONResponse(resumen(leer_resultados()))
 
 
+async def api_fichas(request):
+    """Las fichas reales listas para la pantalla, y los proveedores con cuántas tiene cada uno."""
+    fichas = presentacion.fichas_para_pantalla(leer_resultados())
+    return JSONResponse({"fichas": fichas, "proveedores": presentacion.proveedores_con_cantidad(fichas)})
+
+
+async def api_fichas_excel(request):
+    """El Excel de las fichas que se están viendo en pantalla (la pantalla manda sus ids, en orden)."""
+    try:
+        pedido = await request.json()
+        ids = [str(i) for i in pedido["ids"]]
+    except (ValueError, KeyError, TypeError):
+        return PlainTextResponse("Hace falta la lista de fichas (ids).", status_code=400)
+    libro = presentacion.armar_excel(leer_resultados(), ids)
+    salida = io.BytesIO()
+    libro.save(salida)
+    nombre = f"Ceibo_fichas_{date.today():%Y-%m-%d}.xlsx"
+    return Response(salida.getvalue(), headers={"Content-Disposition": f'attachment; filename="{nombre}"'},
+                    media_type="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet")
+
+
+def indice_de_archivos(carpeta: Path | None = None) -> dict[str, Path]:
+    """Nombre -> ruta de cada archivo original de los proveedores. Solo se sirve lo que está en este índice: desde el
+    navegador no se puede pedir ninguna otra ruta del proyecto."""
+    carpeta = carpeta or CARPETA_ARCHIVOS
+    return {ruta.name: ruta for ruta in sorted(carpeta.rglob("*"))
+            if ruta.is_file() and ruta.name != "proveedores.csv" and not ruta.name.startswith("~$")}
+
+
+async def archivo_original(request):
+    """Abre el archivo del proveedor tal cual lo mandó (un PDF se ve en el navegador; un Excel se descarga)."""
+    ruta = indice_de_archivos().get(request.path_params["nombre"])
+    if ruta is None:
+        return PlainTextResponse("Ese archivo no está entre los de los proveedores.", status_code=404)
+    tipo = mimetypes.guess_type(ruta.name)[0] or "application/octet-stream"
+    if ruta.suffix.lower() == ".txt":
+        tipo = "text/plain; charset=utf-8"
+    en_el_navegador = ruta.suffix.lower() in (".pdf", ".txt", ".csv")
+    return FileResponse(ruta, media_type=tipo, filename=ruta.name,
+                        content_disposition_type="inline" if en_el_navegador else "attachment")
+
+
 def crear_app() -> Starlette:
     rutas = [Route(direccion, pantalla) for direccion in PANTALLAS]
     rutas += [
         Route("/api/resumen", api_resumen),
+        Route("/api/fichas", api_fichas),
+        Route("/api/fichas/excel", api_fichas_excel, methods=["POST"]),
+        Route("/archivos/{nombre:str}", archivo_original),
         Mount("/web", app=StaticFiles(directory=CARPETA_WEB), name="web"),
     ]
     return Starlette(routes=rutas)

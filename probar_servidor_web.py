@@ -106,6 +106,58 @@ probar("una dirección que no existe: 404", codigo == 404)
 codigo, _, _ = pedir("/web/../servidor_web.py")
 probar("no se puede salir de web/ para leer el código", codigo == 404)
 
+# --- Paso 1: Fichas ---
+codigo, tipo, texto = pedir("/api/fichas")
+datos = json.loads(texto) if codigo == 200 else {}
+probar("/api/fichas: 257 fichas y 9 proveedores", len(datos.get("fichas", [])) == 257 and len(datos.get("proveedores", [])) == 9)
+probar("/api/fichas: cada ficha con su grupo de datos y su fuente", all(f["grupos"] for f in datos.get("fichas", [])))
+_, _, texto = pedir("/fichas")
+probar("Fichas: carga sus estilos y su programa",
+       '<link rel="stylesheet" href="/web/fichas.css">' in texto and '<script src="/web/fichas.js"></script>' in texto)
+probar("Fichas: con el buscador, el desplegable y el botón del Excel",
+       'id="buscar"' in texto and 'id="selector-proveedor"' in texto and 'id="descargar-excel"' in texto)
+_, _, texto = pedir("/")
+probar("las demás pantallas no cargan lo de Fichas", "fichas.js" not in texto)
+
+
+def enviar(direccion, cuerpo: bytes, tipo="application/json"):
+    pedido = urllib.request.Request(f"http://127.0.0.1:{PUERTO}{direccion}", data=cuerpo, method="POST",
+                                    headers={"Content-Type": tipo})
+    try:
+        with urllib.request.urlopen(pedido, timeout=20) as respuesta:
+            return respuesta.status, dict(respuesta.headers), respuesta.read()
+    except urllib.error.HTTPError as error:
+        return error.code, dict(error.headers), b""
+
+
+import io  # noqa: E402
+
+import openpyxl  # noqa: E402
+
+codigo, cabeceras, contenido = enviar("/api/fichas/excel", json.dumps({"ids": ["P07:LHS-206", "P08:IN7003"]}).encode())
+probar("Excel: se descarga como archivo .xlsx",
+       codigo == 200 and "attachment" in cabeceras.get("content-disposition", "") and ".xlsx" in cabeceras.get("content-disposition", ""))
+probar("Excel: trae las 2 fichas pedidas", codigo == 200 and openpyxl.load_workbook(io.BytesIO(contenido))["Fichas"].max_row == 3)
+codigo, _, _ = enviar("/api/fichas/excel", b"esto no es json")
+probar("Excel: un pedido mal armado -> 400 (no rompe el servidor)", codigo == 400)
+codigo, _, _ = pedir("/api/fichas/excel")
+probar("Excel: por GET no se puede (405)", codigo == 405)
+
+codigo, tipo, _ = pedir("/archivos/Lista_de_precios_octubre_2026.pdf")
+probar("abrir el PDF de Andes: se ve en el navegador", codigo == 200 and tipo.startswith("application/pdf"))
+codigo, tipo, texto = pedir("/archivos/Mail_NaturalVida_altas.txt")
+probar("abrir el mail de Natural Vida: texto con sus acentos", codigo == 200 and tipo.startswith("text/plain") and "Natural Vida" in texto)
+codigo, _, _ = pedir("/archivos/FDS_Clarita_lavandina.pdf")
+probar("abrir una ficha de seguridad (está en una subcarpeta)", codigo == 200)
+codigo, _, _ = pedir("/archivos/proveedores.csv")
+probar("proveedores.csv no se sirve", codigo == 404)
+codigo, _, _ = pedir("/archivos/no_existe.pdf")
+probar("un archivo que no existe: 404", codigo == 404)
+codigo, _, _ = pedir("/archivos/..%2F..%2Fservidor_web.py")
+probar("no se puede pedir código del proyecto por /archivos", codigo == 404)
+probar("todos los archivos citados en las fichas se pueden abrir",
+       {fuente["archivo"] for r in resultados.values() for fuente in r["fuentes"].values()} <= set(servidor_web.indice_de_archivos()))
+
 servidor.should_exit = True
 hilo.join(timeout=5)
 

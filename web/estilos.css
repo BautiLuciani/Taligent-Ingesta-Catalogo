@@ -50,7 +50,7 @@
   --rev-insignia: #9A5B00;
 }
 
-* { box-sizing: border-box; }
+/* Sin box-sizing global: el mockup usa el del navegador (border-box solo en botones y donde lo pide). */
 body { margin: 0; background: var(--fondo); }
 a { color: var(--tinta); }
 a:hover { color: var(--rojo); }
@@ -73,6 +73,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
   align-items: stretch;
 }
 .principal {
+  box-sizing: border-box;
   flex: 999 1 560px;
   min-width: 0;
   padding: 40px 48px 56px;
@@ -83,6 +84,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 
 /* El menú */
 .sidebar {
+  box-sizing: border-box;
   flex: 1 1 232px;
   max-width: 280px;
   padding: 28px 20px 12px;
@@ -147,3 +149,55 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 .en-construccion {
   border: 1px dashed var(--linea-fuerte); border-radius: 16px; padding: 28px 24px; color: var(--texto-3); font-size: 15px;
 }
+
+/* Chips de estado de una ficha */
+.chip-estado {
+  display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 600; border-radius: 999px;
+  padding: 4px 10px; white-space: nowrap;
+}
+.chip-estado svg { flex: none; }
+.chip-alta { color: var(--alta-texto); background: var(--alta-fondo); }
+.chip-dup { color: var(--dup-texto); background: var(--dup-fondo); }
+.chip-rev { color: var(--rev-texto); background: var(--rev-fondo); }
+
+/* Chip de la fuente de un dato: tipo de archivo, nombre real y lugar */
+.chip-fuente {
+  display: inline-flex; align-items: center; gap: 8px; max-width: 100%; font-size: 13px; color: var(--texto-2);
+  border: 1px solid var(--linea); background: var(--superficie); border-radius: 8px; padding: 4px 8px 4px 4px;
+  white-space: nowrap; text-decoration: none;
+}
+a.chip-fuente:hover { border-color: var(--linea-fuerte); color: var(--tinta); }
+.chip-fuente-tipo { flex: none; font-size: 11px; font-weight: 700; border-radius: 5px; padding: 2px 6px; }
+.chip-fuente-nombre { min-width: 0; overflow: hidden; text-overflow: ellipsis; }
+.chip-fuente-lugar { flex: none; color: var(--texto-3); }
+
+/* Desplegable con el diseño de la app (el mismo en Subir una lista y en Fichas) */
+.desplegable { position: relative; }
+.desplegable-boton {
+  width: 100%; min-height: 48px; padding: 0 14px; border: 1px solid var(--linea-fuerte); border-radius: 12px;
+  background: var(--superficie); font: inherit; font-size: 15px; color: var(--tinta); display: flex; align-items: center;
+  justify-content: space-between; gap: 12px; cursor: pointer; text-align: left;
+}
+.desplegable-boton[aria-expanded="true"] { border-color: var(--tinta); }
+.desplegable-boton svg { flex: none; transition: transform .15s; }
+.desplegable-boton[aria-expanded="true"] svg { transform: rotate(180deg); }
+.desplegable-fondo { position: fixed; inset: 0; z-index: 1; border: 0; background: transparent; cursor: default; }
+.desplegable-lista {
+  box-sizing: border-box;
+  position: absolute; z-index: 2; top: calc(100% + 8px); right: 0; width: 100%; min-width: 280px; padding: 8px;
+  border: 1px solid var(--linea); border-radius: 16px; background: var(--superficie);
+  box-shadow: 0 12px 32px rgba(23, 33, 29, 0.12); display: flex; flex-direction: column; gap: 2px; max-height: 400px;
+  overflow-y: auto;
+}
+.opcion {
+  min-height: 44px; padding: 0 12px; border: 0; border-radius: 10px; background: transparent; font: inherit;
+  font-size: 15px; font-weight: 500; color: var(--tinta); display: flex; align-items: center; gap: 12px; cursor: pointer;
+  text-align: left;
+}
+.opcion:hover { background: var(--superficie-suave); }
+.opcion[aria-selected="true"] { background: var(--rojo-tinte); }
+.opcion-todas { font-weight: 600; }
+.opcion-nombre { flex: 1; }
+.opcion-cantidad { font-size: 13px; color: var(--texto-3); }
+.opcion-marca { width: 18px; display: inline-flex; }
+@media (prefers-reduced-motion: reduce) { .desplegable-boton svg { transition: none; } }

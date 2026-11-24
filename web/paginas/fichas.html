@@ -3,5 +3,28 @@
 <h1 class="titulo">Fichas</h1>
 <p class="bajada">Los {{total}} productos nuevos de los {{proveedores}} proveedores. Tocá uno y vas a ver cada dato con el archivo y el lugar exacto de donde salió.</p>
 </div>
+<button type="button" class="boton-primario" id="descargar-excel">
+<svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"></path><path d="M7 10l5 5 5-5"></path><path d="M4 19h16"></path></svg>
+<span id="descargar-texto">Descargar en Excel</span></button>
 </header>
-<div class="en-construccion">Acá van las fichas (paso 1).</div>
+
+<div class="barra-filtros">
+<label for="buscar" class="solo-lectores">Buscar un producto</label>
+<div class="buscador">
+<svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#55625C" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path></svg>
+<input id="buscar" type="search" placeholder="Buscar por nombre, marca o código" autocomplete="off">
+</div>
+<div class="desplegable selector-proveedor" id="selector-proveedor">
+<button type="button" class="desplegable-boton" aria-haspopup="listbox" aria-expanded="false" aria-label="Proveedor">
+<span class="desplegable-texto">Todos los proveedores</span>
+<svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3F4B46" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg>
+</button>
+</div>
+</div>
+
+<div class="filtros-estado" role="group" aria-label="Filtrar por estado" id="filtros-estado"></div>
+
+<div class="fichas-cuerpo">
+<section class="lista-fichas" aria-label="Productos" id="lista-fichas"></section>
+<aside class="detalle-ficha" aria-label="Detalle de la ficha" id="detalle-ficha" aria-live="polite"></aside>
+</div>
