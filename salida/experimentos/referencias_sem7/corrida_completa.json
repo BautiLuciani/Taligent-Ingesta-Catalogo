@@ -1,0 +1,224 @@
+{
+  "fecha": "2026-11-18 20:51",
+  "opciones": {
+    "batch": false,
+    "de_nuevo": false
+  },
+  "segundos": 661.1,
+  "costo_usd": 0.382701,
+  "fichas": 257,
+  "costo_por_ficha_usd": 0.001489,
+  "costo_primera_vez_usd": 0.432167,
+  "estados": {
+    "a_revision": 24,
+    "lista_para_alta": 209,
+    "duplicado": 24
+  },
+  "etapas": [
+    {
+      "nombre": "1. Recepción de los Excel y sus FDS",
+      "segundos": 17.1,
+      "costo_usd": 0.001317,
+      "llamadas_pagas": 3,
+      "costo_primera_vez_usd": 0.004788
+    },
+    {
+      "nombre": "2a. Lectura en paralelo (PDF, FDS, folleto)",
+      "segundos": 0.1,
+      "costo_usd": 0.0,
+      "llamadas_pagas": 0,
+      "costo_primera_vez_usd": 0.045995
+    },
+    {
+      "nombre": "2b. Fichas (3 fichadores) + escritor",
+      "segundos": 639.8,
+      "costo_usd": 0.381384
+    },
+    {
+      "nombre": "3. Pedidos a proveedores + 4 acuses",
+      "segundos": 4.1,
+      "costo_usd": 0.0
+    },
+    {
+      "nombre": "4. Evaluador de fichas (casos verificados)",
+      "segundos": 0.0,
+      "costo_usd": 0.0
+    }
+  ],
+  "cache_leido": 0.776,
+  "costo_fichas_sin_cache_usd": 0.586878,
+  "frenos_de_hooks": 0,
+  "lectura_en_paralelo": {
+    "segundos": 0.1,
+    "uno_detras_de_otro": 0.4
+  },
+  "proveedores": [
+    {
+      "proveedor_id": "P01",
+      "nombre": "Laboratorio Andes S.A.",
+      "fichas": 26,
+      "estados": {
+        "a_revision": 4,
+        "lista_para_alta": 22
+      },
+      "costo_fichas_usd": 0.045283,
+      "costo_por_ficha_usd": 0.001742
+    },
+    {
+      "proveedor_id": "P02",
+      "nombre": "Cosmética Rivera S.A.",
+      "fichas": 50,
+      "estados": {
+        "a_revision": 1,
+        "duplicado": 5,
+        "lista_para_alta": 44
+      },
+      "costo_fichas_usd": 0.067382,
+      "costo_por_ficha_usd": 0.001348
+    },
+    {
+      "proveedor_id": "P03",
+      "nombre": "Distribuidora Litoral S.R.L.",
+      "fichas": 50,
+      "estados": {
+        "lista_para_alta": 40,
+        "duplicado": 7,
+        "a_revision": 3
+      },
+      "costo_fichas_usd": 0.059488,
+      "costo_por_ficha_usd": 0.00119
+    },
+    {
+      "proveedor_id": "P04",
+      "nombre": "Higiene Total S.A.",
+      "fichas": 28,
+      "estados": {
+        "lista_para_alta": 18,
+        "duplicado": 5,
+        "a_revision": 5
+      },
+      "costo_fichas_usd": 0.048344,
+      "costo_por_ficha_usd": 0.001727
+    },
+    {
+      "proveedor_id": "P05",
+      "nombre": "Dermalab S.A.",
+      "fichas": 18,
+      "estados": {
+        "a_revision": 4,
+        "lista_para_alta": 14
+      },
+      "costo_fichas_usd": 0.028056,
+      "costo_por_ficha_usd": 0.001559
+    },
+    {
+      "proveedor_id": "P06",
+      "nombre": "Bebé Feliz S.A.",
+      "fichas": 32,
+      "estados": {
+        "lista_para_alta": 26,
+        "a_revision": 2,
+        "duplicado": 4
+      },
+      "costo_fichas_usd": 0.049944,
+      "costo_por_ficha_usd": 0.001561
+    },
+    {
+      "proveedor_id": "P07",
+      "nombre": "Limpieza Hogar Sur S.A.",
+      "fichas": 25,
+      "estados": {
+        "lista_para_alta": 20,
+        "duplicado": 3,
+        "a_revision": 2
+      },
+      "costo_fichas_usd": 0.04031,
+      "costo_por_ficha_usd": 0.001612
+    },
+    {
+      "proveedor_id": "P08",
+      "nombre": "Importadora Norte S.A.",
+      "fichas": 14,
+      "estados": {
+        "lista_para_alta": 14
+      },
+      "costo_fichas_usd": 0.022327,
+      "costo_por_ficha_usd": 0.001595
+    },
+    {
+      "proveedor_id": "P09",
+      "nombre": "Natural Vida S.R.L.",
+      "fichas": 14,
+      "estados": {
+        "a_revision": 3,
+        "lista_para_alta": 11
+      },
+      "costo_fichas_usd": 0.02025,
+      "costo_por_ficha_usd": 0.001446
+    }
+  ],
+  "evaluador": {
+    "casos": 116,
+    "ficha": 115,
+    "fuente": 116,
+    "por_archivo": {
+      "andes": {
+        "casos": 12,
+        "ficha": 12,
+        "fuente": 12
+      },
+      "bebefeliz": {
+        "casos": 15,
+        "ficha": 15,
+        "fuente": 15
+      },
+      "dermalab": {
+        "casos": 12,
+        "ficha": 12,
+        "fuente": 12
+      },
+      "higiene": {
+        "casos": 12,
+        "ficha": 12,
+        "fuente": 12
+      },
+      "lhs": {
+        "casos": 12,
+        "ficha": 12,
+        "fuente": 12
+      },
+      "litoral": {
+        "casos": 13,
+        "ficha": 13,
+        "fuente": 13
+      },
+      "naturalvida": {
+        "casos": 14,
+        "ficha": 14,
+        "fuente": 14
+      },
+      "norte": {
+        "casos": 14,
+        "ficha": 13,
+        "fuente": 14
+      },
+      "rivera": {
+        "casos": 12,
+        "ficha": 12,
+        "fuente": 12
+      }
+    }
+  },
+  "siguieron": [
+    "P01",
+    "P02",
+    "P03",
+    "P04",
+    "P05",
+    "P06",
+    "P07",
+    "P08",
+    "P09"
+  ],
+  "frenados": {}
+}

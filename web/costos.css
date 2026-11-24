@@ -1,0 +1,72 @@
+/* Pantalla Corridas y costos: valores del mockup. */
+.datos { display: flex; flex-wrap: wrap; gap: 12px; }
+.dato { flex: 1 1 180px; display: flex; flex-direction: column; gap: 4px; padding: 18px 20px; border: 1px solid var(--linea); border-radius: 16px; background: var(--superficie); }
+.dato-valor { font-size: 30px; font-weight: 700; letter-spacing: -0.02em; }
+.dato-texto { font-size: 14px; color: var(--texto-3); }
+
+.costos-cuerpo { display: flex; flex-wrap: wrap; gap: 24px; align-items: flex-start; }
+.costos-principal { flex: 999 1 560px; min-width: 0; display: flex; flex-direction: column; gap: 24px; }
+.caja-blanca { border: 1px solid var(--linea); border-radius: 20px; background: var(--superficie); padding: 24px; }
+.caja-titulo-2 { margin: 0; font-size: 18px; font-weight: 600; }
+.caja-bajada { margin: 4px 0 6px; font-size: 14px; color: var(--texto-3); }
+.etapas-lista { margin: 0; padding: 0; list-style: none; }
+.etapa-fila { display: flex; flex-direction: column; gap: 8px; padding: 14px 0; border-top: 1px solid var(--linea-suave); }
+.etapa-datos { display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: baseline; }
+.etapa-nombre { flex: 1 1 240px; font-size: 15px; font-weight: 600; }
+.etapa-tiempo { font-size: 14px; color: var(--texto-2); }
+.etapa-costo { flex: 0 0 84px; text-align: right; font-size: 14px; font-weight: 600; }
+.riel { height: 8px; border-radius: 999px; background: var(--linea-suave); overflow: hidden; }
+.riel-lleno { height: 100%; background: var(--rojo); border-radius: 999px; }
+
+.caja-tabla { border: 1px solid var(--linea); border-radius: 20px; background: var(--superficie); overflow: hidden; }
+.caja-tabla .caja-titulo-2 { padding: 20px 20px 8px; }
+.tabla-marco-costos { overflow-x: auto; }
+.tabla-costos { width: 100%; border-collapse: collapse; font-size: 15px; min-width: 620px; }
+.tabla-costos thead tr { text-align: left; }
+.tabla-costos th { padding: 12px 20px; font-size: 14px; font-weight: 600; color: var(--texto-3); }
+.tabla-costos tbody tr { border-top: 1px solid var(--linea); }
+.tabla-costos td { padding: 12px 20px; }
+.tabla-costos .derecha { text-align: right; }
+.tabla-costos .nombre { font-weight: 600; }
+.tabla-costos .por-ficha { text-align: right; color: var(--texto-2); }
+.celda-barra { width: 40%; }
+.barra-costo { display: flex; align-items: center; gap: 10px; }
+.barra-costo-riel { flex: 1; height: 10px; border-radius: 999px; background: var(--linea-suave); overflow: hidden; }
+.barra-costo-lleno { height: 100%; background: var(--tinta); border-radius: 999px; }
+.barra-costo-valor { flex: 0 0 84px; white-space: nowrap; text-align: right; font-weight: 600; }
+
+.costos-costado { flex: 1 1 320px; min-width: 0; display: flex; flex-direction: column; gap: 16px; }
+.caja-columna { display: flex; flex-direction: column; gap: 14px; }
+.modos { margin: 0; padding: 0; border: 0; display: flex; flex-direction: column; gap: 10px; }
+.modo { display: flex; gap: 12px; align-items: flex-start; padding: 14px; border: 1px solid var(--linea-fuerte); border-radius: 14px; cursor: pointer; }
+.modo:has(input:checked) { border: 2px solid var(--tinta); }
+.modo input { margin-top: 3px; accent-color: var(--tinta); }
+.modo-textos { display: flex; flex-direction: column; gap: 2px; }
+.modo-titulo { font-size: 15px; font-weight: 600; }
+.modo-detalle { font-size: 14px; color: var(--texto-3); }
+.boton-correr { justify-content: center; font-size: 16px; }
+.confirmar { border-radius: 14px; background: var(--rev-fondo); color: #5C3700; padding: 14px 16px; display: flex; flex-direction: column; gap: 12px; }
+.confirmar-texto { margin: 0; font-size: 14px; line-height: 1.5; }
+.confirmar-botones { display: flex; flex-wrap: wrap; gap: 10px; }
+.confirmar-botones .boton-primario, .confirmar-botones .boton-secundario { min-height: 44px; font-size: 15px; }
+.avance-corrida { display: flex; flex-direction: column; gap: 10px; }
+.avance-numero { font-size: 15px; color: var(--texto-3); }
+.avance-numero strong { font-size: 24px; color: var(--tinta); }
+.avance-riel { height: 10px; border-radius: 999px; background: var(--linea-suave); overflow: hidden; }
+.avance-lleno { height: 100%; background: #1E7F55; border-radius: 999px; transition: width .4s; }
+.avance-nota { margin: 0; font-size: 14px; line-height: 1.45; color: var(--texto-3); }
+.resultado-corrida { margin: 0; font-size: 14px; line-height: 1.5; border-radius: 12px; padding: 12px 14px; }
+.resultado-bien { background: var(--alta-fondo); color: var(--alta-texto); }
+.resultado-mal { background: var(--rev-fondo); color: #5C3700; }
+
+.calidad-dato { display: flex; flex-direction: column; gap: 4px; }
+.calidad-valor { font-size: 24px; font-weight: 700; }
+.calidad-texto { font-size: 14px; line-height: 1.45; color: var(--texto-3); }
+.caja-ahorro { border-radius: 20px; background: var(--alta-fondo); padding: 24px; display: flex; flex-direction: column; gap: 12px; color: #123B29; }
+.ahorro-fila { display: flex; justify-content: space-between; gap: 12px; font-size: 15px; }
+.ahorro-valor { font-weight: 600; }
+.ahorro-mejor { font-weight: 700; }
+.ahorro-nota { margin: 0; font-size: 14px; line-height: 1.45; }
+.sin-corrida { border: 1px dashed var(--linea-fuerte); border-radius: 16px; padding: 28px 24px; color: var(--texto-3); font-size: 15px; }
+@media (prefers-reduced-motion: reduce) { .avance-lleno { transition: none; } }
+#costos { display: flex; flex-direction: column; gap: 28px; }

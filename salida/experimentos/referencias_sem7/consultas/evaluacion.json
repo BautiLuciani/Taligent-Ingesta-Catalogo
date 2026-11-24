@@ -1,0 +1,452 @@
+{
+  "bien": 29,
+  "total": 29,
+  "con_problemas_de_redaccion": 0,
+  "costo_usd": 0.0292,
+  "costo_por_consulta_usd": 0.00101,
+  "segundos": 178.4,
+  "detalle": [
+    {
+      "id": "Q01",
+      "pregunta": "¿Cuál es el precio de costo de AN-1124 de Laboratorio Andes y de dónde sale?",
+      "ok": true,
+      "chequeos": {
+        "esta_en_lo_generado": true,
+        "productos": true,
+        "valor": true,
+        "fuentes": true
+      },
+      "fallan": [],
+      "redaccion": [],
+      "costo_usd": 0.002123,
+      "segundos": 5.9
+    },
+    {
+      "id": "Q02",
+      "pregunta": "¿Cuál es el EAN de DL-109 y de qué archivo sale?",
+      "ok": true,
+      "chequeos": {
+        "esta_en_lo_generado": true,
+        "productos": true,
+        "valor": true,
+        "fuentes": true
+      },
+      "fallan": [],
+      "redaccion": [],
+      "costo_usd": 0.000661,
+      "segundos": 5.1
+    },
+    {
+      "id": "Q03",
+      "pregunta": "¿Cuántos ml tiene IN7003 de Importadora Norte y qué decía el archivo?",
+      "ok": true,
+      "chequeos": {
+        "esta_en_lo_generado": true,
+        "productos": true,
+        "valor": true,
+        "fuentes": true,
+        "menciona 4.8 fl oz": true
+      },
+      "fallan": [],
+      "redaccion": [],
+      "costo_usd": 0.000842,
+      "segundos": 6.2
+    },
+    {
+      "id": "Q04",
+      "pregunta": "¿Cuál es el contenido de LT-3345 de Litoral y de dónde sale?",
+      "ok": true,
+      "chequeos": {
+        "esta_en_lo_generado": true,
+        "productos": true,
+        "valor": true,
+        "fuentes": true
+      },
+      "fallan": [],
+      "redaccion": [],
+      "costo_usd": 0.000569,
+      "segundos": 4.2
+    },
+    {
+      "id": "Q05",
+      "pregunta": "¿Cómo se clasifica LHS-206 para el depósito y de dónde sale?",
+      "ok": true,
+      "chequeos": {
+        "esta_en_lo_generado": true,
+        "productos": true,
+        "valor": true,
+        "fuentes": true
+      },
+      "fallan": [],
+      "redaccion": [],
+      "costo_usd": 0.000832,
+      "segundos": 6.6
+    },
+    {
+      "id": "Q06",
+      "pregunta": "¿Cuál es el precio de NV-212 y de dónde sale?",
+      "ok": true,
+      "chequeos": {
+        "esta_en_lo_generado": true,
+        "productos": true,
+        "valor": true,
+        "fuentes": true
+      },
+      "fallan": [],
+      "redaccion": [],
+      "costo_usd": 0.000548,
+      "segundos": 4.1
+    },
+    {
+      "id": "Q07",
+      "pregunta": "¿Por qué LT-3447 quedó a revisión? ¿Con qué producto del catálogo podría ser el mismo?",
+      "ok": true,
+      "chequeos": {
+        "esta_en_lo_generado": true,
+        "productos": true,
+        "valor": true,
+        "fuentes": true,
+        "menciona sin ean": true,
+        "menciona posible duplicado": true
+      },
+      "fallan": [],
+      "redaccion": [],
+      "costo_usd": 0.001176,
+      "segundos": 9.1
+    },
+    {
+      "id": "Q08",
+      "pregunta": "¿Por qué AN-1133 no tiene contenido en la ficha?",
+      "ok": true,
+      "chequeos": {
+        "esta_en_lo_generado": true,
+        "productos": true,
+        "valor": true,
+        "fuentes": true
+      },
+      "fallan": [],
+      "redaccion": [],
+      "costo_usd": 0.000902,
+      "segundos": 7.0
+    },
+    {
+      "id": "Q09",
+      "pregunta": "¿Por qué RIV-1203 está sin EAN si Cosmética Rivera lo mandó?",
+      "ok": true,
+      "chequeos": {
+        "esta_en_lo_generado": true,
+        "productos": true,
+        "valor": true,
+        "fuentes": true
+      },
+      "fallan": [],
+      "redaccion": [],
+      "costo_usd": 0.001081,
+      "segundos": 9.2
+    },
+    {
+      "id": "Q10",
+      "pregunta": "¿Por qué no se da de alta RIV-1206? ¿Con qué SKU coincide?",
+      "ok": true,
+      "chequeos": {
+        "esta_en_lo_generado": true,
+        "productos": true,
+        "valor": true,
+        "fuentes": true,
+        "menciona duplicado": true
+      },
+      "fallan": [],
+      "redaccion": [],
+      "costo_usd": 0.000879,
+      "segundos": 6.9
+    },
+    {
+      "id": "Q11",
+      "pregunta": "¿Por qué no aparece HT32855 de Higiene Total entre los productos nuevos?",
+      "ok": true,
+      "chequeos": {
+        "esta_en_lo_generado": true,
+        "productos": true,
+        "valor": true,
+        "fuentes": true
+      },
+      "fallan": [],
+      "redaccion": [],
+      "costo_usd": 0.000802,
+      "segundos": 5.4
+    },
+    {
+      "id": "Q12",
+      "pregunta": "Natural Vida pidió dar todo de alta sin revisión. ¿Por qué NV-203 quedó a revisión igual?",
+      "ok": true,
+      "chequeos": {
+        "esta_en_lo_generado": true,
+        "productos": true,
+        "valor": true,
+        "fuentes": true
+      },
+      "fallan": [],
+      "redaccion": [],
+      "costo_usd": 0.000806,
+      "segundos": 6.9
+    },
+    {
+      "id": "Q13",
+      "pregunta": "¿Por qué AN-1103 va a revisión?",
+      "ok": true,
+      "chequeos": {
+        "esta_en_lo_generado": true,
+        "productos": true,
+        "valor": true,
+        "fuentes": true,
+        "menciona principio activo": true
+      },
+      "fallan": [],
+      "redaccion": [],
+      "costo_usd": 0.000757,
+      "segundos": 5.1
+    },
+    {
+      "id": "Q14",
+      "pregunta": "¿Qué productos de Limpieza Hogar Sur van como corrosivos al depósito?",
+      "ok": true,
+      "chequeos": {
+        "esta_en_lo_generado": true,
+        "productos": true,
+        "valor": true,
+        "fuentes": true
+      },
+      "fallan": [],
+      "redaccion": [],
+      "costo_usd": 0.000844,
+      "segundos": 5.1
+    },
+    {
+      "id": "Q15",
+      "pregunta": "¿Qué productos quedaron pendientes de ficha de datos de seguridad?",
+      "ok": true,
+      "chequeos": {
+        "esta_en_lo_generado": true,
+        "productos": true,
+        "valor": true,
+        "fuentes": true
+      },
+      "fallan": [],
+      "redaccion": [],
+      "costo_usd": 0.000879,
+      "segundos": 5.3
+    },
+    {
+      "id": "Q16",
+      "pregunta": "¿Qué le tengo que pedir a Dermalab para cerrar sus revisiones?",
+      "ok": true,
+      "chequeos": {
+        "esta_en_lo_generado": true,
+        "productos": true,
+        "valor": true,
+        "fuentes": true,
+        "menciona SKU100910": true,
+        "menciona SKU101785": true
+      },
+      "fallan": [],
+      "redaccion": [],
+      "costo_usd": 0.002561,
+      "segundos": 12.9
+    },
+    {
+      "id": "Q17",
+      "pregunta": "¿Qué productos de Bebé Feliz vienen en pack?",
+      "ok": true,
+      "chequeos": {
+        "esta_en_lo_generado": true,
+        "productos": true,
+        "valor": true,
+        "fuentes": true
+      },
+      "fallan": [],
+      "redaccion": [],
+      "costo_usd": 0.000773,
+      "segundos": 5.0
+    },
+    {
+      "id": "Q18",
+      "pregunta": "¿Cuántos productos quedaron listos para alta?",
+      "ok": true,
+      "chequeos": {
+        "esta_en_lo_generado": true,
+        "productos": true,
+        "valor": true,
+        "fuentes": true
+      },
+      "fallan": [],
+      "redaccion": [],
+      "costo_usd": 0.000416,
+      "segundos": 3.2
+    },
+    {
+      "id": "Q19",
+      "pregunta": "Si Dermalab manda el EAN de DL-103, ¿en qué estado queda?",
+      "ok": true,
+      "chequeos": {
+        "esta_en_lo_generado": true,
+        "productos": true,
+        "valor": true,
+        "fuentes": true,
+        "menciona precio": true
+      },
+      "fallan": [],
+      "redaccion": [],
+      "costo_usd": 0.001011,
+      "segundos": 7.9
+    },
+    {
+      "id": "Q20",
+      "pregunta": "Si Natural Vida manda para NV-203 un EAN válido que no está en el catálogo, ¿en qué estado queda?",
+      "ok": true,
+      "chequeos": {
+        "esta_en_lo_generado": true,
+        "productos": true,
+        "valor": true,
+        "fuentes": true
+      },
+      "fallan": [],
+      "redaccion": [],
+      "costo_usd": 0.000952,
+      "segundos": 6.7
+    },
+    {
+      "id": "Q21",
+      "pregunta": "Si Litoral manda el EAN de LT-3450 y resulta ser el de SKU102632, ¿en qué estado queda?",
+      "ok": true,
+      "chequeos": {
+        "esta_en_lo_generado": true,
+        "productos": true,
+        "valor": true,
+        "fuentes": true,
+        "menciona SKU102632": true
+      },
+      "fallan": [],
+      "redaccion": [],
+      "costo_usd": 0.001075,
+      "segundos": 7.7
+    },
+    {
+      "id": "Q22",
+      "pregunta": "¿Cuánto se vendió el mes pasado del jabón Pureza?",
+      "ok": true,
+      "chequeos": {
+        "dice_que_no_esta": true,
+        "no_inventa_valor": true
+      },
+      "fallan": [],
+      "redaccion": [],
+      "costo_usd": 0.00033,
+      "segundos": 2.5
+    },
+    {
+      "id": "Q23",
+      "pregunta": "¿Cuál es el precio de venta al público de DL-109?",
+      "ok": true,
+      "chequeos": {
+        "dice_que_no_esta": true,
+        "no_inventa_valor": true
+      },
+      "fallan": [],
+      "redaccion": [],
+      "costo_usd": 0.000724,
+      "segundos": 3.9
+    },
+    {
+      "id": "V01.1",
+      "pregunta": "¿Qué productos de Importadora Norte vienen con precio en dólares?",
+      "ok": true,
+      "chequeos": {
+        "esta_en_lo_generado": true,
+        "productos": true,
+        "valor": true,
+        "fuentes": true
+      },
+      "fallan": [],
+      "redaccion": [],
+      "costo_usd": 0.001851,
+      "segundos": 8.5
+    },
+    {
+      "id": "V01.2",
+      "pregunta": "¿Y cuál es el más caro?",
+      "ok": true,
+      "chequeos": {
+        "esta_en_lo_generado": true,
+        "productos": true,
+        "valor": true,
+        "fuentes": true
+      },
+      "fallan": [],
+      "redaccion": [],
+      "costo_usd": 0.000932,
+      "segundos": 3.9
+    },
+    {
+      "id": "V01.3",
+      "pregunta": "¿De dónde sale ese precio?",
+      "ok": true,
+      "chequeos": {
+        "esta_en_lo_generado": true,
+        "productos": true,
+        "valor": true,
+        "fuentes": true
+      },
+      "fallan": [],
+      "redaccion": [],
+      "costo_usd": 0.000779,
+      "segundos": 3.3
+    },
+    {
+      "id": "V02.1",
+      "pregunta": "¿Qué quedó a revisión de Laboratorio Andes?",
+      "ok": true,
+      "chequeos": {
+        "esta_en_lo_generado": true,
+        "productos": true,
+        "valor": true,
+        "fuentes": true
+      },
+      "fallan": [],
+      "redaccion": [],
+      "costo_usd": 0.00251,
+      "segundos": 12.6
+    },
+    {
+      "id": "V02.2",
+      "pregunta": "¿Cuáles de esos por diferencias entre los dos archivos?",
+      "ok": true,
+      "chequeos": {
+        "esta_en_lo_generado": true,
+        "productos": true,
+        "valor": true,
+        "fuentes": true
+      },
+      "fallan": [],
+      "redaccion": [],
+      "costo_usd": 0.000826,
+      "segundos": 4.3
+    },
+    {
+      "id": "V02.3",
+      "pregunta": "¿Dónde está cada versión?",
+      "ok": true,
+      "chequeos": {
+        "esta_en_lo_generado": true,
+        "productos": true,
+        "valor": true,
+        "fuentes": true,
+        "menciona 20": true,
+        "menciona 30": true
+      },
+      "fallan": [],
+      "redaccion": [],
+      "costo_usd": 0.000757,
+      "segundos": 3.9
+    }
+  ]
+}

@@ -1,0 +1,124 @@
+{
+  "fichas": 257,
+  "lectura_usd": 0.050932,
+  "escenarios_usd": {
+    "tiempo_real_sin_cache": 0.566752,
+    "tiempo_real_con_cache": 0.379297,
+    "batch_con_cache": 0.211686
+  },
+  "por_ficha_usd": {
+    "tiempo_real_sin_cache": 0.002205,
+    "tiempo_real_con_cache": 0.001476,
+    "batch_con_cache": 0.000824
+  },
+  "primera_vez_por_ficha_usd": {
+    "tiempo_real_sin_cache": 0.002403,
+    "tiempo_real_con_cache": 0.001674,
+    "batch_con_cache": 0.001022
+  },
+  "cache_leido": {
+    "tiempo_real": 0.753,
+    "batch": 0.78
+  },
+  "segundos": {
+    "tiempo_real": 653.4,
+    "batch": 1958.7
+  },
+  "semana_4": {
+    "fichas": 225,
+    "usd": 0.394941,
+    "segundos": 457.7
+  },
+  "proveedores": [
+    {
+      "proveedor_id": "P01",
+      "nombre": "Andes",
+      "fichas": 26,
+      "lectura_usd": 0.018902,
+      "tiempo_real_sin_cache_usd": 0.06468399999999999,
+      "tiempo_real_con_cache_usd": 0.042539,
+      "batch_con_cache_usd": 0.022518999999999997,
+      "semana_4_usd": 0.04783
+    },
+    {
+      "proveedor_id": "P02",
+      "nombre": "Rivera",
+      "fichas": 50,
+      "lectura_usd": 0.001972,
+      "tiempo_real_sin_cache_usd": 0.105283,
+      "tiempo_real_con_cache_usd": 0.069063,
+      "batch_con_cache_usd": 0.038734000000000005,
+      "semana_4_usd": 0.078694
+    },
+    {
+      "proveedor_id": "P03",
+      "nombre": "Litoral",
+      "fichas": 50,
+      "lectura_usd": 0.0,
+      "tiempo_real_sin_cache_usd": 0.08998800000000001,
+      "tiempo_real_con_cache_usd": 0.063475,
+      "batch_con_cache_usd": 0.035598000000000005,
+      "semana_4_usd": 0.072011
+    },
+    {
+      "proveedor_id": "P04",
+      "nombre": "Higiene Total",
+      "fichas": 28,
+      "lectura_usd": 0.000531,
+      "tiempo_real_sin_cache_usd": 0.06873,
+      "tiempo_real_con_cache_usd": 0.044906,
+      "batch_con_cache_usd": 0.025906000000000002,
+      "semana_4_usd": 0.046107
+    },
+    {
+      "proveedor_id": "P05",
+      "nombre": "Dermalab",
+      "fichas": 18,
+      "lectura_usd": 0.012918,
+      "tiempo_real_sin_cache_usd": 0.040596999999999994,
+      "tiempo_real_con_cache_usd": 0.028163,
+      "batch_con_cache_usd": 0.016773999999999997,
+      "semana_4_usd": 0.033617
+    },
+    {
+      "proveedor_id": "P06",
+      "nombre": "Bebé Feliz",
+      "fichas": 32,
+      "lectura_usd": 0.000419,
+      "tiempo_real_sin_cache_usd": 0.072077,
+      "tiempo_real_con_cache_usd": 0.050387999999999995,
+      "batch_con_cache_usd": 0.026103,
+      "semana_4_usd": null
+    },
+    {
+      "proveedor_id": "P07",
+      "nombre": "LHS",
+      "fichas": 25,
+      "lectura_usd": 0.014175,
+      "tiempo_real_sin_cache_usd": 0.060739,
+      "tiempo_real_con_cache_usd": 0.039474,
+      "batch_con_cache_usd": 0.023533000000000002,
+      "semana_4_usd": 0.055387
+    },
+    {
+      "proveedor_id": "P08",
+      "nombre": "Norte",
+      "fichas": 14,
+      "lectura_usd": 0.002015,
+      "tiempo_real_sin_cache_usd": 0.033581,
+      "tiempo_real_con_cache_usd": 0.02184,
+      "batch_con_cache_usd": 0.011726,
+      "semana_4_usd": 0.035516
+    },
+    {
+      "proveedor_id": "P09",
+      "nombre": "Natural Vida",
+      "fichas": 14,
+      "lectura_usd": 0.0,
+      "tiempo_real_sin_cache_usd": 0.031073,
+      "tiempo_real_con_cache_usd": 0.019449,
+      "batch_con_cache_usd": 0.010793,
+      "semana_4_usd": 0.025778999999999996
+    }
+  ]
+}

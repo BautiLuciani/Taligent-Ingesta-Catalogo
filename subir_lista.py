@@ -554,6 +554,7 @@ class MesaDeEntradas:
         self._candado = threading.Lock()
         self.corridas: dict[str, Corrida] = {}
         self.en_curso: Corrida | None = None
+        self.otro_trabajo = lambda: None  # si hay otra cosa corriendo que no puede ir a la vez (la corrida completa), su motivo
 
     def proveedores(self) -> list[dict]:
         if self._proveedores is None:
@@ -603,6 +604,9 @@ class MesaDeEntradas:
         with self._candado:
             if self.en_curso and self.en_curso.estado_publico()["estado"] == "corriendo":
                 raise RuntimeError("Ya se está procesando otra lista: esperá a que termine.")
+            ocupado = self.otro_trabajo()
+            if ocupado:
+                raise RuntimeError(ocupado)
             destino = self.carpeta_entrada / proveedor["carpeta"]
             destino.mkdir(parents=True, exist_ok=True)
             fds_nuevas = sorted(p.name for p in carpeta.iterdir() if p.suffix.lower() == ".pdf")

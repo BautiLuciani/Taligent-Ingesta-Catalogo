@@ -30,6 +30,7 @@ from starlette.routing import Mount, Route
 from starlette.staticfiles import StaticFiles
 
 import asistente_web
+import corridas
 import para_revisar
 import presentacion
 import subir_lista
@@ -46,6 +47,8 @@ CARPETA_CATALOGO = CARPETA_PROYECTO / "Data" / "catalogo"
 # variable: las pruebas los apuntan a copias congeladas o temporales (las decisiones nunca se escriben en una referencia).
 CARPETA_CONSOLIDADO = Path(os.getenv("INGESTA_CARPETA_CONSOLIDADO", CARPETA_SALIDA / "consolidado"))
 RUTA_DECISIONES = Path(os.getenv("INGESTA_RUTA_DECISIONES", CARPETA_PROYECTO / "salida" / "decisiones.json"))
+# Los reportes de la última corrida completa (corrida_completa.json, costo_por_ficha.json, consultas/evaluacion.json)
+CARPETA_REPORTES = Path(os.getenv("INGESTA_CARPETA_REPORTES", CARPETA_PROYECTO / "salida"))
 
 # Las 5 pantallas: dirección -> (archivo de web/paginas, título de la pestaña, texto del menú, ícono)
 PANTALLAS = {
@@ -62,6 +65,7 @@ RECURSOS = {
     "/fichas": (["/web/fichas.css"], ["/web/ceibo.js", "/web/fichas.js"]),
     "/revision": (["/web/revision.css"], ["/web/ceibo.js", "/web/revision.js"]),
     "/asistente": (["/web/asistente.css"], ["/web/ceibo.js", "/web/asistente.js"]),
+    "/costos": (["/web/costos.css"], ["/web/ceibo.js", "/web/costos.js"]),
 }
 # Las pantallas con un marco distinto: el Asistente ocupa justo el alto de la ventana (scrollea solo la conversación)
 CLASE_DE_PANTALLA = {"/asistente": " pantalla-chat"}
@@ -69,6 +73,15 @@ TOPE_DE_SUBIDA = 30 * 1024 * 1024  # 30 MB por archivo: una lista de precios pes
 
 _mesa = None
 _motor = None
+_completa = None
+
+
+def completa() -> corridas.CorridaCompleta:
+    """python correr_todo.py desde la pantalla (una a la vez, y nunca junto con una lista que se está subiendo)."""
+    global _completa
+    if _completa is None:
+        _completa = corridas.CorridaCompleta(CARPETA_PROYECTO / "salida")
+    return _completa
 TOPE_DE_PREGUNTA = 1000  # caracteres: una pregunta, no un documento
 
 
@@ -85,6 +98,9 @@ def mesa() -> subir_lista.MesaDeEntradas:
     global _mesa
     if _mesa is None:
         _mesa = subir_lista.MesaDeEntradas()
+    if _mesa.otro_trabajo() is None:
+        _mesa.otro_trabajo = lambda: ("Se están corriendo los 9 proveedores (Corridas y costos): esperá a que termine."
+                                      if _completa is not None and _completa.corriendo() else None)
     return _mesa
 
 ICONOS = {
@@ -317,6 +333,30 @@ async def api_preguntar(request):
                          "sugerencia": asistente_web.sugerencia_despues_de(texto, asistente_web.guion_de_conversaciones())})
 
 
+async def api_costos(request):
+    return JSONResponse({"datos": corridas.datos_de_costos(CARPETA_REPORTES), "corrida": completa().estado_publico()})
+
+
+async def api_estado_corrida(request):
+    return JSONResponse(completa().estado_publico())
+
+
+async def api_correr_todo(request):
+    """Corre los 9 proveedores (PAGA: ~US$ 0,38 ahora o ~US$ 0,21 por lote). La pantalla pide confirmación antes."""
+    try:
+        lote = bool((await request.json()).get("lote"))
+    except (ValueError, AttributeError):
+        return JSONResponse({"error": "Pedido mal armado."}, status_code=400)
+    en_curso = mesa().en_curso
+    if en_curso and en_curso.estado_publico()["estado"] == "corriendo":
+        return JSONResponse({"error": "Se está procesando una lista (Subir una lista): esperá a que termine."}, status_code=409)
+    try:
+        completa().empezar(lote, resumen(leer_resultados())["total"] or 257)
+    except RuntimeError as error:
+        return JSONResponse({"error": str(error)}, status_code=409)
+    return JSONResponse(completa().estado_publico())
+
+
 def indice_de_archivos(carpeta: Path | None = None) -> dict[str, Path]:
     """Nombre -> ruta de cada archivo original de los proveedores (y del catálogo actual). Solo se sirve lo que está en
     este índice: desde el navegador no se puede pedir ninguna otra ruta del proyecto."""
@@ -348,6 +388,9 @@ def crear_app() -> Starlette:
         Route("/api/corridas/{id:str}", api_corrida),
         Route("/api/corrida_de_ejemplo", api_corrida_de_ejemplo),
         Route("/api/revision", api_revision),
+        Route("/api/costos", api_costos),
+        Route("/api/costos/corrida", api_estado_corrida),
+        Route("/api/costos/corrida", api_correr_todo, methods=["POST"]),
         Route("/api/asistente", api_asistente),
         Route("/api/asistente/conversaciones", api_nueva_conversacion, methods=["POST"]),
         Route("/api/asistente/conversaciones/{id:str}/preguntas", api_preguntar, methods=["POST"]),
