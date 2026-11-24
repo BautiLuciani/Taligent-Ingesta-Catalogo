@@ -14,6 +14,7 @@ Correr: python servidor_web.py              (y abrir http://localhost:8000)
         python servidor_web.py --puerto 8001
 """
 import argparse
+import contextlib
 import html
 import io
 import json
@@ -23,10 +24,12 @@ from datetime import date
 from pathlib import Path
 
 from starlette.applications import Starlette
+from starlette.concurrency import run_in_threadpool
 from starlette.responses import FileResponse, HTMLResponse, JSONResponse, PlainTextResponse, Response
 from starlette.routing import Mount, Route
 from starlette.staticfiles import StaticFiles
 
+import asistente_web
 import para_revisar
 import presentacion
 import subir_lista
@@ -58,10 +61,23 @@ RECURSOS = {
     "/": (["/web/subir.css"], ["/web/ceibo.js", "/web/subir.js"]),
     "/fichas": (["/web/fichas.css"], ["/web/ceibo.js", "/web/fichas.js"]),
     "/revision": (["/web/revision.css"], ["/web/ceibo.js", "/web/revision.js"]),
+    "/asistente": (["/web/asistente.css"], ["/web/ceibo.js", "/web/asistente.js"]),
 }
+# Las pantallas con un marco distinto: el Asistente ocupa justo el alto de la ventana (scrollea solo la conversación)
+CLASE_DE_PANTALLA = {"/asistente": " pantalla-chat"}
 TOPE_DE_SUBIDA = 30 * 1024 * 1024  # 30 MB por archivo: una lista de precios pesa mucho menos
 
 _mesa = None
+_motor = None
+TOPE_DE_PREGUNTA = 1000  # caracteres: una pregunta, no un documento
+
+
+def motor() -> asistente_web.MotorDelAsistente:
+    """El asistente de la semana 6, corriendo en su hilo. Se conecta recién con la primera pregunta."""
+    global _motor
+    if _motor is None:
+        _motor = asistente_web.MotorDelAsistente()
+    return _motor
 
 
 def mesa() -> subir_lista.MesaDeEntradas:
@@ -138,6 +154,7 @@ def armar_pantalla(direccion: str, resultados: dict) -> str:
         "titulo": html.escape(titulo),
         "enlaces": enlaces_del_menu(direccion, numeros),
         "contenido": contenido,
+        "clase_app": CLASE_DE_PANTALLA.get(direccion, ""),
         "estilos_pagina": "\n".join(f'<link rel="stylesheet" href="{ruta}">' for ruta in RECURSOS.get(direccion, ([], []))[0]),
         "scripts_pagina": "\n".join(f'<script src="{ruta}"></script>' for ruta in RECURSOS.get(direccion, ([], []))[1]),
     })
@@ -267,6 +284,39 @@ async def api_decidir(request):
     return JSONResponse({"item": item_id, "decision": decision})
 
 
+async def api_asistente(request):
+    return JSONResponse({"ejemplos": asistente_web.EJEMPLOS})
+
+
+async def api_nueva_conversacion(request):
+    try:
+        identificador = await run_in_threadpool(motor().nueva)
+    except Exception as error:  # sin key, sin MODELO, el servidor MCP no arrancó: se dice, no se rompe
+        return JSONResponse({"error": asistente_web.error_en_palabras(error)}, status_code=503)
+    return JSONResponse({"id": identificador})
+
+
+async def api_preguntar(request):
+    """Una pregunta al asistente real (paga, ~US$ 0,001). Devuelve la respuesta lista para la pantalla."""
+    try:
+        texto = str((await request.json())["texto"]).strip()
+    except (ValueError, KeyError, TypeError):
+        return JSONResponse({"error": "Falta la pregunta."}, status_code=400)
+    if not texto:
+        return JSONResponse({"error": "La pregunta está vacía."}, status_code=400)
+    if len(texto) > TOPE_DE_PREGUNTA:
+        return JSONResponse({"error": "La pregunta es muy larga: hacela más corta."}, status_code=400)
+    try:
+        resultado = await run_in_threadpool(motor().preguntar, request.path_params["id"], texto)
+    except KeyError as error:
+        return JSONResponse({"error": str(error).strip("'\"")}, status_code=404)
+    except Exception as error:
+        return JSONResponse({"error": asistente_web.error_en_palabras(error)}, status_code=503)
+    fichas = {f["id"]: f for f in presentacion.fichas_para_pantalla(leer_resultados())}
+    return JSONResponse({"respuesta": asistente_web.respuesta_para_pantalla(resultado, fichas),
+                         "sugerencia": asistente_web.sugerencia_despues_de(texto, asistente_web.guion_de_conversaciones())})
+
+
 def indice_de_archivos(carpeta: Path | None = None) -> dict[str, Path]:
     """Nombre -> ruta de cada archivo original de los proveedores (y del catálogo actual). Solo se sirve lo que está en
     este índice: desde el navegador no se puede pedir ninguna otra ruta del proyecto."""
@@ -298,13 +348,24 @@ def crear_app() -> Starlette:
         Route("/api/corridas/{id:str}", api_corrida),
         Route("/api/corrida_de_ejemplo", api_corrida_de_ejemplo),
         Route("/api/revision", api_revision),
+        Route("/api/asistente", api_asistente),
+        Route("/api/asistente/conversaciones", api_nueva_conversacion, methods=["POST"]),
+        Route("/api/asistente/conversaciones/{id:str}/preguntas", api_preguntar, methods=["POST"]),
         Route("/api/decisiones", api_decidir, methods=["POST"]),
         Route("/api/fichas", api_fichas),
         Route("/api/fichas/excel", api_fichas_excel, methods=["POST"]),
         Route("/archivos/{nombre:str}", archivo_original),
         Mount("/web", app=StaticFiles(directory=CARPETA_WEB), name="web"),
     ]
-    return Starlette(routes=rutas)
+    return Starlette(routes=rutas, lifespan=al_cerrar_cierra_el_asistente)
+
+
+@contextlib.asynccontextmanager
+async def al_cerrar_cierra_el_asistente(app):
+    """Al cerrar el servidor (Ctrl+C), se cierra también la conexión del asistente con su servidor MCP."""
+    yield
+    if _motor is not None:
+        await run_in_threadpool(_motor.cerrar)
 
 
 app = crear_app()

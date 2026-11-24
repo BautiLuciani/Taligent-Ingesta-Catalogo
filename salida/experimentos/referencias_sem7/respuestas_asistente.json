@@ -1,0 +1,818 @@
+{
+  "Q01": {
+    "consulta": "¿Cuál es el precio de costo de AN-1124 de Laboratorio Andes y de dónde sale?",
+    "texto": "El precio de costo de AN-1124 (DERMACORT 1 % CREMA X 30 G) es 320,80 UYU, sin IVA. Sale del archivo Actualizacion_precios_Andes.xlsx, hoja Actualización, fila 12, que actualizó el precio. La lista en PDF (Lista_de_precios_octubre_2026.pdf, página 1) traía $ 306,73, pero el precio nuevo del Excel es el que rige. La vigencia registrada es 2026-10-15. El producto quedó lista para alta.",
+    "valor": 320.8,
+    "items": [
+      "P01:AN-1124"
+    ],
+    "fuentes": [
+      {
+        "archivo": "Actualizacion_precios_Andes.xlsx",
+        "hoja": "Actualización",
+        "fila": 12
+      },
+      {
+        "archivo": "Lista_de_precios_octubre_2026.pdf",
+        "pagina": 1
+      }
+    ],
+    "esta_en_lo_generado": true,
+    "avisos": [],
+    "reintentos": 0,
+    "vueltas": 2,
+    "segundos": 5.9,
+    "costo_usd": 0.002123,
+    "input_tokens": 24910,
+    "cache_leidos": 11754,
+    "output_tokens": 722
+  },
+  "Q02": {
+    "consulta": "¿Cuál es el EAN de DL-109 y de qué archivo sale?",
+    "texto": "El EAN de DL-109 (CREMA DERMALAB UREA 10 % X 400 ML, de Dermalab) es 7790670659075. Sale del archivo Dermalab_lista_precios.xlsx, hoja Lista, fila 2. Ese mismo archivo es la fuente del precio. El producto quedó lista para alta.",
+    "valor": "7790670659075",
+    "items": [
+      "P05:DL-109"
+    ],
+    "fuentes": [
+      {
+        "archivo": "Dermalab_lista_precios.xlsx",
+        "hoja": "Lista",
+        "fila": 2
+      }
+    ],
+    "esta_en_lo_generado": true,
+    "avisos": [],
+    "reintentos": 0,
+    "vueltas": 2,
+    "segundos": 5.1,
+    "costo_usd": 0.000661,
+    "input_tokens": 24762,
+    "cache_leidos": 23387,
+    "output_tokens": 511
+  },
+  "Q03": {
+    "consulta": "¿Cuántos ml tiene IN7003 de Importadora Norte y qué decía el archivo?",
+    "texto": "IN7003 (Importadora Norte, producto de Pure Care) tiene 142 ML. El archivo decía \"4.8 fl oz\" en la columna Size; pasado a ML (1 fl oz = 29,5735 ML) da 142 ML. La ficha quedó lista para alta. Los datos salen de la fila 2 de la hoja \"New items\" del Excel NorteImports_new_items_Q4.xlsx.",
+    "valor": 142,
+    "items": [
+      "P08:IN7003"
+    ],
+    "fuentes": [
+      {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 2
+      }
+    ],
+    "esta_en_lo_generado": true,
+    "avisos": [],
+    "reintentos": 0,
+    "vueltas": 2,
+    "segundos": 6.2,
+    "costo_usd": 0.000842,
+    "input_tokens": 24889,
+    "cache_leidos": 23395,
+    "output_tokens": 842
+  },
+  "Q04": {
+    "consulta": "¿Cuál es el contenido de LT-3345 de Litoral y de dónde sale?",
+    "texto": "El contenido de LT-3345 (Litoral, P03) es 250 ML. El archivo de Litoral trae 0,25 LT en la línea 16 de litoral_altas_102026.csv; el sistema lo pasó a 250 ML (1 LT = 1.000 ML). El producto quedó lista para alta.",
+    "valor": 250,
+    "items": [
+      "P03:LT-3345"
+    ],
+    "fuentes": [
+      {
+        "archivo": "litoral_altas_102026.csv",
+        "linea": 16
+      }
+    ],
+    "esta_en_lo_generado": true,
+    "avisos": [],
+    "reintentos": 0,
+    "vueltas": 2,
+    "segundos": 4.2,
+    "costo_usd": 0.000569,
+    "input_tokens": 24504,
+    "cache_leidos": 23391,
+    "output_tokens": 392
+  },
+  "Q05": {
+    "consulta": "¿Cómo se clasifica LHS-206 para el depósito y de dónde sale?",
+    "texto": "LHS-206 (P07:LHS-206, LAVANDINA CLARITA CONCENTRADA X 2000 ML) queda clasificada como corrosiva para el depósito, con número ONU 1791. El dato sale de la ficha de datos de seguridad FDS_Clarita_lavandina.pdf, página 1. Según el estándar, corrosivo corresponde a la clase 8 de la sección 14 (transporte) de la FDS. El producto quedó lista para alta.",
+    "valor": "corrosivo",
+    "items": [
+      "P07:LHS-206"
+    ],
+    "fuentes": [
+      {
+        "archivo": "FDS_Clarita_lavandina.pdf",
+        "pagina": 1
+      }
+    ],
+    "esta_en_lo_generado": true,
+    "avisos": [],
+    "reintentos": 0,
+    "vueltas": 2,
+    "segundos": 6.6,
+    "costo_usd": 0.000832,
+    "input_tokens": 24830,
+    "cache_leidos": 23390,
+    "output_tokens": 836
+  },
+  "Q06": {
+    "consulta": "¿Cuál es el precio de NV-212 y de dónde sale?",
+    "texto": "El precio de costo de NV-212 (item P09:NV-212, Natural Vida Vitamina C 1 g comprimidos efervescentes x 10) es $ 262,87 en pesos uruguayos (UYU), sin IVA. Sale del mail Mail_NaturalVida_altas.txt, línea 13. El producto quedó lista para alta.",
+    "valor": 262.87,
+    "items": [
+      "P09:NV-212"
+    ],
+    "fuentes": [
+      {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 13
+      }
+    ],
+    "esta_en_lo_generado": true,
+    "avisos": [],
+    "reintentos": 0,
+    "vueltas": 2,
+    "segundos": 4.1,
+    "costo_usd": 0.000548,
+    "input_tokens": 24604,
+    "cache_leidos": 23384,
+    "output_tokens": 324
+  },
+  "Q07": {
+    "consulta": "¿Por qué LT-3447 quedó a revisión? ¿Con qué producto del catálogo podría ser el mismo?",
+    "texto": "LT-3447 (jabón PUREZA antibacterial 90 g, de Distribuidora Litoral) sigue a revisión por dos motivos. Primero, vino sin código de barras: en la línea 46 de litoral_altas_102026.csv el campo EAN está vacío. Segundo, hay un posible duplicado en el catálogo: SKU100889, \"JABON PUREZA ANTIBAC. 90GRS\". Coinciden la marca (PUREZA), el tipo (jabón), la variante (antibacterial), el contenido (90 G) y las unidades por envase (1). Es un candidato, no un duplicado confirmado: como no tiene código de barras, no se puede comparar por GTIN, así que una persona tiene que confirmar que es el mismo producto antes de darlo de alta o descartarlo.",
+    "valor": "SKU100889",
+    "items": [
+      "P03:LT-3447"
+    ],
+    "fuentes": [
+      {
+        "archivo": "litoral_altas_102026.csv",
+        "linea": 46
+      }
+    ],
+    "esta_en_lo_generado": true,
+    "avisos": [],
+    "reintentos": 0,
+    "vueltas": 2,
+    "segundos": 9.1,
+    "costo_usd": 0.001176,
+    "input_tokens": 24581,
+    "cache_leidos": 23403,
+    "output_tokens": 1590
+  },
+  "Q08": {
+    "consulta": "¿Por qué AN-1133 no tiene contenido en la ficha?",
+    "texto": "Contenido y unidad quedaron vacíos porque los dos archivos de Laboratorio Andes dan valores distintos. La lista de precios en PDF dice 20 G (crema x 20 gr) y la actualización de precios en Excel dice 30 G (crema x 30 g). El sistema no puede decidir cuál es correcto, así que el producto sigue a revisión por conflicto entre fuentes. Hay que confirmar el contenido con el proveedor. El precio de costo (205,38 UYU) sí se tomó de la actualización del Excel, por ser la de vigencia más reciente.",
+    "valor": "conflicto entre fuentes",
+    "items": [
+      "P01:AN-1133"
+    ],
+    "fuentes": [
+      {
+        "archivo": "Lista_de_precios_octubre_2026.pdf",
+        "pagina": 1
+      },
+      {
+        "archivo": "Actualizacion_precios_Andes.xlsx",
+        "hoja": "Actualización",
+        "fila": 6
+      }
+    ],
+    "esta_en_lo_generado": true,
+    "avisos": [],
+    "reintentos": 0,
+    "vueltas": 2,
+    "segundos": 7.0,
+    "costo_usd": 0.000902,
+    "input_tokens": 24922,
+    "cache_leidos": 23385,
+    "output_tokens": 953
+  },
+  "Q09": {
+    "consulta": "¿Por qué RIV-1203 está sin EAN si Cosmética Rivera lo mandó?",
+    "texto": "RIV-1203 no está sin EAN: el archivo sí trae el código 7793092189062, pero no pasa la validación del dígito verificador. Por eso el sistema no lo tomó como código de barras válido, dejó el campo vacío y el producto quedó a revisión (sigue a revisión). El código viene de ALTAS RIVERA OCT.xlsx, hoja Altas, fila 7. Hay que pedirle a Cosmética Rivera que confirme o corrija el EAN de NATIVA ACONDICIONADOR LISO X 200 ML. El resto de la ficha quedó cargado desde esa misma fila.",
+    "valor": "gtin_invalido",
+    "items": [
+      "P02:RIV-1203"
+    ],
+    "fuentes": [
+      {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 7
+      }
+    ],
+    "esta_en_lo_generado": true,
+    "avisos": [],
+    "reintentos": 0,
+    "vueltas": 2,
+    "segundos": 9.2,
+    "costo_usd": 0.001081,
+    "input_tokens": 24808,
+    "cache_leidos": 23395,
+    "output_tokens": 1341
+  },
+  "Q10": {
+    "consulta": "¿Por qué no se da de alta RIV-1206? ¿Con qué SKU coincide?",
+    "texto": "RIV-1206 (Cosmética Rivera) no se da de alta porque es un duplicado: su código de barras ya existe en el catálogo. Coincide con el SKU SKU100714, ACONDICIONADOR BRISA COLOR X 400 ML, con el mismo GTIN 7797137444038. En el archivo el código venía con guiones (779-7137-44403-8) y el sistema lo tomó como 7797137444038. El producto queda en estado duplicado, sin motivos de revisión. Datos del archivo ALTAS RIVERA OCT.xlsx, hoja Altas, fila 8.",
+    "valor": "SKU100714",
+    "items": [
+      "P02:RIV-1206"
+    ],
+    "fuentes": [
+      {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 8
+      }
+    ],
+    "esta_en_lo_generado": true,
+    "avisos": [],
+    "reintentos": 0,
+    "vueltas": 2,
+    "segundos": 6.9,
+    "costo_usd": 0.000879,
+    "input_tokens": 24838,
+    "cache_leidos": 23393,
+    "output_tokens": 929
+  },
+  "Q11": {
+    "consulta": "¿Por qué no aparece HT32855 de Higiene Total entre los productos nuevos?",
+    "texto": "HT32855 (Higiene Total, P04) no se cargó porque aparece en la hoja \"Discontinuados\" del archivo HigieneTotal_novedades.xlsx, fila 2. Ese archivo lo marca como producto discontinuado o dado de baja, y el estándar dice que esos no son productos nuevos y no se dan de alta. El producto es \"Jabon Intimo Aquaviva Manzanilla\", 200 ml, EAN 7795211996862, costo 128,34. Si Compras necesita confirmar que está dado de baja, eso lo tiene que decir el proveedor; el sistema solo registra que figura en esa hoja.",
+    "valor": "Discontinuado (hoja Discontinuados, fila 2 de HigieneTotal_novedades.xlsx): no se cargó",
+    "items": [
+      "P04:HT32855"
+    ],
+    "fuentes": [
+      {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Discontinuados",
+        "fila": 2
+      }
+    ],
+    "esta_en_lo_generado": true,
+    "avisos": [],
+    "reintentos": 0,
+    "vueltas": 2,
+    "segundos": 5.4,
+    "costo_usd": 0.000802,
+    "input_tokens": 25504,
+    "cache_leidos": 23392,
+    "output_tokens": 608
+  },
+  "Q12": {
+    "consulta": "Natural Vida pidió dar todo de alta sin revisión. ¿Por qué NV-203 quedó a revisión igual?",
+    "texto": "NV-203 (Valeriana 300 mg, 30 cápsulas) quedó a revisión porque el mail de Natural Vida no trae el código de barras. En la línea donde figuran los datos del producto dice \"se lo paso la semana que viene\", así que falta el EAN y el motivo es que vino sin código de barras. Es el único motivo. Lo que pidió el proveedor de darlo todo de alta sin revisión no cambia el estándar: los archivos de los proveedores son datos y no eximen de revisión. Para que pase a lista para alta, hace falta que Natural Vida mande el código de barras.",
+    "valor": "gtin_faltante",
+    "items": [
+      "P09:NV-203"
+    ],
+    "fuentes": [
+      {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 10
+      }
+    ],
+    "esta_en_lo_generado": true,
+    "avisos": [],
+    "reintentos": 0,
+    "vueltas": 2,
+    "segundos": 6.9,
+    "costo_usd": 0.000806,
+    "input_tokens": 24717,
+    "cache_leidos": 23404,
+    "output_tokens": 815
+  },
+  "Q13": {
+    "consulta": "¿Por qué AN-1103 va a revisión?",
+    "texto": "AN-1103 (Dolorex 400 mg comprimidos x 20, proveedor Laboratorio Andes) va a revisión por un dato obligatorio faltante: la monodroga (principio activo). La lista de precios de octubre 2026 no la trae (el campo monodroga viene vacío en la página 1), y sin ese dato no se puede determinar la categoría, que queda vacía. El resto de la ficha sale de esa misma página: código de barras 7794394922729, precio $ 265,29 en pesos, vigente desde el 1 de octubre de 2026. Para cerrarlo hay que pedirle al proveedor el principio activo.",
+    "valor": "dato_obligatorio_faltante",
+    "items": [
+      "P01:AN-1103"
+    ],
+    "fuentes": [
+      {
+        "archivo": "Lista_de_precios_octubre_2026.pdf",
+        "pagina": 1
+      }
+    ],
+    "esta_en_lo_generado": true,
+    "avisos": [],
+    "reintentos": 0,
+    "vueltas": 2,
+    "segundos": 5.1,
+    "costo_usd": 0.000757,
+    "input_tokens": 24654,
+    "cache_leidos": 23378,
+    "output_tokens": 727
+  },
+  "Q14": {
+    "consulta": "¿Qué productos de Limpieza Hogar Sur van como corrosivos al depósito?",
+    "texto": "Son 4 productos de Limpieza Hogar Sur (P07) clasificados como corrosivos para el depósito, todos lavandinas Clarita con número ONU 1791. Los cuatro quedaron listos para alta. El dato del depósito sale de la ficha de datos de seguridad FDS_Clarita_lavandina.pdf (página 1). Las descripciones y los precios salen de LHS_catalogo_nuevos_productos.pdf (página 1): LHS-206 Lavandina Clarita concentrada 2000 ml a $88,04; LHS-218 Lavandina Clarita ropa blanca 2000 ml a $82,46; LHS-263 Lavandina Clarita ropa blanca 1000 ml a $59,59; LHS-269 Lavandina Clarita concentrada 1000 ml a $54,71.",
+    "valor": 4,
+    "items": [
+      "P07:LHS-206",
+      "P07:LHS-218",
+      "P07:LHS-263",
+      "P07:LHS-269"
+    ],
+    "fuentes": [
+      {
+        "archivo": "LHS_catalogo_nuevos_productos.pdf",
+        "pagina": 1
+      },
+      {
+        "archivo": "FDS_Clarita_lavandina.pdf",
+        "pagina": 1
+      }
+    ],
+    "esta_en_lo_generado": true,
+    "avisos": [],
+    "reintentos": 0,
+    "vueltas": 2,
+    "segundos": 5.1,
+    "costo_usd": 0.000844,
+    "input_tokens": 24990,
+    "cache_leidos": 23392,
+    "output_tokens": 820
+  },
+  "Q15": {
+    "consulta": "¿Qué productos quedaron pendientes de ficha de datos de seguridad?",
+    "texto": "Hay 4 productos con la ficha de datos de seguridad pendiente. Los 4 son duplicados de productos que ya están en el catálogo, así que no entran como altas nuevas: P07:LHS-221 (alcohol en gel Clarita Aloe, duplicado de SKU102464), P07:LHS-248 (alcohol Clarita 70 % 500 ML, duplicado de SKU101505), P07:LHS-266 (repelente Fulmin crema niños, duplicado de SKU101834) y P02:RIV-1212 (desodorante aerosol Brisa hombre, duplicado de SKU101925). Los datos de los tres de Limpieza Hogar Sur salen de LHS_catalogo_nuevos_productos.pdf, página 1; el de Cosmética Rivera sale de ALTAS RIVERA OCT.xlsx, hoja Altas, fila 50.",
+    "valor": 4,
+    "items": [
+      "P07:LHS-221",
+      "P07:LHS-248",
+      "P07:LHS-266",
+      "P02:RIV-1212"
+    ],
+    "fuentes": [
+      {
+        "archivo": "LHS_catalogo_nuevos_productos.pdf",
+        "pagina": 1
+      },
+      {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 50
+      }
+    ],
+    "esta_en_lo_generado": true,
+    "avisos": [],
+    "reintentos": 0,
+    "vueltas": 2,
+    "segundos": 5.3,
+    "costo_usd": 0.000879,
+    "input_tokens": 24986,
+    "cache_leidos": 23388,
+    "output_tokens": 892
+  },
+  "Q16": {
+    "consulta": "¿Qué le tengo que pedir a Dermalab para cerrar sus revisiones?",
+    "texto": "Para cerrar las revisiones de Dermalab hay que pedirle esto. DL-151 (CREMA DERMALAB HYDRA PLUS X 50 ML): código de barras, precio de costo de lista sin IVA, y confirmar si es el mismo producto que SKU100910 (CREMA DERMALAB HYDRA PLUS 50CC). DL-103 (GEL LIMPIADOR DERMALAB PURIFY X 300 ML): código de barras y precio de costo. DL-106 (PROTECTOR SOLAR DERMALAB SUN FPS 50+ X 50 ML): código de barras y precio de costo. DL-154 (AGUA MICELAR DERMALAB SENSITIVE X 400 ML): código de barras, precio de costo, y confirmar si es el mismo producto que SKU101785 (AGUA MICELAR DERMALAB SENSITIVE 400ML). Los cuatro productos vienen de Dermalab_lanzamientos_2026.pdf, página 1, y siguen a revisión: a los cuatro les falta el código de barras y el precio.",
+    "valor": 4,
+    "items": [
+      "P05:DL-151",
+      "P05:DL-103",
+      "P05:DL-106",
+      "P05:DL-154"
+    ],
+    "fuentes": [
+      {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      }
+    ],
+    "esta_en_lo_generado": true,
+    "avisos": [],
+    "reintentos": 1,
+    "vueltas": 4,
+    "segundos": 12.9,
+    "costo_usd": 0.002561,
+    "input_tokens": 56846,
+    "cache_leidos": 49911,
+    "output_tokens": 2390
+  },
+  "Q17": {
+    "consulta": "¿Qué productos de Bebé Feliz vienen en pack?",
+    "texto": "Bebé Feliz (P06) tiene 3 productos en pack, todos de pañales Pequeños Pasos con 2 unidades por envase, y los tres quedaron listos para alta: PAÑALES PEQUEÑOS PASOS G X 60 UN PACK 2 (BF-509, precio 1101,14 UYU), PAÑALES PEQUEÑOS PASOS XG X 36 UN PACK 2 (BF-521, precio 876,68 UYU) y PAÑALES PEQUEÑOS PASOS G X 36 UN PACK 2 (BF-548, precio 802,64 UYU). Los datos salen de BebeFeliz_altas.xlsx, hoja Altas, filas 5, 9 y 19.",
+    "valor": 3,
+    "items": [
+      "P06:BF-509",
+      "P06:BF-521",
+      "P06:BF-548"
+    ],
+    "fuentes": [
+      {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 5
+      },
+      {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 9
+      },
+      {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 19
+      }
+    ],
+    "esta_en_lo_generado": true,
+    "avisos": [],
+    "reintentos": 0,
+    "vueltas": 2,
+    "segundos": 5.0,
+    "costo_usd": 0.000773,
+    "input_tokens": 24499,
+    "cache_leidos": 23383,
+    "output_tokens": 799
+  },
+  "Q18": {
+    "consulta": "¿Cuántos productos quedaron listos para alta?",
+    "texto": "Quedaron 209 productos listos para alta. Es el total de fichas en estado lista para alta que devolvió el sistema, sin contar los que están a revisión o son duplicados.",
+    "valor": 209,
+    "items": [],
+    "fuentes": [],
+    "esta_en_lo_generado": true,
+    "avisos": [],
+    "reintentos": 0,
+    "vueltas": 2,
+    "segundos": 3.2,
+    "costo_usd": 0.000416,
+    "input_tokens": 23904,
+    "cache_leidos": 23379,
+    "output_tokens": 234
+  },
+  "Q19": {
+    "consulta": "Si Dermalab manda el EAN de DL-103, ¿en qué estado queda?",
+    "texto": "Hoy DL-103 (GEL LIMPIADOR DERMALAB PURIFY X 300 ML) está a revisión porque no trae código de barras y le falta el precio de costo y su moneda. Si Dermalab manda el EAN y es válido (13 dígitos con dígito verificador correcto) y no existe ya en el catálogo, se resuelve el motivo de falta de código de barras, pero el producto sigue a revisión por falta de precio y moneda. Si el código tiene 13 dígitos pero el verificador no coincide, o no tiene 13 dígitos, el motivo pasaría a ser código de barras inválido. Si el código ya existe en el catálogo, pasaría a duplicado. Los datos de la ficha salen de la página 1 de Dermalab_lanzamientos_2026.pdf.",
+    "valor": "a_revision",
+    "items": [
+      "P05:DL-103"
+    ],
+    "fuentes": [
+      {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      }
+    ],
+    "esta_en_lo_generado": true,
+    "avisos": [],
+    "reintentos": 0,
+    "vueltas": 2,
+    "segundos": 7.9,
+    "costo_usd": 0.001011,
+    "input_tokens": 24593,
+    "cache_leidos": 23390,
+    "output_tokens": 1254
+  },
+  "Q20": {
+    "consulta": "Si Natural Vida manda para NV-203 un EAN válido que no está en el catálogo, ¿en qué estado queda?",
+    "texto": "Hoy NV-203 (Valeriana 300 mg, 30 cápsulas) está a revisión porque el mail no trae código de barras: dice \"se lo paso la semana que viene\". Si Natural Vida manda un EAN válido que no está en el catálogo, el producto quedaría lista para alta. El motivo de revisión (falta el código de barras) se resuelve y no queda otro pendiente, porque la ficha ya tiene marca, tipo, contenido, unidad, categoría, precio en pesos y principio activo, y no hay conflicto entre archivos. Un EAN que no existe en el catálogo no lo convierte en duplicado. Si el EAN fuera inválido (no tiene 13 dígitos o el dígito verificador no coincide), seguiría a revisión con el motivo de código de barras inválido. Fuente del dato hoy: Mail_NaturalVida_altas.txt, línea 10.",
+    "valor": "lista_para_alta",
+    "items": [
+      "P09:NV-203"
+    ],
+    "fuentes": [
+      {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 10
+      }
+    ],
+    "esta_en_lo_generado": true,
+    "avisos": [],
+    "reintentos": 0,
+    "vueltas": 2,
+    "segundos": 6.7,
+    "costo_usd": 0.000952,
+    "input_tokens": 24599,
+    "cache_leidos": 23403,
+    "output_tokens": 1137
+  },
+  "Q21": {
+    "consulta": "Si Litoral manda el EAN de LT-3450 y resulta ser el de SKU102632, ¿en qué estado queda?",
+    "texto": "Si Litoral manda como EAN el código de barras de SKU102632 (7790932001000, el que tiene ese producto en el catálogo), LT-3450 quedaría como duplicado de SKU102632. Hoy está a revisión por dos motivos: vino sin código de barras y es un posible duplicado de ese mismo SKU. Con el código cargado, el duplicado se confirma por GTIN y ya no hace falta revisarlo a mano. Esto sale de la ficha actual, que viene de litoral_altas_102026.csv, línea 41. Si el código que manda no es ese, el producto sigue a revisión.",
+    "valor": "duplicado",
+    "items": [
+      "P03:LT-3450"
+    ],
+    "fuentes": [
+      {
+        "archivo": "litoral_altas_102026.csv",
+        "linea": 41
+      }
+    ],
+    "esta_en_lo_generado": true,
+    "avisos": [],
+    "reintentos": 0,
+    "vueltas": 2,
+    "segundos": 7.7,
+    "costo_usd": 0.001075,
+    "input_tokens": 24516,
+    "cache_leidos": 23404,
+    "output_tokens": 1405
+  },
+  "Q22": {
+    "consulta": "¿Cuánto se vendió el mes pasado del jabón Pureza?",
+    "texto": "No tengo datos de ventas. El sistema solo genera las fichas de los productos nuevos que mandan los proveedores, con su estado y de dónde sale cada dato. Para saber cuánto se vendió del jabón Pureza hay que consultarlo en el sistema de ventas de la cadena. Si querés, puedo buscar la ficha del jabón Pureza en lo que generó la ingesta.",
+    "valor": null,
+    "items": [],
+    "fuentes": [],
+    "esta_en_lo_generado": false,
+    "avisos": [],
+    "reintentos": 0,
+    "vueltas": 1,
+    "segundos": 2.5,
+    "costo_usd": 0.00033,
+    "input_tokens": 11746,
+    "cache_leidos": 11644,
+    "output_tokens": 402
+  },
+  "Q23": {
+    "consulta": "¿Cuál es el precio de venta al público de DL-109?",
+    "texto": "No tengo el precio de venta al público de DL-109: el sistema solo maneja el precio de costo (precio de lista del proveedor, sin IVA). Lo que sí está registrado: DL-109 (CREMA DERMALAB UREA 10 % X 400 ML, proveedor P05 Dermalab S.A.) tiene un precio de costo de 736,22 UYU sin IVA, tomado de la lista de precios de Dermalab, hoja Lista, fila 2. Ese dato no es el precio de venta al público. El producto quedó lista para alta.",
+    "valor": null,
+    "items": [
+      "P05:DL-109"
+    ],
+    "fuentes": [
+      {
+        "archivo": "Dermalab_lista_precios.xlsx",
+        "hoja": "Lista",
+        "fila": 2
+      }
+    ],
+    "esta_en_lo_generado": false,
+    "avisos": [],
+    "reintentos": 0,
+    "vueltas": 2,
+    "segundos": 3.9,
+    "costo_usd": 0.000724,
+    "input_tokens": 24939,
+    "cache_leidos": 23381,
+    "output_tokens": 591
+  },
+  "V01.1": {
+    "consulta": "¿Qué productos de Importadora Norte vienen con precio en dólares?",
+    "texto": "Son 14 productos de Importadora Norte con precio en dólares, todos en el archivo NorteImports_new_items_Q4.xlsx (hoja New items). Todos quedaron listos para alta. Precio de costo sin IVA: Shampoo en seco Pure Care Original 142 ml, USD 5,17 (IN7003); Protector solar Sunguard Sport FPS 50 237 ml, USD 7,60 (IN7006); Crema Pure Care Intensive Hands 227 g, USD 5,28 (IN7009); Vitalis Vitamina D3 2000 UI cápsulas x 120, USD 10,66 (IN7012); Gel de afeitar Pure Care Sensitive 198 ml, USD 3,89 (IN7015); Enjuague bucal Pure Care Cool Mint 500 ml, USD 4,41 (IN7018); Vitalis Multivitamínico comprimidos x 100, USD 9,39 (IN7021); Loción Pure Care Shea Butter 296 ml, USD 4,18 (IN7024); Vitalis Vitamina D3 1000 UI cápsulas x 60, USD 6,98 (IN7027); Vitalis Vitamina D3 2000 UI cápsulas x 60, USD 6,92 (IN7030); Loción Pure Care Shea Butter 500 ml, USD 7,13 (IN7033); Loción Pure Care Daily Moisture 500 ml, USD 6,08 (IN7036); Loción Pure Care Daily Moisture 296 ml, USD 4,64 (IN7039); Vitalis Vitamina D3 1000 UI cápsulas x 120, USD 10,46 (IN7042). Los precios salen de la columna de precio de ese Excel. Los dos productos de Shampoo en seco y Gel de afeitar tienen la FDS en sus PDF (aerosol inflamable, ONU 1950).",
+    "valor": 14,
+    "items": [
+      "P08:IN7003",
+      "P08:IN7006",
+      "P08:IN7009",
+      "P08:IN7012",
+      "P08:IN7015",
+      "P08:IN7018",
+      "P08:IN7021",
+      "P08:IN7024",
+      "P08:IN7027",
+      "P08:IN7030",
+      "P08:IN7033",
+      "P08:IN7036",
+      "P08:IN7039",
+      "P08:IN7042"
+    ],
+    "fuentes": [
+      {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 2
+      },
+      {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 3
+      },
+      {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 4
+      },
+      {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 5
+      },
+      {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 6
+      },
+      {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 7
+      },
+      {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 8
+      },
+      {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 9
+      },
+      {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 10
+      },
+      {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 11
+      },
+      {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 12
+      },
+      {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 13
+      },
+      {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 14
+      },
+      {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 15
+      }
+    ],
+    "esta_en_lo_generado": true,
+    "avisos": [],
+    "reintentos": 0,
+    "vueltas": 2,
+    "segundos": 8.5,
+    "costo_usd": 0.001851,
+    "input_tokens": 27737,
+    "cache_leidos": 23386,
+    "output_tokens": 2146
+  },
+  "V01.2": {
+    "consulta": "¿Y cuál es el más caro?",
+    "texto": "El más caro de los 14 productos en dólares de Importadora Norte es Vitalis Vitamina D3 2000 UI cápsulas x 120 (P08:IN7012), con precio de costo de USD 10,66 sin IVA. Está listo para alta. El dato sale de la fila 5 de la hoja New items del archivo NorteImports_new_items_Q4.xlsx.",
+    "valor": "P08:IN7012",
+    "items": [
+      "P08:IN7012"
+    ],
+    "fuentes": [
+      {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 5
+      }
+    ],
+    "esta_en_lo_generado": true,
+    "avisos": [],
+    "reintentos": 0,
+    "vueltas": 2,
+    "segundos": 3.9,
+    "costo_usd": 0.000932,
+    "input_tokens": 36649,
+    "cache_leidos": 34002,
+    "output_tokens": 522
+  },
+  "V01.3": {
+    "consulta": "¿De dónde sale ese precio?",
+    "texto": "El precio de USD 10,66 sale del archivo NorteImports_new_items_Q4.xlsx, hoja New items, fila 5. Es la columna Unit cost (USD) de esa fila. No hay otro archivo de Importadora Norte que dé un precio distinto para este producto, así que no hubo que resolver conflicto ni elegir entre listas.",
+    "valor": 10.66,
+    "items": [
+      "P08:IN7012"
+    ],
+    "fuentes": [
+      {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 5
+      }
+    ],
+    "esta_en_lo_generado": true,
+    "avisos": [],
+    "reintentos": 0,
+    "vueltas": 2,
+    "segundos": 3.3,
+    "costo_usd": 0.000779,
+    "input_tokens": 39129,
+    "cache_leidos": 37520,
+    "output_tokens": 406
+  },
+  "V02.1": {
+    "consulta": "¿Qué quedó a revisión de Laboratorio Andes?",
+    "texto": "Hay 4 productos de Laboratorio Andes a revisión. DOLOREX 400 MG COMPRIMIDOS X 20 UN (AN-1103) y ANTIACID 400 MG + 400 MG/5 ML SUSPENSION X 200 ML (AN-1106) tienen un dato obligatorio faltante: el principio activo no viene en la lista de precios de octubre, así que no se puede asignar la categoría. MICOSTOP 1 % CREMA (AN-1133) tiene conflicto entre fuentes: la lista de octubre dice 20 G y la actualización de precios dice 30 G, así que el contenido queda sin definir. FEBRIL 500 MG COMPRIMIDOS (AN-1136) también tiene conflicto entre fuentes: la lista dice 20 UN y la actualización dice 30 UN. En los dos últimos el precio sí se tomó de la actualización, que es la más reciente, pero el contenido sigue sin resolverse.",
+    "valor": 4,
+    "items": [
+      "P01:AN-1103",
+      "P01:AN-1106",
+      "P01:AN-1133",
+      "P01:AN-1136"
+    ],
+    "fuentes": [
+      {
+        "archivo": "Lista_de_precios_octubre_2026.pdf",
+        "pagina": 1
+      },
+      {
+        "archivo": "Actualizacion_precios_Andes.xlsx",
+        "hoja": "Actualización",
+        "fila": 6
+      },
+      {
+        "archivo": "Actualizacion_precios_Andes.xlsx",
+        "hoja": "Actualización",
+        "fila": 5
+      }
+    ],
+    "esta_en_lo_generado": true,
+    "avisos": [],
+    "reintentos": 0,
+    "vueltas": 3,
+    "segundos": 12.6,
+    "costo_usd": 0.00251,
+    "input_tokens": 43430,
+    "cache_leidos": 36487,
+    "output_tokens": 2554
+  },
+  "V02.2": {
+    "consulta": "¿Cuáles de esos por diferencias entre los dos archivos?",
+    "texto": "Dos, MICOSTOP 1 % CREMA (AN-1133) y FEBRIL 500 MG COMPRIMIDOS (AN-1136). En los dos, los archivos dan contenidos distintos para el mismo producto. MICOSTOP: la lista de octubre dice 20 G y la actualización de precios dice 30 G. FEBRIL: la lista de octubre dice 20 UN y la actualización de precios dice 30 UN. Por eso el contenido y la unidad quedan vacíos hasta resolver cuál es correcto. Los otros dos (DOLOREX AN-1103 y ANTIACID AN-1106) no son por diferencias entre archivos: les falta el principio activo en la lista de octubre.",
+    "valor": 2,
+    "items": [
+      "P01:AN-1133",
+      "P01:AN-1136"
+    ],
+    "fuentes": [
+      {
+        "archivo": "Lista_de_precios_octubre_2026.pdf",
+        "pagina": 1
+      },
+      {
+        "archivo": "Actualizacion_precios_Andes.xlsx",
+        "hoja": "Actualización",
+        "fila": 6
+      },
+      {
+        "archivo": "Actualizacion_precios_Andes.xlsx",
+        "hoja": "Actualización",
+        "fila": 5
+      }
+    ],
+    "esta_en_lo_generado": true,
+    "avisos": [],
+    "reintentos": 0,
+    "vueltas": 1,
+    "segundos": 4.3,
+    "costo_usd": 0.000826,
+    "input_tokens": 20465,
+    "cache_leidos": 18579,
+    "output_tokens": 809
+  },
+  "V02.3": {
+    "consulta": "¿Dónde está cada versión?",
+    "texto": "MICOSTOP 1 % CREMA (AN-1133): la versión de 20 G está en la lista de precios de octubre, página 1 del PDF Lista_de_precios_octubre_2026.pdf (dice «Crema x 20 gr»). La versión de 30 G está en la actualización de precios, hoja Actualización, fila 6 del Excel Actualizacion_precios_Andes.xlsx (dice «Crema x 30 g»). FEBRIL 500 MG COMPRIMIDOS (AN-1136): la versión de 20 UN está en la lista de octubre, página 1 del PDF (dice «Comp. rec. x 20»). La versión de 30 UN está en la actualización de precios, hoja Actualización, fila 5 del Excel (dice «Comprimidos x 30»).",
+    "valor": null,
+    "items": [
+      "P01:AN-1133",
+      "P01:AN-1136"
+    ],
+    "fuentes": [
+      {
+        "archivo": "Lista_de_precios_octubre_2026.pdf",
+        "pagina": 1
+      },
+      {
+        "archivo": "Actualizacion_precios_Andes.xlsx",
+        "hoja": "Actualización",
+        "fila": 6
+      },
+      {
+        "archivo": "Actualizacion_precios_Andes.xlsx",
+        "hoja": "Actualización",
+        "fila": 5
+      }
+    ],
+    "esta_en_lo_generado": true,
+    "avisos": [],
+    "reintentos": 0,
+    "vueltas": 1,
+    "segundos": 3.9,
+    "costo_usd": 0.000757,
+    "input_tokens": 21290,
+    "cache_leidos": 20461,
+    "output_tokens": 898
+  }
+}
