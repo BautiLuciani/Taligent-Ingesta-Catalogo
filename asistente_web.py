@@ -159,7 +159,8 @@ def respuesta_para_pantalla(resultado: dict, fichas_por_id: dict) -> dict:
         "items": items,
         "fuentes": [f for f in (fuente_para_pantalla(x) for x in resultado.get("fuentes") or []) if f],
         "avisos": resultado.get("avisos") or [],
-        "meta": f"Contestó en {segundos:.1f} segundos y costó US$ {costo:.3f}".replace(".", ","),
+        "meta": (f"Contestó en {segundos:.1f} segundos y costó "
+                 + (f"US$ {costo:.3f}" if costo >= 0.0005 else "menos de US$ 0.001")).replace(".", ","),
         "segundos": segundos, "costo_usd": costo,
     }
 
