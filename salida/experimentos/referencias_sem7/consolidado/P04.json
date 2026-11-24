@@ -1,0 +1,705 @@
+{
+  "proveedor_id": "P04",
+  "filas": [
+    {
+      "item_id": "P04:HT40003",
+      "fuente": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 2
+      },
+      "original": {
+        "Descripcion": "ESPUMA DE AFEITAR FILO MENTOL",
+        "Cont.": 300,
+        "UM": "cc",
+        "EAN13": "7796370729803",
+        "Costo": 135.92
+      },
+      "calculado": {
+        "gtin": "7796370729803",
+        "motivo_gtin": null,
+        "descripcion_expandida": "ESPUMA DE AFEITAR FILO MENTOL",
+        "contenido": 300,
+        "unidad": "ML",
+        "precio_costo": 135.92,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P04:HT40006",
+      "fuente": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 3
+      },
+      "original": {
+        "Descripcion": "GEL DE DUCHA PUREZA HIDRATANTE",
+        "Cont.": 1,
+        "UM": "Lts",
+        "EAN13": "7797758531421",
+        "Costo": 137.23
+      },
+      "calculado": {
+        "gtin": "7797758531421",
+        "motivo_gtin": null,
+        "descripcion_expandida": "GEL DE DUCHA PUREZA HIDRATANTE",
+        "contenido": 1000,
+        "unidad": "ML",
+        "precio_costo": 137.23,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P04:HT40084",
+      "fuente": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 4
+      },
+      "original": {
+        "Descripcion": "Shampoo Aquaviva Bebe",
+        "Cont.": 200,
+        "UM": "cc",
+        "EAN13": null,
+        "Costo": 94.34
+      },
+      "calculado": {
+        "gtin": null,
+        "motivo_gtin": "gtin_faltante",
+        "descripcion_expandida": "SHAMPOO AQUAVIVA BEBE",
+        "contenido": 200,
+        "unidad": "ML",
+        "precio_costo": 94.34,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P04:HT40009",
+      "fuente": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 5
+      },
+      "original": {
+        "Descripcion": "GEL DE DUCHA AQUAVIVA COCO",
+        "Cont.": 1000,
+        "UM": "ml.",
+        "EAN13": "7796251060483",
+        "Costo": 165.27
+      },
+      "calculado": {
+        "gtin": "7796251060483",
+        "motivo_gtin": null,
+        "descripcion_expandida": "GEL DE DUCHA AQUAVIVA COCO",
+        "contenido": 1000,
+        "unidad": "ML",
+        "precio_costo": 165.27,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P04:HT40012",
+      "fuente": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 6
+      },
+      "original": {
+        "Descripcion": "Gel De Ducha Aquaviva Avena",
+        "Cont.": 400,
+        "UM": "ml.",
+        "EAN13": "7790987175794",
+        "Costo": 80.36
+      },
+      "calculado": {
+        "gtin": "7790987175794",
+        "motivo_gtin": null,
+        "descripcion_expandida": "GEL DE DUCHA AQUAVIVA AVENA",
+        "contenido": 400,
+        "unidad": "ML",
+        "precio_costo": 80.36,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P04:HT40015",
+      "fuente": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 7
+      },
+      "original": {
+        "Descripcion": "Gel De Ducha Aquaviva Hidratante",
+        "Cont.": 400,
+        "UM": "ml.",
+        "EAN13": "7798125295830",
+        "Costo": 81.26
+      },
+      "calculado": {
+        "gtin": "7798125295830",
+        "motivo_gtin": null,
+        "descripcion_expandida": "GEL DE DUCHA AQUAVIVA HIDRATANTE",
+        "contenido": 400,
+        "unidad": "ML",
+        "precio_costo": 81.26,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P04:HT40018",
+      "fuente": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 8
+      },
+      "original": {
+        "Descripcion": "Jabon Intimo Aquaviva Neutro",
+        "Cont.": 200,
+        "UM": "ML",
+        "EAN13": "7790002613935",
+        "Costo": 120.21
+      },
+      "calculado": {
+        "gtin": "7790002613935",
+        "motivo_gtin": null,
+        "descripcion_expandida": "JABON INTIMO AQUAVIVA NEUTRO",
+        "contenido": 200,
+        "unidad": "ML",
+        "precio_costo": 120.21,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P04:HT40021",
+      "fuente": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 9
+      },
+      "original": {
+        "Descripcion": "ESPUMA DE AFEITAR FILO PIEL SENSIBLE",
+        "Cont.": 300,
+        "UM": "ml.",
+        "EAN13": "7795697680668",
+        "Costo": 134.36
+      },
+      "calculado": {
+        "gtin": "7795697680668",
+        "motivo_gtin": null,
+        "descripcion_expandida": "ESPUMA DE AFEITAR FILO PIEL SENSIBLE",
+        "contenido": 300,
+        "unidad": "ML",
+        "precio_costo": 134.36,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P04:HT40024",
+      "fuente": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 10
+      },
+      "original": {
+        "Descripcion": "JABON INTIMO AQUAVIVA NEUTRO",
+        "Cont.": 400,
+        "UM": "ML",
+        "EAN13": "7792665528410",
+        "Costo": 187.76
+      },
+      "calculado": {
+        "gtin": "7792665528410",
+        "motivo_gtin": null,
+        "descripcion_expandida": "JABON INTIMO AQUAVIVA NEUTRO",
+        "contenido": 400,
+        "unidad": "ML",
+        "precio_costo": 187.76,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P04:HT40027",
+      "fuente": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 11
+      },
+      "original": {
+        "Descripcion": "Gel De Ducha Aquaviva Hidratante",
+        "Cont.": 1000,
+        "UM": "cc",
+        "EAN13": "7799984089141",
+        "Costo": 149.16
+      },
+      "calculado": {
+        "gtin": "7799984089141",
+        "motivo_gtin": null,
+        "descripcion_expandida": "GEL DE DUCHA AQUAVIVA HIDRATANTE",
+        "contenido": 1000,
+        "unidad": "ML",
+        "precio_costo": 149.16,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P04:HT40030",
+      "fuente": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 12
+      },
+      "original": {
+        "Descripcion": "Gel De Ducha Pureza Hidratante",
+        "Cont.": 400,
+        "UM": "ml.",
+        "EAN13": "7794561447222",
+        "Costo": 77.62
+      },
+      "calculado": {
+        "gtin": "7794561447222",
+        "motivo_gtin": null,
+        "descripcion_expandida": "GEL DE DUCHA PUREZA HIDRATANTE",
+        "contenido": 400,
+        "unidad": "ML",
+        "precio_costo": 77.62,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P04:HT40033",
+      "fuente": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 13
+      },
+      "original": {
+        "Descripcion": "TOALLITAS HUMEDAS AQUAVIVA ALOE",
+        "Cont.": 80,
+        "UM": "Un",
+        "EAN13": null,
+        "Costo": 92.36
+      },
+      "calculado": {
+        "gtin": null,
+        "motivo_gtin": "gtin_faltante",
+        "descripcion_expandida": "TOALLITAS HUMEDAS AQUAVIVA ALOE",
+        "contenido": 80,
+        "unidad": "UN",
+        "precio_costo": 92.36,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P04:HT40036",
+      "fuente": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 14
+      },
+      "original": {
+        "Descripcion": "Gel De Ducha Pureza Coco",
+        "Cont.": 1000,
+        "UM": "cc",
+        "EAN13": "7790316942707",
+        "Costo": 153.24
+      },
+      "calculado": {
+        "gtin": "7790316942707",
+        "motivo_gtin": null,
+        "descripcion_expandida": "GEL DE DUCHA PUREZA COCO",
+        "contenido": 1000,
+        "unidad": "ML",
+        "precio_costo": 153.24,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P04:HT40039",
+      "fuente": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 15
+      },
+      "original": {
+        "Descripcion": "SHAMPOO AQUAVIVA BEBE",
+        "Cont.": 400,
+        "UM": "ml.",
+        "EAN13": "7797825499241",
+        "Costo": 144.64
+      },
+      "calculado": {
+        "gtin": "7797825499241",
+        "motivo_gtin": null,
+        "descripcion_expandida": "SHAMPOO AQUAVIVA BEBE",
+        "contenido": 400,
+        "unidad": "ML",
+        "precio_costo": 144.64,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P04:HT40042",
+      "fuente": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 16
+      },
+      "original": {
+        "Descripcion": "Gel De Ducha Pureza Coco",
+        "Cont.": 400,
+        "UM": "ML",
+        "EAN13": "7795817779319",
+        "Costo": 84.1
+      },
+      "calculado": {
+        "gtin": "7795817779319",
+        "motivo_gtin": null,
+        "descripcion_expandida": "GEL DE DUCHA PUREZA COCO",
+        "contenido": 400,
+        "unidad": "ML",
+        "precio_costo": 84.1,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P04:HT40045",
+      "fuente": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 17
+      },
+      "original": {
+        "Descripcion": "GEL DE DUCHA PUREZA AVENA",
+        "Cont.": 750,
+        "UM": "cc",
+        "EAN13": null,
+        "Costo": 119.63
+      },
+      "calculado": {
+        "gtin": null,
+        "motivo_gtin": "gtin_faltante",
+        "descripcion_expandida": "GEL DE DUCHA PUREZA AVENA",
+        "contenido": 750,
+        "unidad": "ML",
+        "precio_costo": 119.63,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P04:HT40048",
+      "fuente": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 18
+      },
+      "original": {
+        "Descripcion": "GEL DE DUCHA PUREZA AVENA",
+        "Cont.": 1,
+        "UM": "Lts",
+        "EAN13": "7795320460353",
+        "Costo": 160.39
+      },
+      "calculado": {
+        "gtin": "7795320460353",
+        "motivo_gtin": null,
+        "descripcion_expandida": "GEL DE DUCHA PUREZA AVENA",
+        "contenido": 1000,
+        "unidad": "ML",
+        "precio_costo": 160.39,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P04:HT40051",
+      "fuente": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 19
+      },
+      "original": {
+        "Descripcion": "Gel De Ducha Pureza Hidratante",
+        "Cont.": 750,
+        "UM": "ML",
+        "EAN13": "7799485518485",
+        "Costo": 116.92
+      },
+      "calculado": {
+        "gtin": "7799485518485",
+        "motivo_gtin": null,
+        "descripcion_expandida": "GEL DE DUCHA PUREZA HIDRATANTE",
+        "contenido": 750,
+        "unidad": "ML",
+        "precio_costo": 116.92,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P04:HT40054",
+      "fuente": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 20
+      },
+      "original": {
+        "Descripcion": "GEL DE DUCHA AQUAVIVA COCO",
+        "Cont.": 400,
+        "UM": "cc",
+        "EAN13": "7796018158446",
+        "Costo": 84.83
+      },
+      "calculado": {
+        "gtin": "7796018158446",
+        "motivo_gtin": null,
+        "descripcion_expandida": "GEL DE DUCHA AQUAVIVA COCO",
+        "contenido": 400,
+        "unidad": "ML",
+        "precio_costo": 84.83,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P04:HT40057",
+      "fuente": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 21
+      },
+      "original": {
+        "Descripcion": "Gel De Ducha Pureza Coco",
+        "Cont.": 750,
+        "UM": "cc",
+        "EAN13": "7790965488168",
+        "Costo": 123.54
+      },
+      "calculado": {
+        "gtin": "7790965488168",
+        "motivo_gtin": null,
+        "descripcion_expandida": "GEL DE DUCHA PUREZA COCO",
+        "contenido": 750,
+        "unidad": "ML",
+        "precio_costo": 123.54,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P04:HT40060",
+      "fuente": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 22
+      },
+      "original": {
+        "Descripcion": "Gel De Ducha Aquaviva Avena",
+        "Cont.": 750,
+        "UM": "ML",
+        "EAN13": "7795788466911",
+        "Costo": 135.61
+      },
+      "calculado": {
+        "gtin": "7795788466911",
+        "motivo_gtin": null,
+        "descripcion_expandida": "GEL DE DUCHA AQUAVIVA AVENA",
+        "contenido": 750,
+        "unidad": "ML",
+        "precio_costo": 135.61,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P04:HT40063",
+      "fuente": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 23
+      },
+      "original": {
+        "Descripcion": "Desodorante Roll On Aquaviva Sin Perfume",
+        "Cont.": 50,
+        "UM": "cc",
+        "EAN13": null,
+        "Costo": 83.71
+      },
+      "calculado": {
+        "gtin": null,
+        "motivo_gtin": "gtin_faltante",
+        "descripcion_expandida": "DESODORANTE ROLL ON AQUAVIVA SIN PERFUME",
+        "contenido": 50,
+        "unidad": "ML",
+        "precio_costo": 83.71,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P04:HT40066",
+      "fuente": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 24
+      },
+      "original": {
+        "Descripcion": "Espuma De Afeitar Filo Mentol",
+        "Cont.": 200,
+        "UM": "ML",
+        "EAN13": "7792609650870",
+        "Costo": 98.58
+      },
+      "calculado": {
+        "gtin": "7792609650870",
+        "motivo_gtin": null,
+        "descripcion_expandida": "ESPUMA DE AFEITAR FILO MENTOL",
+        "contenido": 200,
+        "unidad": "ML",
+        "precio_costo": 98.58,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P04:HT40069",
+      "fuente": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 25
+      },
+      "original": {
+        "Descripcion": "SHAMPOO AQUAVIVA BEBE MANZANILLA",
+        "Cont.": 200,
+        "UM": "ml.",
+        "EAN13": "7796640214909",
+        "Costo": 98.81
+      },
+      "calculado": {
+        "gtin": "7796640214909",
+        "motivo_gtin": null,
+        "descripcion_expandida": "SHAMPOO AQUAVIVA BEBE MANZANILLA",
+        "contenido": 200,
+        "unidad": "ML",
+        "precio_costo": 98.81,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P04:HT40072",
+      "fuente": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 26
+      },
+      "original": {
+        "Descripcion": "Gel De Ducha Aquaviva Avena",
+        "Cont.": 1000,
+        "UM": "ml.",
+        "EAN13": "7798403125217",
+        "Costo": 158.99
+      },
+      "calculado": {
+        "gtin": "7798403125217",
+        "motivo_gtin": null,
+        "descripcion_expandida": "GEL DE DUCHA AQUAVIVA AVENA",
+        "contenido": 1000,
+        "unidad": "ML",
+        "precio_costo": 158.99,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P04:HT40081",
+      "fuente": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 27
+      },
+      "original": {
+        "Descripcion": "Desodorante Roll On Aquaviva Mujer",
+        "Cont.": 50,
+        "UM": "ML",
+        "EAN13": null,
+        "Costo": 85.86
+      },
+      "calculado": {
+        "gtin": null,
+        "motivo_gtin": "gtin_faltante",
+        "descripcion_expandida": "DESODORANTE ROLL ON AQUAVIVA MUJER",
+        "contenido": 50,
+        "unidad": "ML",
+        "precio_costo": 85.86,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P04:HT40075",
+      "fuente": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 28
+      },
+      "original": {
+        "Descripcion": "TOALLITAS HUMEDAS AQUAVIVA SIN PERFUME",
+        "Cont.": 50,
+        "UM": "unid",
+        "EAN13": "7792719267425",
+        "Costo": 69.36
+      },
+      "calculado": {
+        "gtin": "7792719267425",
+        "motivo_gtin": null,
+        "descripcion_expandida": "TOALLITAS HUMEDAS AQUAVIVA SIN PERFUME",
+        "contenido": 50,
+        "unidad": "UN",
+        "precio_costo": 69.36,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P04:HT40078",
+      "fuente": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 29
+      },
+      "original": {
+        "Descripcion": "GEL DE DUCHA AQUAVIVA HIDRATANTE",
+        "Cont.": 750,
+        "UM": "cc",
+        "EAN13": "7794182377663",
+        "Costo": 115.8
+      },
+      "calculado": {
+        "gtin": "7794182377663",
+        "motivo_gtin": null,
+        "descripcion_expandida": "GEL DE DUCHA AQUAVIVA HIDRATANTE",
+        "contenido": 750,
+        "unidad": "ML",
+        "precio_costo": 115.8,
+        "moneda": "UYU",
+        "fds": null
+      }
+    }
+  ]
+}

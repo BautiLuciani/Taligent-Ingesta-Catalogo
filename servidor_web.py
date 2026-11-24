@@ -27,6 +27,7 @@ from starlette.responses import FileResponse, HTMLResponse, JSONResponse, PlainT
 from starlette.routing import Mount, Route
 from starlette.staticfiles import StaticFiles
 
+import para_revisar
 import presentacion
 import subir_lista
 
@@ -35,8 +36,13 @@ CARPETA_WEB = CARPETA_PROYECTO / "web"
 # La misma variable que usa servidor_mcp.py: las pruebas la apuntan a una copia congelada.
 CARPETA_SALIDA = Path(os.getenv("INGESTA_CARPETA_SALIDA", CARPETA_PROYECTO / "salida"))
 RUTA_RESULTADOS = CARPETA_SALIDA / "resultados.json"
-# Los archivos originales de los proveedores (solo lectura): se pueden abrir desde la fuente de cada dato
+# Los archivos originales de los proveedores y el catálogo actual (solo lectura): se abren desde la fuente de cada dato
 CARPETA_ARCHIVOS = CARPETA_PROYECTO / "Data" / "proveedores"
+CARPETA_CATALOGO = CARPETA_PROYECTO / "Data" / "catalogo"
+# Lo que vieron los fichadores (para la evidencia de Para revisar) y las decisiones de las personas. Cada uno con su
+# variable: las pruebas los apuntan a copias congeladas o temporales (las decisiones nunca se escriben en una referencia).
+CARPETA_CONSOLIDADO = Path(os.getenv("INGESTA_CARPETA_CONSOLIDADO", CARPETA_SALIDA / "consolidado"))
+RUTA_DECISIONES = Path(os.getenv("INGESTA_RUTA_DECISIONES", CARPETA_PROYECTO / "salida" / "decisiones.json"))
 
 # Las 5 pantallas: dirección -> (archivo de web/paginas, título de la pestaña, texto del menú, ícono)
 PANTALLAS = {
@@ -51,6 +57,7 @@ PANTALLAS = {
 RECURSOS = {
     "/": (["/web/subir.css"], ["/web/ceibo.js", "/web/subir.js"]),
     "/fichas": (["/web/fichas.css"], ["/web/ceibo.js", "/web/fichas.js"]),
+    "/revision": (["/web/revision.css"], ["/web/ceibo.js", "/web/revision.js"]),
 }
 TOPE_DE_SUBIDA = 30 * 1024 * 1024  # 30 MB por archivo: una lista de precios pesa mucho menos
 
@@ -232,11 +239,39 @@ async def api_corrida_de_ejemplo(request):
     return JSONResponse(ejemplo)
 
 
+def datos_de_revision() -> dict:
+    return para_revisar.productos_para_revisar(
+        leer_resultados(), para_revisar.leer_consolidados(CARPETA_CONSOLIDADO), para_revisar.leer_catalogo(),
+        presentacion.leer_proveedores(), para_revisar.leer_decisiones(RUTA_DECISIONES), CARPETA_SALIDA / "pedidos")
+
+
+async def api_revision(request):
+    """Los productos para revisar, agrupados por motivo, con su evidencia, el pedido y la decisión si ya hay una."""
+    return JSONResponse(datos_de_revision())
+
+
+async def api_decidir(request):
+    """Anota la decisión de la persona sobre un producto (o la borra, con decision null). No toca la ficha."""
+    try:
+        pedido = await request.json()
+        item_id, clave = str(pedido["item"]), pedido.get("decision")
+    except (ValueError, KeyError, TypeError, AttributeError):
+        return JSONResponse({"error": "Hacen falta el producto (item) y la decisión."}, status_code=400)
+    producto = next((p for g in datos_de_revision()["grupos"] for p in g["productos"] if p["id"] == item_id), None)
+    if producto is None:
+        return JSONResponse({"error": "Ese producto no está para revisar."}, status_code=404)
+    try:
+        decision = para_revisar.guardar_decision(RUTA_DECISIONES, item_id, None if clave is None else str(clave), producto["opciones"])
+    except ValueError as error:
+        return JSONResponse({"error": str(error)}, status_code=400)
+    return JSONResponse({"item": item_id, "decision": decision})
+
+
 def indice_de_archivos(carpeta: Path | None = None) -> dict[str, Path]:
-    """Nombre -> ruta de cada archivo original de los proveedores. Solo se sirve lo que está en este índice: desde el
-    navegador no se puede pedir ninguna otra ruta del proyecto."""
-    carpeta = carpeta or CARPETA_ARCHIVOS
-    return {ruta.name: ruta for ruta in sorted(carpeta.rglob("*"))
+    """Nombre -> ruta de cada archivo original de los proveedores (y del catálogo actual). Solo se sirve lo que está en
+    este índice: desde el navegador no se puede pedir ninguna otra ruta del proyecto."""
+    carpetas = [carpeta] if carpeta else [CARPETA_ARCHIVOS, CARPETA_CATALOGO]
+    return {ruta.name: ruta for c in carpetas for ruta in sorted(c.rglob("*"))
             if ruta.is_file() and ruta.name != "proveedores.csv" and not ruta.name.startswith("~$")}
 
 
@@ -246,7 +281,7 @@ async def archivo_original(request):
     if ruta is None:
         return PlainTextResponse("Ese archivo no está entre los de los proveedores.", status_code=404)
     tipo = mimetypes.guess_type(ruta.name)[0] or "application/octet-stream"
-    if ruta.suffix.lower() == ".txt":
+    if ruta.suffix.lower() in (".txt", ".csv"):  # el mail y las planillas CSV se leen en el navegador, con sus acentos
         tipo = "text/plain; charset=utf-8"
     en_el_navegador = ruta.suffix.lower() in (".pdf", ".txt", ".csv")
     return FileResponse(ruta, media_type=tipo, filename=ruta.name,
@@ -262,6 +297,8 @@ def crear_app() -> Starlette:
         Route("/api/corridas", api_empezar, methods=["POST"]),
         Route("/api/corridas/{id:str}", api_corrida),
         Route("/api/corrida_de_ejemplo", api_corrida_de_ejemplo),
+        Route("/api/revision", api_revision),
+        Route("/api/decisiones", api_decidir, methods=["POST"]),
         Route("/api/fichas", api_fichas),
         Route("/api/fichas/excel", api_fichas_excel, methods=["POST"]),
         Route("/archivos/{nombre:str}", archivo_original),

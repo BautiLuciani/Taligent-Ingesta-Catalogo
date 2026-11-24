@@ -1,0 +1,1285 @@
+{
+  "proveedor_id": "P02",
+  "filas": [
+    {
+      "item_id": "P02:RIV-1203",
+      "fuente": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 7
+      },
+      "original": {
+        "DESCRIPCION": "ACOND. NATIVA LISO X 200 ML",
+        "EAN": "7793092189062",
+        "P. COSTO": 104.24,
+        "OBS": null
+      },
+      "calculado": {
+        "gtin": null,
+        "motivo_gtin": "gtin_invalido",
+        "descripcion_expandida": "ACONDICIONADOR NATIVA LISO X 200 ML",
+        "contenido": 200,
+        "unidad": "ML",
+        "precio_costo": 104.24,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P02:RIV-1206",
+      "fuente": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 8
+      },
+      "original": {
+        "DESCRIPCION": "ACONDICIONADOR BRISA COLOR 400 CC",
+        "EAN": "779-7137-44403-8",
+        "P. COSTO": 147.76,
+        "OBS": null
+      },
+      "calculado": {
+        "gtin": "7797137444038",
+        "motivo_gtin": null,
+        "descripcion_expandida": "ACONDICIONADOR BRISA COLOR 400 CC",
+        "contenido": 400,
+        "unidad": "ML",
+        "precio_costo": 147.76,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P02:RIV-1215",
+      "fuente": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 9
+      },
+      "original": {
+        "DESCRIPCION": "SH. NATIVA COLOR 750cc",
+        "EAN": "7794047919526",
+        "P. COSTO": 228.04,
+        "OBS": null
+      },
+      "calculado": {
+        "gtin": "7794047919526",
+        "motivo_gtin": null,
+        "descripcion_expandida": "SHAMPOO NATIVA COLOR 750CC",
+        "contenido": 750,
+        "unidad": "ML",
+        "precio_costo": 228.04,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P02:RIV-1218",
+      "fuente": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 10
+      },
+      "original": {
+        "DESCRIPCION": "LACA BRISA FIJ. FUERTE 400ML",
+        "EAN": "7795881296972",
+        "P. COSTO": 207.35,
+        "OBS": "PACK PROMO CON NECESER"
+      },
+      "calculado": {
+        "gtin": "7795881296972",
+        "motivo_gtin": null,
+        "descripcion_expandida": "LACA BRISA FIJACION FUERTE 400ML",
+        "contenido": 400,
+        "unidad": "ML",
+        "precio_costo": 207.35,
+        "moneda": "UYU",
+        "fds": {
+          "peligro_deposito": "aerosol_inflamable",
+          "numero_onu": "1950",
+          "fuente": {
+            "archivo": "FDS_Brisa_laca.pdf",
+            "pagina": 1
+          },
+          "problemas": []
+        }
+      }
+    },
+    {
+      "item_id": "P02:RIV-1221",
+      "fuente": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 11
+      },
+      "original": {
+        "DESCRIPCION": "ACONDICIONADOR ALBORADA RIZOS 200cc",
+        "EAN": "7798224690956",
+        "P. COSTO": 97.39,
+        "OBS": null
+      },
+      "calculado": {
+        "gtin": "7798224690956",
+        "motivo_gtin": null,
+        "descripcion_expandida": "ACONDICIONADOR ALBORADA RIZOS 200CC",
+        "contenido": 200,
+        "unidad": "ML",
+        "precio_costo": 97.39,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P02:RIV-1224",
+      "fuente": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 12
+      },
+      "original": {
+        "DESCRIPCION": "ACOND. NATIVA RIZOS 750 CC",
+        "EAN": "779-6508-19801-3",
+        "P. COSTO": 259.48,
+        "OBS": null
+      },
+      "calculado": {
+        "gtin": "7796508198013",
+        "motivo_gtin": null,
+        "descripcion_expandida": "ACONDICIONADOR NATIVA RIZOS 750 CC",
+        "contenido": 750,
+        "unidad": "ML",
+        "precio_costo": 259.48,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P02:RIV-1227",
+      "fuente": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 13
+      },
+      "original": {
+        "DESCRIPCION": "SHAMPOO NATIVA COLOR 200 ML",
+        "EAN": "7799181018920",
+        "P. COSTO": 98.26,
+        "OBS": null
+      },
+      "calculado": {
+        "gtin": "7799181018920",
+        "motivo_gtin": null,
+        "descripcion_expandida": "SHAMPOO NATIVA COLOR 200 ML",
+        "contenido": 200,
+        "unidad": "ML",
+        "precio_costo": 98.26,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P02:RIV-1230",
+      "fuente": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 14
+      },
+      "original": {
+        "DESCRIPCION": "ACONDICIONADOR NATIVA CABELLO SECO X 200 ML",
+        "EAN": "7791396383145",
+        "P. COSTO": 86.6,
+        "OBS": null
+      },
+      "calculado": {
+        "gtin": "7791396383145",
+        "motivo_gtin": null,
+        "descripcion_expandida": "ACONDICIONADOR NATIVA CABELLO SECO X 200 ML",
+        "contenido": 200,
+        "unidad": "ML",
+        "precio_costo": 86.6,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P02:RIV-1233",
+      "fuente": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 15
+      },
+      "original": {
+        "DESCRIPCION": "TRAT. CAP. ALBORADA REP/CION 250 GRS",
+        "EAN": "7798764197571",
+        "P. COSTO": 151.1,
+        "OBS": "NUEVO AROMA"
+      },
+      "calculado": {
+        "gtin": "7798764197571",
+        "motivo_gtin": null,
+        "descripcion_expandida": "TRATAMIENTO CAPILAR ALBORADA REP/CION 250 GRS",
+        "contenido": 250,
+        "unidad": "G",
+        "precio_costo": 151.1,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P02:RIV-1236",
+      "fuente": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 16
+      },
+      "original": {
+        "DESCRIPCION": "ACOND. ALBORADA LISO 400ML",
+        "EAN": "7795113452930",
+        "P. COSTO": 149.05,
+        "OBS": null
+      },
+      "calculado": {
+        "gtin": "7795113452930",
+        "motivo_gtin": null,
+        "descripcion_expandida": "ACONDICIONADOR ALBORADA LISO 400ML",
+        "contenido": 400,
+        "unidad": "ML",
+        "precio_costo": 149.05,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P02:RIV-1239",
+      "fuente": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 17
+      },
+      "original": {
+        "DESCRIPCION": "SH. ALBORADA CAB. SECO 750ML",
+        "EAN": "779-9517-84523-7",
+        "P. COSTO": 224.46,
+        "OBS": null
+      },
+      "calculado": {
+        "gtin": "7799517845237",
+        "motivo_gtin": null,
+        "descripcion_expandida": "SHAMPOO ALBORADA CABELLO SECO 750ML",
+        "contenido": 750,
+        "unidad": "ML",
+        "precio_costo": 224.46,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P02:RIV-1242",
+      "fuente": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 18
+      },
+      "original": {
+        "DESCRIPCION": "ACOND. NATIVA LISO 400cc",
+        "EAN": "7790770756711",
+        "P. COSTO": 145.87,
+        "OBS": null
+      },
+      "calculado": {
+        "gtin": "7790770756711",
+        "motivo_gtin": null,
+        "descripcion_expandida": "ACONDICIONADOR NATIVA LISO 400CC",
+        "contenido": 400,
+        "unidad": "ML",
+        "precio_costo": 145.87,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P02:RIV-1245",
+      "fuente": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 19
+      },
+      "original": {
+        "DESCRIPCION": "ACOND. BRISA RIZOS X 400 ML",
+        "EAN": "7793315341342",
+        "P. COSTO": 140.31,
+        "OBS": null
+      },
+      "calculado": {
+        "gtin": "7793315341342",
+        "motivo_gtin": null,
+        "descripcion_expandida": "ACONDICIONADOR BRISA RIZOS X 400 ML",
+        "contenido": 400,
+        "unidad": "ML",
+        "precio_costo": 140.31,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P02:RIV-1251",
+      "fuente": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 20
+      },
+      "original": {
+        "DESCRIPCION": "SH. NATIVA RIZOS 750cc",
+        "EAN": "7795601362468",
+        "P. COSTO": 222.53,
+        "OBS": null
+      },
+      "calculado": {
+        "gtin": "7795601362468",
+        "motivo_gtin": null,
+        "descripcion_expandida": "SHAMPOO NATIVA RIZOS 750CC",
+        "contenido": 750,
+        "unidad": "ML",
+        "precio_costo": 222.53,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P02:RIV-1254",
+      "fuente": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 21
+      },
+      "original": {
+        "DESCRIPCION": "ACOND. NATIVA COLOR 750 CC",
+        "EAN": "7796999557627",
+        "P. COSTO": 260.83,
+        "OBS": null
+      },
+      "calculado": {
+        "gtin": "7796999557627",
+        "motivo_gtin": null,
+        "descripcion_expandida": "ACONDICIONADOR NATIVA COLOR 750 CC",
+        "contenido": 750,
+        "unidad": "ML",
+        "precio_costo": 260.83,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P02:RIV-1257",
+      "fuente": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 22
+      },
+      "original": {
+        "DESCRIPCION": "SH. BRISA ANTICASPA X 400 ML",
+        "EAN": "7794327626397",
+        "P. COSTO": 150.02,
+        "OBS": null
+      },
+      "calculado": {
+        "gtin": "7794327626397",
+        "motivo_gtin": null,
+        "descripcion_expandida": "SHAMPOO BRISA ANTICASPA X 400 ML",
+        "contenido": 400,
+        "unidad": "ML",
+        "precio_costo": 150.02,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P02:RIV-1260",
+      "fuente": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 23
+      },
+      "original": {
+        "DESCRIPCION": "SH. ALBORADA ANTICASPA 400cc",
+        "EAN": "7792602887266",
+        "P. COSTO": 163.53,
+        "OBS": null
+      },
+      "calculado": {
+        "gtin": "7792602887266",
+        "motivo_gtin": null,
+        "descripcion_expandida": "SHAMPOO ALBORADA ANTICASPA 400CC",
+        "contenido": 400,
+        "unidad": "ML",
+        "precio_costo": 163.53,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P02:RIV-1263",
+      "fuente": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 24
+      },
+      "original": {
+        "DESCRIPCION": "ACOND. ALBORADA COLOR 750 ML",
+        "EAN": "779-0648-88969-5",
+        "P. COSTO": 240.91,
+        "OBS": null
+      },
+      "calculado": {
+        "gtin": "7790648889695",
+        "motivo_gtin": null,
+        "descripcion_expandida": "ACONDICIONADOR ALBORADA COLOR 750 ML",
+        "contenido": 750,
+        "unidad": "ML",
+        "precio_costo": 240.91,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P02:RIV-1266",
+      "fuente": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 25
+      },
+      "original": {
+        "DESCRIPCION": "LACA BRISA FIJACION FUERTE X 200 ML",
+        "EAN": "7793662132327",
+        "P. COSTO": 130.72,
+        "OBS": "PROMO: LLEVA 2 PAGA 1 HASTA 31/10"
+      },
+      "calculado": {
+        "gtin": "7793662132327",
+        "motivo_gtin": null,
+        "descripcion_expandida": "LACA BRISA FIJACION FUERTE X 200 ML",
+        "contenido": 200,
+        "unidad": "ML",
+        "precio_costo": 130.72,
+        "moneda": "UYU",
+        "fds": {
+          "peligro_deposito": "aerosol_inflamable",
+          "numero_onu": "1950",
+          "fuente": {
+            "archivo": "FDS_Brisa_laca.pdf",
+            "pagina": 1
+          },
+          "problemas": []
+        }
+      }
+    },
+    {
+      "item_id": "P02:RIV-1269",
+      "fuente": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 26
+      },
+      "original": {
+        "DESCRIPCION": "ACOND. NATIVA COLOR 200ML",
+        "EAN": "779-8168-60028-8",
+        "P. COSTO": 102.56,
+        "OBS": null
+      },
+      "calculado": {
+        "gtin": "7798168600288",
+        "motivo_gtin": null,
+        "descripcion_expandida": "ACONDICIONADOR NATIVA COLOR 200ML",
+        "contenido": 200,
+        "unidad": "ML",
+        "precio_costo": 102.56,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P02:RIV-1272",
+      "fuente": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 27
+      },
+      "original": {
+        "DESCRIPCION": "TRAT. CAP. ALBORADA REP/CION 500 GR",
+        "EAN": "7799572038346",
+        "P. COSTO": 213.92,
+        "OBS": null
+      },
+      "calculado": {
+        "gtin": "7799572038346",
+        "motivo_gtin": null,
+        "descripcion_expandida": "TRATAMIENTO CAPILAR ALBORADA REP/CION 500 GR",
+        "contenido": 500,
+        "unidad": "G",
+        "precio_costo": 213.92,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P02:RIV-1275",
+      "fuente": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 28
+      },
+      "original": {
+        "DESCRIPCION": "TRAT. CAP. ALBORADA NUTRICION 0,5 KG",
+        "EAN": "7798610293297",
+        "P. COSTO": 244.02,
+        "OBS": null
+      },
+      "calculado": {
+        "gtin": "7798610293297",
+        "motivo_gtin": null,
+        "descripcion_expandida": "TRATAMIENTO CAPILAR ALBORADA NUTRICION 0,5 KG",
+        "contenido": 500,
+        "unidad": "G",
+        "precio_costo": 244.02,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P02:RIV-1278",
+      "fuente": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 29
+      },
+      "original": {
+        "DESCRIPCION": "SH. NATIVA CABELLO SECO X 400 ML",
+        "EAN": "7794517445487",
+        "P. COSTO": 163.24,
+        "OBS": null
+      },
+      "calculado": {
+        "gtin": "7794517445487",
+        "motivo_gtin": null,
+        "descripcion_expandida": "SHAMPOO NATIVA CABELLO SECO X 400 ML",
+        "contenido": 400,
+        "unidad": "ML",
+        "precio_costo": 163.24,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P02:RIV-1281",
+      "fuente": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 30
+      },
+      "original": {
+        "DESCRIPCION": "SH. BRISA RIZOS 750cc",
+        "EAN": "7792149966981",
+        "P. COSTO": 263.4,
+        "OBS": "PROMO: LLEVA 2 PAGA 1 HASTA 31/10"
+      },
+      "calculado": {
+        "gtin": "7792149966981",
+        "motivo_gtin": null,
+        "descripcion_expandida": "SHAMPOO BRISA RIZOS 750CC",
+        "contenido": 750,
+        "unidad": "ML",
+        "precio_costo": 263.4,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P02:RIV-1287",
+      "fuente": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 31
+      },
+      "original": {
+        "DESCRIPCION": "ACOND. BRISA CABELLO SECO 200 CC",
+        "EAN": "7792917530000",
+        "P. COSTO": 88.55,
+        "OBS": null
+      },
+      "calculado": {
+        "gtin": "7792917530000",
+        "motivo_gtin": null,
+        "descripcion_expandida": "ACONDICIONADOR BRISA CABELLO SECO 200 CC",
+        "contenido": 200,
+        "unidad": "ML",
+        "precio_costo": 88.55,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P02:RIV-1299",
+      "fuente": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 32
+      },
+      "original": {
+        "DESCRIPCION": "SH. BRISA ANTICASPA 750ML",
+        "EAN": "7799656985474",
+        "P. COSTO": 248.73,
+        "OBS": null
+      },
+      "calculado": {
+        "gtin": "7799656985474",
+        "motivo_gtin": null,
+        "descripcion_expandida": "SHAMPOO BRISA ANTICASPA 750ML",
+        "contenido": 750,
+        "unidad": "ML",
+        "precio_costo": 248.73,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P02:RIV-1302",
+      "fuente": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 33
+      },
+      "original": {
+        "DESCRIPCION": "ACOND. ALBORADA CAB. SECO 200ML",
+        "EAN": "779-5129-69466-9",
+        "P. COSTO": 103.8,
+        "OBS": null
+      },
+      "calculado": {
+        "gtin": "7795129694669",
+        "motivo_gtin": null,
+        "descripcion_expandida": "ACONDICIONADOR ALBORADA CABELLO SECO 200ML",
+        "contenido": 200,
+        "unidad": "ML",
+        "precio_costo": 103.8,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P02:RIV-1305",
+      "fuente": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 34
+      },
+      "original": {
+        "DESCRIPCION": "SH. BRISA CAB. SECO X 200 ML",
+        "EAN": "7796577461292",
+        "P. COSTO": 86.21,
+        "OBS": null
+      },
+      "calculado": {
+        "gtin": "7796577461292",
+        "motivo_gtin": null,
+        "descripcion_expandida": "SHAMPOO BRISA CABELLO SECO X 200 ML",
+        "contenido": 200,
+        "unidad": "ML",
+        "precio_costo": 86.21,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P02:RIV-1308",
+      "fuente": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 35
+      },
+      "original": {
+        "DESCRIPCION": "SH. ALBORADA ANTICASPA X 750 ML",
+        "EAN": "7795641615111",
+        "P. COSTO": 249,
+        "OBS": null
+      },
+      "calculado": {
+        "gtin": "7795641615111",
+        "motivo_gtin": null,
+        "descripcion_expandida": "SHAMPOO ALBORADA ANTICASPA X 750 ML",
+        "contenido": 750,
+        "unidad": "ML",
+        "precio_costo": 249.0,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P02:RIV-1311",
+      "fuente": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 36
+      },
+      "original": {
+        "DESCRIPCION": "TRAT. CAP. NATIVA REP/CION 250GR",
+        "EAN": "7790939889434",
+        "P. COSTO": 141.6,
+        "OBS": null
+      },
+      "calculado": {
+        "gtin": "7790939889434",
+        "motivo_gtin": null,
+        "descripcion_expandida": "TRATAMIENTO CAPILAR NATIVA REP/CION 250GR",
+        "contenido": 250,
+        "unidad": "G",
+        "precio_costo": 141.6,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P02:RIV-1314",
+      "fuente": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 37
+      },
+      "original": {
+        "DESCRIPCION": "SH. ALBORADA COLOR 750cc",
+        "EAN": "7793624320243",
+        "P. COSTO": 216.61,
+        "OBS": null
+      },
+      "calculado": {
+        "gtin": "7793624320243",
+        "motivo_gtin": null,
+        "descripcion_expandida": "SHAMPOO ALBORADA COLOR 750CC",
+        "contenido": 750,
+        "unidad": "ML",
+        "precio_costo": 216.61,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P02:RIV-1317",
+      "fuente": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 38
+      },
+      "original": {
+        "DESCRIPCION": "SH. BRISA CAB. GRASO 200cc",
+        "EAN": "779-6197-36389-1",
+        "P. COSTO": 90.58,
+        "OBS": null
+      },
+      "calculado": {
+        "gtin": "7796197363891",
+        "motivo_gtin": null,
+        "descripcion_expandida": "SHAMPOO BRISA CABELLO GRASO 200CC",
+        "contenido": 200,
+        "unidad": "ML",
+        "precio_costo": 90.58,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P02:RIV-1320",
+      "fuente": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 39
+      },
+      "original": {
+        "DESCRIPCION": "LACA BRISA FIJ. NORMAL X 200 ML",
+        "EAN": "7793988505690",
+        "P. COSTO": 115.32,
+        "OBS": null
+      },
+      "calculado": {
+        "gtin": "7793988505690",
+        "motivo_gtin": null,
+        "descripcion_expandida": "LACA BRISA FIJACION NORMAL X 200 ML",
+        "contenido": 200,
+        "unidad": "ML",
+        "precio_costo": 115.32,
+        "moneda": "UYU",
+        "fds": {
+          "peligro_deposito": "aerosol_inflamable",
+          "numero_onu": "1950",
+          "fuente": {
+            "archivo": "FDS_Brisa_laca.pdf",
+            "pagina": 1
+          },
+          "problemas": []
+        }
+      }
+    },
+    {
+      "item_id": "P02:RIV-1323",
+      "fuente": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 40
+      },
+      "original": {
+        "DESCRIPCION": "SH. NATIVA CABELLO GRASO 200 ML",
+        "EAN": "7796792062359",
+        "P. COSTO": 90.67,
+        "OBS": null
+      },
+      "calculado": {
+        "gtin": "7796792062359",
+        "motivo_gtin": null,
+        "descripcion_expandida": "SHAMPOO NATIVA CABELLO GRASO 200 ML",
+        "contenido": 200,
+        "unidad": "ML",
+        "precio_costo": 90.67,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P02:RIV-1326",
+      "fuente": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 41
+      },
+      "original": {
+        "DESCRIPCION": "ACOND. NATIVA CAB. SECO 750ML",
+        "EAN": "7795275662987",
+        "P. COSTO": 240.97,
+        "OBS": null
+      },
+      "calculado": {
+        "gtin": "7795275662987",
+        "motivo_gtin": null,
+        "descripcion_expandida": "ACONDICIONADOR NATIVA CABELLO SECO 750ML",
+        "contenido": 750,
+        "unidad": "ML",
+        "precio_costo": 240.97,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P02:RIV-1329",
+      "fuente": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 42
+      },
+      "original": {
+        "DESCRIPCION": "ACOND. BRISA LISO X 750 ML",
+        "EAN": "7794351465818",
+        "P. COSTO": 259.13,
+        "OBS": null
+      },
+      "calculado": {
+        "gtin": "7794351465818",
+        "motivo_gtin": null,
+        "descripcion_expandida": "ACONDICIONADOR BRISA LISO X 750 ML",
+        "contenido": 750,
+        "unidad": "ML",
+        "precio_costo": 259.13,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P02:RIV-1335",
+      "fuente": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 43
+      },
+      "original": {
+        "DESCRIPCION": "SH. NATIVA CAB. SECO 200 CC",
+        "EAN": "7798289615987",
+        "P. COSTO": 97.3,
+        "OBS": null
+      },
+      "calculado": {
+        "gtin": "7798289615987",
+        "motivo_gtin": null,
+        "descripcion_expandida": "SHAMPOO NATIVA CABELLO SECO 200 CC",
+        "contenido": 200,
+        "unidad": "ML",
+        "precio_costo": 97.3,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P02:RIV-1338",
+      "fuente": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 44
+      },
+      "original": {
+        "DESCRIPCION": "ACOND. BRISA CABELLO SECO 400cc",
+        "EAN": "7794585652466",
+        "P. COSTO": 151.98,
+        "OBS": null
+      },
+      "calculado": {
+        "gtin": "7794585652466",
+        "motivo_gtin": null,
+        "descripcion_expandida": "ACONDICIONADOR BRISA CABELLO SECO 400CC",
+        "contenido": 400,
+        "unidad": "ML",
+        "precio_costo": 151.98,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P02:RIV-1341",
+      "fuente": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 45
+      },
+      "original": {
+        "DESCRIPCION": "SH. NATIVA RIZOS 400 CC",
+        "EAN": "7791886910868",
+        "P. COSTO": 146.14,
+        "OBS": null
+      },
+      "calculado": {
+        "gtin": "7791886910868",
+        "motivo_gtin": null,
+        "descripcion_expandida": "SHAMPOO NATIVA RIZOS 400 CC",
+        "contenido": 400,
+        "unidad": "ML",
+        "precio_costo": 146.14,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P02:RIV-1344",
+      "fuente": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 46
+      },
+      "original": {
+        "DESCRIPCION": "SH. ALBORADA CABELLO GRASO 750cc",
+        "EAN": "779-0055-17222-9",
+        "P. COSTO": 219.47,
+        "OBS": null
+      },
+      "calculado": {
+        "gtin": "7790055172229",
+        "motivo_gtin": null,
+        "descripcion_expandida": "SHAMPOO ALBORADA CABELLO GRASO 750CC",
+        "contenido": 750,
+        "unidad": "ML",
+        "precio_costo": 219.47,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P02:RIV-1350",
+      "fuente": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 47
+      },
+      "original": {
+        "DESCRIPCION": "ACONDICIONADOR ALBORADA RIZOS 750cc",
+        "EAN": "779-0192-74135-7",
+        "P. COSTO": 236.17,
+        "OBS": null
+      },
+      "calculado": {
+        "gtin": "7790192741357",
+        "motivo_gtin": null,
+        "descripcion_expandida": "ACONDICIONADOR ALBORADA RIZOS 750CC",
+        "contenido": 750,
+        "unidad": "ML",
+        "precio_costo": 236.17,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P02:RIV-1209",
+      "fuente": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 49
+      },
+      "original": {
+        "DESCRIPCION": "DESODORANTE AER. BRISA SPORT X 150 ML",
+        "EAN": "7796326549554",
+        "P. COSTO": 91.32,
+        "OBS": null
+      },
+      "calculado": {
+        "gtin": "7796326549554",
+        "motivo_gtin": null,
+        "descripcion_expandida": "DESODORANTE AEROSOL BRISA SPORT X 150 ML",
+        "contenido": 150,
+        "unidad": "ML",
+        "precio_costo": 91.32,
+        "moneda": "UYU",
+        "fds": {
+          "peligro_deposito": "aerosol_inflamable",
+          "numero_onu": "1950",
+          "fuente": {
+            "archivo": "FDS_Brisa_Frescor_desaer.pdf",
+            "pagina": 1
+          },
+          "problemas": []
+        }
+      }
+    },
+    {
+      "item_id": "P02:RIV-1212",
+      "fuente": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 50
+      },
+      "original": {
+        "DESCRIPCION": "DESOD. AER. BRISA HOMBRE 150cc",
+        "EAN": "7797985763688",
+        "P. COSTO": 78.95,
+        "OBS": null
+      },
+      "calculado": {
+        "gtin": "7797985763688",
+        "motivo_gtin": null,
+        "descripcion_expandida": "DESODORANTE AEROSOL BRISA HOMBRE 150CC",
+        "contenido": 150,
+        "unidad": "ML",
+        "precio_costo": 78.95,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P02:RIV-1248",
+      "fuente": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 51
+      },
+      "original": {
+        "DESCRIPCION": "DESODORANTE AER. FRESCOR S/ PERF. X 150 ML",
+        "EAN": "779-8056-68249-5",
+        "P. COSTO": 86.93,
+        "OBS": null
+      },
+      "calculado": {
+        "gtin": "7798056682495",
+        "motivo_gtin": null,
+        "descripcion_expandida": "DESODORANTE AEROSOL FRESCOR SIN PERFUME X 150 ML",
+        "contenido": 150,
+        "unidad": "ML",
+        "precio_costo": 86.93,
+        "moneda": "UYU",
+        "fds": {
+          "peligro_deposito": "aerosol_inflamable",
+          "numero_onu": "1950",
+          "fuente": {
+            "archivo": "FDS_Brisa_Frescor_desaer.pdf",
+            "pagina": 1
+          },
+          "problemas": []
+        }
+      }
+    },
+    {
+      "item_id": "P02:RIV-1284",
+      "fuente": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 52
+      },
+      "original": {
+        "DESCRIPCION": "DESODORANTE AER. FRESCOR HOMBRE 150ML",
+        "EAN": "779-4649-19388-1",
+        "P. COSTO": 93.12,
+        "OBS": null
+      },
+      "calculado": {
+        "gtin": "7794649193881",
+        "motivo_gtin": null,
+        "descripcion_expandida": "DESODORANTE AEROSOL FRESCOR HOMBRE 150ML",
+        "contenido": 150,
+        "unidad": "ML",
+        "precio_costo": 93.12,
+        "moneda": "UYU",
+        "fds": {
+          "peligro_deposito": "aerosol_inflamable",
+          "numero_onu": "1950",
+          "fuente": {
+            "archivo": "FDS_Brisa_Frescor_desaer.pdf",
+            "pagina": 1
+          },
+          "problemas": []
+        }
+      }
+    },
+    {
+      "item_id": "P02:RIV-1290",
+      "fuente": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 53
+      },
+      "original": {
+        "DESCRIPCION": "DESOD. AER. BRISA SPORT 250 CC",
+        "EAN": "7798150645501",
+        "P. COSTO": 123.34,
+        "OBS": null
+      },
+      "calculado": {
+        "gtin": "7798150645501",
+        "motivo_gtin": null,
+        "descripcion_expandida": "DESODORANTE AEROSOL BRISA SPORT 250 CC",
+        "contenido": 250,
+        "unidad": "ML",
+        "precio_costo": 123.34,
+        "moneda": "UYU",
+        "fds": {
+          "peligro_deposito": "aerosol_inflamable",
+          "numero_onu": "1950",
+          "fuente": {
+            "archivo": "FDS_Brisa_Frescor_desaer.pdf",
+            "pagina": 1
+          },
+          "problemas": []
+        }
+      }
+    },
+    {
+      "item_id": "P02:RIV-1293",
+      "fuente": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 54
+      },
+      "original": {
+        "DESCRIPCION": "DESOD. BARRA FRESCOR S/ PERF. 50 G",
+        "EAN": "779-5133-73648-5",
+        "P. COSTO": 94.17,
+        "OBS": null
+      },
+      "calculado": {
+        "gtin": "7795133736485",
+        "motivo_gtin": null,
+        "descripcion_expandida": "DESODORANTE BARRA FRESCOR SIN PERFUME 50 G",
+        "contenido": 50,
+        "unidad": "G",
+        "precio_costo": 94.17,
+        "moneda": "UYU",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P02:RIV-1296",
+      "fuente": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 55
+      },
+      "original": {
+        "DESCRIPCION": "DESOD. AEROSOL BRISA MUJER X 150 ML",
+        "EAN": "779-4545-52554-0",
+        "P. COSTO": 76.91,
+        "OBS": null
+      },
+      "calculado": {
+        "gtin": "7794545525540",
+        "motivo_gtin": null,
+        "descripcion_expandida": "DESODORANTE AEROSOL BRISA MUJER X 150 ML",
+        "contenido": 150,
+        "unidad": "ML",
+        "precio_costo": 76.91,
+        "moneda": "UYU",
+        "fds": {
+          "peligro_deposito": "aerosol_inflamable",
+          "numero_onu": "1950",
+          "fuente": {
+            "archivo": "FDS_Brisa_Frescor_desaer.pdf",
+            "pagina": 1
+          },
+          "problemas": []
+        }
+      }
+    },
+    {
+      "item_id": "P02:RIV-1332",
+      "fuente": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 56
+      },
+      "original": {
+        "DESCRIPCION": "DESOD. AER. BRISA S/ PERF. 250 CC",
+        "EAN": "779-7624-52849-4",
+        "P. COSTO": 117.77,
+        "OBS": null
+      },
+      "calculado": {
+        "gtin": "7797624528494",
+        "motivo_gtin": null,
+        "descripcion_expandida": "DESODORANTE AEROSOL BRISA SIN PERFUME 250 CC",
+        "contenido": 250,
+        "unidad": "ML",
+        "precio_costo": 117.77,
+        "moneda": "UYU",
+        "fds": {
+          "peligro_deposito": "aerosol_inflamable",
+          "numero_onu": "1950",
+          "fuente": {
+            "archivo": "FDS_Brisa_Frescor_desaer.pdf",
+            "pagina": 1
+          },
+          "problemas": []
+        }
+      }
+    },
+    {
+      "item_id": "P02:RIV-1347",
+      "fuente": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 57
+      },
+      "original": {
+        "DESCRIPCION": "DESOD. AER. FRESCOR MUJER 150cc",
+        "EAN": "7792991638319",
+        "P. COSTO": 92.57,
+        "OBS": null
+      },
+      "calculado": {
+        "gtin": "7792991638319",
+        "motivo_gtin": null,
+        "descripcion_expandida": "DESODORANTE AEROSOL FRESCOR MUJER 150CC",
+        "contenido": 150,
+        "unidad": "ML",
+        "precio_costo": 92.57,
+        "moneda": "UYU",
+        "fds": {
+          "peligro_deposito": "aerosol_inflamable",
+          "numero_onu": "1950",
+          "fuente": {
+            "archivo": "FDS_Brisa_Frescor_desaer.pdf",
+            "pagina": 1
+          },
+          "problemas": []
+        }
+      }
+    }
+  ]
+}

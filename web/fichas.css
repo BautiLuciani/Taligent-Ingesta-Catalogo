@@ -76,3 +76,4 @@
 .campo-vacio { font-weight: 500; color: #7A8680; }
 .fila-campo .chip-fuente { max-width: 360px; }
 .abrir-archivo { justify-content: center; min-height: 44px; }
+.detalle-ficha > * { flex-shrink: 0; }

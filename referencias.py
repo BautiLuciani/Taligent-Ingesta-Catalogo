@@ -30,8 +30,9 @@ CARPETA_REFERENCIAS_SEM6 = Path(__file__).parent / "salida" / "experimentos" / "
 RUTA_RESULTADOS_SEM5 = CARPETA_REFERENCIAS_SEM6 / "resultados.json"
 CARPETA_PEDIDOS_SEM5 = CARPETA_REFERENCIAS_SEM6 / "pedidos"
 
-# Semana 7, paso 2: el consolidado de Norte (lo que vieron los fichadores, del commit 59aaf13), congelado en
-# referencias_sem7/. Es lo que usa la tabla "Así entendimos el archivo" en las pruebas de Subir una lista.
+# Semana 7, pasos 2 y 3: el consolidado de los 9 proveedores (lo que vieron los fichadores, como estaba en el repo al cierre de la semana 6),
+# congelado en referencias_sem7/consolidado/. Lo usan la tabla "Así entendimos el archivo" (Subir una lista) y la
+# evidencia de Para revisar (las dos versiones de un conflicto, el código de barras que mandó el proveedor).
 CARPETA_REFERENCIAS_SEM7 = Path(__file__).parent / "salida" / "experimentos" / "referencias_sem7"
 
 # Para ESTE proceso: los imports de servidor_mcp que hagan las pruebas leen las copias congeladas.

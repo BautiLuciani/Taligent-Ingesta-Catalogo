@@ -1,0 +1,1105 @@
+{
+  "proveedor_id": "P01",
+  "filas": [
+    {
+      "item_id": "P01:AN-1103",
+      "fuente": {
+        "archivo": "Lista_de_precios_octubre_2026.pdf",
+        "pagina": 1
+      },
+      "original": {
+        "fila": "AN-1103 Dolorex 400mg Comp. rec. x 20 VL 7794394922729 $ 265,29",
+        "producto": "Dolorex 400mg",
+        "monodroga": null,
+        "presentacion": "Comp. rec. x 20",
+        "condicion": "VL",
+        "ean": "7794394922729",
+        "precio": "$ 265,29",
+        "problemas_extraccion": []
+      },
+      "calculado": {
+        "gtin": "7794394922729",
+        "motivo_gtin": null,
+        "descripcion_expandida": "DOLOREX 400MG",
+        "contenido": 20,
+        "unidad": "UN",
+        "precio_costo": 265.29,
+        "moneda": "UYU",
+        "condicion_venta": "VENTA_LIBRE",
+        "fuentes": {},
+        "conflictos": [],
+        "vigencia_precio": "2026-10-01",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P01:AN-1106",
+      "fuente": {
+        "archivo": "Lista_de_precios_octubre_2026.pdf",
+        "pagina": 1
+      },
+      "original": {
+        "fila": "AN-1106 Antiacid 400 mg + 400 mg/5 ml Susp. x 200 ml VL 7799252522035 $ 156,16",
+        "producto": "Antiacid 400 mg + 400 mg/5 ml",
+        "monodroga": null,
+        "presentacion": "Susp. x 200 ml",
+        "condicion": "VL",
+        "ean": "7799252522035",
+        "precio": "$ 156,16",
+        "problemas_extraccion": []
+      },
+      "calculado": {
+        "gtin": "7799252522035",
+        "motivo_gtin": null,
+        "descripcion_expandida": "ANTIACID 400 MG + 400 MG/5 ML",
+        "contenido": 200,
+        "unidad": "ML",
+        "precio_costo": 156.16,
+        "moneda": "UYU",
+        "condicion_venta": "VENTA_LIBRE",
+        "fuentes": {},
+        "conflictos": [],
+        "vigencia_precio": "2026-10-01",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P01:AN-1109",
+      "fuente": {
+        "archivo": "Lista_de_precios_octubre_2026.pdf",
+        "pagina": 1
+      },
+      "original": {
+        "fila": "AN-1109 Febril 1g Paracetamol Comp. rec. x 20 VL 7797385091657 $ 225,13",
+        "producto": "Febril 1g",
+        "monodroga": "Paracetamol",
+        "presentacion": "Comp. rec. x 20",
+        "condicion": "VL",
+        "ean": "7797385091657",
+        "precio": "$ 225,13",
+        "problemas_extraccion": []
+      },
+      "calculado": {
+        "gtin": "7797385091657",
+        "motivo_gtin": null,
+        "descripcion_expandida": "FEBRIL 1G",
+        "contenido": 20,
+        "unidad": "UN",
+        "precio_costo": 225.13,
+        "moneda": "UYU",
+        "condicion_venta": "VENTA_LIBRE",
+        "fuentes": {},
+        "conflictos": [],
+        "vigencia_precio": "2026-10-01",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P01:AN-1112",
+      "fuente": {
+        "archivo": "Lista_de_precios_octubre_2026.pdf",
+        "pagina": 1
+      },
+      "original": {
+        "fila": "AN-1112 Glucomet 850mg Metformina Comp. x 60 VBR 7797092743948 $ 175,49",
+        "producto": "Glucomet 850mg",
+        "monodroga": "Metformina",
+        "presentacion": "Comp. x 60",
+        "condicion": "VBR",
+        "ean": "7797092743948",
+        "precio": "$ 175,49",
+        "problemas_extraccion": []
+      },
+      "calculado": {
+        "gtin": "7797092743948",
+        "motivo_gtin": null,
+        "descripcion_expandida": "GLUCOMET 850MG",
+        "contenido": 60,
+        "unidad": "UN",
+        "precio_costo": 175.49,
+        "moneda": "UYU",
+        "condicion_venta": "BAJO_RECETA",
+        "fuentes": {},
+        "conflictos": [],
+        "vigencia_precio": "2026-10-01",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P01:AN-1115",
+      "fuente": {
+        "archivo": "Lista_de_precios_octubre_2026.pdf",
+        "pagina": 1
+      },
+      "original": {
+        "fila": "AN-1115 Gastrex 20 mg Omeprazol Caps. x 28 VL 7790106983514 $ 246,07",
+        "producto": "Gastrex 20 mg",
+        "monodroga": "Omeprazol",
+        "presentacion": "Caps. x 28",
+        "condicion": "VL",
+        "ean": "7790106983514",
+        "precio": "$ 246,07",
+        "problemas_extraccion": []
+      },
+      "calculado": {
+        "gtin": "7790106983514",
+        "motivo_gtin": null,
+        "descripcion_expandida": "GASTREX 20 MG",
+        "contenido": 28,
+        "unidad": "UN",
+        "precio_costo": 246.07,
+        "moneda": "UYU",
+        "condicion_venta": "VENTA_LIBRE",
+        "fuentes": {},
+        "conflictos": [],
+        "vigencia_precio": "2026-10-01",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P01:AN-1118",
+      "fuente": {
+        "archivo": "Lista_de_precios_octubre_2026.pdf",
+        "pagina": 1
+      },
+      "original": {
+        "fila": "AN-1118 Gastrex 20mg Omeprazol Caps. x 14 VL 7793160165476 $ 142,93",
+        "producto": "Gastrex 20mg",
+        "monodroga": "Omeprazol",
+        "presentacion": "Caps. x 14",
+        "condicion": "VL",
+        "ean": "7793160165476",
+        "precio": "$ 142,93",
+        "problemas_extraccion": []
+      },
+      "calculado": {
+        "gtin": "7793160165476",
+        "motivo_gtin": null,
+        "descripcion_expandida": "GASTREX 20MG",
+        "contenido": 14,
+        "unidad": "UN",
+        "precio_costo": 142.93,
+        "moneda": "UYU",
+        "condicion_venta": "VENTA_LIBRE",
+        "fuentes": {},
+        "conflictos": [],
+        "vigencia_precio": "2026-10-01",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P01:AN-1121",
+      "fuente": {
+        "archivo": "Lista_de_precios_octubre_2026.pdf",
+        "pagina": 1
+      },
+      "original": {
+        "fila": "AN-1121 Diacort 2mg Loperamida Comp. rec. x 12 VL 7799550016915 $ 171,02",
+        "producto": "Diacort 2mg",
+        "monodroga": "Loperamida",
+        "presentacion": "Comp. rec. x 12",
+        "condicion": "VL",
+        "ean": "7799550016915",
+        "precio": "$ 171,02",
+        "problemas_extraccion": []
+      },
+      "calculado": {
+        "gtin": "7799550016915",
+        "motivo_gtin": null,
+        "descripcion_expandida": "DIACORT 2MG",
+        "contenido": 12,
+        "unidad": "UN",
+        "precio_costo": 171.02,
+        "moneda": "UYU",
+        "condicion_venta": "VENTA_LIBRE",
+        "fuentes": {},
+        "conflictos": [],
+        "vigencia_precio": "2026-10-01",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P01:AN-1124",
+      "fuente": {
+        "archivo": "Lista_de_precios_octubre_2026.pdf",
+        "pagina": 1
+      },
+      "original": {
+        "fila": "AN-1124 Dermacort 1% Hidrocortisona Crema x 30 g VL 7796462699472 $ 306,73",
+        "producto": "Dermacort 1%",
+        "monodroga": "Hidrocortisona",
+        "presentacion": "Crema x 30 g",
+        "condicion": "VL",
+        "ean": "7796462699472",
+        "precio": "$ 306,73",
+        "problemas_extraccion": [],
+        "actualizacion": {
+          "fuente": {
+            "archivo": "Actualizacion_precios_Andes.xlsx",
+            "hoja": "Actualización",
+            "fila": 12
+          },
+          "Producto": "Dermacort 1 %",
+          "Presentación": "Crema x 30 g",
+          "Precio nuevo": 320.8
+        }
+      },
+      "calculado": {
+        "gtin": "7796462699472",
+        "motivo_gtin": null,
+        "descripcion_expandida": "DERMACORT 1%",
+        "contenido": 30,
+        "unidad": "G",
+        "precio_costo": 320.8,
+        "moneda": "UYU",
+        "condicion_venta": "VENTA_LIBRE",
+        "fuentes": {
+          "precio_costo": {
+            "archivo": "Actualizacion_precios_Andes.xlsx",
+            "hoja": "Actualización",
+            "fila": 12
+          },
+          "moneda": {
+            "archivo": "Actualizacion_precios_Andes.xlsx",
+            "hoja": "Actualización",
+            "fila": 12
+          }
+        },
+        "conflictos": [],
+        "vigencia_precio": "2026-10-15",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P01:AN-1127",
+      "fuente": {
+        "archivo": "Lista_de_precios_octubre_2026.pdf",
+        "pagina": 1
+      },
+      "original": {
+        "fila": "AN-1127 Alergix 10 mg Loratadina Comp. rec. x 10 VL 7790688122189 $ 148,56",
+        "producto": "Alergix 10 mg",
+        "monodroga": "Loratadina",
+        "presentacion": "Comp. rec. x 10",
+        "condicion": "VL",
+        "ean": "7790688122189",
+        "precio": "$ 148,56",
+        "problemas_extraccion": []
+      },
+      "calculado": {
+        "gtin": "7790688122189",
+        "motivo_gtin": null,
+        "descripcion_expandida": "ALERGIX 10 MG",
+        "contenido": 10,
+        "unidad": "UN",
+        "precio_costo": 148.56,
+        "moneda": "UYU",
+        "condicion_venta": "VENTA_LIBRE",
+        "fuentes": {},
+        "conflictos": [],
+        "vigencia_precio": "2026-10-01",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P01:AN-1130",
+      "fuente": {
+        "archivo": "Lista_de_precios_octubre_2026.pdf",
+        "pagina": 1
+      },
+      "original": {
+        "fila": "AN-1130 Dermacort 1% Hidrocortisona Crema x 15 gr VL 7795431246051 $ 201,55",
+        "producto": "Dermacort 1%",
+        "monodroga": "Hidrocortisona",
+        "presentacion": "Crema x 15 gr",
+        "condicion": "VL",
+        "ean": "7795431246051",
+        "precio": "$ 201,55",
+        "problemas_extraccion": []
+      },
+      "calculado": {
+        "gtin": "7795431246051",
+        "motivo_gtin": null,
+        "descripcion_expandida": "DERMACORT 1%",
+        "contenido": 15,
+        "unidad": "G",
+        "precio_costo": 201.55,
+        "moneda": "UYU",
+        "condicion_venta": "VENTA_LIBRE",
+        "fuentes": {},
+        "conflictos": [],
+        "vigencia_precio": "2026-10-01",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P01:AN-1133",
+      "fuente": {
+        "archivo": "Lista_de_precios_octubre_2026.pdf",
+        "pagina": 1
+      },
+      "original": {
+        "fila": "AN-1133 Micostop 1% Clotrimazol Crema x 20 gr VL 7798467198943 $ 193,76",
+        "producto": "Micostop 1%",
+        "monodroga": "Clotrimazol",
+        "presentacion": "Crema x 20 gr",
+        "condicion": "VL",
+        "ean": "7798467198943",
+        "precio": "$ 193,76",
+        "problemas_extraccion": [],
+        "actualizacion": {
+          "fuente": {
+            "archivo": "Actualizacion_precios_Andes.xlsx",
+            "hoja": "Actualización",
+            "fila": 6
+          },
+          "Producto": "Micostop 1 %",
+          "Presentación": "Crema x 30 g",
+          "Precio nuevo": 205.38
+        }
+      },
+      "calculado": {
+        "gtin": "7798467198943",
+        "motivo_gtin": null,
+        "descripcion_expandida": "MICOSTOP 1%",
+        "contenido": null,
+        "unidad": null,
+        "precio_costo": 205.38,
+        "moneda": "UYU",
+        "condicion_venta": "VENTA_LIBRE",
+        "fuentes": {
+          "precio_costo": {
+            "archivo": "Actualizacion_precios_Andes.xlsx",
+            "hoja": "Actualización",
+            "fila": 6
+          },
+          "moneda": {
+            "archivo": "Actualizacion_precios_Andes.xlsx",
+            "hoja": "Actualización",
+            "fila": 6
+          }
+        },
+        "conflictos": [
+          {
+            "campo": "contenido",
+            "versiones": [
+              {
+                "valor": "20 G",
+                "fuente": {
+                  "archivo": "Lista_de_precios_octubre_2026.pdf",
+                  "pagina": 1
+                }
+              },
+              {
+                "valor": "30 G",
+                "fuente": {
+                  "archivo": "Actualizacion_precios_Andes.xlsx",
+                  "hoja": "Actualización",
+                  "fila": 6
+                }
+              }
+            ]
+          }
+        ],
+        "vigencia_precio": "2026-10-15",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P01:AN-1136",
+      "fuente": {
+        "archivo": "Lista_de_precios_octubre_2026.pdf",
+        "pagina": 1
+      },
+      "original": {
+        "fila": "AN-1136 Febril 500mg Paracetamol Comp. rec. x 20 VL 7790950373011 $ 185,50",
+        "producto": "Febril 500mg",
+        "monodroga": "Paracetamol",
+        "presentacion": "Comp. rec. x 20",
+        "condicion": "VL",
+        "ean": "7790950373011",
+        "precio": "$ 185,50",
+        "problemas_extraccion": [],
+        "actualizacion": {
+          "fuente": {
+            "archivo": "Actualizacion_precios_Andes.xlsx",
+            "hoja": "Actualización",
+            "fila": 5
+          },
+          "Producto": "Febril 500 mg",
+          "Presentación": "Comprimidos x 30",
+          "Precio nuevo": 200.8
+        }
+      },
+      "calculado": {
+        "gtin": "7790950373011",
+        "motivo_gtin": null,
+        "descripcion_expandida": "FEBRIL 500MG",
+        "contenido": null,
+        "unidad": null,
+        "precio_costo": 200.8,
+        "moneda": "UYU",
+        "condicion_venta": "VENTA_LIBRE",
+        "fuentes": {
+          "precio_costo": {
+            "archivo": "Actualizacion_precios_Andes.xlsx",
+            "hoja": "Actualización",
+            "fila": 5
+          },
+          "moneda": {
+            "archivo": "Actualizacion_precios_Andes.xlsx",
+            "hoja": "Actualización",
+            "fila": 5
+          }
+        },
+        "conflictos": [
+          {
+            "campo": "contenido",
+            "versiones": [
+              {
+                "valor": "20 UN",
+                "fuente": {
+                  "archivo": "Lista_de_precios_octubre_2026.pdf",
+                  "pagina": 1
+                }
+              },
+              {
+                "valor": "30 UN",
+                "fuente": {
+                  "archivo": "Actualizacion_precios_Andes.xlsx",
+                  "hoja": "Actualización",
+                  "fila": 5
+                }
+              }
+            ]
+          }
+        ],
+        "vigencia_precio": "2026-10-15",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P01:AN-1139",
+      "fuente": {
+        "archivo": "Lista_de_precios_octubre_2026.pdf",
+        "pagina": 1
+      },
+      "original": {
+        "fila": "AN-1139 Cardiopres 20mg Enalapril Comprimidos x 30 VBR 7797752654089 $ 159,80",
+        "producto": "Cardiopres 20mg",
+        "monodroga": "Enalapril",
+        "presentacion": "Comprimidos x 30",
+        "condicion": "VBR",
+        "ean": "7797752654089",
+        "precio": "$ 159,80",
+        "problemas_extraccion": [],
+        "actualizacion": {
+          "fuente": {
+            "archivo": "Actualizacion_precios_Andes.xlsx",
+            "hoja": "Actualización",
+            "fila": 10
+          },
+          "Producto": "Cardiopres 20 mg",
+          "Presentación": "Comprimidos x 30",
+          "Precio nuevo": 175.52
+        }
+      },
+      "calculado": {
+        "gtin": "7797752654089",
+        "motivo_gtin": null,
+        "descripcion_expandida": "CARDIOPRES 20MG",
+        "contenido": 30,
+        "unidad": "UN",
+        "precio_costo": 175.52,
+        "moneda": "UYU",
+        "condicion_venta": "BAJO_RECETA",
+        "fuentes": {
+          "precio_costo": {
+            "archivo": "Actualizacion_precios_Andes.xlsx",
+            "hoja": "Actualización",
+            "fila": 10
+          },
+          "moneda": {
+            "archivo": "Actualizacion_precios_Andes.xlsx",
+            "hoja": "Actualización",
+            "fila": 10
+          }
+        },
+        "conflictos": [],
+        "vigencia_precio": "2026-10-15",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P01:AN-1142",
+      "fuente": {
+        "archivo": "Lista_de_precios_octubre_2026.pdf",
+        "pagina": 1
+      },
+      "original": {
+        "fila": "AN-1142 Gripanil 500 mg + 4 mg + 10 mg Paracetamol + Clorfeniramina + Fenilefrina Comp. x 10 VL 7795761445278 $ 183,45",
+        "producto": "Gripanil 500 mg + 4 mg + 10 mg",
+        "monodroga": "Paracetamol + Clorfeniramina + Fenilefrina",
+        "presentacion": "Comp. x 10",
+        "condicion": "VL",
+        "ean": "7795761445278",
+        "precio": "$ 183,45",
+        "problemas_extraccion": [],
+        "actualizacion": {
+          "fuente": {
+            "archivo": "Actualizacion_precios_Andes.xlsx",
+            "hoja": "Actualización",
+            "fila": 8
+          },
+          "Producto": "Gripanil 500 mg + 4 mg + 10 mg",
+          "Presentación": "Comp. x 10",
+          "Precio nuevo": 197.3
+        }
+      },
+      "calculado": {
+        "gtin": "7795761445278",
+        "motivo_gtin": null,
+        "descripcion_expandida": "GRIPANIL 500 MG + 4 MG + 10 MG",
+        "contenido": 10,
+        "unidad": "UN",
+        "precio_costo": 197.3,
+        "moneda": "UYU",
+        "condicion_venta": "VENTA_LIBRE",
+        "fuentes": {
+          "precio_costo": {
+            "archivo": "Actualizacion_precios_Andes.xlsx",
+            "hoja": "Actualización",
+            "fila": 8
+          },
+          "moneda": {
+            "archivo": "Actualizacion_precios_Andes.xlsx",
+            "hoja": "Actualización",
+            "fila": 8
+          }
+        },
+        "conflictos": [],
+        "vigencia_precio": "2026-10-15",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P01:AN-1145",
+      "fuente": {
+        "archivo": "Lista_de_precios_octubre_2026.pdf",
+        "pagina": 1
+      },
+      "original": {
+        "fila": "AN-1145 Gripanil 500mg+4mg+10mg Paracetamol + Clorfeniramina + Fenilefrina Sobres x 12 VL 7791495114022 $ 268,81",
+        "producto": "Gripanil 500mg+4mg+10mg",
+        "monodroga": "Paracetamol + Clorfeniramina + Fenilefrina",
+        "presentacion": "Sobres x 12",
+        "condicion": "VL",
+        "ean": "7791495114022",
+        "precio": "$ 268,81",
+        "problemas_extraccion": []
+      },
+      "calculado": {
+        "gtin": "7791495114022",
+        "motivo_gtin": null,
+        "descripcion_expandida": "GRIPANIL 500MG+4MG+10MG",
+        "contenido": 12,
+        "unidad": "UN",
+        "precio_costo": 268.81,
+        "moneda": "UYU",
+        "condicion_venta": "VENTA_LIBRE",
+        "fuentes": {},
+        "conflictos": [],
+        "vigencia_precio": "2026-10-01",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P01:AN-1148",
+      "fuente": {
+        "archivo": "Lista_de_precios_octubre_2026.pdf",
+        "pagina": 1
+      },
+      "original": {
+        "fila": "AN-1148 Gripanil 500 mg + 4 mg + 10 mg Paracetamol + Clorfeniramina + Fenilefrina Sobres x 6 VL 7796730355338 $ 168,80",
+        "producto": "Gripanil 500 mg + 4 mg + 10 mg",
+        "monodroga": "Paracetamol + Clorfeniramina + Fenilefrina",
+        "presentacion": "Sobres x 6",
+        "condicion": "VL",
+        "ean": "7796730355338",
+        "precio": "$ 168,80",
+        "problemas_extraccion": [],
+        "actualizacion": {
+          "fuente": {
+            "archivo": "Actualizacion_precios_Andes.xlsx",
+            "hoja": "Actualización",
+            "fila": 9
+          },
+          "Producto": "Gripanil 500 mg + 4 mg + 10 mg",
+          "Presentación": "Polvo p/ sol. oral, sobres x 6",
+          "Precio nuevo": 182.26
+        }
+      },
+      "calculado": {
+        "gtin": "7796730355338",
+        "motivo_gtin": null,
+        "descripcion_expandida": "GRIPANIL 500 MG + 4 MG + 10 MG",
+        "contenido": 6,
+        "unidad": "UN",
+        "precio_costo": 182.26,
+        "moneda": "UYU",
+        "condicion_venta": "VENTA_LIBRE",
+        "fuentes": {
+          "precio_costo": {
+            "archivo": "Actualizacion_precios_Andes.xlsx",
+            "hoja": "Actualización",
+            "fila": 9
+          },
+          "moneda": {
+            "archivo": "Actualizacion_precios_Andes.xlsx",
+            "hoja": "Actualización",
+            "fila": 9
+          }
+        },
+        "conflictos": [],
+        "vigencia_precio": "2026-10-15",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P01:AN-1151",
+      "fuente": {
+        "archivo": "Lista_de_precios_octubre_2026.pdf",
+        "pagina": 1
+      },
+      "original": {
+        "fila": "AN-1151 Flexigel 1% Diclofenac Gel tópico x 60 gr VL 7797593529355 $ 236,45",
+        "producto": "Flexigel 1%",
+        "monodroga": "Diclofenac",
+        "presentacion": "Gel tópico x 60 gr",
+        "condicion": "VL",
+        "ean": "7797593529355",
+        "precio": "$ 236,45",
+        "problemas_extraccion": [],
+        "actualizacion": {
+          "fuente": {
+            "archivo": "Actualizacion_precios_Andes.xlsx",
+            "hoja": "Actualización",
+            "fila": 13
+          },
+          "Producto": "Flexigel 1 %",
+          "Presentación": "Gel tópico x 60 gr",
+          "Precio nuevo": 257.32
+        }
+      },
+      "calculado": {
+        "gtin": "7797593529355",
+        "motivo_gtin": null,
+        "descripcion_expandida": "FLEXIGEL 1%",
+        "contenido": 60,
+        "unidad": "G",
+        "precio_costo": 257.32,
+        "moneda": "UYU",
+        "condicion_venta": "VENTA_LIBRE",
+        "fuentes": {
+          "precio_costo": {
+            "archivo": "Actualizacion_precios_Andes.xlsx",
+            "hoja": "Actualización",
+            "fila": 13
+          },
+          "moneda": {
+            "archivo": "Actualizacion_precios_Andes.xlsx",
+            "hoja": "Actualización",
+            "fila": 13
+          }
+        },
+        "conflictos": [],
+        "vigencia_precio": "2026-10-15",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P01:AN-1154",
+      "fuente": {
+        "archivo": "Lista_de_precios_octubre_2026.pdf",
+        "pagina": 1
+      },
+      "original": {
+        "fila": "AN-1154 Dolorex 600mg Ibuprofeno Comprimidos x 20 VBR 7795669252633 $ 337,17",
+        "producto": "Dolorex 600mg",
+        "monodroga": "Ibuprofeno",
+        "presentacion": "Comprimidos x 20",
+        "condicion": "VBR",
+        "ean": "7795669252633",
+        "precio": "$ 337,17",
+        "problemas_extraccion": [],
+        "actualizacion": {
+          "fuente": {
+            "archivo": "Actualizacion_precios_Andes.xlsx",
+            "hoja": "Actualización",
+            "fila": 14
+          },
+          "Producto": "Dolorex 600 mg",
+          "Presentación": "Comp. x 20",
+          "Precio nuevo": 368.61
+        }
+      },
+      "calculado": {
+        "gtin": "7795669252633",
+        "motivo_gtin": null,
+        "descripcion_expandida": "DOLOREX 600MG",
+        "contenido": 20,
+        "unidad": "UN",
+        "precio_costo": 368.61,
+        "moneda": "UYU",
+        "condicion_venta": "BAJO_RECETA",
+        "fuentes": {
+          "precio_costo": {
+            "archivo": "Actualizacion_precios_Andes.xlsx",
+            "hoja": "Actualización",
+            "fila": 14
+          },
+          "moneda": {
+            "archivo": "Actualizacion_precios_Andes.xlsx",
+            "hoja": "Actualización",
+            "fila": 14
+          }
+        },
+        "conflictos": [],
+        "vigencia_precio": "2026-10-15",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P01:AN-1157",
+      "fuente": {
+        "archivo": "Lista_de_precios_octubre_2026.pdf",
+        "pagina": 1
+      },
+      "original": {
+        "fila": "AN-1157 Tiroxan 50mcg Levotiroxina Comprimidos x 30 VBR 7790003122382 $ 136,62",
+        "producto": "Tiroxan 50mcg",
+        "monodroga": "Levotiroxina",
+        "presentacion": "Comprimidos x 30",
+        "condicion": "VBR",
+        "ean": "7790003122382",
+        "precio": "$ 136,62",
+        "problemas_extraccion": [],
+        "actualizacion": {
+          "fuente": {
+            "archivo": "Actualizacion_precios_Andes.xlsx",
+            "hoja": "Actualización",
+            "fila": 11
+          },
+          "Producto": "Tiroxan 50 mcg",
+          "Presentación": "Comp. x 30",
+          "Precio nuevo": 146.22
+        }
+      },
+      "calculado": {
+        "gtin": "7790003122382",
+        "motivo_gtin": null,
+        "descripcion_expandida": "TIROXAN 50MCG",
+        "contenido": 30,
+        "unidad": "UN",
+        "precio_costo": 146.22,
+        "moneda": "UYU",
+        "condicion_venta": "BAJO_RECETA",
+        "fuentes": {
+          "precio_costo": {
+            "archivo": "Actualizacion_precios_Andes.xlsx",
+            "hoja": "Actualización",
+            "fila": 11
+          },
+          "moneda": {
+            "archivo": "Actualizacion_precios_Andes.xlsx",
+            "hoja": "Actualización",
+            "fila": 11
+          }
+        },
+        "conflictos": [],
+        "vigencia_precio": "2026-10-15",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P01:AN-1160",
+      "fuente": {
+        "archivo": "Lista_de_precios_octubre_2026.pdf",
+        "pagina": 1
+      },
+      "original": {
+        "fila": "AN-1160 Tiroxan 100 mcg Levotiroxina Comprimidos x 30 VBR 7798193783772 $ 153,10",
+        "producto": "Tiroxan 100 mcg",
+        "monodroga": "Levotiroxina",
+        "presentacion": "Comprimidos x 30",
+        "condicion": "VBR",
+        "ean": "7798193783772",
+        "precio": "$ 153,10",
+        "problemas_extraccion": []
+      },
+      "calculado": {
+        "gtin": "7798193783772",
+        "motivo_gtin": null,
+        "descripcion_expandida": "TIROXAN 100 MCG",
+        "contenido": 30,
+        "unidad": "UN",
+        "precio_costo": 153.1,
+        "moneda": "UYU",
+        "condicion_venta": "BAJO_RECETA",
+        "fuentes": {},
+        "conflictos": [],
+        "vigencia_precio": "2026-10-01",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P01:AN-1163",
+      "fuente": {
+        "archivo": "Lista_de_precios_octubre_2026.pdf",
+        "pagina": 1
+      },
+      "original": {
+        "fila": "AN-1163 Diacort 2mg Loperamida Comprimidos x 6 VL 7790559445416 $ 109,38",
+        "producto": "Diacort 2mg",
+        "monodroga": "Loperamida",
+        "presentacion": "Comprimidos x 6",
+        "condicion": "VL",
+        "ean": "7790559445416",
+        "precio": "$ 109,38",
+        "problemas_extraccion": [],
+        "actualizacion": {
+          "fuente": {
+            "archivo": "Actualizacion_precios_Andes.xlsx",
+            "hoja": "Actualización",
+            "fila": 15
+          },
+          "Producto": "Diacort 2 mg",
+          "Presentación": "Comprimidos x 6",
+          "Precio nuevo": 121.28
+        }
+      },
+      "calculado": {
+        "gtin": "7790559445416",
+        "motivo_gtin": null,
+        "descripcion_expandida": "DIACORT 2MG",
+        "contenido": 6,
+        "unidad": "UN",
+        "precio_costo": 121.28,
+        "moneda": "UYU",
+        "condicion_venta": "VENTA_LIBRE",
+        "fuentes": {
+          "precio_costo": {
+            "archivo": "Actualizacion_precios_Andes.xlsx",
+            "hoja": "Actualización",
+            "fila": 15
+          },
+          "moneda": {
+            "archivo": "Actualizacion_precios_Andes.xlsx",
+            "hoja": "Actualización",
+            "fila": 15
+          }
+        },
+        "conflictos": [],
+        "vigencia_precio": "2026-10-15",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P01:AN-1166",
+      "fuente": {
+        "archivo": "Lista_de_precios_octubre_2026.pdf",
+        "pagina": 1
+      },
+      "original": {
+        "fila": "AN-1166 Laxofib 5mg Bisacodilo Comp. x 20 VL 7790468655227 $ 104,41",
+        "producto": "Laxofib 5mg",
+        "monodroga": "Bisacodilo",
+        "presentacion": "Comp. x 20",
+        "condicion": "VL",
+        "ean": "7790468655227",
+        "precio": "$ 104,41",
+        "problemas_extraccion": [],
+        "actualizacion": {
+          "fuente": {
+            "archivo": "Actualizacion_precios_Andes.xlsx",
+            "hoja": "Actualización",
+            "fila": 7
+          },
+          "Producto": "Laxofib 5 mg",
+          "Presentación": "Comp. rec. x 20",
+          "Precio nuevo": 109.31
+        }
+      },
+      "calculado": {
+        "gtin": "7790468655227",
+        "motivo_gtin": null,
+        "descripcion_expandida": "LAXOFIB 5MG",
+        "contenido": 20,
+        "unidad": "UN",
+        "precio_costo": 109.31,
+        "moneda": "UYU",
+        "condicion_venta": "VENTA_LIBRE",
+        "fuentes": {
+          "precio_costo": {
+            "archivo": "Actualizacion_precios_Andes.xlsx",
+            "hoja": "Actualización",
+            "fila": 7
+          },
+          "moneda": {
+            "archivo": "Actualizacion_precios_Andes.xlsx",
+            "hoja": "Actualización",
+            "fila": 7
+          }
+        },
+        "conflictos": [],
+        "vigencia_precio": "2026-10-15",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P01:AN-1169",
+      "fuente": {
+        "archivo": "Lista_de_precios_octubre_2026.pdf",
+        "pagina": 1
+      },
+      "original": {
+        "fila": "AN-1169 Cardiopres 10 mg Enalapril Comp. rec. x 30 VBR 7799738361219 $ 144,73",
+        "producto": "Cardiopres 10 mg",
+        "monodroga": "Enalapril",
+        "presentacion": "Comp. rec. x 30",
+        "condicion": "VBR",
+        "ean": "7799738361219",
+        "precio": "$ 144,73",
+        "problemas_extraccion": [],
+        "actualizacion": {
+          "fuente": {
+            "archivo": "Actualizacion_precios_Andes.xlsx",
+            "hoja": "Actualización",
+            "fila": 16
+          },
+          "Producto": "Cardiopres 10 mg",
+          "Presentación": "Comprimidos x 30",
+          "Precio nuevo": 153.27
+        }
+      },
+      "calculado": {
+        "gtin": "7799738361219",
+        "motivo_gtin": null,
+        "descripcion_expandida": "CARDIOPRES 10 MG",
+        "contenido": 30,
+        "unidad": "UN",
+        "precio_costo": 153.27,
+        "moneda": "UYU",
+        "condicion_venta": "BAJO_RECETA",
+        "fuentes": {
+          "precio_costo": {
+            "archivo": "Actualizacion_precios_Andes.xlsx",
+            "hoja": "Actualización",
+            "fila": 16
+          },
+          "moneda": {
+            "archivo": "Actualizacion_precios_Andes.xlsx",
+            "hoja": "Actualización",
+            "fila": 16
+          }
+        },
+        "conflictos": [],
+        "vigencia_precio": "2026-10-15",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P01:AN-1172",
+      "fuente": {
+        "archivo": "Lista_de_precios_octubre_2026.pdf",
+        "pagina": 1
+      },
+      "original": {
+        "fila": "AN-1172 Tosil 15mg/5ml Dextrometorfano Jbe. x 120 ml VL 7793821086737 $ 213,12",
+        "producto": "Tosil 15mg/5ml",
+        "monodroga": "Dextrometorfano",
+        "presentacion": "Jbe. x 120 ml",
+        "condicion": "VL",
+        "ean": "7793821086737",
+        "precio": "$ 213,12",
+        "problemas_extraccion": []
+      },
+      "calculado": {
+        "gtin": "7793821086737",
+        "motivo_gtin": null,
+        "descripcion_expandida": "TOSIL 15MG/5ML",
+        "contenido": 120,
+        "unidad": "ML",
+        "precio_costo": 213.12,
+        "moneda": "UYU",
+        "condicion_venta": "VENTA_LIBRE",
+        "fuentes": {},
+        "conflictos": [],
+        "vigencia_precio": "2026-10-01",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P01:AN-1175",
+      "fuente": {
+        "archivo": "Lista_de_precios_octubre_2026.pdf",
+        "pagina": 1
+      },
+      "original": {
+        "fila": "AN-1175 Febril 120mg/5ml Paracetamol Jbe. x 100 ml VL 7793831128717 $ 194,57",
+        "producto": "Febril 120mg/5ml",
+        "monodroga": "Paracetamol",
+        "presentacion": "Jbe. x 100 ml",
+        "condicion": "VL",
+        "ean": "7793831128717",
+        "precio": "$ 194,57",
+        "problemas_extraccion": []
+      },
+      "calculado": {
+        "gtin": "7793831128717",
+        "motivo_gtin": null,
+        "descripcion_expandida": "FEBRIL 120MG/5ML",
+        "contenido": 100,
+        "unidad": "ML",
+        "precio_costo": 194.57,
+        "moneda": "UYU",
+        "condicion_venta": "VENTA_LIBRE",
+        "fuentes": {},
+        "conflictos": [],
+        "vigencia_precio": "2026-10-01",
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P01:AN-1178",
+      "fuente": {
+        "archivo": "Lista_de_precios_octubre_2026.pdf",
+        "pagina": 1
+      },
+      "original": {
+        "fila": "AN-1178 Febril 1g Paracetamol Comp. x 10 VL 7792542521701 $ 120,52",
+        "producto": "Febril 1g",
+        "monodroga": "Paracetamol",
+        "presentacion": "Comp. x 10",
+        "condicion": "VL",
+        "ean": "7792542521701",
+        "precio": "$ 120,52",
+        "problemas_extraccion": []
+      },
+      "calculado": {
+        "gtin": "7792542521701",
+        "motivo_gtin": null,
+        "descripcion_expandida": "FEBRIL 1G",
+        "contenido": 10,
+        "unidad": "UN",
+        "precio_costo": 120.52,
+        "moneda": "UYU",
+        "condicion_venta": "VENTA_LIBRE",
+        "fuentes": {},
+        "conflictos": [],
+        "vigencia_precio": "2026-10-01",
+        "fds": null
+      }
+    }
+  ]
+}

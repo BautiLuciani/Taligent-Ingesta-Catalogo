@@ -1,0 +1,917 @@
+{
+  "proveedor_id": "P05",
+  "filas": [
+    {
+      "item_id": "P05:DL-151",
+      "fuente": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      },
+      "original": {
+        "bloque": [
+          "Dermalab Hydra Plus",
+          "Crema. Textura liviana de rápida absorción. Hidratación facial de uso diario."
+        ],
+        "nombre": "Dermalab Hydra Plus",
+        "tipo": "Crema",
+        "descripcion": "Textura liviana de rápida absorción. Hidratación facial de uso diario.",
+        "contenido": "50 ml",
+        "problemas_extraccion": []
+      },
+      "calculado": {
+        "gtin": null,
+        "motivo_gtin": "gtin_faltante",
+        "descripcion_expandida": "DERMALAB HYDRA PLUS",
+        "contenido": 50,
+        "unidad": "ML",
+        "precio_costo": null,
+        "moneda": null,
+        "fuentes": {},
+        "conflictos": [],
+        "vigencia_precio": null,
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P05:DL-103",
+      "fuente": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      },
+      "original": {
+        "bloque": [
+          "Dermalab Purify",
+          "Gel limpiador. Limpia en profundidad sin resecar. Para piel mixta a grasa."
+        ],
+        "nombre": "Dermalab Purify",
+        "tipo": "Gel limpiador",
+        "descripcion": "Limpia en profundidad sin resecar. Para piel mixta a grasa.",
+        "contenido": "300 ml",
+        "problemas_extraccion": []
+      },
+      "calculado": {
+        "gtin": null,
+        "motivo_gtin": "gtin_faltante",
+        "descripcion_expandida": "DERMALAB PURIFY",
+        "contenido": 300,
+        "unidad": "ML",
+        "precio_costo": null,
+        "moneda": null,
+        "fuentes": {},
+        "conflictos": [],
+        "vigencia_precio": null,
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P05:DL-106",
+      "fuente": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      },
+      "original": {
+        "bloque": [
+          "Dermalab Sun SPF 50+",
+          "Protector solar. Amplio espectro UVA/UVB. Resistente al agua."
+        ],
+        "nombre": "Dermalab Sun SPF 50+",
+        "tipo": "Protector solar",
+        "descripcion": "Amplio espectro UVA/UVB. Resistente al agua.",
+        "contenido": "50 ml",
+        "problemas_extraccion": []
+      },
+      "calculado": {
+        "gtin": null,
+        "motivo_gtin": "gtin_faltante",
+        "descripcion_expandida": "DERMALAB SUN SPF 50+",
+        "contenido": 50,
+        "unidad": "ML",
+        "precio_costo": null,
+        "moneda": null,
+        "fuentes": {},
+        "conflictos": [],
+        "vigencia_precio": null,
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P05:DL-109",
+      "fuente": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      },
+      "original": {
+        "bloque": [
+          "Dermalab Urea 10 %",
+          "Crema. Textura liviana de rápida absorción. Hidratación intensa para el cuerpo, ideal para piel muy seca."
+        ],
+        "nombre": "Dermalab Urea 10 %",
+        "tipo": "Crema",
+        "descripcion": "Textura liviana de rápida absorción. Hidratación intensa para el cuerpo, ideal para piel muy seca.",
+        "contenido": "400 ml",
+        "problemas_extraccion": [],
+        "actualizacion": {
+          "fuente": {
+            "archivo": "Dermalab_lista_precios.xlsx",
+            "hoja": "Lista",
+            "fila": 2
+          },
+          "EAN": 7790670659075,
+          "Costo s/IVA": 736.22
+        }
+      },
+      "calculado": {
+        "gtin": "7790670659075",
+        "motivo_gtin": null,
+        "descripcion_expandida": "DERMALAB UREA 10 %",
+        "contenido": 400,
+        "unidad": "ML",
+        "precio_costo": 736.22,
+        "moneda": "UYU",
+        "fuentes": {
+          "gtin": {
+            "archivo": "Dermalab_lista_precios.xlsx",
+            "hoja": "Lista",
+            "fila": 2
+          },
+          "precio_costo": {
+            "archivo": "Dermalab_lista_precios.xlsx",
+            "hoja": "Lista",
+            "fila": 2
+          },
+          "moneda": {
+            "archivo": "Dermalab_lista_precios.xlsx",
+            "hoja": "Lista",
+            "fila": 2
+          }
+        },
+        "conflictos": [],
+        "vigencia_precio": null,
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P05:DL-112",
+      "fuente": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      },
+      "original": {
+        "bloque": [
+          "Dermalab Lift",
+          "Sérum. Con péptidos y ácido hialurónico. Reduce arrugas visibles en cuatro semanas."
+        ],
+        "nombre": "Dermalab Lift",
+        "tipo": "Sérum",
+        "descripcion": "Con péptidos y ácido hialurónico. Reduce arrugas visibles en cuatro semanas.",
+        "contenido": "30 ml",
+        "problemas_extraccion": [],
+        "actualizacion": {
+          "fuente": {
+            "archivo": "Dermalab_lista_precios.xlsx",
+            "hoja": "Lista",
+            "fila": 3
+          },
+          "EAN": 7798965900758,
+          "Costo s/IVA": 828.13
+        }
+      },
+      "calculado": {
+        "gtin": "7798965900758",
+        "motivo_gtin": null,
+        "descripcion_expandida": "DERMALAB LIFT",
+        "contenido": 30,
+        "unidad": "ML",
+        "precio_costo": 828.13,
+        "moneda": "UYU",
+        "fuentes": {
+          "gtin": {
+            "archivo": "Dermalab_lista_precios.xlsx",
+            "hoja": "Lista",
+            "fila": 3
+          },
+          "precio_costo": {
+            "archivo": "Dermalab_lista_precios.xlsx",
+            "hoja": "Lista",
+            "fila": 3
+          },
+          "moneda": {
+            "archivo": "Dermalab_lista_precios.xlsx",
+            "hoja": "Lista",
+            "fila": 3
+          }
+        },
+        "conflictos": [],
+        "vigencia_precio": null,
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P05:DL-115",
+      "fuente": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      },
+      "original": {
+        "bloque": [
+          "Dermalab Hydra Plus SPF 30",
+          "Crema. Textura liviana de rápida absorción. Hidratación facial de uso diario."
+        ],
+        "nombre": "Dermalab Hydra Plus SPF 30",
+        "tipo": "Crema",
+        "descripcion": "Textura liviana de rápida absorción. Hidratación facial de uso diario.",
+        "contenido": "50 ml",
+        "problemas_extraccion": [],
+        "actualizacion": {
+          "fuente": {
+            "archivo": "Dermalab_lista_precios.xlsx",
+            "hoja": "Lista",
+            "fila": 4
+          },
+          "EAN": 7793567937577,
+          "Costo s/IVA": 470.59
+        }
+      },
+      "calculado": {
+        "gtin": "7793567937577",
+        "motivo_gtin": null,
+        "descripcion_expandida": "DERMALAB HYDRA PLUS SPF 30",
+        "contenido": 50,
+        "unidad": "ML",
+        "precio_costo": 470.59,
+        "moneda": "UYU",
+        "fuentes": {
+          "gtin": {
+            "archivo": "Dermalab_lista_precios.xlsx",
+            "hoja": "Lista",
+            "fila": 4
+          },
+          "precio_costo": {
+            "archivo": "Dermalab_lista_precios.xlsx",
+            "hoja": "Lista",
+            "fila": 4
+          },
+          "moneda": {
+            "archivo": "Dermalab_lista_precios.xlsx",
+            "hoja": "Lista",
+            "fila": 4
+          }
+        },
+        "conflictos": [],
+        "vigencia_precio": null,
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P05:DL-118",
+      "fuente": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      },
+      "original": {
+        "bloque": [
+          "Dermalab Purify",
+          "Gel limpiador. Limpia en profundidad sin resecar. Para piel mixta a grasa."
+        ],
+        "nombre": "Dermalab Purify",
+        "tipo": "Gel limpiador",
+        "descripcion": "Limpia en profundidad sin resecar. Para piel mixta a grasa.",
+        "contenido": "150 ml",
+        "problemas_extraccion": [],
+        "actualizacion": {
+          "fuente": {
+            "archivo": "Dermalab_lista_precios.xlsx",
+            "hoja": "Lista",
+            "fila": 5
+          },
+          "EAN": 7792480811629,
+          "Costo s/IVA": 344.84
+        }
+      },
+      "calculado": {
+        "gtin": "7792480811629",
+        "motivo_gtin": null,
+        "descripcion_expandida": "DERMALAB PURIFY",
+        "contenido": 150,
+        "unidad": "ML",
+        "precio_costo": 344.84,
+        "moneda": "UYU",
+        "fuentes": {
+          "gtin": {
+            "archivo": "Dermalab_lista_precios.xlsx",
+            "hoja": "Lista",
+            "fila": 5
+          },
+          "precio_costo": {
+            "archivo": "Dermalab_lista_precios.xlsx",
+            "hoja": "Lista",
+            "fila": 5
+          },
+          "moneda": {
+            "archivo": "Dermalab_lista_precios.xlsx",
+            "hoja": "Lista",
+            "fila": 5
+          }
+        },
+        "conflictos": [],
+        "vigencia_precio": null,
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P05:DL-121",
+      "fuente": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      },
+      "original": {
+        "bloque": [
+          "Dermalab Sun SPF 30",
+          "Protector solar. Amplio espectro UVA/UVB. Resistente al agua."
+        ],
+        "nombre": "Dermalab Sun SPF 30",
+        "tipo": "Protector solar",
+        "descripcion": "Amplio espectro UVA/UVB. Resistente al agua.",
+        "contenido": "200 ml",
+        "problemas_extraccion": [],
+        "actualizacion": {
+          "fuente": {
+            "archivo": "Dermalab_lista_precios.xlsx",
+            "hoja": "Lista",
+            "fila": 6
+          },
+          "EAN": 7796076691862,
+          "Costo s/IVA": 1359.07
+        }
+      },
+      "calculado": {
+        "gtin": "7796076691862",
+        "motivo_gtin": null,
+        "descripcion_expandida": "DERMALAB SUN SPF 30",
+        "contenido": 200,
+        "unidad": "ML",
+        "precio_costo": 1359.07,
+        "moneda": "UYU",
+        "fuentes": {
+          "gtin": {
+            "archivo": "Dermalab_lista_precios.xlsx",
+            "hoja": "Lista",
+            "fila": 6
+          },
+          "precio_costo": {
+            "archivo": "Dermalab_lista_precios.xlsx",
+            "hoja": "Lista",
+            "fila": 6
+          },
+          "moneda": {
+            "archivo": "Dermalab_lista_precios.xlsx",
+            "hoja": "Lista",
+            "fila": 6
+          }
+        },
+        "conflictos": [],
+        "vigencia_precio": null,
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P05:DL-124",
+      "fuente": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      },
+      "original": {
+        "bloque": [
+          "Dermalab Lift Noche",
+          "Sérum. Con péptidos y ácido hialurónico. Reduce arrugas visibles en cuatro semanas."
+        ],
+        "nombre": "Dermalab Lift Noche",
+        "tipo": "Sérum",
+        "descripcion": "Con péptidos y ácido hialurónico. Reduce arrugas visibles en cuatro semanas.",
+        "contenido": "30 ml",
+        "problemas_extraccion": [],
+        "actualizacion": {
+          "fuente": {
+            "archivo": "Dermalab_lista_precios.xlsx",
+            "hoja": "Lista",
+            "fila": 7
+          },
+          "EAN": 7790632544999,
+          "Costo s/IVA": 737.72
+        }
+      },
+      "calculado": {
+        "gtin": "7790632544999",
+        "motivo_gtin": null,
+        "descripcion_expandida": "DERMALAB LIFT NOCHE",
+        "contenido": 30,
+        "unidad": "ML",
+        "precio_costo": 737.72,
+        "moneda": "UYU",
+        "fuentes": {
+          "gtin": {
+            "archivo": "Dermalab_lista_precios.xlsx",
+            "hoja": "Lista",
+            "fila": 7
+          },
+          "precio_costo": {
+            "archivo": "Dermalab_lista_precios.xlsx",
+            "hoja": "Lista",
+            "fila": 7
+          },
+          "moneda": {
+            "archivo": "Dermalab_lista_precios.xlsx",
+            "hoja": "Lista",
+            "fila": 7
+          }
+        },
+        "conflictos": [],
+        "vigencia_precio": null,
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P05:DL-127",
+      "fuente": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      },
+      "original": {
+        "bloque": [
+          "Dermalab Sun SPF 50",
+          "Protector solar. Amplio espectro UVA/UVB. Resistente al agua."
+        ],
+        "nombre": "Dermalab Sun SPF 50",
+        "tipo": "Protector solar",
+        "descripcion": "Amplio espectro UVA/UVB. Resistente al agua.",
+        "contenido": "200 ml",
+        "problemas_extraccion": [],
+        "actualizacion": {
+          "fuente": {
+            "archivo": "Dermalab_lista_precios.xlsx",
+            "hoja": "Lista",
+            "fila": 8
+          },
+          "EAN": 7792303037113,
+          "Costo s/IVA": 1411.99
+        }
+      },
+      "calculado": {
+        "gtin": "7792303037113",
+        "motivo_gtin": null,
+        "descripcion_expandida": "DERMALAB SUN SPF 50",
+        "contenido": 200,
+        "unidad": "ML",
+        "precio_costo": 1411.99,
+        "moneda": "UYU",
+        "fuentes": {
+          "gtin": {
+            "archivo": "Dermalab_lista_precios.xlsx",
+            "hoja": "Lista",
+            "fila": 8
+          },
+          "precio_costo": {
+            "archivo": "Dermalab_lista_precios.xlsx",
+            "hoja": "Lista",
+            "fila": 8
+          },
+          "moneda": {
+            "archivo": "Dermalab_lista_precios.xlsx",
+            "hoja": "Lista",
+            "fila": 8
+          }
+        },
+        "conflictos": [],
+        "vigencia_precio": null,
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P05:DL-154",
+      "fuente": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      },
+      "original": {
+        "bloque": [
+          "Dermalab Sensitive",
+          "Agua micelar. Desmaquilla y limpia en un solo paso. Apta para piel sensible."
+        ],
+        "nombre": "Dermalab Sensitive",
+        "tipo": "Agua micelar",
+        "descripcion": "Desmaquilla y limpia en un solo paso. Apta para piel sensible.",
+        "contenido": "400 ml",
+        "problemas_extraccion": []
+      },
+      "calculado": {
+        "gtin": null,
+        "motivo_gtin": "gtin_faltante",
+        "descripcion_expandida": "DERMALAB SENSITIVE",
+        "contenido": 400,
+        "unidad": "ML",
+        "precio_costo": null,
+        "moneda": null,
+        "fuentes": {},
+        "conflictos": [],
+        "vigencia_precio": null,
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P05:DL-130",
+      "fuente": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      },
+      "original": {
+        "bloque": [
+          "Dermalab Clear",
+          "Crema. Textura liviana de rápida absorción. Para piel con tendencia acneica: reduce brillos e imperfecciones."
+        ],
+        "nombre": "Dermalab Clear",
+        "tipo": "Crema",
+        "descripcion": "Textura liviana de rápida absorción. Para piel con tendencia acneica: reduce brillos e imperfecciones.",
+        "contenido": "40 ml",
+        "problemas_extraccion": [],
+        "actualizacion": {
+          "fuente": {
+            "archivo": "Dermalab_lista_precios.xlsx",
+            "hoja": "Lista",
+            "fila": 9
+          },
+          "EAN": 7791057086095,
+          "Costo s/IVA": 506.73
+        }
+      },
+      "calculado": {
+        "gtin": "7791057086095",
+        "motivo_gtin": null,
+        "descripcion_expandida": "DERMALAB CLEAR",
+        "contenido": 40,
+        "unidad": "ML",
+        "precio_costo": 506.73,
+        "moneda": "UYU",
+        "fuentes": {
+          "gtin": {
+            "archivo": "Dermalab_lista_precios.xlsx",
+            "hoja": "Lista",
+            "fila": 9
+          },
+          "precio_costo": {
+            "archivo": "Dermalab_lista_precios.xlsx",
+            "hoja": "Lista",
+            "fila": 9
+          },
+          "moneda": {
+            "archivo": "Dermalab_lista_precios.xlsx",
+            "hoja": "Lista",
+            "fila": 9
+          }
+        },
+        "conflictos": [],
+        "vigencia_precio": null,
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P05:DL-133",
+      "fuente": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      },
+      "original": {
+        "bloque": [
+          "Dermalab Sun SPF 30",
+          "Protector solar. Amplio espectro UVA/UVB. Resistente al agua."
+        ],
+        "nombre": "Dermalab Sun SPF 30",
+        "tipo": "Protector solar",
+        "descripcion": "Amplio espectro UVA/UVB. Resistente al agua.",
+        "contenido": "50 ml",
+        "problemas_extraccion": [],
+        "actualizacion": {
+          "fuente": {
+            "archivo": "Dermalab_lista_precios.xlsx",
+            "hoja": "Lista",
+            "fila": 10
+          },
+          "EAN": 7798938462672,
+          "Costo s/IVA": 567.78
+        }
+      },
+      "calculado": {
+        "gtin": "7798938462672",
+        "motivo_gtin": null,
+        "descripcion_expandida": "DERMALAB SUN SPF 30",
+        "contenido": 50,
+        "unidad": "ML",
+        "precio_costo": 567.78,
+        "moneda": "UYU",
+        "fuentes": {
+          "gtin": {
+            "archivo": "Dermalab_lista_precios.xlsx",
+            "hoja": "Lista",
+            "fila": 10
+          },
+          "precio_costo": {
+            "archivo": "Dermalab_lista_precios.xlsx",
+            "hoja": "Lista",
+            "fila": 10
+          },
+          "moneda": {
+            "archivo": "Dermalab_lista_precios.xlsx",
+            "hoja": "Lista",
+            "fila": 10
+          }
+        },
+        "conflictos": [],
+        "vigencia_precio": null,
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P05:DL-136",
+      "fuente": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 2
+      },
+      "original": {
+        "bloque": [
+          "Dermalab Sun Kids SPF 50+",
+          "Protector solar. Amplio espectro UVA/UVB. Resistente al agua. Formulado especialmente para la piel de los niños."
+        ],
+        "nombre": "Dermalab Sun Kids SPF 50+",
+        "tipo": "Protector solar",
+        "descripcion": "Amplio espectro UVA/UVB. Resistente al agua. Formulado especialmente para la piel de los niños.",
+        "contenido": "200 ml",
+        "problemas_extraccion": [],
+        "actualizacion": {
+          "fuente": {
+            "archivo": "Dermalab_lista_precios.xlsx",
+            "hoja": "Lista",
+            "fila": 11
+          },
+          "EAN": 7798006871252,
+          "Costo s/IVA": 627.19
+        }
+      },
+      "calculado": {
+        "gtin": "7798006871252",
+        "motivo_gtin": null,
+        "descripcion_expandida": "DERMALAB SUN KIDS SPF 50+",
+        "contenido": 200,
+        "unidad": "ML",
+        "precio_costo": 627.19,
+        "moneda": "UYU",
+        "fuentes": {
+          "nombre": {
+            "archivo": "Dermalab_lanzamientos_2026.pdf",
+            "pagina": 1
+          },
+          "gtin": {
+            "archivo": "Dermalab_lista_precios.xlsx",
+            "hoja": "Lista",
+            "fila": 11
+          },
+          "precio_costo": {
+            "archivo": "Dermalab_lista_precios.xlsx",
+            "hoja": "Lista",
+            "fila": 11
+          },
+          "moneda": {
+            "archivo": "Dermalab_lista_precios.xlsx",
+            "hoja": "Lista",
+            "fila": 11
+          }
+        },
+        "conflictos": [],
+        "vigencia_precio": null,
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P05:DL-139",
+      "fuente": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 2
+      },
+      "original": {
+        "bloque": [
+          "Dermalab Sun After Sun",
+          "Gel. Calma y refresca la piel después de la exposición al sol."
+        ],
+        "nombre": "Dermalab Sun After Sun",
+        "tipo": "Gel",
+        "descripcion": "Calma y refresca la piel después de la exposición al sol.",
+        "contenido": "200 ml",
+        "problemas_extraccion": [],
+        "actualizacion": {
+          "fuente": {
+            "archivo": "Dermalab_lista_precios.xlsx",
+            "hoja": "Lista",
+            "fila": 12
+          },
+          "EAN": 7798937409364,
+          "Costo s/IVA": 379.41
+        }
+      },
+      "calculado": {
+        "gtin": "7798937409364",
+        "motivo_gtin": null,
+        "descripcion_expandida": "DERMALAB SUN AFTER SUN",
+        "contenido": 200,
+        "unidad": "ML",
+        "precio_costo": 379.41,
+        "moneda": "UYU",
+        "fuentes": {
+          "gtin": {
+            "archivo": "Dermalab_lista_precios.xlsx",
+            "hoja": "Lista",
+            "fila": 12
+          },
+          "precio_costo": {
+            "archivo": "Dermalab_lista_precios.xlsx",
+            "hoja": "Lista",
+            "fila": 12
+          },
+          "moneda": {
+            "archivo": "Dermalab_lista_precios.xlsx",
+            "hoja": "Lista",
+            "fila": 12
+          }
+        },
+        "conflictos": [],
+        "vigencia_precio": null,
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P05:DL-142",
+      "fuente": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 2
+      },
+      "original": {
+        "bloque": [
+          "Dermalab Sun SPF 50",
+          "Protector solar. Amplio espectro UVA/UVB. Resistente al agua."
+        ],
+        "nombre": "Dermalab Sun SPF 50",
+        "tipo": "Protector solar",
+        "descripcion": "Amplio espectro UVA/UVB. Resistente al agua.",
+        "contenido": "50 ml",
+        "problemas_extraccion": [],
+        "actualizacion": {
+          "fuente": {
+            "archivo": "Dermalab_lista_precios.xlsx",
+            "hoja": "Lista",
+            "fila": 13
+          },
+          "EAN": 7798622877447,
+          "Costo s/IVA": 514.27
+        }
+      },
+      "calculado": {
+        "gtin": "7798622877447",
+        "motivo_gtin": null,
+        "descripcion_expandida": "DERMALAB SUN SPF 50",
+        "contenido": 50,
+        "unidad": "ML",
+        "precio_costo": 514.27,
+        "moneda": "UYU",
+        "fuentes": {
+          "gtin": {
+            "archivo": "Dermalab_lista_precios.xlsx",
+            "hoja": "Lista",
+            "fila": 13
+          },
+          "precio_costo": {
+            "archivo": "Dermalab_lista_precios.xlsx",
+            "hoja": "Lista",
+            "fila": 13
+          },
+          "moneda": {
+            "archivo": "Dermalab_lista_precios.xlsx",
+            "hoja": "Lista",
+            "fila": 13
+          }
+        },
+        "conflictos": [],
+        "vigencia_precio": null,
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P05:DL-145",
+      "fuente": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 2
+      },
+      "original": {
+        "bloque": [
+          "Dermalab Sensitive",
+          "Agua micelar. Desmaquilla y limpia en un solo paso. Apta para piel sensible."
+        ],
+        "nombre": "Dermalab Sensitive",
+        "tipo": "Agua micelar",
+        "descripcion": "Desmaquilla y limpia en un solo paso. Apta para piel sensible.",
+        "contenido": "200 ml",
+        "problemas_extraccion": [],
+        "actualizacion": {
+          "fuente": {
+            "archivo": "Dermalab_lista_precios.xlsx",
+            "hoja": "Lista",
+            "fila": 14
+          },
+          "EAN": 7794743202533,
+          "Costo s/IVA": 271.28
+        }
+      },
+      "calculado": {
+        "gtin": "7794743202533",
+        "motivo_gtin": null,
+        "descripcion_expandida": "DERMALAB SENSITIVE",
+        "contenido": 200,
+        "unidad": "ML",
+        "precio_costo": 271.28,
+        "moneda": "UYU",
+        "fuentes": {
+          "gtin": {
+            "archivo": "Dermalab_lista_precios.xlsx",
+            "hoja": "Lista",
+            "fila": 14
+          },
+          "precio_costo": {
+            "archivo": "Dermalab_lista_precios.xlsx",
+            "hoja": "Lista",
+            "fila": 14
+          },
+          "moneda": {
+            "archivo": "Dermalab_lista_precios.xlsx",
+            "hoja": "Lista",
+            "fila": 14
+          }
+        },
+        "conflictos": [],
+        "vigencia_precio": null,
+        "fds": null
+      }
+    },
+    {
+      "item_id": "P05:DL-148",
+      "fuente": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 2
+      },
+      "original": {
+        "bloque": [
+          "Dermalab Urea 10 %",
+          "Crema. Textura liviana de rápida absorción. Hidratación intensa para el cuerpo, ideal para piel muy seca."
+        ],
+        "nombre": "Dermalab Urea 10 %",
+        "tipo": "Crema",
+        "descripcion": "Textura liviana de rápida absorción. Hidratación intensa para el cuerpo, ideal para piel muy seca.",
+        "contenido": "200 ml",
+        "problemas_extraccion": [],
+        "actualizacion": {
+          "fuente": {
+            "archivo": "Dermalab_lista_precios.xlsx",
+            "hoja": "Lista",
+            "fila": 15
+          },
+          "EAN": 7796703472314,
+          "Costo s/IVA": 458.22
+        }
+      },
+      "calculado": {
+        "gtin": "7796703472314",
+        "motivo_gtin": null,
+        "descripcion_expandida": "DERMALAB UREA 10 %",
+        "contenido": 200,
+        "unidad": "ML",
+        "precio_costo": 458.22,
+        "moneda": "UYU",
+        "fuentes": {
+          "gtin": {
+            "archivo": "Dermalab_lista_precios.xlsx",
+            "hoja": "Lista",
+            "fila": 15
+          },
+          "precio_costo": {
+            "archivo": "Dermalab_lista_precios.xlsx",
+            "hoja": "Lista",
+            "fila": 15
+          },
+          "moneda": {
+            "archivo": "Dermalab_lista_precios.xlsx",
+            "hoja": "Lista",
+            "fila": 15
+          }
+        },
+        "conflictos": [],
+        "vigencia_precio": null,
+        "fds": null
+      }
+    }
+  ]
+}
