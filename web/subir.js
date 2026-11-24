@@ -222,10 +222,23 @@
     }).join("") + `</ol>`;
   }
 
+  // Los cuadraditos se llenan de izquierda a derecha y de arriba abajo: primero los ya armados, en el orden en que
+  // se armaron; después los que se están armando y al final los pendientes. Las tandas trabajan a la vez, así que el
+  // orden del archivo no es el orden en que terminan (la tanda corta del final suele terminar primero).
+  function enOrdenDeLlegada(c) {
+    if (estado.ordenDe !== c.id || !c.hechas) { estado.ordenDe = c.id; estado.llegadas = new Map(); }  // una corrida nueva (o el plan B otra vez)
+    c.productos.forEach((p) => { if (p.estado === "hecho" && !estado.llegadas.has(p.id)) estado.llegadas.set(p.id, estado.llegadas.size); });
+    const rango = { hecho: 0, actual: 1, pendiente: 2 };
+    return c.productos.map((p, i) => ({ p, i })).sort((a, b) =>
+      (rango[a.p.estado] ?? 2) - (rango[b.p.estado] ?? 2)
+      || (a.p.estado === "hecho" ? estado.llegadas.get(a.p.id) - estado.llegadas.get(b.p.id) : 0)
+      || a.i - b.i).map((x) => x.p);
+  }
+
   function pintarProcesando(soloCambios) {
     const c = estado.corrida;
     const total = c.total ?? "…";
-    const cuadros = c.productos.map((p) => `<div class="tile tile-${p.estado}" title="${escapar(p.codigo + ": " + p.descripcion)}">` +
+    const cuadros = enOrdenDeLlegada(c).map((p) => `<div class="tile tile-${p.estado}" title="${escapar(p.codigo + ": " + p.descripcion)}">` +
       (p.estado === "hecho" ? TILDE(18, 3) : "") + `</div>`).join("");
     const html = cabezaDeArchivo(c, true) +
       `<div class="procesando-cuerpo">${etapas(c)}` +

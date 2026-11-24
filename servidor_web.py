@@ -304,7 +304,7 @@ async def api_decidir(request):
 
 
 async def api_asistente(request):
-    return JSONResponse({"ejemplos": asistente_web.EJEMPLOS})
+    return JSONResponse({"ejemplos": asistente_web.EJEMPLOS, "etiquetas": asistente_web.ETIQUETAS})
 
 
 async def api_nueva_conversacion(request):

@@ -30,6 +30,10 @@ FRASE_DEL_ESTADO = {"a_revision": "para revisar", "lista_para_alta": "listos par
 # Las preguntas de ejemplo de la bienvenida: consultas de la consigna que el asistente contesta bien (29 de 29)
 EJEMPLOS = ["¿Qué quedó a revisión de Laboratorio Andes?", "¿Qué le tengo que pedir a Dermalab para cerrar sus revisiones?",
             "¿Cuántos productos quedaron listos para alta?"]
+# En la pantalla van en una sola línea arriba de la caja de texto: el chip muestra un nombre corto y, al tocarlo, se
+# pregunta la consulta entera de la consigna (que es la que se ve en la conversación)
+ETIQUETAS = {EJEMPLOS[0]: "Lo que quedó a revisión de Andes", EJEMPLOS[1]: "Qué pedirle a Dermalab",
+             EJEMPLOS[2]: "Cuántos quedaron listos para alta"}
 
 
 async def abrir_conversacion_real(estado: dict):

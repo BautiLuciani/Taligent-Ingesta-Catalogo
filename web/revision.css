@@ -119,3 +119,7 @@
 }
 .evidencia > * { flex-shrink: 0; }
 .opcion-decision-detalle { overflow-wrap: anywhere; }
+
+/* Al llegar al final de la página, el recuadro fijo no puede bajar más que su fila: con el margen de abajo de la página
+   en 24 px (igual que el de arriba del recuadro) no se corre hacia arriba ni se corta */
+@media (min-width: 900px) { .principal { padding-bottom: 24px; } }

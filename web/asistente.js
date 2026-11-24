@@ -16,7 +16,7 @@
   const QUIEN = `<div class="respuesta-quien"><span class="avatar">${LOGO(16)}</span><span class="respuesta-nombre">Ceibo</span></div>`;
   const FLECHA = '<svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#55625C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"></path></svg>';
 
-  const estado = { id: null, mensajes: [], esperando: false, ejemplos: [], sugerencia: null };
+  const estado = { id: null, mensajes: [], esperando: false, ejemplos: [], etiquetas: {}, sugerencia: null };
 
   // Lo que dura mientras la pestaña está abierta (puede no estar disponible: se usa solo si anda)
   function guardar() {
@@ -66,7 +66,8 @@
           `<div class="escribiendo"><span class="punto"></span><span class="punto"></span><span class="punto"></span></div></div>` : "");
     }
     const sugerencias = !estado.mensajes.length ? estado.ejemplos : (estado.sugerencia ? [estado.sugerencia] : []);
-    $sugerencias.innerHTML = sugerencias.map((s) => `<button type="button" class="sugerencia"${estado.esperando ? " disabled" : ""}>${escapar(s)}</button>`).join("");
+    $sugerencias.innerHTML = sugerencias.map((s) => `<button type="button" class="sugerencia" data-pregunta="${escapar(s)}"` +
+      `${estado.etiquetas[s] ? ` title="${escapar(s)}"` : ""}${estado.esperando ? " disabled" : ""}>${escapar(estado.etiquetas[s] || s)}</button>`).join("");
     $enviar.disabled = estado.esperando;
     $conversacion.scrollTop = $conversacion.scrollHeight;
   }
@@ -110,7 +111,7 @@
   });
   function ajustarAlto() { $pregunta.style.height = "auto"; $pregunta.style.height = Math.min($pregunta.scrollHeight, 132) + "px"; }
   $pregunta.addEventListener("input", ajustarAlto);
-  $sugerencias.addEventListener("click", (e) => { const b = e.target.closest(".sugerencia"); if (b && !b.disabled) preguntar(b.textContent); });
+  $sugerencias.addEventListener("click", (e) => { const b = e.target.closest(".sugerencia"); if (b && !b.disabled) preguntar(b.dataset.pregunta); });
   document.getElementById("nueva").addEventListener("click", () => {
     if (estado.esperando) return;
     Object.assign(estado, { id: null, mensajes: [], sugerencia: null });
@@ -121,5 +122,5 @@
 
   recuperar();
   pintar(false);
-  fetch("/api/asistente").then((r) => r.json()).then((d) => { estado.ejemplos = d.ejemplos || []; pintar(false); }).catch(() => {});
+  fetch("/api/asistente").then((r) => r.json()).then((d) => { estado.ejemplos = d.ejemplos || []; estado.etiquetas = d.etiquetas || {}; pintar(false); }).catch(() => {});
 })();

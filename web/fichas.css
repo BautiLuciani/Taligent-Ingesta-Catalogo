@@ -51,7 +51,7 @@
 }
 /* Con 257 fichas la lista es larga: la ficha elegida queda a la vista mientras se baja por la lista */
 @media (min-width: 900px) {
-  .detalle-ficha { position: sticky; top: 24px; max-height: calc(100vh - 48px); overflow-y: auto; }
+  .detalle-ficha { position: sticky; top: 24px; max-height: calc(100vh - 48px); overflow-y: auto; box-sizing: border-box; }
 }
 .detalle-cabeza { display: flex; flex-direction: column; gap: 10px; }
 .detalle-nombre { margin: 0; font-size: 26px; line-height: 1.2; font-weight: 700; letter-spacing: -0.01em; }
@@ -77,3 +77,7 @@
 .fila-campo .chip-fuente { max-width: 360px; }
 .abrir-archivo { justify-content: center; min-height: 44px; }
 .detalle-ficha > * { flex-shrink: 0; }
+
+/* Al llegar al final de la página, el recuadro fijo no puede bajar más que su fila: con el margen de abajo de la página
+   en 24 px (igual que el de arriba del recuadro) no se corre hacia arriba ni se corta */
+@media (min-width: 900px) { .principal { padding-bottom: 24px; } }

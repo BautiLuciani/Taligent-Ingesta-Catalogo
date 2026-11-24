@@ -151,7 +151,7 @@ def pedir(direccion, cuerpo=None):
 
 
 codigo, datos = pedir("/api/asistente")
-probar("/api/asistente: los ejemplos", codigo == 200 and datos["ejemplos"] == a.EJEMPLOS)
+probar("/api/asistente: los ejemplos, con su nombre corto para el chip", codigo == 200 and datos["ejemplos"] == a.EJEMPLOS and set(datos["etiquetas"]) == set(a.EJEMPLOS))
 codigo, texto = pedir("/asistente")
 probar("la pantalla: estilos, programa y el marco de chat (encabezado y caja fijos)",
        "/web/asistente.css" in texto and "/web/asistente.js" in texto and 'class="app pantalla-chat"' in texto)
